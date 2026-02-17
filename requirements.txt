@@ -10,3 +10,7 @@ pykis
 pyyaml
 schedule
 python-dotenv
+scikit-learn
+xgboost
+torch
+joblib

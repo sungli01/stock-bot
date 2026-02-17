@@ -9,3 +9,8 @@ dist/
 build/
 .pytest_cache/
 *.log
+models/*.pkl
+models/*.pt
+models/*.pkl
+models/*.pt
+models/*.json
