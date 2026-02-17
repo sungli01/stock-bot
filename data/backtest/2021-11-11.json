@@ -1,0 +1,51 @@
+{
+  "date": "2021-11-11",
+  "monitored": 30,
+  "signals_detected": 2,
+  "trades": [
+    {
+      "ticker": "PPSI",
+      "surge_pct": 8.78,
+      "volume_ratio": 2213.0,
+      "detect_time_kst": "22:02",
+      "detect_price": 7.56,
+      "surge_score": 19430.0,
+      "allocation_pct": 70,
+      "buy_price": 7.52,
+      "buy_time_kst": "22:03",
+      "buy_time_utc": "13:03",
+      "sell_price": 9.82,
+      "sell_time_kst": "00:29",
+      "sell_reason": "익절(+30.6%)",
+      "shares": 68,
+      "invested_krw": 690152,
+      "return_krw": 901485,
+      "pnl_krw": 211333,
+      "pnl_pct": 30.62
+    },
+    {
+      "ticker": "EVGO",
+      "surge_pct": 5.35,
+      "volume_ratio": 556.0,
+      "detect_time_kst": "23:56",
+      "detect_price": 16.74,
+      "surge_score": 2975.0,
+      "allocation_pct": 30,
+      "buy_price": 16.68,
+      "buy_time_kst": "23:57",
+      "buy_time_utc": "14:57",
+      "sell_price": 19.35,
+      "sell_time_kst": "09:59",
+      "sell_reason": "강제청산(장마감)",
+      "shares": 13,
+      "invested_krw": 292755,
+      "return_krw": 339592,
+      "pnl_krw": 46837,
+      "pnl_pct": 16.0
+    }
+  ],
+  "total_invested_krw": 982907,
+  "total_return_krw": 1241077,
+  "total_pnl_krw": 258170,
+  "total_pnl_pct": 26.27
+}

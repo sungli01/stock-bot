@@ -1,0 +1,51 @@
+{
+  "date": "2026-02-02",
+  "monitored": 30,
+  "signals_detected": 7,
+  "trades": [
+    {
+      "ticker": "DNN",
+      "surge_pct": 5.45,
+      "volume_ratio": 28244.0,
+      "detect_time_kst": "23:30",
+      "detect_price": 3.98,
+      "surge_score": 153930.0,
+      "allocation_pct": 70,
+      "buy_price": 3.96,
+      "buy_time_kst": "23:31",
+      "buy_time_utc": "14:31",
+      "sell_price": 3.8,
+      "sell_time_kst": "09:56",
+      "sell_reason": "강제청산(장마감)",
+      "shares": 131,
+      "invested_krw": 699619,
+      "return_krw": 672030,
+      "pnl_krw": -27589,
+      "pnl_pct": -3.94
+    },
+    {
+      "ticker": "JDST",
+      "surge_pct": 12.31,
+      "volume_ratio": 1705.0,
+      "detect_time_kst": "22:00",
+      "detect_price": 2.19,
+      "surge_score": 20989.0,
+      "allocation_pct": 30,
+      "buy_price": 1.98,
+      "buy_time_kst": "22:01",
+      "buy_time_utc": "13:01",
+      "sell_price": 1.91,
+      "sell_time_kst": "09:57",
+      "sell_reason": "강제청산(장마감)",
+      "shares": 112,
+      "invested_krw": 299981,
+      "return_krw": 288792,
+      "pnl_krw": -11189,
+      "pnl_pct": -3.73
+    }
+  ],
+  "total_invested_krw": 999600,
+  "total_return_krw": 960822,
+  "total_pnl_krw": -38778,
+  "total_pnl_pct": -3.88
+}

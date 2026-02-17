@@ -1,0 +1,31 @@
+{
+  "date": "2026-02-05",
+  "monitored": 30,
+  "signals_detected": 1,
+  "trades": [
+    {
+      "ticker": "SOXL",
+      "surge_pct": 6.08,
+      "volume_ratio": 249.0,
+      "detect_time_kst": "23:38",
+      "detect_price": 53.6,
+      "surge_score": 1514.0,
+      "allocation_pct": 70,
+      "buy_price": 53.94,
+      "buy_time_kst": "23:39",
+      "buy_time_utc": "14:39",
+      "sell_price": 51.09,
+      "sell_time_kst": "09:59",
+      "sell_reason": "강제청산(장마감)",
+      "shares": 9,
+      "invested_krw": 655432,
+      "return_krw": 620729,
+      "pnl_krw": -34703,
+      "pnl_pct": -5.29
+    }
+  ],
+  "total_invested_krw": 655432,
+  "total_return_krw": 620729,
+  "total_pnl_krw": -34703,
+  "total_pnl_pct": -5.29
+}

@@ -1,0 +1,51 @@
+{
+  "date": "2021-11-02",
+  "monitored": 30,
+  "signals_detected": 6,
+  "trades": [
+    {
+      "ticker": "ANET",
+      "surge_pct": 5.76,
+      "volume_ratio": 10132.0,
+      "detect_time_kst": "22:31",
+      "detect_price": 32.12,
+      "surge_score": 58360.0,
+      "allocation_pct": 70,
+      "buy_price": 32.06,
+      "buy_time_kst": "22:32",
+      "buy_time_utc": "13:32",
+      "sell_price": 30.64,
+      "sell_time_kst": "08:48",
+      "sell_reason": "강제청산(장마감)",
+      "shares": 16,
+      "invested_krw": 692567,
+      "return_krw": 661811,
+      "pnl_krw": -30756,
+      "pnl_pct": -4.44
+    },
+    {
+      "ticker": "SAVA",
+      "surge_pct": 6.58,
+      "volume_ratio": 1793.0,
+      "detect_time_kst": "02:37",
+      "detect_price": 38.09,
+      "surge_score": 11798.0,
+      "allocation_pct": 30,
+      "buy_price": 38.39,
+      "buy_time_kst": "02:38",
+      "buy_time_utc": "17:38",
+      "sell_price": 40,
+      "sell_time_kst": "08:59",
+      "sell_reason": "강제청산(장마감)",
+      "shares": 5,
+      "invested_krw": 259131,
+      "return_krw": 270000,
+      "pnl_krw": 10869,
+      "pnl_pct": 4.19
+    }
+  ],
+  "total_invested_krw": 951698,
+  "total_return_krw": 931811,
+  "total_pnl_krw": -19887,
+  "total_pnl_pct": -2.09
+}

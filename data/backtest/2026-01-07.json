@@ -1,0 +1,51 @@
+{
+  "date": "2026-01-07",
+  "monitored": 30,
+  "signals_detected": 5,
+  "trades": [
+    {
+      "ticker": "BYND",
+      "surge_pct": 8.99,
+      "volume_ratio": 662.0,
+      "detect_time_kst": "01:32",
+      "detect_price": 1.02,
+      "surge_score": 5951.0,
+      "allocation_pct": 70,
+      "buy_price": 1.03,
+      "buy_time_kst": "01:33",
+      "buy_time_utc": "16:33",
+      "sell_price": 1.04,
+      "sell_time_kst": "09:59",
+      "sell_reason": "강제청산(장마감)",
+      "shares": 504,
+      "invested_krw": 698812,
+      "return_krw": 706527,
+      "pnl_krw": 7715,
+      "pnl_pct": 1.1
+    },
+    {
+      "ticker": "SIDU",
+      "surge_pct": 8.05,
+      "volume_ratio": 407.0,
+      "detect_time_kst": "23:36",
+      "detect_price": 5.15,
+      "surge_score": 3276.0,
+      "allocation_pct": 30,
+      "buy_price": 5.09,
+      "buy_time_kst": "23:37",
+      "buy_time_utc": "14:37",
+      "sell_price": 4.61,
+      "sell_time_kst": "09:59",
+      "sell_reason": "강제청산(장마감)",
+      "shares": 43,
+      "invested_krw": 295221,
+      "return_krw": 267610,
+      "pnl_krw": -27611,
+      "pnl_pct": -9.35
+    }
+  ],
+  "total_invested_krw": 994033,
+  "total_return_krw": 974137,
+  "total_pnl_krw": -19896,
+  "total_pnl_pct": -2.0
+}

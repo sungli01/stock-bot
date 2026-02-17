@@ -1,0 +1,51 @@
+{
+  "date": "2026-01-14",
+  "monitored": 30,
+  "signals_detected": 2,
+  "trades": [
+    {
+      "ticker": "ROLR",
+      "surge_pct": 42.68,
+      "volume_ratio": 14267.0,
+      "detect_time_kst": "22:18",
+      "detect_price": 5.32,
+      "surge_score": 608916.0,
+      "allocation_pct": 70,
+      "buy_price": 7.86,
+      "buy_time_kst": "22:19",
+      "buy_time_utc": "13:19",
+      "sell_price": 12.09,
+      "sell_time_kst": "22:28",
+      "sell_reason": "익절(+53.7%)",
+      "shares": 65,
+      "invested_krw": 690098,
+      "return_krw": 1060898,
+      "pnl_krw": 370800,
+      "pnl_pct": 53.73
+    },
+    {
+      "ticker": "CRML",
+      "surge_pct": 5.35,
+      "volume_ratio": 243.0,
+      "detect_time_kst": "00:17",
+      "detect_price": 14.83,
+      "surge_score": 1300.0,
+      "allocation_pct": 30,
+      "buy_price": 14.91,
+      "buy_time_kst": "00:18",
+      "buy_time_utc": "15:18",
+      "sell_price": 17.6,
+      "sell_time_kst": "09:59",
+      "sell_reason": "강제청산(장마감)",
+      "shares": 14,
+      "invested_krw": 281732,
+      "return_krw": 332640,
+      "pnl_krw": 50908,
+      "pnl_pct": 18.07
+    }
+  ],
+  "total_invested_krw": 971830,
+  "total_return_krw": 1393538,
+  "total_pnl_krw": 421708,
+  "total_pnl_pct": 43.39
+}

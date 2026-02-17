@@ -1,0 +1,51 @@
+{
+  "date": "2021-11-18",
+  "monitored": 30,
+  "signals_detected": 2,
+  "trades": [
+    {
+      "ticker": "VOSO",
+      "surge_pct": 6.82,
+      "volume_ratio": 260.0,
+      "detect_time_kst": "22:03",
+      "detect_price": 11.74,
+      "surge_score": 1773.0,
+      "allocation_pct": 70,
+      "buy_price": 10.92,
+      "buy_time_kst": "22:04",
+      "buy_time_utc": "13:04",
+      "sell_price": 14.25,
+      "sell_time_kst": "00:52",
+      "sell_reason": "익절(+30.5%)",
+      "shares": 47,
+      "invested_krw": 692627,
+      "return_krw": 904162,
+      "pnl_krw": 211535,
+      "pnl_pct": 30.54
+    },
+    {
+      "ticker": "SEV",
+      "surge_pct": 7.22,
+      "volume_ratio": 237.0,
+      "detect_time_kst": "18:20",
+      "detect_price": 53.63,
+      "surge_score": 1711.0,
+      "allocation_pct": 30,
+      "buy_price": 50.63,
+      "buy_time_kst": "18:21",
+      "buy_time_utc": "09:21",
+      "sell_price": 41.84,
+      "sell_time_kst": "21:28",
+      "sell_reason": "손절(-17.4%)",
+      "shares": 4,
+      "invested_krw": 273402,
+      "return_krw": 225936,
+      "pnl_krw": -47466,
+      "pnl_pct": -17.36
+    }
+  ],
+  "total_invested_krw": 966029,
+  "total_return_krw": 1130098,
+  "total_pnl_krw": 164069,
+  "total_pnl_pct": 16.98
+}

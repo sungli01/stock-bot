@@ -1,0 +1,51 @@
+{
+  "date": "2021-11-17",
+  "monitored": 30,
+  "signals_detected": 2,
+  "trades": [
+    {
+      "ticker": "PROG",
+      "surge_pct": 6.72,
+      "volume_ratio": 1740.0,
+      "detect_time_kst": "23:31",
+      "detect_price": 6.19,
+      "surge_score": 11693.0,
+      "allocation_pct": 70,
+      "buy_price": 5.75,
+      "buy_time_kst": "23:32",
+      "buy_time_utc": "14:32",
+      "sell_price": 4.88,
+      "sell_time_kst": "00:27",
+      "sell_reason": "손절(-15.2%)",
+      "shares": 90,
+      "invested_krw": 698883,
+      "return_krw": 592920,
+      "pnl_krw": -105963,
+      "pnl_pct": -15.16
+    },
+    {
+      "ticker": "SEV",
+      "surge_pct": 6.0,
+      "volume_ratio": 202.0,
+      "detect_time_kst": "01:36",
+      "detect_price": 26.5,
+      "surge_score": 1212.0,
+      "allocation_pct": 30,
+      "buy_price": 27.88,
+      "buy_time_kst": "01:37",
+      "buy_time_utc": "16:37",
+      "sell_price": 36.32,
+      "sell_time_kst": "05:23",
+      "sell_reason": "익절(+30.3%)",
+      "shares": 7,
+      "invested_krw": 263447,
+      "return_krw": 343198,
+      "pnl_krw": 79751,
+      "pnl_pct": 30.27
+    }
+  ],
+  "total_invested_krw": 962330,
+  "total_return_krw": 936118,
+  "total_pnl_krw": -26212,
+  "total_pnl_pct": -2.72
+}

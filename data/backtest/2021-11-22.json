@@ -1,0 +1,31 @@
+{
+  "date": "2021-11-22",
+  "monitored": 30,
+  "signals_detected": 1,
+  "trades": [
+    {
+      "ticker": "GTEC",
+      "surge_pct": 6.71,
+      "volume_ratio": 977.0,
+      "detect_time_kst": "21:10",
+      "detect_price": 8.75,
+      "surge_score": 6556.0,
+      "allocation_pct": 70,
+      "buy_price": 8.8,
+      "buy_time_kst": "21:11",
+      "buy_time_utc": "12:11",
+      "sell_price": 7.47,
+      "sell_time_kst": "00:53",
+      "sell_reason": "손절(-15.1%)",
+      "shares": 58,
+      "invested_krw": 688727,
+      "return_krw": 584901,
+      "pnl_krw": -103826,
+      "pnl_pct": -15.08
+    }
+  ],
+  "total_invested_krw": 688727,
+  "total_return_krw": 584901,
+  "total_pnl_krw": -103826,
+  "total_pnl_pct": -15.08
+}

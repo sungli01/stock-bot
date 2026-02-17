@@ -1,0 +1,51 @@
+{
+  "date": "2021-11-23",
+  "monitored": 30,
+  "signals_detected": 3,
+  "trades": [
+    {
+      "ticker": "XPEV",
+      "surge_pct": 6.95,
+      "volume_ratio": 562.0,
+      "detect_time_kst": "23:36",
+      "detect_price": 51.24,
+      "surge_score": 3906.0,
+      "allocation_pct": 50,
+      "buy_price": 51.18,
+      "buy_time_kst": "23:37",
+      "buy_time_utc": "14:37",
+      "sell_price": 52.1,
+      "sell_time_kst": "09:59",
+      "sell_reason": "강제청산(장마감)",
+      "shares": 7,
+      "invested_krw": 483642,
+      "return_krw": 492345,
+      "pnl_krw": 8703,
+      "pnl_pct": 1.8
+    },
+    {
+      "ticker": "PROG",
+      "surge_pct": 5.13,
+      "volume_ratio": 688.0,
+      "detect_time_kst": "20:49",
+      "detect_price": 4.3,
+      "surge_score": 3529.0,
+      "allocation_pct": 50,
+      "buy_price": 4.19,
+      "buy_time_kst": "20:50",
+      "buy_time_utc": "11:50",
+      "sell_price": 3.99,
+      "sell_time_kst": "09:59",
+      "sell_reason": "강제청산(장마감)",
+      "shares": 88,
+      "invested_krw": 497534,
+      "return_krw": 474012,
+      "pnl_krw": -23522,
+      "pnl_pct": -4.73
+    }
+  ],
+  "total_invested_krw": 981176,
+  "total_return_krw": 966357,
+  "total_pnl_krw": -14819,
+  "total_pnl_pct": -1.51
+}

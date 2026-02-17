@@ -1,0 +1,31 @@
+{
+  "date": "2021-11-16",
+  "monitored": 30,
+  "signals_detected": 1,
+  "trades": [
+    {
+      "ticker": "PROG",
+      "surge_pct": 7.1,
+      "volume_ratio": 275.0,
+      "detect_time_kst": "23:35",
+      "detect_price": 4.15,
+      "surge_score": 1952.0,
+      "allocation_pct": 70,
+      "buy_price": 4.3,
+      "buy_time_kst": "23:36",
+      "buy_time_utc": "14:36",
+      "sell_price": 5.15,
+      "sell_time_kst": "09:59",
+      "sell_reason": "강제청산(장마감)",
+      "shares": 120,
+      "invested_krw": 696221,
+      "return_krw": 834300,
+      "pnl_krw": 138079,
+      "pnl_pct": 19.83
+    }
+  ],
+  "total_invested_krw": 696221,
+  "total_return_krw": 834300,
+  "total_pnl_krw": 138079,
+  "total_pnl_pct": 19.83
+}

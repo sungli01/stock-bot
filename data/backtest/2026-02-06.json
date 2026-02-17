@@ -1,0 +1,51 @@
+{
+  "date": "2026-02-06",
+  "monitored": 30,
+  "signals_detected": 4,
+  "trades": [
+    {
+      "ticker": "MSTU",
+      "surge_pct": 8.02,
+      "volume_ratio": 495.0,
+      "detect_time_kst": "23:33",
+      "detect_price": 4.51,
+      "surge_score": 3970.0,
+      "allocation_pct": 70,
+      "buy_price": 4.65,
+      "buy_time_kst": "23:34",
+      "buy_time_utc": "14:34",
+      "sell_price": 5.58,
+      "sell_time_kst": "09:59",
+      "sell_reason": "강제청산(장마감)",
+      "shares": 111,
+      "invested_krw": 697552,
+      "return_krw": 835983,
+      "pnl_krw": 138431,
+      "pnl_pct": 19.85
+    },
+    {
+      "ticker": "SOXS",
+      "surge_pct": 5.74,
+      "volume_ratio": 605.0,
+      "detect_time_kst": "22:02",
+      "detect_price": 2.21,
+      "surge_score": 3473.0,
+      "allocation_pct": 30,
+      "buy_price": 2.14,
+      "buy_time_kst": "22:03",
+      "buy_time_utc": "13:03",
+      "sell_price": 1.86,
+      "sell_time_kst": "09:59",
+      "sell_reason": "강제청산(장마감)",
+      "shares": 103,
+      "invested_krw": 298076,
+      "return_krw": 258661,
+      "pnl_krw": -39415,
+      "pnl_pct": -13.22
+    }
+  ],
+  "total_invested_krw": 995628,
+  "total_return_krw": 1094644,
+  "total_pnl_krw": 99016,
+  "total_pnl_pct": 9.95
+}

@@ -33,13 +33,37 @@ class TradeExecutor:
         self.kis = KISClient()
 
         # 설정값
-        self.total_buy_amount = self.trading_cfg.get("total_buy_amount", 1_000_000)
+        self.base_buy_amount = self.trading_cfg.get("total_buy_amount", 1_000_000)
+        self.compound_mode = self.trading_cfg.get("compound_mode", False)
+        self.compound_cap = self.trading_cfg.get("compound_cap", 5_000_000)
         self.split_count = self.trading_cfg.get("split_count", 10)
         self.split_interval = self.trading_cfg.get("split_interval_sec", 60)
         self.max_positions = self.trading_cfg.get("max_positions", 5)
-        self.take_profit_pct = self.trading_cfg.get("take_profit_pct", 10.0)
-        self.stop_loss_pct = self.trading_cfg.get("stop_loss_pct", -5.0)
+        self.take_profit_pct = self.trading_cfg.get("take_profit_pct", 30.0)
+        self.stop_loss_pct = self.trading_cfg.get("stop_loss_pct", -15.0)
         self.force_close_before_min = self.trading_cfg.get("force_close_before_min", 15)
+
+        # 트레일링 스탑
+        self.trailing_stop = self.trading_cfg.get("trailing_stop", False)
+        self.trailing_trigger_pct = self.trading_cfg.get("trailing_trigger_pct", 30.0)
+        self.trailing_drop_pct = self.trading_cfg.get("trailing_drop_pct", 10.0)
+        self._peak_prices = {}  # ticker → 최고가 추적
+
+        # 복리 누적수익 추적
+        self._cumulative_pnl = 0
+
+    @property
+    def total_buy_amount(self) -> int:
+        """복리 모드: base + 누적수익 (캡 적용)"""
+        if not self.compound_mode:
+            return self.base_buy_amount
+        amount = self.base_buy_amount + max(0, self._cumulative_pnl)
+        return min(amount, self.compound_cap)
+
+    def add_pnl(self, pnl: float):
+        """매매 완료 후 손익 반영 (복리용)"""
+        self._cumulative_pnl += pnl
+        logger.info(f"💹 누적 손익: ₩{self._cumulative_pnl:+,.0f} | 다음 투자금: ₩{self.total_buy_amount:,.0f}")
 
     def execute_buy(self, ticker: str, price: float) -> list[dict]:
         """
@@ -116,9 +140,10 @@ class TradeExecutor:
 
     def check_positions(self):
         """
-        보유 종목 손절/익절 체크
-        - +30% 도달: 추세 확인 후 매도
+        보유 종목 손절/익절/트레일링스탑 체크
         - -15% 도달: 즉시 손절
+        - +30% 도달: 트레일링 스탑 활성화 (최고가 -10% 시 매도)
+        - 트레일링 비활성화 시: +30% 즉시 익절
         """
         balance = self.kis.get_balance()
         for pos in balance.get("positions", []):
@@ -134,8 +159,8 @@ class TradeExecutor:
             # 손절 체크
             if pnl_pct <= self.stop_loss_pct:
                 logger.warning(f"🚨 {ticker} 손절선 도달 ({pnl_pct:.1f}%)")
+                self._peak_prices.pop(ticker, None)
                 self.execute_stop_loss(ticker)
-                # 손절 시그널을 Redis로 publish (알림용)
                 if self.redis is not None:
                     try:
                         self.redis.publish("channel:signal", json.dumps({
@@ -146,9 +171,40 @@ class TradeExecutor:
                         }))
                     except Exception:
                         pass
+                continue
 
-            # 익절 체크 — 데이트레이딩: 목표가 도달 즉시 매도
-            elif pnl_pct >= self.take_profit_pct:
+            # 트레일링 스탑 로직
+            if self.trailing_stop and pnl_pct >= self.trailing_trigger_pct:
+                # 최고가 갱신
+                prev_peak = self._peak_prices.get(ticker, current_price)
+                if current_price > prev_peak:
+                    self._peak_prices[ticker] = current_price
+                    logger.info(f"📈 {ticker} 최고가 갱신: ${current_price:.2f} ({pnl_pct:+.1f}%)")
+                else:
+                    # 최고가 대비 하락폭 체크
+                    peak = self._peak_prices[ticker]
+                    drop_from_peak = ((peak - current_price) / peak) * 100
+                    if drop_from_peak >= self.trailing_drop_pct:
+                        final_pnl = ((current_price - avg_price) / avg_price) * 100
+                        logger.info(f"💰 {ticker} 트레일링스탑 발동! 최고${peak:.2f} → 현재${current_price:.2f} (고점-{drop_from_peak:.1f}%) 최종수익 {final_pnl:+.1f}%")
+                        self._peak_prices.pop(ticker, None)
+                        self.execute_sell(ticker)
+                        if self.redis is not None:
+                            try:
+                                self.redis.publish("channel:signal", json.dumps({
+                                    "ticker": ticker,
+                                    "signal": "TRAILING_STOP",
+                                    "pnl_pct": round(final_pnl, 2),
+                                    "peak_price": peak,
+                                    "price": current_price,
+                                    "timestamps": get_all_timestamps(),
+                                }))
+                            except Exception:
+                                pass
+                        continue
+
+            # 트레일링 비활성화 시: 고정 익절
+            elif not self.trailing_stop and pnl_pct >= self.take_profit_pct:
                 logger.info(f"💰 {ticker} 익절선 도달 ({pnl_pct:.1f}%) — 즉시 매도")
                 self.execute_sell(ticker)
                 if self.redis is not None:

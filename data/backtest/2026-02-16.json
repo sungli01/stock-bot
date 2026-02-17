@@ -1,0 +1,11 @@
+{
+  "date": "2026-02-16",
+  "monitored": 0,
+  "signals_detected": 0,
+  "trades": [],
+  "total_invested_krw": 0,
+  "total_return_krw": 0,
+  "total_pnl_krw": 0,
+  "total_pnl_pct": 0,
+  "error": "종목 없음 (휴장일 또는 데이터 부족)"
+}

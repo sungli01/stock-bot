@@ -1,0 +1,51 @@
+{
+  "date": "2026-02-13",
+  "monitored": 30,
+  "signals_detected": 2,
+  "trades": [
+    {
+      "ticker": "RIME",
+      "surge_pct": 5.93,
+      "volume_ratio": 1593.0,
+      "detect_time_kst": "19:05",
+      "detect_price": 1.34,
+      "surge_score": 9446.0,
+      "allocation_pct": 70,
+      "buy_price": 1.32,
+      "buy_time_kst": "19:06",
+      "buy_time_utc": "10:06",
+      "sell_price": 1.73,
+      "sell_time_kst": "04:17",
+      "sell_reason": "익절(+30.3%)",
+      "shares": 391,
+      "invested_krw": 698873,
+      "return_krw": 910541,
+      "pnl_krw": 211668,
+      "pnl_pct": 30.29
+    },
+    {
+      "ticker": "ZSL",
+      "surge_pct": 5.86,
+      "volume_ratio": 562.0,
+      "detect_time_kst": "23:40",
+      "detect_price": 2.56,
+      "surge_score": 3293.0,
+      "allocation_pct": 30,
+      "buy_price": 2.55,
+      "buy_time_kst": "23:41",
+      "buy_time_utc": "14:41",
+      "sell_price": 2.5,
+      "sell_time_kst": "09:59",
+      "sell_reason": "강제청산(장마감)",
+      "shares": 87,
+      "invested_krw": 299023,
+      "return_krw": 293625,
+      "pnl_krw": -5398,
+      "pnl_pct": -1.81
+    }
+  ],
+  "total_invested_krw": 997896,
+  "total_return_krw": 1204166,
+  "total_pnl_krw": 206270,
+  "total_pnl_pct": 20.67
+}

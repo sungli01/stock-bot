@@ -1,0 +1,51 @@
+{
+  "date": "2026-02-11",
+  "monitored": 30,
+  "signals_detected": 5,
+  "trades": [
+    {
+      "ticker": "LYFT",
+      "surge_pct": 6.73,
+      "volume_ratio": 3996.0,
+      "detect_time_kst": "23:30",
+      "detect_price": 15.02,
+      "surge_score": 26893.0,
+      "allocation_pct": 70,
+      "buy_price": 14.75,
+      "buy_time_kst": "23:31",
+      "buy_time_utc": "14:31",
+      "sell_price": 13.98,
+      "sell_time_kst": "09:59",
+      "sell_reason": "강제청산(장마감)",
+      "shares": 35,
+      "invested_krw": 697031,
+      "return_krw": 660555,
+      "pnl_krw": -36476,
+      "pnl_pct": -5.23
+    },
+    {
+      "ticker": "ZSL",
+      "surge_pct": 6.73,
+      "volume_ratio": 1305.0,
+      "detect_time_kst": "22:30",
+      "detect_price": 2.22,
+      "surge_score": 8783.0,
+      "allocation_pct": 30,
+      "buy_price": 2.18,
+      "buy_time_kst": "22:31",
+      "buy_time_utc": "13:31",
+      "sell_price": 2.27,
+      "sell_time_kst": "09:59",
+      "sell_reason": "강제청산(장마감)",
+      "shares": 102,
+      "invested_krw": 299624,
+      "return_krw": 312579,
+      "pnl_krw": 12955,
+      "pnl_pct": 4.32
+    }
+  ],
+  "total_invested_krw": 996655,
+  "total_return_krw": 973134,
+  "total_pnl_krw": -23521,
+  "total_pnl_pct": -2.36
+}

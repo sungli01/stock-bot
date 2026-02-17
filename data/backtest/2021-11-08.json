@@ -1,0 +1,51 @@
+{
+  "date": "2021-11-08",
+  "monitored": 30,
+  "signals_detected": 6,
+  "trades": [
+    {
+      "ticker": "TAL",
+      "surge_pct": 9.69,
+      "volume_ratio": 9188.0,
+      "detect_time_kst": "19:53",
+      "detect_price": 4.3,
+      "surge_score": 89032.0,
+      "allocation_pct": 70,
+      "buy_price": 4.38,
+      "buy_time_kst": "19:54",
+      "buy_time_utc": "10:54",
+      "sell_price": 4.05,
+      "sell_time_kst": "09:59",
+      "sell_reason": "강제청산(장마감)",
+      "shares": 118,
+      "invested_krw": 698371,
+      "return_krw": 645165,
+      "pnl_krw": -53206,
+      "pnl_pct": -7.62
+    },
+    {
+      "ticker": "EVGO",
+      "surge_pct": 5.43,
+      "volume_ratio": 1606.0,
+      "detect_time_kst": "02:34",
+      "detect_price": 12.14,
+      "surge_score": 8721.0,
+      "allocation_pct": 30,
+      "buy_price": 12.28,
+      "buy_time_kst": "02:35",
+      "buy_time_utc": "17:35",
+      "sell_price": 13.48,
+      "sell_time_kst": "09:59",
+      "sell_reason": "강제청산(장마감)",
+      "shares": 18,
+      "invested_krw": 298300,
+      "return_krw": 327564,
+      "pnl_krw": 29264,
+      "pnl_pct": 9.81
+    }
+  ],
+  "total_invested_krw": 996671,
+  "total_return_krw": 972729,
+  "total_pnl_krw": -23942,
+  "total_pnl_pct": -2.4
+}

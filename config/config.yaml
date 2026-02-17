@@ -10,14 +10,19 @@ scanner:
 
 # 매매 조건
 trading:
-  total_buy_amount: 1000000  # 100만원
-  split_count: 10             # 10분할
-  split_interval_sec: 60      # 1분 간격
-  max_positions: 2            # 동시 보유 최대 2종목
-  allocation_ratio: [0.7, 0.3] # 1순위 70%, 2순위 30%
-  take_profit_pct: 30.0       # +30% 익절
-  stop_loss_pct: -15.0        # -15% 손절
-  force_close_before_min: 15  # 장 마감 N분 전 강제청산
+  total_buy_amount: 1000000    # 기본 100만원 (복리 모드 시 base)
+  compound_mode: true          # 복리 모드: base + 누적수익
+  compound_cap: 5000000        # 복리 캡 500만원
+  split_count: 5               # 5분할 (데이트레이딩 최적화)
+  split_interval_sec: 60       # 1분 간격
+  max_positions: 2             # 동시 보유 최대 2종목
+  allocation_ratio: [0.5, 0.5] # 균등 배분 (시뮬 결과 5:5 최적)
+  take_profit_pct: 30.0        # +30% 트레일링 스탑 활성화 기준
+  stop_loss_pct: -15.0         # -15% 손절
+  trailing_stop: true          # 트레일링 스탑 활성화
+  trailing_trigger_pct: 30.0   # 30% 수익 도달 시 트레일링 시작
+  trailing_drop_pct: 10.0      # 최고가 대비 10% 하락 시 매도
+  force_close_before_min: 15   # 장 마감 N분 전 강제청산
 
 # 추세 판단
 analyzer:

@@ -1,0 +1,51 @@
+{
+  "date": "2021-11-05",
+  "monitored": 30,
+  "signals_detected": 5,
+  "trades": [
+    {
+      "ticker": "OCGN",
+      "surge_pct": 6.66,
+      "volume_ratio": 584.0,
+      "detect_time_kst": "19:49",
+      "detect_price": 11.21,
+      "surge_score": 3889.0,
+      "allocation_pct": 70,
+      "buy_price": 10.99,
+      "buy_time_kst": "19:50",
+      "buy_time_utc": "10:50",
+      "sell_price": 10.25,
+      "sell_time_kst": "08:59",
+      "sell_reason": "강제청산(장마감)",
+      "shares": 47,
+      "invested_krw": 697569,
+      "return_krw": 650362,
+      "pnl_krw": -47207,
+      "pnl_pct": -6.77
+    },
+    {
+      "ticker": "BBBY",
+      "surge_pct": 5.17,
+      "volume_ratio": 736.0,
+      "detect_time_kst": "01:06",
+      "detect_price": 19.2,
+      "surge_score": 3805.0,
+      "allocation_pct": 30,
+      "buy_price": 19.22,
+      "buy_time_kst": "01:07",
+      "buy_time_utc": "16:07",
+      "sell_price": 20.1,
+      "sell_time_kst": "08:59",
+      "sell_reason": "강제청산(장마감)",
+      "shares": 11,
+      "invested_krw": 285433,
+      "return_krw": 298485,
+      "pnl_krw": 13052,
+      "pnl_pct": 4.57
+    }
+  ],
+  "total_invested_krw": 983002,
+  "total_return_krw": 948847,
+  "total_pnl_krw": -34155,
+  "total_pnl_pct": -3.47
+}

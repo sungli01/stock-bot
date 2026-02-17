@@ -1,0 +1,585 @@
+{
+  "version": "v3",
+  "algorithm": "실시간 1분봉 급등감지 + 5분할매수 + 70/30배분",
+  "config": {
+    "surge_window": 5,
+    "surge_pct": 5.0,
+    "volume_spike_pct": 200,
+    "volume_avg_window": 20,
+    "min_price": 1.0,
+    "min_volume": 10000,
+    "split_count": 5,
+    "max_positions": 2,
+    "allocation_ratio": [
+      0.7,
+      0.3
+    ],
+    "take_profit_pct": 30.0,
+    "stop_loss_pct": -15.0,
+    "total_buy_amount": 1000000,
+    "scan_interval_sec": 10,
+    "trading_hours_kst": "18:00~06:00"
+  },
+  "days": [
+    {
+      "day": 1,
+      "date": "2025-12-22",
+      "trades": 5,
+      "wins": 3,
+      "losses": 2,
+      "daily_pnl": 45988,
+      "cumulative_pnl": 45988,
+      "daily_pct": 2.45
+    },
+    {
+      "day": 2,
+      "date": "2025-12-23",
+      "trades": 4,
+      "wins": 2,
+      "losses": 2,
+      "daily_pnl": 232125,
+      "cumulative_pnl": 278113,
+      "daily_pct": 14.55
+    },
+    {
+      "day": 3,
+      "date": "2025-12-24",
+      "trades": 6,
+      "wins": 4,
+      "losses": 2,
+      "daily_pnl": 416594,
+      "cumulative_pnl": 694707,
+      "daily_pct": 19.17
+    },
+    {
+      "day": 4,
+      "date": "2025-12-26",
+      "trades": 3,
+      "wins": 2,
+      "losses": 1,
+      "daily_pnl": 96278,
+      "cumulative_pnl": 790985,
+      "daily_pct": 7.43
+    },
+    {
+      "day": 5,
+      "date": "2025-12-29",
+      "trades": 4,
+      "wins": 3,
+      "losses": 1,
+      "daily_pnl": 396818,
+      "cumulative_pnl": 1187803,
+      "daily_pct": 24.95
+    },
+    {
+      "day": 6,
+      "date": "2025-12-30",
+      "trades": 5,
+      "wins": 4,
+      "losses": 1,
+      "daily_pnl": 439154,
+      "cumulative_pnl": 1626957,
+      "daily_pct": 23.3
+    },
+    {
+      "day": 7,
+      "date": "2025-12-31",
+      "trades": 3,
+      "wins": 3,
+      "losses": 0,
+      "daily_pnl": 254482,
+      "cumulative_pnl": 1881439,
+      "daily_pct": 19.74
+    },
+    {
+      "day": 8,
+      "date": "2026-01-02",
+      "trades": 5,
+      "wins": 4,
+      "losses": 1,
+      "daily_pnl": 324822,
+      "cumulative_pnl": 2206261,
+      "daily_pct": 17.18
+    },
+    {
+      "day": 9,
+      "date": "2026-01-05",
+      "trades": 5,
+      "wins": 3,
+      "losses": 2,
+      "daily_pnl": 241136,
+      "cumulative_pnl": 2447397,
+      "daily_pct": 12.74
+    },
+    {
+      "day": 10,
+      "date": "2026-01-06",
+      "trades": 3,
+      "wins": 1,
+      "losses": 2,
+      "daily_pnl": -76151,
+      "cumulative_pnl": 2371246,
+      "daily_pct": -5.94
+    },
+    {
+      "day": 11,
+      "date": "2026-01-07",
+      "trades": 2,
+      "wins": 1,
+      "losses": 1,
+      "daily_pnl": -19896,
+      "cumulative_pnl": 2351350,
+      "daily_pct": -2.0
+    },
+    {
+      "day": 12,
+      "date": "2026-01-08",
+      "trades": 3,
+      "wins": 2,
+      "losses": 1,
+      "daily_pnl": 214438,
+      "cumulative_pnl": 2565788,
+      "daily_pct": 16.99
+    },
+    {
+      "day": 13,
+      "date": "2026-01-09",
+      "trades": 3,
+      "wins": 0,
+      "losses": 3,
+      "daily_pnl": -149127,
+      "cumulative_pnl": 2416661,
+      "daily_pct": -11.52
+    },
+    {
+      "day": 14,
+      "date": "2026-01-12",
+      "trades": 4,
+      "wins": 2,
+      "losses": 2,
+      "daily_pnl": -31683,
+      "cumulative_pnl": 2384978,
+      "daily_pct": -2.01
+    },
+    {
+      "day": 15,
+      "date": "2026-01-13",
+      "trades": 4,
+      "wins": 2,
+      "losses": 2,
+      "daily_pnl": 27771,
+      "cumulative_pnl": 2412749,
+      "daily_pct": 1.74
+    },
+    {
+      "day": 16,
+      "date": "2026-01-14",
+      "trades": 2,
+      "wins": 2,
+      "losses": 0,
+      "daily_pnl": 421708,
+      "cumulative_pnl": 2834457,
+      "daily_pct": 43.39
+    },
+    {
+      "day": 17,
+      "date": "2026-01-15",
+      "trades": 4,
+      "wins": 3,
+      "losses": 1,
+      "daily_pnl": 332063,
+      "cumulative_pnl": 3166520,
+      "daily_pct": 20.83
+    },
+    {
+      "day": 18,
+      "date": "2026-01-16",
+      "trades": 4,
+      "wins": 3,
+      "losses": 1,
+      "daily_pnl": 365612,
+      "cumulative_pnl": 3532132,
+      "daily_pct": 22.94
+    },
+    {
+      "day": 19,
+      "date": "2026-01-20",
+      "trades": 9,
+      "wins": 7,
+      "losses": 2,
+      "daily_pnl": 688716,
+      "cumulative_pnl": 4220848,
+      "daily_pct": 22.43
+    },
+    {
+      "day": 20,
+      "date": "2026-01-21",
+      "trades": 6,
+      "wins": 3,
+      "losses": 3,
+      "daily_pnl": 105577,
+      "cumulative_pnl": 4326425,
+      "daily_pct": 4.82
+    },
+    {
+      "day": 21,
+      "date": "2026-01-22",
+      "trades": 5,
+      "wins": 2,
+      "losses": 3,
+      "daily_pnl": 98645,
+      "cumulative_pnl": 4425070,
+      "daily_pct": 5.26
+    },
+    {
+      "day": 22,
+      "date": "2026-01-23",
+      "trades": 3,
+      "wins": 3,
+      "losses": 0,
+      "daily_pnl": 406476,
+      "cumulative_pnl": 4831546,
+      "daily_pct": 31.41
+    },
+    {
+      "day": 23,
+      "date": "2026-01-26",
+      "trades": 6,
+      "wins": 5,
+      "losses": 1,
+      "daily_pnl": 589242,
+      "cumulative_pnl": 5420788,
+      "daily_pct": 26.91
+    },
+    {
+      "day": 24,
+      "date": "2026-01-27",
+      "trades": 5,
+      "wins": 4,
+      "losses": 1,
+      "daily_pnl": 389791,
+      "cumulative_pnl": 5810579,
+      "daily_pct": 20.71
+    },
+    {
+      "day": 25,
+      "date": "2026-01-28",
+      "trades": 4,
+      "wins": 2,
+      "losses": 2,
+      "daily_pnl": 277000,
+      "cumulative_pnl": 6087579,
+      "daily_pct": 17.38
+    },
+    {
+      "day": 26,
+      "date": "2026-01-29",
+      "trades": 5,
+      "wins": 2,
+      "losses": 3,
+      "daily_pnl": 234016,
+      "cumulative_pnl": 6321595,
+      "daily_pct": 12.45
+    },
+    {
+      "day": 27,
+      "date": "2026-01-30",
+      "trades": 4,
+      "wins": 1,
+      "losses": 3,
+      "daily_pnl": -82278,
+      "cumulative_pnl": 6239317,
+      "daily_pct": -5.47
+    },
+    {
+      "day": 28,
+      "date": "2026-02-02",
+      "trades": 2,
+      "wins": 0,
+      "losses": 2,
+      "daily_pnl": -38778,
+      "cumulative_pnl": 6200539,
+      "daily_pct": -3.88
+    },
+    {
+      "day": 29,
+      "date": "2026-02-03",
+      "trades": 3,
+      "wins": 2,
+      "losses": 1,
+      "daily_pnl": 301207,
+      "cumulative_pnl": 6501746,
+      "daily_pct": 23.2
+    },
+    {
+      "day": 30,
+      "date": "2026-02-04",
+      "trades": 3,
+      "wins": 1,
+      "losses": 2,
+      "daily_pnl": -63732,
+      "cumulative_pnl": 6438014,
+      "daily_pct": -4.92
+    },
+    {
+      "day": 31,
+      "date": "2026-02-05",
+      "trades": 1,
+      "wins": 0,
+      "losses": 1,
+      "daily_pnl": -34703,
+      "cumulative_pnl": 6403311,
+      "daily_pct": -5.29
+    },
+    {
+      "day": 32,
+      "date": "2026-02-06",
+      "trades": 2,
+      "wins": 1,
+      "losses": 1,
+      "daily_pnl": 99016,
+      "cumulative_pnl": 6502327,
+      "daily_pct": 9.95
+    },
+    {
+      "day": 33,
+      "date": "2026-02-09",
+      "trades": 6,
+      "wins": 4,
+      "losses": 2,
+      "daily_pnl": 120654,
+      "cumulative_pnl": 6622981,
+      "daily_pct": 5.5
+    },
+    {
+      "day": 34,
+      "date": "2026-02-10",
+      "trades": 3,
+      "wins": 2,
+      "losses": 1,
+      "daily_pnl": 329338,
+      "cumulative_pnl": 6952319,
+      "daily_pct": 25.41
+    },
+    {
+      "day": 35,
+      "date": "2026-02-11",
+      "trades": 2,
+      "wins": 1,
+      "losses": 1,
+      "daily_pnl": -23521,
+      "cumulative_pnl": 6928798,
+      "daily_pct": -2.36
+    },
+    {
+      "day": 36,
+      "date": "2026-02-12",
+      "trades": 3,
+      "wins": 3,
+      "losses": 0,
+      "daily_pnl": 329471,
+      "cumulative_pnl": 7258269,
+      "daily_pct": 25.53
+    },
+    {
+      "day": 37,
+      "date": "2026-02-13",
+      "trades": 2,
+      "wins": 1,
+      "losses": 1,
+      "daily_pnl": 206270,
+      "cumulative_pnl": 7464539,
+      "daily_pct": 20.67
+    },
+    {
+      "day": 38,
+      "date": "2026-02-17",
+      "trades": 7,
+      "wins": 6,
+      "losses": 1,
+      "daily_pnl": 1454618,
+      "cumulative_pnl": 8919157,
+      "daily_pct": 58.42
+    },
+    {
+      "day": 39,
+      "date": "2021-11-01",
+      "trades": 4,
+      "wins": 2,
+      "losses": 2,
+      "daily_pnl": 69212,
+      "cumulative_pnl": 8988369,
+      "daily_pct": 4.38
+    },
+    {
+      "day": 40,
+      "date": "2021-11-02",
+      "trades": 2,
+      "wins": 1,
+      "losses": 1,
+      "daily_pnl": -19887,
+      "cumulative_pnl": 8968482,
+      "daily_pct": -2.09
+    },
+    {
+      "day": 41,
+      "date": "2021-11-03",
+      "trades": 4,
+      "wins": 0,
+      "losses": 4,
+      "daily_pnl": -205896,
+      "cumulative_pnl": 8762586,
+      "daily_pct": -13.5
+    },
+    {
+      "day": 42,
+      "date": "2021-11-04",
+      "trades": 4,
+      "wins": 2,
+      "losses": 2,
+      "daily_pnl": 36917,
+      "cumulative_pnl": 8799503,
+      "daily_pct": 2.33
+    },
+    {
+      "day": 43,
+      "date": "2021-11-05",
+      "trades": 2,
+      "wins": 1,
+      "losses": 1,
+      "daily_pnl": -34155,
+      "cumulative_pnl": 8765348,
+      "daily_pct": -3.47
+    },
+    {
+      "day": 44,
+      "date": "2021-11-08",
+      "trades": 2,
+      "wins": 1,
+      "losses": 1,
+      "daily_pnl": -23942,
+      "cumulative_pnl": 8741406,
+      "daily_pct": -2.4
+    },
+    {
+      "day": 45,
+      "date": "2021-11-09",
+      "trades": 4,
+      "wins": 1,
+      "losses": 3,
+      "daily_pnl": -70863,
+      "cumulative_pnl": 8670543,
+      "daily_pct": -4.5
+    },
+    {
+      "day": 46,
+      "date": "2021-11-10",
+      "trades": 4,
+      "wins": 1,
+      "losses": 3,
+      "daily_pnl": -149102,
+      "cumulative_pnl": 8521441,
+      "daily_pct": -9.45
+    },
+    {
+      "day": 47,
+      "date": "2021-11-11",
+      "trades": 2,
+      "wins": 2,
+      "losses": 0,
+      "daily_pnl": 258170,
+      "cumulative_pnl": 8779611,
+      "daily_pct": 26.27
+    },
+    {
+      "day": 48,
+      "date": "2021-11-12",
+      "trades": 3,
+      "wins": 2,
+      "losses": 1,
+      "daily_pnl": 272138,
+      "cumulative_pnl": 9051749,
+      "daily_pct": 21.19
+    },
+    {
+      "day": 49,
+      "date": "2021-11-15",
+      "trades": 3,
+      "wins": 2,
+      "losses": 1,
+      "daily_pnl": 243892,
+      "cumulative_pnl": 9295641,
+      "daily_pct": 18.93
+    },
+    {
+      "day": 50,
+      "date": "2021-11-16",
+      "trades": 1,
+      "wins": 1,
+      "losses": 0,
+      "daily_pnl": 138079,
+      "cumulative_pnl": 9433720,
+      "daily_pct": 19.83
+    },
+    {
+      "day": 51,
+      "date": "2021-11-17",
+      "trades": 2,
+      "wins": 1,
+      "losses": 1,
+      "daily_pnl": -26212,
+      "cumulative_pnl": 9407508,
+      "daily_pct": -2.72
+    },
+    {
+      "day": 52,
+      "date": "2021-11-18",
+      "trades": 2,
+      "wins": 1,
+      "losses": 1,
+      "daily_pnl": 164069,
+      "cumulative_pnl": 9571577,
+      "daily_pct": 16.98
+    },
+    {
+      "day": 53,
+      "date": "2021-11-19",
+      "trades": 2,
+      "wins": 2,
+      "losses": 0,
+      "daily_pnl": 130415,
+      "cumulative_pnl": 9701992,
+      "daily_pct": 13.39
+    },
+    {
+      "day": 54,
+      "date": "2021-11-22",
+      "trades": 1,
+      "wins": 0,
+      "losses": 1,
+      "daily_pnl": -103826,
+      "cumulative_pnl": 9598166,
+      "daily_pct": -15.08
+    },
+    {
+      "day": 55,
+      "date": "2021-11-23",
+      "trades": 2,
+      "wins": 1,
+      "losses": 1,
+      "daily_pnl": -14819,
+      "cumulative_pnl": 9583347,
+      "daily_pct": -1.51
+    },
+    {
+      "day": 56,
+      "date": "2021-11-24",
+      "trades": 3,
+      "wins": 2,
+      "losses": 1,
+      "daily_pnl": 148864,
+      "cumulative_pnl": 9732211,
+      "daily_pct": 10.06
+    }
+  ]
+}
