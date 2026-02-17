@@ -214,10 +214,13 @@ class ProcessManager:
     def stop_all(self):
         self.running = False
         for name, proc in self.processes.items():
-            if proc.is_alive():
-                proc.terminate()
-                proc.join(timeout=5)
-                logger.info(f"  🛑 {name} 종료")
+            try:
+                if proc.is_alive():
+                    proc.terminate()
+                    proc.join(timeout=5)
+            except (AssertionError, Exception):
+                pass
+            logger.info(f"  🛑 {name} 종료")
 
     def run(self):
         logger.info("=" * 50)
