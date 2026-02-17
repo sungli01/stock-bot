@@ -12,5 +12,6 @@ schedule
 python-dotenv
 scikit-learn
 xgboost
+lightgbm
 torch
 joblib
