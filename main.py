@@ -116,36 +116,33 @@ def run_trader(config: dict):
 def run_standalone_cycle(config: dict):
     """
     Redis 없이 Collector→Analyzer→Trader 순차 실행
-    - US 정규장 시간 외에는 스캔만 하고 매매 실행 안 함
-    - 장 마감 임박 시 강제청산
+    매매일 기준: KST 18:00 ~ 익일 06:00 = 1세션
+    KST 18:00부터 매매 가능 (프리마켓 포함)
     """
     from collector.scanner import StockScanner
     from analyzer.signal import SignalGenerator
     from trader.executor import TradeExecutor
     from knowledge.file_store import FileStore
-    from trader.market_hours import is_us_market_open, get_all_timestamps
+    from trader.market_hours import get_all_timestamps, get_trading_date, minutes_until_session_end
 
     store = FileStore()
+    trading_date = get_trading_date()
+    ts = get_all_timestamps()
 
     scanner = StockScanner(None, config)
     analyzer = SignalGenerator(None, config)
     executor = TradeExecutor(None, config)
 
-    # 장 마감 임박 시 강제청산 우선 실행
+    # 세션 종료 임박 시 강제청산 우선 실행
     if executor.should_force_close():
-        logger.warning("🚨 [Standalone] 장 마감 임박 — 강제청산 실행")
+        remaining = minutes_until_session_end()
+        logger.warning(f"🚨 [{trading_date}] 세션 종료 {remaining:.0f}분 전 — 강제청산 실행")
         executor.force_close_all_positions()
         return
 
-    logger.info("🔍 [Standalone] Collector 스캔 시작")
+    logger.info(f"🔍 [{trading_date}] Collector 스캔 시작 (KST {ts['kst']})")
     screened = scanner.scan_once()
     logger.info(f"  → {len(screened)}개 종목 통과")
-
-    # US 정규장 시간 체크 — 장 외에는 스캔만, 매매 안 함
-    market_open = is_us_market_open()
-    if not market_open:
-        ts = get_all_timestamps()
-        logger.info(f"⏰ [Standalone] US 장 외 시간 — 스캔만 수행 (ET: {ts['et']})")
 
     for data in screened:
         ticker = data.get("ticker")
@@ -157,16 +154,11 @@ def run_standalone_cycle(config: dict):
             continue
 
         sig["timestamps"] = get_all_timestamps()
+        sig["trading_date"] = trading_date
         store.save_signal(sig)
 
-        if not market_open:
-            # 장 외 시간: 시그널 기록만, 매매 실행 안 함
-            if sig["signal"] in ("BUY", "SELL", "STOP"):
-                logger.info(f"📊 [Standalone] {ticker} → {sig['signal']} (기록만, 장 외 시간)")
-            continue
-
         if sig["signal"] in ("BUY", "SELL", "STOP"):
-            logger.info(f"📊 [Standalone] {ticker} → {sig['signal']} (신뢰도 {sig['confidence']:.0f}%)")
+            logger.info(f"📊 [{trading_date}] {ticker} → {sig['signal']} (신뢰도 {sig['confidence']:.0f}%)")
 
             if sig["signal"] == "BUY":
                 executor.execute_buy(ticker, sig.get("price", 0))
@@ -175,26 +167,15 @@ def run_standalone_cycle(config: dict):
             elif sig["signal"] == "STOP":
                 executor.execute_stop_loss(ticker)
 
-    # 보유 종목 손절/익절 체크 (장 열려있을 때만)
-    if market_open:
-        executor.check_positions()
+    # 보유 종목 손절/익절 체크
+    executor.check_positions()
 
 
 # ─── 스케줄 관리 ─────────────────────────────────────────
 def is_trading_hours(config: dict) -> bool:
-    """현재 매매 시간인지 확인 (KST 기준 18:00~06:00)"""
-    import pytz
-    tz = pytz.timezone(config.get("schedule", {}).get("timezone", "Asia/Seoul"))
-    now = datetime.now(tz)
-    hour = now.hour
-
-    start = int(config.get("schedule", {}).get("start_time", "18:00").split(":")[0])
-    end = int(config.get("schedule", {}).get("market_close", "06:00").split(":")[0])
-
-    if start > end:
-        return hour >= start or hour < end
-    else:
-        return start <= hour < end
+    """현재 매매 시간인지 확인 — trader/market_hours.py 기준"""
+    from trader.market_hours import is_trading_window
+    return is_trading_window()
 
 
 # ─── 프로세스 관리 (Redis 모드) ───────────────────────────

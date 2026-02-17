@@ -15,7 +15,7 @@ import redis
 import yaml
 
 from trader.kis_client import KISClient
-from trader.market_hours import is_us_market_open, minutes_until_close, get_all_timestamps
+from trader.market_hours import is_trading_window, is_us_market_open, minutes_until_session_end, get_all_timestamps, get_trading_date
 
 logger = logging.getLogger(__name__)
 
@@ -46,13 +46,14 @@ class TradeExecutor:
         10분할 매수 실행
         1분 간격으로 총매수금액/10 만큼씩 매수
         """
-        # US 정규장 시간 검증
-        if not is_us_market_open():
-            logger.warning(f"❌ {ticker} 매수 거부 — US 정규장 시간 외 ({get_all_timestamps()['et']})")
+        # KST 18:00~06:00 매매 윈도우 검증
+        if not is_trading_window():
+            ts = get_all_timestamps()
+            logger.warning(f"❌ {ticker} 매수 거부 — 매매 시간 외 (KST {ts['kst']})")
             return []
 
-        # 장 마감 임박 시 매수 차단 (강제청산 시간 내)
-        remaining = minutes_until_close()
+        # 세션 종료(KST 06:00) 임박 시 매수 차단
+        remaining = minutes_until_session_end()
         if 0 < remaining <= self.force_close_before_min:
             logger.warning(f"❌ {ticker} 매수 거부 — 장 마감 {remaining:.0f}분 전 (청산 구간)")
             return []
@@ -89,8 +90,9 @@ class TradeExecutor:
 
     def execute_sell(self, ticker: str, force: bool = False) -> Optional[dict]:
         """해당 종목 전량 일괄매도. force=True면 시간 검증 스킵(강제청산용)"""
-        if not force and not is_us_market_open():
-            logger.warning(f"❌ {ticker} 매도 거부 — US 정규장 시간 외 ({get_all_timestamps()['et']})")
+        if not force and not is_trading_window():
+            ts = get_all_timestamps()
+            logger.warning(f"❌ {ticker} 매도 거부 — 매매 시간 외 (KST {ts['kst']})")
             return None
 
         balance = self.kis.get_balance()
@@ -193,8 +195,8 @@ class TradeExecutor:
         logger.warning("🚨 강제청산 완료")
 
     def should_force_close(self) -> bool:
-        """장 마감 임박 여부 확인"""
-        remaining = minutes_until_close()
+        """세션 종료(KST 06:00) 임박 여부 확인"""
+        remaining = minutes_until_session_end()
         return 0 < remaining <= self.force_close_before_min
 
     def run_subscriber(self):
