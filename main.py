@@ -116,34 +116,54 @@ def run_trader(config: dict):
 def run_standalone_cycle(config: dict):
     """
     Redis 없이 Collector→Analyzer→Trader 순차 실행
+    - US 정규장 시간 외에는 스캔만 하고 매매 실행 안 함
+    - 장 마감 임박 시 강제청산
     """
     from collector.scanner import StockScanner
     from analyzer.signal import SignalGenerator
     from trader.executor import TradeExecutor
     from knowledge.file_store import FileStore
+    from trader.market_hours import is_us_market_open, get_all_timestamps
 
     store = FileStore()
 
-    # Redis=None으로 생성 (각 모듈이 None 허용)
     scanner = StockScanner(None, config)
     analyzer = SignalGenerator(None, config)
     executor = TradeExecutor(None, config)
 
+    # 장 마감 임박 시 강제청산 우선 실행
+    if executor.should_force_close():
+        logger.warning("🚨 [Standalone] 장 마감 임박 — 강제청산 실행")
+        executor.force_close_all_positions()
+        return
+
     logger.info("🔍 [Standalone] Collector 스캔 시작")
     screened = scanner.scan_once()
     logger.info(f"  → {len(screened)}개 종목 통과")
+
+    # US 정규장 시간 체크 — 장 외에는 스캔만, 매매 안 함
+    market_open = is_us_market_open()
+    if not market_open:
+        ts = get_all_timestamps()
+        logger.info(f"⏰ [Standalone] US 장 외 시간 — 스캔만 수행 (ET: {ts['et']})")
 
     for data in screened:
         ticker = data.get("ticker")
         if not ticker:
             continue
 
-        # Analyzer 평가
         sig = analyzer.evaluate(ticker, data)
         if not sig:
             continue
 
+        sig["timestamps"] = get_all_timestamps()
         store.save_signal(sig)
+
+        if not market_open:
+            # 장 외 시간: 시그널 기록만, 매매 실행 안 함
+            if sig["signal"] in ("BUY", "SELL", "STOP"):
+                logger.info(f"📊 [Standalone] {ticker} → {sig['signal']} (기록만, 장 외 시간)")
+            continue
 
         if sig["signal"] in ("BUY", "SELL", "STOP"):
             logger.info(f"📊 [Standalone] {ticker} → {sig['signal']} (신뢰도 {sig['confidence']:.0f}%)")
@@ -155,8 +175,9 @@ def run_standalone_cycle(config: dict):
             elif sig["signal"] == "STOP":
                 executor.execute_stop_loss(ticker)
 
-    # 보유 종목 손절/익절 체크
-    executor.check_positions()
+    # 보유 종목 손절/익절 체크 (장 열려있을 때만)
+    if market_open:
+        executor.check_positions()
 
 
 # ─── 스케줄 관리 ─────────────────────────────────────────
@@ -273,7 +294,7 @@ def run_standalone(config: dict):
     while running:
         try:
             if is_trading_hours(config):
-                run_standalone_cycle(config)
+                run_standalone_cycle(config)  # 내부에서 US장 시간/강제청산 처리
                 time.sleep(interval)
             else:
                 logger.info("💤 매매 시간 외 — 휴면 중 (5분 간격 체크)")

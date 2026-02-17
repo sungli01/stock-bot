@@ -15,6 +15,7 @@ import redis
 import yaml
 
 from trader.kis_client import KISClient
+from trader.market_hours import is_us_market_open, minutes_until_close, get_all_timestamps
 
 logger = logging.getLogger(__name__)
 
@@ -36,14 +37,26 @@ class TradeExecutor:
         self.split_count = self.trading_cfg.get("split_count", 10)
         self.split_interval = self.trading_cfg.get("split_interval_sec", 60)
         self.max_positions = self.trading_cfg.get("max_positions", 5)
-        self.take_profit_pct = self.trading_cfg.get("take_profit_pct", 30.0)
-        self.stop_loss_pct = self.trading_cfg.get("stop_loss_pct", -15.0)
+        self.take_profit_pct = self.trading_cfg.get("take_profit_pct", 10.0)
+        self.stop_loss_pct = self.trading_cfg.get("stop_loss_pct", -5.0)
+        self.force_close_before_min = self.trading_cfg.get("force_close_before_min", 15)
 
     def execute_buy(self, ticker: str, price: float) -> list[dict]:
         """
         10분할 매수 실행
         1분 간격으로 총매수금액/10 만큼씩 매수
         """
+        # US 정규장 시간 검증
+        if not is_us_market_open():
+            logger.warning(f"❌ {ticker} 매수 거부 — US 정규장 시간 외 ({get_all_timestamps()['et']})")
+            return []
+
+        # 장 마감 임박 시 매수 차단 (강제청산 시간 내)
+        remaining = minutes_until_close()
+        if 0 < remaining <= self.force_close_before_min:
+            logger.warning(f"❌ {ticker} 매수 거부 — 장 마감 {remaining:.0f}분 전 (청산 구간)")
+            return []
+
         # 동시 보유 종목 수 체크
         balance = self.kis.get_balance()
         current_positions = len(balance.get("positions", []))
@@ -74,8 +87,12 @@ class TradeExecutor:
         logger.info(f"✅ {ticker} 매수 완료: {len(orders)}/{self.split_count}건 체결")
         return orders
 
-    def execute_sell(self, ticker: str) -> Optional[dict]:
-        """해당 종목 전량 일괄매도"""
+    def execute_sell(self, ticker: str, force: bool = False) -> Optional[dict]:
+        """해당 종목 전량 일괄매도. force=True면 시간 검증 스킵(강제청산용)"""
+        if not force and not is_us_market_open():
+            logger.warning(f"❌ {ticker} 매도 거부 — US 정규장 시간 외 ({get_all_timestamps()['et']})")
+            return None
+
         balance = self.kis.get_balance()
         position = None
         for p in balance.get("positions", []):
@@ -128,20 +145,57 @@ class TradeExecutor:
                     except Exception:
                         pass
 
-            # 익절 체크
+            # 익절 체크 — 데이트레이딩: 목표가 도달 즉시 매도
             elif pnl_pct >= self.take_profit_pct:
-                logger.info(f"💰 {ticker} 익절선 도달 ({pnl_pct:.1f}%) — 추세 확인 필요")
-                # 추세 확인은 Analyzer에 요청 (여기서는 매도 시그널만 publish)
+                logger.info(f"💰 {ticker} 익절선 도달 ({pnl_pct:.1f}%) — 즉시 매도")
+                self.execute_sell(ticker)
                 if self.redis is not None:
                     try:
                         self.redis.publish("channel:signal", json.dumps({
                             "ticker": ticker,
-                            "signal": "TAKE_PROFIT_CHECK",
+                            "signal": "TAKE_PROFIT",
                             "pnl_pct": round(pnl_pct, 2),
                             "price": current_price,
+                            "timestamps": get_all_timestamps(),
                         }))
                     except Exception:
                         pass
+
+    def force_close_all_positions(self):
+        """
+        데이트레이딩 강제청산 — 보유 종목 전량 시장가 매도
+        장 마감 전 호출. force=True로 시간 검증 스킵.
+        """
+        balance = self.kis.get_balance()
+        positions = balance.get("positions", [])
+        if not positions:
+            logger.info("💤 강제청산: 보유 종목 없음")
+            return
+
+        logger.warning(f"🚨 데이트레이딩 강제청산 시작 — {len(positions)}개 종목")
+        for pos in positions:
+            ticker = pos["ticker"]
+            qty = pos.get("quantity", 0)
+            if qty <= 0:
+                continue
+            logger.warning(f"🚨 {ticker} 강제청산: {qty}주 시장가 매도")
+            result = self.kis.sell_market(ticker, qty)
+            if result and self.redis is not None:
+                try:
+                    self.redis.publish("channel:signal", json.dumps({
+                        "ticker": ticker,
+                        "signal": "FORCE_CLOSE",
+                        "quantity": qty,
+                        "timestamps": get_all_timestamps(),
+                    }))
+                except Exception:
+                    pass
+        logger.warning("🚨 강제청산 완료")
+
+    def should_force_close(self) -> bool:
+        """장 마감 임박 여부 확인"""
+        remaining = minutes_until_close()
+        return 0 < remaining <= self.force_close_before_min
 
     def run_subscriber(self):
         """

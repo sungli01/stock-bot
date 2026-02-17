@@ -8,6 +8,7 @@ import os
 import logging
 from datetime import datetime
 from typing import Optional
+import pytz
 
 logger = logging.getLogger(__name__)
 
@@ -37,11 +38,20 @@ def _save(filename: str, data: list):
         json.dump(data, f, indent=2, default=str)
 
 
+def _add_timestamps(record: dict):
+    """UTC, ET, KST 타임스탬프를 레코드에 추가"""
+    utc_now = datetime.now(pytz.utc)
+    record["timestamp_utc"] = utc_now.isoformat()
+    record["timestamp_et"] = utc_now.astimezone(pytz.timezone("America/New_York")).isoformat()
+    record["timestamp_kst"] = utc_now.astimezone(pytz.timezone("Asia/Seoul")).isoformat()
+    record.setdefault("timestamp", utc_now.isoformat())
+
+
 class FileStore:
     """JSON 파일 기반 저장소"""
 
     def save_trade(self, trade: dict):
-        trade.setdefault("timestamp", datetime.now().isoformat())
+        _add_timestamps(trade)
         trades = _load("trades.json")
         trades.append(trade)
         _save("trades.json", trades)
@@ -70,7 +80,7 @@ class FileStore:
         return _load("positions.json")
 
     def save_signal(self, signal: dict):
-        signal.setdefault("timestamp", datetime.now().isoformat())
+        _add_timestamps(signal)
         signals = _load("signals.json")
         signals.append(signal)
         # keep last 1000
