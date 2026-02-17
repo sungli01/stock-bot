@@ -1,0 +1,31 @@
+{
+  "date": "2021-12-09",
+  "monitored": 30,
+  "signals_detected": 1,
+  "trades": [
+    {
+      "ticker": "IINN",
+      "surge_pct": 17.59,
+      "volume_ratio": 1233.0,
+      "detect_time_kst": "21:42",
+      "detect_price": 3.41,
+      "surge_score": 21688.0,
+      "allocation_pct": 50,
+      "buy_price": 3.51,
+      "buy_time_kst": "21:43",
+      "buy_time_utc": "12:43",
+      "sell_price": 4.17,
+      "sell_time_kst": "22:04",
+      "sell_reason": "트레일링(+18.7%,고점$4.68)",
+      "shares": 105,
+      "invested_krw": 497826,
+      "return_krw": 591098,
+      "pnl_krw": 93272,
+      "pnl_pct": 18.74
+    }
+  ],
+  "total_invested_krw": 497826,
+  "total_return_krw": 591098,
+  "total_pnl_krw": 93272,
+  "total_pnl_pct": 18.74
+}

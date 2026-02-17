@@ -580,6 +580,106 @@
       "daily_pnl": 148864,
       "cumulative_pnl": 9732211,
       "daily_pct": 10.06
+    },
+    {
+      "day": 57,
+      "date": "2021-11-26",
+      "trades": 3,
+      "wins": 2,
+      "losses": 1,
+      "daily_pnl": 72460,
+      "cumulative_pnl": 9804671,
+      "daily_pct": 4.9
+    },
+    {
+      "day": 58,
+      "date": "2021-11-29",
+      "trades": 1,
+      "wins": 0,
+      "losses": 1,
+      "daily_pnl": -57362,
+      "cumulative_pnl": 9747309,
+      "daily_pct": -11.63
+    },
+    {
+      "day": 59,
+      "date": "2021-11-30",
+      "trades": 4,
+      "wins": 1,
+      "losses": 3,
+      "daily_pnl": -80932,
+      "cumulative_pnl": 9666377,
+      "daily_pct": -4.08
+    },
+    {
+      "day": 60,
+      "date": "2021-12-01",
+      "trades": 3,
+      "wins": 0,
+      "losses": 3,
+      "daily_pnl": -230268,
+      "cumulative_pnl": 9436109,
+      "daily_pct": -15.49
+    },
+    {
+      "day": 61,
+      "date": "2021-12-02",
+      "trades": 3,
+      "wins": 1,
+      "losses": 2,
+      "daily_pnl": 12475,
+      "cumulative_pnl": 9448584,
+      "daily_pct": 0.84
+    },
+    {
+      "day": 62,
+      "date": "2021-12-03",
+      "trades": 2,
+      "wins": 1,
+      "losses": 1,
+      "daily_pnl": -518,
+      "cumulative_pnl": 9448066,
+      "daily_pct": -0.05
+    },
+    {
+      "day": 63,
+      "date": "2021-12-06",
+      "trades": 4,
+      "wins": 3,
+      "losses": 1,
+      "daily_pnl": 365166,
+      "cumulative_pnl": 9813232,
+      "daily_pct": 18.42
+    },
+    {
+      "day": 64,
+      "date": "2021-12-07",
+      "trades": 1,
+      "wins": 1,
+      "losses": 0,
+      "daily_pnl": 3209,
+      "cumulative_pnl": 9816441,
+      "daily_pct": 0.65
+    },
+    {
+      "day": 65,
+      "date": "2021-12-08",
+      "trades": 3,
+      "wins": 3,
+      "losses": 0,
+      "daily_pnl": 322830,
+      "cumulative_pnl": 10139271,
+      "daily_pct": 21.84
+    },
+    {
+      "day": 66,
+      "date": "2021-12-09",
+      "trades": 1,
+      "wins": 1,
+      "losses": 0,
+      "daily_pnl": 93272,
+      "cumulative_pnl": 10232543,
+      "daily_pct": 18.74
     }
   ]
 }

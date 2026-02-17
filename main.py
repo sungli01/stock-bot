@@ -272,14 +272,18 @@ def run_standalone(config: dict):
 
     interval = 60  # 스캔 간격 (초)
 
+    sleep_logged = False
     while running:
         try:
             if is_trading_hours(config):
-                run_standalone_cycle(config)  # 내부에서 US장 시간/강제청산 처리
+                sleep_logged = False
+                run_standalone_cycle(config)
                 time.sleep(interval)
             else:
-                logger.info("💤 매매 시간 외 — 휴면 중 (5분 간격 체크)")
-                time.sleep(300)
+                if not sleep_logged:
+                    logger.info("💤 매매 시간 외 — 휴면 중 (10분 간격 체크)")
+                    sleep_logged = True
+                time.sleep(600)  # 10분 간격
         except KeyboardInterrupt:
             break
         except Exception as e:
@@ -293,15 +297,31 @@ def run_standalone(config: dict):
 if __name__ == "__main__":
     config = load_config()
 
-    r = try_redis()
+    # Railway 환경에서는 항상 standalone 모드 사용
+    # (Redis 모드는 child process 크래시 루프 발생)
+    force_standalone = os.getenv("FORCE_STANDALONE", "").lower() in ("1", "true", "yes")
+    
+    r = None if force_standalone else try_redis()
     use_redis = r is not None
 
+    mode = "standalone"
     if use_redis:
-        logger.info("✅ Redis 연결 성공 — railway 모드")
-        send_startup_notification("railway")
+        mode = "redis"
+
+    logger.info(f"🤖 stock-bot 시작 (모드: {mode})")
+    
+    # 시작 알림은 1회만 (크래시 루프 방지)
+    startup_flag = "/tmp/stockbot_started"
+    if not os.path.exists(startup_flag):
+        send_startup_notification(mode)
+        try:
+            with open(startup_flag, "w") as f:
+                f.write(datetime.now().isoformat())
+        except Exception:
+            pass
+
+    if use_redis:
         manager = ProcessManager(config)
         manager.run()
     else:
-        logger.info("⚠️ Redis 없음 — standalone 모드 (순차 실행)")
-        send_startup_notification("standalone")
         run_standalone(config)

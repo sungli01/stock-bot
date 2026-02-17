@@ -1,0 +1,51 @@
+{
+  "date": "2021-12-03",
+  "monitored": 30,
+  "signals_detected": 2,
+  "trades": [
+    {
+      "ticker": "CYAD",
+      "surge_pct": 5.83,
+      "volume_ratio": 1857.0,
+      "detect_time_kst": "21:04",
+      "detect_price": 4.36,
+      "surge_score": 10826.0,
+      "allocation_pct": 50,
+      "buy_price": 4.61,
+      "buy_time_kst": "21:05",
+      "buy_time_utc": "12:05",
+      "sell_price": 4.75,
+      "sell_time_kst": "09:59",
+      "sell_reason": "강제청산(장마감)",
+      "shares": 80,
+      "invested_krw": 497880,
+      "return_krw": 513000,
+      "pnl_krw": 15120,
+      "pnl_pct": 3.04
+    },
+    {
+      "ticker": "ARDX",
+      "surge_pct": 5.46,
+      "volume_ratio": 236.0,
+      "detect_time_kst": "00:09",
+      "detect_price": 1.64,
+      "surge_score": 1289.0,
+      "allocation_pct": 50,
+      "buy_price": 1.66,
+      "buy_time_kst": "00:10",
+      "buy_time_utc": "15:10",
+      "sell_price": 1.61,
+      "sell_time_kst": "09:59",
+      "sell_reason": "강제청산(장마감)",
+      "shares": 222,
+      "invested_krw": 498155,
+      "return_krw": 482517,
+      "pnl_krw": -15638,
+      "pnl_pct": -3.14
+    }
+  ],
+  "total_invested_krw": 996035,
+  "total_return_krw": 995517,
+  "total_pnl_krw": -518,
+  "total_pnl_pct": -0.05
+}

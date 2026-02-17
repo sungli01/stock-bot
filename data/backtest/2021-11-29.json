@@ -1,0 +1,31 @@
+{
+  "date": "2021-11-29",
+  "monitored": 30,
+  "signals_detected": 1,
+  "trades": [
+    {
+      "ticker": "TWTR",
+      "surge_pct": 8.78,
+      "volume_ratio": 30848.0,
+      "detect_time_kst": "23:19",
+      "detect_price": 51.67,
+      "surge_score": 270845.0,
+      "allocation_pct": 50,
+      "buy_price": 52.21,
+      "buy_time_kst": "23:20",
+      "buy_time_utc": "14:20",
+      "sell_price": 46.14,
+      "sell_time_kst": "09:59",
+      "sell_reason": "강제청산(장마감)",
+      "shares": 7,
+      "invested_krw": 493385,
+      "return_krw": 436023,
+      "pnl_krw": -57362,
+      "pnl_pct": -11.63
+    }
+  ],
+  "total_invested_krw": 493385,
+  "total_return_krw": 436023,
+  "total_pnl_krw": -57362,
+  "total_pnl_pct": -11.63
+}

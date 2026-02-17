@@ -1,0 +1,31 @@
+{
+  "date": "2021-12-07",
+  "monitored": 30,
+  "signals_detected": 1,
+  "trades": [
+    {
+      "ticker": "GEVO",
+      "surge_pct": 6.97,
+      "volume_ratio": 5674.0,
+      "detect_time_kst": "23:00",
+      "detect_price": 5.68,
+      "surge_score": 39548.0,
+      "allocation_pct": 50,
+      "buy_price": 5.56,
+      "buy_time_kst": "23:01",
+      "buy_time_utc": "14:01",
+      "sell_price": 5.6,
+      "sell_time_kst": "09:56",
+      "sell_reason": "강제청산(장마감)",
+      "shares": 66,
+      "invested_krw": 495751,
+      "return_krw": 498960,
+      "pnl_krw": 3209,
+      "pnl_pct": 0.65
+    }
+  ],
+  "total_invested_krw": 495751,
+  "total_return_krw": 498960,
+  "total_pnl_krw": 3209,
+  "total_pnl_pct": 0.65
+}
