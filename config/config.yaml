@@ -13,7 +13,8 @@ trading:
   total_buy_amount: 1000000  # 100만원
   split_count: 10             # 10분할
   split_interval_sec: 60      # 1분 간격
-  max_positions: 5            # 동시 보유 최대 5종목
+  max_positions: 2            # 동시 보유 최대 2종목
+  allocation_ratio: [0.7, 0.3] # 1순위 70%, 2순위 30%
   take_profit_pct: 30.0       # +30% 익절
   stop_loss_pct: -15.0        # -15% 손절
 
