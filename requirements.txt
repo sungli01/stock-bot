@@ -1,0 +1,12 @@
+polygon-api-client
+redis
+psycopg2-binary
+sqlalchemy
+pandas
+pandas-ta
+numpy
+python-telegram-bot
+pykis
+pyyaml
+schedule
+python-dotenv
