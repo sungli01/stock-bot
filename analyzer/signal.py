@@ -36,7 +36,7 @@ DEFAULT_WEIGHTS = {
 class SignalGenerator:
     """시그널 생성기 — 기술지표 기반 매수/매도 시그널"""
 
-    def __init__(self, redis_client: redis.Redis, config: Optional[dict] = None):
+    def __init__(self, redis_client, config: Optional[dict] = None):
         self.redis = redis_client
         if config is None:
             with open("config/config.yaml", "r") as f:
@@ -49,12 +49,13 @@ class SignalGenerator:
 
     def _load_weights(self) -> dict:
         """Redis에서 최신 가중치 로드, 없으면 기본값"""
-        try:
-            cached = self.redis.get("indicator_weights")
-            if cached:
-                return json.loads(cached)
-        except Exception:
-            pass
+        if self.redis is not None:
+            try:
+                cached = self.redis.get("indicator_weights")
+                if cached:
+                    return json.loads(cached)
+            except Exception:
+                pass
         return DEFAULT_WEIGHTS.copy()
 
     def evaluate(self, ticker: str, screened_data: dict) -> Optional[dict]:
@@ -138,8 +139,13 @@ class SignalGenerator:
             return SIGNAL_WATCH, confidence
 
     def _publish_signal(self, signal: dict):
-        """Redis channel:signal 로 publish"""
-        self.redis.publish("channel:signal", json.dumps(signal))
+        """Redis channel:signal 로 publish (Redis 없으면 스킵)"""
+        if self.redis is None:
+            return
+        try:
+            self.redis.publish("channel:signal", json.dumps(signal))
+        except Exception as e:
+            logger.warning(f"Redis publish 실패: {e}")
 
     def run_subscriber(self):
         """

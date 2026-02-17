@@ -26,7 +26,7 @@ def load_config() -> dict:
 class StockScanner:
     """전종목 스캐너 — 1차 필터링 후 Redis publish"""
 
-    def __init__(self, redis_client: redis.Redis, config: Optional[dict] = None):
+    def __init__(self, redis_client, config: Optional[dict] = None):
         self.redis = redis_client
         self.config = config or load_config()
         self.scanner_cfg = self.config["scanner"]
@@ -111,8 +111,13 @@ class StockScanner:
         }
 
     def _publish(self, data: dict):
-        """Redis channel:screened 으로 publish"""
-        self.redis.publish("channel:screened", json.dumps(data))
+        """Redis channel:screened 으로 publish (Redis 없으면 스킵)"""
+        if self.redis is None:
+            return
+        try:
+            self.redis.publish("channel:screened", json.dumps(data))
+        except Exception as e:
+            logger.warning(f"Redis publish 실패: {e}")
 
     def run_loop(self, interval_sec: int = 60):
         """

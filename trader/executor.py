@@ -22,7 +22,7 @@ logger = logging.getLogger(__name__)
 class TradeExecutor:
     """매매 실행기 — 시그널 수신 후 자동 매매"""
 
-    def __init__(self, redis_client: redis.Redis, config: Optional[dict] = None):
+    def __init__(self, redis_client, config: Optional[dict] = None):
         self.redis = redis_client
         if config is None:
             with open("config/config.yaml", "r") as f:
@@ -117,23 +117,31 @@ class TradeExecutor:
                 logger.warning(f"🚨 {ticker} 손절선 도달 ({pnl_pct:.1f}%)")
                 self.execute_stop_loss(ticker)
                 # 손절 시그널을 Redis로 publish (알림용)
-                self.redis.publish("channel:signal", json.dumps({
-                    "ticker": ticker,
-                    "signal": "STOP",
-                    "pnl_pct": round(pnl_pct, 2),
-                    "price": current_price,
-                }))
+                if self.redis is not None:
+                    try:
+                        self.redis.publish("channel:signal", json.dumps({
+                            "ticker": ticker,
+                            "signal": "STOP",
+                            "pnl_pct": round(pnl_pct, 2),
+                            "price": current_price,
+                        }))
+                    except Exception:
+                        pass
 
             # 익절 체크
             elif pnl_pct >= self.take_profit_pct:
                 logger.info(f"💰 {ticker} 익절선 도달 ({pnl_pct:.1f}%) — 추세 확인 필요")
                 # 추세 확인은 Analyzer에 요청 (여기서는 매도 시그널만 publish)
-                self.redis.publish("channel:signal", json.dumps({
-                    "ticker": ticker,
-                    "signal": "TAKE_PROFIT_CHECK",
-                    "pnl_pct": round(pnl_pct, 2),
-                    "price": current_price,
-                }))
+                if self.redis is not None:
+                    try:
+                        self.redis.publish("channel:signal", json.dumps({
+                            "ticker": ticker,
+                            "signal": "TAKE_PROFIT_CHECK",
+                            "pnl_pct": round(pnl_pct, 2),
+                            "price": current_price,
+                        }))
+                    except Exception:
+                        pass
 
     def run_subscriber(self):
         """
