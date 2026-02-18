@@ -42,8 +42,25 @@ class KISClient:
         else:
             logger.warning("⚠️ KIS API 키 없음 — stub 모드")
 
+    TOKEN_CACHE_FILE = os.path.join(os.path.dirname(__file__), "..", "data", "kis_token.json")
+
     def _get_token(self):
-        """OAuth 토큰 발급"""
+        """OAuth 토큰 발급 (파일 캐싱으로 중복 발급 방지)"""
+        # 캐시 파일에서 토큰 로드 시도
+        try:
+            if os.path.exists(self.TOKEN_CACHE_FILE):
+                with open(self.TOKEN_CACHE_FILE, "r") as f:
+                    import json as _json
+                    cached = _json.load(f)
+                if cached.get("expires", 0) > time.time() + 300:  # 5분 여유
+                    self.access_token = cached["token"]
+                    self.token_expires = cached["expires"]
+                    logger.info("KIS 토큰 캐시 로드 (재발급 불필요)")
+                    return
+        except Exception:
+            pass
+
+        # 새로 발급
         url = f"{BASE_URL}/oauth2/tokenP"
         body = {
             "grant_type": "client_credentials",
@@ -55,7 +72,16 @@ class KISClient:
         data = r.json()
         self.access_token = data["access_token"]
         self.token_expires = time.time() + int(data.get("expires_in", 86400)) - 60
-        logger.info("KIS 토큰 발급 완료")
+        logger.info("KIS 토큰 신규 발급 완료")
+
+        # 캐시 파일 저장
+        try:
+            os.makedirs(os.path.dirname(self.TOKEN_CACHE_FILE), exist_ok=True)
+            import json as _json
+            with open(self.TOKEN_CACHE_FILE, "w") as f:
+                _json.dump({"token": self.access_token, "expires": self.token_expires}, f)
+        except Exception as e:
+            logger.warning(f"토큰 캐시 저장 실패: {e}")
 
     def _ensure_token(self):
         """토큰 만료 시 자동 갱신"""
