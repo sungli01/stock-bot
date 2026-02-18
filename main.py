@@ -216,6 +216,20 @@ def run_live(config: dict):
     store = FileStore()
     tracker = PostTradeTracker()
 
+    # 세션 내 거래/보유 이력 — 장중 절대 재매수 금지
+    _traded_tickers: set[str] = set()
+
+    # 봇 시작 시 기존 보유 종목을 _traded_tickers에 등록
+    try:
+        init_balance = executor.kis.get_balance()
+        for pos in init_balance.get("positions", []):
+            _traded_tickers.add(pos["ticker"])
+            scanner.mark_signaled(pos["ticker"])
+        if _traded_tickers:
+            logger.info(f"📋 기존 보유 종목 재매수 차단 등록: {_traded_tickers}")
+    except Exception as e:
+        logger.warning(f"초기 잔고 조회 실패: {e}")
+
     # KIS 스캐너 (백그라운드 스레드)
     kis_scanner = KISScanner(config)
     # signaled 세트 공유 (중복 매수 방지)
@@ -261,6 +275,8 @@ def run_live(config: dict):
                     kis_scanner.reset_session()
                     bb_trailing.reset()
                     _notifier.reset_dedup()
+                    _traded_tickers.clear()
+                    logger.info("🔄 _traded_tickers 초기화 (새 세션)")
                     sleep_logged = True
 
                     # 장 마감 후 post-trade 업데이트 (1일 1회)
@@ -333,6 +349,8 @@ def run_live(config: dict):
 
             for pos in positions:
                 ticker = pos["ticker"]
+                # 보유 중인 종목은 _traded_tickers에 등록 (수동 매수 포함)
+                _traded_tickers.add(ticker)
                 avg_price = pos["avg_price"]
                 # snapshot에서 실시간 가격 가져오기
                 snap_price = scanner.get_price(ticker)
@@ -353,6 +371,8 @@ def run_live(config: dict):
                         executor.execute_stop_loss(ticker)
                     else:
                         executor.execute_sell(ticker)
+                    _traded_tickers.add(ticker)
+                    scanner.mark_signaled(ticker)
 
                     # Post-trade 기록
                     try:
@@ -419,6 +439,12 @@ def run_live(config: dict):
 
                     ticker = cand["ticker"]
 
+                    # 재매수 차단 (금일 거래/보유 이력)
+                    if ticker in _traded_tickers:
+                        logger.info(f"⛔ {ticker} 재매수 차단 (금일 거래 이력)")
+                        scanner.mark_signaled(ticker)
+                        continue
+
                     # 시그널 평가
                     sig = analyzer.evaluate(ticker, cand)
                     if not sig or sig["signal"] != "BUY":
@@ -441,6 +467,7 @@ def run_live(config: dict):
                     orders = executor.execute_buy(ticker, price)
                     # 체결 여부와 무관하게 같은 종목 반복 시도 방지
                     scanner.mark_signaled(ticker)
+                    _traded_tickers.add(ticker)
 
                     if orders:
                         current_count += 1
