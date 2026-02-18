@@ -13,6 +13,7 @@ import logging
 import threading
 from datetime import datetime
 from http.server import HTTPServer, BaseHTTPRequestHandler
+from typing import Optional
 
 import yaml
 from dotenv import load_dotenv
@@ -56,6 +57,51 @@ def start_health_server(port: int = 8080):
         logger.warning(f"헬스체크 서버 실패: {e}")
 
 
+# ─── KIS 스캔 백그라운드 스레드 ─────────────────────────
+class KISScanThread(threading.Thread):
+    """KIS 현재가 API로 워치리스트를 백그라운드 스캔 (별도 스레드)"""
+
+    def __init__(self, kis_scanner):
+        super().__init__(daemon=True)
+        self.scanner = kis_scanner
+        self.latest_candidates: list[dict] = []
+        self.lock = threading.Lock()
+        self._running = True
+
+    def run(self):
+        logger.info("🚀 KIS 스캔 스레드 시작")
+        while self._running:
+            try:
+                result = self.scanner.scan_once()
+                with self.lock:
+                    self.latest_candidates = result
+                if result:
+                    logger.info(f"🔥 KIS 스캔: {len(result)}개 후보 갱신")
+            except Exception as e:
+                logger.error(f"KIS 스캔 오류: {e}", exc_info=True)
+            time.sleep(5)  # 스캔 사이 5초 대기
+
+    def get_candidates(self) -> list[dict]:
+        with self.lock:
+            return list(self.latest_candidates)
+
+    def stop(self):
+        self._running = False
+
+
+def merge_candidates(polygon_candidates: list[dict], kis_candidates: list[dict]) -> list[dict]:
+    """Polygon + KIS 후보 병합 (중복 제거, KIS 우선)"""
+    seen = {}
+    # KIS 결과 먼저 (실시간 데이터 우선)
+    for c in kis_candidates:
+        seen[c["ticker"]] = c
+    # Polygon 결과 (중복 아닌 것만)
+    for c in polygon_candidates:
+        if c["ticker"] not in seen:
+            seen[c["ticker"]] = c
+    return list(seen.values())
+
+
 def send_notification(text: str):
     """텔레그램 알림 (실패해도 무시)"""
     try:
@@ -75,6 +121,7 @@ def run_live(config: dict):
     - 장마감 15분전 강제청산
     """
     from collector.snapshot_scanner import SnapshotScanner
+    from collector.kis_scanner import KISScanner
     from analyzer.signal import SignalGenerator
     from trader.executor import TradeExecutor
     from trader.bb_trailing import BBTrailingStop
@@ -93,6 +140,13 @@ def run_live(config: dict):
     governor = MarketGovernor(config)
     store = FileStore()
     tracker = PostTradeTracker()
+
+    # KIS 스캐너 (백그라운드 스레드)
+    kis_scanner = KISScanner(config)
+    # signaled 세트 공유 (중복 매수 방지)
+    kis_scanner.share_signaled(scanner._signaled_tickers)
+    kis_thread = KISScanThread(kis_scanner)
+    kis_thread.start()
 
     trading_cfg = config.get("trading", {})
     max_positions = trading_cfg.get("max_positions", 2)
@@ -125,6 +179,7 @@ def run_live(config: dict):
                     logger.info("💤 매매 시간 외 — 대기 중")
                     # 세션 리셋
                     scanner.reset_session()
+                    kis_scanner.reset_session()
                     bb_trailing.reset()
                     sleep_logged = True
 
@@ -152,8 +207,10 @@ def run_live(config: dict):
                 time.sleep(60)
                 continue
 
-            # ── Snapshot 스캔 ─────────────────────────────
+            # ── Snapshot 스캔 + KIS 결과 병합 ─────────────
             candidates = scanner.scan_once()
+            kis_candidates = kis_thread.get_candidates()
+            candidates = merge_candidates(candidates, kis_candidates)
 
             # ── 시장 거버넌스 업데이트 ────────────────────
             governor.update_market_data(scanner._last_snapshot)
