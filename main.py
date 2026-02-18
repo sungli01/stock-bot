@@ -102,13 +102,77 @@ def merge_candidates(polygon_candidates: list[dict], kis_candidates: list[dict])
     return list(seen.values())
 
 
-def send_notification(text: str):
-    """텔레그램 알림 (실패해도 무시)"""
+class BatchNotifier:
+    """알림 메시지를 모아서 1분마다 배치 전송"""
+
+    def __init__(self):
+        self._queue: list[str] = []
+        self._sent_set: set[str] = set()  # 중복 방지 (후보 알림 등)
+        self._lock = threading.Lock()
+        self._last_flush = time.time()
+        self.FLUSH_INTERVAL = 60  # 1분
+
+    def add(self, text: str, dedup_key: str = ""):
+        """메시지 큐에 추가. dedup_key가 있으면 같은 키 중복 전송 방지"""
+        with self._lock:
+            if dedup_key:
+                if dedup_key in self._sent_set:
+                    return
+                self._sent_set.add(dedup_key)
+            self._queue.append(text)
+
+    def flush_if_ready(self):
+        """1분 경과 시 큐에 쌓인 메시지를 합쳐서 한번에 전송"""
+        now = time.time()
+        if now - self._last_flush < self.FLUSH_INTERVAL:
+            return
+        self._last_flush = now
+        with self._lock:
+            if not self._queue:
+                return
+            combined = "\n\n".join(self._queue)
+            self._queue.clear()
+        _send_telegram(combined)
+
+    def force_flush(self):
+        """즉시 전송 (세션 시작, 강제청산 등 중요 알림)"""
+        with self._lock:
+            if not self._queue:
+                return
+            combined = "\n\n".join(self._queue)
+            self._queue.clear()
+        self._last_flush = time.time()
+        _send_telegram(combined)
+
+    def send_immediate(self, text: str):
+        """즉시 단독 전송 (5분 상태보고 등)"""
+        _send_telegram(text)
+
+    def reset_dedup(self):
+        """세션 리셋 시 중복 세트 초기화"""
+        with self._lock:
+            self._sent_set.clear()
+
+
+def _send_telegram(text: str):
+    """텔레그램 실제 전송 (내부용)"""
     try:
         from notifier.telegram_bot import TelegramNotifier
         TelegramNotifier().send_sync(text)
     except Exception as e:
         logger.warning(f"알림 실패: {e}")
+
+
+# 글로벌 배치 알림 인스턴스
+_notifier = BatchNotifier()
+
+
+def send_notification(text: str, dedup_key: str = "", immediate: bool = False):
+    """텔레그램 알림 (배치 전송, immediate=True면 즉시)"""
+    if immediate:
+        _notifier.send_immediate(text)
+    else:
+        _notifier.add(text, dedup_key=dedup_key)
 
 
 # ─── 메인 트레이딩 루프 ──────────────────────────────────
@@ -185,6 +249,7 @@ def run_live(config: dict):
                     scanner.reset_session()
                     kis_scanner.reset_session()
                     bb_trailing.reset()
+                    _notifier.reset_dedup()
                     sleep_logged = True
 
                     # 장 마감 후 post-trade 업데이트 (1일 1회)
@@ -213,6 +278,7 @@ def run_live(config: dict):
                     f"max_positions: {max_positions}\n"
                     f"━━━━━━━━━━━━━━"
                 )
+                _notifier.force_flush()
 
             # ── 강제청산 체크 ─────────────────────────────
             remaining = minutes_until_session_end()
@@ -224,7 +290,8 @@ def run_live(config: dict):
                     f"━━━━━━━━━━━━━━\n"
                     f"잔여: {remaining:.0f}분\n"
                     f"총 스캔: {scan_count}회\n"
-                    f"━━━━━━━━━━━━━━"
+                    f"━━━━━━━━━━━━━━",
+                    immediate=True
                 )
                 session_start_notified = False
                 scan_count = 0
@@ -244,7 +311,7 @@ def run_live(config: dict):
 
             if not governor.should_trade():
                 logger.warning(f"🛑 급락장 감지 — 매매 중단 (SPY {governor.market_info['spy_change']:+.1f}%)")
-                send_notification(f"🛑 급락장 감지 — 매매 중단\nSPY: {governor.market_info['spy_change']:+.1f}%")
+                send_notification(f"🛑 급락장 감지 — 매매 중단\nSPY: {governor.market_info['spy_change']:+.1f}%", immediate=True)
                 time.sleep(30)
                 continue
 
@@ -321,15 +388,18 @@ def run_live(config: dict):
                 if pos_lines:
                     status_text += "\n".join(pos_lines) + "\n"
                 status_text += f"━━━━━━━━━━━━━━\n장마감까지: {remaining:.0f}분"
-                send_notification(status_text)
+                send_notification(status_text, immediate=True)
 
             # ── 신규 매수 평가 ────────────────────────────
             if candidates and current_count < max_positions:
-                # 후보 감지 알림
-                cand_text = "🔍 후보 감지\n"
-                for c in candidates[:5]:
-                    cand_text += f"  {c['ticker']}: ${c['price']:.2f} ({c['change_pct']:+.1f}%) vol:{c.get('volume_ratio', 0):.0f}%\n"
-                send_notification(cand_text.strip())
+                # 후보 감지 알림 (중복 제거)
+                new_cands = [c for c in candidates[:5] if c['ticker'] not in _notifier._sent_set]
+                if new_cands:
+                    cand_text = "🔍 후보 감지\n"
+                    for c in new_cands:
+                        cand_text += f"  {c['ticker']}: ${c['price']:.2f} ({c['change_pct']:+.1f}%) vol:{c.get('volume_ratio', 0):.0f}%\n"
+                    dedup = "|".join(c['ticker'] for c in new_cands)
+                    send_notification(cand_text.strip(), dedup_key=f"cand:{dedup}")
 
                 for cand in candidates:
                     if current_count >= max_positions:
@@ -377,6 +447,9 @@ def run_live(config: dict):
                 missed = [f"{c['ticker']}({c['change_pct']:+.0f}%)" for c in candidates[:3]]
                 if missed and now_ts - last_status_report < 10:  # 상태보고 직후에만
                     send_notification(f"⚠️ 포지션 풀 ({current_count}/{max_positions}) — 후보 놓침: {', '.join(missed)}")
+
+            # 배치 알림 플러시 (1분 경과 시)
+            _notifier.flush_if_ready()
 
             time.sleep(SCAN_INTERVAL)
 
