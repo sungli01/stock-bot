@@ -71,10 +71,20 @@ class SnapshotScanner:
                 continue
             day = t.get("day", {})
             prev_day = t.get("prevDay", {})
-            price = day.get("c", 0) or day.get("vw", 0) or 0
-            volume = day.get("v", 0) or 0
+            last_trade = t.get("lastTrade", {})
+            min_data = t.get("min", {})
             prev_close = prev_day.get("c", 0) or 0
             change_pct = t.get("todaysChangePerc", 0) or 0
+
+            # 가격: day.c → lastTrade.p → min.c → day.vw → 전일종가 역산
+            price = day.get("c", 0) or last_trade.get("p", 0) or min_data.get("c", 0) or day.get("vw", 0) or 0
+            if price == 0 and prev_close > 0 and change_pct != 0:
+                price = prev_close * (1 + change_pct / 100)
+
+            # 거래량: day.v → min.av (누적) → 전일 대비 추정
+            volume = day.get("v", 0) or min_data.get("av", 0) or 0
+            if volume == 0 and prev_day.get("v", 0) > 0 and change_pct != 0:
+                volume = max(10000, int(prev_day.get("v", 0) * 0.1))  # 프리마켓 최소 추정
 
             snapshot_map[ticker] = {
                 "ticker": ticker,
@@ -105,11 +115,16 @@ class SnapshotScanner:
                 continue
 
             # 거래량 스파이크 감지: 전일 거래량 대비
+            # 프리마켓(18:00~23:30 KST)은 거래량이 적으므로 기준 완화
             prev_vol = snap.get("prev_day", {}).get("v", 0) or 0
             if prev_vol > 0:
                 volume_ratio = (snap["volume"] / prev_vol) * 100
             else:
                 volume_ratio = 999  # 전일 데이터 없으면 통과
+
+            # 프리마켓: 변동률 10%+ 이면 스파이크 필터 면제
+            if snap["change_pct"] >= 10.0 and snap["volume"] >= self.min_volume:
+                volume_ratio = max(volume_ratio, 999)  # 스파이크 필터 통과
 
             if volume_ratio < self.volume_spike_pct:
                 continue
