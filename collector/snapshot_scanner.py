@@ -27,6 +27,7 @@ class SnapshotScanner:
         self.config = config
         self.scanner_cfg = config.get("scanner", {})
         self.min_price = self.scanner_cfg.get("min_price", 0.7)
+        self.max_price = self.scanner_cfg.get("max_price", 10.0)
         self.min_market_cap = self.scanner_cfg.get("min_market_cap", 50_000_000)
         self.price_change_pct = self.scanner_cfg.get("price_change_pct", 5.0)
         self.volume_spike_pct = self.scanner_cfg.get("volume_spike_pct", 200.0)
@@ -121,8 +122,8 @@ class SnapshotScanner:
         # 필터링
         candidates = []
         for ticker, snap in snapshot_map.items():
-            # 가격 필터
-            if snap["price"] < self.min_price:
+            # 가격 필터 ($0.70 ~ $10.00 페니스탁만)
+            if snap["price"] < self.min_price or snap["price"] > self.max_price:
                 continue
 
             # 고점 추격 방지: 전일종가 대비 100%+ 이미 오른 종목 제외
