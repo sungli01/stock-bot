@@ -87,6 +87,22 @@ class BBTrailingStop:
         # 4. 홀딩
         return None
 
+    def get_status(self, ticker: str) -> dict:
+        """종목별 트레일링 상태 조회"""
+        peak = self._peak_profit.get(ticker, 0.0)
+        if peak >= 120:
+            floor = 120
+            for f in STAIRCASE_FLOORS:
+                if peak >= f:
+                    floor = f
+                else:
+                    break
+        elif peak >= BASE_FLOOR:
+            floor = BASE_FLOOR
+        else:
+            floor = None
+        return {"peak": peak, "floor": floor}
+
     def _cleanup(self, ticker: str):
         """종목 상태 정리"""
         self._peak_profit.pop(ticker, None)

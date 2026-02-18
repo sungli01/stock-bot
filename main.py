@@ -168,6 +168,10 @@ def run_live(config: dict):
 
     sleep_logged = False
     last_post_trade_update = None
+    last_status_report = 0  # 5분마다 상태 보고
+    STATUS_INTERVAL = 300  # 5분
+    scan_count = 0
+    session_start_notified = False
 
     while running:
         try:
@@ -198,12 +202,32 @@ def run_live(config: dict):
             sleep_logged = False
             trading_date = get_trading_date()
 
+            # 세션 시작 알림 (1회)
+            if not session_start_notified:
+                session_start_notified = True
+                send_notification(
+                    f"🟢 매매 세션 시작\n"
+                    f"━━━━━━━━━━━━━━\n"
+                    f"시간: {now.strftime('%H:%M KST')}\n"
+                    f"거래일: {trading_date}\n"
+                    f"max_positions: {max_positions}\n"
+                    f"━━━━━━━━━━━━━━"
+                )
+
             # ── 강제청산 체크 ─────────────────────────────
             remaining = minutes_until_session_end()
             if 0 < remaining <= force_close_before_min:
                 logger.warning(f"🚨 장마감 {remaining:.0f}분 전 — 강제청산")
                 executor.force_close_all_positions()
-                send_notification(f"🚨 장마감 강제청산 실행 (잔여 {remaining:.0f}분)")
+                send_notification(
+                    f"🚨 장마감 강제청산 실행\n"
+                    f"━━━━━━━━━━━━━━\n"
+                    f"잔여: {remaining:.0f}분\n"
+                    f"총 스캔: {scan_count}회\n"
+                    f"━━━━━━━━━━━━━━"
+                )
+                session_start_notified = False
+                scan_count = 0
                 time.sleep(60)
                 continue
 
@@ -220,6 +244,7 @@ def run_live(config: dict):
 
             if not governor.should_trade():
                 logger.warning(f"🛑 급락장 감지 — 매매 중단 (SPY {governor.market_info['spy_change']:+.1f}%)")
+                send_notification(f"🛑 급락장 감지 — 매매 중단\nSPY: {governor.market_info['spy_change']:+.1f}%")
                 time.sleep(30)
                 continue
 
@@ -271,8 +296,41 @@ def run_live(config: dict):
                     )
                     current_count -= 1
 
+            # ── 주기적 상태 보고 (5분마다) ────────────────
+            scan_count += 1
+            now_ts = time.time()
+            if now_ts - last_status_report >= STATUS_INTERVAL:
+                last_status_report = now_ts
+                pos_lines = []
+                for pos in positions:
+                    t = pos["ticker"]
+                    avg = pos.get("avg_price", 0)
+                    snap_p = scanner.get_price(t) or pos.get("current_price", 0)
+                    pnl = ((snap_p / avg - 1) * 100) if avg > 0 and snap_p else 0
+                    trailing_info = bb_trailing.get_status(t) if hasattr(bb_trailing, 'get_status') else {}
+                    peak_str = f" 고점${trailing_info.get('peak',0):.2f}" if trailing_info.get('peak') else ""
+                    pos_lines.append(f"  {t}: ${snap_p:.2f} ({pnl:+.1f}%){peak_str}")
+
+                status_text = (
+                    f"📊 상태 보고 ({now.strftime('%H:%M KST')})\n"
+                    f"━━━━━━━━━━━━━━\n"
+                    f"스캔 횟수: {scan_count}회\n"
+                    f"시장: {market_state} (cap ₩{adjusted_cap:,.0f})\n"
+                    f"보유: {current_count}/{max_positions}\n"
+                )
+                if pos_lines:
+                    status_text += "\n".join(pos_lines) + "\n"
+                status_text += f"━━━━━━━━━━━━━━\n장마감까지: {remaining:.0f}분"
+                send_notification(status_text)
+
             # ── 신규 매수 평가 ────────────────────────────
             if candidates and current_count < max_positions:
+                # 후보 감지 알림
+                cand_text = "🔍 후보 감지\n"
+                for c in candidates[:5]:
+                    cand_text += f"  {c['ticker']}: ${c['price']:.2f} ({c['change_pct']:+.1f}%) vol:{c.get('volume_ratio', 0):.0f}%\n"
+                send_notification(cand_text.strip())
+
                 for cand in candidates:
                     if current_count >= max_positions:
                         break
@@ -285,11 +343,18 @@ def run_live(config: dict):
                         continue
 
                     if sig["confidence"] < 50:
+                        send_notification(f"⏭️ {ticker} 신뢰도 부족 ({sig['confidence']:.0f}%) — 패스")
                         continue
 
                     # 매수 실행
                     price = cand["price"]
                     logger.info(f"📈 {ticker} 매수 진입 (신뢰도 {sig['confidence']:.0f}%, ${price:.2f})")
+                    send_notification(
+                        f"📈 {ticker} 매수 시도\n"
+                        f"가격: ${price:.2f} ({cand['change_pct']:+.1f}%)\n"
+                        f"신뢰도: {sig['confidence']:.0f}%\n"
+                        f"거래량비: {cand.get('volume_ratio', 0):.0f}%"
+                    )
 
                     orders = executor.execute_buy(ticker, price)
                     # 체결 여부와 무관하게 같은 종목 반복 시도 방지
@@ -305,7 +370,13 @@ def run_live(config: dict):
                             f"신뢰도: {sig['confidence']:.0f}%"
                         )
                     else:
+                        send_notification(f"❌ {ticker} 매수 실패 — 잔고 부족 또는 주문 오류")
                         logger.warning(f"⚠️ {ticker} 매수 실패 (호가 조회 실패 등) — 스킵 처리")
+            elif candidates and current_count >= max_positions:
+                # 포지션 풀인데 후보가 있는 경우 알림
+                missed = [f"{c['ticker']}({c['change_pct']:+.0f}%)" for c in candidates[:3]]
+                if missed and now_ts - last_status_report < 10:  # 상태보고 직후에만
+                    send_notification(f"⚠️ 포지션 풀 ({current_count}/{max_positions}) — 후보 놓침: {', '.join(missed)}")
 
             time.sleep(SCAN_INTERVAL)
 
