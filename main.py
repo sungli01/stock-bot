@@ -227,7 +227,7 @@ def run_live(config: dict):
                     if not sig or sig["signal"] != "BUY":
                         continue
 
-                    if sig["confidence"] < 65:
+                    if sig["confidence"] < 50:
                         continue
 
                     # 매수 실행

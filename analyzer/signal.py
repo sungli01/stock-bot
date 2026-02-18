@@ -63,41 +63,55 @@ class SignalGenerator:
 
     def evaluate(self, ticker: str, screened_data: dict) -> Optional[dict]:
         """
-        종목 평가 → 시그널 생성
-        Returns: {"ticker", "signal", "confidence", "trend", "indicators"} or None
+        종목 평가 → 시그널 생성 (v5 전략)
+        
+        매수 조건 (형님 룰):
+        1. 스냅샷에서 거래량 급등 감지 (scanner가 이미 필터링)
+        2. 가격 변동률 10%+ → 추격 매수
+        
+        5분봉 BB는 매수 후 매도 판단에만 사용 (bb_trailing.py)
         """
-        # 5분봉 데이터 조회
-        bars = self.market_data.get_bars(ticker, timeframe="5min", limit=50)
-        if bars.empty or len(bars) < 30:
-            logger.warning(f"{ticker} 데이터 부족 — 스킵")
+        change_pct = screened_data.get("change_pct", 0)
+        volume_ratio = screened_data.get("volume_ratio", 0)
+        price = screened_data.get("price", 0)
+
+        # 가격 10% 이상 급등 확인 (형님 전략 핵심)
+        min_change = self.config.get("trading", {}).get("min_chase_change_pct", 10.0)
+        if change_pct < min_change:
+            logger.debug(f"{ticker} 가격 변동 {change_pct:+.1f}% < {min_change}% — 스킵")
             return None
 
-        # 추세 분석
-        result = self.trend.analyze(bars)
-        if not result:
+        # 거래량 급증 확인 (스캐너에서 이미 필터링되지만 이중 체크)
+        min_vol = self.config.get("screener", {}).get("volume_spike", 200)
+        if volume_ratio < min_vol:
+            logger.debug(f"{ticker} 거래량 {volume_ratio:.0f}% < {min_vol}% — 스킵")
             return None
 
-        # 시그널 결정 + confidence 계산
-        signal_type, confidence = self._decide_signal(result, screened_data)
-
-        if signal_type is None:
-            return None
+        # confidence 계산: 가격 변동 + 거래량 기반
+        # 가격 변동: 10%→50, 20%→70, 30%+→85
+        price_score = min(85, 50 + (change_pct - 10) * 2)
+        # 거래량: 200%→+5, 500%→+10, 999%→+15
+        vol_score = min(15, (volume_ratio - 200) / 53)
+        confidence = price_score + vol_score
 
         signal = {
             "ticker": ticker,
-            "signal": signal_type,
+            "signal": SIGNAL_BUY,
             "confidence": round(confidence, 2),
-            "price": screened_data.get("price", 0),
-            "change_pct": screened_data.get("change_pct", 0),
-            "volume_ratio": screened_data.get("volume_ratio", 0),
-            "trend_direction": result.direction,
-            "trend_strength": result.strength,
-            "indicators": result.indicators,
+            "price": price,
+            "change_pct": change_pct,
+            "volume_ratio": volume_ratio,
+            "trend_direction": "UP",
+            "trend_strength": change_pct,
+            "indicators": {
+                "change_pct": change_pct,
+                "volume_ratio": volume_ratio,
+            },
         }
 
         logger.info(
-            f"📊 {ticker} → {signal_type} (신뢰도 {confidence:.0f}%) "
-            f"추세: {result.direction} 강도: {result.strength:.0f}"
+            f"🚀 {ticker} → BUY (신뢰도 {confidence:.0f}%) "
+            f"가격 {change_pct:+.1f}% 거래량 {volume_ratio:.0f}%"
         )
         return signal
 
