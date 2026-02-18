@@ -45,22 +45,31 @@ class KISClient:
     TOKEN_CACHE_FILE = os.path.join(os.path.dirname(__file__), "..", "data", "kis_token.json")
 
     def _get_token(self):
-        """OAuth 토큰 발급 (파일 캐싱으로 중복 발급 방지)"""
-        # 캐시 파일에서 토큰 로드 시도
+        """OAuth 토큰 발급 (환경변수 → 파일 → 신규발급, 하루 1회만)"""
+        # 1. 환경변수 캐시 확인 (Railway 재배포에도 유지)
+        env_token = os.getenv("KIS_CACHED_TOKEN", "")
+        env_expires = float(os.getenv("KIS_CACHED_EXPIRES", "0"))
+        if env_token and env_expires > time.time() + 300:
+            self.access_token = env_token
+            self.token_expires = env_expires
+            logger.info("KIS 토큰 환경변수 캐시 로드 (재발급 불필요)")
+            return
+
+        # 2. 파일 캐시 확인
         try:
             if os.path.exists(self.TOKEN_CACHE_FILE):
                 with open(self.TOKEN_CACHE_FILE, "r") as f:
                     import json as _json
                     cached = _json.load(f)
-                if cached.get("expires", 0) > time.time() + 300:  # 5분 여유
+                if cached.get("expires", 0) > time.time() + 300:
                     self.access_token = cached["token"]
                     self.token_expires = cached["expires"]
-                    logger.info("KIS 토큰 캐시 로드 (재발급 불필요)")
+                    logger.info("KIS 토큰 파일 캐시 로드 (재발급 불필요)")
                     return
         except Exception:
             pass
 
-        # 새로 발급
+        # 3. 신규 발급 (하루 1회)
         url = f"{BASE_URL}/oauth2/tokenP"
         body = {
             "grant_type": "client_credentials",
@@ -72,9 +81,9 @@ class KISClient:
         data = r.json()
         self.access_token = data["access_token"]
         self.token_expires = time.time() + int(data.get("expires_in", 86400)) - 60
-        logger.info("KIS 토큰 신규 발급 완료")
+        logger.info("KIS 토큰 신규 발급 완료 (24h 유효)")
 
-        # 캐시 파일 저장
+        # 파일 캐시 저장
         try:
             os.makedirs(os.path.dirname(self.TOKEN_CACHE_FILE), exist_ok=True)
             import json as _json
@@ -82,6 +91,9 @@ class KISClient:
                 _json.dump({"token": self.access_token, "expires": self.token_expires}, f)
         except Exception as e:
             logger.warning(f"토큰 캐시 저장 실패: {e}")
+
+        # Railway 환경변수에 저장 시도 (다음 배포에도 유지되도록 로그로 안내)
+        logger.info(f"💡 Railway에 KIS_CACHED_TOKEN, KIS_CACHED_EXPIRES 환경변수를 설정하면 재배포 시 재발급 방지")
 
     def _ensure_token(self):
         """토큰 만료 시 자동 갱신"""
