@@ -269,16 +269,8 @@ if __name__ == "__main__":
     if is_railway:
         start_health_server(port)
 
-    # 시작 알림 (1회만)
-    startup_flag = "/tmp/stockbot_started"
-    if not os.path.exists(startup_flag):
-        mode = "railway" if is_railway else "local"
-        send_notification(f"🤖 StockBot 시작 (모드: {mode}, snapshot+BB trailing)")
-        logger.info(f"🤖 stock-bot 시작 (모드: {mode})")
-        try:
-            with open(startup_flag, "w") as f:
-                f.write(datetime.now().isoformat())
-        except Exception:
-            pass
+    # 시작 로그 (텔레그램 알림 제거 — 재배포마다 반복 방지)
+    mode = "railway" if is_railway else "local"
+    logger.info(f"🤖 stock-bot 시작 (모드: {mode})")
 
     run_live(config)
