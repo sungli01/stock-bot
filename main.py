@@ -271,6 +271,17 @@ def run_live(config: dict):
     except Exception as e:
         logger.warning(f"초기 잔고 조회 실패: {e}")
 
+    # 봇 시작 시 KIS 당일 주문내역으로 거래종목 복원 (재배포 대응)
+    try:
+        today_orders = executor.kis.get_today_orders()
+        for ticker in today_orders:
+            _mark_traded(ticker)
+            scanner.mark_signaled(ticker)
+        if today_orders:
+            logger.info(f"📋 당일 주문내역에서 복원: {today_orders}")
+    except Exception as e:
+        logger.warning(f"당일 주문내역 조회 실패: {e}")
+
     # KIS 스캐너 (백그라운드 스레드)
     kis_scanner = KISScanner(config)
     # signaled 세트 공유 (중복 매수 방지)
@@ -466,6 +477,16 @@ def run_live(config: dict):
                 send_notification(status_text)
 
             # ── 신규 매수 평가 ────────────────────────────
+            # 잔고 부족 시 매수 시도 자체를 스킵 (알림 폭탄 방지)
+            if candidates and current_count < max_positions:
+                available_cash = balance.get("cash", 0)
+                if available_cash < 10:
+                    logger.info(f"💰 가용 잔고 부족 (${available_cash:.2f}) — 매수 스킵")
+                    # 포지션 풀과 동일하게 마킹만
+                    for c in candidates[:5]:
+                        _notifier.mark_ticker_reported(c['ticker'])
+                    candidates = []  # 아래 매수 루프 진입 방지
+
             if candidates and current_count < max_positions:
                 # 후보 감지 알림 (최초 발견만)
                 new_cands = [c for c in candidates[:5] if not _notifier.is_ticker_reported(c['ticker'])]

@@ -231,6 +231,45 @@ class KISClient:
             logger.error(f"잔고 조회 실패: {e}")
             return {"cash": 0, "positions": []}
 
+    # ─── 당일 주문 내역 조회 ─────────────────────────────────
+    def get_today_orders(self) -> list[str]:
+        """당일 주문한 종목 티커 목록 반환 (체결+미체결 포함). 재배포 시 복원용."""
+        if not self.connected:
+            return []
+
+        # JTTT3001R (실전) / VTTS3001R (모의) — 해외주식 주문체결내역
+        tr_id = "VTTS3001R" if KIS_IS_VIRTUAL else "JTTT3001R"
+        url = f"{BASE_URL}/uapi/overseas-stock/v1/trading/inquire-ccnl"
+        today = datetime.now(timezone.utc).strftime("%Y%m%d")
+        params = {
+            "CANO": KIS_ACCOUNT_NO,
+            "ACNT_PRDT_CD": KIS_ACCOUNT_PRODUCT,
+            "PDNO": "",
+            "ORD_STRT_DT": today,
+            "ORD_END_DT": today,
+            "SLL_BUY_DVSN": "00",  # 전체
+            "CCLD_NCCS_DVSN": "00",  # 전체(체결+미체결)
+            "OVRS_EXCG_CD": "NASD",
+            "SORT_SQN": "DS",
+            "ORD_GNO_BRNO": "",
+            "ODNO": "",
+            "CTX_AREA_FK200": "",
+            "CTX_AREA_NK200": "",
+        }
+        try:
+            r = requests.get(url, headers=self._headers(tr_id), params=params, timeout=10)
+            data = r.json()
+            tickers = set()
+            for item in data.get("output1", []):
+                ticker = item.get("PDNO", "") or item.get("OVRS_PDNO", "")
+                if ticker:
+                    tickers.add(ticker)
+            logger.info(f"📋 당일 주문 내역: {tickers or '없음'}")
+            return list(tickers)
+        except Exception as e:
+            logger.error(f"당일 주문 내역 조회 실패: {e}")
+            return []
+
     # ─── 지정가 주문 ─────────────────────────────────────────
     def _place_limit_order(self, side: str, ticker: str, quantity: int, price: float) -> Optional[dict]:
         """해외주식 지정가 주문 (side: 'BUY' or 'SELL')"""
