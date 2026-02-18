@@ -122,8 +122,8 @@ class SnapshotScanner:
             else:
                 volume_ratio = 999  # 전일 데이터 없으면 통과
 
-            # 프리마켓: 변동률 10%+ 이면 스파이크 필터 면제
-            if snap["change_pct"] >= 10.0 and snap["volume"] >= self.min_volume:
+            # 프리마켓: 변동률 30%+ 이면 스파이크 필터 면제
+            if snap["change_pct"] >= 30.0 and snap["volume"] >= self.min_volume:
                 volume_ratio = max(volume_ratio, 999)  # 스파이크 필터 통과
 
             if volume_ratio < self.volume_spike_pct:
