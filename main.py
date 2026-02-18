@@ -235,10 +235,11 @@ def run_live(config: dict):
                     logger.info(f"📈 {ticker} 매수 진입 (신뢰도 {sig['confidence']:.0f}%, ${price:.2f})")
 
                     orders = executor.execute_buy(ticker, price)
-                    if orders:
-                        scanner.mark_signaled(ticker)
-                        current_count += 1
+                    # 체결 여부와 무관하게 같은 종목 반복 시도 방지
+                    scanner.mark_signaled(ticker)
 
+                    if orders:
+                        current_count += 1
                         store.save_signal(sig)
                         send_notification(
                             f"✅ {ticker} 매수 완료\n"
@@ -246,6 +247,8 @@ def run_live(config: dict):
                             f"변동: {cand['change_pct']:+.1f}%\n"
                             f"신뢰도: {sig['confidence']:.0f}%"
                         )
+                    else:
+                        logger.warning(f"⚠️ {ticker} 매수 실패 (호가 조회 실패 등) — 스킵 처리")
 
             time.sleep(SCAN_INTERVAL)
 
