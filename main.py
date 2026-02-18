@@ -78,6 +78,7 @@ def run_live(config: dict):
     from analyzer.signal import SignalGenerator
     from trader.executor import TradeExecutor
     from trader.bb_trailing import BBTrailingStop
+    from trader.market_governor import MarketGovernor, ABSOLUTE_CAP
     from trader.market_hours import (
         is_trading_window, minutes_until_session_end,
         get_all_timestamps, get_trading_date, now_kst,
@@ -89,6 +90,7 @@ def run_live(config: dict):
     analyzer = SignalGenerator(None, config)
     executor = TradeExecutor(None, config)
     bb_trailing = BBTrailingStop(config)
+    governor = MarketGovernor(config)
     store = FileStore()
     tracker = PostTradeTracker()
 
@@ -152,6 +154,17 @@ def run_live(config: dict):
 
             # ── Snapshot 스캔 ─────────────────────────────
             candidates = scanner.scan_once()
+
+            # ── 시장 거버넌스 업데이트 ────────────────────
+            governor.update_market_data(scanner._last_snapshot)
+            market_state = governor.evaluate_state()
+            adjusted_cap = governor.get_adjusted_cap()
+            executor.compound_cap = min(adjusted_cap, ABSOLUTE_CAP)
+
+            if not governor.should_trade():
+                logger.warning(f"🛑 급락장 감지 — 매매 중단 (SPY {governor.market_info['spy_change']:+.1f}%)")
+                time.sleep(30)
+                continue
 
             # ── 보유종목 모니터링 (BB 트레일링) ───────────
             balance = executor.kis.get_balance()

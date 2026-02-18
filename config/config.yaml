@@ -24,6 +24,16 @@ trading:
   trailing_drop_pct: 10.0      # 최고가 대비 10% 하락 시 매도
   force_close_before_min: 15   # 장 마감 N분 전 강제청산
 
+# 시장 거버넌스 (자동 캡 조정)
+governance:
+  bull_threshold: 1.0          # SPY +1% 이상 = 상승장
+  bear_threshold: -1.0         # SPY -1% 이하 = 하락장
+  crash_threshold: -3.0        # SPY -3% 이하 = 급락 → 매매 중단
+  bull_multiplier: 5.0         # 상승: base_cap × 5 (최대 2500만)
+  neutral_multiplier: 1.0      # 보합: base_cap × 1
+  bear_multiplier: 0.5         # 하락: base_cap × 0.5
+  crash_multiplier: 0.0        # 급락: 매매 중단
+
 # 추세 판단
 analyzer:
   ema_fast: 5

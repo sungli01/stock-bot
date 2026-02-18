@@ -57,11 +57,12 @@ class TradeExecutor:
 
     @property
     def total_buy_amount(self) -> int:
-        """복리 모드: base + 누적수익 (캡 적용)"""
+        """복리 모드: base + 누적수익 (캡 적용, 절대 상한 ₩25,000,000)"""
+        ABSOLUTE_CAP = 25_000_000
         if not self.compound_mode:
-            return self.base_buy_amount
+            return min(self.base_buy_amount, ABSOLUTE_CAP)
         amount = self.base_buy_amount + max(0, self._cumulative_pnl)
-        return min(amount, self.compound_cap)
+        return min(amount, self.compound_cap, ABSOLUTE_CAP)
 
     def add_pnl(self, pnl: float):
         """매매 완료 후 손익 반영 (복리용)"""
