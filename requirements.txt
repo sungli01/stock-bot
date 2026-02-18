@@ -4,7 +4,7 @@ pandas
 pandas-ta
 numpy
 python-telegram-bot
-pykis
+# pykis  # replaced with direct REST API
 pyyaml
 python-dotenv
 pytz
