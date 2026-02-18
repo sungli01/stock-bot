@@ -119,8 +119,8 @@ class KISClient:
             return {"order_id": "stub", "ticker": ticker, "quantity": quantity,
                     "filled_price": 0, "filled_at": datetime.now(timezone.utc).isoformat()}
 
-        # 해외주식 매수: JTTT1002U (실전) / VTTT1002U (모의)
-        tr_id = "VTTT1002U" if KIS_IS_VIRTUAL else "JTTT1002U"
+        # 해외주식 매수: TTTT1002U (실전) / VTTT1002U (모의)
+        tr_id = "VTTT1002U" if KIS_IS_VIRTUAL else "TTTT1002U"
         url = f"{BASE_URL}/uapi/overseas-stock/v1/trading/order"
         body = {
             "CANO": KIS_ACCOUNT_NO,
@@ -160,8 +160,8 @@ class KISClient:
             return {"order_id": "stub", "ticker": ticker, "quantity": quantity,
                     "filled_price": 0, "filled_at": datetime.now(timezone.utc).isoformat()}
 
-        # 해외주식 매도: JTTT1006U (실전) / VTTT1001U (모의)
-        tr_id = "VTTT1001U" if KIS_IS_VIRTUAL else "JTTT1006U"
+        # 해외주식 매도: TTTT1006U (실전) / VTTT1001U (모의)
+        tr_id = "VTTT1001U" if KIS_IS_VIRTUAL else "TTTT1006U"
         url = f"{BASE_URL}/uapi/overseas-stock/v1/trading/order"
         body = {
             "CANO": KIS_ACCOUNT_NO,
@@ -241,9 +241,9 @@ class KISClient:
                     "filled_at": datetime.now(timezone.utc).isoformat()}
 
         if side == "BUY":
-            tr_id = "VTTT1002U" if KIS_IS_VIRTUAL else "JTTT1002U"
+            tr_id = "VTTT1002U" if KIS_IS_VIRTUAL else "TTTT1002U"
         else:
-            tr_id = "VTTT1001U" if KIS_IS_VIRTUAL else "JTTT1006U"
+            tr_id = "VTTT1001U" if KIS_IS_VIRTUAL else "TTTT1006U"
 
         url = f"{BASE_URL}/uapi/overseas-stock/v1/trading/order"
         body = {
