@@ -103,14 +103,16 @@ def merge_candidates(polygon_candidates: list[dict], kis_candidates: list[dict])
 
 
 class BatchNotifier:
-    """알림 메시지를 모아서 1분마다 배치 전송"""
+    """알림 메시지를 모아서 5분마다 배치 전송"""
+
+    BATCH_INTERVAL = 300  # 5분
 
     def __init__(self):
         self._queue: list[str] = []
         self._sent_set: set[str] = set()  # 중복 방지 (후보 알림 등)
+        self._reported_tickers: set[str] = set()  # 세션 동안 보고된 종목
         self._lock = threading.Lock()
         self._last_flush = time.time()
-        self.FLUSH_INTERVAL = 60  # 1분
 
     def add(self, text: str, dedup_key: str = ""):
         """메시지 큐에 추가. dedup_key가 있으면 같은 키 중복 전송 방지"""
@@ -121,10 +123,18 @@ class BatchNotifier:
                 self._sent_set.add(dedup_key)
             self._queue.append(text)
 
+    def is_ticker_reported(self, ticker: str) -> bool:
+        """이미 보고된 종목인지 확인"""
+        return ticker in self._reported_tickers
+
+    def mark_ticker_reported(self, ticker: str):
+        """종목을 보고 완료로 마킹"""
+        self._reported_tickers.add(ticker)
+
     def flush_if_ready(self):
-        """1분 경과 시 큐에 쌓인 메시지를 합쳐서 한번에 전송"""
+        """5분 경과 시 큐에 쌓인 메시지를 합쳐서 한번에 전송"""
         now = time.time()
-        if now - self._last_flush < self.FLUSH_INTERVAL:
+        if now - self._last_flush < self.BATCH_INTERVAL:
             return
         self._last_flush = now
         with self._lock:
@@ -145,13 +155,14 @@ class BatchNotifier:
         _send_telegram(combined)
 
     def send_immediate(self, text: str):
-        """즉시 단독 전송 (5분 상태보고 등)"""
+        """즉시 단독 전송"""
         _send_telegram(text)
 
     def reset_dedup(self):
-        """세션 리셋 시 중복 세트 초기화"""
+        """세션 리셋 시 중복 세트 + 보고 종목 초기화"""
         with self._lock:
             self._sent_set.clear()
+            self._reported_tickers.clear()
 
 
 def _send_telegram(text: str):
@@ -359,7 +370,8 @@ def run_live(config: dict):
                     send_notification(
                         f"{'🚨' if action == 'STOP' else '💰'} {ticker} 매도\n"
                         f"사유: {reason}\n"
-                        f"수익률: {pnl_pct:+.1f}%"
+                        f"수익률: {pnl_pct:+.1f}%",
+                        immediate=True
                     )
                     current_count -= 1
 
@@ -388,18 +400,18 @@ def run_live(config: dict):
                 if pos_lines:
                     status_text += "\n".join(pos_lines) + "\n"
                 status_text += f"━━━━━━━━━━━━━━\n장마감까지: {remaining:.0f}분"
-                send_notification(status_text, immediate=True)
+                send_notification(status_text)
 
             # ── 신규 매수 평가 ────────────────────────────
             if candidates and current_count < max_positions:
-                # 후보 감지 알림 (중복 제거)
-                new_cands = [c for c in candidates[:5] if c['ticker'] not in _notifier._sent_set]
+                # 후보 감지 알림 (최초 발견만)
+                new_cands = [c for c in candidates[:5] if not _notifier.is_ticker_reported(c['ticker'])]
                 if new_cands:
-                    cand_text = "🔍 후보 감지\n"
+                    cand_text = "🔍 신규 후보 감지\n"
                     for c in new_cands:
                         cand_text += f"  {c['ticker']}: ${c['price']:.2f} ({c['change_pct']:+.1f}%) vol:{c.get('volume_ratio', 0):.0f}%\n"
-                    dedup = "|".join(c['ticker'] for c in new_cands)
-                    send_notification(cand_text.strip(), dedup_key=f"cand:{dedup}")
+                        _notifier.mark_ticker_reported(c['ticker'])
+                    send_notification(cand_text.strip())
 
                 for cand in candidates:
                     if current_count >= max_positions:
@@ -413,7 +425,7 @@ def run_live(config: dict):
                         continue
 
                     if sig["confidence"] < 50:
-                        send_notification(f"⏭️ {ticker} 신뢰도 부족 ({sig['confidence']:.0f}%) — 패스")
+                        logger.info(f"⏭️ {ticker} 신뢰도 부족 ({sig['confidence']:.0f}%) — 패스")
                         continue
 
                     # 매수 실행
@@ -437,16 +449,16 @@ def run_live(config: dict):
                             f"✅ {ticker} 매수 완료\n"
                             f"가격: ${price:.2f}\n"
                             f"변동: {cand['change_pct']:+.1f}%\n"
-                            f"신뢰도: {sig['confidence']:.0f}%"
+                            f"신뢰도: {sig['confidence']:.0f}%",
+                            immediate=True
                         )
                     else:
                         send_notification(f"❌ {ticker} 매수 실패 — 잔고 부족 또는 주문 오류")
                         logger.warning(f"⚠️ {ticker} 매수 실패 (호가 조회 실패 등) — 스킵 처리")
             elif candidates and current_count >= max_positions:
-                # 포지션 풀인데 후보가 있는 경우 알림
-                missed = [f"{c['ticker']}({c['change_pct']:+.0f}%)" for c in candidates[:3]]
-                if missed and now_ts - last_status_report < 10:  # 상태보고 직후에만
-                    send_notification(f"⚠️ 포지션 풀 ({current_count}/{max_positions}) — 후보 놓침: {', '.join(missed)}")
+                # 포지션 풀 — 최초 발견 종목만 기록 (알림 없이 마킹만)
+                for c in candidates[:5]:
+                    _notifier.mark_ticker_reported(c['ticker'])
 
             # 배치 알림 플러시 (1분 경과 시)
             _notifier.flush_if_ready()
