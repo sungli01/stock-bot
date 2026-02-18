@@ -40,6 +40,8 @@ class SnapshotScanner:
         self._prev_scan_time: float = 0.0
         # 이미 시그널 큐에 넣은 종목 (중복 방지, 세션 단위)
         self._signaled_tickers: set[str] = set()
+        # 급등 최초 감지 시점 {ticker: timestamp} — 5분 경과 시 매수 제외
+        self._surge_first_seen: dict[str, float] = {}
         # 마지막 전체 스냅샷 데이터 (보유종목 가격 조회용)
         self._last_snapshot: dict[str, dict] = {}
 
@@ -133,6 +135,16 @@ class SnapshotScanner:
             # 이미 시그널 보낸 종목 스킵 (같은 세션 내 중복 방지)
             if ticker in self._signaled_tickers:
                 continue
+
+            # 급등 최초 감지 시점 추적 & 5분 경과 필터
+            if snap["change_pct"] >= 10.0:
+                if ticker not in self._surge_first_seen:
+                    self._surge_first_seen[ticker] = scan_time
+                    logger.info(f"🚀 {ticker} 급등 최초 감지 ({snap['change_pct']:+.1f}%)")
+                surge_elapsed = scan_time - self._surge_first_seen[ticker]
+                if surge_elapsed > 300:
+                    logger.info(f"⏰ {ticker} 급등 후 {surge_elapsed:.0f}초 경과 — 제외")
+                    continue
 
             # 급등 초기 감지: 2초 사이 2%+ 상승 → 변동률/거래량 기준 완화
             is_early_surge = snap["scan_delta_pct"] >= 2.0 and elapsed > 0
@@ -233,4 +245,5 @@ class SnapshotScanner:
         self._prev_volumes.clear()
         self._prev_prices.clear()
         self._prev_scan_time = 0.0
+        self._surge_first_seen.clear()
         logger.info("🔄 Snapshot 스캐너 세션 리셋")
