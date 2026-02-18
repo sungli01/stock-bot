@@ -9,7 +9,10 @@ import logging
 from datetime import datetime
 from typing import Optional
 
-import redis
+try:
+    import redis
+except ImportError:
+    redis = None
 from sqlalchemy.orm import Session
 
 from knowledge.models import (
@@ -159,7 +162,7 @@ class Learner:
 
         # Redis 캐시 업데이트
         if self.redis:
-            self.redis.set("indicator_weights", json.dumps(new_weights))
+            self.redis and self.redis.set("indicator_weights", json.dumps(new_weights))
 
         logger.info(f"🔄 가중치 업데이트: {new_weights}")
         return new_weights

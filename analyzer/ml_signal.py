@@ -7,7 +7,10 @@ ML 모델 기반 시그널 생성기
 import logging
 from typing import Optional
 
-import redis
+try:
+    import redis
+except ImportError:
+    redis = None
 
 from knowledge.ml_model import get_ml_model
 

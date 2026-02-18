@@ -11,7 +11,10 @@ import time
 import logging
 from typing import Optional
 
-import redis
+try:
+    import redis
+except ImportError:
+    redis = None
 import yaml
 
 from trader.kis_client import KISClient
@@ -163,7 +166,7 @@ class TradeExecutor:
                 self.execute_stop_loss(ticker)
                 if self.redis is not None:
                     try:
-                        self.redis.publish("channel:signal", json.dumps({
+                        self.redis and self.redis.publish("channel:signal", json.dumps({
                             "ticker": ticker,
                             "signal": "STOP",
                             "pnl_pct": round(pnl_pct, 2),
@@ -191,7 +194,7 @@ class TradeExecutor:
                         self.execute_sell(ticker)
                         if self.redis is not None:
                             try:
-                                self.redis.publish("channel:signal", json.dumps({
+                                self.redis and self.redis.publish("channel:signal", json.dumps({
                                     "ticker": ticker,
                                     "signal": "TRAILING_STOP",
                                     "pnl_pct": round(final_pnl, 2),
@@ -209,7 +212,7 @@ class TradeExecutor:
                 self.execute_sell(ticker)
                 if self.redis is not None:
                     try:
-                        self.redis.publish("channel:signal", json.dumps({
+                        self.redis and self.redis.publish("channel:signal", json.dumps({
                             "ticker": ticker,
                             "signal": "TAKE_PROFIT",
                             "pnl_pct": round(pnl_pct, 2),
@@ -240,7 +243,7 @@ class TradeExecutor:
             result = self.kis.sell_market(ticker, qty)
             if result and self.redis is not None:
                 try:
-                    self.redis.publish("channel:signal", json.dumps({
+                    self.redis and self.redis.publish("channel:signal", json.dumps({
                         "ticker": ticker,
                         "signal": "FORCE_CLOSE",
                         "quantity": qty,

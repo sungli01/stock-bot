@@ -9,7 +9,10 @@ import time
 import logging
 from typing import Optional
 
-import redis
+try:
+    import redis
+except ImportError:
+    redis = None
 import yaml
 
 from collector.market_data import MarketDataClient
@@ -115,7 +118,7 @@ class StockScanner:
         if self.redis is None:
             return
         try:
-            self.redis.publish("channel:screened", json.dumps(data))
+            self.redis and self.redis.publish("channel:screened", json.dumps(data))
         except Exception as e:
             logger.warning(f"Redis publish 실패: {e}")
 

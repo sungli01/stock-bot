@@ -10,7 +10,10 @@ import time
 import logging
 from typing import Optional
 
-import redis
+try:
+    import redis
+except ImportError:
+    redis = None
 import yaml
 
 from analyzer.trend import TrendAnalyzer, TrendResult
@@ -143,7 +146,7 @@ class SignalGenerator:
         if self.redis is None:
             return
         try:
-            self.redis.publish("channel:signal", json.dumps(signal))
+            self.redis and self.redis.publish("channel:signal", json.dumps(signal))
         except Exception as e:
             logger.warning(f"Redis publish 실패: {e}")
 
