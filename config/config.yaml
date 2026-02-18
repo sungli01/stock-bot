@@ -10,9 +10,9 @@ scanner:
 
 # 매매 조건
 trading:
-  total_buy_amount: 1000000    # 기본 100만원 (복리 모드 시 base)
-  compound_mode: true          # 복리 모드: base + 누적수익
-  compound_cap: 5000000        # 복리 캡 500만원
+  total_buy_amount: 100000     # 테스트: 10만원
+  compound_mode: false         # 테스트: 복리 OFF
+  compound_cap: 100000         # 테스트: 10만원 고정
   split_count: 5               # 5분할 (데이트레이딩 최적화)
   split_interval_sec: 60       # 1분 간격
   max_positions: 2             # 동시 보유 최대 2종목
