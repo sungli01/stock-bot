@@ -533,7 +533,10 @@ class KISClient:
         try:
             r = requests.get(url, headers=self._headers(tr_id), params=params, timeout=10)
             data = r.json()
-            price = float(data.get("output", {}).get("LAST", "0"))
+            output = data.get("output", {})
+            # KIS API 필드명이 대/소문자 혼용됨
+            price_str = output.get("last") or output.get("LAST") or output.get("Last") or "0"
+            price = float(price_str)
             return price if price > 0 else None
         except Exception as e:
             logger.error(f"현재가 조회 실패 [{ticker}]: {e}")
