@@ -21,6 +21,8 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+PAPER_MODE = os.getenv("PAPER_MODE", "").lower() in ("1", "true", "yes")
+
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(name)s] %(levelname)s: %(message)s",
@@ -237,6 +239,13 @@ def run_live(config: dict):
     from knowledge.file_store import FileStore
     from knowledge.post_trade_tracker import PostTradeTracker
 
+    # Paper Trading 모드
+    paper_trader = None
+    if PAPER_MODE:
+        from paper_trader import PaperTrader
+        paper_trader = PaperTrader(initial_capital=1_000_000)
+        logger.info("📝 PAPER_MODE 활성화 — 가상매매 모드")
+
     scanner = SnapshotScanner(config)
     analyzer = SignalGenerator(None, config)
     executor = TradeExecutor(None, config)
@@ -351,8 +360,9 @@ def run_live(config: dict):
             # 세션 시작 알림 (1회)
             if not session_start_notified:
                 session_start_notified = True
+                mode_label = " [가상매매]" if PAPER_MODE else ""
                 send_notification(
-                    f"🟢 매매 세션 시작\n"
+                    f"🟢 매매 세션 시작{mode_label}\n"
                     f"━━━━━━━━━━━━━━\n"
                     f"시간: {now.strftime('%H:%M KST')}\n"
                     f"거래일: {trading_date}\n"
@@ -365,7 +375,12 @@ def run_live(config: dict):
             remaining = minutes_until_session_end()
             if 0 < remaining <= force_close_before_min:
                 logger.warning(f"🚨 장마감 {remaining:.0f}분 전 — 강제청산")
-                executor.force_close_all_positions()
+                if PAPER_MODE and paper_trader:
+                    for ticker in list(paper_trader.positions.keys()):
+                        snap_p = scanner.get_price(ticker) or paper_trader.positions[ticker]['avg_price']
+                        paper_trader.sell(ticker, snap_p)
+                else:
+                    executor.force_close_all_positions()
                 send_notification(
                     f"🚨 장마감 강제청산 실행\n"
                     f"━━━━━━━━━━━━━━\n"
@@ -397,7 +412,10 @@ def run_live(config: dict):
                 continue
 
             # ── 보유종목 모니터링 (BB 트레일링) ───────────
-            balance = executor.kis.get_balance()
+            if PAPER_MODE and paper_trader:
+                balance = paper_trader.get_balance()
+            else:
+                balance = executor.kis.get_balance()
             positions = balance.get("positions", [])
             current_count = len(positions)
 
@@ -421,7 +439,9 @@ def run_live(config: dict):
 
                     logger.info(f"{'🚨' if action == 'STOP' else '💰'} {ticker} {reason}")
 
-                    if action == "STOP":
+                    if PAPER_MODE and paper_trader:
+                        paper_trader.sell(ticker, current_price)
+                    elif action == "STOP":
                         executor.execute_stop_loss(ticker)
                     else:
                         executor.execute_sell(ticker)
@@ -441,8 +461,9 @@ def run_live(config: dict):
                     except Exception as e:
                         logger.error(f"Post-trade 기록 실패: {e}")
 
+                    prefix = "[가상] " if PAPER_MODE else ""
                     send_notification(
-                        f"{'🚨' if action == 'STOP' else '💰'} {ticker} 매도\n"
+                        f"{prefix}{'🚨' if action == 'STOP' else '💰'} {ticker} 매도\n"
                         f"사유: {reason}\n"
                         f"수익률: {pnl_pct:+.1f}%",
                         immediate=True
@@ -474,6 +495,14 @@ def run_live(config: dict):
                 if pos_lines:
                     status_text += "\n".join(pos_lines) + "\n"
                 status_text += f"━━━━━━━━━━━━━━\n장마감까지: {remaining:.0f}분"
+                if PAPER_MODE and paper_trader:
+                    prices_map = {}
+                    for pos in positions:
+                        t = pos["ticker"]
+                        snap_p = scanner.get_price(t) or pos.get("current_price", 0)
+                        if snap_p:
+                            prices_map[t] = snap_p
+                    status_text += "\n\n" + paper_trader.get_status_text(prices_map)
                 send_notification(status_text)
 
             # ── 신규 매수 평가 ────────────────────────────
@@ -528,24 +557,46 @@ def run_live(config: dict):
                         f"거래량비: {cand.get('volume_ratio', 0):.0f}%"
                     )
 
-                    orders = executor.execute_buy(ticker, price)
-                    # 체결 여부와 무관하게 같은 종목 반복 시도 방지
-                    scanner.mark_signaled(ticker)
-                    _mark_traded(ticker)
-
-                    if orders:
-                        current_count += 1
-                        store.save_signal(sig)
-                        send_notification(
-                            f"✅ {ticker} 매수 완료\n"
-                            f"가격: ${price:.2f}\n"
-                            f"변동: {cand['change_pct']:+.1f}%\n"
-                            f"신뢰도: {sig['confidence']:.0f}%",
-                            immediate=True
-                        )
+                    if PAPER_MODE and paper_trader:
+                        # 가상매매: paper_trader로 매수
+                        trading_cfg_inner = config.get("trading", {})
+                        alloc = trading_cfg_inner.get("allocation_ratio", [0.7, 0.3])
+                        alloc_pct = alloc[0] if current_count == 0 else (alloc[1] if len(alloc) > 1 else alloc[0])
+                        buy_amount = paper_trader.cash * alloc_pct
+                        result = paper_trader.buy(ticker, price, buy_amount)
+                        scanner.mark_signaled(ticker)
+                        _mark_traded(ticker)
+                        if result:
+                            current_count += 1
+                            store.save_signal(sig)
+                            send_notification(
+                                f"[가상] ✅ {ticker} 매수 완료\n"
+                                f"가격: ${price:.2f}\n"
+                                f"변동: {cand['change_pct']:+.1f}%\n"
+                                f"신뢰도: {sig['confidence']:.0f}%",
+                                immediate=True
+                            )
+                        else:
+                            send_notification(f"[가상] ❌ {ticker} 매수 실패 — 잔고 부족")
                     else:
-                        send_notification(f"❌ {ticker} 매수 실패 — 잔고 부족 또는 주문 오류")
-                        logger.warning(f"⚠️ {ticker} 매수 실패 (호가 조회 실패 등) — 스킵 처리")
+                        orders = executor.execute_buy(ticker, price)
+                        # 체결 여부와 무관하게 같은 종목 반복 시도 방지
+                        scanner.mark_signaled(ticker)
+                        _mark_traded(ticker)
+
+                        if orders:
+                            current_count += 1
+                            store.save_signal(sig)
+                            send_notification(
+                                f"✅ {ticker} 매수 완료\n"
+                                f"가격: ${price:.2f}\n"
+                                f"변동: {cand['change_pct']:+.1f}%\n"
+                                f"신뢰도: {sig['confidence']:.0f}%",
+                                immediate=True
+                            )
+                        else:
+                            send_notification(f"❌ {ticker} 매수 실패 — 잔고 부족 또는 주문 오류")
+                            logger.warning(f"⚠️ {ticker} 매수 실패 (호가 조회 실패 등) — 스킵 처리")
             elif candidates and current_count >= max_positions:
                 # 포지션 풀 — 최초 발견 종목만 기록 (알림 없이 마킹만)
                 for c in candidates[:5]:
