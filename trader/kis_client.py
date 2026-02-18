@@ -371,8 +371,13 @@ class KISClient:
         # ── 1차 매수 (40%) ────────────────────────────
         ask_price = self.get_ask_price(ticker)
         if not ask_price:
-            logger.error(f"❌ {ticker} 호가 조회 실패 — 분할매수 중단")
-            return orders
+            # 호가 실패 → 현재가로 폴백 (+0.5% 슬리피지 반영)
+            fallback_price = self.get_current_price(ticker)
+            if not fallback_price:
+                logger.error(f"❌ {ticker} 호가/현재가 모두 조회 실패 — 분할매수 중단")
+                return orders
+            ask_price = round(fallback_price * 1.005, 2)
+            logger.info(f"⚠️ {ticker} 호가 없음 → 현재가 ${fallback_price:.2f} +0.5% = ${ask_price:.2f} 으로 진행")
 
         logger.info(f"📈 {ticker} 분할매수 1/3: {qty1}주 @${ask_price:.2f} (40%)")
         order1 = self._place_limit_order("BUY", ticker, qty1, ask_price)
