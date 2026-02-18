@@ -24,7 +24,7 @@ class SnapshotScanner:
     def __init__(self, config: dict):
         self.config = config
         self.scanner_cfg = config.get("scanner", {})
-        self.min_price = self.scanner_cfg.get("min_price", 1.0)
+        self.min_price = self.scanner_cfg.get("min_price", 0.7)
         self.min_market_cap = self.scanner_cfg.get("min_market_cap", 50_000_000)
         self.price_change_pct = self.scanner_cfg.get("price_change_pct", 5.0)
         self.volume_spike_pct = self.scanner_cfg.get("volume_spike_pct", 200.0)

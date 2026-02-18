@@ -1,6 +1,6 @@
 # 매수 조건
 scanner:
-  min_price: 1.0          # $1 이상
+  min_price: 0.7           # $0.7 이상
   min_market_cap: 50000000 # $5천만 이상
   min_volume: 10000        # 1만주 이상
   price_change_pct: 5.0    # 5% 이상
@@ -13,26 +13,28 @@ trading:
   total_buy_amount: 100000     # 테스트: 10만원
   compound_mode: true          # 복리 ON
   compound_cap: 25000000       # 절대 상한 2500만원
-  split_count: 5               # 5분할 (데이트레이딩 최적화)
+  split_count: 5               # 5분할
   split_interval_sec: 60       # 1분 간격
   max_positions: 2             # 동시 보유 최대 2종목
-  allocation_ratio: [0.5, 0.5] # 균등 배분 (시뮬 결과 5:5 최적)
-  take_profit_pct: 30.0        # +30% 트레일링 스탑 활성화 기준
-  stop_loss_pct: -15.0         # -15% 손절
-  trailing_stop: true          # 트레일링 스탑 활성화
-  trailing_trigger_pct: 30.0   # 30% 수익 도달 시 트레일링 시작
-  trailing_drop_pct: 10.0      # 최고가 대비 10% 하락 시 매도
+  allocation_ratio: [0.5, 0.5] # 균등 배분
+  stop_loss_pct: -50.0         # -50% 절대 손절
   force_close_before_min: 15   # 장 마감 N분 전 강제청산
+
+# 하이브리드 플로어 매도 전략
+sell_strategy:
+  staircase_floors: [120, 300, 400, 500, 600, 700, 800, 900, 1000]
+  base_floor_pct: 30           # 기본 플로어 30%
+  absolute_stop_loss_pct: -50  # 절대 손절
 
 # 시장 거버넌스 (자동 캡 조정)
 governance:
-  bull_threshold: 1.0          # SPY +1% 이상 = 상승장
-  bear_threshold: -1.0         # SPY -1% 이하 = 하락장
-  crash_threshold: -3.0        # SPY -3% 이하 = 급락 → 매매 중단
-  bull_multiplier: 5.0         # 상승: base_cap × 5 (최대 2500만)
-  neutral_multiplier: 1.0      # 보합: base_cap × 1
-  bear_multiplier: 0.5         # 하락: base_cap × 0.5
-  crash_multiplier: 0.0        # 급락: 매매 중단
+  bull_threshold: 1.0
+  bear_threshold: -1.0
+  crash_threshold: -3.0
+  bull_multiplier: 5.0
+  neutral_multiplier: 1.0
+  bear_multiplier: 0.5
+  crash_multiplier: 0.0
 
 # 추세 판단
 analyzer:
@@ -44,12 +46,12 @@ analyzer:
   macd_fast: 12
   macd_slow: 26
   macd_signal: 9
-  min_signals_for_sell: 2  # 3개 중 2개 이상 충족시 매도
+  min_signals_for_sell: 2
 
 # 스케줄
 schedule:
-  start_time: "18:00"       # KST
-  active_trading_after: "00:00"  # 개장 30분 후
+  start_time: "18:00"
+  active_trading_after: "00:00"
   market_close: "06:00"
   timezone: "Asia/Seoul"
 
