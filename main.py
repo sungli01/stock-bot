@@ -7,6 +7,7 @@ stock-bot 실전 엔트리포인트
 """
 import os
 import sys
+import json
 import time
 import signal
 import logging
@@ -32,6 +33,34 @@ def load_config() -> dict:
     cfg_path = os.path.join(os.path.dirname(__file__), "config", "config.yaml")
     with open(cfg_path, "r") as f:
         return yaml.safe_load(f)
+
+
+# ─── traded_tickers 파일 영속화 ────────────────────────────
+TRADED_FILE = os.path.join(os.path.dirname(__file__), "data", "traded_today.json")
+
+
+def _load_traded_tickers(today: str) -> set[str]:
+    """파일에서 당일 거래 이력 로드. 날짜 불일치 시 빈 set 반환."""
+    try:
+        with open(TRADED_FILE, "r") as f:
+            data = json.load(f)
+        if data.get("date") == today:
+            tickers = set(data.get("tickers", []))
+            logger.info(f"📂 traded_tickers 복원: {tickers}")
+            return tickers
+        logger.info(f"📂 traded_today.json 날짜 불일치 ({data.get('date')} != {today}) — 초기화")
+    except (FileNotFoundError, json.JSONDecodeError):
+        pass
+    return set()
+
+
+def _save_traded_tickers(today: str, tickers: set[str]):
+    """거래 이력을 파일에 즉시 저장."""
+    try:
+        with open(TRADED_FILE, "w") as f:
+            json.dump({"date": today, "tickers": sorted(tickers)}, f)
+    except Exception as e:
+        logger.warning(f"traded_tickers 저장 실패: {e}")
 
 
 # ─── 헬스체크 서버 (Railway용) ────────────────────────────
@@ -217,13 +246,25 @@ def run_live(config: dict):
     tracker = PostTradeTracker()
 
     # 세션 내 거래/보유 이력 — 장중 절대 재매수 금지
-    _traded_tickers: set[str] = set()
+    # 파일에서 당일 이력 복원
+    from trader.market_hours import get_trading_date as _get_td
+    _today_date = _get_td()
+    _traded_tickers: set[str] = _load_traded_tickers(_today_date)
+
+    # 복원된 종목을 scanner에도 등록
+    for _t in _traded_tickers:
+        scanner.mark_signaled(_t)
+
+    def _mark_traded(ticker: str):
+        """_traded_tickers에 추가 + 파일 저장"""
+        _traded_tickers.add(ticker)
+        _save_traded_tickers(_today_date, _traded_tickers)
 
     # 봇 시작 시 기존 보유 종목을 _traded_tickers에 등록
     try:
         init_balance = executor.kis.get_balance()
         for pos in init_balance.get("positions", []):
-            _traded_tickers.add(pos["ticker"])
+            _mark_traded(pos["ticker"])
             scanner.mark_signaled(pos["ticker"])
         if _traded_tickers:
             logger.info(f"📋 기존 보유 종목 재매수 차단 등록: {_traded_tickers}")
@@ -276,6 +317,8 @@ def run_live(config: dict):
                     bb_trailing.reset()
                     _notifier.reset_dedup()
                     _traded_tickers.clear()
+                    _today_date = _get_td()
+                    _save_traded_tickers(_today_date, _traded_tickers)
                     logger.info("🔄 _traded_tickers 초기화 (새 세션)")
                     sleep_logged = True
 
@@ -350,7 +393,7 @@ def run_live(config: dict):
             for pos in positions:
                 ticker = pos["ticker"]
                 # 보유 중인 종목은 _traded_tickers에 등록 (수동 매수 포함)
-                _traded_tickers.add(ticker)
+                _mark_traded(ticker)
                 avg_price = pos["avg_price"]
                 # snapshot에서 실시간 가격 가져오기
                 snap_price = scanner.get_price(ticker)
@@ -371,7 +414,7 @@ def run_live(config: dict):
                         executor.execute_stop_loss(ticker)
                     else:
                         executor.execute_sell(ticker)
-                    _traded_tickers.add(ticker)
+                    _mark_traded(ticker)
                     scanner.mark_signaled(ticker)
 
                     # Post-trade 기록
@@ -467,7 +510,7 @@ def run_live(config: dict):
                     orders = executor.execute_buy(ticker, price)
                     # 체결 여부와 무관하게 같은 종목 반복 시도 방지
                     scanner.mark_signaled(ticker)
-                    _traded_tickers.add(ticker)
+                    _mark_traded(ticker)
 
                     if orders:
                         current_count += 1
