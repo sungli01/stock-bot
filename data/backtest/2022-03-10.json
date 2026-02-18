@@ -1,0 +1,31 @@
+{
+  "date": "2022-03-10",
+  "monitored": 30,
+  "signals_detected": 1,
+  "trades": [
+    {
+      "ticker": "ENSV",
+      "surge_pct": 5.79,
+      "volume_ratio": 341.0,
+      "detect_time_kst": "21:09",
+      "detect_price": 3.29,
+      "surge_score": 1974.0,
+      "allocation_pct": 50,
+      "buy_price": 3.49,
+      "buy_time_kst": "21:10",
+      "buy_time_utc": "12:10",
+      "sell_price": 4.26,
+      "sell_time_kst": "00:07",
+      "sell_reason": "트레일링(+22.0%,고점$4.86)",
+      "shares": 106,
+      "invested_krw": 499705,
+      "return_krw": 609706,
+      "pnl_krw": 110001,
+      "pnl_pct": 22.01
+    }
+  ],
+  "total_invested_krw": 499705,
+  "total_return_krw": 609706,
+  "total_pnl_krw": 110001,
+  "total_pnl_pct": 22.01
+}

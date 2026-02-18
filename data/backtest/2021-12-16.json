@@ -1,0 +1,51 @@
+{
+  "date": "2021-12-16",
+  "monitored": 30,
+  "signals_detected": 2,
+  "trades": [
+    {
+      "ticker": "ADGI",
+      "surge_pct": 5.34,
+      "volume_ratio": 286.0,
+      "detect_time_kst": "00:12",
+      "detect_price": 7.3,
+      "surge_score": 1527.0,
+      "allocation_pct": 50,
+      "buy_price": 7.42,
+      "buy_time_kst": "00:13",
+      "buy_time_utc": "15:13",
+      "sell_price": 10.11,
+      "sell_time_kst": "01:01",
+      "sell_reason": "트레일링(+36.3%,고점$11.30)",
+      "shares": 49,
+      "invested_krw": 490767,
+      "return_krw": 668776,
+      "pnl_krw": 178009,
+      "pnl_pct": 36.27
+    },
+    {
+      "ticker": "BEKE",
+      "surge_pct": 7.19,
+      "volume_ratio": 3659.0,
+      "detect_time_kst": "23:30",
+      "detect_price": 18.93,
+      "surge_score": 26308.0,
+      "allocation_pct": 50,
+      "buy_price": 18.86,
+      "buy_time_kst": "23:31",
+      "buy_time_utc": "14:31",
+      "sell_price": 18.56,
+      "sell_time_kst": "09:51",
+      "sell_reason": "강제청산(장마감)",
+      "shares": 19,
+      "invested_krw": 483806,
+      "return_krw": 476064,
+      "pnl_krw": -7742,
+      "pnl_pct": -1.6
+    }
+  ],
+  "total_invested_krw": 974573,
+  "total_return_krw": 1144840,
+  "total_pnl_krw": 170267,
+  "total_pnl_pct": 17.47
+}

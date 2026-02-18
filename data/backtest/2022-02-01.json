@@ -1,0 +1,51 @@
+{
+  "date": "2022-02-01",
+  "monitored": 30,
+  "signals_detected": 2,
+  "trades": [
+    {
+      "ticker": "AMD",
+      "surge_pct": 5.44,
+      "volume_ratio": 412.0,
+      "detect_time_kst": "06:15",
+      "detect_price": 123.56,
+      "surge_score": 2241.0,
+      "allocation_pct": 50,
+      "buy_price": 123.31,
+      "buy_time_kst": "06:16",
+      "buy_time_utc": "21:16",
+      "sell_price": 128.99,
+      "sell_time_kst": "09:59",
+      "sell_reason": "강제청산(장마감)",
+      "shares": 3,
+      "invested_krw": 499405,
+      "return_krw": 522410,
+      "pnl_krw": 23005,
+      "pnl_pct": 4.61
+    },
+    {
+      "ticker": "GOOGL",
+      "surge_pct": 5.05,
+      "volume_ratio": 221.0,
+      "detect_time_kst": "06:06",
+      "detect_price": 144.6,
+      "surge_score": 1116.0,
+      "allocation_pct": 50,
+      "buy_price": 145.97,
+      "buy_time_kst": "06:07",
+      "buy_time_utc": "21:07",
+      "sell_price": 150.25,
+      "sell_time_kst": "09:59",
+      "sell_reason": "강제청산(장마감)",
+      "shares": 2,
+      "invested_krw": 394130,
+      "return_krw": 405675,
+      "pnl_krw": 11545,
+      "pnl_pct": 2.93
+    }
+  ],
+  "total_invested_krw": 893535,
+  "total_return_krw": 928085,
+  "total_pnl_krw": 34550,
+  "total_pnl_pct": 3.87
+}

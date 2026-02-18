@@ -1,0 +1,31 @@
+{
+  "date": "2021-12-30",
+  "monitored": 30,
+  "signals_detected": 1,
+  "trades": [
+    {
+      "ticker": "DIDI",
+      "surge_pct": 5.88,
+      "volume_ratio": 830.0,
+      "detect_time_kst": "23:31",
+      "detect_price": 5.01,
+      "surge_score": 4880.0,
+      "allocation_pct": 50,
+      "buy_price": 4.99,
+      "buy_time_kst": "23:32",
+      "buy_time_utc": "14:32",
+      "sell_price": 5.13,
+      "sell_time_kst": "09:59",
+      "sell_reason": "강제청산(장마감)",
+      "shares": 74,
+      "invested_krw": 498867,
+      "return_krw": 512487,
+      "pnl_krw": 13620,
+      "pnl_pct": 2.73
+    }
+  ],
+  "total_invested_krw": 498867,
+  "total_return_krw": 512487,
+  "total_pnl_krw": 13620,
+  "total_pnl_pct": 2.73
+}

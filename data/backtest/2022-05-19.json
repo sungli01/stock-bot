@@ -1,0 +1,31 @@
+{
+  "date": "2022-05-19",
+  "monitored": 30,
+  "signals_detected": 1,
+  "trades": [
+    {
+      "ticker": "GRAB",
+      "surge_pct": 5.1,
+      "volume_ratio": 699.0,
+      "detect_time_kst": "20:31",
+      "detect_price": 2.68,
+      "surge_score": 3565.0,
+      "allocation_pct": 50,
+      "buy_price": 2.64,
+      "buy_time_kst": "20:32",
+      "buy_time_utc": "11:32",
+      "sell_price": 3.3,
+      "sell_time_kst": "01:35",
+      "sell_reason": "트레일링(+24.9%,고점$3.68)",
+      "shares": 140,
+      "invested_krw": 499338,
+      "return_krw": 623700,
+      "pnl_krw": 124362,
+      "pnl_pct": 24.91
+    }
+  ],
+  "total_invested_krw": 499338,
+  "total_return_krw": 623700,
+  "total_pnl_krw": 124362,
+  "total_pnl_pct": 24.91
+}

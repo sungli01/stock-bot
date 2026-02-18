@@ -1,0 +1,31 @@
+{
+  "date": "2022-03-28",
+  "monitored": 30,
+  "signals_detected": 1,
+  "trades": [
+    {
+      "ticker": "HYMC",
+      "surge_pct": 5.13,
+      "volume_ratio": 862.0,
+      "detect_time_kst": "20:02",
+      "detect_price": 16.4,
+      "surge_score": 4422.0,
+      "allocation_pct": 50,
+      "buy_price": 17.32,
+      "buy_time_kst": "20:03",
+      "buy_time_utc": "11:03",
+      "sell_price": 25.7,
+      "sell_time_kst": "08:59",
+      "sell_reason": "강제청산(장마감)",
+      "shares": 21,
+      "invested_krw": 491022,
+      "return_krw": 728595,
+      "pnl_krw": 237573,
+      "pnl_pct": 48.38
+    }
+  ],
+  "total_invested_krw": 491022,
+  "total_return_krw": 728595,
+  "total_pnl_krw": 237573,
+  "total_pnl_pct": 48.38
+}

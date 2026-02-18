@@ -1,0 +1,31 @@
+{
+  "date": "2022-02-28",
+  "monitored": 30,
+  "signals_detected": 1,
+  "trades": [
+    {
+      "ticker": "SQ",
+      "surge_pct": 5.11,
+      "volume_ratio": 370.0,
+      "detect_time_kst": "23:33",
+      "detect_price": 123,
+      "surge_score": 1891.0,
+      "allocation_pct": 50,
+      "buy_price": 121.92,
+      "buy_time_kst": "23:34",
+      "buy_time_utc": "14:34",
+      "sell_price": 127.9,
+      "sell_time_kst": "09:59",
+      "sell_reason": "강제청산(장마감)",
+      "shares": 3,
+      "invested_krw": 493766,
+      "return_krw": 517995,
+      "pnl_krw": 24229,
+      "pnl_pct": 4.91
+    }
+  ],
+  "total_invested_krw": 493766,
+  "total_return_krw": 517995,
+  "total_pnl_krw": 24229,
+  "total_pnl_pct": 4.91
+}

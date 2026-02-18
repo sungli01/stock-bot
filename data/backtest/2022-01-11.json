@@ -1,0 +1,31 @@
+{
+  "date": "2022-01-11",
+  "monitored": 30,
+  "signals_detected": 1,
+  "trades": [
+    {
+      "ticker": "TSRI",
+      "surge_pct": 5.16,
+      "volume_ratio": 458.0,
+      "detect_time_kst": "22:05",
+      "detect_price": 11.2,
+      "surge_score": 2363.0,
+      "allocation_pct": 50,
+      "buy_price": 11.46,
+      "buy_time_kst": "22:06",
+      "buy_time_utc": "13:06",
+      "sell_price": 11.02,
+      "sell_time_kst": "09:59",
+      "sell_reason": "강제청산(장마감)",
+      "shares": 32,
+      "invested_krw": 495245,
+      "return_krw": 476064,
+      "pnl_krw": -19181,
+      "pnl_pct": -3.87
+    }
+  ],
+  "total_invested_krw": 495245,
+  "total_return_krw": 476064,
+  "total_pnl_krw": -19181,
+  "total_pnl_pct": -3.87
+}

@@ -1,0 +1,31 @@
+{
+  "date": "2022-05-25",
+  "monitored": 30,
+  "signals_detected": 1,
+  "trades": [
+    {
+      "ticker": "GME",
+      "surge_pct": 6.25,
+      "volume_ratio": 512.0,
+      "detect_time_kst": "02:15",
+      "detect_price": 28.57,
+      "surge_score": 3200.0,
+      "allocation_pct": 50,
+      "buy_price": 27.73,
+      "buy_time_kst": "02:16",
+      "buy_time_utc": "17:16",
+      "sell_price": 28.57,
+      "sell_time_kst": "08:59",
+      "sell_reason": "강제청산(장마감)",
+      "shares": 13,
+      "invested_krw": 486585,
+      "return_krw": 501491,
+      "pnl_krw": 14906,
+      "pnl_pct": 3.06
+    }
+  ],
+  "total_invested_krw": 486585,
+  "total_return_krw": 501491,
+  "total_pnl_krw": 14906,
+  "total_pnl_pct": 3.06
+}

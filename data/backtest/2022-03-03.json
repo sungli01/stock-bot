@@ -1,0 +1,31 @@
+{
+  "date": "2022-03-03",
+  "monitored": 30,
+  "signals_detected": 1,
+  "trades": [
+    {
+      "ticker": "INDO",
+      "surge_pct": 5.15,
+      "volume_ratio": 1126.0,
+      "detect_time_kst": "18:56",
+      "detect_price": 17.77,
+      "surge_score": 5799.0,
+      "allocation_pct": 50,
+      "buy_price": 17.97,
+      "buy_time_kst": "18:57",
+      "buy_time_utc": "09:57",
+      "sell_price": 22.22,
+      "sell_time_kst": "00:05",
+      "sell_reason": "트레일링(+23.7%,고점$25.00)",
+      "shares": 20,
+      "invested_krw": 485136,
+      "return_krw": 599943,
+      "pnl_krw": 114807,
+      "pnl_pct": 23.66
+    }
+  ],
+  "total_invested_krw": 485136,
+  "total_return_krw": 599943,
+  "total_pnl_krw": 114807,
+  "total_pnl_pct": 23.66
+}

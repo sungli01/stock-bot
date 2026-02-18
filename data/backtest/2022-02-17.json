@@ -1,0 +1,31 @@
+{
+  "date": "2022-02-17",
+  "monitored": 30,
+  "signals_detected": 1,
+  "trades": [
+    {
+      "ticker": "PLTR",
+      "surge_pct": 6.82,
+      "volume_ratio": 242.0,
+      "detect_time_kst": "20:31",
+      "detect_price": 13.15,
+      "surge_score": 1650.0,
+      "allocation_pct": 50,
+      "buy_price": 13.06,
+      "buy_time_kst": "20:32",
+      "buy_time_utc": "11:32",
+      "sell_price": 11.91,
+      "sell_time_kst": "09:59",
+      "sell_reason": "강제청산(장마감)",
+      "shares": 28,
+      "invested_krw": 493744,
+      "return_krw": 450198,
+      "pnl_krw": -43546,
+      "pnl_pct": -8.82
+    }
+  ],
+  "total_invested_krw": 493744,
+  "total_return_krw": 450198,
+  "total_pnl_krw": -43546,
+  "total_pnl_pct": -8.82
+}

@@ -1,0 +1,31 @@
+{
+  "date": "2022-04-13",
+  "monitored": 30,
+  "signals_detected": 1,
+  "trades": [
+    {
+      "ticker": "CRTD",
+      "surge_pct": 6.54,
+      "volume_ratio": 857.0,
+      "detect_time_kst": "22:40",
+      "detect_price": 1.06,
+      "surge_score": 5605.0,
+      "allocation_pct": 50,
+      "buy_price": 1.11,
+      "buy_time_kst": "22:41",
+      "buy_time_utc": "13:41",
+      "sell_price": 1.4,
+      "sell_time_kst": "23:03",
+      "sell_reason": "트레일링(+26.2%,고점$1.64)",
+      "shares": 333,
+      "invested_krw": 498722,
+      "return_krw": 629370,
+      "pnl_krw": 130648,
+      "pnl_pct": 26.2
+    }
+  ],
+  "total_invested_krw": 498722,
+  "total_return_krw": 629370,
+  "total_pnl_krw": 130648,
+  "total_pnl_pct": 26.2
+}

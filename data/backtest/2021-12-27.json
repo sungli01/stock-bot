@@ -1,0 +1,51 @@
+{
+  "date": "2021-12-27",
+  "monitored": 30,
+  "signals_detected": 2,
+  "trades": [
+    {
+      "ticker": "PYR",
+      "surge_pct": 5.55,
+      "volume_ratio": 266.0,
+      "detect_time_kst": "23:55",
+      "detect_price": 3.24,
+      "surge_score": 1476.0,
+      "allocation_pct": 50,
+      "buy_price": 3.25,
+      "buy_time_kst": "23:56",
+      "buy_time_utc": "14:56",
+      "sell_price": 5.13,
+      "sell_time_kst": "00:39",
+      "sell_reason": "트레일링(+58.1%,고점$5.70)",
+      "shares": 114,
+      "invested_krw": 499519,
+      "return_krw": 789507,
+      "pnl_krw": 289988,
+      "pnl_pct": 58.05
+    },
+    {
+      "ticker": "MBOT",
+      "surge_pct": 5.47,
+      "volume_ratio": 337.0,
+      "detect_time_kst": "21:31",
+      "detect_price": 7.71,
+      "surge_score": 1843.0,
+      "allocation_pct": 50,
+      "buy_price": 7.87,
+      "buy_time_kst": "21:32",
+      "buy_time_utc": "12:32",
+      "sell_price": 8.08,
+      "sell_time_kst": "09:59",
+      "sell_reason": "강제청산(장마감)",
+      "shares": 47,
+      "invested_krw": 499605,
+      "return_krw": 512676,
+      "pnl_krw": 13071,
+      "pnl_pct": 2.62
+    }
+  ],
+  "total_invested_krw": 999124,
+  "total_return_krw": 1302183,
+  "total_pnl_krw": 303059,
+  "total_pnl_pct": 30.33
+}

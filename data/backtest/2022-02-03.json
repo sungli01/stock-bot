@@ -1,0 +1,51 @@
+{
+  "date": "2022-02-03",
+  "monitored": 30,
+  "signals_detected": 2,
+  "trades": [
+    {
+      "ticker": "SNAP",
+      "surge_pct": 19.0,
+      "volume_ratio": 485.0,
+      "detect_time_kst": "06:10",
+      "detect_price": 31.06,
+      "surge_score": 9215.0,
+      "allocation_pct": 50,
+      "buy_price": 31.86,
+      "buy_time_kst": "06:11",
+      "buy_time_utc": "21:11",
+      "sell_price": 39,
+      "sell_time_kst": "09:59",
+      "sell_reason": "강제청산(장마감)",
+      "shares": 11,
+      "invested_krw": 473150,
+      "return_krw": 579150,
+      "pnl_krw": 106000,
+      "pnl_pct": 22.4
+    },
+    {
+      "ticker": "AMZN",
+      "surge_pct": 10.16,
+      "volume_ratio": 266.0,
+      "detect_time_kst": "06:01",
+      "detect_price": 153.56,
+      "surge_score": 2703.0,
+      "allocation_pct": 50,
+      "buy_price": 159.68,
+      "buy_time_kst": "06:02",
+      "buy_time_utc": "21:02",
+      "sell_price": 158.61,
+      "sell_time_kst": "09:59",
+      "sell_reason": "강제청산(장마감)",
+      "shares": 2,
+      "invested_krw": 431149,
+      "return_krw": 428254,
+      "pnl_krw": -2895,
+      "pnl_pct": -0.67
+    }
+  ],
+  "total_invested_krw": 904299,
+  "total_return_krw": 1007404,
+  "total_pnl_krw": 103105,
+  "total_pnl_pct": 11.4
+}

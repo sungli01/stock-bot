@@ -1,0 +1,31 @@
+{
+  "date": "2022-01-13",
+  "monitored": 30,
+  "signals_detected": 1,
+  "trades": [
+    {
+      "ticker": "BTCS",
+      "surge_pct": 5.65,
+      "volume_ratio": 668.0,
+      "detect_time_kst": "21:01",
+      "detect_price": 4.49,
+      "surge_score": 3774.0,
+      "allocation_pct": 50,
+      "buy_price": 4.55,
+      "buy_time_kst": "21:02",
+      "buy_time_utc": "12:02",
+      "sell_price": 3.83,
+      "sell_time_kst": "23:29",
+      "sell_reason": "손절(-15.7%)",
+      "shares": 81,
+      "invested_krw": 497324,
+      "return_krw": 419357,
+      "pnl_krw": -77967,
+      "pnl_pct": -15.68
+    }
+  ],
+  "total_invested_krw": 497324,
+  "total_return_krw": 419357,
+  "total_pnl_krw": -77967,
+  "total_pnl_pct": -15.68
+}

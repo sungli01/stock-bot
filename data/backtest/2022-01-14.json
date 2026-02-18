@@ -1,0 +1,31 @@
+{
+  "date": "2022-01-14",
+  "monitored": 30,
+  "signals_detected": 1,
+  "trades": [
+    {
+      "ticker": "SDC",
+      "surge_pct": 5.94,
+      "volume_ratio": 261.0,
+      "detect_time_kst": "00:08",
+      "detect_price": 2.23,
+      "surge_score": 1550.0,
+      "allocation_pct": 50,
+      "buy_price": 2.42,
+      "buy_time_kst": "00:09",
+      "buy_time_utc": "15:09",
+      "sell_price": 2.24,
+      "sell_time_kst": "09:59",
+      "sell_reason": "강제청산(장마감)",
+      "shares": 153,
+      "invested_krw": 499029,
+      "return_krw": 462672,
+      "pnl_krw": -36357,
+      "pnl_pct": -7.29
+    }
+  ],
+  "total_invested_krw": 499029,
+  "total_return_krw": 462672,
+  "total_pnl_krw": -36357,
+  "total_pnl_pct": -7.29
+}

@@ -1,0 +1,51 @@
+{
+  "date": "2022-02-09",
+  "monitored": 30,
+  "signals_detected": 2,
+  "trades": [
+    {
+      "ticker": "MITQ",
+      "surge_pct": 9.09,
+      "volume_ratio": 455.0,
+      "detect_time_kst": "22:06",
+      "detect_price": 1.44,
+      "surge_score": 4136.0,
+      "allocation_pct": 50,
+      "buy_price": 1.48,
+      "buy_time_kst": "22:07",
+      "buy_time_utc": "13:07",
+      "sell_price": 1.63,
+      "sell_time_kst": "09:59",
+      "sell_reason": "강제청산(장마감)",
+      "shares": 250,
+      "invested_krw": 499500,
+      "return_krw": 550125,
+      "pnl_krw": 50625,
+      "pnl_pct": 10.14
+    },
+    {
+      "ticker": "UBER",
+      "surge_pct": 8.9,
+      "volume_ratio": 242.0,
+      "detect_time_kst": "06:10",
+      "detect_price": 43.55,
+      "surge_score": 2154.0,
+      "allocation_pct": 50,
+      "buy_price": 43.49,
+      "buy_time_kst": "06:11",
+      "buy_time_utc": "21:11",
+      "sell_price": 42.5,
+      "sell_time_kst": "09:59",
+      "sell_reason": "강제청산(장마감)",
+      "shares": 8,
+      "invested_krw": 469649,
+      "return_krw": 459000,
+      "pnl_krw": -10649,
+      "pnl_pct": -2.27
+    }
+  ],
+  "total_invested_krw": 969149,
+  "total_return_krw": 1009125,
+  "total_pnl_krw": 39976,
+  "total_pnl_pct": 4.12
+}

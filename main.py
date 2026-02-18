@@ -1,25 +1,24 @@
 """
-stock-bot 엔트리포인트
-- Redis 있으면 multiprocessing (pub/sub), 없으면 standalone 순차 실행
-- DB 없으면 JSON 파일 fallback
-- 스케줄러 (18:00 시작, 06:00 종료)
-- 헬스체크 + 자동 재시작
+stock-bot 실전 엔트리포인트
+- Snapshot 기반 실시간 스캔 (2초 간격)
+- BB 트레일링 스탑 기반 매도
+- Post-trade 추적
+- Railway 안정 배포
 """
 import os
 import sys
 import time
 import signal
 import logging
-import multiprocessing as mp
+import threading
 from datetime import datetime
+from http.server import HTTPServer, BaseHTTPRequestHandler
 
 import yaml
 from dotenv import load_dotenv
 
-# .env 로드
 load_dotenv()
 
-# 로깅 설정
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(name)s] %(levelname)s: %(message)s",
@@ -29,236 +28,77 @@ logger = logging.getLogger("main")
 
 
 def load_config() -> dict:
-    with open("config/config.yaml", "r") as f:
+    cfg_path = os.path.join(os.path.dirname(__file__), "config", "config.yaml")
+    with open(cfg_path, "r") as f:
         return yaml.safe_load(f)
 
 
-def try_redis():
-    """Redis 연결 시도. 성공하면 redis.Redis 반환, 실패하면 None"""
+# ─── 헬스체크 서버 (Railway용) ────────────────────────────
+class HealthHandler(BaseHTTPRequestHandler):
+    def do_GET(self):
+        self.send_response(200)
+        self.send_header("Content-Type", "application/json")
+        self.end_headers()
+        self.wfile.write(b'{"status":"ok"}')
+
+    def log_message(self, format, *args):
+        pass  # suppress logs
+
+
+def start_health_server(port: int = 8080):
+    """비동기 헬스체크 HTTP 서버"""
     try:
-        import redis
-        r = redis.Redis(
-            host=os.getenv("REDIS_HOST", "localhost"),
-            port=int(os.getenv("REDIS_PORT", 6379)),
-            db=int(os.getenv("REDIS_DB", 0)),
-            decode_responses=True,
-        )
-        r.ping()
-        return r
+        server = HTTPServer(("0.0.0.0", port), HealthHandler)
+        t = threading.Thread(target=server.serve_forever, daemon=True)
+        t.start()
+        logger.info(f"🏥 헬스체크 서버 시작 (port {port})")
     except Exception as e:
-        logger.warning(f"⚠️ Redis 연결 실패: {e}")
-        return None
+        logger.warning(f"헬스체크 서버 실패: {e}")
 
 
-def send_startup_notification(mode: str):
-    """시작 알림 전송"""
+def send_notification(text: str):
+    """텔레그램 알림 (실패해도 무시)"""
     try:
         from notifier.telegram_bot import TelegramNotifier
-        notifier = TelegramNotifier()
-        notifier.send_sync(f"🤖 StockBot 시작 (모드: {mode})")
+        TelegramNotifier().send_sync(text)
     except Exception as e:
-        logger.warning(f"텔레그램 알림 실패: {e}")
+        logger.warning(f"알림 실패: {e}")
 
 
-# ─── Redis 모드: 모듈 프로세스 함수 ──────────────────────
-def run_collector(config: dict):
-    """Collector 프로세스: 전종목 스캔 + 1차 필터링"""
-    from collector.scanner import StockScanner
-    import redis
-    logger = logging.getLogger("collector")
-    logger.info("🚀 Collector 시작")
-
-    r = redis.Redis(
-        host=os.getenv("REDIS_HOST", "localhost"),
-        port=int(os.getenv("REDIS_PORT", 6379)),
-        db=int(os.getenv("REDIS_DB", 0)),
-        decode_responses=True,
-    )
-    scanner = StockScanner(r, config)
-    scanner.run_loop(interval_sec=60)
-
-
-def run_analyzer(config: dict):
-    """Analyzer 프로세스: 추세 판단 + 시그널 생성"""
-    from analyzer.signal import SignalGenerator
-    import redis
-    logger = logging.getLogger("analyzer")
-    logger.info("🚀 Analyzer 시작")
-
-    r = redis.Redis(
-        host=os.getenv("REDIS_HOST", "localhost"),
-        port=int(os.getenv("REDIS_PORT", 6379)),
-        db=int(os.getenv("REDIS_DB", 0)),
-        decode_responses=True,
-    )
-    generator = SignalGenerator(r, config)
-    generator.run_subscriber()
-
-
-def run_trader(config: dict):
-    """Trader 프로세스: 매매 실행"""
-    from trader.executor import TradeExecutor
-    import redis
-    logger = logging.getLogger("trader")
-    logger.info("🚀 Trader 시작")
-
-    r = redis.Redis(
-        host=os.getenv("REDIS_HOST", "localhost"),
-        port=int(os.getenv("REDIS_PORT", 6379)),
-        db=int(os.getenv("REDIS_DB", 0)),
-        decode_responses=True,
-    )
-    executor = TradeExecutor(r, config)
-    executor.run_subscriber()
-
-
-# ─── Standalone 모드: 순차 실행 ──────────────────────────
-def run_standalone_cycle(config: dict):
+# ─── 메인 트레이딩 루프 ──────────────────────────────────
+def run_live(config: dict):
     """
-    Redis 없이 Collector→Analyzer→Trader 순차 실행
-    매매일 기준: KST 18:00 ~ 익일 06:00 = 1세션
-    KST 18:00부터 매매 가능 (프리마켓 포함)
+    실전 트레이딩 메인 루프
+    - Snapshot 스캔 (2초 간격)
+    - 시그널 평가 → 매수
+    - 보유종목 BB 트레일링 모니터링 → 매도
+    - 장마감 15분전 강제청산
     """
-    from collector.scanner import StockScanner
+    from collector.snapshot_scanner import SnapshotScanner
     from analyzer.signal import SignalGenerator
     from trader.executor import TradeExecutor
+    from trader.bb_trailing import BBTrailingStop
+    from trader.market_hours import (
+        is_trading_window, minutes_until_session_end,
+        get_all_timestamps, get_trading_date, now_kst,
+    )
     from knowledge.file_store import FileStore
-    from trader.market_hours import get_all_timestamps, get_trading_date, minutes_until_session_end
+    from knowledge.post_trade_tracker import PostTradeTracker
 
-    store = FileStore()
-    trading_date = get_trading_date()
-    ts = get_all_timestamps()
-
-    scanner = StockScanner(None, config)
+    scanner = SnapshotScanner(config)
     analyzer = SignalGenerator(None, config)
     executor = TradeExecutor(None, config)
+    bb_trailing = BBTrailingStop(config)
+    store = FileStore()
+    tracker = PostTradeTracker()
 
-    # 세션 종료 임박 시 강제청산 우선 실행
-    if executor.should_force_close():
-        remaining = minutes_until_session_end()
-        logger.warning(f"🚨 [{trading_date}] 세션 종료 {remaining:.0f}분 전 — 강제청산 실행")
-        executor.force_close_all_positions()
-        return
+    trading_cfg = config.get("trading", {})
+    max_positions = trading_cfg.get("max_positions", 2)
+    allocation_ratio = trading_cfg.get("allocation_ratio", [0.7, 0.3])
+    force_close_before_min = trading_cfg.get("force_close_before_min", 15)
 
-    logger.info(f"🔍 [{trading_date}] Collector 스캔 시작 (KST {ts['kst']})")
-    screened = scanner.scan_once()
-    logger.info(f"  → {len(screened)}개 종목 통과")
-
-    for data in screened:
-        ticker = data.get("ticker")
-        if not ticker:
-            continue
-
-        sig = analyzer.evaluate(ticker, data)
-        if not sig:
-            continue
-
-        sig["timestamps"] = get_all_timestamps()
-        sig["trading_date"] = trading_date
-        store.save_signal(sig)
-
-        if sig["signal"] in ("BUY", "SELL", "STOP"):
-            logger.info(f"📊 [{trading_date}] {ticker} → {sig['signal']} (신뢰도 {sig['confidence']:.0f}%)")
-
-            if sig["signal"] == "BUY":
-                executor.execute_buy(ticker, sig.get("price", 0))
-            elif sig["signal"] == "SELL":
-                executor.execute_sell(ticker)
-            elif sig["signal"] == "STOP":
-                executor.execute_stop_loss(ticker)
-
-    # 보유 종목 손절/익절 체크
-    executor.check_positions()
-
-
-# ─── 스케줄 관리 ─────────────────────────────────────────
-def is_trading_hours(config: dict) -> bool:
-    """현재 매매 시간인지 확인 — trader/market_hours.py 기준"""
-    from trader.market_hours import is_trading_window
-    return is_trading_window()
-
-
-# ─── 프로세스 관리 (Redis 모드) ───────────────────────────
-class ProcessManager:
-    """3모듈 프로세스 관리 — 헬스체크 + 자동 재시작"""
-
-    def __init__(self, config: dict):
-        self.config = config
-        self.processes: dict[str, mp.Process] = {}
-        self.running = True
-
-    def start_all(self):
-        modules = {
-            "collector": run_collector,
-            "analyzer": run_analyzer,
-            "trader": run_trader,
-        }
-        for name, func in modules.items():
-            self._start_process(name, func)
-
-    def _start_process(self, name: str, func):
-        p = mp.Process(target=func, args=(self.config,), name=name, daemon=True)
-        p.start()
-        self.processes[name] = p
-        logger.info(f"  ✅ {name} 프로세스 시작 (PID: {p.pid})")
-
-    def health_check(self):
-        module_funcs = {
-            "collector": run_collector,
-            "analyzer": run_analyzer,
-            "trader": run_trader,
-        }
-        for name, proc in list(self.processes.items()):
-            if not proc.is_alive():
-                logger.warning(f"⚠️ {name} 프로세스 사망 — 재시작")
-                self._start_process(name, module_funcs[name])
-
-    def stop_all(self):
-        self.running = False
-        for name, proc in self.processes.items():
-            try:
-                if proc.is_alive():
-                    proc.terminate()
-                    proc.join(timeout=5)
-            except (AssertionError, Exception):
-                pass
-            logger.info(f"  🛑 {name} 종료")
-
-    def run(self):
-        logger.info("=" * 50)
-        logger.info("🤖 stock-bot 시작 (모드: railway)")
-        logger.info("=" * 50)
-
-        def shutdown(signum, frame):
-            logger.info("종료 시그널 수신")
-            self.stop_all()
-            sys.exit(0)
-
-        signal.signal(signal.SIGINT, shutdown)
-        signal.signal(signal.SIGTERM, shutdown)
-
-        self.start_all()
-
-        while self.running:
-            try:
-                self.health_check()
-                if not is_trading_hours(self.config):
-                    logger.info("💤 매매 시간 외 — 휴면 중 (5분 간격 체크)")
-                    time.sleep(300)
-                else:
-                    time.sleep(30)
-            except KeyboardInterrupt:
-                break
-
-        self.stop_all()
-
-
-# ─── Standalone 모드 루프 ─────────────────────────────────
-def run_standalone(config: dict):
-    """Redis 없이 단독 실행 — 순차 루프"""
-    logger.info("=" * 50)
-    logger.info("🤖 stock-bot 시작 (모드: standalone)")
-    logger.info("=" * 50)
+    SCAN_INTERVAL = 2  # seconds
+    SLEEP_CHECK_INTERVAL = 300  # 5min when outside trading hours
 
     running = True
 
@@ -270,25 +110,137 @@ def run_standalone(config: dict):
     signal.signal(signal.SIGINT, shutdown)
     signal.signal(signal.SIGTERM, shutdown)
 
-    interval = 60  # 스캔 간격 (초)
-
     sleep_logged = False
+    last_post_trade_update = None
+
     while running:
         try:
-            if is_trading_hours(config):
-                sleep_logged = False
-                run_standalone_cycle(config)
-                time.sleep(interval)
-            else:
+            now = now_kst()
+
+            # ── 매매 시간 외 ─────────────────────────────
+            if not is_trading_window():
                 if not sleep_logged:
-                    logger.info("💤 매매 시간 외 — 휴면 중 (10분 간격 체크)")
+                    logger.info("💤 매매 시간 외 — 대기 중")
+                    # 세션 리셋
+                    scanner.reset_session()
+                    bb_trailing.reset()
                     sleep_logged = True
-                time.sleep(600)  # 10분 간격
+
+                    # 장 마감 후 post-trade 업데이트 (1일 1회)
+                    today = now.strftime("%Y-%m-%d")
+                    if last_post_trade_update != today:
+                        try:
+                            tracker.update_all()
+                            last_post_trade_update = today
+                        except Exception as e:
+                            logger.error(f"Post-trade 업데이트 실패: {e}")
+
+                time.sleep(SLEEP_CHECK_INTERVAL)
+                continue
+
+            sleep_logged = False
+            trading_date = get_trading_date()
+
+            # ── 강제청산 체크 ─────────────────────────────
+            remaining = minutes_until_session_end()
+            if 0 < remaining <= force_close_before_min:
+                logger.warning(f"🚨 장마감 {remaining:.0f}분 전 — 강제청산")
+                executor.force_close_all_positions()
+                send_notification(f"🚨 장마감 강제청산 실행 (잔여 {remaining:.0f}분)")
+                time.sleep(60)
+                continue
+
+            # ── Snapshot 스캔 ─────────────────────────────
+            candidates = scanner.scan_once()
+
+            # ── 보유종목 모니터링 (BB 트레일링) ───────────
+            balance = executor.kis.get_balance()
+            positions = balance.get("positions", [])
+            current_count = len(positions)
+
+            for pos in positions:
+                ticker = pos["ticker"]
+                avg_price = pos["avg_price"]
+                # snapshot에서 실시간 가격 가져오기
+                snap_price = scanner.get_price(ticker)
+                current_price = snap_price or pos.get("current_price") or executor.kis.get_current_price(ticker)
+
+                if not current_price:
+                    continue
+
+                exit_signal = bb_trailing.check_exit(ticker, current_price, avg_price)
+                if exit_signal:
+                    action = exit_signal["action"]
+                    reason = exit_signal["reason"]
+                    pnl_pct = exit_signal["pnl_pct"]
+
+                    logger.info(f"{'🚨' if action == 'STOP' else '💰'} {ticker} {reason}")
+
+                    if action == "STOP":
+                        executor.execute_stop_loss(ticker)
+                    else:
+                        executor.execute_sell(ticker)
+
+                    # Post-trade 기록
+                    try:
+                        tracker.record_trade(ticker, trading_date, {
+                            "side": "SELL",
+                            "reason": reason,
+                            "pnl_pct": pnl_pct,
+                            "avg_price": avg_price,
+                            "exit_price": current_price,
+                            "quantity": pos.get("quantity", 0),
+                        })
+                    except Exception as e:
+                        logger.error(f"Post-trade 기록 실패: {e}")
+
+                    send_notification(
+                        f"{'🚨' if action == 'STOP' else '💰'} {ticker} 매도\n"
+                        f"사유: {reason}\n"
+                        f"수익률: {pnl_pct:+.1f}%"
+                    )
+                    current_count -= 1
+
+            # ── 신규 매수 평가 ────────────────────────────
+            if candidates and current_count < max_positions:
+                for cand in candidates:
+                    if current_count >= max_positions:
+                        break
+
+                    ticker = cand["ticker"]
+
+                    # 시그널 평가
+                    sig = analyzer.evaluate(ticker, cand)
+                    if not sig or sig["signal"] != "BUY":
+                        continue
+
+                    if sig["confidence"] < 65:
+                        continue
+
+                    # 매수 실행
+                    price = cand["price"]
+                    logger.info(f"📈 {ticker} 매수 진입 (신뢰도 {sig['confidence']:.0f}%, ${price:.2f})")
+
+                    orders = executor.execute_buy(ticker, price)
+                    if orders:
+                        scanner.mark_signaled(ticker)
+                        current_count += 1
+
+                        store.save_signal(sig)
+                        send_notification(
+                            f"✅ {ticker} 매수 완료\n"
+                            f"가격: ${price:.2f}\n"
+                            f"변동: {cand['change_pct']:+.1f}%\n"
+                            f"신뢰도: {sig['confidence']:.0f}%"
+                        )
+
+            time.sleep(SCAN_INTERVAL)
+
         except KeyboardInterrupt:
             break
         except Exception as e:
-            logger.error(f"Standalone 루프 오류: {e}", exc_info=True)
-            time.sleep(30)
+            logger.error(f"루프 오류: {e}", exc_info=True)
+            time.sleep(10)
 
     logger.info("🛑 stock-bot 종료")
 
@@ -297,31 +249,23 @@ def run_standalone(config: dict):
 if __name__ == "__main__":
     config = load_config()
 
-    # Railway 환경에서는 항상 standalone 모드 사용
-    # (Redis 모드는 child process 크래시 루프 발생)
-    force_standalone = os.getenv("FORCE_STANDALONE", "").lower() in ("1", "true", "yes")
-    
-    r = None if force_standalone else try_redis()
-    use_redis = r is not None
+    is_railway = os.getenv("RAILWAY", "").lower() in ("1", "true", "yes") or os.getenv("RAILWAY_ENVIRONMENT", "")
+    port = int(os.getenv("PORT", "8080"))
 
-    mode = "standalone"
-    if use_redis:
-        mode = "redis"
+    # Railway: 헬스체크 서버 시작
+    if is_railway:
+        start_health_server(port)
 
-    logger.info(f"🤖 stock-bot 시작 (모드: {mode})")
-    
-    # 시작 알림은 1회만 (크래시 루프 방지)
+    # 시작 알림 (1회만)
     startup_flag = "/tmp/stockbot_started"
     if not os.path.exists(startup_flag):
-        send_startup_notification(mode)
+        mode = "railway" if is_railway else "local"
+        send_notification(f"🤖 StockBot 시작 (모드: {mode}, snapshot+BB trailing)")
+        logger.info(f"🤖 stock-bot 시작 (모드: {mode})")
         try:
             with open(startup_flag, "w") as f:
                 f.write(datetime.now().isoformat())
         except Exception:
             pass
 
-    if use_redis:
-        manager = ProcessManager(config)
-        manager.run()
-    else:
-        run_standalone(config)
+    run_live(config)

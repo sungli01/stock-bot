@@ -1,0 +1,51 @@
+{
+  "date": "2022-05-02",
+  "monitored": 30,
+  "signals_detected": 2,
+  "trades": [
+    {
+      "ticker": "RDBX",
+      "surge_pct": 8.29,
+      "volume_ratio": 434.0,
+      "detect_time_kst": "21:02",
+      "detect_price": 6.27,
+      "surge_score": 3598.0,
+      "allocation_pct": 50,
+      "buy_price": 6.35,
+      "buy_time_kst": "21:03",
+      "buy_time_utc": "12:03",
+      "sell_price": 8.6,
+      "sell_time_kst": "23:31",
+      "sell_reason": "트레일링(+35.5%,고점$9.97)",
+      "shares": 58,
+      "invested_krw": 497048,
+      "return_krw": 673380,
+      "pnl_krw": 176332,
+      "pnl_pct": 35.48
+    },
+    {
+      "ticker": "BTTX",
+      "surge_pct": 5.43,
+      "volume_ratio": 302.0,
+      "detect_time_kst": "19:56",
+      "detect_price": 1.36,
+      "surge_score": 1640.0,
+      "allocation_pct": 50,
+      "buy_price": 1.35,
+      "buy_time_kst": "19:57",
+      "buy_time_utc": "10:57",
+      "sell_price": 1.14,
+      "sell_time_kst": "22:51",
+      "sell_reason": "손절(-15.7%)",
+      "shares": 273,
+      "invested_krw": 498280,
+      "return_krw": 419963,
+      "pnl_krw": -78317,
+      "pnl_pct": -15.72
+    }
+  ],
+  "total_invested_krw": 995328,
+  "total_return_krw": 1093343,
+  "total_pnl_krw": 98015,
+  "total_pnl_pct": 9.85
+}

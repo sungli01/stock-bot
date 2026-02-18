@@ -1,0 +1,31 @@
+{
+  "date": "2022-04-29",
+  "monitored": 30,
+  "signals_detected": 1,
+  "trades": [
+    {
+      "ticker": "RDBX",
+      "surge_pct": 5.09,
+      "volume_ratio": 490.0,
+      "detect_time_kst": "21:32",
+      "detect_price": 4.13,
+      "surge_score": 2494.0,
+      "allocation_pct": 50,
+      "buy_price": 4.03,
+      "buy_time_kst": "21:33",
+      "buy_time_utc": "12:33",
+      "sell_price": 5.49,
+      "sell_time_kst": "04:38",
+      "sell_reason": "트레일링(+36.0%,고점$6.15)",
+      "shares": 91,
+      "invested_krw": 495329,
+      "return_krw": 673894,
+      "pnl_krw": 178565,
+      "pnl_pct": 36.05
+    }
+  ],
+  "total_invested_krw": 495329,
+  "total_return_krw": 673894,
+  "total_pnl_krw": 178565,
+  "total_pnl_pct": 36.05
+}

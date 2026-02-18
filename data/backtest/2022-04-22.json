@@ -1,0 +1,51 @@
+{
+  "date": "2022-04-22",
+  "monitored": 30,
+  "signals_detected": 2,
+  "trades": [
+    {
+      "ticker": "SNAP",
+      "surge_pct": 5.35,
+      "volume_ratio": 582.0,
+      "detect_time_kst": "22:34",
+      "detect_price": 30.2,
+      "surge_score": 3114.0,
+      "allocation_pct": 50,
+      "buy_price": 30.51,
+      "buy_time_kst": "22:35",
+      "buy_time_utc": "13:35",
+      "sell_price": 29.75,
+      "sell_time_kst": "08:59",
+      "sell_reason": "강제청산(장마감)",
+      "shares": 12,
+      "invested_krw": 494314,
+      "return_krw": 481950,
+      "pnl_krw": -12364,
+      "pnl_pct": -2.5
+    },
+    {
+      "ticker": "MITQ",
+      "surge_pct": 6.08,
+      "volume_ratio": 469.0,
+      "detect_time_kst": "20:34",
+      "detect_price": 1.57,
+      "surge_score": 2852.0,
+      "allocation_pct": 50,
+      "buy_price": 1.61,
+      "buy_time_kst": "20:35",
+      "buy_time_utc": "11:35",
+      "sell_price": 1.56,
+      "sell_time_kst": "08:59",
+      "sell_reason": "강제청산(장마감)",
+      "shares": 229,
+      "invested_krw": 498968,
+      "return_krw": 482274,
+      "pnl_krw": -16694,
+      "pnl_pct": -3.35
+    }
+  ],
+  "total_invested_krw": 993282,
+  "total_return_krw": 964224,
+  "total_pnl_krw": -29058,
+  "total_pnl_pct": -2.93
+}

@@ -1,0 +1,51 @@
+{
+  "date": "2021-12-13",
+  "monitored": 30,
+  "signals_detected": 2,
+  "trades": [
+    {
+      "ticker": "NES",
+      "surge_pct": 12.74,
+      "volume_ratio": 346.0,
+      "detect_time_kst": "23:29",
+      "detect_price": 1.77,
+      "surge_score": 4408.0,
+      "allocation_pct": 50,
+      "buy_price": 1.78,
+      "buy_time_kst": "23:30",
+      "buy_time_utc": "14:30",
+      "sell_price": 2.45,
+      "sell_time_kst": "23:53",
+      "sell_reason": "트레일링(+37.9%,고점$2.87)",
+      "shares": 208,
+      "invested_krw": 499010,
+      "return_krw": 687960,
+      "pnl_krw": 188950,
+      "pnl_pct": 37.87
+    },
+    {
+      "ticker": "BLU",
+      "surge_pct": 10.72,
+      "volume_ratio": 559.0,
+      "detect_time_kst": "21:50",
+      "detect_price": 7.85,
+      "surge_score": 5992.0,
+      "allocation_pct": 50,
+      "buy_price": 7.69,
+      "buy_time_kst": "21:51",
+      "buy_time_utc": "12:51",
+      "sell_price": 8.3,
+      "sell_time_kst": "09:59",
+      "sell_reason": "강제청산(장마감)",
+      "shares": 48,
+      "invested_krw": 498442,
+      "return_krw": 537840,
+      "pnl_krw": 39398,
+      "pnl_pct": 7.9
+    }
+  ],
+  "total_invested_krw": 997452,
+  "total_return_krw": 1225800,
+  "total_pnl_krw": 228348,
+  "total_pnl_pct": 22.89
+}

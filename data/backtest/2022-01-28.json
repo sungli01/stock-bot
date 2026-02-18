@@ -1,0 +1,31 @@
+{
+  "date": "2022-01-28",
+  "monitored": 30,
+  "signals_detected": 1,
+  "trades": [
+    {
+      "ticker": "HOOD",
+      "surge_pct": 6.37,
+      "volume_ratio": 675.0,
+      "detect_time_kst": "23:32",
+      "detect_price": 10.68,
+      "surge_score": 4300.0,
+      "allocation_pct": 50,
+      "buy_price": 10.59,
+      "buy_time_kst": "23:33",
+      "buy_time_utc": "14:33",
+      "sell_price": 12.55,
+      "sell_time_kst": "09:59",
+      "sell_reason": "강제청산(장마감)",
+      "shares": 34,
+      "invested_krw": 486306,
+      "return_krw": 576045,
+      "pnl_krw": 89739,
+      "pnl_pct": 18.45
+    }
+  ],
+  "total_invested_krw": 486306,
+  "total_return_krw": 576045,
+  "total_pnl_krw": 89739,
+  "total_pnl_pct": 18.45
+}

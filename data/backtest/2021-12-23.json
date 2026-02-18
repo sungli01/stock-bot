@@ -1,0 +1,31 @@
+{
+  "date": "2021-12-23",
+  "monitored": 30,
+  "signals_detected": 1,
+  "trades": [
+    {
+      "ticker": "ALLK",
+      "surge_pct": 5.51,
+      "volume_ratio": 368.0,
+      "detect_time_kst": "00:11",
+      "detect_price": 10.24,
+      "surge_score": 2028.0,
+      "allocation_pct": 50,
+      "buy_price": 10.34,
+      "buy_time_kst": "00:12",
+      "buy_time_utc": "15:12",
+      "sell_price": 10.18,
+      "sell_time_kst": "09:59",
+      "sell_reason": "강제청산(장마감)",
+      "shares": 35,
+      "invested_krw": 488517,
+      "return_krw": 481005,
+      "pnl_krw": -7512,
+      "pnl_pct": -1.54
+    }
+  ],
+  "total_invested_krw": 488517,
+  "total_return_krw": 481005,
+  "total_pnl_krw": -7512,
+  "total_pnl_pct": -1.54
+}

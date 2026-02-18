@@ -1,0 +1,51 @@
+{
+  "date": "2022-05-04",
+  "monitored": 30,
+  "signals_detected": 2,
+  "trades": [
+    {
+      "ticker": "RDBX",
+      "surge_pct": 6.54,
+      "volume_ratio": 551.0,
+      "detect_time_kst": "20:25",
+      "detect_price": 6.68,
+      "surge_score": 3604.0,
+      "allocation_pct": 50,
+      "buy_price": 6.85,
+      "buy_time_kst": "20:26",
+      "buy_time_utc": "11:26",
+      "sell_price": 7.2,
+      "sell_time_kst": "08:59",
+      "sell_reason": "강제청산(장마감)",
+      "shares": 54,
+      "invested_krw": 499073,
+      "return_krw": 524880,
+      "pnl_krw": 25807,
+      "pnl_pct": 5.17
+    },
+    {
+      "ticker": "SOXL",
+      "surge_pct": 5.96,
+      "volume_ratio": 215.0,
+      "detect_time_kst": "03:47",
+      "detect_price": 25.94,
+      "surge_score": 1281.0,
+      "allocation_pct": 50,
+      "buy_price": 25.86,
+      "buy_time_kst": "03:48",
+      "buy_time_utc": "18:48",
+      "sell_price": 27.68,
+      "sell_time_kst": "08:59",
+      "sell_reason": "강제청산(장마감)",
+      "shares": 14,
+      "invested_krw": 488742,
+      "return_krw": 523152,
+      "pnl_krw": 34410,
+      "pnl_pct": 7.04
+    }
+  ],
+  "total_invested_krw": 987815,
+  "total_return_krw": 1048032,
+  "total_pnl_krw": 60217,
+  "total_pnl_pct": 6.1
+}

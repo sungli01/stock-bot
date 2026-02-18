@@ -1,0 +1,51 @@
+{
+  "date": "2022-05-26",
+  "monitored": 30,
+  "signals_detected": 4,
+  "trades": [
+    {
+      "ticker": "GME",
+      "surge_pct": 5.84,
+      "volume_ratio": 586.0,
+      "detect_time_kst": "22:33",
+      "detect_price": 30.83,
+      "surge_score": 3422.0,
+      "allocation_pct": 50,
+      "buy_price": 30.86,
+      "buy_time_kst": "22:34",
+      "buy_time_utc": "13:34",
+      "sell_price": 32.25,
+      "sell_time_kst": "08:59",
+      "sell_reason": "강제청산(장마감)",
+      "shares": 12,
+      "invested_krw": 499912,
+      "return_krw": 522450,
+      "pnl_krw": 22538,
+      "pnl_pct": 4.51
+    },
+    {
+      "ticker": "RDBX",
+      "surge_pct": 6.95,
+      "volume_ratio": 394.0,
+      "detect_time_kst": "18:30",
+      "detect_price": 7.23,
+      "surge_score": 2738.0,
+      "allocation_pct": 50,
+      "buy_price": 7.49,
+      "buy_time_kst": "18:31",
+      "buy_time_utc": "09:31",
+      "sell_price": 7.55,
+      "sell_time_kst": "08:59",
+      "sell_reason": "강제청산(장마감)",
+      "shares": 49,
+      "invested_krw": 495199,
+      "return_krw": 499432,
+      "pnl_krw": 4233,
+      "pnl_pct": 0.85
+    }
+  ],
+  "total_invested_krw": 995111,
+  "total_return_krw": 1021882,
+  "total_pnl_krw": 26771,
+  "total_pnl_pct": 2.69
+}

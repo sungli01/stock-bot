@@ -1,0 +1,51 @@
+{
+  "date": "2022-03-31",
+  "monitored": 30,
+  "signals_detected": 2,
+  "trades": [
+    {
+      "ticker": "CLVS",
+      "surge_pct": 7.14,
+      "volume_ratio": 448.0,
+      "detect_time_kst": "19:39",
+      "detect_price": 2.4,
+      "surge_score": 3199.0,
+      "allocation_pct": 50,
+      "buy_price": 2.4,
+      "buy_time_kst": "19:40",
+      "buy_time_utc": "10:40",
+      "sell_price": 2.04,
+      "sell_time_kst": "04:54",
+      "sell_reason": "손절(-15.0%)",
+      "shares": 154,
+      "invested_krw": 498128,
+      "return_krw": 423368,
+      "pnl_krw": -74760,
+      "pnl_pct": -15.01
+    },
+    {
+      "ticker": "GME",
+      "surge_pct": 9.15,
+      "volume_ratio": 271.0,
+      "detect_time_kst": "05:22",
+      "detect_price": 45.25,
+      "surge_score": 2480.0,
+      "allocation_pct": 50,
+      "buy_price": 46.27,
+      "buy_time_kst": "05:23",
+      "buy_time_utc": "20:23",
+      "sell_price": 48.65,
+      "sell_time_kst": "08:59",
+      "sell_reason": "강제청산(장마감)",
+      "shares": 8,
+      "invested_krw": 499673,
+      "return_krw": 525420,
+      "pnl_krw": 25747,
+      "pnl_pct": 5.15
+    }
+  ],
+  "total_invested_krw": 997801,
+  "total_return_krw": 948788,
+  "total_pnl_krw": -49013,
+  "total_pnl_pct": -4.91
+}

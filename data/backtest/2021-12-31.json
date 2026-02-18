@@ -1,0 +1,51 @@
+{
+  "date": "2021-12-31",
+  "monitored": 30,
+  "signals_detected": 2,
+  "trades": [
+    {
+      "ticker": "NTRB",
+      "surge_pct": 21.43,
+      "volume_ratio": 676.0,
+      "detect_time_kst": "21:55",
+      "detect_price": 4.52,
+      "surge_score": 14487.0,
+      "allocation_pct": 50,
+      "buy_price": 4.57,
+      "buy_time_kst": "21:56",
+      "buy_time_utc": "12:56",
+      "sell_price": 9.33,
+      "sell_time_kst": "00:26",
+      "sell_reason": "트레일링(+104.1%,고점$10.44)",
+      "shares": 81,
+      "invested_krw": 499948,
+      "return_krw": 1020334,
+      "pnl_krw": 520386,
+      "pnl_pct": 104.09
+    },
+    {
+      "ticker": "XERS",
+      "surge_pct": 5.22,
+      "volume_ratio": 1216.0,
+      "detect_time_kst": "02:04",
+      "detect_price": 3.12,
+      "surge_score": 6348.0,
+      "allocation_pct": 50,
+      "buy_price": 3.11,
+      "buy_time_kst": "02:05",
+      "buy_time_utc": "17:05",
+      "sell_price": 2.85,
+      "sell_time_kst": "09:59",
+      "sell_reason": "강제청산(장마감)",
+      "shares": 119,
+      "invested_krw": 498841,
+      "return_krw": 457853,
+      "pnl_krw": -40988,
+      "pnl_pct": -8.22
+    }
+  ],
+  "total_invested_krw": 998789,
+  "total_return_krw": 1478187,
+  "total_pnl_krw": 479398,
+  "total_pnl_pct": 48.0
+}

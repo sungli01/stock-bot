@@ -1,0 +1,51 @@
+{
+  "date": "2022-05-20",
+  "monitored": 30,
+  "signals_detected": 2,
+  "trades": [
+    {
+      "ticker": "IMMX",
+      "surge_pct": 14.67,
+      "volume_ratio": 219.0,
+      "detect_time_kst": "21:54",
+      "detect_price": 2.58,
+      "surge_score": 3213.0,
+      "allocation_pct": 50,
+      "buy_price": 2.55,
+      "buy_time_kst": "21:55",
+      "buy_time_utc": "12:55",
+      "sell_price": 2.13,
+      "sell_time_kst": "04:17",
+      "sell_reason": "손절(-16.5%)",
+      "shares": 145,
+      "invested_krw": 499162,
+      "return_krw": 416947,
+      "pnl_krw": -82215,
+      "pnl_pct": -16.47
+    },
+    {
+      "ticker": "SIGA",
+      "surge_pct": 7.27,
+      "volume_ratio": 314.0,
+      "detect_time_kst": "23:48",
+      "detect_price": 10.77,
+      "surge_score": 2283.0,
+      "allocation_pct": 50,
+      "buy_price": 10.43,
+      "buy_time_kst": "23:49",
+      "buy_time_utc": "14:49",
+      "sell_price": 15.33,
+      "sell_time_kst": "08:59",
+      "sell_reason": "강제청산(장마감)",
+      "shares": 35,
+      "invested_krw": 492686,
+      "return_krw": 724342,
+      "pnl_krw": 231656,
+      "pnl_pct": 47.02
+    }
+  ],
+  "total_invested_krw": 991848,
+  "total_return_krw": 1141289,
+  "total_pnl_krw": 149441,
+  "total_pnl_pct": 15.07
+}

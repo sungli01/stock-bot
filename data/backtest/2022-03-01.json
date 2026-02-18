@@ -1,0 +1,51 @@
+{
+  "date": "2022-03-01",
+  "monitored": 30,
+  "signals_detected": 3,
+  "trades": [
+    {
+      "ticker": "IQ",
+      "surge_pct": 6.25,
+      "volume_ratio": 1918.0,
+      "detect_time_kst": "23:31",
+      "detect_price": 4.59,
+      "surge_score": 11988.0,
+      "allocation_pct": 50,
+      "buy_price": 4.66,
+      "buy_time_kst": "23:32",
+      "buy_time_utc": "14:32",
+      "sell_price": 5.12,
+      "sell_time_kst": "09:59",
+      "sell_reason": "강제청산(장마감)",
+      "shares": 79,
+      "invested_krw": 496562,
+      "return_krw": 546048,
+      "pnl_krw": 49486,
+      "pnl_pct": 9.97
+    },
+    {
+      "ticker": "SOFI",
+      "surge_pct": 6.68,
+      "volume_ratio": 267.0,
+      "detect_time_kst": "06:11",
+      "detect_price": 12.13,
+      "surge_score": 1784.0,
+      "allocation_pct": 50,
+      "buy_price": 12.42,
+      "buy_time_kst": "06:12",
+      "buy_time_utc": "21:12",
+      "sell_price": 13.24,
+      "sell_time_kst": "09:59",
+      "sell_reason": "강제청산(장마감)",
+      "shares": 29,
+      "invested_krw": 486321,
+      "return_krw": 518346,
+      "pnl_krw": 32025,
+      "pnl_pct": 6.59
+    }
+  ],
+  "total_invested_krw": 982883,
+  "total_return_krw": 1064394,
+  "total_pnl_krw": 81511,
+  "total_pnl_pct": 8.29
+}

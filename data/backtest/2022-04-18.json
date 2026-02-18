@@ -1,0 +1,51 @@
+{
+  "date": "2022-04-18",
+  "monitored": 30,
+  "signals_detected": 2,
+  "trades": [
+    {
+      "ticker": "DIDI",
+      "surge_pct": 6.71,
+      "volume_ratio": 287.0,
+      "detect_time_kst": "22:46",
+      "detect_price": 2.06,
+      "surge_score": 1926.0,
+      "allocation_pct": 50,
+      "buy_price": 2.06,
+      "buy_time_kst": "22:47",
+      "buy_time_utc": "13:47",
+      "sell_price": 2.03,
+      "sell_time_kst": "08:59",
+      "sell_reason": "강제청산(장마감)",
+      "shares": 179,
+      "invested_krw": 498340,
+      "return_krw": 490549,
+      "pnl_krw": -7791,
+      "pnl_pct": -1.56
+    },
+    {
+      "ticker": "CASA",
+      "surge_pct": 5.17,
+      "volume_ratio": 291.0,
+      "detect_time_kst": "22:01",
+      "detect_price": 5.7,
+      "surge_score": 1504.0,
+      "allocation_pct": 50,
+      "buy_price": 5.74,
+      "buy_time_kst": "22:02",
+      "buy_time_utc": "13:02",
+      "sell_price": 6.52,
+      "sell_time_kst": "08:59",
+      "sell_reason": "강제청산(장마감)",
+      "shares": 64,
+      "invested_krw": 495763,
+      "return_krw": 563328,
+      "pnl_krw": 67565,
+      "pnl_pct": 13.63
+    }
+  ],
+  "total_invested_krw": 994103,
+  "total_return_krw": 1053877,
+  "total_pnl_krw": 59774,
+  "total_pnl_pct": 6.01
+}

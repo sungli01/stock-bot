@@ -1,0 +1,31 @@
+{
+  "date": "2022-04-12",
+  "monitored": 30,
+  "signals_detected": 1,
+  "trades": [
+    {
+      "ticker": "ATNM",
+      "surge_pct": 6.88,
+      "volume_ratio": 667.0,
+      "detect_time_kst": "20:52",
+      "detect_price": 7.15,
+      "surge_score": 4589.0,
+      "allocation_pct": 50,
+      "buy_price": 7.23,
+      "buy_time_kst": "20:53",
+      "buy_time_utc": "11:53",
+      "sell_price": 6.1,
+      "sell_time_kst": "22:42",
+      "sell_reason": "손절(-15.7%)",
+      "shares": 51,
+      "invested_krw": 498061,
+      "return_krw": 419985,
+      "pnl_krw": -78076,
+      "pnl_pct": -15.68
+    }
+  ],
+  "total_invested_krw": 498061,
+  "total_return_krw": 419985,
+  "total_pnl_krw": -78076,
+  "total_pnl_pct": -15.68
+}

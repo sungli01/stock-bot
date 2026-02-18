@@ -1,0 +1,31 @@
+{
+  "date": "2022-04-20",
+  "monitored": 30,
+  "signals_detected": 1,
+  "trades": [
+    {
+      "ticker": "CRXT",
+      "surge_pct": 5.36,
+      "volume_ratio": 2470.0,
+      "detect_time_kst": "22:30",
+      "detect_price": 1.93,
+      "surge_score": 13239.0,
+      "allocation_pct": 50,
+      "buy_price": 1.94,
+      "buy_time_kst": "22:31",
+      "buy_time_utc": "13:31",
+      "sell_price": 2.24,
+      "sell_time_kst": "23:49",
+      "sell_reason": "트레일링(+15.6%,고점$2.55)",
+      "shares": 191,
+      "invested_krw": 499641,
+      "return_krw": 577584,
+      "pnl_krw": 77943,
+      "pnl_pct": 15.6
+    }
+  ],
+  "total_invested_krw": 499641,
+  "total_return_krw": 577584,
+  "total_pnl_krw": 77943,
+  "total_pnl_pct": 15.6
+}

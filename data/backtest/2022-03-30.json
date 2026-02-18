@@ -1,0 +1,31 @@
+{
+  "date": "2022-03-30",
+  "monitored": 30,
+  "signals_detected": 1,
+  "trades": [
+    {
+      "ticker": "ADGI",
+      "surge_pct": 7.2,
+      "volume_ratio": 314.0,
+      "detect_time_kst": "19:55",
+      "detect_price": 5.51,
+      "surge_score": 2261.0,
+      "allocation_pct": 50,
+      "buy_price": 5.78,
+      "buy_time_kst": "19:56",
+      "buy_time_utc": "10:56",
+      "sell_price": 5.16,
+      "sell_time_kst": "08:59",
+      "sell_reason": "강제청산(장마감)",
+      "shares": 64,
+      "invested_krw": 499219,
+      "return_krw": 445824,
+      "pnl_krw": -53395,
+      "pnl_pct": -10.7
+    }
+  ],
+  "total_invested_krw": 499219,
+  "total_return_krw": 445824,
+  "total_pnl_krw": -53395,
+  "total_pnl_pct": -10.7
+}

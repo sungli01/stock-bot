@@ -1,0 +1,51 @@
+{
+  "date": "2022-02-07",
+  "monitored": 30,
+  "signals_detected": 2,
+  "trades": [
+    {
+      "ticker": "NVCT",
+      "surge_pct": 5.75,
+      "volume_ratio": 563.0,
+      "detect_time_kst": "23:52",
+      "detect_price": 3.86,
+      "surge_score": 3237.0,
+      "allocation_pct": 50,
+      "buy_price": 3.94,
+      "buy_time_kst": "23:53",
+      "buy_time_utc": "14:53",
+      "sell_price": 5.06,
+      "sell_time_kst": "00:52",
+      "sell_reason": "트레일링(+28.5%,고점$5.63)",
+      "shares": 94,
+      "invested_krw": 499352,
+      "return_krw": 641886,
+      "pnl_krw": 142534,
+      "pnl_pct": 28.54
+    },
+    {
+      "ticker": "CFVI",
+      "surge_pct": 5.59,
+      "volume_ratio": 245.0,
+      "detect_time_kst": "23:51",
+      "detect_price": 14.6,
+      "surge_score": 1370.0,
+      "allocation_pct": 50,
+      "buy_price": 14.44,
+      "buy_time_kst": "23:52",
+      "buy_time_utc": "14:52",
+      "sell_price": 16.23,
+      "sell_time_kst": "09:59",
+      "sell_reason": "강제청산(장마감)",
+      "shares": 25,
+      "invested_krw": 487448,
+      "return_krw": 547762,
+      "pnl_krw": 60314,
+      "pnl_pct": 12.37
+    }
+  ],
+  "total_invested_krw": 986800,
+  "total_return_krw": 1189648,
+  "total_pnl_krw": 202848,
+  "total_pnl_pct": 20.56
+}

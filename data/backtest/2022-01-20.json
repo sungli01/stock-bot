@@ -1,0 +1,31 @@
+{
+  "date": "2022-01-20",
+  "monitored": 30,
+  "signals_detected": 1,
+  "trades": [
+    {
+      "ticker": "PTON",
+      "surge_pct": 8.33,
+      "volume_ratio": 4268.0,
+      "detect_time_kst": "08:18",
+      "detect_price": 26.01,
+      "surge_score": 35552.0,
+      "allocation_pct": 50,
+      "buy_price": 25.34,
+      "buy_time_kst": "08:19",
+      "buy_time_utc": "23:19",
+      "sell_price": 26.44,
+      "sell_time_kst": "09:59",
+      "sell_reason": "강제청산(장마감)",
+      "shares": 14,
+      "invested_krw": 479002,
+      "return_krw": 499716,
+      "pnl_krw": 20714,
+      "pnl_pct": 4.32
+    }
+  ],
+  "total_invested_krw": 479002,
+  "total_return_krw": 499716,
+  "total_pnl_krw": 20714,
+  "total_pnl_pct": 4.32
+}

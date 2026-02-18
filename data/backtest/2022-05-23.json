@@ -1,0 +1,51 @@
+{
+  "date": "2022-05-23",
+  "monitored": 30,
+  "signals_detected": 2,
+  "trades": [
+    {
+      "ticker": "RDBX",
+      "surge_pct": 6.91,
+      "volume_ratio": 722.0,
+      "detect_time_kst": "22:32",
+      "detect_price": 5.5,
+      "surge_score": 4989.0,
+      "allocation_pct": 50,
+      "buy_price": 5.31,
+      "buy_time_kst": "22:33",
+      "buy_time_utc": "13:33",
+      "sell_price": 6.2,
+      "sell_time_kst": "00:09",
+      "sell_reason": "트레일링(+16.7%,고점$6.97)",
+      "shares": 69,
+      "invested_krw": 494906,
+      "return_krw": 577530,
+      "pnl_krw": 82624,
+      "pnl_pct": 16.69
+    },
+    {
+      "ticker": "DIDI",
+      "surge_pct": 12.24,
+      "volume_ratio": 282.0,
+      "detect_time_kst": "21:55",
+      "detect_price": 1.65,
+      "surge_score": 3452.0,
+      "allocation_pct": 50,
+      "buy_price": 1.61,
+      "buy_time_kst": "21:56",
+      "buy_time_utc": "12:56",
+      "sell_price": 1.46,
+      "sell_time_kst": "08:59",
+      "sell_reason": "강제청산(장마감)",
+      "shares": 229,
+      "invested_krw": 498350,
+      "return_krw": 451359,
+      "pnl_krw": -46991,
+      "pnl_pct": -9.43
+    }
+  ],
+  "total_invested_krw": 993256,
+  "total_return_krw": 1028889,
+  "total_pnl_krw": 35633,
+  "total_pnl_pct": 3.59
+}

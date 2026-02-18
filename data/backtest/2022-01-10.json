@@ -1,0 +1,31 @@
+{
+  "date": "2022-01-10",
+  "monitored": 30,
+  "signals_detected": 1,
+  "trades": [
+    {
+      "ticker": "PSTI",
+      "surge_pct": 5.52,
+      "volume_ratio": 938.0,
+      "detect_time_kst": "19:24",
+      "detect_price": 1.91,
+      "surge_score": 5178.0,
+      "allocation_pct": 50,
+      "buy_price": 1.89,
+      "buy_time_kst": "19:25",
+      "buy_time_utc": "10:25",
+      "sell_price": 1.6,
+      "sell_time_kst": "21:06",
+      "sell_reason": "손절(-15.3%)",
+      "shares": 196,
+      "invested_krw": 499565,
+      "return_krw": 423360,
+      "pnl_krw": -76205,
+      "pnl_pct": -15.25
+    }
+  ],
+  "total_invested_krw": 499565,
+  "total_return_krw": 423360,
+  "total_pnl_krw": -76205,
+  "total_pnl_pct": -15.25
+}

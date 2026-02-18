@@ -1,0 +1,31 @@
+{
+  "date": "2022-05-13",
+  "monitored": 30,
+  "signals_detected": 1,
+  "trades": [
+    {
+      "ticker": "TWTR",
+      "surge_pct": 6.23,
+      "volume_ratio": 222.0,
+      "detect_time_kst": "19:08",
+      "detect_price": 36.3,
+      "surge_score": 1383.0,
+      "allocation_pct": 50,
+      "buy_price": 36.85,
+      "buy_time_kst": "19:09",
+      "buy_time_utc": "10:09",
+      "sell_price": 40.81,
+      "sell_time_kst": "08:59",
+      "sell_reason": "강제청산(장마감)",
+      "shares": 10,
+      "invested_krw": 497502,
+      "return_krw": 550935,
+      "pnl_krw": 53433,
+      "pnl_pct": 10.74
+    }
+  ],
+  "total_invested_krw": 497502,
+  "total_return_krw": 550935,
+  "total_pnl_krw": 53433,
+  "total_pnl_pct": 10.74
+}

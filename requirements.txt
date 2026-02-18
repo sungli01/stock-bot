@@ -1,18 +1,12 @@
 polygon-api-client
-redis
-psycopg2-binary
-sqlalchemy
+requests
 pandas
 pandas-ta
 numpy
 python-telegram-bot
 pykis
 pyyaml
-schedule
 python-dotenv
 pytz
 scikit-learn
-xgboost
-lightgbm
-# torch — LSTM Phase 3 (1000건+ 데이터 후 활성화, 수동 설치)
 joblib

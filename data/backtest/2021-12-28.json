@@ -1,0 +1,51 @@
+{
+  "date": "2021-12-28",
+  "monitored": 30,
+  "signals_detected": 2,
+  "trades": [
+    {
+      "ticker": "ISIG",
+      "surge_pct": 27.35,
+      "volume_ratio": 3016.0,
+      "detect_time_kst": "23:12",
+      "detect_price": 15.46,
+      "surge_score": 82488.0,
+      "allocation_pct": 50,
+      "buy_price": 16.76,
+      "buy_time_kst": "23:13",
+      "buy_time_utc": "14:13",
+      "sell_price": 20.98,
+      "sell_time_kst": "02:14",
+      "sell_reason": "트레일링(+25.2%,고점$23.40)",
+      "shares": 22,
+      "invested_krw": 497831,
+      "return_krw": 623106,
+      "pnl_krw": 125275,
+      "pnl_pct": 25.16
+    },
+    {
+      "ticker": "BVXV",
+      "surge_pct": 17.39,
+      "volume_ratio": 798.0,
+      "detect_time_kst": "19:10",
+      "detect_price": 2.97,
+      "surge_score": 13877.0,
+      "allocation_pct": 50,
+      "buy_price": 3.13,
+      "buy_time_kst": "19:11",
+      "buy_time_utc": "10:11",
+      "sell_price": 4.17,
+      "sell_time_kst": "19:24",
+      "sell_reason": "트레일링(+33.1%,고점$5.00)",
+      "shares": 118,
+      "invested_krw": 499246,
+      "return_krw": 664281,
+      "pnl_krw": 165035,
+      "pnl_pct": 33.06
+    }
+  ],
+  "total_invested_krw": 997077,
+  "total_return_krw": 1287387,
+  "total_pnl_krw": 290310,
+  "total_pnl_pct": 29.12
+}

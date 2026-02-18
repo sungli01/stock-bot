@@ -1,0 +1,51 @@
+{
+  "date": "2021-12-21",
+  "monitored": 30,
+  "signals_detected": 2,
+  "trades": [
+    {
+      "ticker": "ARDS",
+      "surge_pct": 5.53,
+      "volume_ratio": 203.0,
+      "detect_time_kst": "19:00",
+      "detect_price": 5.34,
+      "surge_score": 1123.0,
+      "allocation_pct": 50,
+      "buy_price": 5.42,
+      "buy_time_kst": "19:01",
+      "buy_time_utc": "10:01",
+      "sell_price": 4.6,
+      "sell_time_kst": "20:38",
+      "sell_reason": "손절(-15.2%)",
+      "shares": 68,
+      "invested_krw": 497740,
+      "return_krw": 422280,
+      "pnl_krw": -75460,
+      "pnl_pct": -15.16
+    },
+    {
+      "ticker": "GRTX",
+      "surge_pct": 6.36,
+      "volume_ratio": 349.0,
+      "detect_time_kst": "00:13",
+      "detect_price": 4.33,
+      "surge_score": 2220.0,
+      "allocation_pct": 50,
+      "buy_price": 4.29,
+      "buy_time_kst": "00:14",
+      "buy_time_utc": "15:14",
+      "sell_price": 4.58,
+      "sell_time_kst": "09:59",
+      "sell_reason": "강제청산(장마감)",
+      "shares": 86,
+      "invested_krw": 498415,
+      "return_krw": 531738,
+      "pnl_krw": 33323,
+      "pnl_pct": 6.69
+    }
+  ],
+  "total_invested_krw": 996155,
+  "total_return_krw": 954018,
+  "total_pnl_krw": -42137,
+  "total_pnl_pct": -4.23
+}

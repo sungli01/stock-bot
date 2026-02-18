@@ -1,0 +1,31 @@
+{
+  "date": "2022-01-27",
+  "monitored": 30,
+  "signals_detected": 1,
+  "trades": [
+    {
+      "ticker": "INDO",
+      "surge_pct": 18.63,
+      "volume_ratio": 436.0,
+      "detect_time_kst": "00:06",
+      "detect_price": 4.65,
+      "surge_score": 8123.0,
+      "allocation_pct": 50,
+      "buy_price": 5.93,
+      "buy_time_kst": "00:07",
+      "buy_time_utc": "15:07",
+      "sell_price": 7.32,
+      "sell_time_kst": "00:20",
+      "sell_reason": "트레일링(+23.5%,고점$8.51)",
+      "shares": 62,
+      "invested_krw": 496209,
+      "return_krw": 612684,
+      "pnl_krw": 116475,
+      "pnl_pct": 23.47
+    }
+  ],
+  "total_invested_krw": 496209,
+  "total_return_krw": 612684,
+  "total_pnl_krw": 116475,
+  "total_pnl_pct": 23.47
+}

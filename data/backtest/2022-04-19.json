@@ -1,0 +1,51 @@
+{
+  "date": "2022-04-19",
+  "monitored": 30,
+  "signals_detected": 2,
+  "trades": [
+    {
+      "ticker": "SEV",
+      "surge_pct": 5.83,
+      "volume_ratio": 671.0,
+      "detect_time_kst": "23:46",
+      "detect_price": 5.65,
+      "surge_score": 3912.0,
+      "allocation_pct": 50,
+      "buy_price": 5.57,
+      "buy_time_kst": "23:47",
+      "buy_time_utc": "14:47",
+      "sell_price": 6.58,
+      "sell_time_kst": "00:19",
+      "sell_reason": "트레일링(+18.1%,고점$7.34)",
+      "shares": 66,
+      "invested_krw": 496567,
+      "return_krw": 586278,
+      "pnl_krw": 89711,
+      "pnl_pct": 18.07
+    },
+    {
+      "ticker": "CASA",
+      "surge_pct": 5.07,
+      "volume_ratio": 664.0,
+      "detect_time_kst": "20:10",
+      "detect_price": 7.04,
+      "surge_score": 3366.0,
+      "allocation_pct": 50,
+      "buy_price": 7.0,
+      "buy_time_kst": "20:11",
+      "buy_time_utc": "11:11",
+      "sell_price": 6.5,
+      "sell_time_kst": "08:59",
+      "sell_reason": "강제청산(장마감)",
+      "shares": 52,
+      "invested_krw": 491540,
+      "return_krw": 456300,
+      "pnl_krw": -35240,
+      "pnl_pct": -7.17
+    }
+  ],
+  "total_invested_krw": 988107,
+  "total_return_krw": 1042578,
+  "total_pnl_krw": 54471,
+  "total_pnl_pct": 5.51
+}

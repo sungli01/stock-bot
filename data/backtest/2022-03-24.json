@@ -1,0 +1,51 @@
+{
+  "date": "2022-03-24",
+  "monitored": 30,
+  "signals_detected": 2,
+  "trades": [
+    {
+      "ticker": "LLL",
+      "surge_pct": 9.54,
+      "volume_ratio": 2458.0,
+      "detect_time_kst": "22:20",
+      "detect_price": 3.79,
+      "surge_score": 23449.0,
+      "allocation_pct": 50,
+      "buy_price": 4.3,
+      "buy_time_kst": "22:21",
+      "buy_time_utc": "13:21",
+      "sell_price": 4.77,
+      "sell_time_kst": "23:18",
+      "sell_reason": "트레일링(+10.9%,고점$5.63)",
+      "shares": 86,
+      "invested_krw": 499694,
+      "return_krw": 553983,
+      "pnl_krw": 54289,
+      "pnl_pct": 10.86
+    },
+    {
+      "ticker": "BVXV",
+      "surge_pct": 6.25,
+      "volume_ratio": 715.0,
+      "detect_time_kst": "21:22",
+      "detect_price": 1.7,
+      "surge_score": 4469.0,
+      "allocation_pct": 50,
+      "buy_price": 1.78,
+      "buy_time_kst": "21:23",
+      "buy_time_utc": "12:23",
+      "sell_price": 2.15,
+      "sell_time_kst": "21:48",
+      "sell_reason": "트레일링(+20.9%,고점$2.40)",
+      "shares": 208,
+      "invested_krw": 499257,
+      "return_krw": 603720,
+      "pnl_krw": 104463,
+      "pnl_pct": 20.92
+    }
+  ],
+  "total_invested_krw": 998951,
+  "total_return_krw": 1157703,
+  "total_pnl_krw": 158752,
+  "total_pnl_pct": 15.89
+}

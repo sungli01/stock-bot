@@ -1,0 +1,51 @@
+{
+  "date": "2021-12-20",
+  "monitored": 30,
+  "signals_detected": 2,
+  "trades": [
+    {
+      "ticker": "GRTX",
+      "surge_pct": 6.02,
+      "volume_ratio": 2120.0,
+      "detect_time_kst": "20:52",
+      "detect_price": 3.17,
+      "surge_score": 12762.0,
+      "allocation_pct": 50,
+      "buy_price": 3.2,
+      "buy_time_kst": "20:53",
+      "buy_time_utc": "11:53",
+      "sell_price": 4.21,
+      "sell_time_kst": "00:41",
+      "sell_reason": "트레일링(+31.5%,고점$4.73)",
+      "shares": 115,
+      "invested_krw": 497110,
+      "return_krw": 653789,
+      "pnl_krw": 156679,
+      "pnl_pct": 31.52
+    },
+    {
+      "ticker": "MTCR",
+      "surge_pct": 6.11,
+      "volume_ratio": 329.0,
+      "detect_time_kst": "21:39",
+      "detect_price": 1.39,
+      "surge_score": 2010.0,
+      "allocation_pct": 50,
+      "buy_price": 1.37,
+      "buy_time_kst": "21:42",
+      "buy_time_utc": "12:42",
+      "sell_price": 1.15,
+      "sell_time_kst": "00:12",
+      "sell_reason": "손절(-15.8%)",
+      "shares": 271,
+      "invested_krw": 499751,
+      "return_krw": 420727,
+      "pnl_krw": -79024,
+      "pnl_pct": -15.81
+    }
+  ],
+  "total_invested_krw": 996861,
+  "total_return_krw": 1074516,
+  "total_pnl_krw": 77655,
+  "total_pnl_pct": 7.79
+}

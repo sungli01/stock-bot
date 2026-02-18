@@ -1,0 +1,31 @@
+{
+  "date": "2022-01-06",
+  "monitored": 30,
+  "signals_detected": 1,
+  "trades": [
+    {
+      "ticker": "BBBY",
+      "surge_pct": 6.15,
+      "volume_ratio": 329.0,
+      "detect_time_kst": "22:05",
+      "detect_price": 12.55,
+      "surge_score": 2023.0,
+      "allocation_pct": 50,
+      "buy_price": 12.68,
+      "buy_time_kst": "22:06",
+      "buy_time_utc": "13:06",
+      "sell_price": 13.59,
+      "sell_time_kst": "09:57",
+      "sell_reason": "강제청산(장마감)",
+      "shares": 29,
+      "invested_krw": 496494,
+      "return_krw": 532084,
+      "pnl_krw": 35590,
+      "pnl_pct": 7.17
+    }
+  ],
+  "total_invested_krw": 496494,
+  "total_return_krw": 532084,
+  "total_pnl_krw": 35590,
+  "total_pnl_pct": 7.17
+}

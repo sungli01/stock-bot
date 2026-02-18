@@ -1,0 +1,51 @@
+{
+  "date": "2021-12-29",
+  "monitored": 30,
+  "signals_detected": 2,
+  "trades": [
+    {
+      "ticker": "TKAT",
+      "surge_pct": 5.19,
+      "volume_ratio": 703.0,
+      "detect_time_kst": "23:43",
+      "detect_price": 4.41,
+      "surge_score": 3649.0,
+      "allocation_pct": 50,
+      "buy_price": 4.25,
+      "buy_time_kst": "23:44",
+      "buy_time_utc": "14:44",
+      "sell_price": 5.13,
+      "sell_time_kst": "06:31",
+      "sell_reason": "트레일링(+20.8%,고점$5.70)",
+      "shares": 87,
+      "invested_krw": 498881,
+      "return_krw": 602518,
+      "pnl_krw": 103637,
+      "pnl_pct": 20.77
+    },
+    {
+      "ticker": "ISIG",
+      "surge_pct": 5.25,
+      "volume_ratio": 233.0,
+      "detect_time_kst": "20:37",
+      "detect_price": 18.84,
+      "surge_score": 1223.0,
+      "allocation_pct": 50,
+      "buy_price": 18.79,
+      "buy_time_kst": "20:38",
+      "buy_time_utc": "11:38",
+      "sell_price": 26.53,
+      "sell_time_kst": "23:58",
+      "sell_reason": "트레일링(+41.2%,고점$29.91)",
+      "shares": 19,
+      "invested_krw": 481964,
+      "return_krw": 680592,
+      "pnl_krw": 198628,
+      "pnl_pct": 41.21
+    }
+  ],
+  "total_invested_krw": 980845,
+  "total_return_krw": 1283110,
+  "total_pnl_krw": 302265,
+  "total_pnl_pct": 30.82
+}

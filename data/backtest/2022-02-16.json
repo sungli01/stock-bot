@@ -1,0 +1,31 @@
+{
+  "date": "2022-02-16",
+  "monitored": 30,
+  "signals_detected": 1,
+  "trades": [
+    {
+      "ticker": "UPST",
+      "surge_pct": 6.95,
+      "volume_ratio": 410.0,
+      "detect_time_kst": "23:37",
+      "detect_price": 143.17,
+      "surge_score": 2850.0,
+      "allocation_pct": 50,
+      "buy_price": 139.78,
+      "buy_time_kst": "23:38",
+      "buy_time_utc": "14:38",
+      "sell_price": 147.01,
+      "sell_time_kst": "09:59",
+      "sell_reason": "강제청산(장마감)",
+      "shares": 2,
+      "invested_krw": 377407,
+      "return_krw": 396927,
+      "pnl_krw": 19520,
+      "pnl_pct": 5.17
+    }
+  ],
+  "total_invested_krw": 377407,
+  "total_return_krw": 396927,
+  "total_pnl_krw": 19520,
+  "total_pnl_pct": 5.17
+}

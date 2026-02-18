@@ -1,0 +1,51 @@
+{
+  "date": "2022-02-10",
+  "monitored": 30,
+  "signals_detected": 2,
+  "trades": [
+    {
+      "ticker": "AFRM",
+      "surge_pct": 5.94,
+      "volume_ratio": 583.0,
+      "detect_time_kst": "03:45",
+      "detect_price": 81.5,
+      "surge_score": 3463.0,
+      "allocation_pct": 50,
+      "buy_price": 81.03,
+      "buy_time_kst": "03:46",
+      "buy_time_utc": "18:46",
+      "sell_price": 67.47,
+      "sell_time_kst": "04:55",
+      "sell_reason": "손절(-16.7%)",
+      "shares": 4,
+      "invested_krw": 437539,
+      "return_krw": 364343,
+      "pnl_krw": -73196,
+      "pnl_pct": -16.73
+    },
+    {
+      "ticker": "IRNT",
+      "surge_pct": 6.75,
+      "volume_ratio": 345.0,
+      "detect_time_kst": "23:41",
+      "detect_price": 4.53,
+      "surge_score": 2329.0,
+      "allocation_pct": 50,
+      "buy_price": 4.6,
+      "buy_time_kst": "23:42",
+      "buy_time_utc": "14:42",
+      "sell_price": 4.13,
+      "sell_time_kst": "09:59",
+      "sell_reason": "강제청산(장마감)",
+      "shares": 80,
+      "invested_krw": 497046,
+      "return_krw": 446040,
+      "pnl_krw": -51006,
+      "pnl_pct": -10.26
+    }
+  ],
+  "total_invested_krw": 934585,
+  "total_return_krw": 810383,
+  "total_pnl_krw": -124202,
+  "total_pnl_pct": -13.29
+}

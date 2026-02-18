@@ -1,0 +1,51 @@
+{
+  "date": "2022-04-11",
+  "monitored": 30,
+  "signals_detected": 2,
+  "trades": [
+    {
+      "ticker": "VERU",
+      "surge_pct": 5.17,
+      "volume_ratio": 903.0,
+      "detect_time_kst": "21:53",
+      "detect_price": 59,
+      "surge_score": 4669.0,
+      "allocation_pct": 50,
+      "buy_price": 59.72,
+      "buy_time_kst": "21:54",
+      "buy_time_utc": "12:54",
+      "sell_price": 109.6,
+      "sell_time_kst": "00:32",
+      "sell_reason": "트레일링(+83.5%,고점$122.10)",
+      "shares": 6,
+      "invested_krw": 483732,
+      "return_krw": 887760,
+      "pnl_krw": 404028,
+      "pnl_pct": 83.52
+    },
+    {
+      "ticker": "WBD",
+      "surge_pct": 6.93,
+      "volume_ratio": 310.0,
+      "detect_time_kst": "22:36",
+      "detect_price": 25.5,
+      "surge_score": 2148.0,
+      "allocation_pct": 50,
+      "buy_price": 25.46,
+      "buy_time_kst": "22:37",
+      "buy_time_utc": "13:37",
+      "sell_price": 24.61,
+      "sell_time_kst": "08:57",
+      "sell_reason": "강제청산(장마감)",
+      "shares": 14,
+      "invested_krw": 481118,
+      "return_krw": 465129,
+      "pnl_krw": -15989,
+      "pnl_pct": -3.32
+    }
+  ],
+  "total_invested_krw": 964850,
+  "total_return_krw": 1352889,
+  "total_pnl_krw": 388039,
+  "total_pnl_pct": 40.22
+}

@@ -1,0 +1,31 @@
+{
+  "date": "2022-05-05",
+  "monitored": 30,
+  "signals_detected": 1,
+  "trades": [
+    {
+      "ticker": "BTTX",
+      "surge_pct": 6.79,
+      "volume_ratio": 555.0,
+      "detect_time_kst": "21:30",
+      "detect_price": 2.36,
+      "surge_score": 3768.0,
+      "allocation_pct": 50,
+      "buy_price": 2.44,
+      "buy_time_kst": "21:31",
+      "buy_time_utc": "12:31",
+      "sell_price": 2.89,
+      "sell_time_kst": "03:14",
+      "sell_reason": "트레일링(+18.3%,고점$3.23)",
+      "shares": 151,
+      "invested_krw": 497802,
+      "return_krw": 588923,
+      "pnl_krw": 91121,
+      "pnl_pct": 18.3
+    }
+  ],
+  "total_invested_krw": 497802,
+  "total_return_krw": 588923,
+  "total_pnl_krw": 91121,
+  "total_pnl_pct": 18.3
+}

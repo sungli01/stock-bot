@@ -1,0 +1,31 @@
+{
+  "date": "2022-03-17",
+  "monitored": 30,
+  "signals_detected": 1,
+  "trades": [
+    {
+      "ticker": "RLX",
+      "surge_pct": 5.13,
+      "volume_ratio": 227.0,
+      "detect_time_kst": "22:47",
+      "detect_price": 2.15,
+      "surge_score": 1165.0,
+      "allocation_pct": 50,
+      "buy_price": 2.17,
+      "buy_time_kst": "22:48",
+      "buy_time_utc": "13:48",
+      "sell_price": 2.04,
+      "sell_time_kst": "08:59",
+      "sell_reason": "강제청산(장마감)",
+      "shares": 170,
+      "invested_krw": 498474,
+      "return_krw": 468180,
+      "pnl_krw": -30294,
+      "pnl_pct": -6.08
+    }
+  ],
+  "total_invested_krw": 498474,
+  "total_return_krw": 468180,
+  "total_pnl_krw": -30294,
+  "total_pnl_pct": -6.08
+}

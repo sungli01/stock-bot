@@ -1,0 +1,31 @@
+{
+  "date": "2022-04-05",
+  "monitored": 30,
+  "signals_detected": 1,
+  "trades": [
+    {
+      "ticker": "DDL",
+      "surge_pct": 5.26,
+      "volume_ratio": 868.0,
+      "detect_time_kst": "22:34",
+      "detect_price": 5.09,
+      "surge_score": 4566.0,
+      "allocation_pct": 50,
+      "buy_price": 5.37,
+      "buy_time_kst": "22:35",
+      "buy_time_utc": "13:35",
+      "sell_price": 7.35,
+      "sell_time_kst": "08:59",
+      "sell_reason": "강제청산(장마감)",
+      "shares": 68,
+      "invested_krw": 492834,
+      "return_krw": 674730,
+      "pnl_krw": 181896,
+      "pnl_pct": 36.91
+    }
+  ],
+  "total_invested_krw": 492834,
+  "total_return_krw": 674730,
+  "total_pnl_krw": 181896,
+  "total_pnl_pct": 36.91
+}

@@ -1,0 +1,51 @@
+{
+  "date": "2022-05-10",
+  "monitored": 30,
+  "signals_detected": 2,
+  "trades": [
+    {
+      "ticker": "UPST",
+      "surge_pct": 7.03,
+      "volume_ratio": 1016.0,
+      "detect_time_kst": "22:36",
+      "detect_price": 36.55,
+      "surge_score": 7142.0,
+      "allocation_pct": 50,
+      "buy_price": 36.65,
+      "buy_time_kst": "22:37",
+      "buy_time_utc": "13:37",
+      "sell_price": 31,
+      "sell_time_kst": "23:48",
+      "sell_reason": "손절(-15.4%)",
+      "shares": 10,
+      "invested_krw": 494788,
+      "return_krw": 418500,
+      "pnl_krw": -76288,
+      "pnl_pct": -15.42
+    },
+    {
+      "ticker": "PTON",
+      "surge_pct": 9.07,
+      "volume_ratio": 479.0,
+      "detect_time_kst": "21:55",
+      "detect_price": 12.27,
+      "surge_score": 4345.0,
+      "allocation_pct": 50,
+      "buy_price": 12.34,
+      "buy_time_kst": "21:56",
+      "buy_time_utc": "12:56",
+      "sell_price": 13.55,
+      "sell_time_kst": "08:59",
+      "sell_reason": "강제청산(장마감)",
+      "shares": 30,
+      "invested_krw": 499851,
+      "return_krw": 548775,
+      "pnl_krw": 48924,
+      "pnl_pct": 9.79
+    }
+  ],
+  "total_invested_krw": 994639,
+  "total_return_krw": 967275,
+  "total_pnl_krw": -27364,
+  "total_pnl_pct": -2.75
+}

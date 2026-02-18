@@ -1,0 +1,51 @@
+{
+  "date": "2022-03-09",
+  "monitored": 30,
+  "signals_detected": 2,
+  "trades": [
+    {
+      "ticker": "ASTS",
+      "surge_pct": 8.72,
+      "volume_ratio": 293.0,
+      "detect_time_kst": "22:59",
+      "detect_price": 8.48,
+      "surge_score": 2555.0,
+      "allocation_pct": 50,
+      "buy_price": 8.25,
+      "buy_time_kst": "23:00",
+      "buy_time_utc": "14:00",
+      "sell_price": 10.29,
+      "sell_time_kst": "04:36",
+      "sell_reason": "트레일링(+24.8%,고점$11.48)",
+      "shares": 44,
+      "invested_krw": 490049,
+      "return_krw": 611523,
+      "pnl_krw": 121474,
+      "pnl_pct": 24.79
+    },
+    {
+      "ticker": "AMZN",
+      "surge_pct": 8.3,
+      "volume_ratio": 455.0,
+      "detect_time_kst": "06:40",
+      "detect_price": 150.75,
+      "surge_score": 3777.0,
+      "allocation_pct": 50,
+      "buy_price": 151.76,
+      "buy_time_kst": "06:41",
+      "buy_time_utc": "21:41",
+      "sell_price": 148.45,
+      "sell_time_kst": "09:59",
+      "sell_reason": "강제청산(장마감)",
+      "shares": 2,
+      "invested_krw": 409764,
+      "return_krw": 400815,
+      "pnl_krw": -8949,
+      "pnl_pct": -2.18
+    }
+  ],
+  "total_invested_krw": 899813,
+  "total_return_krw": 1012338,
+  "total_pnl_krw": 112525,
+  "total_pnl_pct": 12.51
+}

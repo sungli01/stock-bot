@@ -1,0 +1,31 @@
+{
+  "date": "2022-01-31",
+  "monitored": 30,
+  "signals_detected": 1,
+  "trades": [
+    {
+      "ticker": "IINN",
+      "surge_pct": 15.2,
+      "volume_ratio": 1110.0,
+      "detect_time_kst": "23:12",
+      "detect_price": 2.88,
+      "surge_score": 16872.0,
+      "allocation_pct": 50,
+      "buy_price": 3.1,
+      "buy_time_kst": "23:13",
+      "buy_time_utc": "14:13",
+      "sell_price": 3.02,
+      "sell_time_kst": "09:59",
+      "sell_reason": "강제청산(장마감)",
+      "shares": 119,
+      "invested_krw": 498015,
+      "return_krw": 485163,
+      "pnl_krw": -12852,
+      "pnl_pct": -2.58
+    }
+  ],
+  "total_invested_krw": 498015,
+  "total_return_krw": 485163,
+  "total_pnl_krw": -12852,
+  "total_pnl_pct": -2.58
+}

@@ -1,0 +1,31 @@
+{
+  "date": "2022-01-03",
+  "monitored": 30,
+  "signals_detected": 1,
+  "trades": [
+    {
+      "ticker": "IMMX",
+      "surge_pct": 5.86,
+      "volume_ratio": 211.0,
+      "detect_time_kst": "22:43",
+      "detect_price": 5.6,
+      "surge_score": 1236.0,
+      "allocation_pct": 50,
+      "buy_price": 5.64,
+      "buy_time_kst": "22:44",
+      "buy_time_utc": "13:44",
+      "sell_price": 7.76,
+      "sell_time_kst": "23:43",
+      "sell_reason": "트레일링(+37.7%,고점$8.68)",
+      "shares": 65,
+      "invested_krw": 494559,
+      "return_krw": 680940,
+      "pnl_krw": 186381,
+      "pnl_pct": 37.69
+    }
+  ],
+  "total_invested_krw": 494559,
+  "total_return_krw": 680940,
+  "total_pnl_krw": 186381,
+  "total_pnl_pct": 37.69
+}

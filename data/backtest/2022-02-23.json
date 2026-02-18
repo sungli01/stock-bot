@@ -1,0 +1,51 @@
+{
+  "date": "2022-02-23",
+  "monitored": 30,
+  "signals_detected": 2,
+  "trades": [
+    {
+      "ticker": "INDO",
+      "surge_pct": 5.31,
+      "volume_ratio": 496.0,
+      "detect_time_kst": "20:49",
+      "detect_price": 6.35,
+      "surge_score": 2634.0,
+      "allocation_pct": 50,
+      "buy_price": 6.44,
+      "buy_time_kst": "20:50",
+      "buy_time_utc": "11:50",
+      "sell_price": 7.42,
+      "sell_time_kst": "23:43",
+      "sell_reason": "트레일링(+15.1%,고점$8.44)",
+      "shares": 57,
+      "invested_krw": 495866,
+      "return_krw": 570969,
+      "pnl_krw": 75103,
+      "pnl_pct": 15.15
+    },
+    {
+      "ticker": "VRT",
+      "surge_pct": 6.69,
+      "volume_ratio": 431.0,
+      "detect_time_kst": "23:37",
+      "detect_price": 11.8,
+      "surge_score": 2883.0,
+      "allocation_pct": 50,
+      "buy_price": 12.21,
+      "buy_time_kst": "23:38",
+      "buy_time_utc": "14:38",
+      "sell_price": 12.24,
+      "sell_time_kst": "09:24",
+      "sell_reason": "강제청산(장마감)",
+      "shares": 30,
+      "invested_krw": 494667,
+      "return_krw": 495720,
+      "pnl_krw": 1053,
+      "pnl_pct": 0.21
+    }
+  ],
+  "total_invested_krw": 990533,
+  "total_return_krw": 1066689,
+  "total_pnl_krw": 76156,
+  "total_pnl_pct": 7.69
+}

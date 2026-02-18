@@ -1,0 +1,31 @@
+{
+  "date": "2022-04-28",
+  "monitored": 30,
+  "signals_detected": 1,
+  "trades": [
+    {
+      "ticker": "SHOP",
+      "surge_pct": 5.29,
+      "volume_ratio": 1113.0,
+      "detect_time_kst": "05:57",
+      "detect_price": 44.33,
+      "surge_score": 5888.0,
+      "allocation_pct": 50,
+      "buy_price": 42.08,
+      "buy_time_kst": "05:59",
+      "buy_time_utc": "20:59",
+      "sell_price": 42.02,
+      "sell_time_kst": "08:57",
+      "sell_reason": "강제청산(장마감)",
+      "shares": 8,
+      "invested_krw": 454496,
+      "return_krw": 453816,
+      "pnl_krw": -680,
+      "pnl_pct": -0.15
+    }
+  ],
+  "total_invested_krw": 454496,
+  "total_return_krw": 453816,
+  "total_pnl_krw": -680,
+  "total_pnl_pct": -0.15
+}

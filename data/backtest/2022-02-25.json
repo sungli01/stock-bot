@@ -1,0 +1,51 @@
+{
+  "date": "2022-02-25",
+  "monitored": 30,
+  "signals_detected": 2,
+  "trades": [
+    {
+      "ticker": "CYRN",
+      "surge_pct": 7.62,
+      "volume_ratio": 279.0,
+      "detect_time_kst": "18:29",
+      "detect_price": 8.05,
+      "surge_score": 2126.0,
+      "allocation_pct": 50,
+      "buy_price": 8.32,
+      "buy_time_kst": "18:30",
+      "buy_time_utc": "09:30",
+      "sell_price": 7.04,
+      "sell_time_kst": "18:52",
+      "sell_reason": "손절(-15.4%)",
+      "shares": 44,
+      "invested_krw": 494089,
+      "return_krw": 418176,
+      "pnl_krw": -75913,
+      "pnl_pct": -15.36
+    },
+    {
+      "ticker": "IRNT",
+      "surge_pct": 8.04,
+      "volume_ratio": 713.0,
+      "detect_time_kst": "23:32",
+      "detect_price": 5.51,
+      "surge_score": 5733.0,
+      "allocation_pct": 50,
+      "buy_price": 5.64,
+      "buy_time_kst": "23:33",
+      "buy_time_utc": "14:33",
+      "sell_price": 6.1,
+      "sell_time_kst": "09:59",
+      "sell_reason": "강제청산(장마감)",
+      "shares": 65,
+      "invested_krw": 495286,
+      "return_krw": 535275,
+      "pnl_krw": 39989,
+      "pnl_pct": 8.07
+    }
+  ],
+  "total_invested_krw": 989375,
+  "total_return_krw": 953451,
+  "total_pnl_krw": -35924,
+  "total_pnl_pct": -3.63
+}

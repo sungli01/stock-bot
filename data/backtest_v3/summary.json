@@ -1,0 +1,3871 @@
+{
+  "total_trades": 305,
+  "wins": 178,
+  "losses": 127,
+  "win_rate": 58.4,
+  "plus_days": 78,
+  "minus_days": 37,
+  "total_pnl": 91555407,
+  "final_capital": 92555407,
+  "return_pct": 9155.5,
+  "anomalies": [
+    "2026-02-17 PLYX: +388.1% → capped +50%"
+  ],
+  "daily_results": [
+    {
+      "date": "2021-11-01",
+      "trades": [
+        {
+          "ticker": "BTTX",
+          "buy": 19.53,
+          "sell": 16.6005,
+          "reason": "손절(-15%)",
+          "shares": 35842,
+          "pnl": -104999,
+          "pnl_pct": -15.0,
+          "orig_pnl": -16.8
+        },
+        {
+          "ticker": "GRIL",
+          "buy": 1.41,
+          "sell": 1.9035,
+          "reason": "익절(+35%)",
+          "shares": 212765,
+          "pnl": 105000,
+          "pnl_pct": 35.0,
+          "orig_pnl": 37.3
+        },
+        {
+          "ticker": "NXTD",
+          "buy": 4.17,
+          "sell": 5.46,
+          "reason": "원본(+30.9%)",
+          "shares": 71942,
+          "pnl": 92805,
+          "pnl_pct": 30.9,
+          "orig_pnl": 30.8
+        },
+        {
+          "ticker": "PROG",
+          "buy": 3.66,
+          "sell": 3.42,
+          "reason": "원본(-6.6%)",
+          "shares": 81967,
+          "pnl": -19672,
+          "pnl_pct": -6.6,
+          "orig_pnl": -6.6
+        }
+      ],
+      "day_pnl": 73133,
+      "capital": 1073133
+    },
+    {
+      "date": "2021-11-02",
+      "trades": [
+        {
+          "ticker": "ANET",
+          "buy": 32.06,
+          "sell": 30.64,
+          "reason": "원본(-4.4%)",
+          "shares": 23430,
+          "pnl": -33271,
+          "pnl_pct": -4.4,
+          "orig_pnl": -4.4
+        },
+        {
+          "ticker": "SAVA",
+          "buy": 38.39,
+          "sell": 40,
+          "reason": "원본(+4.2%)",
+          "shares": 8386,
+          "pnl": 13501,
+          "pnl_pct": 4.2,
+          "orig_pnl": 4.2
+        }
+      ],
+      "day_pnl": -19769,
+      "capital": 1053364
+    },
+    {
+      "date": "2021-11-03",
+      "trades": [
+        {
+          "ticker": "OCGN",
+          "buy": 14.63,
+          "sell": 12.4355,
+          "reason": "손절(-15%)",
+          "shares": 50400,
+          "pnl": -110603,
+          "pnl_pct": -15.0,
+          "orig_pnl": -15.7
+        },
+        {
+          "ticker": "ALNA",
+          "buy": 1.12,
+          "sell": 0.952,
+          "reason": "손절(-15%)",
+          "shares": 282151,
+          "pnl": -47401,
+          "pnl_pct": -15.0,
+          "orig_pnl": -15.2
+        },
+        {
+          "ticker": "GME",
+          "buy": 62.0,
+          "sell": 52.7,
+          "reason": "손절(-15%)",
+          "shares": 5096,
+          "pnl": -47393,
+          "pnl_pct": -15.0,
+          "orig_pnl": -15.3
+        },
+        {
+          "ticker": "BBBY",
+          "buy": 19.08,
+          "sell": 18.21,
+          "reason": "원본(-4.6%)",
+          "shares": 16562,
+          "pnl": -14409,
+          "pnl_pct": -4.6,
+          "orig_pnl": -4.6
+        }
+      ],
+      "day_pnl": -219806,
+      "capital": 833558
+    },
+    {
+      "date": "2021-11-04",
+      "trades": [
+        {
+          "ticker": "SAVA",
+          "buy": 63.79,
+          "sell": 54.2215,
+          "reason": "손절(-15%)",
+          "shares": 9147,
+          "pnl": -87523,
+          "pnl_pct": -15.0,
+          "orig_pnl": -15.3
+        },
+        {
+          "ticker": "CRXT",
+          "buy": 5.03,
+          "sell": 6.65,
+          "reason": "원본(+32.2%)",
+          "shares": 49715,
+          "pnl": 80538,
+          "pnl_pct": 32.2,
+          "orig_pnl": 32.4
+        },
+        {
+          "ticker": "PROG",
+          "buy": 3.26,
+          "sell": 3.82,
+          "reason": "원본(+17.2%)",
+          "shares": 76707,
+          "pnl": 42956,
+          "pnl_pct": 17.2,
+          "orig_pnl": 17.0
+        },
+        {
+          "ticker": "CNCE",
+          "buy": 3.68,
+          "sell": 3.61,
+          "reason": "원본(-1.9%)",
+          "shares": 67953,
+          "pnl": -4757,
+          "pnl_pct": -1.9,
+          "orig_pnl": -1.8
+        }
+      ],
+      "day_pnl": 31214,
+      "capital": 864773
+    },
+    {
+      "date": "2021-11-05",
+      "trades": [
+        {
+          "ticker": "OCGN",
+          "buy": 10.99,
+          "sell": 10.25,
+          "reason": "원본(-6.7%)",
+          "shares": 55081,
+          "pnl": -40760,
+          "pnl_pct": -6.7,
+          "orig_pnl": -6.8
+        },
+        {
+          "ticker": "BBBY",
+          "buy": 19.22,
+          "sell": 20.1,
+          "reason": "원본(+4.6%)",
+          "shares": 13498,
+          "pnl": 11878,
+          "pnl_pct": 4.6,
+          "orig_pnl": 4.6
+        }
+      ],
+      "day_pnl": -28882,
+      "capital": 835891
+    },
+    {
+      "date": "2021-11-08",
+      "trades": [
+        {
+          "ticker": "TAL",
+          "buy": 4.38,
+          "sell": 4.05,
+          "reason": "원본(-7.5%)",
+          "shares": 133589,
+          "pnl": -44084,
+          "pnl_pct": -7.5,
+          "orig_pnl": -7.6
+        },
+        {
+          "ticker": "EVGO",
+          "buy": 12.28,
+          "sell": 13.48,
+          "reason": "원본(+9.8%)",
+          "shares": 20420,
+          "pnl": 24504,
+          "pnl_pct": 9.8,
+          "orig_pnl": 9.8
+        }
+      ],
+      "day_pnl": -19580,
+      "capital": 816311
+    },
+    {
+      "date": "2021-11-09",
+      "trades": [
+        {
+          "ticker": "SURG",
+          "buy": 3.85,
+          "sell": 3.2725,
+          "reason": "손절(-15%)",
+          "shares": 63608,
+          "pnl": -36734,
+          "pnl_pct": -15.0,
+          "orig_pnl": -15.4
+        },
+        {
+          "ticker": "AMRS",
+          "buy": 10.1,
+          "sell": 8.585,
+          "reason": "손절(-15%)",
+          "shares": 24246,
+          "pnl": -36733,
+          "pnl_pct": -15.0,
+          "orig_pnl": -15.9
+        },
+        {
+          "ticker": "EVGO",
+          "buy": 15.3,
+          "sell": 15,
+          "reason": "원본(-2.0%)",
+          "shares": 37347,
+          "pnl": -11204,
+          "pnl_pct": -2.0,
+          "orig_pnl": -2.0
+        },
+        {
+          "ticker": "AGC",
+          "buy": 13.77,
+          "sell": 15.6,
+          "reason": "장마감(+13.3%)",
+          "shares": 17784,
+          "pnl": 32545,
+          "pnl_pct": 13.3,
+          "orig_pnl": 12.1
+        }
+      ],
+      "day_pnl": -52126,
+      "capital": 764185
+    },
+    {
+      "date": "2021-11-10",
+      "trades": [
+        {
+          "ticker": "PROG",
+          "buy": 3.71,
+          "sell": 3.1535,
+          "reason": "손절(-15%)",
+          "shares": 144185,
+          "pnl": -80239,
+          "pnl_pct": -15.0,
+          "orig_pnl": -15.0
+        },
+        {
+          "ticker": "RNXT",
+          "buy": 11.99,
+          "sell": 10.1915,
+          "reason": "손절(-15%)",
+          "shares": 19120,
+          "pnl": -34387,
+          "pnl_pct": -15.0,
+          "orig_pnl": -17.4
+        },
+        {
+          "ticker": "IFMK",
+          "buy": 1.11,
+          "sell": 1.06,
+          "reason": "원본(-4.5%)",
+          "shares": 206536,
+          "pnl": -10327,
+          "pnl_pct": -4.5,
+          "orig_pnl": -4.2
+        },
+        {
+          "ticker": "SOFI",
+          "buy": 21.58,
+          "sell": 22.96,
+          "reason": "원본(+6.4%)",
+          "shares": 10623,
+          "pnl": 14660,
+          "pnl_pct": 6.4,
+          "orig_pnl": 6.4
+        }
+      ],
+      "day_pnl": -110293,
+      "capital": 653892
+    },
+    {
+      "date": "2021-11-11",
+      "trades": [
+        {
+          "ticker": "PPSI",
+          "buy": 7.52,
+          "sell": 9.82,
+          "reason": "원본(+30.6%)",
+          "shares": 60867,
+          "pnl": 139994,
+          "pnl_pct": 30.6,
+          "orig_pnl": 30.6
+        },
+        {
+          "ticker": "EVGO",
+          "buy": 16.68,
+          "sell": 19.35,
+          "reason": "원본(+16.0%)",
+          "shares": 11760,
+          "pnl": 31399,
+          "pnl_pct": 16.0,
+          "orig_pnl": 16.0
+        }
+      ],
+      "day_pnl": 171393,
+      "capital": 825285
+    },
+    {
+      "date": "2021-11-12",
+      "trades": [
+        {
+          "ticker": "MRAM",
+          "buy": 8.07,
+          "sell": 10.7,
+          "reason": "원본(+32.6%)",
+          "shares": 71586,
+          "pnl": 188271,
+          "pnl_pct": 32.6,
+          "orig_pnl": 32.7
+        },
+        {
+          "ticker": "GGPI",
+          "buy": 11.97,
+          "sell": 14.44,
+          "reason": "원본(+20.6%)",
+          "shares": 20683,
+          "pnl": 51087,
+          "pnl_pct": 20.6,
+          "orig_pnl": 20.6
+        },
+        {
+          "ticker": "SNDL",
+          "buy": 9.16,
+          "sell": 8.68,
+          "reason": "원본(-5.2%)",
+          "shares": 27028,
+          "pnl": -12973,
+          "pnl_pct": -5.2,
+          "orig_pnl": -5.2
+        }
+      ],
+      "day_pnl": 226385,
+      "capital": 1051670
+    },
+    {
+      "date": "2021-11-15",
+      "trades": [
+        {
+          "ticker": "CREX",
+          "buy": 6.41,
+          "sell": 8.6535,
+          "reason": "익절(+35%)",
+          "shares": 114846,
+          "pnl": 257657,
+          "pnl_pct": 35.0,
+          "orig_pnl": 36.1
+        },
+        {
+          "ticker": "BTB",
+          "buy": 4.17,
+          "sell": 3.5445,
+          "reason": "손절(-15%)",
+          "shares": 75659,
+          "pnl": -47325,
+          "pnl_pct": -15.0,
+          "orig_pnl": -16.1
+        },
+        {
+          "ticker": "PROG",
+          "buy": 3.23,
+          "sell": 3.69,
+          "reason": "원본(+14.2%)",
+          "shares": 97678,
+          "pnl": 44932,
+          "pnl_pct": 14.2,
+          "orig_pnl": 14.2
+        }
+      ],
+      "day_pnl": 255264,
+      "capital": 1306934
+    },
+    {
+      "date": "2021-11-16",
+      "trades": [
+        {
+          "ticker": "PROG",
+          "buy": 4.3,
+          "sell": 5.15,
+          "reason": "원본(+19.8%)",
+          "shares": 212756,
+          "pnl": 180843,
+          "pnl_pct": 19.8,
+          "orig_pnl": 19.8
+        }
+      ],
+      "day_pnl": 180843,
+      "capital": 1487777
+    },
+    {
+      "date": "2021-11-17",
+      "trades": [
+        {
+          "ticker": "PROG",
+          "buy": 5.75,
+          "sell": 4.8875,
+          "reason": "손절(-15%)",
+          "shares": 181120,
+          "pnl": -156216,
+          "pnl_pct": -15.0,
+          "orig_pnl": -15.2
+        },
+        {
+          "ticker": "SEV",
+          "buy": 27.88,
+          "sell": 36.32,
+          "reason": "원본(+30.3%)",
+          "shares": 16009,
+          "pnl": 135116,
+          "pnl_pct": 30.3,
+          "orig_pnl": 30.3
+        }
+      ],
+      "day_pnl": -21100,
+      "capital": 1466677
+    },
+    {
+      "date": "2021-11-18",
+      "trades": [
+        {
+          "ticker": "VOSO",
+          "buy": 10.92,
+          "sell": 14.25,
+          "reason": "원본(+30.5%)",
+          "shares": 94017,
+          "pnl": 313077,
+          "pnl_pct": 30.5,
+          "orig_pnl": 30.5
+        },
+        {
+          "ticker": "SEV",
+          "buy": 50.63,
+          "sell": 43.0355,
+          "reason": "손절(-15%)",
+          "shares": 8690,
+          "pnl": -65996,
+          "pnl_pct": -15.0,
+          "orig_pnl": -17.4
+        }
+      ],
+      "day_pnl": 247080,
+      "capital": 1713757
+    },
+    {
+      "date": "2021-11-19",
+      "trades": [
+        {
+          "ticker": "AUR",
+          "buy": 13.2,
+          "sell": 17.16,
+          "reason": "원본(+30.0%)",
+          "shares": 38949,
+          "pnl": 154238,
+          "pnl_pct": 30.0,
+          "orig_pnl": 30.0
+        },
+        {
+          "ticker": "GTEC",
+          "buy": 8.37,
+          "sell": 8.91,
+          "reason": "원본(+6.5%)",
+          "shares": 143324,
+          "pnl": 77395,
+          "pnl_pct": 6.5,
+          "orig_pnl": 6.5
+        }
+      ],
+      "day_pnl": 231633,
+      "capital": 1945390
+    },
+    {
+      "date": "2021-11-22",
+      "trades": [
+        {
+          "ticker": "GTEC",
+          "buy": 8.8,
+          "sell": 7.48,
+          "reason": "손절(-15%)",
+          "shares": 154746,
+          "pnl": -204265,
+          "pnl_pct": -15.0,
+          "orig_pnl": -15.1
+        }
+      ],
+      "day_pnl": -204265,
+      "capital": 1741125
+    },
+    {
+      "date": "2021-11-23",
+      "trades": [
+        {
+          "ticker": "XPEV",
+          "buy": 51.18,
+          "sell": 52.1,
+          "reason": "원본(+1.8%)",
+          "shares": 17009,
+          "pnl": 15648,
+          "pnl_pct": 1.8,
+          "orig_pnl": 1.8
+        },
+        {
+          "ticker": "PROG",
+          "buy": 4.19,
+          "sell": 3.99,
+          "reason": "원본(-4.8%)",
+          "shares": 207771,
+          "pnl": -41554,
+          "pnl_pct": -4.8,
+          "orig_pnl": -4.7
+        }
+      ],
+      "day_pnl": -25906,
+      "capital": 1715219
+    },
+    {
+      "date": "2021-11-24",
+      "trades": [
+        {
+          "ticker": "OCUP",
+          "buy": 4.63,
+          "sell": 6.09,
+          "reason": "원본(+31.5%)",
+          "shares": 185228,
+          "pnl": 270433,
+          "pnl_pct": 31.5,
+          "orig_pnl": 31.5
+        },
+        {
+          "ticker": "JWN",
+          "buy": 24.31,
+          "sell": 22.73,
+          "reason": "원본(-6.5%)",
+          "shares": 35278,
+          "pnl": -55739,
+          "pnl_pct": -6.5,
+          "orig_pnl": -6.5
+        },
+        {
+          "ticker": "RLX",
+          "buy": 5.22,
+          "sell": 5.49,
+          "reason": "원본(+5.2%)",
+          "shares": 164293,
+          "pnl": 44359,
+          "pnl_pct": 5.2,
+          "orig_pnl": 5.2
+        }
+      ],
+      "day_pnl": 259053,
+      "capital": 1974272
+    },
+    {
+      "date": "2021-11-26",
+      "trades": [
+        {
+          "ticker": "AHPI",
+          "buy": 7.33,
+          "sell": 8.32,
+          "reason": "장마감(+13.5%)",
+          "shares": 134670,
+          "pnl": 133323,
+          "pnl_pct": 13.5,
+          "orig_pnl": 22.1
+        },
+        {
+          "ticker": "OCGN",
+          "buy": 8.11,
+          "sell": 6.8935,
+          "reason": "손절(-15%)",
+          "shares": 121718,
+          "pnl": -148070,
+          "pnl_pct": -15.0,
+          "orig_pnl": -23.8
+        },
+        {
+          "ticker": "RLX",
+          "buy": 4.76,
+          "sell": 5.54,
+          "reason": "원본(+16.4%)",
+          "shares": 207381,
+          "pnl": 161757,
+          "pnl_pct": 16.4,
+          "orig_pnl": 16.4
+        }
+      ],
+      "day_pnl": 147011,
+      "capital": 2121283
+    },
+    {
+      "date": "2021-11-29",
+      "trades": [
+        {
+          "ticker": "TWTR",
+          "buy": 52.21,
+          "sell": 46.14,
+          "reason": "원본(-11.6%)",
+          "shares": 20314,
+          "pnl": -123306,
+          "pnl_pct": -11.6,
+          "orig_pnl": -11.6
+        }
+      ],
+      "day_pnl": -123306,
+      "capital": 1997977
+    },
+    {
+      "date": "2021-11-30",
+      "trades": [
+        {
+          "ticker": "PPSI",
+          "buy": 10.88,
+          "sell": 9.248,
+          "reason": "손절(-15%)",
+          "shares": 91818,
+          "pnl": -149847,
+          "pnl_pct": -15.0,
+          "orig_pnl": -15.4
+        },
+        {
+          "ticker": "CPIX",
+          "buy": 4.17,
+          "sell": 4.88,
+          "reason": "원본(+17.0%)",
+          "shares": 239565,
+          "pnl": 170091,
+          "pnl_pct": 17.0,
+          "orig_pnl": 16.9
+        },
+        {
+          "ticker": "PROG",
+          "buy": 3.32,
+          "sell": 3.12,
+          "reason": "원본(-6.0%)",
+          "shares": 300900,
+          "pnl": -60180,
+          "pnl_pct": -6.0,
+          "orig_pnl": -5.9
+        },
+        {
+          "ticker": "IMGN",
+          "buy": 6.64,
+          "sell": 5.86,
+          "reason": "원본(-11.7%)",
+          "shares": 150450,
+          "pnl": -117351,
+          "pnl_pct": -11.7,
+          "orig_pnl": -11.8
+        }
+      ],
+      "day_pnl": -157287,
+      "capital": 1840690
+    },
+    {
+      "date": "2021-12-01",
+      "trades": [
+        {
+          "ticker": "CNTX",
+          "buy": 8.87,
+          "sell": 7.5395,
+          "reason": "손절(-15%)",
+          "shares": 103759,
+          "pnl": -138051,
+          "pnl_pct": -15.0,
+          "orig_pnl": -16.2
+        },
+        {
+          "ticker": "ABUS",
+          "buy": 5.04,
+          "sell": 4.284,
+          "reason": "손절(-15%)",
+          "shares": 182608,
+          "pnl": -138052,
+          "pnl_pct": -15.0,
+          "orig_pnl": -15.1
+        },
+        {
+          "ticker": "ARDX",
+          "buy": 1.46,
+          "sell": 1.241,
+          "reason": "손절(-15%)",
+          "shares": 630373,
+          "pnl": -138052,
+          "pnl_pct": -15.0,
+          "orig_pnl": -15.2
+        }
+      ],
+      "day_pnl": -414155,
+      "capital": 1426535
+    },
+    {
+      "date": "2021-12-02",
+      "trades": [
+        {
+          "ticker": "ARDX",
+          "buy": 1.2,
+          "sell": 1.59,
+          "reason": "원본(+32.5%)",
+          "shares": 594389,
+          "pnl": 231812,
+          "pnl_pct": 32.5,
+          "orig_pnl": 32.5
+        },
+        {
+          "ticker": "ABUS",
+          "buy": 5.23,
+          "sell": 4.4455,
+          "reason": "손절(-15%)",
+          "shares": 136380,
+          "pnl": -106990,
+          "pnl_pct": -15.0,
+          "orig_pnl": -15.0
+        },
+        {
+          "ticker": "CFVI",
+          "buy": 13.01,
+          "sell": 11.0585,
+          "reason": "손절(-15%)",
+          "shares": 54824,
+          "pnl": -106989,
+          "pnl_pct": -15.0,
+          "orig_pnl": -15.3
+        }
+      ],
+      "day_pnl": 17833,
+      "capital": 1444368
+    },
+    {
+      "date": "2021-12-03",
+      "trades": [
+        {
+          "ticker": "CYAD",
+          "buy": 4.61,
+          "sell": 4.75,
+          "reason": "원본(+3.0%)",
+          "shares": 156655,
+          "pnl": 21932,
+          "pnl_pct": 3.0,
+          "orig_pnl": 3.0
+        },
+        {
+          "ticker": "ARDX",
+          "buy": 1.66,
+          "sell": 1.61,
+          "reason": "원본(-3.0%)",
+          "shares": 435050,
+          "pnl": -21752,
+          "pnl_pct": -3.0,
+          "orig_pnl": -3.1
+        }
+      ],
+      "day_pnl": 179,
+      "capital": 1444547
+    },
+    {
+      "date": "2021-12-06",
+      "trades": [
+        {
+          "ticker": "ISIG",
+          "buy": 6.75,
+          "sell": 9.1125,
+          "reason": "익절(+35%)",
+          "shares": 107003,
+          "pnl": 252795,
+          "pnl_pct": 35.0,
+          "orig_pnl": 61.9
+        },
+        {
+          "ticker": "CFVI",
+          "buy": 15.22,
+          "sell": 12.937,
+          "reason": "손절(-15%)",
+          "shares": 47455,
+          "pnl": -108340,
+          "pnl_pct": -15.0,
+          "orig_pnl": -15.3
+        },
+        {
+          "ticker": "SWN",
+          "buy": 4.66,
+          "sell": 4.92,
+          "reason": "원본(+5.6%)",
+          "shares": 154994,
+          "pnl": 40298,
+          "pnl_pct": 5.6,
+          "orig_pnl": 5.5
+        },
+        {
+          "ticker": "PROG",
+          "buy": 2.36,
+          "sell": 2.87,
+          "reason": "원본(+21.6%)",
+          "shares": 306048,
+          "pnl": 156084,
+          "pnl_pct": 21.6,
+          "orig_pnl": 21.8
+        }
+      ],
+      "day_pnl": 340838,
+      "capital": 1785385
+    },
+    {
+      "date": "2021-12-07",
+      "trades": [
+        {
+          "ticker": "GEVO",
+          "buy": 5.56,
+          "sell": 5.6,
+          "reason": "원본(+0.7%)",
+          "shares": 160556,
+          "pnl": 6422,
+          "pnl_pct": 0.7,
+          "orig_pnl": 0.7
+        }
+      ],
+      "day_pnl": 6422,
+      "capital": 1791807
+    },
+    {
+      "date": "2021-12-08",
+      "trades": [
+        {
+          "ticker": "ISIG",
+          "buy": 11.59,
+          "sell": 15.6465,
+          "reason": "익절(+35%)",
+          "shares": 77299,
+          "pnl": 313563,
+          "pnl_pct": 35.0,
+          "orig_pnl": 41.9
+        },
+        {
+          "ticker": "RLX",
+          "buy": 4.12,
+          "sell": 4.74,
+          "reason": "원본(+15.0%)",
+          "shares": 217452,
+          "pnl": 134820,
+          "pnl_pct": 15.0,
+          "orig_pnl": 14.9
+        },
+        {
+          "ticker": "PPSI",
+          "buy": 9.22,
+          "sell": 10.07,
+          "reason": "원본(+9.2%)",
+          "shares": 97169,
+          "pnl": 82594,
+          "pnl_pct": 9.2,
+          "orig_pnl": 9.2
+        }
+      ],
+      "day_pnl": 530977,
+      "capital": 2322784
+    },
+    {
+      "date": "2021-12-09",
+      "trades": [
+        {
+          "ticker": "IINN",
+          "buy": 3.51,
+          "sell": 4.17,
+          "reason": "원본(+18.8%)",
+          "shares": 330880,
+          "pnl": 218381,
+          "pnl_pct": 18.8,
+          "orig_pnl": 18.7
+        }
+      ],
+      "day_pnl": 218381,
+      "capital": 2541165
+    },
+    {
+      "date": "2021-12-10",
+      "trades": [
+        {
+          "ticker": "CNTX",
+          "buy": 7.23,
+          "sell": 6.1455,
+          "reason": "손절(-15%)",
+          "shares": 175737,
+          "pnl": -190587,
+          "pnl_pct": -15.0,
+          "orig_pnl": -15.3
+        },
+        {
+          "ticker": "SGMA",
+          "buy": 9.67,
+          "sell": 13.0545,
+          "reason": "익절(+35%)",
+          "shares": 131394,
+          "pnl": 444703,
+          "pnl_pct": 35.0,
+          "orig_pnl": 78.5
+        }
+      ],
+      "day_pnl": 254116,
+      "capital": 2795281
+    },
+    {
+      "date": "2021-12-13",
+      "trades": [
+        {
+          "ticker": "NES",
+          "buy": 1.78,
+          "sell": 2.403,
+          "reason": "익절(+35%)",
+          "shares": 785191,
+          "pnl": 489174,
+          "pnl_pct": 35.0,
+          "orig_pnl": 37.9
+        },
+        {
+          "ticker": "BLU",
+          "buy": 7.69,
+          "sell": 8.3,
+          "reason": "원본(+7.9%)",
+          "shares": 181747,
+          "pnl": 110866,
+          "pnl_pct": 7.9,
+          "orig_pnl": 7.9
+        }
+      ],
+      "day_pnl": 600040,
+      "capital": 3395321
+    },
+    {
+      "date": "2021-12-14",
+      "trades": [
+        {
+          "ticker": "ADGI",
+          "buy": 10,
+          "sell": 8.5,
+          "reason": "손절(-15%)",
+          "shares": 169766,
+          "pnl": -254649,
+          "pnl_pct": -15.0,
+          "orig_pnl": -17.8
+        },
+        {
+          "ticker": "GRTX",
+          "buy": 3.05,
+          "sell": 2.5925,
+          "reason": "손절(-15%)",
+          "shares": 556609,
+          "pnl": -254649,
+          "pnl_pct": -15.0,
+          "orig_pnl": -15.4
+        },
+        {
+          "ticker": "NES",
+          "buy": 2.55,
+          "sell": 2.1675,
+          "reason": "손절(-15%)",
+          "shares": 665749,
+          "pnl": -254649,
+          "pnl_pct": -15.0,
+          "orig_pnl": -15.2
+        }
+      ],
+      "day_pnl": -763947,
+      "capital": 2631374
+    },
+    {
+      "date": "2021-12-15",
+      "trades": [
+        {
+          "ticker": "GRTX",
+          "buy": 3.47,
+          "sell": 2.9495,
+          "reason": "손절(-15%)",
+          "shares": 379160,
+          "pnl": -197353,
+          "pnl_pct": -15.0,
+          "orig_pnl": -15.4
+        }
+      ],
+      "day_pnl": -197353,
+      "capital": 2434021
+    },
+    {
+      "date": "2021-12-16",
+      "trades": [
+        {
+          "ticker": "ADGI",
+          "buy": 7.42,
+          "sell": 6.307,
+          "reason": "손절(-15%)",
+          "shares": 164017,
+          "pnl": -182551,
+          "pnl_pct": -15.0,
+          "orig_pnl": 36.3
+        },
+        {
+          "ticker": "BEKE",
+          "buy": 18.86,
+          "sell": 18.56,
+          "reason": "원본(-1.6%)",
+          "shares": 64528,
+          "pnl": -19358,
+          "pnl_pct": -1.6,
+          "orig_pnl": -1.6
+        }
+      ],
+      "day_pnl": -201909,
+      "capital": 2232112
+    },
+    {
+      "date": "2021-12-17",
+      "trades": [
+        {
+          "ticker": "ADGI",
+          "buy": 14.96,
+          "sell": 12.716,
+          "reason": "손절(-15%)",
+          "shares": 74602,
+          "pnl": -167407,
+          "pnl_pct": -15.0,
+          "orig_pnl": -16.1
+        }
+      ],
+      "day_pnl": -167407,
+      "capital": 2064705
+    },
+    {
+      "date": "2021-12-20",
+      "trades": [
+        {
+          "ticker": "GRTX",
+          "buy": 3.2,
+          "sell": 4.21,
+          "reason": "원본(+31.6%)",
+          "shares": 322610,
+          "pnl": 325836,
+          "pnl_pct": 31.6,
+          "orig_pnl": 31.5
+        },
+        {
+          "ticker": "MTCR",
+          "buy": 1.37,
+          "sell": 1.1645,
+          "reason": "손절(-15%)",
+          "shares": 753542,
+          "pnl": -154853,
+          "pnl_pct": -15.0,
+          "orig_pnl": -15.8
+        }
+      ],
+      "day_pnl": 170983,
+      "capital": 2235688
+    },
+    {
+      "date": "2021-12-21",
+      "trades": [
+        {
+          "ticker": "ARDS",
+          "buy": 5.42,
+          "sell": 4.607,
+          "reason": "손절(-15%)",
+          "shares": 206244,
+          "pnl": -167676,
+          "pnl_pct": -15.0,
+          "orig_pnl": -15.2
+        },
+        {
+          "ticker": "GRTX",
+          "buy": 4.29,
+          "sell": 4.58,
+          "reason": "원본(+6.8%)",
+          "shares": 260569,
+          "pnl": 75565,
+          "pnl_pct": 6.8,
+          "orig_pnl": 6.7
+        }
+      ],
+      "day_pnl": -92111,
+      "capital": 2143577
+    },
+    {
+      "date": "2021-12-22",
+      "trades": [
+        {
+          "ticker": "BVXV",
+          "buy": 2.46,
+          "sell": 3.1,
+          "reason": "원본(+26.0%)",
+          "shares": 435686,
+          "pnl": 278839,
+          "pnl_pct": 26.0,
+          "orig_pnl": 26.3
+        },
+        {
+          "ticker": "ALLK",
+          "buy": 10.85,
+          "sell": 9.2225,
+          "reason": "손절(-15%)",
+          "shares": 98782,
+          "pnl": -160768,
+          "pnl_pct": -15.0,
+          "orig_pnl": -15.2
+        },
+        {
+          "ticker": "RCAT",
+          "buy": 2.47,
+          "sell": 2.19,
+          "reason": "원본(-11.3%)",
+          "shares": 433922,
+          "pnl": -121498,
+          "pnl_pct": -11.3,
+          "orig_pnl": -11.5
+        }
+      ],
+      "day_pnl": -3427,
+      "capital": 2140150
+    },
+    {
+      "date": "2021-12-23",
+      "trades": [
+        {
+          "ticker": "ALLK",
+          "buy": 10.34,
+          "sell": 10.45,
+          "reason": "장마감(+1.1%)",
+          "shares": 103488,
+          "pnl": 11384,
+          "pnl_pct": 1.1,
+          "orig_pnl": -1.5
+        }
+      ],
+      "day_pnl": 11384,
+      "capital": 2151534
+    },
+    {
+      "date": "2021-12-27",
+      "trades": [
+        {
+          "ticker": "PYR",
+          "buy": 3.25,
+          "sell": 4.3875,
+          "reason": "익절(+35%)",
+          "shares": 331005,
+          "pnl": 376518,
+          "pnl_pct": 35.0,
+          "orig_pnl": 58.0
+        },
+        {
+          "ticker": "MBOT",
+          "buy": 7.87,
+          "sell": 8.08,
+          "reason": "원본(+2.7%)",
+          "shares": 136692,
+          "pnl": 28705,
+          "pnl_pct": 2.7,
+          "orig_pnl": 2.6
+        }
+      ],
+      "day_pnl": 405224,
+      "capital": 2556757
+    },
+    {
+      "date": "2021-12-28",
+      "trades": [
+        {
+          "ticker": "ISIG",
+          "buy": 16.76,
+          "sell": 20.98,
+          "reason": "원본(+25.2%)",
+          "shares": 76275,
+          "pnl": 321880,
+          "pnl_pct": 25.2,
+          "orig_pnl": 25.2
+        },
+        {
+          "ticker": "BVXV",
+          "buy": 3.13,
+          "sell": 4.17,
+          "reason": "원본(+33.2%)",
+          "shares": 408427,
+          "pnl": 424764,
+          "pnl_pct": 33.2,
+          "orig_pnl": 33.1
+        }
+      ],
+      "day_pnl": 746645,
+      "capital": 3303402
+    },
+    {
+      "date": "2021-12-29",
+      "trades": [
+        {
+          "ticker": "TKAT",
+          "buy": 4.25,
+          "sell": 5.13,
+          "reason": "원본(+20.7%)",
+          "shares": 388635,
+          "pnl": 341999,
+          "pnl_pct": 20.7,
+          "orig_pnl": 20.8
+        },
+        {
+          "ticker": "ISIG",
+          "buy": 18.79,
+          "sell": 25.3665,
+          "reason": "익절(+35%)",
+          "shares": 87903,
+          "pnl": 578094,
+          "pnl_pct": 35.0,
+          "orig_pnl": 41.2
+        }
+      ],
+      "day_pnl": 920093,
+      "capital": 4223495
+    },
+    {
+      "date": "2021-12-30",
+      "trades": [
+        {
+          "ticker": "DIDI",
+          "buy": 4.99,
+          "sell": 5.13,
+          "reason": "원본(+2.8%)",
+          "shares": 423195,
+          "pnl": 59247,
+          "pnl_pct": 2.8,
+          "orig_pnl": 2.7
+        }
+      ],
+      "day_pnl": 59247,
+      "capital": 4282742
+    },
+    {
+      "date": "2021-12-31",
+      "trades": [
+        {
+          "ticker": "NTRB",
+          "buy": 4.57,
+          "sell": 6.1695,
+          "reason": "익절(+35%)",
+          "shares": 468571,
+          "pnl": 749479,
+          "pnl_pct": 35.0,
+          "orig_pnl": 104.1
+        },
+        {
+          "ticker": "XERS",
+          "buy": 3.11,
+          "sell": 2.85,
+          "reason": "원본(-8.4%)",
+          "shares": 688543,
+          "pnl": -179021,
+          "pnl_pct": -8.4,
+          "orig_pnl": -8.2
+        }
+      ],
+      "day_pnl": 570458,
+      "capital": 4853200
+    },
+    {
+      "date": "2022-01-03",
+      "trades": [
+        {
+          "ticker": "IMMX",
+          "buy": 5.64,
+          "sell": 7.614,
+          "reason": "익절(+35%)",
+          "shares": 430248,
+          "pnl": 849310,
+          "pnl_pct": 35.0,
+          "orig_pnl": 37.7
+        }
+      ],
+      "day_pnl": 849310,
+      "capital": 5702510
+    },
+    {
+      "date": "2022-01-04",
+      "trades": [
+        {
+          "ticker": "IMMX",
+          "buy": 7.02,
+          "sell": 5.967,
+          "reason": "손절(-15%)",
+          "shares": 406161,
+          "pnl": -427688,
+          "pnl_pct": -15.0,
+          "orig_pnl": -15.1
+        }
+      ],
+      "day_pnl": -427688,
+      "capital": 5274822
+    },
+    {
+      "date": "2022-01-05",
+      "trades": [
+        {
+          "ticker": "BTCS",
+          "buy": 1.8,
+          "sell": 2.23,
+          "reason": "원본(+23.9%)",
+          "shares": 1465228,
+          "pnl": 630048,
+          "pnl_pct": 23.9,
+          "orig_pnl": 24.3
+        },
+        {
+          "ticker": "DTST",
+          "buy": 4.53,
+          "sell": 3.8505,
+          "reason": "손절(-15%)",
+          "shares": 582209,
+          "pnl": -395611,
+          "pnl_pct": -15.0,
+          "orig_pnl": -16.2
+        }
+      ],
+      "day_pnl": 234437,
+      "capital": 5509259
+    },
+    {
+      "date": "2022-01-06",
+      "trades": [
+        {
+          "ticker": "BBBY",
+          "buy": 12.68,
+          "sell": 13.59,
+          "reason": "원본(+7.2%)",
+          "shares": 217242,
+          "pnl": 197690,
+          "pnl_pct": 7.2,
+          "orig_pnl": 7.2
+        }
+      ],
+      "day_pnl": 197690,
+      "capital": 5706950
+    },
+    {
+      "date": "2022-01-07",
+      "trades": [
+        {
+          "ticker": "HOUR",
+          "buy": 7.1,
+          "sell": 8.78,
+          "reason": "원본(+23.7%)",
+          "shares": 401897,
+          "pnl": 675187,
+          "pnl_pct": 23.7,
+          "orig_pnl": 23.6
+        },
+        {
+          "ticker": "ABSI",
+          "buy": 8.97,
+          "sell": 7.6245,
+          "reason": "손절(-15%)",
+          "shares": 318113,
+          "pnl": -428021,
+          "pnl_pct": -15.0,
+          "orig_pnl": -15.2
+        }
+      ],
+      "day_pnl": 247166,
+      "capital": 5954116
+    },
+    {
+      "date": "2022-01-10",
+      "trades": [
+        {
+          "ticker": "PSTI",
+          "buy": 1.89,
+          "sell": 1.6065,
+          "reason": "손절(-15%)",
+          "shares": 1575162,
+          "pnl": -446558,
+          "pnl_pct": -15.0,
+          "orig_pnl": -15.2
+        }
+      ],
+      "day_pnl": -446558,
+      "capital": 5507557
+    },
+    {
+      "date": "2022-01-11",
+      "trades": [
+        {
+          "ticker": "TSRI",
+          "buy": 11.46,
+          "sell": 11.02,
+          "reason": "원본(-3.8%)",
+          "shares": 240294,
+          "pnl": -105729,
+          "pnl_pct": -3.8,
+          "orig_pnl": -3.9
+        }
+      ],
+      "day_pnl": -105729,
+      "capital": 5401828
+    },
+    {
+      "date": "2022-01-12",
+      "trades": [
+        {
+          "ticker": "VINE",
+          "buy": 7.2,
+          "sell": 8.5,
+          "reason": "원본(+18.1%)",
+          "shares": 375126,
+          "pnl": 487664,
+          "pnl_pct": 18.1,
+          "orig_pnl": 18.1
+        },
+        {
+          "ticker": "IMRN",
+          "buy": 3.63,
+          "sell": 4.48,
+          "reason": "원본(+23.4%)",
+          "shares": 744053,
+          "pnl": 632445,
+          "pnl_pct": 23.4,
+          "orig_pnl": 23.4
+        },
+        {
+          "ticker": "IMMX",
+          "buy": 7.75,
+          "sell": 6.5875,
+          "reason": "손절(-15%)",
+          "shares": 348505,
+          "pnl": -405137,
+          "pnl_pct": -15.0,
+          "orig_pnl": -15.6
+        }
+      ],
+      "day_pnl": 714972,
+      "capital": 6116800
+    },
+    {
+      "date": "2022-01-13",
+      "trades": [
+        {
+          "ticker": "BTCS",
+          "buy": 4.55,
+          "sell": 3.8675,
+          "reason": "손절(-15%)",
+          "shares": 672175,
+          "pnl": -458759,
+          "pnl_pct": -15.0,
+          "orig_pnl": -15.7
+        }
+      ],
+      "day_pnl": -458759,
+      "capital": 5658040
+    },
+    {
+      "date": "2022-01-14",
+      "trades": [
+        {
+          "ticker": "SDC",
+          "buy": 2.42,
+          "sell": 2.24,
+          "reason": "원본(-7.4%)",
+          "shares": 1169016,
+          "pnl": -210423,
+          "pnl_pct": -7.4,
+          "orig_pnl": -7.3
+        }
+      ],
+      "day_pnl": -210423,
+      "capital": 5447617
+    },
+    {
+      "date": "2022-01-20",
+      "trades": [
+        {
+          "ticker": "PTON",
+          "buy": 25.34,
+          "sell": 26.44,
+          "reason": "원본(+4.3%)",
+          "shares": 107490,
+          "pnl": 118239,
+          "pnl_pct": 4.3,
+          "orig_pnl": 4.3
+        }
+      ],
+      "day_pnl": 118239,
+      "capital": 5565856
+    },
+    {
+      "date": "2022-01-24",
+      "trades": [
+        {
+          "ticker": "PTON",
+          "buy": 27.6,
+          "sell": 29.8,
+          "reason": "원본(+8.0%)",
+          "shares": 100830,
+          "pnl": 221826,
+          "pnl_pct": 8.0,
+          "orig_pnl": 8.0
+        }
+      ],
+      "day_pnl": 221826,
+      "capital": 5787682
+    },
+    {
+      "date": "2022-01-27",
+      "trades": [
+        {
+          "ticker": "INDO",
+          "buy": 5.93,
+          "sell": 7.32,
+          "reason": "원본(+23.4%)",
+          "shares": 488000,
+          "pnl": 678320,
+          "pnl_pct": 23.4,
+          "orig_pnl": 23.5
+        }
+      ],
+      "day_pnl": 678320,
+      "capital": 6466002
+    },
+    {
+      "date": "2022-01-28",
+      "trades": [
+        {
+          "ticker": "HOOD",
+          "buy": 10.59,
+          "sell": 12.55,
+          "reason": "원본(+18.5%)",
+          "shares": 305288,
+          "pnl": 598364,
+          "pnl_pct": 18.5,
+          "orig_pnl": 18.4
+        }
+      ],
+      "day_pnl": 598364,
+      "capital": 7064367
+    },
+    {
+      "date": "2022-01-31",
+      "trades": [
+        {
+          "ticker": "IINN",
+          "buy": 3.1,
+          "sell": 3.02,
+          "reason": "원본(-2.6%)",
+          "shares": 1139413,
+          "pnl": -91153,
+          "pnl_pct": -2.6,
+          "orig_pnl": -2.6
+        }
+      ],
+      "day_pnl": -91153,
+      "capital": 6973214
+    },
+    {
+      "date": "2022-02-01",
+      "trades": [
+        {
+          "ticker": "AMD",
+          "buy": 123.31,
+          "sell": 128.99,
+          "reason": "원본(+4.6%)",
+          "shares": 28275,
+          "pnl": 160602,
+          "pnl_pct": 4.6,
+          "orig_pnl": 4.6
+        },
+        {
+          "ticker": "GOOGL",
+          "buy": 145.97,
+          "sell": 150.25,
+          "reason": "원본(+2.9%)",
+          "shares": 23885,
+          "pnl": 102228,
+          "pnl_pct": 2.9,
+          "orig_pnl": 2.9
+        }
+      ],
+      "day_pnl": 262830,
+      "capital": 7236043
+    },
+    {
+      "date": "2022-02-03",
+      "trades": [
+        {
+          "ticker": "SNAP",
+          "buy": 31.86,
+          "sell": 39,
+          "reason": "원본(+22.4%)",
+          "shares": 113560,
+          "pnl": 810818,
+          "pnl_pct": 22.4,
+          "orig_pnl": 22.4
+        },
+        {
+          "ticker": "AMZN",
+          "buy": 159.68,
+          "sell": 158.61,
+          "reason": "원본(-0.7%)",
+          "shares": 22657,
+          "pnl": -24243,
+          "pnl_pct": -0.7,
+          "orig_pnl": -0.7
+        }
+      ],
+      "day_pnl": 786575,
+      "capital": 8022619
+    },
+    {
+      "date": "2022-02-07",
+      "trades": [
+        {
+          "ticker": "NVCT",
+          "buy": 3.94,
+          "sell": 5.06,
+          "reason": "원본(+28.4%)",
+          "shares": 1018098,
+          "pnl": 1140270,
+          "pnl_pct": 28.4,
+          "orig_pnl": 28.5
+        },
+        {
+          "ticker": "CFVI",
+          "buy": 14.44,
+          "sell": 16.23,
+          "reason": "원본(+12.4%)",
+          "shares": 277791,
+          "pnl": 497246,
+          "pnl_pct": 12.4,
+          "orig_pnl": 12.4
+        }
+      ],
+      "day_pnl": 1637516,
+      "capital": 9660135
+    },
+    {
+      "date": "2022-02-08",
+      "trades": [
+        {
+          "ticker": "PTON",
+          "buy": 29.36,
+          "sell": 38.67,
+          "reason": "원본(+31.7%)",
+          "shares": 164511,
+          "pnl": 1531597,
+          "pnl_pct": 31.7,
+          "orig_pnl": 31.7
+        }
+      ],
+      "day_pnl": 1531597,
+      "capital": 11191732
+    },
+    {
+      "date": "2022-02-09",
+      "trades": [
+        {
+          "ticker": "MITQ",
+          "buy": 1.48,
+          "sell": 1.63,
+          "reason": "원본(+10.1%)",
+          "shares": 3378378,
+          "pnl": 506757,
+          "pnl_pct": 10.1,
+          "orig_pnl": 10.1
+        },
+        {
+          "ticker": "UBER",
+          "buy": 43.49,
+          "sell": 42.5,
+          "reason": "원본(-2.3%)",
+          "shares": 114968,
+          "pnl": -113818,
+          "pnl_pct": -2.3,
+          "orig_pnl": -2.3
+        }
+      ],
+      "day_pnl": 392938,
+      "capital": 11584670
+    },
+    {
+      "date": "2022-02-10",
+      "trades": [
+        {
+          "ticker": "AFRM",
+          "buy": 81.03,
+          "sell": 68.8755,
+          "reason": "손절(-15%)",
+          "shares": 61705,
+          "pnl": -749993,
+          "pnl_pct": -15.0,
+          "orig_pnl": -16.7
+        },
+        {
+          "ticker": "IRNT",
+          "buy": 4.6,
+          "sell": 4.13,
+          "reason": "원본(-10.2%)",
+          "shares": 1086956,
+          "pnl": -510869,
+          "pnl_pct": -10.2,
+          "orig_pnl": -10.3
+        }
+      ],
+      "day_pnl": -1260863,
+      "capital": 10323808
+    },
+    {
+      "date": "2022-02-16",
+      "trades": [
+        {
+          "ticker": "UPST",
+          "buy": 139.78,
+          "sell": 147.01,
+          "reason": "원본(+5.2%)",
+          "shares": 35770,
+          "pnl": 258617,
+          "pnl_pct": 5.2,
+          "orig_pnl": 5.2
+        }
+      ],
+      "day_pnl": 258617,
+      "capital": 10582425
+    },
+    {
+      "date": "2022-02-17",
+      "trades": [
+        {
+          "ticker": "PLTR",
+          "buy": 13.06,
+          "sell": 11.91,
+          "reason": "원본(-8.8%)",
+          "shares": 382848,
+          "pnl": -440275,
+          "pnl_pct": -8.8,
+          "orig_pnl": -8.8
+        }
+      ],
+      "day_pnl": -440275,
+      "capital": 10142149
+    },
+    {
+      "date": "2022-02-22",
+      "trades": [
+        {
+          "ticker": "INDO",
+          "buy": 5.39,
+          "sell": 7.05,
+          "reason": "원본(+30.8%)",
+          "shares": 927643,
+          "pnl": 1539887,
+          "pnl_pct": 30.8,
+          "orig_pnl": 30.8
+        },
+        {
+          "ticker": "M",
+          "buy": 26.68,
+          "sell": 24.46,
+          "reason": "원본(-8.3%)",
+          "shares": 187406,
+          "pnl": -416041,
+          "pnl_pct": -8.3,
+          "orig_pnl": -8.3
+        },
+        {
+          "ticker": "OCGN",
+          "buy": 4.08,
+          "sell": 3.72,
+          "reason": "원본(-8.8%)",
+          "shares": 1225490,
+          "pnl": -441176,
+          "pnl_pct": -8.8,
+          "orig_pnl": -8.8
+        }
+      ],
+      "day_pnl": 682670,
+      "capital": 10824819
+    },
+    {
+      "date": "2022-02-23",
+      "trades": [
+        {
+          "ticker": "INDO",
+          "buy": 6.44,
+          "sell": 7.42,
+          "reason": "원본(+15.2%)",
+          "shares": 776397,
+          "pnl": 760869,
+          "pnl_pct": 15.2,
+          "orig_pnl": 15.2
+        },
+        {
+          "ticker": "VRT",
+          "buy": 12.21,
+          "sell": 12.24,
+          "reason": "원본(+0.2%)",
+          "shares": 409500,
+          "pnl": 12285,
+          "pnl_pct": 0.2,
+          "orig_pnl": 0.2
+        }
+      ],
+      "day_pnl": 773154,
+      "capital": 11597973
+    },
+    {
+      "date": "2022-02-24",
+      "trades": [
+        {
+          "ticker": "RSX",
+          "buy": 15.91,
+          "sell": 15.98,
+          "reason": "원본(+0.4%)",
+          "shares": 314267,
+          "pnl": 21999,
+          "pnl_pct": 0.4,
+          "orig_pnl": 0.4
+        },
+        {
+          "ticker": "NIO",
+          "buy": 19.79,
+          "sell": 20.95,
+          "reason": "원본(+5.9%)",
+          "shares": 252652,
+          "pnl": 293076,
+          "pnl_pct": 5.9,
+          "orig_pnl": 5.9
+        }
+      ],
+      "day_pnl": 315075,
+      "capital": 11913048
+    },
+    {
+      "date": "2022-02-25",
+      "trades": [
+        {
+          "ticker": "CYRN",
+          "buy": 8.32,
+          "sell": 7.072,
+          "reason": "손절(-15%)",
+          "shares": 600961,
+          "pnl": -749999,
+          "pnl_pct": -15.0,
+          "orig_pnl": -15.4
+        },
+        {
+          "ticker": "IRNT",
+          "buy": 5.64,
+          "sell": 6.1,
+          "reason": "원본(+8.2%)",
+          "shares": 886524,
+          "pnl": 407801,
+          "pnl_pct": 8.2,
+          "orig_pnl": 8.1
+        }
+      ],
+      "day_pnl": -342198,
+      "capital": 11570850
+    },
+    {
+      "date": "2022-02-28",
+      "trades": [
+        {
+          "ticker": "SQ",
+          "buy": 121.92,
+          "sell": 127.9,
+          "reason": "원본(+4.9%)",
+          "shares": 41010,
+          "pnl": 245240,
+          "pnl_pct": 4.9,
+          "orig_pnl": 4.9
+        }
+      ],
+      "day_pnl": 245240,
+      "capital": 11816090
+    },
+    {
+      "date": "2022-03-01",
+      "trades": [
+        {
+          "ticker": "IQ",
+          "buy": 4.66,
+          "sell": 5.12,
+          "reason": "원본(+9.9%)",
+          "shares": 1072961,
+          "pnl": 493562,
+          "pnl_pct": 9.9,
+          "orig_pnl": 10.0
+        },
+        {
+          "ticker": "SOFI",
+          "buy": 12.42,
+          "sell": 13.24,
+          "reason": "원본(+6.6%)",
+          "shares": 402576,
+          "pnl": 330112,
+          "pnl_pct": 6.6,
+          "orig_pnl": 6.6
+        }
+      ],
+      "day_pnl": 823674,
+      "capital": 12639764
+    },
+    {
+      "date": "2022-03-03",
+      "trades": [
+        {
+          "ticker": "INDO",
+          "buy": 17.97,
+          "sell": 22.22,
+          "reason": "원본(+23.7%)",
+          "shares": 278241,
+          "pnl": 1182524,
+          "pnl_pct": 23.7,
+          "orig_pnl": 23.7
+        }
+      ],
+      "day_pnl": 1182524,
+      "capital": 13822288
+    },
+    {
+      "date": "2022-03-04",
+      "trades": [
+        {
+          "ticker": "INDO",
+          "buy": 23.16,
+          "sell": 28.63,
+          "reason": "원본(+23.6%)",
+          "shares": 215889,
+          "pnl": 1180913,
+          "pnl_pct": 23.6,
+          "orig_pnl": 23.6
+        },
+        {
+          "ticker": "GRAB",
+          "buy": 3.94,
+          "sell": 3.349,
+          "reason": "손절(-15%)",
+          "shares": 1269035,
+          "pnl": -750000,
+          "pnl_pct": -15.0,
+          "orig_pnl": -15.4
+        },
+        {
+          "ticker": "BCEL",
+          "buy": 2.06,
+          "sell": 2.42,
+          "reason": "원본(+17.5%)",
+          "shares": 2427184,
+          "pnl": 873786,
+          "pnl_pct": 17.5,
+          "orig_pnl": 17.7
+        }
+      ],
+      "day_pnl": 1304699,
+      "capital": 15126988
+    },
+    {
+      "date": "2022-03-07",
+      "trades": [
+        {
+          "ticker": "NINE",
+          "buy": 3.58,
+          "sell": 3.043,
+          "reason": "손절(-15%)",
+          "shares": 1396648,
+          "pnl": -750000,
+          "pnl_pct": -15.0,
+          "orig_pnl": -16.2
+        },
+        {
+          "ticker": "UBER",
+          "buy": 31.48,
+          "sell": 28.53,
+          "reason": "원본(-9.4%)",
+          "shares": 158831,
+          "pnl": -468551,
+          "pnl_pct": -9.4,
+          "orig_pnl": -9.4
+        },
+        {
+          "ticker": "PLTR",
+          "buy": 11.14,
+          "sell": 11.02,
+          "reason": "원본(-1.1%)",
+          "shares": 448833,
+          "pnl": -53860,
+          "pnl_pct": -1.1,
+          "orig_pnl": -1.0
+        }
+      ],
+      "day_pnl": -1272411,
+      "capital": 13854576
+    },
+    {
+      "date": "2022-03-08",
+      "trades": [
+        {
+          "ticker": "ENSV",
+          "buy": 3.3,
+          "sell": 4.16,
+          "reason": "원본(+26.1%)",
+          "shares": 1515151,
+          "pnl": 1303030,
+          "pnl_pct": 26.1,
+          "orig_pnl": 26.1
+        },
+        {
+          "ticker": "NINE",
+          "buy": 5.03,
+          "sell": 5.44,
+          "reason": "원본(+8.2%)",
+          "shares": 994035,
+          "pnl": 407554,
+          "pnl_pct": 8.2,
+          "orig_pnl": 8.2
+        }
+      ],
+      "day_pnl": 1710584,
+      "capital": 15565161
+    },
+    {
+      "date": "2022-03-09",
+      "trades": [
+        {
+          "ticker": "ASTS",
+          "buy": 8.25,
+          "sell": 10.29,
+          "reason": "원본(+24.7%)",
+          "shares": 606060,
+          "pnl": 1236362,
+          "pnl_pct": 24.7,
+          "orig_pnl": 24.8
+        },
+        {
+          "ticker": "AMZN",
+          "buy": 151.76,
+          "sell": 148.45,
+          "reason": "원본(-2.2%)",
+          "shares": 32946,
+          "pnl": -109051,
+          "pnl_pct": -2.2,
+          "orig_pnl": -2.2
+        }
+      ],
+      "day_pnl": 1127311,
+      "capital": 16692472
+    },
+    {
+      "date": "2025-12-22",
+      "trades": [
+        {
+          "ticker": "CMCT",
+          "buy": 4.05,
+          "sell": 3.4425,
+          "reason": "손절(-15%)",
+          "shares": 1728395,
+          "pnl": -1050000,
+          "pnl_pct": -15.0,
+          "orig_pnl": -15.1
+        },
+        {
+          "ticker": "FJET",
+          "buy": 8.66,
+          "sell": 11.29,
+          "reason": "원본(+30.4%)",
+          "shares": 346420,
+          "pnl": 911085,
+          "pnl_pct": 30.4,
+          "orig_pnl": 30.4
+        },
+        {
+          "ticker": "HXHX",
+          "buy": 0.99,
+          "sell": 0.8415,
+          "reason": "손절(-15%)",
+          "shares": 3030303,
+          "pnl": -450000,
+          "pnl_pct": -15.0,
+          "orig_pnl": -16.8
+        },
+        {
+          "ticker": "SIDU",
+          "buy": 1.47,
+          "sell": 1.91,
+          "reason": "원본(+29.9%)",
+          "shares": 2040816,
+          "pnl": 897959,
+          "pnl_pct": 29.9,
+          "orig_pnl": 30.0
+        },
+        {
+          "ticker": "QBTS",
+          "buy": 29.95,
+          "sell": 32.37,
+          "reason": "원본(+8.1%)",
+          "shares": 100166,
+          "pnl": 242402,
+          "pnl_pct": 8.1,
+          "orig_pnl": 8.1
+        }
+      ],
+      "day_pnl": 551445,
+      "capital": 17243917
+    },
+    {
+      "date": "2025-12-23",
+      "trades": [
+        {
+          "ticker": "HIHO",
+          "buy": 1.28,
+          "sell": 1.728,
+          "reason": "익절(+35%)",
+          "shares": 5468750,
+          "pnl": 2450000,
+          "pnl_pct": 35.0,
+          "orig_pnl": 35.6
+        },
+        {
+          "ticker": "TIVC",
+          "buy": 2.59,
+          "sell": 2.2015,
+          "reason": "손절(-15%)",
+          "shares": 1158301,
+          "pnl": -450000,
+          "pnl_pct": -15.0,
+          "orig_pnl": -15.1
+        },
+        {
+          "ticker": "TRIB",
+          "buy": 1.43,
+          "sell": 1.34,
+          "reason": "원본(-6.3%)",
+          "shares": 2097902,
+          "pnl": -188811,
+          "pnl_pct": -6.3,
+          "orig_pnl": -6.1
+        },
+        {
+          "ticker": "SIDU",
+          "buy": 1.47,
+          "sell": 1.7,
+          "reason": "원본(+15.6%)",
+          "shares": 2040816,
+          "pnl": 469388,
+          "pnl_pct": 15.6,
+          "orig_pnl": 15.5
+        }
+      ],
+      "day_pnl": 2280577,
+      "capital": 19524494
+    },
+    {
+      "date": "2025-12-24",
+      "trades": [
+        {
+          "ticker": "SOBR",
+          "buy": 1.66,
+          "sell": 2.18,
+          "reason": "원본(+31.3%)",
+          "shares": 4216867,
+          "pnl": 2192771,
+          "pnl_pct": 31.3,
+          "orig_pnl": 31.6
+        },
+        {
+          "ticker": "ELOG",
+          "buy": 2.62,
+          "sell": 2.227,
+          "reason": "손절(-15%)",
+          "shares": 1145038,
+          "pnl": -450000,
+          "pnl_pct": -15.0,
+          "orig_pnl": -19.4
+        },
+        {
+          "ticker": "AMCI",
+          "buy": 6.59,
+          "sell": 8.79,
+          "reason": "원본(+33.4%)",
+          "shares": 455235,
+          "pnl": 1001517,
+          "pnl_pct": 33.4,
+          "orig_pnl": 33.3
+        },
+        {
+          "ticker": "INDP",
+          "buy": 3.22,
+          "sell": 2.737,
+          "reason": "손절(-15%)",
+          "shares": 931677,
+          "pnl": -450000,
+          "pnl_pct": -15.0,
+          "orig_pnl": -15.6
+        },
+        {
+          "ticker": "OMER",
+          "buy": 9.7,
+          "sell": 13.095,
+          "reason": "익절(+35%)",
+          "shares": 309278,
+          "pnl": 1049999,
+          "pnl_pct": 35.0,
+          "orig_pnl": 57.0
+        },
+        {
+          "ticker": "SIDU",
+          "buy": 2.05,
+          "sell": 2.3,
+          "reason": "원본(+12.2%)",
+          "shares": 1463414,
+          "pnl": 365854,
+          "pnl_pct": 12.2,
+          "orig_pnl": 12.3
+        }
+      ],
+      "day_pnl": 3710140,
+      "capital": 23234634
+    },
+    {
+      "date": "2025-12-26",
+      "trades": [
+        {
+          "ticker": "SIDU",
+          "buy": 3.06,
+          "sell": 2.601,
+          "reason": "손절(-15%)",
+          "shares": 2287581,
+          "pnl": -1050000,
+          "pnl_pct": -15.0,
+          "orig_pnl": -15.1
+        },
+        {
+          "ticker": "ECDA",
+          "buy": 1.21,
+          "sell": 1.6335,
+          "reason": "익절(+35%)",
+          "shares": 2479338,
+          "pnl": 1050000,
+          "pnl_pct": 35.0,
+          "orig_pnl": 36.1
+        },
+        {
+          "ticker": "SOPA",
+          "buy": 1.33,
+          "sell": 1.75,
+          "reason": "원본(+31.6%)",
+          "shares": 2255639,
+          "pnl": 947368,
+          "pnl_pct": 31.6,
+          "orig_pnl": 31.2
+        }
+      ],
+      "day_pnl": 947368,
+      "capital": 24182002
+    },
+    {
+      "date": "2025-12-29",
+      "trades": [
+        {
+          "ticker": "SOPA",
+          "buy": 2.03,
+          "sell": 2.66,
+          "reason": "원본(+31.0%)",
+          "shares": 3448275,
+          "pnl": 2172413,
+          "pnl_pct": 31.0,
+          "orig_pnl": 31.2
+        },
+        {
+          "ticker": "BNAI",
+          "buy": 1.54,
+          "sell": 2.079,
+          "reason": "익절(+35%)",
+          "shares": 1948051,
+          "pnl": 1049999,
+          "pnl_pct": 35.0,
+          "orig_pnl": 41.8
+        },
+        {
+          "ticker": "MSTX",
+          "buy": 4.36,
+          "sell": 4.01,
+          "reason": "원본(-8.0%)",
+          "shares": 688073,
+          "pnl": -240826,
+          "pnl_pct": -8.0,
+          "orig_pnl": -8.1
+        },
+        {
+          "ticker": "SIDU",
+          "buy": 2.26,
+          "sell": 2.85,
+          "reason": "원본(+26.1%)",
+          "shares": 1327433,
+          "pnl": 783185,
+          "pnl_pct": 26.1,
+          "orig_pnl": 26.1
+        }
+      ],
+      "day_pnl": 3764773,
+      "capital": 27946775
+    },
+    {
+      "date": "2025-12-30",
+      "trades": [
+        {
+          "ticker": "EKSO",
+          "buy": 7.86,
+          "sell": 10.6,
+          "reason": "원본(+34.9%)",
+          "shares": 890585,
+          "pnl": 2440203,
+          "pnl_pct": 34.9,
+          "orig_pnl": 34.8
+        },
+        {
+          "ticker": "AEHL",
+          "buy": 1.81,
+          "sell": 2.223,
+          "reason": "BB트레일(+22.8%)",
+          "shares": 1657458,
+          "pnl": 684530,
+          "pnl_pct": 22.8,
+          "orig_pnl": 34.7
+        },
+        {
+          "ticker": "SOPA",
+          "buy": 3.02,
+          "sell": 3.97,
+          "reason": "원본(+31.5%)",
+          "shares": 993377,
+          "pnl": 943708,
+          "pnl_pct": 31.5,
+          "orig_pnl": 31.5
+        },
+        {
+          "ticker": "CETX",
+          "buy": 2.78,
+          "sell": 3.05,
+          "reason": "원본(+9.7%)",
+          "shares": 1079136,
+          "pnl": 291367,
+          "pnl_pct": 9.7,
+          "orig_pnl": 9.9
+        },
+        {
+          "ticker": "SIDU",
+          "buy": 2.91,
+          "sell": 2.64,
+          "reason": "원본(-9.3%)",
+          "shares": 1030927,
+          "pnl": -278350,
+          "pnl_pct": -9.3,
+          "orig_pnl": -9.2
+        }
+      ],
+      "day_pnl": 4081458,
+      "capital": 32028233
+    },
+    {
+      "date": "2025-12-31",
+      "trades": [
+        {
+          "ticker": "INBS",
+          "buy": 5.07,
+          "sell": 6.8445,
+          "reason": "익절(+35%)",
+          "shares": 591715,
+          "pnl": 1049998,
+          "pnl_pct": 35.0,
+          "orig_pnl": 39.2
+        },
+        {
+          "ticker": "SIDU",
+          "buy": 2.73,
+          "sell": 3.55,
+          "reason": "원본(+30.0%)",
+          "shares": 1098901,
+          "pnl": 901099,
+          "pnl_pct": 30.0,
+          "orig_pnl": 30.2
+        },
+        {
+          "ticker": "ANGH",
+          "buy": 3.53,
+          "sell": 3.78,
+          "reason": "원본(+7.1%)",
+          "shares": 1983002,
+          "pnl": 495750,
+          "pnl_pct": 7.1,
+          "orig_pnl": 7.0
+        }
+      ],
+      "day_pnl": 2446848,
+      "capital": 34475080
+    },
+    {
+      "date": "2026-01-02",
+      "trades": [
+        {
+          "ticker": "BNAI",
+          "buy": 2.65,
+          "sell": 3.52,
+          "reason": "원본(+32.8%)",
+          "shares": 2641509,
+          "pnl": 2298113,
+          "pnl_pct": 32.8,
+          "orig_pnl": 32.9
+        },
+        {
+          "ticker": "LVRO",
+          "buy": 1.24,
+          "sell": 1.054,
+          "reason": "손절(-15%)",
+          "shares": 2419354,
+          "pnl": -450000,
+          "pnl_pct": -15.0,
+          "orig_pnl": -19.9
+        },
+        {
+          "ticker": "IRWD",
+          "buy": 4.05,
+          "sell": 5.27,
+          "reason": "원본(+30.1%)",
+          "shares": 740740,
+          "pnl": 903703,
+          "pnl_pct": 30.1,
+          "orig_pnl": 30.2
+        },
+        {
+          "ticker": "UAVS",
+          "buy": 1.08,
+          "sell": 1.16,
+          "reason": "원본(+7.4%)",
+          "shares": 2777777,
+          "pnl": 222222,
+          "pnl_pct": 7.4,
+          "orig_pnl": 7.5
+        },
+        {
+          "ticker": "SIDU",
+          "buy": 4.03,
+          "sell": 4.6,
+          "reason": "원본(+14.1%)",
+          "shares": 744416,
+          "pnl": 424317,
+          "pnl_pct": 14.1,
+          "orig_pnl": 14.3
+        }
+      ],
+      "day_pnl": 3398355,
+      "capital": 37873435
+    },
+    {
+      "date": "2026-01-05",
+      "trades": [
+        {
+          "ticker": "MNTS",
+          "buy": 8.63,
+          "sell": 11.43,
+          "reason": "원본(+32.4%)",
+          "shares": 811123,
+          "pnl": 2271144,
+          "pnl_pct": 32.4,
+          "orig_pnl": 32.5
+        },
+        {
+          "ticker": "VRME",
+          "buy": 0.99,
+          "sell": 1.31,
+          "reason": "원본(+32.3%)",
+          "shares": 3030303,
+          "pnl": 969697,
+          "pnl_pct": 32.3,
+          "orig_pnl": 31.7
+        },
+        {
+          "ticker": "TMDE",
+          "buy": 1.22,
+          "sell": 1.037,
+          "reason": "손절(-15%)",
+          "shares": 2459016,
+          "pnl": -450000,
+          "pnl_pct": -15.0,
+          "orig_pnl": -15.2
+        },
+        {
+          "ticker": "SIDU",
+          "buy": 5.62,
+          "sell": 4.777,
+          "reason": "손절(-15%)",
+          "shares": 533807,
+          "pnl": -449999,
+          "pnl_pct": -15.0,
+          "orig_pnl": -17.0
+        },
+        {
+          "ticker": "DVLT",
+          "buy": 1.3,
+          "sell": 1.37,
+          "reason": "원본(+5.4%)",
+          "shares": 2307692,
+          "pnl": 161538,
+          "pnl_pct": 5.4,
+          "orig_pnl": 5.0
+        }
+      ],
+      "day_pnl": 2502381,
+      "capital": 40375816
+    },
+    {
+      "date": "2026-01-06",
+      "trades": [
+        {
+          "ticker": "ALMS",
+          "buy": 17.47,
+          "sell": 16.23,
+          "reason": "장마감(-7.1%)",
+          "shares": 400686,
+          "pnl": -496851,
+          "pnl_pct": -7.1,
+          "orig_pnl": -17.2
+        },
+        {
+          "ticker": "CYCN",
+          "buy": 2.12,
+          "sell": 1.91,
+          "reason": "원본(-9.9%)",
+          "shares": 1415094,
+          "pnl": -297170,
+          "pnl_pct": -9.9,
+          "orig_pnl": -9.7
+        },
+        {
+          "ticker": "SIDU",
+          "buy": 4.24,
+          "sell": 5.25,
+          "reason": "원본(+23.8%)",
+          "shares": 707547,
+          "pnl": 714622,
+          "pnl_pct": 23.8,
+          "orig_pnl": 23.7
+        }
+      ],
+      "day_pnl": -79398,
+      "capital": 40296418
+    },
+    {
+      "date": "2026-01-07",
+      "trades": [
+        {
+          "ticker": "BYND",
+          "buy": 1.03,
+          "sell": 1.04,
+          "reason": "원본(+1.0%)",
+          "shares": 6796116,
+          "pnl": 67961,
+          "pnl_pct": 1.0,
+          "orig_pnl": 1.1
+        },
+        {
+          "ticker": "SIDU",
+          "buy": 5.09,
+          "sell": 4.61,
+          "reason": "원본(-9.4%)",
+          "shares": 589390,
+          "pnl": -282907,
+          "pnl_pct": -9.4,
+          "orig_pnl": -9.3
+        }
+      ],
+      "day_pnl": -214946,
+      "capital": 40081472
+    },
+    {
+      "date": "2026-01-08",
+      "trades": [
+        {
+          "ticker": "FLYX",
+          "buy": 5.96,
+          "sell": 7.8,
+          "reason": "원본(+30.9%)",
+          "shares": 1174496,
+          "pnl": 2161073,
+          "pnl_pct": 30.9,
+          "orig_pnl": 30.8
+        },
+        {
+          "ticker": "APLD",
+          "buy": 34.19,
+          "sell": 31.95,
+          "reason": "원본(-6.6%)",
+          "shares": 87744,
+          "pnl": -196547,
+          "pnl_pct": -6.6,
+          "orig_pnl": -6.6
+        },
+        {
+          "ticker": "OPEN",
+          "buy": 6.78,
+          "sell": 7.22,
+          "reason": "원본(+6.5%)",
+          "shares": 442477,
+          "pnl": 194690,
+          "pnl_pct": 6.5,
+          "orig_pnl": 6.6
+        }
+      ],
+      "day_pnl": 2159216,
+      "capital": 42240688
+    },
+    {
+      "date": "2026-01-09",
+      "trades": [
+        {
+          "ticker": "GP",
+          "buy": 1.24,
+          "sell": 1.054,
+          "reason": "손절(-15%)",
+          "shares": 5645161,
+          "pnl": -1050000,
+          "pnl_pct": -15.0,
+          "orig_pnl": -15.7
+        },
+        {
+          "ticker": "SMR",
+          "buy": 21.97,
+          "sell": 20.69,
+          "reason": "원본(-5.8%)",
+          "shares": 136549,
+          "pnl": -174783,
+          "pnl_pct": -5.8,
+          "orig_pnl": -5.8
+        },
+        {
+          "ticker": "OPAD",
+          "buy": 2.24,
+          "sell": 2.07,
+          "reason": "원본(-7.6%)",
+          "shares": 1339285,
+          "pnl": -227678,
+          "pnl_pct": -7.6,
+          "orig_pnl": -7.5
+        }
+      ],
+      "day_pnl": -1452461,
+      "capital": 40788227
+    },
+    {
+      "date": "2026-01-12",
+      "trades": [
+        {
+          "ticker": "BDSX",
+          "buy": 7.8,
+          "sell": 6.63,
+          "reason": "손절(-15%)",
+          "shares": 897435,
+          "pnl": -1049999,
+          "pnl_pct": -15.0,
+          "orig_pnl": -15.5
+        },
+        {
+          "ticker": "EVTV",
+          "buy": 1.12,
+          "sell": 1.46,
+          "reason": "원본(+30.4%)",
+          "shares": 2678571,
+          "pnl": 910714,
+          "pnl_pct": 30.4,
+          "orig_pnl": 30.4
+        },
+        {
+          "ticker": "ONDS",
+          "buy": 14.89,
+          "sell": 13.35,
+          "reason": "원본(-10.3%)",
+          "shares": 201477,
+          "pnl": -310275,
+          "pnl_pct": -10.3,
+          "orig_pnl": -10.3
+        },
+        {
+          "ticker": "AMC",
+          "buy": 1.65,
+          "sell": 1.73,
+          "reason": "원본(+4.8%)",
+          "shares": 1818181,
+          "pnl": 145454,
+          "pnl_pct": 4.8,
+          "orig_pnl": 4.8
+        }
+      ],
+      "day_pnl": -304105,
+      "capital": 40484122
+    },
+    {
+      "date": "2026-01-13",
+      "trades": [
+        {
+          "ticker": "ATON",
+          "buy": 2.16,
+          "sell": 1.836,
+          "reason": "손절(-15%)",
+          "shares": 3240740,
+          "pnl": -1050000,
+          "pnl_pct": -15.0,
+          "orig_pnl": -15.4
+        },
+        {
+          "ticker": "DCOY",
+          "buy": 1.05,
+          "sell": 1.38,
+          "reason": "원본(+31.4%)",
+          "shares": 2857142,
+          "pnl": 942857,
+          "pnl_pct": 31.4,
+          "orig_pnl": 31.0
+        },
+        {
+          "ticker": "EVTV",
+          "buy": 3.29,
+          "sell": 2.7965,
+          "reason": "손절(-15%)",
+          "shares": 911854,
+          "pnl": -450000,
+          "pnl_pct": -15.0,
+          "orig_pnl": -16.6
+        },
+        {
+          "ticker": "XAIR",
+          "buy": 1.37,
+          "sell": 1.79,
+          "reason": "원본(+30.7%)",
+          "shares": 2189781,
+          "pnl": 919708,
+          "pnl_pct": 30.7,
+          "orig_pnl": 30.7
+        }
+      ],
+      "day_pnl": 362565,
+      "capital": 40846687
+    },
+    {
+      "date": "2026-01-14",
+      "trades": [
+        {
+          "ticker": "ROLR",
+          "buy": 7.86,
+          "sell": 10.611,
+          "reason": "익절(+35%)",
+          "shares": 890585,
+          "pnl": 2449999,
+          "pnl_pct": 35.0,
+          "orig_pnl": 53.7
+        },
+        {
+          "ticker": "CRML",
+          "buy": 14.91,
+          "sell": 17.6,
+          "reason": "원본(+18.0%)",
+          "shares": 201207,
+          "pnl": 541247,
+          "pnl_pct": 18.0,
+          "orig_pnl": 18.1
+        }
+      ],
+      "day_pnl": 2991246,
+      "capital": 43837933
+    },
+    {
+      "date": "2026-01-15",
+      "trades": [
+        {
+          "ticker": "AUID",
+          "buy": 1.54,
+          "sell": 2.079,
+          "reason": "익절(+35%)",
+          "shares": 4545454,
+          "pnl": 2450000,
+          "pnl_pct": 35.0,
+          "orig_pnl": 35.9
+        },
+        {
+          "ticker": "IBRX",
+          "buy": 3.42,
+          "sell": 4.48,
+          "reason": "원본(+31.0%)",
+          "shares": 877192,
+          "pnl": 929824,
+          "pnl_pct": 31.0,
+          "orig_pnl": 30.8
+        },
+        {
+          "ticker": "BYND",
+          "buy": 1.07,
+          "sell": 1.03,
+          "reason": "원본(-3.7%)",
+          "shares": 2803738,
+          "pnl": -112150,
+          "pnl_pct": -3.7,
+          "orig_pnl": -4.0
+        },
+        {
+          "ticker": "SOXS",
+          "buy": 2.11,
+          "sell": 2.12,
+          "reason": "원본(+0.5%)",
+          "shares": 1421800,
+          "pnl": 14218,
+          "pnl_pct": 0.5,
+          "orig_pnl": 0.6
+        }
+      ],
+      "day_pnl": 3281892,
+      "capital": 47119825
+    },
+    {
+      "date": "2026-01-16",
+      "trades": [
+        {
+          "ticker": "IBRX",
+          "buy": 4.93,
+          "sell": 6.43,
+          "reason": "원본(+30.4%)",
+          "shares": 1419878,
+          "pnl": 2129817,
+          "pnl_pct": 30.4,
+          "orig_pnl": 30.4
+        },
+        {
+          "ticker": "JAGX",
+          "buy": 0.96,
+          "sell": 1.25,
+          "reason": "원본(+30.2%)",
+          "shares": 3125000,
+          "pnl": 906250,
+          "pnl_pct": 30.2,
+          "orig_pnl": 30.2
+        },
+        {
+          "ticker": "VERO",
+          "buy": 2.75,
+          "sell": 3.63,
+          "reason": "원본(+32.0%)",
+          "shares": 1090909,
+          "pnl": 960000,
+          "pnl_pct": 32.0,
+          "orig_pnl": 31.8
+        },
+        {
+          "ticker": "ONDS",
+          "buy": 13.78,
+          "sell": 12.31,
+          "reason": "원본(-10.7%)",
+          "shares": 217706,
+          "pnl": -320028,
+          "pnl_pct": -10.7,
+          "orig_pnl": -10.7
+        }
+      ],
+      "day_pnl": 3676039,
+      "capital": 50795864
+    },
+    {
+      "date": "2026-01-20",
+      "trades": [
+        {
+          "ticker": "CRVS",
+          "buy": 10.85,
+          "sell": 14.42,
+          "reason": "원본(+32.9%)",
+          "shares": 645161,
+          "pnl": 2303225,
+          "pnl_pct": 32.9,
+          "orig_pnl": 32.9
+        },
+        {
+          "ticker": "IVF",
+          "buy": 4.24,
+          "sell": 3.604,
+          "reason": "손절(-15%)",
+          "shares": 707547,
+          "pnl": -450000,
+          "pnl_pct": -15.0,
+          "orig_pnl": -18.1
+        },
+        {
+          "ticker": "SEGG",
+          "buy": 1.4,
+          "sell": 1.89,
+          "reason": "익절(+35%)",
+          "shares": 2142857,
+          "pnl": 1050000,
+          "pnl_pct": 35.0,
+          "orig_pnl": 42.5
+        },
+        {
+          "ticker": "RZLV",
+          "buy": 4.56,
+          "sell": 3.876,
+          "reason": "손절(-15%)",
+          "shares": 657894,
+          "pnl": -449999,
+          "pnl_pct": -15.0,
+          "orig_pnl": -18.3
+        },
+        {
+          "ticker": "POLA",
+          "buy": 2.24,
+          "sell": 2.97,
+          "reason": "원본(+32.6%)",
+          "shares": 1339285,
+          "pnl": 977678,
+          "pnl_pct": 32.6,
+          "orig_pnl": 32.4
+        },
+        {
+          "ticker": "BTTC",
+          "buy": 2.01,
+          "sell": 2.63,
+          "reason": "원본(+30.8%)",
+          "shares": 1492537,
+          "pnl": 925373,
+          "pnl_pct": 30.8,
+          "orig_pnl": 30.9
+        },
+        {
+          "ticker": "SHPH",
+          "buy": 1.83,
+          "sell": 2.4705,
+          "reason": "익절(+35%)",
+          "shares": 1639344,
+          "pnl": 1050000,
+          "pnl_pct": 35.0,
+          "orig_pnl": 50.8
+        },
+        {
+          "ticker": "IBRX",
+          "buy": 5.9,
+          "sell": 7.77,
+          "reason": "원본(+31.7%)",
+          "shares": 508474,
+          "pnl": 950846,
+          "pnl_pct": 31.7,
+          "orig_pnl": 31.6
+        },
+        {
+          "ticker": "ONDS",
+          "buy": 12.93,
+          "sell": 13.28,
+          "reason": "원본(+2.7%)",
+          "shares": 232018,
+          "pnl": 81206,
+          "pnl_pct": 2.7,
+          "orig_pnl": 2.7
+        }
+      ],
+      "day_pnl": 6438329,
+      "capital": 57234193
+    },
+    {
+      "date": "2026-01-21",
+      "trades": [
+        {
+          "ticker": "BOXL",
+          "buy": 2.61,
+          "sell": 2.2185,
+          "reason": "손절(-15%)",
+          "shares": 1149425,
+          "pnl": -450000,
+          "pnl_pct": -15.0,
+          "orig_pnl": -15.3
+        },
+        {
+          "ticker": "GORO",
+          "buy": 1.83,
+          "sell": 1.5555,
+          "reason": "손절(-15%)",
+          "shares": 1639344,
+          "pnl": -450000,
+          "pnl_pct": -15.0,
+          "orig_pnl": -15.2
+        },
+        {
+          "ticker": "NAMM",
+          "buy": 1.18,
+          "sell": 1.57,
+          "reason": "원본(+33.1%)",
+          "shares": 2542372,
+          "pnl": 991525,
+          "pnl_pct": 33.1,
+          "orig_pnl": 33.5
+        },
+        {
+          "ticker": "GITS",
+          "buy": 1.27,
+          "sell": 1.7145,
+          "reason": "익절(+35%)",
+          "shares": 2362204,
+          "pnl": 1050000,
+          "pnl_pct": 35.0,
+          "orig_pnl": 47.6
+        },
+        {
+          "ticker": "PLUG",
+          "buy": 2.44,
+          "sell": 2.25,
+          "reason": "원본(-7.8%)",
+          "shares": 2868852,
+          "pnl": -545082,
+          "pnl_pct": -7.8,
+          "orig_pnl": -7.9
+        },
+        {
+          "ticker": "RR",
+          "buy": 4.21,
+          "sell": 4.35,
+          "reason": "원본(+3.3%)",
+          "shares": 712589,
+          "pnl": 99762,
+          "pnl_pct": 3.3,
+          "orig_pnl": 3.3
+        }
+      ],
+      "day_pnl": 696206,
+      "capital": 57930398
+    },
+    {
+      "date": "2026-01-22",
+      "trades": [
+        {
+          "ticker": "NAMM",
+          "buy": 2.17,
+          "sell": 2.9295,
+          "reason": "익절(+35%)",
+          "shares": 1382488,
+          "pnl": 1050000,
+          "pnl_pct": 35.0,
+          "orig_pnl": 35.5
+        },
+        {
+          "ticker": "SXTP",
+          "buy": 2.87,
+          "sell": 2.44,
+          "reason": "원본(-15.0%)",
+          "shares": 1045296,
+          "pnl": -449477,
+          "pnl_pct": -15.0,
+          "orig_pnl": -15.0
+        },
+        {
+          "ticker": "CMCT",
+          "buy": 4.29,
+          "sell": 5.63,
+          "reason": "원본(+31.2%)",
+          "shares": 699300,
+          "pnl": 937062,
+          "pnl_pct": 31.2,
+          "orig_pnl": 31.3
+        },
+        {
+          "ticker": "IBRX",
+          "buy": 7.87,
+          "sell": 7.44,
+          "reason": "원본(-5.5%)",
+          "shares": 889453,
+          "pnl": -382465,
+          "pnl_pct": -5.5,
+          "orig_pnl": -5.4
+        },
+        {
+          "ticker": "RR",
+          "buy": 4.73,
+          "sell": 4.45,
+          "reason": "원본(-5.9%)",
+          "shares": 634249,
+          "pnl": -177590,
+          "pnl_pct": -5.9,
+          "orig_pnl": -5.9
+        }
+      ],
+      "day_pnl": 977530,
+      "capital": 58907928
+    },
+    {
+      "date": "2026-01-23",
+      "trades": [
+        {
+          "ticker": "DRCT",
+          "buy": 3.54,
+          "sell": 4.6,
+          "reason": "원본(+29.9%)",
+          "shares": 1977401,
+          "pnl": 2096045,
+          "pnl_pct": 29.9,
+          "orig_pnl": 30.1
+        },
+        {
+          "ticker": "THH",
+          "buy": 1.05,
+          "sell": 1.4,
+          "reason": "원본(+33.3%)",
+          "shares": 2857142,
+          "pnl": 1000000,
+          "pnl_pct": 33.3,
+          "orig_pnl": 33.7
+        },
+        {
+          "ticker": "KUST",
+          "buy": 2.3,
+          "sell": 3.04,
+          "reason": "원본(+32.2%)",
+          "shares": 1304347,
+          "pnl": 965217,
+          "pnl_pct": 32.2,
+          "orig_pnl": 32.2
+        }
+      ],
+      "day_pnl": 4061262,
+      "capital": 62969190
+    },
+    {
+      "date": "2026-01-26",
+      "trades": [
+        {
+          "ticker": "EVTV",
+          "buy": 2.61,
+          "sell": 3.41,
+          "reason": "원본(+30.7%)",
+          "shares": 2681992,
+          "pnl": 2145594,
+          "pnl_pct": 30.7,
+          "orig_pnl": 30.5
+        },
+        {
+          "ticker": "GORO",
+          "buy": 1.98,
+          "sell": 1.683,
+          "reason": "손절(-15%)",
+          "shares": 1515151,
+          "pnl": -450000,
+          "pnl_pct": -15.0,
+          "orig_pnl": -15.4
+        },
+        {
+          "ticker": "NAMM",
+          "buy": 4.13,
+          "sell": 5.4,
+          "reason": "원본(+30.8%)",
+          "shares": 726392,
+          "pnl": 922518,
+          "pnl_pct": 30.8,
+          "orig_pnl": 30.7
+        },
+        {
+          "ticker": "BATL",
+          "buy": 3.35,
+          "sell": 4.42,
+          "reason": "원본(+31.9%)",
+          "shares": 895522,
+          "pnl": 958209,
+          "pnl_pct": 31.9,
+          "orig_pnl": 31.9
+        },
+        {
+          "ticker": "MBAI",
+          "buy": 1.73,
+          "sell": 2.28,
+          "reason": "원본(+31.8%)",
+          "shares": 1734104,
+          "pnl": 953757,
+          "pnl_pct": 31.8,
+          "orig_pnl": 31.8
+        },
+        {
+          "ticker": "GXAI",
+          "buy": 1.23,
+          "sell": 1.6605,
+          "reason": "익절(+35%)",
+          "shares": 2439024,
+          "pnl": 1050000,
+          "pnl_pct": 35.0,
+          "orig_pnl": 47.4
+        }
+      ],
+      "day_pnl": 5580077,
+      "capital": 68549267
+    },
+    {
+      "date": "2026-01-27",
+      "trades": [
+        {
+          "ticker": "IVF",
+          "buy": 1.38,
+          "sell": 1.863,
+          "reason": "익절(+35%)",
+          "shares": 2173913,
+          "pnl": 1050000,
+          "pnl_pct": 35.0,
+          "orig_pnl": 41.1
+        },
+        {
+          "ticker": "GNTA",
+          "buy": 2.0,
+          "sell": 2.64,
+          "reason": "원본(+32.0%)",
+          "shares": 1500000,
+          "pnl": 960000,
+          "pnl_pct": 32.0,
+          "orig_pnl": 32.2
+        },
+        {
+          "ticker": "CYN",
+          "buy": 3.51,
+          "sell": 2.9835,
+          "reason": "손절(-15%)",
+          "shares": 854700,
+          "pnl": -450000,
+          "pnl_pct": -15.0,
+          "orig_pnl": -16.3
+        },
+        {
+          "ticker": "RR",
+          "buy": 4.58,
+          "sell": 5.55,
+          "reason": "원본(+21.2%)",
+          "shares": 1528384,
+          "pnl": 1482532,
+          "pnl_pct": 21.2,
+          "orig_pnl": 21.2
+        },
+        {
+          "ticker": "RDW",
+          "buy": 11.82,
+          "sell": 14.74,
+          "reason": "원본(+24.7%)",
+          "shares": 253807,
+          "pnl": 741116,
+          "pnl_pct": 24.7,
+          "orig_pnl": 24.7
+        }
+      ],
+      "day_pnl": 3783649,
+      "capital": 72332916
+    },
+    {
+      "date": "2026-01-28",
+      "trades": [
+        {
+          "ticker": "FEED",
+          "buy": 1.37,
+          "sell": 1.81,
+          "reason": "원본(+32.1%)",
+          "shares": 5109489,
+          "pnl": 2248175,
+          "pnl_pct": 32.1,
+          "orig_pnl": 32.5
+        },
+        {
+          "ticker": "TIRX",
+          "buy": 1.0,
+          "sell": 1.31,
+          "reason": "원본(+31.0%)",
+          "shares": 3000000,
+          "pnl": 930000,
+          "pnl_pct": 31.0,
+          "orig_pnl": 30.6
+        },
+        {
+          "ticker": "TSLL",
+          "buy": 18.28,
+          "sell": 17.9,
+          "reason": "원본(-2.1%)",
+          "shares": 164113,
+          "pnl": -62363,
+          "pnl_pct": -2.1,
+          "orig_pnl": -2.1
+        },
+        {
+          "ticker": "PDYN",
+          "buy": 8.21,
+          "sell": 7.23,
+          "reason": "원본(-11.9%)",
+          "shares": 365408,
+          "pnl": -358100,
+          "pnl_pct": -11.9,
+          "orig_pnl": -11.9
+        }
+      ],
+      "day_pnl": 2757712,
+      "capital": 75090628
+    },
+    {
+      "date": "2026-01-29",
+      "trades": [
+        {
+          "ticker": "FEED",
+          "buy": 2.15,
+          "sell": 2.81,
+          "reason": "원본(+30.7%)",
+          "shares": 3255813,
+          "pnl": 2148837,
+          "pnl_pct": 30.7,
+          "orig_pnl": 30.7
+        },
+        {
+          "ticker": "GCTS",
+          "buy": 1.41,
+          "sell": 1.1985,
+          "reason": "손절(-15%)",
+          "shares": 2127659,
+          "pnl": -450000,
+          "pnl_pct": -15.0,
+          "orig_pnl": -17.3
+        },
+        {
+          "ticker": "CATX",
+          "buy": 3.03,
+          "sell": 4.01,
+          "reason": "원본(+32.3%)",
+          "shares": 990099,
+          "pnl": 970297,
+          "pnl_pct": 32.3,
+          "orig_pnl": 32.3
+        },
+        {
+          "ticker": "TSLL",
+          "buy": 17.4,
+          "sell": 16.98,
+          "reason": "원본(-2.4%)",
+          "shares": 172413,
+          "pnl": -72413,
+          "pnl_pct": -2.4,
+          "orig_pnl": -2.4
+        },
+        {
+          "ticker": "ZSL",
+          "buy": 1.68,
+          "sell": 1.57,
+          "reason": "원본(-6.5%)",
+          "shares": 1785714,
+          "pnl": -196429,
+          "pnl_pct": -6.5,
+          "orig_pnl": -6.4
+        }
+      ],
+      "day_pnl": 2400292,
+      "capital": 77490920
+    },
+    {
+      "date": "2026-01-30",
+      "trades": [
+        {
+          "ticker": "PSLV",
+          "buy": 31.63,
+          "sell": 26.8855,
+          "reason": "손절(-15%)",
+          "shares": 221308,
+          "pnl": -1049996,
+          "pnl_pct": -15.0,
+          "orig_pnl": -15.3
+        },
+        {
+          "ticker": "SLV",
+          "buy": 91.23,
+          "sell": 77.5455,
+          "reason": "손절(-15%)",
+          "shares": 32883,
+          "pnl": -449987,
+          "pnl_pct": -15.0,
+          "orig_pnl": -15.2
+        },
+        {
+          "ticker": "ZSL",
+          "buy": 2.14,
+          "sell": 2.79,
+          "reason": "원본(+30.4%)",
+          "shares": 1401869,
+          "pnl": 911215,
+          "pnl_pct": 30.4,
+          "orig_pnl": 30.4
+        },
+        {
+          "ticker": "SOFI",
+          "buy": 25.6,
+          "sell": 22.78,
+          "reason": "원본(-11.0%)",
+          "shares": 117187,
+          "pnl": -330467,
+          "pnl_pct": -11.0,
+          "orig_pnl": -11.0
+        }
+      ],
+      "day_pnl": -919236,
+      "capital": 76571684
+    },
+    {
+      "date": "2026-02-02",
+      "trades": [
+        {
+          "ticker": "DNN",
+          "buy": 3.96,
+          "sell": 3.8,
+          "reason": "원본(-4.0%)",
+          "shares": 1767676,
+          "pnl": -282828,
+          "pnl_pct": -4.0,
+          "orig_pnl": -3.9
+        },
+        {
+          "ticker": "JDST",
+          "buy": 1.98,
+          "sell": 1.91,
+          "reason": "원본(-3.5%)",
+          "shares": 1515151,
+          "pnl": -106061,
+          "pnl_pct": -3.5,
+          "orig_pnl": -3.7
+        }
+      ],
+      "day_pnl": -388889,
+      "capital": 76182796
+    },
+    {
+      "date": "2026-02-03",
+      "trades": [
+        {
+          "ticker": "GXAI",
+          "buy": 1.78,
+          "sell": 2.32,
+          "reason": "원본(+30.3%)",
+          "shares": 3932584,
+          "pnl": 2123595,
+          "pnl_pct": 30.3,
+          "orig_pnl": 30.2
+        },
+        {
+          "ticker": "LIMN",
+          "buy": 1.13,
+          "sell": 1.52,
+          "reason": "원본(+34.5%)",
+          "shares": 2654867,
+          "pnl": 1035398,
+          "pnl_pct": 34.5,
+          "orig_pnl": 34.8
+        },
+        {
+          "ticker": "ZSL",
+          "buy": 2.3,
+          "sell": 2.19,
+          "reason": "원본(-4.8%)",
+          "shares": 1304347,
+          "pnl": -143478,
+          "pnl_pct": -4.8,
+          "orig_pnl": -4.9
+        }
+      ],
+      "day_pnl": 3015515,
+      "capital": 79198311
+    },
+    {
+      "date": "2026-02-04",
+      "trades": [
+        {
+          "ticker": "LIMN",
+          "buy": 1.38,
+          "sell": 1.173,
+          "reason": "손절(-15%)",
+          "shares": 5072463,
+          "pnl": -1050000,
+          "pnl_pct": -15.0,
+          "orig_pnl": -15.7
+        },
+        {
+          "ticker": "BOXL",
+          "buy": 1.66,
+          "sell": 2.18,
+          "reason": "원본(+31.3%)",
+          "shares": 1807228,
+          "pnl": 939759,
+          "pnl_pct": 31.3,
+          "orig_pnl": 31.0
+        },
+        {
+          "ticker": "ELPW",
+          "buy": 1.48,
+          "sell": 1.258,
+          "reason": "손절(-15%)",
+          "shares": 2027027,
+          "pnl": -450000,
+          "pnl_pct": -15.0,
+          "orig_pnl": -15.7
+        }
+      ],
+      "day_pnl": -560241,
+      "capital": 78638070
+    },
+    {
+      "date": "2026-02-05",
+      "trades": [
+        {
+          "ticker": "SOXL",
+          "buy": 53.94,
+          "sell": 51.09,
+          "reason": "원본(-5.3%)",
+          "shares": 129773,
+          "pnl": -369853,
+          "pnl_pct": -5.3,
+          "orig_pnl": -5.3
+        }
+      ],
+      "day_pnl": -369853,
+      "capital": 78268217
+    },
+    {
+      "date": "2026-02-06",
+      "trades": [
+        {
+          "ticker": "MSTU",
+          "buy": 4.65,
+          "sell": 5.58,
+          "reason": "원본(+20.0%)",
+          "shares": 1505376,
+          "pnl": 1400000,
+          "pnl_pct": 20.0,
+          "orig_pnl": 19.9
+        },
+        {
+          "ticker": "SOXS",
+          "buy": 2.14,
+          "sell": 1.86,
+          "reason": "원본(-13.1%)",
+          "shares": 1401869,
+          "pnl": -392523,
+          "pnl_pct": -13.1,
+          "orig_pnl": -13.2
+        }
+      ],
+      "day_pnl": 1007476,
+      "capital": 79275693
+    },
+    {
+      "date": "2026-02-09",
+      "trades": [
+        {
+          "ticker": "BRLS",
+          "buy": 1.26,
+          "sell": 1.071,
+          "reason": "손절(-15%)",
+          "shares": 5555555,
+          "pnl": -1050000,
+          "pnl_pct": -15.0,
+          "orig_pnl": -15.3
+        },
+        {
+          "ticker": "UOKA",
+          "buy": 2.35,
+          "sell": 3.1725,
+          "reason": "익절(+35%)",
+          "shares": 1276595,
+          "pnl": 1049999,
+          "pnl_pct": 35.0,
+          "orig_pnl": 42.3
+        },
+        {
+          "ticker": "LIMN",
+          "buy": 1.96,
+          "sell": 2.57,
+          "reason": "원본(+31.1%)",
+          "shares": 1530612,
+          "pnl": 933673,
+          "pnl_pct": 31.1,
+          "orig_pnl": 31.4
+        },
+        {
+          "ticker": "CCHH",
+          "buy": 0.98,
+          "sell": 0.833,
+          "reason": "손절(-15%)",
+          "shares": 3061224,
+          "pnl": -450000,
+          "pnl_pct": -15.0,
+          "orig_pnl": -15.7
+        },
+        {
+          "ticker": "RIG",
+          "buy": 5.05,
+          "sell": 5.68,
+          "reason": "원본(+12.5%)",
+          "shares": 594059,
+          "pnl": 374257,
+          "pnl_pct": 12.5,
+          "orig_pnl": 12.5
+        },
+        {
+          "ticker": "BMNU",
+          "buy": 2.23,
+          "sell": 2.36,
+          "reason": "원본(+5.8%)",
+          "shares": 1345291,
+          "pnl": 174888,
+          "pnl_pct": 5.8,
+          "orig_pnl": 6.0
+        }
+      ],
+      "day_pnl": 1032818,
+      "capital": 80308511
+    },
+    {
+      "date": "2026-02-10",
+      "trades": [
+        {
+          "ticker": "JZXN",
+          "buy": 1.69,
+          "sell": 2.2815,
+          "reason": "익절(+35%)",
+          "shares": 4142011,
+          "pnl": 2450000,
+          "pnl_pct": 35.0,
+          "orig_pnl": 39.6
+        },
+        {
+          "ticker": "ABP",
+          "buy": 2.86,
+          "sell": 2.431,
+          "reason": "손절(-15%)",
+          "shares": 1048951,
+          "pnl": -450000,
+          "pnl_pct": -15.0,
+          "orig_pnl": -15.1
+        },
+        {
+          "ticker": "PHIO",
+          "buy": 1.08,
+          "sell": 1.43,
+          "reason": "원본(+32.4%)",
+          "shares": 2777777,
+          "pnl": 972222,
+          "pnl_pct": 32.4,
+          "orig_pnl": 32.6
+        }
+      ],
+      "day_pnl": 2972221,
+      "capital": 83280732
+    },
+    {
+      "date": "2026-02-11",
+      "trades": [
+        {
+          "ticker": "LYFT",
+          "buy": 14.75,
+          "sell": 13.98,
+          "reason": "원본(-5.2%)",
+          "shares": 474576,
+          "pnl": -365424,
+          "pnl_pct": -5.2,
+          "orig_pnl": -5.2
+        },
+        {
+          "ticker": "ZSL",
+          "buy": 2.18,
+          "sell": 2.27,
+          "reason": "원본(+4.1%)",
+          "shares": 1376146,
+          "pnl": 123853,
+          "pnl_pct": 4.1,
+          "orig_pnl": 4.3
+        }
+      ],
+      "day_pnl": -241570,
+      "capital": 83039162
+    },
+    {
+      "date": "2026-02-12",
+      "trades": [
+        {
+          "ticker": "JDZG",
+          "buy": 1.56,
+          "sell": 2.05,
+          "reason": "원본(+31.4%)",
+          "shares": 4487179,
+          "pnl": 2198718,
+          "pnl_pct": 31.4,
+          "orig_pnl": 31.2
+        },
+        {
+          "ticker": "FSLY",
+          "buy": 13.69,
+          "sell": 17.81,
+          "reason": "원본(+30.1%)",
+          "shares": 219138,
+          "pnl": 902849,
+          "pnl_pct": 30.1,
+          "orig_pnl": 30.1
+        },
+        {
+          "ticker": "ZSL",
+          "buy": 2.47,
+          "sell": 2.66,
+          "reason": "원본(+7.7%)",
+          "shares": 1214574,
+          "pnl": 230769,
+          "pnl_pct": 7.7,
+          "orig_pnl": 7.5
+        }
+      ],
+      "day_pnl": 3332335,
+      "capital": 86371497
+    },
+    {
+      "date": "2026-02-13",
+      "trades": [
+        {
+          "ticker": "RIME",
+          "buy": 1.32,
+          "sell": 1.73,
+          "reason": "원본(+31.1%)",
+          "shares": 5303030,
+          "pnl": 2174242,
+          "pnl_pct": 31.1,
+          "orig_pnl": 30.3
+        },
+        {
+          "ticker": "ZSL",
+          "buy": 2.55,
+          "sell": 2.5,
+          "reason": "원본(-2.0%)",
+          "shares": 1176470,
+          "pnl": -58823,
+          "pnl_pct": -2.0,
+          "orig_pnl": -1.8
+        }
+      ],
+      "day_pnl": 2115419,
+      "capital": 88486916
+    },
+    {
+      "date": "2026-02-17",
+      "trades": [
+        {
+          "ticker": "OLB",
+          "buy": 0.98,
+          "sell": 0.833,
+          "reason": "손절(-15%)",
+          "shares": 7142857,
+          "pnl": -1050000,
+          "pnl_pct": -15.0,
+          "orig_pnl": -16.1
+        },
+        {
+          "ticker": "GXAI",
+          "buy": 1.4,
+          "sell": 1.89,
+          "reason": "익절(+35%)",
+          "shares": 2142857,
+          "pnl": 1050000,
+          "pnl_pct": 35.0,
+          "orig_pnl": 36.9
+        },
+        {
+          "ticker": "PLYX",
+          "buy": 3.2,
+          "sell": 4.32,
+          "reason": "익절(+35%)",
+          "shares": 937500,
+          "pnl": 1050000,
+          "pnl_pct": 35.0,
+          "orig_pnl": 388.1
+        },
+        {
+          "ticker": "RIME",
+          "buy": 3.95,
+          "sell": 5.15,
+          "reason": "원본(+30.4%)",
+          "shares": 759493,
+          "pnl": 911392,
+          "pnl_pct": 30.4,
+          "orig_pnl": 30.4
+        },
+        {
+          "ticker": "GVH",
+          "buy": 1.06,
+          "sell": 1.43,
+          "reason": "원본(+34.9%)",
+          "shares": 2830188,
+          "pnl": 1047170,
+          "pnl_pct": 34.9,
+          "orig_pnl": 34.8
+        },
+        {
+          "ticker": "BDMD",
+          "buy": 0.98,
+          "sell": 1.21,
+          "reason": "원본(+23.5%)",
+          "shares": 3061224,
+          "pnl": 704082,
+          "pnl_pct": 23.5,
+          "orig_pnl": 23.1
+        },
+        {
+          "ticker": "OCUL",
+          "buy": 6.07,
+          "sell": 6.79,
+          "reason": "원본(+11.9%)",
+          "shares": 494233,
+          "pnl": 355848,
+          "pnl_pct": 11.9,
+          "orig_pnl": 11.8
+        }
+      ],
+      "day_pnl": 4068490,
+      "capital": 92555407
+    }
+  ]
+}

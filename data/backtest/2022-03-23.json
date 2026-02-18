@@ -1,0 +1,51 @@
+{
+  "date": "2022-03-23",
+  "monitored": 30,
+  "signals_detected": 2,
+  "trades": [
+    {
+      "ticker": "ALLG",
+      "surge_pct": 11.94,
+      "volume_ratio": 5103.0,
+      "detect_time_kst": "21:40",
+      "detect_price": 11.81,
+      "surge_score": 60930.0,
+      "allocation_pct": 50,
+      "buy_price": 11.03,
+      "buy_time_kst": "21:41",
+      "buy_time_utc": "12:41",
+      "sell_price": 9.35,
+      "sell_time_kst": "22:41",
+      "sell_reason": "손절(-15.2%)",
+      "shares": 33,
+      "invested_krw": 491297,
+      "return_krw": 416560,
+      "pnl_krw": -74737,
+      "pnl_pct": -15.21
+    },
+    {
+      "ticker": "GME",
+      "surge_pct": 7.32,
+      "volume_ratio": 266.0,
+      "detect_time_kst": "22:40",
+      "detect_price": 34.66,
+      "surge_score": 1947.0,
+      "allocation_pct": 50,
+      "buy_price": 34.67,
+      "buy_time_kst": "22:41",
+      "buy_time_utc": "13:41",
+      "sell_price": 33.84,
+      "sell_time_kst": "08:59",
+      "sell_reason": "강제청산(장마감)",
+      "shares": 10,
+      "invested_krw": 468031,
+      "return_krw": 456806,
+      "pnl_krw": -11225,
+      "pnl_pct": -2.4
+    }
+  ],
+  "total_invested_krw": 959328,
+  "total_return_krw": 873366,
+  "total_pnl_krw": -85962,
+  "total_pnl_pct": -8.96
+}

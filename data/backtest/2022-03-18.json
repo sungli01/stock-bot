@@ -1,0 +1,51 @@
+{
+  "date": "2022-03-18",
+  "monitored": 30,
+  "signals_detected": 3,
+  "trades": [
+    {
+      "ticker": "STNE",
+      "surge_pct": 6.09,
+      "volume_ratio": 505.0,
+      "detect_time_kst": "22:35",
+      "detect_price": 12.97,
+      "surge_score": 3075.0,
+      "allocation_pct": 50,
+      "buy_price": 13.1,
+      "buy_time_kst": "22:36",
+      "buy_time_utc": "13:36",
+      "sell_price": 13.61,
+      "sell_time_kst": "08:59",
+      "sell_reason": "강제청산(장마감)",
+      "shares": 28,
+      "invested_krw": 495294,
+      "return_krw": 514458,
+      "pnl_krw": 19164,
+      "pnl_pct": 3.87
+    },
+    {
+      "ticker": "RLX",
+      "surge_pct": 6.48,
+      "volume_ratio": 380.0,
+      "detect_time_kst": "22:58",
+      "detect_price": 2.45,
+      "surge_score": 2462.0,
+      "allocation_pct": 50,
+      "buy_price": 2.46,
+      "buy_time_kst": "22:59",
+      "buy_time_utc": "13:59",
+      "sell_price": 2.38,
+      "sell_time_kst": "08:59",
+      "sell_reason": "강제청산(장마감)",
+      "shares": 150,
+      "invested_krw": 498150,
+      "return_krw": 481950,
+      "pnl_krw": -16200,
+      "pnl_pct": -3.25
+    }
+  ],
+  "total_invested_krw": 993444,
+  "total_return_krw": 996408,
+  "total_pnl_krw": 2964,
+  "total_pnl_pct": 0.3
+}

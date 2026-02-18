@@ -1,0 +1,51 @@
+{
+  "date": "2022-03-08",
+  "monitored": 30,
+  "signals_detected": 2,
+  "trades": [
+    {
+      "ticker": "ENSV",
+      "surge_pct": 11.0,
+      "volume_ratio": 209.0,
+      "detect_time_kst": "22:15",
+      "detect_price": 3.33,
+      "surge_score": 2299.0,
+      "allocation_pct": 50,
+      "buy_price": 3.3,
+      "buy_time_kst": "22:16",
+      "buy_time_utc": "13:16",
+      "sell_price": 4.16,
+      "sell_time_kst": "23:31",
+      "sell_reason": "트레일링(+26.1%,고점$4.88)",
+      "shares": 112,
+      "invested_krw": 498655,
+      "return_krw": 628992,
+      "pnl_krw": 130337,
+      "pnl_pct": 26.14
+    },
+    {
+      "ticker": "NINE",
+      "surge_pct": 5.24,
+      "volume_ratio": 263.0,
+      "detect_time_kst": "19:07",
+      "detect_price": 5.02,
+      "surge_score": 1378.0,
+      "allocation_pct": 50,
+      "buy_price": 5.03,
+      "buy_time_kst": "19:08",
+      "buy_time_utc": "10:08",
+      "sell_price": 5.44,
+      "sell_time_kst": "22:32",
+      "sell_reason": "트레일링(+8.2%,고점$7.24)",
+      "shares": 73,
+      "invested_krw": 495509,
+      "return_krw": 536112,
+      "pnl_krw": 40603,
+      "pnl_pct": 8.19
+    }
+  ],
+  "total_invested_krw": 994164,
+  "total_return_krw": 1165104,
+  "total_pnl_krw": 170940,
+  "total_pnl_pct": 17.19
+}
