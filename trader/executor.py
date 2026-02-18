@@ -92,27 +92,13 @@ class TradeExecutor:
             logger.warning(f"❌ 최대 보유 종목 수 초과 ({current_positions}/{self.max_positions})")
             return []
 
-        # 분할 매수 금액 계산
-        per_split = self.total_buy_amount / self.split_count
-        quantity_per_split = max(1, int(per_split / (price * 1350)))  # 원화→달러 환산 (약 1350원/$)
+        # 총 매수 수량 계산
+        total_quantity = max(1, int(self.total_buy_amount / (price * 1350)))  # 원화→달러 환산
 
-        orders = []
-        for i in range(self.split_count):
-            logger.info(f"📈 {ticker} 분할매수 {i+1}/{self.split_count} — {quantity_per_split}주")
-
-            order = self.kis.buy_market(ticker, quantity_per_split)
-            if order:
-                order["split_index"] = i + 1
-                orders.append(order)
-            else:
-                logger.error(f"  ❌ {i+1}번째 매수 실패 — 중단")
-                break
-
-            # 마지막이 아니면 대기
-            if i < self.split_count - 1:
-                time.sleep(self.split_interval)
-
-        logger.info(f"✅ {ticker} 매수 완료: {len(orders)}/{self.split_count}건 체결")
+        # 3분할 매수 사용
+        logger.info(f"📈 {ticker} 3분할 매수 시작: 총 {total_quantity}주 @${price:.2f}")
+        orders = self.kis.buy_split(ticker, total_quantity)
+        logger.info(f"✅ {ticker} 매수 완료: {len(orders)}/3건 체결")
         return orders
 
     def execute_sell(self, ticker: str, force: bool = False) -> Optional[dict]:
@@ -133,8 +119,16 @@ class TradeExecutor:
             logger.warning(f"❌ {ticker} 보유 수량 없음 — 매도 불가")
             return None
 
-        logger.info(f"📉 {ticker} 일괄매도: {position['quantity']}주")
-        return self.kis.sell_market(ticker, position["quantity"])
+        qty = position["quantity"]
+        if force:
+            # 강제청산은 시장가 일괄
+            logger.info(f"📉 {ticker} 강제 일괄매도: {qty}주")
+            return self.kis.sell_market(ticker, qty)
+
+        # 일반 매도: 2분할 매도
+        logger.info(f"📉 {ticker} 2분할 매도: {qty}주")
+        results = self.kis.sell_split(ticker, qty)
+        return results[-1] if results else None
 
     def execute_stop_loss(self, ticker: str) -> Optional[dict]:
         """긴급 손절 — 즉시 전량 매도"""

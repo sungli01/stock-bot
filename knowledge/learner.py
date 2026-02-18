@@ -3,7 +3,10 @@
 - 매매 완료 시 결과 기록
 - 시그널 정확도 업데이트
 - 지표 가중치 조정 (최근 100건 기반)
+- 지정가 전환 판단
 """
+import os
+import glob
 import json
 import logging
 from datetime import datetime
@@ -179,3 +182,34 @@ class Learner:
         elif indicator == "volume":
             return indicators.get("volume_ratio", 0) > 200
         return False
+
+    # ─── 지정가 전환 판단 ─────────────────────────────────
+    def should_use_limit_orders(self) -> bool:
+        """
+        매매 기록이 충분히 쌓이면 (300건+) 지정가 주문 사용 권장.
+        data/trades/ 디렉토리의 JSON 파일 수를 카운트.
+        """
+        trades_dir = os.path.join(os.path.dirname(__file__), "..", "data", "trades")
+        trades_dir = os.path.abspath(trades_dir)
+
+        if not os.path.isdir(trades_dir):
+            logger.info("data/trades/ 없음 — 지정가 전환 비활성")
+            return False
+
+        trade_count = len(glob.glob(os.path.join(trades_dir, "*.json")))
+        logger.info(f"매매 기록: {trade_count}건 (지정가 전환 기준: 300건)")
+
+        if trade_count >= 300:
+            return True
+        return False
+
+    def calculate_optimal_limit_price(self, ticker: str, side: str, current_price: float) -> float:
+        """
+        지정가 최적 가격 계산
+        TODO: 과거 체결 데이터 분석으로 최적 지정가 offset 계산
+        TODO: 호가 스프레드 분석
+        TODO: 시간대별 체결 패턴 반영
+        TODO: 변동성 기반 동적 offset
+        """
+        # placeholder: 현재가 그대로 반환
+        return current_price

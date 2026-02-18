@@ -193,6 +193,288 @@ class KISClient:
             logger.error(f"잔고 조회 실패: {e}")
             return {"cash": 0, "positions": []}
 
+    # ─── 지정가 주문 ─────────────────────────────────────────
+    def _place_limit_order(self, side: str, ticker: str, quantity: int, price: float) -> Optional[dict]:
+        """해외주식 지정가 주문 (side: 'BUY' or 'SELL')"""
+        if not self.connected:
+            logger.warning(f"[STUB] 지정가 {side}: {ticker} x{quantity} @{price}")
+            return {"order_id": "stub", "ticker": ticker, "quantity": quantity,
+                    "limit_price": price, "filled_price": price,
+                    "filled_at": datetime.now(timezone.utc).isoformat()}
+
+        if side == "BUY":
+            tr_id = "VTTT1002U" if KIS_IS_VIRTUAL else "JTTT1002U"
+        else:
+            tr_id = "VTTT1001U" if KIS_IS_VIRTUAL else "JTTT1006U"
+
+        url = f"{BASE_URL}/uapi/overseas-stock/v1/trading/order"
+        body = {
+            "CANO": KIS_ACCOUNT_NO,
+            "ACNT_PRDT_CD": KIS_ACCOUNT_PRODUCT,
+            "OVRS_EXCG_CD": "NASD",
+            "PDNO": ticker,
+            "ORD_QTY": str(quantity),
+            "OVRS_ORD_UNPR": f"{price:.2f}",
+            "ORD_SVR_DVSN_CD": "0",
+            "ORD_DVSN": "00",  # 지정가
+        }
+        try:
+            r = requests.post(url, headers=self._headers(tr_id), json=body, timeout=10)
+            data = r.json()
+            if data.get("rt_cd") == "0":
+                order_no = data.get("output", {}).get("ODNO", "unknown")
+                logger.info(f"✅ 지정가 {side} 주문: {ticker} x{quantity} @${price:.2f} (#{order_no})")
+                return {
+                    "order_id": order_no,
+                    "ticker": ticker,
+                    "quantity": quantity,
+                    "limit_price": price,
+                    "filled_price": 0,
+                    "filled_at": datetime.now(timezone.utc).isoformat(),
+                }
+            else:
+                msg = data.get("msg1", data.get("msg", "unknown error"))
+                logger.error(f"❌ 지정가 {side} 실패 [{ticker}]: {msg}")
+                return None
+        except Exception as e:
+            logger.error(f"❌ 지정가 {side} 예외 [{ticker}]: {e}")
+            return None
+
+    def _cancel_order(self, order_id: str, ticker: str) -> bool:
+        """해외주식 주문 취소"""
+        if not self.connected:
+            logger.warning(f"[STUB] 주문 취소: {order_id}")
+            return True
+
+        # 정정취소: JTTT1004U (실전) / VTTT1004U (모의)
+        tr_id = "VTTT1004U" if KIS_IS_VIRTUAL else "JTTT1004U"
+        url = f"{BASE_URL}/uapi/overseas-stock/v1/trading/order-rvsecncl"
+        body = {
+            "CANO": KIS_ACCOUNT_NO,
+            "ACNT_PRDT_CD": KIS_ACCOUNT_PRODUCT,
+            "OVRS_EXCG_CD": "NASD",
+            "PDNO": ticker,
+            "ORGN_ODNO": order_id,
+            "RVSE_CNCL_DVSN_CD": "02",  # 02=취소
+            "ORD_QTY": "0",  # 잔량 전부
+            "OVRS_ORD_UNPR": "0",
+            "ORD_SVR_DVSN_CD": "0",
+        }
+        try:
+            r = requests.post(url, headers=self._headers(tr_id), json=body, timeout=10)
+            data = r.json()
+            if data.get("rt_cd") == "0":
+                logger.info(f"✅ 주문 취소 성공: {order_id}")
+                return True
+            else:
+                msg = data.get("msg1", data.get("msg", "unknown error"))
+                logger.warning(f"⚠️ 주문 취소 실패 [{order_id}]: {msg}")
+                return False
+        except Exception as e:
+            logger.error(f"❌ 주문 취소 예외: {e}")
+            return False
+
+    def _check_order_filled(self, order_id: str, ticker: str) -> Optional[dict]:
+        """주문 체결 여부 확인. 체결 시 {'filled': True, 'price': float, 'qty': int}"""
+        if not self.connected:
+            return {"filled": True, "price": 100.0, "qty": 1}
+
+        # 체결 조회: JTTT3001R (실전) / VTTS3001R (모의) — 주문별 체결 내역
+        tr_id = "VTTS3001R" if KIS_IS_VIRTUAL else "JTTT3001R"
+        url = f"{BASE_URL}/uapi/overseas-stock/v1/trading/inquire-ccnl"
+        params = {
+            "CANO": KIS_ACCOUNT_NO,
+            "ACNT_PRDT_CD": KIS_ACCOUNT_PRODUCT,
+            "PDNO": ticker,
+            "ORD_STRT_DT": datetime.now(timezone.utc).strftime("%Y%m%d"),
+            "ORD_END_DT": datetime.now(timezone.utc).strftime("%Y%m%d"),
+            "SLL_BUY_DVSN": "00",
+            "CCLD_NCCS_DVSN": "01",  # 체결만
+            "OVRS_EXCG_CD": "NASD",
+            "SORT_SQN": "DS",
+            "ORD_GNO_BRNO": "",
+            "ODNO": order_id,
+            "CTX_AREA_FK200": "",
+            "CTX_AREA_NK200": "",
+        }
+        try:
+            r = requests.get(url, headers=self._headers(tr_id), params=params, timeout=10)
+            data = r.json()
+            for item in data.get("output1", []):
+                if item.get("ODNO") == order_id or item.get("ORGN_ODNO") == order_id:
+                    filled_qty = int(item.get("FLL_QTY", "0") or item.get("TOT_CCLD_QTY", "0"))
+                    filled_price = float(item.get("FLL_AMT", "0") or item.get("OVRS_EXCG_UNPR", "0"))
+                    if filled_qty > 0 and filled_price > 0:
+                        return {"filled": True, "price": filled_price, "qty": filled_qty}
+            return {"filled": False, "price": 0, "qty": 0}
+        except Exception as e:
+            logger.error(f"체결 조회 실패 [{order_id}]: {e}")
+            return None
+
+    def get_ask_price(self, ticker: str) -> Optional[float]:
+        """해외주식 매도호가(ask) 조회"""
+        # 현재가 조회로 대체 (KIS 호가 API 제한적)
+        return self.get_current_price(ticker)
+
+    # ─── 3분할 매수 ────────────────────────────────────────
+    def buy_split(self, ticker: str, total_quantity: int) -> list[dict]:
+        """
+        3분할 지정가 매수
+        1차 (40%): 현재 ask 가격 지정가 → 즉시
+        2차 (35%): 1차 체결 확인 후 5초 대기 → 체결가 +0.5% 지정가
+        3차 (25%): 2차 체결 후 10초 대기 → 가격 확인 후 진입/취소 판단
+        미체결 15초 후 잔여 주문 취소
+        """
+        orders = []
+        qty1 = max(1, int(total_quantity * 0.40))
+        qty2 = max(1, int(total_quantity * 0.35))
+        qty3 = max(1, total_quantity - qty1 - qty2)
+
+        # ── 1차 매수 (40%) ────────────────────────────
+        ask_price = self.get_ask_price(ticker)
+        if not ask_price:
+            logger.error(f"❌ {ticker} 호가 조회 실패 — 분할매수 중단")
+            return orders
+
+        logger.info(f"📈 {ticker} 분할매수 1/3: {qty1}주 @${ask_price:.2f} (40%)")
+        order1 = self._place_limit_order("BUY", ticker, qty1, ask_price)
+        if not order1:
+            return orders
+
+        # 1차 체결 대기 (최대 15초)
+        fill1 = self._wait_for_fill(order1["order_id"], ticker, timeout=15)
+        if not fill1 or not fill1.get("filled"):
+            logger.warning(f"⚠️ {ticker} 1차 미체결 — 취소 후 중단")
+            self._cancel_order(order1["order_id"], ticker)
+            return orders
+        order1["filled_price"] = fill1["price"]
+        orders.append(order1)
+
+        # ── 2차 매수 (35%) ────────────────────────────
+        time.sleep(5)
+        price2 = round(fill1["price"] * 1.005, 2)  # 체결가 +0.5%
+        logger.info(f"📈 {ticker} 분할매수 2/3: {qty2}주 @${price2:.2f} (35%, +0.5%)")
+        order2 = self._place_limit_order("BUY", ticker, qty2, price2)
+        if not order2:
+            return orders
+
+        fill2 = self._wait_for_fill(order2["order_id"], ticker, timeout=15)
+        if not fill2 or not fill2.get("filled"):
+            logger.warning(f"⚠️ {ticker} 2차 미체결 — 취소")
+            self._cancel_order(order2["order_id"], ticker)
+            return orders
+        order2["filled_price"] = fill2["price"]
+        orders.append(order2)
+
+        # ── 3차 매수 (25%) ────────────────────────────
+        time.sleep(10)
+        current_price = self.get_current_price(ticker)
+        if not current_price:
+            logger.warning(f"⚠️ {ticker} 3차 가격 조회 실패 — 스킵")
+            return orders
+
+        # 3차 진입 판단: 현재가가 평균 체결가 대비 +2% 이내면 진입
+        avg_filled = (fill1["price"] * qty1 + fill2["price"] * qty2) / (qty1 + qty2)
+        if current_price > avg_filled * 1.02:
+            logger.info(f"⚠️ {ticker} 3차 진입 취소 — 가격 급등 (현재 ${current_price:.2f} vs 평균 ${avg_filled:.2f})")
+            return orders
+
+        price3 = round(current_price, 2)
+        logger.info(f"📈 {ticker} 분할매수 3/3: {qty3}주 @${price3:.2f} (25%)")
+        order3 = self._place_limit_order("BUY", ticker, qty3, price3)
+        if not order3:
+            return orders
+
+        fill3 = self._wait_for_fill(order3["order_id"], ticker, timeout=15)
+        if not fill3 or not fill3.get("filled"):
+            logger.warning(f"⚠️ {ticker} 3차 미체결 — 취소")
+            self._cancel_order(order3["order_id"], ticker)
+            return orders
+        order3["filled_price"] = fill3["price"]
+        orders.append(order3)
+
+        logger.info(f"✅ {ticker} 3분할 매수 완료: {len(orders)}/3건 체결")
+        return orders
+
+    # ─── 2분할 매도 ────────────────────────────────────────
+    def sell_split(self, ticker: str, total_quantity: int) -> list[dict]:
+        """
+        2분할 매도
+        1차 (60%): 시장가 즉시
+        2차 (40%): 30초 대기 후 지정가 (1차 체결가 이상), 하락시 시장가 전환
+        """
+        orders = []
+        qty1 = max(1, int(total_quantity * 0.60))
+        qty2 = max(1, total_quantity - qty1)
+
+        # ── 1차 매도 (60%) 시장가 ─────────────────────
+        logger.info(f"📉 {ticker} 분할매도 1/2: {qty1}주 시장가 (60%)")
+        order1 = self.sell_market(ticker, qty1)
+        if not order1:
+            logger.error(f"❌ {ticker} 1차 매도 실패")
+            # 실패 시 전량 시장가 시도
+            fallback = self.sell_market(ticker, total_quantity)
+            if fallback:
+                orders.append(fallback)
+            return orders
+        orders.append(order1)
+
+        # 1차 체결가 확인
+        time.sleep(2)
+        fill1 = self._check_order_filled(order1["order_id"], ticker)
+        fill1_price = fill1["price"] if fill1 and fill1.get("filled") else 0
+
+        # ── 2차 매도 (40%) 30초 대기 ──────────────────
+        time.sleep(30)
+        if fill1_price > 0:
+            # 현재가 확인
+            current_price = self.get_current_price(ticker)
+            if current_price and current_price >= fill1_price:
+                # 지정가 매도 (1차 체결가 이상)
+                limit_price = round(fill1_price, 2)
+                logger.info(f"📉 {ticker} 분할매도 2/2: {qty2}주 지정가 @${limit_price:.2f} (40%)")
+                order2 = self._place_limit_order("SELL", ticker, qty2, limit_price)
+                if order2:
+                    fill2 = self._wait_for_fill(order2["order_id"], ticker, timeout=15)
+                    if fill2 and fill2.get("filled"):
+                        order2["filled_price"] = fill2["price"]
+                        orders.append(order2)
+                    else:
+                        # 미체결 → 시장가 전환
+                        logger.warning(f"⚠️ {ticker} 2차 지정가 미체결 → 시장가 전환")
+                        self._cancel_order(order2["order_id"], ticker)
+                        order2_market = self.sell_market(ticker, qty2)
+                        if order2_market:
+                            orders.append(order2_market)
+                    return orders
+
+            # 하락 시 시장가 전환
+            logger.info(f"📉 {ticker} 분할매도 2/2: {qty2}주 시장가 (하락 감지)")
+            order2 = self.sell_market(ticker, qty2)
+        else:
+            # 1차 체결가 불명 → 시장가
+            logger.info(f"📉 {ticker} 분할매도 2/2: {qty2}주 시장가")
+            order2 = self.sell_market(ticker, qty2)
+
+        if order2:
+            orders.append(order2)
+
+        logger.info(f"✅ {ticker} 2분할 매도 완료: {len(orders)}/2건")
+        return orders
+
+    def _wait_for_fill(self, order_id: str, ticker: str, timeout: int = 15) -> Optional[dict]:
+        """주문 체결 대기 (polling). timeout 초 후 미체결 반환"""
+        elapsed = 0
+        interval = 1.5
+        while elapsed < timeout:
+            result = self._check_order_filled(order_id, ticker)
+            if result and result.get("filled"):
+                return result
+            time.sleep(interval)
+            elapsed += interval
+        return {"filled": False, "price": 0, "qty": 0}
+
+    # ─── 잔고 ──────────────────────────────────────────────
     def get_current_price(self, ticker: str) -> Optional[float]:
         """해외주식 현재가 (Polygon snapshot 사용 권장, 이건 백업용)"""
         if not self.connected:
