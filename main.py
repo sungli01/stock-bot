@@ -238,6 +238,7 @@ def run_live(config: dict):
     )
     from knowledge.file_store import FileStore
     from knowledge.post_trade_tracker import PostTradeTracker
+    from knowledge.bar_recorder import BarRecorder
 
     # Paper Trading 모드
     paper_trader = None
@@ -253,6 +254,7 @@ def run_live(config: dict):
     governor = MarketGovernor(config)
     store = FileStore()
     tracker = PostTradeTracker()
+    bar_recorder = BarRecorder()
 
     # 세션 내 거래/보유 이력 — 장중 절대 재매수 금지
     # 파일에서 당일 이력 복원
@@ -335,6 +337,7 @@ def run_live(config: dict):
                     scanner.reset_session()
                     kis_scanner.reset_session()
                     bb_trailing.reset()
+                    bar_recorder.reset_session()
                     _notifier.reset_dedup()
                     _traded_tickers.clear()
                     _today_date = _get_td()
@@ -448,6 +451,12 @@ def run_live(config: dict):
                     _mark_traded(ticker)
                     scanner.mark_signaled(ticker)
 
+                    # Bar recorder — 매도 기록
+                    try:
+                        bar_recorder.record_exit(ticker, current_price, reason, pnl_pct)
+                    except Exception as e:
+                        logger.error(f"bar_recorder exit 실패: {e}")
+
                     # Post-trade 기록
                     try:
                         tracker.record_trade(ticker, trading_date, {
@@ -545,6 +554,14 @@ def run_live(config: dict):
 
                     if sig["confidence"] < 50:
                         logger.info(f"⏭️ {ticker} 신뢰도 부족 ({sig['confidence']:.0f}%) — 패스")
+                        try:
+                            bar_recorder.record_candidate_skip(ticker, f"low_confidence_{sig['confidence']:.0f}", {
+                                "confidence": sig.get("confidence", 0),
+                                "change_pct": cand.get("change_pct", 0),
+                                "volume_ratio": cand.get("volume_ratio", 0),
+                            })
+                        except Exception:
+                            pass
                         continue
 
                     # 매수 실행
@@ -570,6 +587,14 @@ def run_live(config: dict):
                             bb_trailing.register_entry(ticker)
                             current_count += 1
                             store.save_signal(sig)
+                            try:
+                                bar_recorder.record_entry(ticker, price, {
+                                    "confidence": sig.get("confidence", 0),
+                                    "change_pct": cand.get("change_pct", 0),
+                                    "volume_ratio": cand.get("volume_ratio", 0),
+                                })
+                            except Exception as e:
+                                logger.error(f"bar_recorder entry 실패: {e}")
                             send_notification(
                                 f"[가상] ✅ {ticker} 매수 완료\n"
                                 f"가격: ${price:.2f}\n"
@@ -589,6 +614,14 @@ def run_live(config: dict):
                             bb_trailing.register_entry(ticker)
                             current_count += 1
                             store.save_signal(sig)
+                            try:
+                                bar_recorder.record_entry(ticker, price, {
+                                    "confidence": sig.get("confidence", 0),
+                                    "change_pct": cand.get("change_pct", 0),
+                                    "volume_ratio": cand.get("volume_ratio", 0),
+                                })
+                            except Exception as e:
+                                logger.error(f"bar_recorder entry 실패: {e}")
                             send_notification(
                                 f"✅ {ticker} 매수 완료\n"
                                 f"가격: ${price:.2f}\n"
