@@ -131,6 +131,30 @@ class TradeExecutor:
         results = self.kis.sell_split(ticker, qty)
         return results[-1] if results else None
 
+    def execute_partial_sell(self, ticker: str, ratio: float = 0.5) -> Optional[dict]:
+        """부분 매도 (ratio만큼)"""
+        if not is_trading_window():
+            ts = get_all_timestamps()
+            logger.warning(f"❌ {ticker} 부분 매도 거부 — 매매 시간 외 (KST {ts['kst']})")
+            return None
+
+        balance = self.kis.get_balance()
+        position = None
+        for p in balance.get("positions", []):
+            if p["ticker"] == ticker:
+                position = p
+                break
+
+        if not position or position["quantity"] <= 0:
+            logger.warning(f"❌ {ticker} 보유 수량 없음 — 부분 매도 불가")
+            return None
+
+        qty = int(position["quantity"] * ratio)
+        if qty <= 0:
+            qty = 1
+        logger.info(f"📉 {ticker} 1차 익절 매도: {qty}주 ({ratio*100:.0f}%)")
+        return self.kis.sell_market(ticker, qty)
+
     def execute_stop_loss(self, ticker: str) -> Optional[dict]:
         """긴급 손절 — 즉시 전량 매도"""
         logger.warning(f"🚨 {ticker} 손절 실행!")

@@ -77,6 +77,48 @@ class PaperTrader:
             'amount': amount,
         }
 
+    def partial_sell(self, ticker: str, price: float, ratio: float = 0.5) -> dict | None:
+        """가상 부분 매도 (ratio만큼 물량 매도)"""
+        if ticker not in self.positions:
+            logger.warning(f"[가상] 부분 매도 실패: {ticker} 보유 없음")
+            return None
+
+        pos = self.positions[ticker]
+        sell_shares = pos['shares'] * ratio
+        sell_price = price * (1 - SLIPPAGE)
+        proceeds = sell_shares * sell_price
+        commission = proceeds * COMMISSION_PCT
+
+        pnl_pct = (sell_price / pos['avg_price'] - 1) * 100
+        pnl_krw = proceeds - (sell_shares * pos['avg_price']) - commission
+
+        self.cash += proceeds - commission
+        pos['shares'] -= sell_shares
+
+        trade = {
+            'side': 'PARTIAL_SELL',
+            'ticker': ticker,
+            'price': round(sell_price, 4),
+            'shares': round(sell_shares, 4),
+            'amount': round(proceeds),
+            'commission': round(commission, 2),
+            'pnl_pct': round(pnl_pct, 2),
+            'pnl_krw': round(pnl_krw),
+            'time': datetime.now().isoformat(),
+        }
+        self.trades.append(trade)
+        self.save_state()
+
+        logger.info(f"[가상] 💰 1차 익절 {ticker}: ${sell_price:.2f} ({pnl_pct:+.1f}%) {ratio*100:.0f}% 물량 ₩{pnl_krw:+,.0f}")
+        return {
+            'ticker': ticker,
+            'side': 'PARTIAL_SELL',
+            'price': sell_price,
+            'shares': sell_shares,
+            'pnl_pct': pnl_pct,
+            'pnl_krw': pnl_krw,
+        }
+
     def sell(self, ticker: str, price: float) -> dict | None:
         """가상 매도"""
         if ticker not in self.positions:
