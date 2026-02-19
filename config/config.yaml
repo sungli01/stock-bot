@@ -7,6 +7,7 @@ scanner:
   price_change_pct: 3.0    # 3% 이상 (조기 진입)
   volume_spike_pct: 200.0  # 200% 이상
   rsi_max: 70              # RSI 70 이상 과매수 진입 제외
+  min_daily_volume: 500000 # 일 거래량 50만주 이상만 (유동성 확보)
   timeframe: "5min"
   volume_timeframe: "1min"
 

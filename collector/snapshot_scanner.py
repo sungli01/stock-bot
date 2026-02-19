@@ -42,6 +42,8 @@ class SnapshotScanner:
         self._signaled_tickers: set[str] = set()
         # 급등 최초 감지 시점 {ticker: timestamp} — 5분 경과 시 매수 제외
         self._surge_first_seen: dict[str, float] = {}
+        # 급등 만료 로그 1회만 출력 (로그 과다 방지)
+        self._surge_logged_expire: set[str] = set()
         # 마지막 전체 스냅샷 데이터 (보유종목 가격 조회용)
         self._last_snapshot: dict[str, dict] = {}
 
@@ -143,7 +145,10 @@ class SnapshotScanner:
                     logger.info(f"🚀 {ticker} 급등 최초 감지 ({snap['change_pct']:+.1f}%)")
                 surge_elapsed = scan_time - self._surge_first_seen[ticker]
                 if surge_elapsed > 300:
-                    logger.info(f"⏰ {ticker} 급등 후 {surge_elapsed:.0f}초 경과 — 제외")
+                    # 최초 1회만 로그, 이후 무시
+                    if ticker not in self._surge_logged_expire:
+                        logger.info(f"⏰ {ticker} 급등 후 {surge_elapsed:.0f}초 경과 — 제외")
+                        self._surge_logged_expire.add(ticker)
                     continue
 
             # 급등 초기 감지: 2초 사이 2%+ 상승 → 변동률/거래량 기준 완화
@@ -154,8 +159,9 @@ class SnapshotScanner:
             if abs(snap["change_pct"]) < min_change:
                 continue
 
-            # 절대 거래량 필터
-            if snap["volume"] < self.min_volume:
+            # 절대 거래량 필터 (일 거래량 50만주 이상)
+            min_daily_volume = self.scanner_cfg.get("min_daily_volume", 500_000)
+            if snap["volume"] < min_daily_volume:
                 continue
 
             # 거래량 스파이크 감지: 전일 거래량 대비
@@ -246,4 +252,5 @@ class SnapshotScanner:
         self._prev_prices.clear()
         self._prev_scan_time = 0.0
         self._surge_first_seen.clear()
+        self._surge_logged_expire.clear()
         logger.info("🔄 Snapshot 스캐너 세션 리셋")

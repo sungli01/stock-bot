@@ -25,10 +25,11 @@ class PaperTrader:
         self.trades = []  # 거래 이력
         self.load_state()
 
-    def buy(self, ticker: str, price: float, amount: float) -> dict | None:
+    def buy(self, ticker: str, price: float, amount: float, daily_volume: int = 0) -> dict | None:
         """
-        가상 매수 (슬리피지 0.5% 적용)
+        가상 매수 (슬리피지 0.5% 적용, 실전 체결 가능량 제한)
         amount: 투자 금액 (KRW)
+        daily_volume: 일 거래량 (주) — 0이면 제한 없음
         Returns: 주문 결과 dict or None
         """
         buy_price = price * (1 + SLIPPAGE)
@@ -40,6 +41,19 @@ class PaperTrader:
             return None
 
         shares = amount / buy_price
+
+        # 실전 체결 가능량 제한: 일 거래량의 5% 초과 매수 금지
+        if daily_volume > 0:
+            max_shares = daily_volume * 0.05
+            if shares > max_shares:
+                logger.warning(f"[가상] ⚠️ {ticker} 체결 제한: {shares:.0f}주 → {max_shares:.0f}주 (일거래량 {daily_volume:,}의 5%)")
+                shares = max_shares
+                amount = shares * buy_price
+                commission = amount * COMMISSION_PCT
+                total_cost = amount + commission
+                if total_cost > self.cash:
+                    logger.warning(f"[가상] 잔고 부족 (조정 후): ₩{total_cost:,.0f}")
+                    return None
         self.cash -= total_cost
 
         if ticker in self.positions:
