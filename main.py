@@ -534,7 +534,7 @@ def run_live(config: dict):
 
                     # 재매수 차단 (금일 거래/보유 이력)
                     if ticker in _traded_tickers:
-                        logger.info(f"⛔ {ticker} 재매수 차단 (금일 거래 이력)")
+                        logger.debug(f"⛔ {ticker} 재매수 차단 (금일 거래 이력)")
                         scanner.mark_signaled(ticker)
                         continue
 
