@@ -318,8 +318,8 @@ def run_live(config: dict):
 
     sleep_logged = False
     last_post_trade_update = None
-    last_status_report = 0  # 5분마다 상태 보고
-    STATUS_INTERVAL = 300  # 5분
+    last_status_report = 0  # 30분마다 상태 보고 (이벤트 없을 때)
+    STATUS_INTERVAL = 1800  # 30분
     scan_count = 0
     session_start_notified = False
 
