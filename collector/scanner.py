@@ -102,6 +102,13 @@ class StockScanner:
         if volume_ratio < self.scanner_cfg["volume_spike_pct"]:
             return None
 
+        # RSI 과매수 필터
+        rsi_max = self.scanner_cfg.get("rsi_max", 70)
+        rsi = self._calc_rsi(bars["close"], period=14)
+        if rsi is not None and rsi > rsi_max:
+            logger.debug(f"  ❌ {ticker} RSI {rsi:.1f} > {rsi_max} 과매수 제외")
+            return None
+
         # 모든 필터 통과
         return {
             "ticker": ticker,
@@ -112,6 +119,24 @@ class StockScanner:
             "market_cap": snap.get("market_cap", 0),
             "prev_close": snap.get("prev_close", 0),
         }
+
+    @staticmethod
+    def _calc_rsi(closes, period: int = 14) -> Optional[float]:
+        """1분봉 close 시리즈로 RSI 계산"""
+        if closes is None or len(closes) < period + 1:
+            return None
+        deltas = closes.diff().dropna()
+        gains = deltas.where(deltas > 0, 0.0)
+        losses = (-deltas.where(deltas < 0, 0.0))
+        avg_gain = gains.iloc[:period].mean()
+        avg_loss = losses.iloc[:period].mean()
+        for i in range(period, len(gains)):
+            avg_gain = (avg_gain * (period - 1) + gains.iloc[i]) / period
+            avg_loss = (avg_loss * (period - 1) + losses.iloc[i]) / period
+        if avg_loss == 0:
+            return 100.0
+        rs = avg_gain / avg_loss
+        return 100.0 - (100.0 / (1.0 + rs))
 
     def _publish(self, data: dict):
         """Redis channel:screened 으로 publish (Redis 없으면 스킵)"""
