@@ -1,0 +1,2084 @@
+{
+  "config": {
+    "version": "v9",
+    "initial_capital": 100000,
+    "min_price": 0.7,
+    "max_price": 10.0,
+    "max_gain_exclude": 1.0,
+    "same_day_rebuy": false,
+    "stop_loss": -0.5,
+    "vol_surge_pct": 1.0,
+    "price_surge_pct": 0.1,
+    "trailing_from_peak": 0.15,
+    "min_margin_sell": 0.35,
+    "profit_activate": 0.3,
+    "bb_period": 20,
+    "bb_std": 2,
+    "max_positions": 2,
+    "slippage_buy": 0.005,
+    "slippage_sell": 0.005,
+    "commission_pct": 0.001,
+    "compound_cap": 25000000
+  },
+  "summary": {
+    "final_capital": 11899,
+    "total_return_pct": -88.1,
+    "max_drawdown_pct": 90.0,
+    "total_trades": 116,
+    "wins": 44,
+    "losses": 72,
+    "win_rate": 37.9,
+    "avg_win_pct": 9.88,
+    "avg_loss_pct": -11.08,
+    "total_commission": 3556.9,
+    "plus_days": 19,
+    "minus_days": 41,
+    "zero_days": 0
+  },
+  "daily": [
+    {
+      "date": "2025-11-19",
+      "trades": [
+        {
+          "ticker": "RDGT",
+          "phase": "1st",
+          "buy_price": 4.7235,
+          "sell_price": 4.9451,
+          "sell_reason": "장마감",
+          "pnl_pct": 4.69,
+          "pnl_krw": 2244,
+          "invested": 50000,
+          "commission": 102.35,
+          "peak_profit_pct": 5.43,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        },
+        {
+          "ticker": "OMH",
+          "phase": "1st",
+          "buy_price": 1.477,
+          "sell_price": 0.8461,
+          "sell_reason": "장마감",
+          "pnl_pct": -42.71,
+          "pnl_krw": -21435,
+          "invested": 50000,
+          "commission": 78.64,
+          "peak_profit_pct": 6.29,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        }
+      ],
+      "day_pnl": -19191,
+      "capital_after": 80809
+    },
+    {
+      "date": "2025-11-20",
+      "trades": [
+        {
+          "ticker": "MNDR",
+          "phase": "1st",
+          "buy_price": 3.1858,
+          "sell_price": 2.9154,
+          "sell_reason": "장마감",
+          "pnl_pct": -8.49,
+          "pnl_krw": -3508,
+          "invested": 40404,
+          "commission": 77.38,
+          "peak_profit_pct": 0.0,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        }
+      ],
+      "day_pnl": -3508,
+      "capital_after": 77301
+    },
+    {
+      "date": "2025-11-21",
+      "trades": [
+        {
+          "ticker": "AIIO",
+          "phase": "1st",
+          "buy_price": 0.9042,
+          "sell_price": 0.779,
+          "sell_reason": "장마감",
+          "pnl_pct": -13.85,
+          "pnl_krw": -5424,
+          "invested": 38650,
+          "commission": 71.95,
+          "peak_profit_pct": 13.91,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        },
+        {
+          "ticker": "EPSM",
+          "phase": "1st",
+          "buy_price": 4.5325,
+          "sell_price": 3.6218,
+          "sell_reason": "장마감",
+          "pnl_pct": -20.09,
+          "pnl_krw": -7836,
+          "invested": 38650,
+          "commission": 69.53,
+          "peak_profit_pct": 13.4,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        }
+      ],
+      "day_pnl": -13260,
+      "capital_after": 64041
+    },
+    {
+      "date": "2025-11-24",
+      "trades": [
+        {
+          "ticker": "CLSD",
+          "phase": "1st",
+          "buy_price": 0.8323,
+          "sell_price": 0.8756,
+          "sell_reason": "장마감",
+          "pnl_pct": 5.2,
+          "pnl_krw": 1598,
+          "invested": 32020,
+          "commission": 65.71,
+          "peak_profit_pct": 26.15,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        },
+        {
+          "ticker": "NWTG",
+          "phase": "1st",
+          "buy_price": 1.3366,
+          "sell_price": 1.4328,
+          "sell_reason": "장마감",
+          "pnl_pct": 7.19,
+          "pnl_krw": 2237,
+          "invested": 32020,
+          "commission": 66.34,
+          "peak_profit_pct": 18.95,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        }
+      ],
+      "day_pnl": 3835,
+      "capital_after": 67876
+    },
+    {
+      "date": "2025-11-25",
+      "trades": [
+        {
+          "ticker": "AEHL",
+          "phase": "1st",
+          "buy_price": 3.2059,
+          "sell_price": 2.9435,
+          "sell_reason": "장마감",
+          "pnl_pct": -8.19,
+          "pnl_krw": -2843,
+          "invested": 33938,
+          "commission": 65.1,
+          "peak_profit_pct": 11.98,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        },
+        {
+          "ticker": "NVVE",
+          "phase": "1st",
+          "buy_price": 11.2962,
+          "sell_price": 10.746,
+          "sell_reason": "장마감",
+          "pnl_pct": -4.87,
+          "pnl_krw": -1719,
+          "invested": 33938,
+          "commission": 66.22,
+          "peak_profit_pct": 3.04,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        }
+      ],
+      "day_pnl": -4562,
+      "capital_after": 63314
+    },
+    {
+      "date": "2025-11-26",
+      "trades": [
+        {
+          "ticker": "BYND",
+          "phase": "1st",
+          "buy_price": 1.0247,
+          "sell_price": 1.0099,
+          "sell_reason": "장마감",
+          "pnl_pct": -1.44,
+          "pnl_krw": -519,
+          "invested": 31657,
+          "commission": 62.86,
+          "peak_profit_pct": 2.47,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        },
+        {
+          "ticker": "PW",
+          "phase": "1st",
+          "buy_price": 1.0553,
+          "sell_price": 1.0547,
+          "sell_reason": "장마감",
+          "pnl_pct": -0.05,
+          "pnl_krw": -80,
+          "invested": 31657,
+          "commission": 63.3,
+          "peak_profit_pct": 17.51,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        }
+      ],
+      "day_pnl": -599,
+      "capital_after": 62715
+    },
+    {
+      "date": "2025-11-28",
+      "trades": [
+        {
+          "ticker": "COOK",
+          "phase": "1st",
+          "buy_price": 0.9349,
+          "sell_price": 0.9154,
+          "sell_reason": "장마감",
+          "pnl_pct": -2.08,
+          "pnl_krw": -715,
+          "invested": 31358,
+          "commission": 62.06,
+          "peak_profit_pct": 13.39,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        },
+        {
+          "ticker": "ZYXI",
+          "phase": "1st",
+          "buy_price": 1.5979,
+          "sell_price": 1.2139,
+          "sell_reason": "장마감",
+          "pnl_pct": -24.03,
+          "pnl_krw": -7592,
+          "invested": 31358,
+          "commission": 55.18,
+          "peak_profit_pct": 4.51,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        }
+      ],
+      "day_pnl": -8307,
+      "capital_after": 54408
+    },
+    {
+      "date": "2025-12-01",
+      "trades": [
+        {
+          "ticker": "HKIT",
+          "phase": "1st",
+          "buy_price": 2.1406,
+          "sell_price": 1.6716,
+          "sell_reason": "장마감",
+          "pnl_pct": -21.91,
+          "pnl_krw": -6009,
+          "invested": 27204,
+          "commission": 48.45,
+          "peak_profit_pct": 0.9,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        },
+        {
+          "ticker": "ZYXI",
+          "phase": "1st",
+          "buy_price": 1.4061,
+          "sell_price": 1.2338,
+          "sell_reason": "장마감",
+          "pnl_pct": -12.25,
+          "pnl_krw": -3385,
+          "invested": 27204,
+          "commission": 51.07,
+          "peak_profit_pct": 6.68,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        }
+      ],
+      "day_pnl": -9394,
+      "capital_after": 45014
+    },
+    {
+      "date": "2025-12-02",
+      "trades": [
+        {
+          "ticker": "MNDR",
+          "phase": "1st",
+          "buy_price": 2.4522,
+          "sell_price": 2.189,
+          "sell_reason": "장마감",
+          "pnl_pct": -10.73,
+          "pnl_krw": -2458,
+          "invested": 22507,
+          "commission": 42.6,
+          "peak_profit_pct": 3.58,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        },
+        {
+          "ticker": "SBEV",
+          "phase": "1st",
+          "buy_price": 1.5778,
+          "sell_price": 1.3134,
+          "sell_reason": "장마감",
+          "pnl_pct": -16.76,
+          "pnl_krw": -3813,
+          "invested": 22507,
+          "commission": 41.24,
+          "peak_profit_pct": 7.11,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        }
+      ],
+      "day_pnl": -6271,
+      "capital_after": 38743
+    },
+    {
+      "date": "2025-12-03",
+      "trades": [
+        {
+          "ticker": "QCLS",
+          "phase": "1st",
+          "buy_price": 4.4923,
+          "sell_price": 4.7511,
+          "sell_reason": "장마감",
+          "pnl_pct": 5.76,
+          "pnl_krw": 1076,
+          "invested": 19372,
+          "commission": 39.86,
+          "peak_profit_pct": 26.33,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        },
+        {
+          "ticker": "NIXX",
+          "phase": "1st",
+          "buy_price": 1.0551,
+          "sell_price": 1.1062,
+          "sell_reason": "장마감",
+          "pnl_pct": 4.84,
+          "pnl_krw": 898,
+          "invested": 19372,
+          "commission": 39.68,
+          "peak_profit_pct": 8.99,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        }
+      ],
+      "day_pnl": 1974,
+      "capital_after": 40717
+    },
+    {
+      "date": "2025-12-04",
+      "trades": [
+        {
+          "ticker": "LAZR",
+          "phase": "1st",
+          "buy_price": 1.0341,
+          "sell_price": 1.0199,
+          "sell_reason": "장마감",
+          "pnl_pct": -1.38,
+          "pnl_krw": -321,
+          "invested": 20358,
+          "commission": 40.44,
+          "peak_profit_pct": 10.24,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        },
+        {
+          "ticker": "OPENL",
+          "phase": "1st",
+          "buy_price": 1.0754,
+          "sell_price": 1.1642,
+          "sell_reason": "장마감",
+          "pnl_pct": 8.26,
+          "pnl_krw": 1639,
+          "invested": 20358,
+          "commission": 42.4,
+          "peak_profit_pct": 12.06,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        }
+      ],
+      "day_pnl": 1318,
+      "capital_after": 42035
+    },
+    {
+      "date": "2025-12-05",
+      "trades": [
+        {
+          "ticker": "DEVS",
+          "phase": "1st",
+          "buy_price": 2.5276,
+          "sell_price": 1.9303,
+          "sell_reason": "장마감",
+          "pnl_pct": -23.63,
+          "pnl_krw": -5004,
+          "invested": 21018,
+          "commission": 37.07,
+          "peak_profit_pct": 10.38,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        },
+        {
+          "ticker": "KITT",
+          "phase": "1st",
+          "buy_price": 1.376,
+          "sell_price": 1.1085,
+          "sell_reason": "장마감",
+          "pnl_pct": -19.44,
+          "pnl_krw": -4124,
+          "invested": 21018,
+          "commission": 37.95,
+          "peak_profit_pct": 4.65,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        }
+      ],
+      "day_pnl": -9128,
+      "capital_after": 32907
+    },
+    {
+      "date": "2025-12-08",
+      "trades": [
+        {
+          "ticker": "HWH",
+          "phase": "1st",
+          "buy_price": 2.3919,
+          "sell_price": 2.1791,
+          "sell_reason": "장마감",
+          "pnl_pct": -8.9,
+          "pnl_krw": -1496,
+          "invested": 16454,
+          "commission": 31.44,
+          "peak_profit_pct": 17.48,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        },
+        {
+          "ticker": "TWNP",
+          "phase": "1st",
+          "buy_price": 1.0924,
+          "sell_price": 1.0821,
+          "sell_reason": "장마감",
+          "pnl_pct": -0.95,
+          "pnl_krw": -189,
+          "invested": 16454,
+          "commission": 32.75,
+          "peak_profit_pct": 19.0,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        }
+      ],
+      "day_pnl": -1685,
+      "capital_after": 31222
+    },
+    {
+      "date": "2025-12-09",
+      "trades": [
+        {
+          "ticker": "IBIO",
+          "phase": "1st",
+          "buy_price": 2.3691,
+          "sell_price": 2.184,
+          "sell_reason": "장마감",
+          "pnl_pct": -7.81,
+          "pnl_krw": -1249,
+          "invested": 15611,
+          "commission": 30.0,
+          "peak_profit_pct": 2.99,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        },
+        {
+          "ticker": "IRBT",
+          "phase": "1st",
+          "buy_price": 3.5225,
+          "sell_price": 3.6467,
+          "sell_reason": "장마감",
+          "pnl_pct": 3.52,
+          "pnl_krw": 518,
+          "invested": 15611,
+          "commission": 31.77,
+          "peak_profit_pct": 11.28,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        }
+      ],
+      "day_pnl": -731,
+      "capital_after": 30491
+    },
+    {
+      "date": "2025-12-10",
+      "trades": [
+        {
+          "ticker": "BEAT",
+          "phase": "1st",
+          "buy_price": 1.3467,
+          "sell_price": 1.6716,
+          "sell_reason": "35%마진보호",
+          "pnl_pct": 24.13,
+          "pnl_krw": 3644,
+          "invested": 15246,
+          "commission": 34.17,
+          "peak_profit_pct": 32.92,
+          "bb_broken": true,
+          "sell_algo_activated": true
+        },
+        {
+          "ticker": "CGTL",
+          "phase": "1st",
+          "buy_price": 0.9689,
+          "sell_price": 1.0099,
+          "sell_reason": "장마감",
+          "pnl_pct": 4.23,
+          "pnl_krw": 614,
+          "invested": 15246,
+          "commission": 31.14,
+          "peak_profit_pct": 18.68,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        }
+      ],
+      "day_pnl": 4258,
+      "capital_after": 34749
+    },
+    {
+      "date": "2025-12-11",
+      "trades": [
+        {
+          "ticker": "NXDR",
+          "phase": "1st",
+          "buy_price": 3.3422,
+          "sell_price": 2.8009,
+          "sell_reason": "장마감",
+          "pnl_pct": -16.2,
+          "pnl_krw": -2846,
+          "invested": 17374,
+          "commission": 31.94,
+          "peak_profit_pct": 11.3,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        },
+        {
+          "ticker": "CHOW",
+          "phase": "1st",
+          "buy_price": 1.1457,
+          "sell_price": 1.1741,
+          "sell_reason": "장마감",
+          "pnl_pct": 2.48,
+          "pnl_krw": 396,
+          "invested": 17374,
+          "commission": 35.18,
+          "peak_profit_pct": 19.58,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        }
+      ],
+      "day_pnl": -2450,
+      "capital_after": 32299
+    },
+    {
+      "date": "2025-12-12",
+      "trades": [
+        {
+          "ticker": "RZLT",
+          "phase": "1st",
+          "buy_price": 1.648,
+          "sell_price": 1.8027,
+          "sell_reason": "장마감",
+          "pnl_pct": 9.39,
+          "pnl_krw": 1483,
+          "invested": 16150,
+          "commission": 33.82,
+          "peak_profit_pct": 12.26,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        },
+        {
+          "ticker": "MSOX",
+          "phase": "1st",
+          "buy_price": 6.2367,
+          "sell_price": 8.0893,
+          "sell_reason": "35%마진보호",
+          "pnl_pct": 29.7,
+          "pnl_krw": 4760,
+          "invested": 16150,
+          "commission": 37.1,
+          "peak_profit_pct": 30.2,
+          "bb_broken": true,
+          "sell_algo_activated": true
+        }
+      ],
+      "day_pnl": 6243,
+      "capital_after": 38542
+    },
+    {
+      "date": "2025-12-15",
+      "trades": [
+        {
+          "ticker": "IRBT",
+          "phase": "1st",
+          "buy_price": 1.201,
+          "sell_price": 1.1629,
+          "sell_reason": "장마감",
+          "pnl_pct": -3.17,
+          "pnl_krw": -650,
+          "invested": 19271,
+          "commission": 37.93,
+          "peak_profit_pct": 23.23,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        },
+        {
+          "ticker": "ARBB",
+          "phase": "1st",
+          "buy_price": 8.3314,
+          "sell_price": 7.0347,
+          "sell_reason": "장마감",
+          "pnl_pct": -15.57,
+          "pnl_krw": -3035,
+          "invested": 19271,
+          "commission": 35.54,
+          "peak_profit_pct": 28.07,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        }
+      ],
+      "day_pnl": -3685,
+      "capital_after": 34857
+    },
+    {
+      "date": "2025-12-16",
+      "trades": [
+        {
+          "ticker": "YCBD",
+          "phase": "1st",
+          "buy_price": 1.2706,
+          "sell_price": 1.4601,
+          "sell_reason": "장마감",
+          "pnl_pct": 14.91,
+          "pnl_krw": 2561,
+          "invested": 17428,
+          "commission": 37.46,
+          "peak_profit_pct": 18.05,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        },
+        {
+          "ticker": "CGC",
+          "phase": "1st",
+          "buy_price": 1.7043,
+          "sell_price": 1.8747,
+          "sell_reason": "장마감",
+          "pnl_pct": 10.0,
+          "pnl_krw": 1706,
+          "invested": 17428,
+          "commission": 36.6,
+          "peak_profit_pct": 13.24,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        }
+      ],
+      "day_pnl": 4267,
+      "capital_after": 39124
+    },
+    {
+      "date": "2025-12-17",
+      "trades": [
+        {
+          "ticker": "YCBD",
+          "phase": "1st",
+          "buy_price": 2.1406,
+          "sell_price": 2.3451,
+          "sell_reason": "장마감",
+          "pnl_pct": 9.55,
+          "pnl_krw": 1827,
+          "invested": 19562,
+          "commission": 40.99,
+          "peak_profit_pct": 18.19,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        },
+        {
+          "ticker": "MIGI",
+          "phase": "1st",
+          "buy_price": 4.9761,
+          "sell_price": 4.4676,
+          "sell_reason": "장마감",
+          "pnl_pct": -10.22,
+          "pnl_krw": -2036,
+          "invested": 19562,
+          "commission": 37.12,
+          "peak_profit_pct": 10.53,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        }
+      ],
+      "day_pnl": -209,
+      "capital_after": 38915
+    },
+    {
+      "date": "2025-12-18",
+      "trades": [
+        {
+          "ticker": "CGCTW",
+          "phase": "1st",
+          "buy_price": 0.7537,
+          "sell_price": 0.6567,
+          "sell_reason": "장마감",
+          "pnl_pct": -12.88,
+          "pnl_krw": -2542,
+          "invested": 19458,
+          "commission": 36.41,
+          "peak_profit_pct": 19.4,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        },
+        {
+          "ticker": "TGL",
+          "phase": "1st",
+          "buy_price": 7.1181,
+          "sell_price": 6.8122,
+          "sell_reason": "장마감",
+          "pnl_pct": -4.3,
+          "pnl_krw": -874,
+          "invested": 19458,
+          "commission": 38.08,
+          "peak_profit_pct": 12.39,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        }
+      ],
+      "day_pnl": -3416,
+      "capital_after": 35499
+    },
+    {
+      "date": "2025-12-19",
+      "trades": [
+        {
+          "ticker": "CYPH",
+          "phase": "1st",
+          "buy_price": 1.1859,
+          "sell_price": 1.1541,
+          "sell_reason": "장마감",
+          "pnl_pct": -2.68,
+          "pnl_krw": -511,
+          "invested": 17750,
+          "commission": 35.02,
+          "peak_profit_pct": 0.35,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        },
+        {
+          "ticker": "BYND",
+          "phase": "1st",
+          "buy_price": 1.1757,
+          "sell_price": 1.0895,
+          "sell_reason": "장마감",
+          "pnl_pct": -7.33,
+          "pnl_krw": -1336,
+          "invested": 17750,
+          "commission": 34.2,
+          "peak_profit_pct": 7.17,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        }
+      ],
+      "day_pnl": -1847,
+      "capital_after": 33652
+    },
+    {
+      "date": "2025-12-22",
+      "trades": [
+        {
+          "ticker": "AUUD",
+          "phase": "1st",
+          "buy_price": 1.206,
+          "sell_price": 1.1492,
+          "sell_reason": "장마감",
+          "pnl_pct": -4.71,
+          "pnl_krw": -825,
+          "invested": 16826,
+          "commission": 32.86,
+          "peak_profit_pct": 0.0,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        }
+      ],
+      "day_pnl": -825,
+      "capital_after": 32827
+    },
+    {
+      "date": "2025-12-23",
+      "trades": [
+        {
+          "ticker": "OPTX",
+          "phase": "1st",
+          "buy_price": 3.0152,
+          "sell_price": 2.7114,
+          "sell_reason": "장마감",
+          "pnl_pct": -10.08,
+          "pnl_krw": -1685,
+          "invested": 16414,
+          "commission": 31.17,
+          "peak_profit_pct": 17.41,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        },
+        {
+          "ticker": "VUZI",
+          "phase": "1st",
+          "buy_price": 3.2863,
+          "sell_price": 3.7181,
+          "sell_reason": "장마감",
+          "pnl_pct": 13.14,
+          "pnl_krw": 2121,
+          "invested": 16414,
+          "commission": 34.98,
+          "peak_profit_pct": 13.8,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        }
+      ],
+      "day_pnl": 436,
+      "capital_after": 33263
+    },
+    {
+      "date": "2025-12-24",
+      "trades": [
+        {
+          "ticker": "SIDU",
+          "phase": "1st",
+          "buy_price": 2.1746,
+          "sell_price": 2.2602,
+          "sell_reason": "장마감",
+          "pnl_pct": 3.94,
+          "pnl_krw": 621,
+          "invested": 16632,
+          "commission": 33.92,
+          "peak_profit_pct": 8.52,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        },
+        {
+          "ticker": "TNMG",
+          "phase": "1st",
+          "buy_price": 2.9446,
+          "sell_price": 2.5671,
+          "sell_reason": "장마감",
+          "pnl_pct": -12.82,
+          "pnl_krw": -2164,
+          "invested": 16632,
+          "commission": 31.13,
+          "peak_profit_pct": 16.48,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        }
+      ],
+      "day_pnl": -1543,
+      "capital_after": 31720
+    },
+    {
+      "date": "2025-12-26",
+      "trades": [
+        {
+          "ticker": "SQFT",
+          "phase": "1st",
+          "buy_price": 4.2009,
+          "sell_price": 3.9203,
+          "sell_reason": "장마감",
+          "pnl_pct": -6.68,
+          "pnl_krw": -1090,
+          "invested": 15860,
+          "commission": 30.66,
+          "peak_profit_pct": 2.6,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        },
+        {
+          "ticker": "SHMD",
+          "phase": "1st",
+          "buy_price": 6.0199,
+          "sell_price": 5.8819,
+          "sell_reason": "장마감",
+          "pnl_pct": -2.29,
+          "pnl_krw": -395,
+          "invested": 15860,
+          "commission": 31.36,
+          "peak_profit_pct": 8.3,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        }
+      ],
+      "day_pnl": -1485,
+      "capital_after": 30235
+    },
+    {
+      "date": "2025-12-29",
+      "trades": [
+        {
+          "ticker": "SLS",
+          "phase": "1st",
+          "buy_price": 2.9748,
+          "sell_price": 3.2984,
+          "sell_reason": "장마감",
+          "pnl_pct": 10.88,
+          "pnl_krw": 1613,
+          "invested": 15118,
+          "commission": 31.88,
+          "peak_profit_pct": 15.47,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        },
+        {
+          "ticker": "BOXL",
+          "phase": "1st",
+          "buy_price": 2.5061,
+          "sell_price": 1.99,
+          "sell_reason": "장마감",
+          "pnl_pct": -20.59,
+          "pnl_krw": -3140,
+          "invested": 15118,
+          "commission": 27.12,
+          "peak_profit_pct": 13.72,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        }
+      ],
+      "day_pnl": -1527,
+      "capital_after": 28708
+    },
+    {
+      "date": "2025-12-30",
+      "trades": [
+        {
+          "ticker": "ELOG",
+          "phase": "1st",
+          "buy_price": 1.1987,
+          "sell_price": 1.3234,
+          "sell_reason": "장마감",
+          "pnl_pct": 10.4,
+          "pnl_krw": 1463,
+          "invested": 14354,
+          "commission": 30.2,
+          "peak_profit_pct": 10.96,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        },
+        {
+          "ticker": "CETX",
+          "phase": "1st",
+          "buy_price": 3.0853,
+          "sell_price": 3.0821,
+          "sell_reason": "장마감",
+          "pnl_pct": -0.1,
+          "pnl_krw": -44,
+          "invested": 14354,
+          "commission": 28.69,
+          "peak_profit_pct": 9.55,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        }
+      ],
+      "day_pnl": 1419,
+      "capital_after": 30127
+    },
+    {
+      "date": "2025-12-31",
+      "trades": [
+        {
+          "ticker": "LZMH",
+          "phase": "1st",
+          "buy_price": 1.6582,
+          "sell_price": 1.7313,
+          "sell_reason": "장마감",
+          "pnl_pct": 4.41,
+          "pnl_krw": 633,
+          "invested": 15064,
+          "commission": 30.79,
+          "peak_profit_pct": 8.55,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        },
+        {
+          "ticker": "MENS",
+          "phase": "1st",
+          "buy_price": 4.9144,
+          "sell_price": 4.0895,
+          "sell_reason": "장마감",
+          "pnl_pct": -16.79,
+          "pnl_krw": -2556,
+          "invested": 15064,
+          "commission": 27.6,
+          "peak_profit_pct": 8.86,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        }
+      ],
+      "day_pnl": -1923,
+      "capital_after": 28204
+    },
+    {
+      "date": "2026-01-02",
+      "trades": [
+        {
+          "ticker": "MNTS",
+          "phase": "1st",
+          "buy_price": 6.432,
+          "sell_price": 5.7213,
+          "sell_reason": "장마감",
+          "pnl_pct": -11.05,
+          "pnl_krw": -1585,
+          "invested": 14102,
+          "commission": 26.65,
+          "peak_profit_pct": 0.0,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        },
+        {
+          "ticker": "ULY",
+          "phase": "1st",
+          "buy_price": 3.625,
+          "sell_price": 2.6318,
+          "sell_reason": "장마감",
+          "pnl_pct": -27.4,
+          "pnl_krw": -3888,
+          "invested": 14102,
+          "commission": 24.34,
+          "peak_profit_pct": 12.82,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        }
+      ],
+      "day_pnl": -5473,
+      "capital_after": 22731
+    },
+    {
+      "date": "2026-01-05",
+      "trades": [
+        {
+          "ticker": "SLAI",
+          "phase": "1st",
+          "buy_price": 0.953,
+          "sell_price": 0.8179,
+          "sell_reason": "장마감",
+          "pnl_pct": -14.18,
+          "pnl_krw": -1633,
+          "invested": 11366,
+          "commission": 21.12,
+          "peak_profit_pct": 4.85,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        },
+        {
+          "ticker": "NBY",
+          "phase": "1st",
+          "buy_price": 7.0993,
+          "sell_price": 6.6864,
+          "sell_reason": "장마감",
+          "pnl_pct": -5.82,
+          "pnl_krw": -683,
+          "invested": 11366,
+          "commission": 22.07,
+          "peak_profit_pct": 2.83,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        }
+      ],
+      "day_pnl": -2316,
+      "capital_after": 20415
+    },
+    {
+      "date": "2026-01-06",
+      "trades": [
+        {
+          "ticker": "SOPA",
+          "phase": "1st",
+          "buy_price": 2.8039,
+          "sell_price": 3.1193,
+          "sell_reason": "장마감",
+          "pnl_pct": 11.25,
+          "pnl_krw": 1127,
+          "invested": 10208,
+          "commission": 21.56,
+          "peak_profit_pct": 16.26,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        },
+        {
+          "ticker": "MNTS",
+          "phase": "1st",
+          "buy_price": 9.5662,
+          "sell_price": 10.2187,
+          "sell_reason": "장마감",
+          "pnl_pct": 6.82,
+          "pnl_krw": 675,
+          "invested": 10208,
+          "commission": 21.11,
+          "peak_profit_pct": 10.81,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        }
+      ],
+      "day_pnl": 1802,
+      "capital_after": 22217
+    },
+    {
+      "date": "2026-01-07",
+      "trades": [
+        {
+          "ticker": "VSTM",
+          "phase": "1st",
+          "buy_price": 8.251,
+          "sell_price": 7.2138,
+          "sell_reason": "장마감",
+          "pnl_pct": -12.57,
+          "pnl_krw": -1417,
+          "invested": 11108,
+          "commission": 20.82,
+          "peak_profit_pct": 7.62,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        },
+        {
+          "ticker": "SLRX",
+          "phase": "1st",
+          "buy_price": 0.7781,
+          "sell_price": 0.8269,
+          "sell_reason": "장마감",
+          "pnl_pct": 6.27,
+          "pnl_krw": 674,
+          "invested": 11108,
+          "commission": 22.91,
+          "peak_profit_pct": 15.36,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        }
+      ],
+      "day_pnl": -743,
+      "capital_after": 21474
+    },
+    {
+      "date": "2026-01-08",
+      "trades": [
+        {
+          "ticker": "BW",
+          "phase": "1st",
+          "buy_price": 6.9345,
+          "sell_price": 7.557,
+          "sell_reason": "장마감",
+          "pnl_pct": 8.98,
+          "pnl_krw": 941,
+          "invested": 10737,
+          "commission": 22.44,
+          "peak_profit_pct": 9.6,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        },
+        {
+          "ticker": "LVRO",
+          "phase": "1st",
+          "buy_price": 1.2462,
+          "sell_price": 1.1745,
+          "sell_reason": "장마감",
+          "pnl_pct": -5.75,
+          "pnl_krw": -639,
+          "invested": 10737,
+          "commission": 20.86,
+          "peak_profit_pct": 2.71,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        }
+      ],
+      "day_pnl": 302,
+      "capital_after": 21776
+    },
+    {
+      "date": "2026-01-09",
+      "trades": [
+        {
+          "ticker": "GNPX",
+          "phase": "1st",
+          "buy_price": 2.5678,
+          "sell_price": 2.2682,
+          "sell_reason": "장마감",
+          "pnl_pct": -11.67,
+          "pnl_krw": -1291,
+          "invested": 10888,
+          "commission": 20.51,
+          "peak_profit_pct": 0.0,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        },
+        {
+          "ticker": "HRTX",
+          "phase": "1st",
+          "buy_price": 1.4572,
+          "sell_price": 1.4278,
+          "sell_reason": "장마감",
+          "pnl_pct": -2.02,
+          "pnl_krw": -241,
+          "invested": 10888,
+          "commission": 21.56,
+          "peak_profit_pct": 8.08,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        }
+      ],
+      "day_pnl": -1532,
+      "capital_after": 20244
+    },
+    {
+      "date": "2026-01-12",
+      "trades": [
+        {
+          "ticker": "IMSRW",
+          "phase": "1st",
+          "buy_price": 5.2662,
+          "sell_price": 5.6218,
+          "sell_reason": "장마감",
+          "pnl_pct": 6.75,
+          "pnl_krw": 662,
+          "invested": 10122,
+          "commission": 20.93,
+          "peak_profit_pct": 12.04,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        },
+        {
+          "ticker": "ASTI",
+          "phase": "1st",
+          "buy_price": 4.8583,
+          "sell_price": 4.7213,
+          "sell_reason": "장마감",
+          "pnl_pct": -2.82,
+          "pnl_krw": -305,
+          "invested": 10122,
+          "commission": 19.96,
+          "peak_profit_pct": 11.36,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        }
+      ],
+      "day_pnl": 357,
+      "capital_after": 20601
+    },
+    {
+      "date": "2026-01-13",
+      "trades": [
+        {
+          "ticker": "IOTR",
+          "phase": "1st",
+          "buy_price": 3.8994,
+          "sell_price": 3.8308,
+          "sell_reason": "장마감",
+          "pnl_pct": -1.76,
+          "pnl_krw": -202,
+          "invested": 10300,
+          "commission": 20.42,
+          "peak_profit_pct": 5.14,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        },
+        {
+          "ticker": "AGIG",
+          "phase": "1st",
+          "buy_price": 2.7824,
+          "sell_price": 3.2636,
+          "sell_reason": "장마감",
+          "pnl_pct": 17.29,
+          "pnl_krw": 1759,
+          "invested": 10300,
+          "commission": 22.38,
+          "peak_profit_pct": 23.27,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        }
+      ],
+      "day_pnl": 1557,
+      "capital_after": 22158
+    },
+    {
+      "date": "2026-01-14",
+      "trades": [
+        {
+          "ticker": "BARK",
+          "phase": "1st",
+          "buy_price": 0.931,
+          "sell_price": 0.9337,
+          "sell_reason": "장마감",
+          "pnl_pct": 0.28,
+          "pnl_krw": 9,
+          "invested": 11079,
+          "commission": 22.19,
+          "peak_profit_pct": 6.33,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        },
+        {
+          "ticker": "BCARW",
+          "phase": "1st",
+          "buy_price": 1.6984,
+          "sell_price": 1.5124,
+          "sell_reason": "장마감",
+          "pnl_pct": -10.95,
+          "pnl_krw": -1235,
+          "invested": 11079,
+          "commission": 20.94,
+          "peak_profit_pct": 3.04,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        }
+      ],
+      "day_pnl": -1226,
+      "capital_after": 20932
+    },
+    {
+      "date": "2026-01-15",
+      "trades": [
+        {
+          "ticker": "AUID",
+          "phase": "1st",
+          "buy_price": 1.9396,
+          "sell_price": 1.9054,
+          "sell_reason": "장마감",
+          "pnl_pct": -1.76,
+          "pnl_krw": -205,
+          "invested": 10466,
+          "commission": 20.75,
+          "peak_profit_pct": 26.31,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        },
+        {
+          "ticker": "TII",
+          "phase": "1st",
+          "buy_price": 3.7743,
+          "sell_price": 3.9502,
+          "sell_reason": "장마감",
+          "pnl_pct": 4.66,
+          "pnl_krw": 466,
+          "invested": 10466,
+          "commission": 21.42,
+          "peak_profit_pct": 18.43,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        }
+      ],
+      "day_pnl": 261,
+      "capital_after": 21193
+    },
+    {
+      "date": "2026-01-16",
+      "trades": [
+        {
+          "ticker": "CJMB",
+          "phase": "1st",
+          "buy_price": 3.7081,
+          "sell_price": 3.6915,
+          "sell_reason": "장마감",
+          "pnl_pct": -0.45,
+          "pnl_krw": -69,
+          "invested": 10596,
+          "commission": 21.15,
+          "peak_profit_pct": 6.52,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        },
+        {
+          "ticker": "TLSA",
+          "phase": "1st",
+          "buy_price": 1.3668,
+          "sell_price": 1.6517,
+          "sell_reason": "장마감",
+          "pnl_pct": 20.84,
+          "pnl_krw": 2185,
+          "invested": 10596,
+          "commission": 23.4,
+          "peak_profit_pct": 28.04,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        }
+      ],
+      "day_pnl": 2116,
+      "capital_after": 23309
+    },
+    {
+      "date": "2026-01-20",
+      "trades": [
+        {
+          "ticker": "AIRS",
+          "phase": "1st",
+          "buy_price": 2.6029,
+          "sell_price": 2.7825,
+          "sell_reason": "장마감",
+          "pnl_pct": 6.9,
+          "pnl_krw": 780,
+          "invested": 11654,
+          "commission": 24.11,
+          "peak_profit_pct": 15.64,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        },
+        {
+          "ticker": "NUAI",
+          "phase": "1st",
+          "buy_price": 5.5275,
+          "sell_price": 5.4825,
+          "sell_reason": "장마감",
+          "pnl_pct": -0.82,
+          "pnl_krw": -118,
+          "invested": 11654,
+          "commission": 23.21,
+          "peak_profit_pct": 14.34,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        }
+      ],
+      "day_pnl": 662,
+      "capital_after": 23971
+    },
+    {
+      "date": "2026-01-21",
+      "trades": [
+        {
+          "ticker": "BNAI",
+          "phase": "1st",
+          "buy_price": 8.844,
+          "sell_price": 8.6565,
+          "sell_reason": "장마감",
+          "pnl_pct": -2.12,
+          "pnl_krw": -278,
+          "invested": 11986,
+          "commission": 23.72,
+          "peak_profit_pct": 28.67,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        },
+        {
+          "ticker": "SEGG",
+          "phase": "1st",
+          "buy_price": 2.2512,
+          "sell_price": 2.0995,
+          "sell_reason": "장마감",
+          "pnl_pct": -6.74,
+          "pnl_krw": -831,
+          "invested": 11986,
+          "commission": 23.16,
+          "peak_profit_pct": 21.71,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        }
+      ],
+      "day_pnl": -1109,
+      "capital_after": 22862
+    },
+    {
+      "date": "2026-01-22",
+      "trades": [
+        {
+          "ticker": "SATL",
+          "phase": "1st",
+          "buy_price": 4.22,
+          "sell_price": 4.4974,
+          "sell_reason": "장마감",
+          "pnl_pct": 6.57,
+          "pnl_krw": 728,
+          "invested": 11431,
+          "commission": 23.61,
+          "peak_profit_pct": 10.19,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        },
+        {
+          "ticker": "PANL",
+          "phase": "1st",
+          "buy_price": 9.045,
+          "sell_price": 8.3132,
+          "sell_reason": "장마감",
+          "pnl_pct": -8.09,
+          "pnl_krw": -947,
+          "invested": 11431,
+          "commission": 21.94,
+          "peak_profit_pct": 1.38,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        }
+      ],
+      "day_pnl": -219,
+      "capital_after": 22643
+    },
+    {
+      "date": "2026-01-23",
+      "trades": [
+        {
+          "ticker": "KUST",
+          "phase": "1st",
+          "buy_price": 2.9145,
+          "sell_price": 3.6019,
+          "sell_reason": "30%플로어(BB미돌파)",
+          "pnl_pct": 23.59,
+          "pnl_krw": 2645,
+          "invested": 11322,
+          "commission": 25.31,
+          "peak_profit_pct": 35.87,
+          "bb_broken": false,
+          "sell_algo_activated": false
+        }
+      ],
+      "day_pnl": 2645,
+      "capital_after": 25288
+    },
+    {
+      "date": "2026-01-26",
+      "trades": [
+        {
+          "ticker": "ABOS",
+          "phase": "1st",
+          "buy_price": 2.819,
+          "sell_price": 2.0978,
+          "sell_reason": "장마감",
+          "pnl_pct": -25.59,
+          "pnl_krw": -3257,
+          "invested": 12644,
+          "commission": 22.05,
+          "peak_profit_pct": 6.77,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        },
+        {
+          "ticker": "NAMM",
+          "phase": "1st",
+          "buy_price": 4.3114,
+          "sell_price": 4.0497,
+          "sell_reason": "장마감",
+          "pnl_pct": -6.07,
+          "pnl_krw": -792,
+          "invested": 12644,
+          "commission": 24.52,
+          "peak_profit_pct": 29.65,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        }
+      ],
+      "day_pnl": -4049,
+      "capital_after": 21239
+    },
+    {
+      "date": "2026-01-27",
+      "trades": [
+        {
+          "ticker": "FOSL",
+          "phase": "1st",
+          "buy_price": 4.2612,
+          "sell_price": 3.9701,
+          "sell_reason": "장마감",
+          "pnl_pct": -6.83,
+          "pnl_krw": -746,
+          "invested": 10620,
+          "commission": 20.51,
+          "peak_profit_pct": 5.37,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        },
+        {
+          "ticker": "ABOS",
+          "phase": "1st",
+          "buy_price": 2.5407,
+          "sell_price": 2.6318,
+          "sell_reason": "장마감",
+          "pnl_pct": 3.58,
+          "pnl_krw": 359,
+          "invested": 10620,
+          "commission": 21.62,
+          "peak_profit_pct": 5.87,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        }
+      ],
+      "day_pnl": -387,
+      "capital_after": 20852
+    },
+    {
+      "date": "2026-01-28",
+      "trades": [
+        {
+          "ticker": "TAOP",
+          "phase": "1st",
+          "buy_price": 1.8895,
+          "sell_price": 1.4929,
+          "sell_reason": "장마감",
+          "pnl_pct": -20.99,
+          "pnl_krw": -2207,
+          "invested": 10426,
+          "commission": 18.66,
+          "peak_profit_pct": 0.0,
+          "bb_broken": false,
+          "sell_algo_activated": false
+        },
+        {
+          "ticker": "AUST",
+          "phase": "1st",
+          "buy_price": 2.7085,
+          "sell_price": 2.7323,
+          "sell_reason": "장마감",
+          "pnl_pct": 0.88,
+          "pnl_krw": 71,
+          "invested": 10426,
+          "commission": 20.94,
+          "peak_profit_pct": 0.0,
+          "bb_broken": false,
+          "sell_algo_activated": false
+        }
+      ],
+      "day_pnl": -2136,
+      "capital_after": 18716
+    },
+    {
+      "date": "2026-01-29",
+      "trades": [
+        {
+          "ticker": "ZSL",
+          "phase": "1st",
+          "buy_price": 1.7386,
+          "sell_price": 1.5959,
+          "sell_reason": "장마감",
+          "pnl_pct": -8.21,
+          "pnl_krw": -786,
+          "invested": 9358,
+          "commission": 17.95,
+          "peak_profit_pct": 7.46,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        },
+        {
+          "ticker": "DCX",
+          "phase": "1st",
+          "buy_price": 5.035,
+          "sell_price": 4.1243,
+          "sell_reason": "장마감",
+          "pnl_pct": -18.09,
+          "pnl_krw": -1710,
+          "invested": 9358,
+          "commission": 17.02,
+          "peak_profit_pct": 0.69,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        }
+      ],
+      "day_pnl": -2496,
+      "capital_after": 16220
+    },
+    {
+      "date": "2026-01-30",
+      "trades": [
+        {
+          "ticker": "CISS",
+          "phase": "1st",
+          "buy_price": 1.7788,
+          "sell_price": 1.6965,
+          "sell_reason": "장마감",
+          "pnl_pct": -4.63,
+          "pnl_krw": -391,
+          "invested": 8110,
+          "commission": 15.84,
+          "peak_profit_pct": 29.86,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        },
+        {
+          "ticker": "CNEY",
+          "phase": "1st",
+          "buy_price": 0.9447,
+          "sell_price": 0.9672,
+          "sell_reason": "장마감",
+          "pnl_pct": 2.39,
+          "pnl_krw": 177,
+          "invested": 8110,
+          "commission": 16.41,
+          "peak_profit_pct": 10.09,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        }
+      ],
+      "day_pnl": -214,
+      "capital_after": 16006
+    },
+    {
+      "date": "2026-02-02",
+      "trades": [
+        {
+          "ticker": "RIME",
+          "phase": "1st",
+          "buy_price": 1.0064,
+          "sell_price": 1.0298,
+          "sell_reason": "장마감",
+          "pnl_pct": 2.33,
+          "pnl_krw": 170,
+          "invested": 8003,
+          "commission": 16.19,
+          "peak_profit_pct": 16.23,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        },
+        {
+          "ticker": "FIEE",
+          "phase": "1st",
+          "buy_price": 5.824,
+          "sell_price": 5.1441,
+          "sell_reason": "장마감",
+          "pnl_pct": -11.67,
+          "pnl_krw": -949,
+          "invested": 8003,
+          "commission": 15.07,
+          "peak_profit_pct": 5.25,
+          "bb_broken": false,
+          "sell_algo_activated": false
+        }
+      ],
+      "day_pnl": -779,
+      "capital_after": 15227
+    },
+    {
+      "date": "2026-02-03",
+      "trades": [
+        {
+          "ticker": "POAS",
+          "phase": "1st",
+          "buy_price": 4.4823,
+          "sell_price": 4.7205,
+          "sell_reason": "장마감",
+          "pnl_pct": 5.31,
+          "pnl_krw": 389,
+          "invested": 7614,
+          "commission": 15.63,
+          "peak_profit_pct": 10.99,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        },
+        {
+          "ticker": "VIVS",
+          "phase": "1st",
+          "buy_price": 2.5929,
+          "sell_price": 2.8258,
+          "sell_reason": "장마감",
+          "pnl_pct": 8.98,
+          "pnl_krw": 668,
+          "invested": 7614,
+          "commission": 15.91,
+          "peak_profit_pct": 10.5,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        }
+      ],
+      "day_pnl": 1057,
+      "capital_after": 16284
+    },
+    {
+      "date": "2026-02-04",
+      "trades": [
+        {
+          "ticker": "SEGG",
+          "phase": "1st",
+          "buy_price": 1.5879,
+          "sell_price": 1.3283,
+          "sell_reason": "장마감",
+          "pnl_pct": -16.35,
+          "pnl_krw": -1346,
+          "invested": 8142,
+          "commission": 14.95,
+          "peak_profit_pct": 10.17,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        },
+        {
+          "ticker": "MRNO",
+          "phase": "1st",
+          "buy_price": 1.2808,
+          "sell_price": 1.2824,
+          "sell_reason": "장마감",
+          "pnl_pct": 0.12,
+          "pnl_krw": -6,
+          "invested": 8142,
+          "commission": 16.29,
+          "peak_profit_pct": 13.21,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        }
+      ],
+      "day_pnl": -1352,
+      "capital_after": 14932
+    },
+    {
+      "date": "2026-02-05",
+      "trades": [
+        {
+          "ticker": "CISS",
+          "phase": "1st",
+          "buy_price": 2.1105,
+          "sell_price": 1.9801,
+          "sell_reason": "장마감",
+          "pnl_pct": -6.18,
+          "pnl_krw": -476,
+          "invested": 7466,
+          "commission": 14.47,
+          "peak_profit_pct": 15.14,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        },
+        {
+          "ticker": "GDRX",
+          "phase": "1st",
+          "buy_price": 2.4321,
+          "sell_price": 2.2835,
+          "sell_reason": "장마감",
+          "pnl_pct": -6.11,
+          "pnl_krw": -471,
+          "invested": 7466,
+          "commission": 14.48,
+          "peak_profit_pct": 10.4,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        }
+      ],
+      "day_pnl": -947,
+      "capital_after": 13985
+    },
+    {
+      "date": "2026-02-06",
+      "trades": [
+        {
+          "ticker": "BOXL",
+          "phase": "1st",
+          "buy_price": 2.01,
+          "sell_price": 2.6069,
+          "sell_reason": "35%마진보호",
+          "pnl_pct": 29.7,
+          "pnl_krw": 2060,
+          "invested": 6992,
+          "commission": 16.06,
+          "peak_profit_pct": 31.34,
+          "bb_broken": true,
+          "sell_algo_activated": true
+        },
+        {
+          "ticker": "LASE",
+          "phase": "1st",
+          "buy_price": 1.0502,
+          "sell_price": 1.3427,
+          "sell_reason": "35%마진보호",
+          "pnl_pct": 27.84,
+          "pnl_krw": 1931,
+          "invested": 6992,
+          "commission": 15.93,
+          "peak_profit_pct": 30.45,
+          "bb_broken": true,
+          "sell_algo_activated": true
+        }
+      ],
+      "day_pnl": 3991,
+      "capital_after": 17976
+    },
+    {
+      "date": "2026-02-09",
+      "trades": [
+        {
+          "ticker": "UUU",
+          "phase": "1st",
+          "buy_price": 5.7687,
+          "sell_price": 4.8257,
+          "sell_reason": "장마감",
+          "pnl_pct": -16.35,
+          "pnl_krw": -1486,
+          "invested": 8988,
+          "commission": 16.51,
+          "peak_profit_pct": 5.74,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        }
+      ],
+      "day_pnl": -1486,
+      "capital_after": 16490
+    },
+    {
+      "date": "2026-02-10",
+      "trades": [
+        {
+          "ticker": "ASTI",
+          "phase": "1st",
+          "buy_price": 7.9169,
+          "sell_price": 7.3182,
+          "sell_reason": "장마감",
+          "pnl_pct": -7.56,
+          "pnl_krw": -639,
+          "invested": 8245,
+          "commission": 15.87,
+          "peak_profit_pct": 7.37,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        },
+        {
+          "ticker": "TRIB",
+          "phase": "1st",
+          "buy_price": 0.953,
+          "sell_price": 0.8841,
+          "sell_reason": "장마감",
+          "pnl_pct": -7.24,
+          "pnl_krw": -613,
+          "invested": 8245,
+          "commission": 15.89,
+          "peak_profit_pct": 0.73,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        }
+      ],
+      "day_pnl": -1252,
+      "capital_after": 15238
+    },
+    {
+      "date": "2026-02-11",
+      "trades": [
+        {
+          "ticker": "KXIN",
+          "phase": "1st",
+          "buy_price": 1.0955,
+          "sell_price": 0.6828,
+          "sell_reason": "장마감",
+          "pnl_pct": -37.67,
+          "pnl_krw": -2883,
+          "invested": 7619,
+          "commission": 12.37,
+          "peak_profit_pct": 16.85,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        },
+        {
+          "ticker": "CCHH",
+          "phase": "1st",
+          "buy_price": 1.6884,
+          "sell_price": 1.0933,
+          "sell_reason": "장마감",
+          "pnl_pct": -35.25,
+          "pnl_krw": -2698,
+          "invested": 7619,
+          "commission": 12.55,
+          "peak_profit_pct": 6.02,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        }
+      ],
+      "day_pnl": -5581,
+      "capital_after": 10000
+    },
+    {
+      "date": "2026-02-12",
+      "trades": [
+        {
+          "ticker": "CCHH",
+          "phase": "1st",
+          "buy_price": 1.0855,
+          "sell_price": 1.045,
+          "sell_reason": "장마감",
+          "pnl_pct": -3.73,
+          "pnl_krw": -196,
+          "invested": 5000,
+          "commission": 9.81,
+          "peak_profit_pct": 8.71,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        },
+        {
+          "ticker": "CGTL",
+          "phase": "1st",
+          "buy_price": 4.221,
+          "sell_price": 4.0895,
+          "sell_reason": "장마감",
+          "pnl_pct": -3.12,
+          "pnl_krw": -166,
+          "invested": 5000,
+          "commission": 9.84,
+          "peak_profit_pct": 13.95,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        }
+      ],
+      "day_pnl": -362,
+      "capital_after": 10000
+    },
+    {
+      "date": "2026-02-13",
+      "trades": [
+        {
+          "ticker": "AMWL",
+          "phase": "1st",
+          "buy_price": 5.0752,
+          "sell_price": 5.4924,
+          "sell_reason": "장마감",
+          "pnl_pct": 8.22,
+          "pnl_krw": 401,
+          "invested": 5000,
+          "commission": 10.41,
+          "peak_profit_pct": 16.05,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        },
+        {
+          "ticker": "JZXN",
+          "phase": "1st",
+          "buy_price": 2.6132,
+          "sell_price": 1.7164,
+          "sell_reason": "장마감",
+          "pnl_pct": -34.32,
+          "pnl_krw": -1724,
+          "invested": 5000,
+          "commission": 8.28,
+          "peak_profit_pct": 2.56,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        }
+      ],
+      "day_pnl": -1323,
+      "capital_after": 10000
+    },
+    {
+      "date": "2026-02-17",
+      "trades": [
+        {
+          "ticker": "GVH",
+          "phase": "1st",
+          "buy_price": 1.1758,
+          "sell_price": 1.5323,
+          "sell_reason": "35%마진보호",
+          "pnl_pct": 30.31,
+          "pnl_krw": 1504,
+          "invested": 5000,
+          "commission": 11.52,
+          "peak_profit_pct": 37.77,
+          "bb_broken": true,
+          "sell_algo_activated": true
+        },
+        {
+          "ticker": "AUUD",
+          "phase": "1st",
+          "buy_price": 0.8009,
+          "sell_price": 0.8657,
+          "sell_reason": "장마감",
+          "pnl_pct": 8.1,
+          "pnl_krw": 395,
+          "invested": 5000,
+          "commission": 10.4,
+          "peak_profit_pct": 14.86,
+          "bb_broken": true,
+          "sell_algo_activated": false
+        }
+      ],
+      "day_pnl": 1899,
+      "capital_after": 11899
+    }
+  ]
+}

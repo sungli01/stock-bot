@@ -210,17 +210,16 @@ def simulate_day_realistic(date_str, candidates, capital, prev_closes):
     if not ticker_bars_1m:
         return [], capital
 
-    # Build unified timeline: collect all unique timestamps
-    all_timestamps = set()
-    for bars in ticker_bars_1m.values():
-        for b in bars:
-            all_timestamps.add(b['t'])
-    timeline = sorted(all_timestamps)
-
-    # Pre-index: for each ticker, build ts -> bar mapping and sorted bar list
-    ticker_bar_map = {}  # ticker -> {ts: bar}
+    # Build unified timeline with reverse index: ts -> set of tickers with bars at that ts
+    ts_to_tickers = defaultdict(set)
+    ticker_bar_map = {}
     for ticker, bars in ticker_bars_1m.items():
-        ticker_bar_map[ticker] = {b['t']: b for b in bars}
+        bmap = {}
+        for b in bars:
+            bmap[b['t']] = b
+            ts_to_tickers[b['t']].add(ticker)
+        ticker_bar_map[ticker] = bmap
+    timeline = sorted(ts_to_tickers.keys())
 
     # State tracking per ticker
     ticker_state = {}  # ticker -> {'bars_so_far': [...], 'prev_close': float}
@@ -243,10 +242,29 @@ def simulate_day_realistic(date_str, candidates, capital, prev_closes):
     close_time = mc - timedelta(minutes=15)
     close_ts = int(close_time.timestamp()) * 1000
 
+    # Pre-compute 5m close arrays indexed by timestamp for fast BB lookup
+    ticker_5m_closes_by_ts = {}
+    for ticker, bars_5m in ticker_bars_5m.items():
+        closes_list = []
+        ts_list = []
+        for b in bars_5m:
+            closes_list.append(b['c'])
+            ts_list.append(b['t'])
+        ticker_5m_closes_by_ts[ticker] = (ts_list, closes_list)
+
     def get_5m_closes_at(ticker, ts):
-        """Get 5m closes up to timestamp ts"""
-        bars_5m = ticker_bars_5m.get(ticker, [])
-        return [b['c'] for b in bars_5m if b['t'] <= ts]
+        if ticker not in ticker_5m_closes_by_ts:
+            return []
+        ts_list, closes_list = ticker_5m_closes_by_ts[ticker]
+        # Binary search for last index <= ts
+        lo, hi = 0, len(ts_list)
+        while lo < hi:
+            mid = (lo + hi) // 2
+            if ts_list[mid] <= ts:
+                lo = mid + 1
+            else:
+                hi = mid
+        return closes_list[:lo]
 
     def try_sell(ticker, pos, bar, next_bar, ts):
         """v6 sell logic. Returns trade dict or None."""
@@ -360,11 +378,11 @@ def simulate_day_realistic(date_str, candidates, capital, prev_closes):
             break
 
         # Process sells first for existing positions
+        active_tickers = ts_to_tickers[ts]
         for ticker in list(positions.keys()):
-            bar_map = ticker_bar_map[ticker]
-            if ts not in bar_map:
+            if ticker not in active_tickers:
                 continue
-            bar = bar_map[ts]
+            bar = ticker_bar_map[ticker][ts]
             # Find next bar
             bars_list = ticker_bars_1m[ticker]
             next_bar = None
@@ -379,11 +397,8 @@ def simulate_day_realistic(date_str, candidates, capital, prev_closes):
 
         # Update state for all tickers at this timestamp
         scan_candidates = []
-        for ticker in ticker_bars_1m:
-            bar_map = ticker_bar_map[ticker]
-            if ts not in bar_map:
-                continue
-            bar = bar_map[ts]
+        for ticker in active_tickers:
+            bar = ticker_bar_map[ticker][ts]
             state = ticker_state[ticker]
 
             # Update rolling volume

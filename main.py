@@ -439,22 +439,14 @@ def run_live(config: dict):
 
                     logger.info(f"{'🚨' if action == 'STOP' else '💰'} {ticker} {reason}")
 
-                    if action == "PARTIAL_SELL":
-                        sell_ratio = exit_signal.get("sell_ratio", 0.5)
-                        if PAPER_MODE and paper_trader:
-                            paper_trader.partial_sell(ticker, current_price, sell_ratio)
-                        else:
-                            executor.execute_partial_sell(ticker, sell_ratio)
-                        # 1차 익절은 포지션 유지 — mark_traded 안 함
+                    if PAPER_MODE and paper_trader:
+                        paper_trader.sell(ticker, current_price)
+                    elif action == "STOP":
+                        executor.execute_stop_loss(ticker)
                     else:
-                        if PAPER_MODE and paper_trader:
-                            paper_trader.sell(ticker, current_price)
-                        elif action == "STOP":
-                            executor.execute_stop_loss(ticker)
-                        else:
-                            executor.execute_sell(ticker)
-                        _mark_traded(ticker)
-                        scanner.mark_signaled(ticker)
+                        executor.execute_sell(ticker)
+                    _mark_traded(ticker)
+                    scanner.mark_signaled(ticker)
 
                     # Post-trade 기록
                     try:
