@@ -563,11 +563,13 @@ def run_live(config: dict):
                     # 매수 실행
                     price = cand["price"]
                     logger.info(f"📈 {ticker} 매수 진입 (신뢰도 {sig['confidence']:.0f}%, ${price:.2f})")
+                    pct_q = cand.get("pct_from_queue", cand["change_pct"])
+                    q_price = cand.get("queue_price", 0)
                     send_notification(
-                        f"📈 {ticker} 매수 시도\n"
-                        f"가격: ${price:.2f} ({cand['change_pct']:+.1f}%)\n"
-                        f"신뢰도: {sig['confidence']:.0f}%\n"
-                        f"거래량비: {cand.get('volume_ratio', 0):.0f}%"
+                        f"📈 {ticker} 매수\n"
+                        f"가격: ${price:.2f}\n"
+                        f"거래량폭증기준 +{pct_q:.1f}% (기준${q_price:.2f})\n"
+                        f"3분봉: {cand.get('vol_3min_ratio', 0):.0f}%"
                     )
 
                     if PAPER_MODE and paper_trader:
@@ -599,10 +601,10 @@ def run_live(config: dict):
                             except Exception as e:
                                 logger.error(f"bar_recorder entry 실패: {e}")
                             send_notification(
-                                f"[가상] ✅ {ticker} v8 매수 완료\n"
-                                f"가격: ${price:.2f} ({cand['change_pct']:+.1f}%)\n"
-                                f"3분봉 거래량: {vol_3min:.0f}%\n"
-                                f"10분할 평균가: ${result.get('price', price):.2f}",
+                                f"[가상] ✅ {ticker} 매수 완료\n"
+                                f"평균가: ${result.get('price', price):.2f}\n"
+                                f"거래량기준 +{cand.get('pct_from_queue', cand['change_pct']):.1f}%\n"
+                                f"3분봉: {vol_3min:.0f}%",
                                 immediate=True
                             )
                         else:

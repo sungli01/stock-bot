@@ -138,33 +138,45 @@ class SnapshotScanner:
             if not snap:
                 continue
 
-            # ★ 20%+ 가격 상승 확인
-            if snap["change_pct"] < self.price_change_pct:
+            # ★ 기준 가격 = 거래량 폭증 시점 가격 (전일종가 기준 아님)
+            queue_price = queue_info.get("price", 0)
+            if queue_price <= 0:
                 continue
 
-            # ★ 방향성: 큐 등록 시점 가격 대비 -3% 이상 꺾이면 보류
-            queue_price = queue_info.get("price", 0)
-            if queue_price > 0 and snap["price"] < queue_price * 0.97:
+            pct_from_queue = (snap["price"] - queue_price) / queue_price * 100
+
+            # ★ 방향성: 큐 등록 가격 대비 -3% 이상 꺾이면 보류 (일시적 눌림 허용)
+            if snap["price"] < queue_price * 0.97:
                 logger.debug(
-                    f"⬇️ {ticker} 가격 꺾임 — 보류 "
-                    f"(큐등록${queue_price:.2f}→현재${snap['price']:.2f})"
+                    f"⬇️ {ticker} 꺾임 보류 "
+                    f"(기준${queue_price:.2f} → 현재${snap['price']:.2f} {pct_from_queue:+.1f}%)"
                 )
                 continue
 
-            prev_day_vol = snap["prev_day"].get("v", 0) or 0
+            # ★ 케이스 A/B 통합: 큐 등록 시점 기준 +20%+
+            # - 케이스 A: 같은 봉 내 즉시 +20% (빠른 급등)
+            # - 케이스 B: 이후 3분봉 10개(30분) 이내 우상향으로 +20%
+            if pct_from_queue < self.price_change_pct:
+                logger.debug(
+                    f"📊 {ticker} 모니터링 중: 기준${queue_price:.2f} → "
+                    f"현재${snap['price']:.2f} ({pct_from_queue:+.1f}% / 목표 +{self.price_change_pct:.0f}%)"
+                )
+                continue
+
             vol_ratio = queue_info.get("vol_ratio", 999.0)
 
             logger.info(
                 f"🎯 매수 후보: {ticker} ${snap['price']:.2f} "
-                f"{snap['change_pct']:+.1f}% "
-                f"3분봉:{vol_ratio:.0f}% "
-                f"(큐등록@${queue_price:.2f})"
+                f"기준대비 {pct_from_queue:+.1f}% (기준${queue_price:.2f}) "
+                f"3분봉:{vol_ratio:.0f}%"
             )
 
             candidates.append({
                 "ticker": ticker,
                 "price": snap["price"],
                 "change_pct": snap["change_pct"],
+                "pct_from_queue": round(pct_from_queue, 2),  # 큐 기준 상승률
+                "queue_price": queue_price,
                 "volume": snap["volume"],
                 "volume_ratio": vol_ratio,
                 "vol_3min_ratio": vol_ratio,
