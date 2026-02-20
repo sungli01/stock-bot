@@ -43,7 +43,8 @@ class SnapshotScanner:
         # 이미 시그널 큐에 넣은 종목 (중복 방지, 세션 단위)
         self._signaled_tickers: set[str] = set()
         # ★ 모니터링 큐: 거래량 1000%+ 통과 종목 (20%+ 가격 대기)
-        self._monitoring_queue: dict[str, float] = {}  # {ticker: 등록시각}
+        # {ticker: {"time": 등록시각, "price": 등록시점가격}}
+        self._monitoring_queue: dict[str, dict] = {}
         # 급등 만료 로그 1회만 출력
         self._surge_logged_expire: set[str] = set()
         # 마지막 전체 스냅샷 데이터 (보유종목 가격 조회용)
@@ -165,15 +166,21 @@ class SnapshotScanner:
                 min_v_ratio = (cur_min_v / prev_min_v) * 100
                 if min_v_ratio >= self.vol_3min_ratio_pct:
                     if snap["volume"] >= min_daily_volume:
-                        self._monitoring_queue[ticker] = scan_time
-                        logger.info(
-                            f"📋 큐 등록: {ticker} 거래량 폭증 {min_v_ratio:.0f}% "
-                            f"(min.v {prev_min_v:.0f}→{cur_min_v:.0f})"
-                        )
+                        # ★ 방향성 확인: 직전 스캔 대비 가격이 오르거나 유지 중일 때만 등록
+                        if snap["scan_delta_pct"] >= 0 or snap["change_pct"] >= 5.0:
+                            self._monitoring_queue[ticker] = {
+                                "time": scan_time,
+                                "price": snap["price"],  # 등록 시점 가격 기록
+                            }
+                            logger.info(
+                                f"📋 큐 등록: {ticker} 거래량 폭증 {min_v_ratio:.0f}% "
+                                f"(min.v {prev_min_v:.0f}→{cur_min_v:.0f}) "
+                                f"@${snap['price']:.2f} delta:{snap['scan_delta_pct']:+.2f}%"
+                            )
 
         # 큐 만료 정리
-        expired = [t for t, ts in self._monitoring_queue.items()
-                   if scan_time - ts > queue_expire_sec]
+        expired = [t for t, info in self._monitoring_queue.items()
+                   if scan_time - info["time"] > queue_expire_sec]
         for t in expired:
             del self._monitoring_queue[t]
             logger.debug(f"⏰ 큐 만료 제거: {t}")
@@ -189,8 +196,16 @@ class SnapshotScanner:
             if not snap:
                 continue
 
+            queue_info = self._monitoring_queue[ticker]
+            queue_price = queue_info["price"]
+
             # ★ 20%+ 가격 상승 확인
             if snap["change_pct"] < self.price_change_pct:
+                continue
+
+            # ★ 방향성 확인: 현재 가격이 큐 등록 시점 가격 이상 (꺾이면 제외)
+            if snap["price"] < queue_price * 0.97:  # 3% 여유 (일시적 눌림 허용)
+                logger.debug(f"⬇️ {ticker} 가격 꺾임 — 매수 보류 (큐등록${queue_price:.2f}→현재${snap['price']:.2f})")
                 continue
 
             prev_day_vol = snap.get("prev_day", {}).get("v", 0) or 0
@@ -202,7 +217,8 @@ class SnapshotScanner:
             if ticker not in self._surge_logged_expire:
                 logger.info(
                     f"🎯 매수 후보: {ticker} ${snap['price']:.2f} "
-                    f"{snap['change_pct']:+.1f}% vol_ratio:{vol_ratio_3min:.0f}%"
+                    f"{snap['change_pct']:+.1f}% vol_ratio:{vol_ratio_3min:.0f}% "
+                    f"(큐등록${queue_price:.2f} → 현재 유지)"
                 )
 
             candidates.append({
