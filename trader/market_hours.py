@@ -14,6 +14,7 @@ UTC = pytz.utc
 # KST 기준 매매 윈도우
 TRADING_START_KST = dtime(18, 0)   # 18:00 KST
 TRADING_END_KST = dtime(6, 0)     # 06:00 KST (익일)
+PREMARKET_PREP_KST = dtime(17, 50) # 17:50 KST — 3분봉 사전 축적 시작
 
 # US 정규장 (참고용)
 US_MARKET_OPEN = dtime(9, 30)
@@ -26,6 +27,31 @@ def now_kst() -> datetime:
 
 def now_et() -> datetime:
     return datetime.now(ET)
+
+
+def is_premarket_prep() -> bool:
+    """
+    KST 17:50 ~ 18:00 — 3분봉 데이터 사전 축적 구간.
+    bar_scanner가 이 시간부터 동작하여 큐를 준비.
+    """
+    now = now_kst()
+    if now.weekday() >= 5:
+        return False
+    return dtime(17, 50) <= now.time() < dtime(18, 0)
+
+
+def is_scan_active() -> bool:
+    """bar_scanner 동작 가능 여부 — 17:50부터 06:00까지"""
+    now = now_kst()
+    hour = now.hour
+    minute = now.minute
+    in_window = (hour == 17 and minute >= 50) or hour >= 18 or hour < 6
+    if not in_window:
+        return False
+    now_eastern = now.astimezone(ET)
+    if now_eastern.weekday() >= 5:
+        return False
+    return True
 
 
 def is_trading_window() -> bool:

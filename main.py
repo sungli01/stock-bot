@@ -227,13 +227,14 @@ def run_live(config: dict):
     - 장마감 15분전 강제청산
     """
     from collector.snapshot_scanner import SnapshotScanner
+    from collector.bar_scanner import BarScanner
     from collector.kis_scanner import KISScanner
     from analyzer.signal import SignalGenerator
     from trader.executor import TradeExecutor
     from trader.bb_trailing import BBTrailingStop
     from trader.market_governor import MarketGovernor, ABSOLUTE_CAP
     from trader.market_hours import (
-        is_trading_window, minutes_until_session_end,
+        is_trading_window, is_scan_active, minutes_until_session_end,
         get_all_timestamps, get_trading_date, now_kst,
     )
     from knowledge.file_store import FileStore
@@ -247,7 +248,11 @@ def run_live(config: dict):
         paper_trader = PaperTrader(initial_capital=1_000_000)
         logger.info("📝 PAPER_MODE 활성화 — 가상매매 모드")
 
-    scanner = SnapshotScanner(config)
+    # 공유 모니터링 큐 (BarScanner → SnapshotScanner)
+    monitoring_queue: dict = {}
+    queue_lock = threading.Lock()
+
+    scanner = SnapshotScanner(config, monitoring_queue, queue_lock)
     analyzer = SignalGenerator(None, config)
     executor = TradeExecutor(None, config)
     bb_trailing = BBTrailingStop(config)
@@ -300,6 +305,11 @@ def run_live(config: dict):
     kis_thread = KISScanThread(kis_scanner)
     kis_thread.start()
 
+    # BarScanner: 17:50부터 3분봉 거래량 폭증 감지 (30초마다)
+    bar_scanner = BarScanner(config, monitoring_queue, queue_lock)
+    bar_scanner.start()
+    logger.info("🕯️ BarScanner 시작 — 완성된 3분봉 비교 기반")
+
     trading_cfg = config.get("trading", {})
     max_positions = trading_cfg.get("max_positions", 2)
     allocation_ratio = trading_cfg.get("allocation_ratio", [0.7, 0.3])
@@ -329,11 +339,26 @@ def run_live(config: dict):
 
             # ── 매매 시간 외 ─────────────────────────────
             if not is_trading_window():
+                # 17:50~18:00 프리마켓 준비 구간: 스냅샷 스캔 + BarScanner 후보 전달
+                if is_scan_active():
+                    if not sleep_logged:
+                        logger.info("🔭 프리마켓 준비 (17:50) — 3분봉 데이터 사전 축적 시작")
+                        sleep_logged = True
+                    try:
+                        _, bar_candidates = scanner.scan_once()
+                        if bar_candidates:
+                            bar_scanner.set_candidates(bar_candidates)
+                    except Exception:
+                        pass
+                    time.sleep(SCAN_INTERVAL)
+                    continue
+
                 if not sleep_logged:
                     logger.info("💤 매매 시간 외 — 대기 중")
                     # 세션 리셋
                     scanner.reset_session()
                     kis_scanner.reset_session()
+                    bar_scanner.reset_session()
                     bb_trailing.reset()
                     bar_recorder.reset_session()
                     _notifier.reset_dedup()
@@ -394,7 +419,10 @@ def run_live(config: dict):
                 continue
 
             # ── Snapshot 스캔 + KIS 결과 병합 ─────────────
-            candidates = scanner.scan_once()
+            candidates, bar_candidates = scanner.scan_once()
+            # BarScanner에 후보 전달 (5%+ 급등 종목 → 3분봉 체크 대상)
+            if bar_candidates:
+                bar_scanner.set_candidates(bar_candidates)
             kis_candidates = kis_thread.get_candidates()
             candidates = merge_candidates(candidates, kis_candidates)
 

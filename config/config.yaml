@@ -4,11 +4,12 @@ scanner:
   max_price: 30.0          # $30 이하 (상향)
   min_market_cap: 50000000 # $5천만 이상
   min_volume: 10000        # 1만주 이상
-  price_change_pct: 20.0   # 20%+ 급등 종목만 (진짜 모멘텀)
-  volume_spike_pct: 200.0  # 스냅샷 1차 필터 (완화, 2차는 3분봉)
-  min_daily_volume: 500000 # 일 거래량 50만주 이상만 (유동성 확보)
-  vol_3min_ratio_pct: 1000.0  # 3분봉 직전 대비 현재 거래량 1000%+ (핵심 필터)
-  timeframe: "3min"
+  price_change_pct: 20.0        # 매수 트리거: 20%+ (큐 종목)
+  candidate_change_pct: 5.0     # BarScanner 후보 기준: 5%+ 급등 종목만 3분봉 체크
+  volume_spike_pct: 200.0       # 미사용 (하위 호환)
+  min_daily_volume: 500000      # 일 거래량 50만주 이상
+  vol_3min_ratio_pct: 1000.0    # 완성 3분봉 직전봉 대비 1000%+ (BarScanner 기준)
+  bar_scan_interval_sec: 30     # BarScanner 실행 주기 (초)
 
 # 매매 조건 (v8)
 trading:
