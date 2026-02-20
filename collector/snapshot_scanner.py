@@ -128,6 +128,22 @@ class SnapshotScanner:
         min_daily_volume = self.scanner_cfg.get("min_daily_volume", 500_000)
         queue_expire_sec = 900  # 모니터링 큐 유효기간 15분
 
+        # ETF/인버스 제외 패턴 (레버리지/인버스 ETF는 거래량 패턴이 달라 노이즈)
+        ETF_SUFFIXES = ("L", "S", "X")   # SOXS, SOXL, TQQQ, SQQQ 등 끝자리
+        ETF_PATTERNS = ("SH", "SDS", "QID", "SPXS", "SPXU", "SQQQ", "TQQQ",
+                        "SOXS", "SOXL", "UVXY", "SVXY", "VXX", "VIXY",
+                        "ZSL", "AGQ", "JDST", "JNUG", "LABD", "LABU",
+                        "DUST", "NUGT", "YANG", "YINN", "FAS", "FAZ",
+                        "TZA", "TNA", "ERX", "ERY", "KOLD", "BOIL")
+
+        def _is_etf(t: str) -> bool:
+            if t in ETF_PATTERNS:
+                return True
+            # 3~4글자이고 S/L로 끝나는 레버리지 ETF 패턴
+            if len(t) >= 4 and t[-1] in ("S", "L") and t[-2].isdigit():
+                return True
+            return False
+
         # ── STEP 1: 거래량 폭증 감지 → 모니터링 큐 등록 ──────────
         # min.v (직전 1분봉 거래량) 직전 스캔 대비 1000%+ 이면 큐 등록
         # API 호출 없음, 스냅샷 내 데이터만 사용
@@ -138,6 +154,9 @@ class SnapshotScanner:
                 continue
             if ticker in self._monitoring_queue:
                 continue  # 이미 큐에 있음
+            # ETF/레버리지 제외
+            if _is_etf(ticker):
+                continue
 
             cur_min_v = snap["min"].get("v", 0) or 0
             prev_min_v = self._prev_min_v.get(ticker, 0)
