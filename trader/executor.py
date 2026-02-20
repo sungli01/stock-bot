@@ -160,6 +160,14 @@ class TradeExecutor:
         logger.warning(f"🚨 {ticker} 손절 실행!")
         return self.execute_sell(ticker)
 
+    def has_open_positions(self):
+        """보유 포지션 존재 여부"""
+        try:
+            positions = self.api.get_balance()
+            return len(positions) > 0
+        except Exception:
+            return False
+
     def check_positions(self):
         """
         보유 종목 손절/익절/트레일링스탑 체크

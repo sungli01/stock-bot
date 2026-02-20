@@ -376,22 +376,29 @@ def run_live(config: dict):
 
             # ── 강제청산 체크 ─────────────────────────────
             remaining = minutes_until_session_end()
+            has_positions = (
+                (PAPER_MODE and paper_trader and len(paper_trader.positions) > 0)
+                or (not PAPER_MODE and executor and executor.has_open_positions())
+            )
             if 0 < remaining <= force_close_before_min:
-                logger.warning(f"🚨 장마감 {remaining:.0f}분 전 — 강제청산")
-                if PAPER_MODE and paper_trader:
-                    for ticker in list(paper_trader.positions.keys()):
-                        snap_p = scanner.get_price(ticker) or paper_trader.positions[ticker]['avg_price']
-                        paper_trader.sell(ticker, snap_p)
+                if has_positions:
+                    logger.warning(f"🚨 장마감 {remaining:.0f}분 전 — 강제청산")
+                    if PAPER_MODE and paper_trader:
+                        for ticker in list(paper_trader.positions.keys()):
+                            snap_p = scanner.get_price(ticker) or paper_trader.positions[ticker]['avg_price']
+                            paper_trader.sell(ticker, snap_p)
+                    else:
+                        executor.force_close_all_positions()
+                    send_notification(
+                        f"🚨 장마감 강제청산 실행\n"
+                        f"━━━━━━━━━━━━━━\n"
+                        f"잔여: {remaining:.0f}분\n"
+                        f"총 스캔: {scan_count}회\n"
+                        f"━━━━━━━━━━━━━━",
+                        immediate=True
+                    )
                 else:
-                    executor.force_close_all_positions()
-                send_notification(
-                    f"🚨 장마감 강제청산 실행\n"
-                    f"━━━━━━━━━━━━━━\n"
-                    f"잔여: {remaining:.0f}분\n"
-                    f"총 스캔: {scan_count}회\n"
-                    f"━━━━━━━━━━━━━━",
-                    immediate=True
-                )
+                    logger.info(f"장마감 {remaining:.0f}분 전 — 포지션 없음, 스킵")
                 session_start_notified = False
                 scan_count = 0
                 time.sleep(60)
