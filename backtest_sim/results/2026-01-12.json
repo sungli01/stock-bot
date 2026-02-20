@@ -1,0 +1,580 @@
+{
+  "date": "2026-01-12",
+  "starting_portfolio": 3350160863222752.0,
+  "ending_portfolio": 9675756587391762.0,
+  "day_pnl_krw": 6325595724169010.0,
+  "day_pnl_pct": 188.81,
+  "vol_spikes_detected": 190,
+  "signals_generated": 190,
+  "buys_executed": 12,
+  "trades": [
+    {
+      "ticker": "BDSX",
+      "type": "full",
+      "entry_price": 8.05,
+      "sell_price": 7.449,
+      "pnl_pct": -7.47,
+      "pnl_krw": -25011759985054.0,
+      "reason": "STOP_LOSS (-7.5%)",
+      "hold_min": 2.0,
+      "queue_price": 6.62,
+      "queue_to_entry_pct": 21.6,
+      "entry_time_ms": 1768219200000,
+      "sell_time_ms": 1768219320000,
+      "daily_high": 9.83,
+      "max_possible_pct": 22.1
+    },
+    {
+      "ticker": "OMH",
+      "type": "full",
+      "entry_price": 1.365,
+      "sell_price": 1.2399,
+      "pnl_pct": -9.16,
+      "pnl_krw": -33544810638385.0,
+      "reason": "STOP_LOSS (-9.2%)",
+      "hold_min": 7.0,
+      "queue_price": 1.06,
+      "queue_to_entry_pct": 28.8,
+      "entry_time_ms": 1768229400000,
+      "sell_time_ms": 1768229820000,
+      "daily_high": 1.83,
+      "max_possible_pct": 34.1
+    },
+    {
+      "ticker": "CGTL",
+      "type": "partial",
+      "entry_price": 3.52,
+      "sell_price": 3.71,
+      "pnl_pct": 5.397727272727271,
+      "pnl_krw": 9878286733187.438,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 11.0,
+      "entry_time_ms": 1768229220000,
+      "sell_time_ms": 1768229880000
+    },
+    {
+      "ticker": "CGTL",
+      "type": "full",
+      "entry_price": 3.52,
+      "sell_price": 3.945,
+      "pnl_pct": 12.07,
+      "pnl_krw": 22096167692656.0,
+      "reason": "PROFIT_TARGET +10% (12.1%)",
+      "hold_min": 13.0,
+      "queue_price": 2.56,
+      "queue_to_entry_pct": 37.5,
+      "entry_time_ms": 1768229220000,
+      "sell_time_ms": 1768230000000,
+      "daily_high": 4.25,
+      "max_possible_pct": 20.7
+    },
+    {
+      "ticker": "BDSX",
+      "type": "full",
+      "entry_price": 8.5838,
+      "sell_price": 7.94,
+      "pnl_pct": -7.5,
+      "pnl_krw": -29945474438519.0,
+      "reason": "STOP_LOSS (-7.5%)",
+      "hold_min": 22.0,
+      "queue_price": 7.092,
+      "queue_to_entry_pct": 21.0,
+      "entry_time_ms": 1768229880000,
+      "sell_time_ms": 1768231200000,
+      "daily_high": 9.83,
+      "max_possible_pct": 14.5
+    },
+    {
+      "ticker": "LVLU",
+      "type": "partial",
+      "entry_price": 8.71,
+      "sell_price": 9.17,
+      "pnl_pct": 5.28128587830079,
+      "pnl_krw": 12569318024339.719,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 2.0,
+      "entry_time_ms": 1768231200000,
+      "sell_time_ms": 1768231320000
+    },
+    {
+      "ticker": "SUGP",
+      "type": "full",
+      "entry_price": 8.73,
+      "sell_price": 7.79,
+      "pnl_pct": -10.77,
+      "pnl_krw": -47275947296493.0,
+      "reason": "STOP_LOSS (-10.8%)",
+      "hold_min": 19.0,
+      "queue_price": 6.8566,
+      "queue_to_entry_pct": 27.3,
+      "entry_time_ms": 1768230780000,
+      "sell_time_ms": 1768231920000,
+      "daily_high": 9.7,
+      "max_possible_pct": 11.1
+    },
+    {
+      "ticker": "LVLU",
+      "type": "full",
+      "entry_price": 8.71,
+      "sell_price": 9.88,
+      "pnl_pct": 13.43,
+      "pnl_krw": 31969787148864.0,
+      "reason": "PROFIT_TARGET +10% (13.4%)",
+      "hold_min": 18.0,
+      "queue_price": 6.8952,
+      "queue_to_entry_pct": 26.3,
+      "entry_time_ms": 1768231200000,
+      "sell_time_ms": 1768232280000,
+      "daily_high": 15.9,
+      "max_possible_pct": 82.5
+    },
+    {
+      "ticker": "LVLU",
+      "type": "full",
+      "entry_price": 10.73,
+      "sell_price": 9.68,
+      "pnl_pct": -9.79,
+      "pnl_krw": -55506803096792.0,
+      "reason": "STOP_LOSS (-9.8%)",
+      "hold_min": 2.0,
+      "queue_price": 8.55,
+      "queue_to_entry_pct": 25.5,
+      "entry_time_ms": 1768232880000,
+      "sell_time_ms": 1768233000000,
+      "daily_high": 15.9,
+      "max_possible_pct": 48.2
+    },
+    {
+      "ticker": "ASTI",
+      "type": "full",
+      "entry_price": 5.41,
+      "sell_price": 4.8,
+      "pnl_pct": -11.28,
+      "pnl_krw": -69727019699327.0,
+      "reason": "STOP_LOSS (-11.3%)",
+      "hold_min": 6.0,
+      "queue_price": 4.245,
+      "queue_to_entry_pct": 27.4,
+      "entry_time_ms": 1768234920000,
+      "sell_time_ms": 1768235280000,
+      "daily_high": 5.41,
+      "max_possible_pct": 0.0
+    },
+    {
+      "ticker": "CIGL",
+      "type": "full",
+      "entry_price": 2.57,
+      "sell_price": 2.3,
+      "pnl_pct": -10.51,
+      "pnl_krw": -70732206052076.0,
+      "reason": "STOP_LOSS (-10.5%)",
+      "hold_min": 11.0,
+      "queue_price": 1.9921,
+      "queue_to_entry_pct": 29.0,
+      "entry_time_ms": 1768238640000,
+      "sell_time_ms": 1768239300000,
+      "daily_high": 2.85,
+      "max_possible_pct": 10.9
+    },
+    {
+      "ticker": "SDOT",
+      "type": "full",
+      "entry_price": 4.475,
+      "sell_price": 4.12,
+      "pnl_pct": -7.93,
+      "pnl_krw": -58189789212302.0,
+      "reason": "STOP_LOSS (-7.9%)",
+      "hold_min": 11.0,
+      "queue_price": 3.6001,
+      "queue_to_entry_pct": 24.3,
+      "entry_time_ms": 1768245180000,
+      "sell_time_ms": 1768245840000,
+      "daily_high": 4.66,
+      "max_possible_pct": 4.1
+    },
+    {
+      "ticker": "EVTV",
+      "type": "partial",
+      "entry_price": 2.3888,
+      "sell_price": 2.54,
+      "pnl_pct": 6.329537843268596,
+      "pnl_krw": 25351448297415.25,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 12.0,
+      "entry_time_ms": 1768250760000,
+      "sell_time_ms": 1768251480000
+    },
+    {
+      "ticker": "ATON",
+      "type": "partial",
+      "entry_price": 1.21,
+      "sell_price": 1.2803,
+      "pnl_pct": 5.8099173553719075,
+      "pnl_krw": 24507389402425.75,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 1.0,
+      "entry_time_ms": 1768252080000,
+      "sell_time_ms": 1768252140000
+    },
+    {
+      "ticker": "EVTV",
+      "type": "full",
+      "entry_price": 2.3888,
+      "sell_price": 2.11,
+      "pnl_pct": -11.67,
+      "pnl_krw": -46745924506080.0,
+      "reason": "STOP_LOSS (-11.7%)",
+      "hold_min": 23.0,
+      "queue_price": 1.9901,
+      "queue_to_entry_pct": 20.0,
+      "entry_time_ms": 1768250760000,
+      "sell_time_ms": 1768252140000,
+      "daily_high": 3.71,
+      "max_possible_pct": 55.3
+    },
+    {
+      "ticker": "ATON",
+      "type": "full",
+      "entry_price": 1.21,
+      "sell_price": 1.26,
+      "pnl_pct": 4.13,
+      "pnl_krw": 17430575677401.0,
+      "reason": "TRAILING (4.1%, peak=9.1%)",
+      "hold_min": 10.0,
+      "queue_price": 1,
+      "queue_to_entry_pct": 21.0,
+      "entry_time_ms": 1768252080000,
+      "sell_time_ms": 1768252680000,
+      "daily_high": 3.34,
+      "max_possible_pct": 176.0
+    }
+  ],
+  "fake_signals": [
+    {
+      "ticker": "ASTI",
+      "time_ms": 1768244040000,
+      "price": 4.84,
+      "max_later_gain_pct": 1.7
+    },
+    {
+      "ticker": "ASTI",
+      "time_ms": 1768244340000,
+      "price": 4.87,
+      "max_later_gain_pct": 1.0
+    },
+    {
+      "ticker": "ASTI",
+      "time_ms": 1768245540000,
+      "price": 4.79,
+      "max_later_gain_pct": 2.7
+    },
+    {
+      "ticker": "ASTI",
+      "time_ms": 1768246080000,
+      "price": 4.8,
+      "max_later_gain_pct": 2.5
+    },
+    {
+      "ticker": "ASTI",
+      "time_ms": 1768247760000,
+      "price": 4.88,
+      "max_later_gain_pct": 0.8
+    },
+    {
+      "ticker": "ASTI",
+      "time_ms": 1768247940000,
+      "price": 4.76,
+      "max_later_gain_pct": 3.4
+    },
+    {
+      "ticker": "ASTI",
+      "time_ms": 1768257840000,
+      "price": 4.8,
+      "max_later_gain_pct": 1.0
+    },
+    {
+      "ticker": "ASTI",
+      "time_ms": 1768265340000,
+      "price": 4.75,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "BDSX",
+      "time_ms": 1768244820000,
+      "price": 8.34,
+      "max_later_gain_pct": 1.8
+    },
+    {
+      "ticker": "BDSX",
+      "time_ms": 1768246440000,
+      "price": 8.26,
+      "max_later_gain_pct": 1.9
+    },
+    {
+      "ticker": "BDSX",
+      "time_ms": 1768246920000,
+      "price": 8.19,
+      "max_later_gain_pct": 2.8
+    },
+    {
+      "ticker": "BDSX",
+      "time_ms": 1768260120000,
+      "price": 7.85,
+      "max_later_gain_pct": 2.2
+    },
+    {
+      "ticker": "BDSX",
+      "time_ms": 1768263000000,
+      "price": 8,
+      "max_later_gain_pct": 0.2
+    },
+    {
+      "ticker": "BDSX",
+      "time_ms": 1768264500000,
+      "price": 8.02,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "BDSX",
+      "time_ms": 1768265100000,
+      "price": 7.85,
+      "max_later_gain_pct": 1.8
+    },
+    {
+      "ticker": "BDSX",
+      "time_ms": 1768265160000,
+      "price": 7.82,
+      "max_later_gain_pct": 2.2
+    },
+    {
+      "ticker": "ELOG",
+      "time_ms": 1768238220000,
+      "price": 1.825,
+      "max_later_gain_pct": 2.5
+    },
+    {
+      "ticker": "ELOG",
+      "time_ms": 1768239780000,
+      "price": 1.76,
+      "max_later_gain_pct": 0.6
+    },
+    {
+      "ticker": "ELOG",
+      "time_ms": 1768240680000,
+      "price": 1.7258,
+      "max_later_gain_pct": 2.6
+    },
+    {
+      "ticker": "ELOG",
+      "time_ms": 1768250400000,
+      "price": 1.65,
+      "max_later_gain_pct": 1.2
+    },
+    {
+      "ticker": "ELOG",
+      "time_ms": 1768250520000,
+      "price": 1.6,
+      "max_later_gain_pct": 4.4
+    },
+    {
+      "ticker": "EVTV",
+      "time_ms": 1768264980000,
+      "price": 3.24,
+      "max_later_gain_pct": 1.2
+    },
+    {
+      "ticker": "IMSRW",
+      "time_ms": 1768260960000,
+      "price": 5.5,
+      "max_later_gain_pct": 3.6
+    },
+    {
+      "ticker": "INUV",
+      "time_ms": 1768241940000,
+      "price": 3.36,
+      "max_later_gain_pct": 3.6
+    },
+    {
+      "ticker": "INUV",
+      "time_ms": 1768243920000,
+      "price": 3.36,
+      "max_later_gain_pct": 3.6
+    },
+    {
+      "ticker": "INUV",
+      "time_ms": 1768248180000,
+      "price": 3.45,
+      "max_later_gain_pct": 0.9
+    },
+    {
+      "ticker": "INUV",
+      "time_ms": 1768248480000,
+      "price": 3.432,
+      "max_later_gain_pct": 1.4
+    },
+    {
+      "ticker": "INUV",
+      "time_ms": 1768249080000,
+      "price": 3.415,
+      "max_later_gain_pct": 0.7
+    },
+    {
+      "ticker": "INUV",
+      "time_ms": 1768249380000,
+      "price": 3.35,
+      "max_later_gain_pct": 2.1
+    },
+    {
+      "ticker": "INUV",
+      "time_ms": 1768252320000,
+      "price": 3.38,
+      "max_later_gain_pct": 1.2
+    },
+    {
+      "ticker": "INUV",
+      "time_ms": 1768254360000,
+      "price": 3.4,
+      "max_later_gain_pct": 0.6
+    },
+    {
+      "ticker": "INUV",
+      "time_ms": 1768258260000,
+      "price": 3.372,
+      "max_later_gain_pct": 0.5
+    },
+    {
+      "ticker": "LVLU",
+      "time_ms": 1768253880000,
+      "price": 12.68,
+      "max_later_gain_pct": 2.5
+    },
+    {
+      "ticker": "LVLU",
+      "time_ms": 1768262880000,
+      "price": 12.25,
+      "max_later_gain_pct": 4.1
+    },
+    {
+      "ticker": "OMH",
+      "time_ms": 1768242660000,
+      "price": 1.59,
+      "max_later_gain_pct": 4.4
+    },
+    {
+      "ticker": "OMH",
+      "time_ms": 1768265220000,
+      "price": 1.4,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "OMH",
+      "time_ms": 1768265760000,
+      "price": 1.36,
+      "max_later_gain_pct": 0.7
+    },
+    {
+      "ticker": "SDOT",
+      "time_ms": 1768248900000,
+      "price": 3.83,
+      "max_later_gain_pct": 4.4
+    },
+    {
+      "ticker": "SDOT",
+      "time_ms": 1768261380000,
+      "price": 3.71,
+      "max_later_gain_pct": 4.3
+    },
+    {
+      "ticker": "SDOT",
+      "time_ms": 1768262760000,
+      "price": 3.8,
+      "max_later_gain_pct": 1.8
+    },
+    {
+      "ticker": "SDOT",
+      "time_ms": 1768265100000,
+      "price": 3.81,
+      "max_later_gain_pct": 0.8
+    },
+    {
+      "ticker": "SLS",
+      "time_ms": 1768245720000,
+      "price": 4.25,
+      "max_later_gain_pct": 2.4
+    },
+    {
+      "ticker": "SLS",
+      "time_ms": 1768246440000,
+      "price": 4.221542,
+      "max_later_gain_pct": 3.0
+    },
+    {
+      "ticker": "SLS",
+      "time_ms": 1768252020000,
+      "price": 4.15,
+      "max_later_gain_pct": 4.8
+    },
+    {
+      "ticker": "SLS",
+      "time_ms": 1768254360000,
+      "price": 4.19,
+      "max_later_gain_pct": 3.8
+    },
+    {
+      "ticker": "SLS",
+      "time_ms": 1768255680000,
+      "price": 4.26,
+      "max_later_gain_pct": 2.1
+    },
+    {
+      "ticker": "SLS",
+      "time_ms": 1768256220000,
+      "price": 4.33,
+      "max_later_gain_pct": 0.5
+    },
+    {
+      "ticker": "SLS",
+      "time_ms": 1768257000000,
+      "price": 4.33,
+      "max_later_gain_pct": 0.2
+    },
+    {
+      "ticker": "SLS",
+      "time_ms": 1768263420000,
+      "price": 4.32,
+      "max_later_gain_pct": 0.5
+    },
+    {
+      "ticker": "SLS",
+      "time_ms": 1768265100000,
+      "price": 4.3,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "SUGP",
+      "time_ms": 1768237440000,
+      "price": 6.8,
+      "max_later_gain_pct": 2.8
+    },
+    {
+      "ticker": "SUGP",
+      "time_ms": 1768247460000,
+      "price": 6.72,
+      "max_later_gain_pct": 4.0
+    },
+    {
+      "ticker": "SUGP",
+      "time_ms": 1768249320000,
+      "price": 6.85,
+      "max_later_gain_pct": 2.0
+    },
+    {
+      "ticker": "SUGP",
+      "time_ms": 1768251540000,
+      "price": 6.8246,
+      "max_later_gain_pct": 0.7
+    }
+  ],
+  "missed_entries": [],
+  "fake_rate": 28.4
+}

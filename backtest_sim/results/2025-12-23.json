@@ -1,0 +1,374 @@
+{
+  "date": "2025-12-23",
+  "starting_portfolio": 2805979328245.0,
+  "ending_portfolio": 5487096308649.0,
+  "day_pnl_krw": 2681116980404.0,
+  "day_pnl_pct": 95.55,
+  "vol_spikes_detected": 101,
+  "signals_generated": 101,
+  "buys_executed": 7,
+  "trades": [
+    {
+      "ticker": "HIHO",
+      "type": "partial",
+      "entry_price": 1.23,
+      "sell_price": 1.35,
+      "pnl_pct": 9.756097560975618,
+      "pnl_krw": 13687704040.219513,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 1.0,
+      "entry_time_ms": 1766496060000,
+      "sell_time_ms": 1766496120000
+    },
+    {
+      "ticker": "HIHO",
+      "type": "full",
+      "entry_price": 1.23,
+      "sell_price": 1.24,
+      "pnl_pct": 0.81,
+      "pnl_krw": 1140642003.0,
+      "reason": "TRAILING (0.8%, peak=9.8%)",
+      "hold_min": 2.0,
+      "queue_price": 1.02,
+      "queue_to_entry_pct": 20.6,
+      "entry_time_ms": 1766496060000,
+      "sell_time_ms": 1766496180000,
+      "daily_high": 2.21,
+      "max_possible_pct": 79.7
+    },
+    {
+      "ticker": "PCLA",
+      "type": "partial",
+      "entry_price": 6.123,
+      "sell_price": 6.48,
+      "pnl_pct": 5.830475257226864,
+      "pnl_krw": 9041334327.4487,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 1.0,
+      "entry_time_ms": 1766498400000,
+      "sell_time_ms": 1766498460000
+    },
+    {
+      "ticker": "PCLA",
+      "type": "full",
+      "entry_price": 6.123,
+      "sell_price": 5.691,
+      "pnl_pct": -7.06,
+      "pnl_krw": -10940774312.0,
+      "reason": "STOP_LOSS (-7.1%)",
+      "hold_min": 3.0,
+      "queue_price": 4.5,
+      "queue_to_entry_pct": 36.1,
+      "entry_time_ms": 1766498400000,
+      "sell_time_ms": 1766498580000,
+      "daily_high": 14.1,
+      "max_possible_pct": 130.3
+    },
+    {
+      "ticker": "EUDA",
+      "type": "partial",
+      "entry_price": 1.68,
+      "sell_price": 1.8869,
+      "pnl_pct": 12.315476190476193,
+      "pnl_krw": 20995711547.32196,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 12.0,
+      "entry_time_ms": 1766500440000,
+      "sell_time_ms": 1766501160000
+    },
+    {
+      "ticker": "EUDA",
+      "type": "full",
+      "entry_price": 1.68,
+      "sell_price": 1.8869,
+      "pnl_pct": 12.32,
+      "pnl_krw": 20995711547.0,
+      "reason": "PROFIT_TARGET +10% (12.3%)",
+      "hold_min": 12.0,
+      "queue_price": 1.36,
+      "queue_to_entry_pct": 23.5,
+      "entry_time_ms": 1766500440000,
+      "sell_time_ms": 1766501160000,
+      "daily_high": 2.19,
+      "max_possible_pct": 30.4
+    },
+    {
+      "ticker": "ASTI",
+      "type": "partial",
+      "entry_price": 4.9,
+      "sell_price": 5.24,
+      "pnl_pct": 6.938775510204076,
+      "pnl_krw": 13158009796.573425,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 2.0,
+      "entry_time_ms": 1766501400000,
+      "sell_time_ms": 1766501520000
+    },
+    {
+      "ticker": "ASTI",
+      "type": "full",
+      "entry_price": 4.9,
+      "sell_price": 6.05,
+      "pnl_pct": 23.47,
+      "pnl_krw": 44505033135.0,
+      "reason": "PROFIT_TARGET +10% (23.5%)",
+      "hold_min": 7.0,
+      "queue_price": 3.9524,
+      "queue_to_entry_pct": 24.0,
+      "entry_time_ms": 1766501400000,
+      "sell_time_ms": 1766501820000,
+      "daily_high": 7.4,
+      "max_possible_pct": 51.0
+    },
+    {
+      "ticker": "OPTX",
+      "type": "full",
+      "entry_price": 3.2416,
+      "sell_price": 2.97,
+      "pnl_pct": -8.38,
+      "pnl_krw": -28567992697.0,
+      "reason": "STOP_LOSS (-8.4%)",
+      "hold_min": 21.0,
+      "queue_price": 2.65,
+      "queue_to_entry_pct": 22.3,
+      "entry_time_ms": 1766500740000,
+      "sell_time_ms": 1766502000000,
+      "daily_high": 3.54,
+      "max_possible_pct": 9.2
+    },
+    {
+      "ticker": "STEC",
+      "type": "partial",
+      "entry_price": 1.56,
+      "sell_price": 1.64,
+      "pnl_pct": 5.12820512820511,
+      "pnl_krw": 11645955972.073242,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 1.0,
+      "entry_time_ms": 1766511660000,
+      "sell_time_ms": 1766511720000
+    },
+    {
+      "ticker": "STEC",
+      "type": "full",
+      "entry_price": 1.56,
+      "sell_price": 1.4016,
+      "pnl_pct": -10.15,
+      "pnl_krw": -23058992825.0,
+      "reason": "STOP_LOSS (-10.2%)",
+      "hold_min": 16.0,
+      "queue_price": 1.255,
+      "queue_to_entry_pct": 24.3,
+      "entry_time_ms": 1766511660000,
+      "sell_time_ms": 1766512620000,
+      "daily_high": 1.82,
+      "max_possible_pct": 16.7
+    },
+    {
+      "ticker": "STEC",
+      "type": "partial",
+      "entry_price": 1.6768,
+      "sell_price": 1.79,
+      "pnl_pct": 6.750954198473291,
+      "pnl_krw": 16825747701.24295,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 8.0,
+      "entry_time_ms": 1766520240000,
+      "sell_time_ms": 1766520720000
+    },
+    {
+      "ticker": "STEC",
+      "type": "full",
+      "entry_price": 1.6768,
+      "sell_price": 1.59,
+      "pnl_pct": -5.18,
+      "pnl_krw": -12901721736.0,
+      "reason": "TIME_LIMIT (-5.2%)",
+      "hold_min": 45.0,
+      "queue_price": 1.3,
+      "queue_to_entry_pct": 29.0,
+      "entry_time_ms": 1766520240000,
+      "sell_time_ms": 1766522940000,
+      "daily_high": 1.82,
+      "max_possible_pct": 8.5
+    }
+  ],
+  "fake_signals": [
+    {
+      "ticker": "ASTI",
+      "time_ms": 1766526360000,
+      "price": 4.94,
+      "max_later_gain_pct": 0.4
+    },
+    {
+      "ticker": "ASTI",
+      "time_ms": 1766528160000,
+      "price": 4.88,
+      "max_later_gain_pct": 1.6
+    },
+    {
+      "ticker": "ASTI",
+      "time_ms": 1766529240000,
+      "price": 4.71,
+      "max_later_gain_pct": 4.7
+    },
+    {
+      "ticker": "ASTI",
+      "time_ms": 1766534340000,
+      "price": 4.9298,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "ASTI",
+      "time_ms": 1766535000000,
+      "price": 4.92,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "EUDA",
+      "time_ms": 1766515200000,
+      "price": 1.93,
+      "max_later_gain_pct": 4.1
+    },
+    {
+      "ticker": "EUDA",
+      "time_ms": 1766515680000,
+      "price": 1.935,
+      "max_later_gain_pct": 3.9
+    },
+    {
+      "ticker": "EUDA",
+      "time_ms": 1766521620000,
+      "price": 1.94,
+      "max_later_gain_pct": 2.6
+    },
+    {
+      "ticker": "EUDA",
+      "time_ms": 1766524560000,
+      "price": 1.87,
+      "max_later_gain_pct": 1.6
+    },
+    {
+      "ticker": "EUDA",
+      "time_ms": 1766525160000,
+      "price": 1.85,
+      "max_later_gain_pct": 2.7
+    },
+    {
+      "ticker": "EUDA",
+      "time_ms": 1766526300000,
+      "price": 1.83,
+      "max_later_gain_pct": 2.2
+    },
+    {
+      "ticker": "HIHO",
+      "time_ms": 1766532660000,
+      "price": 1.35,
+      "max_later_gain_pct": 2.2
+    },
+    {
+      "ticker": "HIHO",
+      "time_ms": 1766535780000,
+      "price": 1.36,
+      "max_later_gain_pct": 0.7
+    },
+    {
+      "ticker": "HIHO",
+      "time_ms": 1766536920000,
+      "price": 1.3399,
+      "max_later_gain_pct": 2.2
+    },
+    {
+      "ticker": "OPTX",
+      "time_ms": 1766533260000,
+      "price": 2.41,
+      "max_later_gain_pct": 1.7
+    },
+    {
+      "ticker": "OPTX",
+      "time_ms": 1766535120000,
+      "price": 2.4201,
+      "max_later_gain_pct": 0.4
+    },
+    {
+      "ticker": "OPTX",
+      "time_ms": 1766535660000,
+      "price": 2.4001,
+      "max_later_gain_pct": 1.2
+    },
+    {
+      "ticker": "PCLA",
+      "time_ms": 1766532240000,
+      "price": 10.008,
+      "max_later_gain_pct": 1.3
+    },
+    {
+      "ticker": "PCLA",
+      "time_ms": 1766536920000,
+      "price": 8.613,
+      "max_later_gain_pct": 3.4
+    },
+    {
+      "ticker": "PCLA",
+      "time_ms": 1766537400000,
+      "price": 8.91,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "STEC",
+      "time_ms": 1766527380000,
+      "price": 1.5,
+      "max_later_gain_pct": 4.7
+    },
+    {
+      "ticker": "STEC",
+      "time_ms": 1766530800000,
+      "price": 1.53,
+      "max_later_gain_pct": 2.6
+    },
+    {
+      "ticker": "STEC",
+      "time_ms": 1766537880000,
+      "price": 1.5,
+      "max_later_gain_pct": 3.3
+    },
+    {
+      "ticker": "VUZI",
+      "time_ms": 1766519460000,
+      "price": 3.6186,
+      "max_later_gain_pct": 4.9
+    },
+    {
+      "ticker": "VUZI",
+      "time_ms": 1766524320000,
+      "price": 3.75,
+      "max_later_gain_pct": 0.3
+    },
+    {
+      "ticker": "VUZI",
+      "time_ms": 1766525760000,
+      "price": 3.7391,
+      "max_later_gain_pct": 0.3
+    },
+    {
+      "ticker": "VUZI",
+      "time_ms": 1766527620000,
+      "price": 3.69,
+      "max_later_gain_pct": 1.6
+    },
+    {
+      "ticker": "VUZI",
+      "time_ms": 1766530920000,
+      "price": 3.73,
+      "max_later_gain_pct": 0.5
+    },
+    {
+      "ticker": "VUZI",
+      "time_ms": 1766537820000,
+      "price": 3.75,
+      "max_later_gain_pct": 0.0
+    }
+  ],
+  "missed_entries": [],
+  "fake_rate": 28.7
+}

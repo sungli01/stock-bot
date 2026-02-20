@@ -1,0 +1,293 @@
+{
+  "date": "2025-12-03",
+  "starting_portfolio": 1194084855.0,
+  "ending_portfolio": 1871105762.0,
+  "day_pnl_krw": 677020907.0,
+  "day_pnl_pct": 56.7,
+  "vol_spikes_detected": 111,
+  "signals_generated": 111,
+  "buys_executed": 5,
+  "trades": [
+    {
+      "ticker": "QCLS",
+      "type": "full",
+      "entry_price": 5.3137,
+      "sell_price": 4.8,
+      "pnl_pct": -9.67,
+      "pnl_krw": -11543772.0,
+      "reason": "STOP_LOSS (-9.7%)",
+      "hold_min": 4.0,
+      "queue_price": 4.39,
+      "queue_to_entry_pct": 21.0,
+      "entry_time_ms": 1764772680000,
+      "sell_time_ms": 1764772920000,
+      "daily_high": 5.675,
+      "max_possible_pct": 6.8
+    },
+    {
+      "ticker": "IRBT",
+      "type": "full",
+      "entry_price": 2.72,
+      "sell_price": 2.45,
+      "pnl_pct": -9.93,
+      "pnl_krw": -12923764.0,
+      "reason": "STOP_LOSS (-9.9%)",
+      "hold_min": 1.0,
+      "queue_price": 2.2542,
+      "queue_to_entry_pct": 20.7,
+      "entry_time_ms": 1764773340000,
+      "sell_time_ms": 1764773400000,
+      "daily_high": 3.7,
+      "max_possible_pct": 36.0
+    },
+    {
+      "ticker": "NIXX",
+      "type": "full",
+      "entry_price": 1.1423,
+      "sell_price": 1.05,
+      "pnl_pct": -8.08,
+      "pnl_krw": -11467572.0,
+      "reason": "STOP_LOSS (-8.1%)",
+      "hold_min": 5.0,
+      "queue_price": 0.9492,
+      "queue_to_entry_pct": 20.3,
+      "entry_time_ms": 1764775500000,
+      "sell_time_ms": 1764775800000,
+      "daily_high": 1.15,
+      "max_possible_pct": 0.7
+    },
+    {
+      "ticker": "KITT",
+      "type": "full",
+      "entry_price": 0.98,
+      "sell_price": 0.9039,
+      "pnl_pct": -7.77,
+      "pnl_krw": -12033703.0,
+      "reason": "STOP_LOSS (-7.8%)",
+      "hold_min": 6.0,
+      "queue_price": 0.800184,
+      "queue_to_entry_pct": 22.5,
+      "entry_time_ms": 1764778080000,
+      "sell_time_ms": 1764778440000,
+      "daily_high": 1.95,
+      "max_possible_pct": 99.0
+    },
+    {
+      "ticker": "KITT",
+      "type": "partial",
+      "entry_price": 1.4698,
+      "sell_price": 1.55,
+      "pnl_pct": 5.456524697237719,
+      "pnl_krw": 4617881.649865225,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 14.0,
+      "entry_time_ms": 1764792540000,
+      "sell_time_ms": 1764793380000
+    },
+    {
+      "ticker": "KITT",
+      "type": "full",
+      "entry_price": 1.4698,
+      "sell_price": 1.55,
+      "pnl_pct": 5.46,
+      "pnl_krw": 4617882.0,
+      "reason": "TRAILING (5.5%, peak=11.0%)",
+      "hold_min": 25.0,
+      "queue_price": 1.22,
+      "queue_to_entry_pct": 20.5,
+      "entry_time_ms": 1764792540000,
+      "sell_time_ms": 1764794040000,
+      "daily_high": 1.95,
+      "max_possible_pct": 32.7
+    }
+  ],
+  "fake_signals": [
+    {
+      "ticker": "AVXL",
+      "time_ms": 1764783600000,
+      "price": 4.4722,
+      "max_later_gain_pct": 4.9
+    },
+    {
+      "ticker": "AVXL",
+      "time_ms": 1764788280000,
+      "price": 4.49,
+      "max_later_gain_pct": 4.5
+    },
+    {
+      "ticker": "AVXL",
+      "time_ms": 1764789840000,
+      "price": 4.485,
+      "max_later_gain_pct": 4.6
+    },
+    {
+      "ticker": "AVXL",
+      "time_ms": 1764790500000,
+      "price": 4.49,
+      "max_later_gain_pct": 4.5
+    },
+    {
+      "ticker": "AVXL",
+      "time_ms": 1764802560000,
+      "price": 4.64,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "AVXL",
+      "time_ms": 1764806700000,
+      "price": 4.47,
+      "max_later_gain_pct": 3.1
+    },
+    {
+      "ticker": "CAPR",
+      "time_ms": 1764803820000,
+      "price": 27.27,
+      "max_later_gain_pct": 4.0
+    },
+    {
+      "ticker": "IRBT",
+      "time_ms": 1764805440000,
+      "price": 3.25,
+      "max_later_gain_pct": 2.5
+    },
+    {
+      "ticker": "IRBT",
+      "time_ms": 1764806280000,
+      "price": 3.23,
+      "max_later_gain_pct": 2.8
+    },
+    {
+      "ticker": "IRBT",
+      "time_ms": 1764808260000,
+      "price": 3.26,
+      "max_later_gain_pct": 1.8
+    },
+    {
+      "ticker": "IRBT",
+      "time_ms": 1764809460000,
+      "price": 3.28,
+      "max_later_gain_pct": 1.2
+    },
+    {
+      "ticker": "MCRP",
+      "time_ms": 1764800460000,
+      "price": 1.12,
+      "max_later_gain_pct": 3.6
+    },
+    {
+      "ticker": "MCRP",
+      "time_ms": 1764803220000,
+      "price": 1.12,
+      "max_later_gain_pct": 3.6
+    },
+    {
+      "ticker": "MCRP",
+      "time_ms": 1764804360000,
+      "price": 1.1,
+      "max_later_gain_pct": 0.9
+    },
+    {
+      "ticker": "MCRP",
+      "time_ms": 1764805380000,
+      "price": 1.08,
+      "max_later_gain_pct": 2.7
+    },
+    {
+      "ticker": "MCRP",
+      "time_ms": 1764805860000,
+      "price": 1.08,
+      "max_later_gain_pct": 1.9
+    },
+    {
+      "ticker": "MCRP",
+      "time_ms": 1764806940000,
+      "price": 1.08,
+      "max_later_gain_pct": 1.9
+    },
+    {
+      "ticker": "MCRP",
+      "time_ms": 1764807300000,
+      "price": 1.08,
+      "max_later_gain_pct": 1.9
+    },
+    {
+      "ticker": "MCRP",
+      "time_ms": 1764808920000,
+      "price": 1.08,
+      "max_later_gain_pct": 1.9
+    },
+    {
+      "ticker": "MCRP",
+      "time_ms": 1764809760000,
+      "price": 1.08,
+      "max_later_gain_pct": 1.9
+    },
+    {
+      "ticker": "NIXX",
+      "time_ms": 1764784740000,
+      "price": 1.11,
+      "max_later_gain_pct": 3.6
+    },
+    {
+      "ticker": "NIXX",
+      "time_ms": 1764793200000,
+      "price": 1.1,
+      "max_later_gain_pct": 4.5
+    },
+    {
+      "ticker": "NIXX",
+      "time_ms": 1764795240000,
+      "price": 1.13,
+      "max_later_gain_pct": 1.8
+    },
+    {
+      "ticker": "NIXX",
+      "time_ms": 1764797640000,
+      "price": 1.11,
+      "max_later_gain_pct": 3.6
+    },
+    {
+      "ticker": "QCLS",
+      "time_ms": 1764800460000,
+      "price": 4.84,
+      "max_later_gain_pct": 2.3
+    },
+    {
+      "ticker": "QCLS",
+      "time_ms": 1764801480000,
+      "price": 4.82,
+      "max_later_gain_pct": 2.7
+    },
+    {
+      "ticker": "QCLS",
+      "time_ms": 1764807780000,
+      "price": 4.9,
+      "max_later_gain_pct": 1.0
+    },
+    {
+      "ticker": "QCLS",
+      "time_ms": 1764808200000,
+      "price": 4.9394,
+      "max_later_gain_pct": 0.2
+    }
+  ],
+  "missed_entries": [
+    {
+      "ticker": "CAPR",
+      "daily_change_pct": 302.07,
+      "daily_volume": 56775461.0,
+      "had_vol_spike": true,
+      "meets_daily_vol": true,
+      "reason": "price_not_triggered"
+    },
+    {
+      "ticker": "MCRP",
+      "daily_change_pct": 35.74,
+      "daily_volume": 10874249,
+      "had_vol_spike": true,
+      "meets_daily_vol": true,
+      "reason": "price_not_triggered"
+    }
+  ],
+  "fake_rate": 25.2
+}

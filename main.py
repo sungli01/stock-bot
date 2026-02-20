@@ -261,27 +261,37 @@ def run_live(config: dict):
     tracker = PostTradeTracker()
     bar_recorder = BarRecorder()
 
-    # 세션 내 거래/보유 이력 — 장중 절대 재매수 금지
-    # 파일에서 당일 이력 복원
+    # [v9] 세션 내 거래 이력
+    # - _traded_once_tickers: 1차 완료 (2차 진입 허용)
+    # - _traded_tickers: 2차 완료 or 완전 차단 (파일 저장)
     from trader.market_hours import get_trading_date as _get_td
     _today_date = _get_td()
-    _traded_tickers: set[str] = _load_traded_tickers(_today_date)
+    _traded_tickers: set[str] = _load_traded_tickers(_today_date)   # 완전 차단
+    _traded_once_tickers: set[str] = set()                           # 1차 완료 (메모리)
 
-    # 복원된 종목을 scanner에도 등록
+    # 복원된 종목을 scanner에도 등록 (완전 차단 종목)
     for _t in _traded_tickers:
-        scanner.mark_signaled(_t)
+        scanner.mark_signaled(_t, is_second=True)
 
-    def _mark_traded(ticker: str):
-        """_traded_tickers에 추가 + 파일 저장"""
-        _traded_tickers.add(ticker)
-        _save_traded_tickers(_today_date, _traded_tickers)
+    def _mark_traded(ticker: str, is_second: bool = False):
+        """거래 완료 마킹
+        - is_second=False (1차): _traded_once_tickers에 추가 + bar_scanner 2차 허용
+        - is_second=True  (2차): _traded_tickers에 추가 + 파일 저장 (완전 차단)
+        """
+        if is_second:
+            _traded_tickers.add(ticker)
+            _save_traded_tickers(_today_date, _traded_tickers)
+            scanner.mark_signaled(ticker, is_second=True)
+        else:
+            _traded_once_tickers.add(ticker)
+            bar_scanner.set_traded_once(ticker)
+            scanner.mark_signaled(ticker, is_second=False)
 
-    # 봇 시작 시 기존 보유 종목을 _traded_tickers에 등록
+    # 봇 시작 시 기존 보유 종목을 _traded_tickers에 등록 (완전 차단)
     try:
         init_balance = executor.kis.get_balance()
         for pos in init_balance.get("positions", []):
-            _mark_traded(pos["ticker"])
-            scanner.mark_signaled(pos["ticker"])
+            _mark_traded(pos["ticker"], is_second=True)
         if _traded_tickers:
             logger.info(f"📋 기존 보유 종목 재매수 차단 등록: {_traded_tickers}")
     except Exception as e:
@@ -291,8 +301,7 @@ def run_live(config: dict):
     try:
         today_orders = executor.kis.get_today_orders()
         for ticker in today_orders:
-            _mark_traded(ticker)
-            scanner.mark_signaled(ticker)
+            _mark_traded(ticker, is_second=True)  # 재배포 시 안전하게 완전 차단
         if today_orders:
             logger.info(f"📋 당일 주문내역에서 복원: {today_orders}")
     except Exception as e:
@@ -365,7 +374,8 @@ def run_live(config: dict):
                     _traded_tickers.clear()
                     _today_date = _get_td()
                     _save_traded_tickers(_today_date, _traded_tickers)
-                    logger.info("🔄 _traded_tickers 초기화 (새 세션)")
+                    _traded_once_tickers.clear()
+                    logger.info("🔄 _traded_tickers / _traded_once_tickers 초기화 (새 세션)")
                     sleep_logged = True
 
                     # 장 마감 후 post-trade 업데이트 (1일 1회)
@@ -472,8 +482,15 @@ def run_live(config: dict):
                         executor.execute_stop_loss(ticker)
                     else:
                         executor.execute_sell(ticker)
-                    _mark_traded(ticker)
-                    scanner.mark_signaled(ticker)
+
+                    # [v9] 매도 후 1차/2차 판별
+                    if ticker in _traded_once_tickers and ticker not in _traded_tickers:
+                        # 1차 포지션 청산 → 2차 진입 대기 (완전 차단 X)
+                        logger.info(f"💡 {ticker} 1차 포지션 청산 — 2차 진입 대기")
+                        # bar_scanner는 이미 set_traded_once 완료, 재등록 불필요
+                    else:
+                        # 2차 포지션 청산 → 완전 차단
+                        _mark_traded(ticker, is_second=True)
 
                     # Bar recorder — 매도 기록
                     try:
@@ -532,18 +549,24 @@ def run_live(config: dict):
 
                     ticker = cand["ticker"]
 
-                    # 재매수 차단 (금일 거래/보유 이력)
+                    # [v9] 재매수 차단
+                    is_second_cand = cand.get("is_second", False)
                     if ticker in _traded_tickers:
-                        logger.debug(f"⛔ {ticker} 재매수 차단 (금일 거래 이력)")
-                        scanner.mark_signaled(ticker)
+                        # 2차 완료 → 완전 차단
+                        logger.debug(f"⛔ {ticker} 재매수 차단 (2차 완료)")
+                        scanner.mark_signaled(ticker, is_second=True)
+                        continue
+                    if ticker in _traded_once_tickers and not is_second_cand:
+                        # 1차 완료 + 1차 큐 → 2차 큐 대기
+                        logger.debug(f"⏸️ {ticker} 1차 완료 — 2차 큐 대기 중")
                         continue
 
-                    # v8 엔진: 20%+ 급등 + 3분봉 1000%+ 이미 검증 완료
-                    # → analyzer bypass, 즉시 매수
-                    engine_v8 = config.get("scanner", {}).get("price_change_pct", 3.0) >= 20.0
-                    if engine_v8:
-                        sig = {"signal": "BUY", "confidence": 100, "reason": "v8_3min_momentum"}
-                        logger.info(f"🔥 {ticker} v8 모멘텀 엔진 — analyzer bypass")
+                    # [v9] 엔진: 3분봉 vol spike + 가격 트리거 → analyzer bypass
+                    engine_v9 = config.get("scanner", {}).get("price_change_pct", 3.0) >= 20.0
+                    entry_label = "2차" if is_second_cand else "1차"
+                    if engine_v9:
+                        sig = {"signal": "BUY", "confidence": 100, "reason": f"v9_{entry_label}_momentum"}
+                        logger.info(f"🔥 {ticker} v9 {entry_label} 모멘텀 엔진 — analyzer bypass")
                     else:
                         sig = analyzer.evaluate(ticker, cand)
                         if not sig or sig["signal"] != "BUY":
@@ -562,31 +585,34 @@ def run_live(config: dict):
 
                     # 매수 실행
                     price = cand["price"]
-                    logger.info(f"📈 {ticker} 매수 진입 (신뢰도 {sig['confidence']:.0f}%, ${price:.2f})")
+                    logger.info(f"📈 [{entry_label}] {ticker} 매수 진입 (${price:.2f})")
                     pct_q = cand.get("pct_from_queue", cand["change_pct"])
                     q_price = cand.get("queue_price", 0)
                     send_notification(
-                        f"📈 {ticker} 매수\n"
+                        f"📈 [{entry_label}] {ticker} 매수\n"
                         f"가격: ${price:.2f}\n"
-                        f"거래량폭증기준 +{pct_q:.1f}% (기준${q_price:.2f})\n"
+                        f"기준대비 +{pct_q:.1f}% (기준${q_price:.2f})\n"
                         f"3분봉: {cand.get('vol_3min_ratio', 0):.0f}%"
                     )
 
                     if PAPER_MODE and paper_trader:
-                        # v8 가상매매: 10분할 상단호가 매수
+                        # [v9] 1차/2차 매수금액 분기
                         trading_cfg_inner = config.get("trading", {})
                         alloc = trading_cfg_inner.get("allocation_ratio", [0.7, 0.3])
-                        alloc_pct = alloc[0] if current_count == 0 else (alloc[1] if len(alloc) > 1 else alloc[0])
-                        buy_amount = paper_trader.cash * alloc_pct
                         vol_3min = cand.get("vol_3min_ratio", 0)
 
-                        # v8 엔진이면 buy_split(10분할), 아니면 기존 buy()
-                        if engine_v8 and hasattr(paper_trader, 'buy_split'):
-                            result = paper_trader.buy_split(ticker, price, buy_amount, splits=10)
+                        if is_second_cand:
+                            # [v9] 2차: 풀 매수 (가용 현금 전액)
+                            buy_amount = paper_trader.cash
                         else:
-                            result = paper_trader.buy(ticker, price, buy_amount)
-                        scanner.mark_signaled(ticker)
-                        _mark_traded(ticker)
+                            # 1차: 배분 비율 적용
+                            alloc_pct = alloc[0] if current_count == 0 else (alloc[1] if len(alloc) > 1 else alloc[0])
+                            buy_amount = paper_trader.cash * alloc_pct
+
+                        result = paper_trader.buy_split(ticker, price, buy_amount, splits=10)
+                        # [v9] 1차/2차 구분 마킹
+                        _mark_traded(ticker, is_second=is_second_cand)
+
                         if result:
                             bb_trailing.register_entry(ticker)
                             current_count += 1
@@ -597,13 +623,15 @@ def run_live(config: dict):
                                     "change_pct": cand.get("change_pct", 0),
                                     "volume_ratio": cand.get("volume_ratio", 0),
                                     "vol_3min_ratio": vol_3min,
+                                    "is_second": is_second_cand,
                                 })
                             except Exception as e:
                                 logger.error(f"bar_recorder entry 실패: {e}")
+                            entry_label = "2차" if is_second_cand else "1차"
                             send_notification(
-                                f"[가상] ✅ {ticker} 매수 완료\n"
+                                f"[가상] ✅ {ticker} {entry_label} 매수 완료\n"
                                 f"평균가: ${result.get('price', price):.2f}\n"
-                                f"거래량기준 +{cand.get('pct_from_queue', cand['change_pct']):.1f}%\n"
+                                f"기준대비 +{cand.get('pct_from_queue', cand['change_pct']):.1f}%\n"
                                 f"3분봉: {vol_3min:.0f}%",
                                 immediate=True
                             )
@@ -611,9 +639,8 @@ def run_live(config: dict):
                             send_notification(f"[가상] ❌ {ticker} 매수 실패 — 잔고 부족")
                     else:
                         orders = executor.execute_buy(ticker, price)
-                        # 체결 여부와 무관하게 같은 종목 반복 시도 방지
-                        scanner.mark_signaled(ticker)
-                        _mark_traded(ticker)
+                        # [v9] 1차/2차 구분 마킹
+                        _mark_traded(ticker, is_second=is_second_cand)
 
                         if orders:
                             bb_trailing.register_entry(ticker)
@@ -624,14 +651,15 @@ def run_live(config: dict):
                                     "confidence": sig.get("confidence", 0),
                                     "change_pct": cand.get("change_pct", 0),
                                     "volume_ratio": cand.get("volume_ratio", 0),
+                                    "is_second": is_second_cand,
                                 })
                             except Exception as e:
                                 logger.error(f"bar_recorder entry 실패: {e}")
+                            entry_label = "2차" if is_second_cand else "1차"
                             send_notification(
-                                f"✅ {ticker} 매수 완료\n"
+                                f"✅ {ticker} {entry_label} 매수 완료\n"
                                 f"가격: ${price:.2f}\n"
-                                f"변동: {cand['change_pct']:+.1f}%\n"
-                                f"신뢰도: {sig['confidence']:.0f}%",
+                                f"기준대비 +{cand.get('pct_from_queue', cand['change_pct']):.1f}%",
                                 immediate=True
                             )
                         else:

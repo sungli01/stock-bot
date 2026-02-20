@@ -1,0 +1,356 @@
+{
+  "date": "2025-12-17",
+  "starting_portfolio": 369954886624.0,
+  "ending_portfolio": 735497681555.0,
+  "day_pnl_krw": 365542794931.0,
+  "day_pnl_pct": 98.81,
+  "vol_spikes_detected": 87,
+  "signals_generated": 87,
+  "buys_executed": 7,
+  "trades": [
+    {
+      "ticker": "PCSA",
+      "type": "partial",
+      "entry_price": 4.72,
+      "sell_price": 5.94,
+      "pnl_pct": 25.847457627118665,
+      "pnl_krw": 4781196627.979664,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 11.0,
+      "entry_time_ms": 1765982460000,
+      "sell_time_ms": 1765983120000
+    },
+    {
+      "ticker": "PCSA",
+      "type": "full",
+      "entry_price": 4.72,
+      "sell_price": 5.94,
+      "pnl_pct": 25.85,
+      "pnl_krw": 4781196628.0,
+      "reason": "PROFIT_TARGET +10% (25.8%)",
+      "hold_min": 11.0,
+      "queue_price": 3.72,
+      "queue_to_entry_pct": 26.9,
+      "entry_time_ms": 1765982460000,
+      "sell_time_ms": 1765983120000,
+      "daily_high": 9.88,
+      "max_possible_pct": 109.3
+    },
+    {
+      "ticker": "IRBT",
+      "type": "partial",
+      "entry_price": 0.9893,
+      "sell_price": 1.045,
+      "pnl_pct": 5.630243606590524,
+      "pnl_krw": 1172534176.0744667,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 11.0,
+      "entry_time_ms": 1765983660000,
+      "sell_time_ms": 1765984320000
+    },
+    {
+      "ticker": "IRBT",
+      "type": "full",
+      "entry_price": 0.9893,
+      "sell_price": 1.041,
+      "pnl_pct": 5.23,
+      "pnl_krw": 1088330645.0,
+      "reason": "TRAILING (5.2%, peak=9.8%)",
+      "hold_min": 17.0,
+      "queue_price": 0.7852,
+      "queue_to_entry_pct": 26.0,
+      "entry_time_ms": 1765983660000,
+      "sell_time_ms": 1765984680000,
+      "daily_high": 1.09,
+      "max_possible_pct": 10.2
+    },
+    {
+      "ticker": "YCBD",
+      "type": "full",
+      "entry_price": 2.39,
+      "sell_price": 2.22,
+      "pnl_pct": -7.11,
+      "pnl_krw": -2631478273.0,
+      "reason": "STOP_LOSS (-7.1%)",
+      "hold_min": 36.0,
+      "queue_price": 1.99,
+      "queue_to_entry_pct": 20.1,
+      "entry_time_ms": 1765983060000,
+      "sell_time_ms": 1765985220000,
+      "daily_high": 2.53,
+      "max_possible_pct": 5.9
+    },
+    {
+      "ticker": "MGRT",
+      "type": "full",
+      "entry_price": 6.11,
+      "sell_price": 5.6,
+      "pnl_pct": -8.35,
+      "pnl_krw": -4129989354.0,
+      "reason": "STOP_LOSS (-8.3%)",
+      "hold_min": 32.0,
+      "queue_price": 4.95,
+      "queue_to_entry_pct": 23.4,
+      "entry_time_ms": 1765986180000,
+      "sell_time_ms": 1765988100000,
+      "daily_high": 15.9,
+      "max_possible_pct": 160.2
+    },
+    {
+      "ticker": "MGRT",
+      "type": "partial",
+      "entry_price": 7.75,
+      "sell_price": 9.68,
+      "pnl_pct": 24.903225806451612,
+      "pnl_krw": 6725587090.291649,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 10.0,
+      "entry_time_ms": 1765990140000,
+      "sell_time_ms": 1765990740000
+    },
+    {
+      "ticker": "MGRT",
+      "type": "full",
+      "entry_price": 7.75,
+      "sell_price": 9.68,
+      "pnl_pct": 24.9,
+      "pnl_krw": 6725587090.0,
+      "reason": "PROFIT_TARGET +10% (24.9%)",
+      "hold_min": 10.0,
+      "queue_price": 6.43,
+      "queue_to_entry_pct": 20.5,
+      "entry_time_ms": 1765990140000,
+      "sell_time_ms": 1765990740000,
+      "daily_high": 15.9,
+      "max_possible_pct": 105.2
+    },
+    {
+      "ticker": "MGRT",
+      "type": "full",
+      "entry_price": 8.27,
+      "sell_price": 7.67,
+      "pnl_pct": -7.26,
+      "pnl_krw": -4408242659.0,
+      "reason": "STOP_LOSS (-7.3%)",
+      "hold_min": 1.0,
+      "queue_price": 6.79,
+      "queue_to_entry_pct": 21.8,
+      "entry_time_ms": 1765996380000,
+      "sell_time_ms": 1765996440000,
+      "daily_high": 15.9,
+      "max_possible_pct": 92.3
+    },
+    {
+      "ticker": "MGRT",
+      "type": "partial",
+      "entry_price": 11.48,
+      "sell_price": 12.6,
+      "pnl_pct": 9.756097560975597,
+      "pnl_krw": 3238803976.337162,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 32.0,
+      "entry_time_ms": 1766000940000,
+      "sell_time_ms": 1766002860000
+    },
+    {
+      "ticker": "MGRT",
+      "type": "full",
+      "entry_price": 11.48,
+      "sell_price": 12.14,
+      "pnl_pct": 5.75,
+      "pnl_krw": 1908580915.0,
+      "reason": "TRAILING (5.7%, peak=9.8%)",
+      "hold_min": 33.0,
+      "queue_price": 8.37,
+      "queue_to_entry_pct": 37.2,
+      "entry_time_ms": 1766000940000,
+      "sell_time_ms": 1766002920000,
+      "daily_high": 15.9,
+      "max_possible_pct": 38.5
+    }
+  ],
+  "fake_signals": [
+    {
+      "ticker": "IMG",
+      "time_ms": 1766000640000,
+      "price": 1.4686,
+      "max_later_gain_pct": 1.5
+    },
+    {
+      "ticker": "IMG",
+      "time_ms": 1766012220000,
+      "price": 1.28,
+      "max_later_gain_pct": 3.9
+    },
+    {
+      "ticker": "IRBT",
+      "time_ms": 1765997940000,
+      "price": 0.8226,
+      "max_later_gain_pct": 2.7
+    },
+    {
+      "ticker": "IRBT",
+      "time_ms": 1765999920000,
+      "price": 0.8095,
+      "max_later_gain_pct": 0.7
+    },
+    {
+      "ticker": "IRBT",
+      "time_ms": 1766011380000,
+      "price": 0.776,
+      "max_later_gain_pct": 4.4
+    },
+    {
+      "ticker": "IRBT",
+      "time_ms": 1766012100000,
+      "price": 0.795,
+      "max_later_gain_pct": 1.9
+    },
+    {
+      "ticker": "IRBT",
+      "time_ms": 1766013060000,
+      "price": 0.7976,
+      "max_later_gain_pct": 0.3
+    },
+    {
+      "ticker": "IRBT",
+      "time_ms": 1766015940000,
+      "price": 0.7972,
+      "max_later_gain_pct": 0.4
+    },
+    {
+      "ticker": "IRBT",
+      "time_ms": 1766016600000,
+      "price": 0.793,
+      "max_later_gain_pct": 0.9
+    },
+    {
+      "ticker": "IRBT",
+      "time_ms": 1766016780000,
+      "price": 0.79495,
+      "max_later_gain_pct": 0.6
+    },
+    {
+      "ticker": "IRBT",
+      "time_ms": 1766017680000,
+      "price": 0.795,
+      "max_later_gain_pct": 0.6
+    },
+    {
+      "ticker": "IRBT",
+      "time_ms": 1766019420000,
+      "price": 0.7956,
+      "max_later_gain_pct": 0.1
+    },
+    {
+      "ticker": "MGRT",
+      "time_ms": 1766019420000,
+      "price": 6.45,
+      "max_later_gain_pct": 2.3
+    },
+    {
+      "ticker": "MIGI",
+      "time_ms": 1765987560000,
+      "price": 4.74,
+      "max_later_gain_pct": 3.0
+    },
+    {
+      "ticker": "MIGI",
+      "time_ms": 1765992300000,
+      "price": 4.6,
+      "max_later_gain_pct": 4.1
+    },
+    {
+      "ticker": "MIGI",
+      "time_ms": 1765992600000,
+      "price": 4.58,
+      "max_later_gain_pct": 4.6
+    },
+    {
+      "ticker": "MIGI",
+      "time_ms": 1765994040000,
+      "price": 4.65,
+      "max_later_gain_pct": 3.0
+    },
+    {
+      "ticker": "MIGI",
+      "time_ms": 1765995000000,
+      "price": 4.5975,
+      "max_later_gain_pct": 4.2
+    },
+    {
+      "ticker": "MIGI",
+      "time_ms": 1765996440000,
+      "price": 4.74,
+      "max_later_gain_pct": 1.1
+    },
+    {
+      "ticker": "MIGI",
+      "time_ms": 1765998780000,
+      "price": 4.713,
+      "max_later_gain_pct": 0.9
+    },
+    {
+      "ticker": "MIGI",
+      "time_ms": 1766000100000,
+      "price": 4.65,
+      "max_later_gain_pct": 0.7
+    },
+    {
+      "ticker": "MIGI",
+      "time_ms": 1766004660000,
+      "price": 4.4801,
+      "max_later_gain_pct": 1.3
+    },
+    {
+      "ticker": "PCSA",
+      "time_ms": 1766009940000,
+      "price": 4.81,
+      "max_later_gain_pct": 2.3
+    },
+    {
+      "ticker": "PCSA",
+      "time_ms": 1766016120000,
+      "price": 4.25,
+      "max_later_gain_pct": 4.0
+    },
+    {
+      "ticker": "YCBD",
+      "time_ms": 1766003520000,
+      "price": 2.35,
+      "max_later_gain_pct": 1.7
+    },
+    {
+      "ticker": "YCBD",
+      "time_ms": 1766008620000,
+      "price": 2.2193,
+      "max_later_gain_pct": 4.5
+    },
+    {
+      "ticker": "YCBD",
+      "time_ms": 1766010240000,
+      "price": 2.28,
+      "max_later_gain_pct": 1.8
+    },
+    {
+      "ticker": "YCBD",
+      "time_ms": 1766011560000,
+      "price": 2.25,
+      "max_later_gain_pct": 3.1
+    },
+    {
+      "ticker": "YCBD",
+      "time_ms": 1766017260000,
+      "price": 2.23,
+      "max_later_gain_pct": 4.0
+    },
+    {
+      "ticker": "YCBD",
+      "time_ms": 1766018100000,
+      "price": 2.2666,
+      "max_later_gain_pct": 2.4
+    }
+  ],
+  "missed_entries": [],
+  "fake_rate": 34.5
+}

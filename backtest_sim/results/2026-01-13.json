@@ -1,0 +1,475 @@
+{
+  "date": "2026-01-13",
+  "starting_portfolio": 9675756587391762.0,
+  "ending_portfolio": 2.4329173011529924e+16,
+  "day_pnl_krw": 1.4653416424138162e+16,
+  "day_pnl_pct": 151.44,
+  "vol_spikes_detected": 187,
+  "signals_generated": 187,
+  "buys_executed": 10,
+  "trades": [
+    {
+      "ticker": "IOTR",
+      "type": "partial",
+      "entry_price": 4.16,
+      "sell_price": 4.8,
+      "pnl_pct": 15.384615384615374,
+      "pnl_krw": 74428896826090.44,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 1.0,
+      "entry_time_ms": 1768298940000,
+      "sell_time_ms": 1768299000000
+    },
+    {
+      "ticker": "IOTR",
+      "type": "full",
+      "entry_price": 4.16,
+      "sell_price": 4.8,
+      "pnl_pct": 15.38,
+      "pnl_krw": 74428896826090.0,
+      "reason": "PROFIT_TARGET +10% (15.4%)",
+      "hold_min": 1.0,
+      "queue_price": 3.39,
+      "queue_to_entry_pct": 22.7,
+      "entry_time_ms": 1768298940000,
+      "sell_time_ms": 1768299000000,
+      "daily_high": 5.76,
+      "max_possible_pct": 38.5
+    },
+    {
+      "ticker": "IOTR",
+      "type": "full",
+      "entry_price": 4.1479,
+      "sell_price": 3.34,
+      "pnl_pct": -19.48,
+      "pnl_krw": -210203002317818.0,
+      "reason": "STOP_LOSS (-19.5%)",
+      "hold_min": 2.0,
+      "queue_price": 3.26,
+      "queue_to_entry_pct": 27.2,
+      "entry_time_ms": 1768309380000,
+      "sell_time_ms": 1768309500000,
+      "daily_high": 5.76,
+      "max_possible_pct": 38.9
+    },
+    {
+      "ticker": "IOTR",
+      "type": "full",
+      "entry_price": 4.62,
+      "sell_price": 3.41,
+      "pnl_pct": -26.19,
+      "pnl_krw": -305412539180666.0,
+      "reason": "STOP_LOSS (-26.2%)",
+      "hold_min": 1.0,
+      "queue_price": 3.36,
+      "queue_to_entry_pct": 37.5,
+      "entry_time_ms": 1768309920000,
+      "sell_time_ms": 1768309980000,
+      "daily_high": 5.76,
+      "max_possible_pct": 24.7
+    },
+    {
+      "ticker": "XAIR",
+      "type": "partial",
+      "entry_price": 1.31,
+      "sell_price": 1.47,
+      "pnl_pct": 12.213740458015266,
+      "pnl_krw": 76469704466609.5,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 26.0,
+      "entry_time_ms": 1768311420000,
+      "sell_time_ms": 1768312980000
+    },
+    {
+      "ticker": "XAIR",
+      "type": "full",
+      "entry_price": 1.31,
+      "sell_price": 1.47,
+      "pnl_pct": 12.21,
+      "pnl_krw": 76469704466610.0,
+      "reason": "PROFIT_TARGET +10% (12.2%)",
+      "hold_min": 26.0,
+      "queue_price": 1.08,
+      "queue_to_entry_pct": 21.3,
+      "entry_time_ms": 1768311420000,
+      "sell_time_ms": 1768312980000,
+      "daily_high": 2.66,
+      "max_possible_pct": 103.1
+    },
+    {
+      "ticker": "BCARW",
+      "type": "full",
+      "entry_price": 0.8289,
+      "sell_price": 0.7501,
+      "pnl_pct": -9.51,
+      "pnl_krw": -132398496823178.0,
+      "reason": "STOP_LOSS (-9.5%)",
+      "hold_min": 2.0,
+      "queue_price": 0.6898,
+      "queue_to_entry_pct": 20.2,
+      "entry_time_ms": 1768314780000,
+      "sell_time_ms": 1768314900000,
+      "daily_high": 1.45,
+      "max_possible_pct": 74.9
+    },
+    {
+      "ticker": "EDBL",
+      "type": "partial",
+      "entry_price": 8.199,
+      "sell_price": 8.6995,
+      "pnl_pct": 6.104402975972678,
+      "pnl_krw": 46354855081955.0,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 33.0,
+      "entry_time_ms": 1768316220000,
+      "sell_time_ms": 1768318200000
+    },
+    {
+      "ticker": "EDBL",
+      "type": "full",
+      "entry_price": 8.199,
+      "sell_price": 9.231,
+      "pnl_pct": 12.59,
+      "pnl_krw": 95580840049106.0,
+      "reason": "PROFIT_TARGET +10% (12.6%)",
+      "hold_min": 35.0,
+      "queue_price": 6.8,
+      "queue_to_entry_pct": 20.6,
+      "entry_time_ms": 1768316220000,
+      "sell_time_ms": 1768318320000,
+      "daily_high": 12.4,
+      "max_possible_pct": 51.2
+    },
+    {
+      "ticker": "EDBL",
+      "type": "full",
+      "entry_price": 10.799,
+      "sell_price": 10,
+      "pnl_pct": -7.4,
+      "pnl_krw": -124655702801567.0,
+      "reason": "STOP_LOSS (-7.4%)",
+      "hold_min": 24.0,
+      "queue_price": 8.45,
+      "queue_to_entry_pct": 27.8,
+      "entry_time_ms": 1768320240000,
+      "sell_time_ms": 1768321680000,
+      "daily_high": 12.4,
+      "max_possible_pct": 14.8
+    },
+    {
+      "ticker": "ATON",
+      "type": "full",
+      "entry_price": 2.42,
+      "sell_price": 2.2502,
+      "pnl_pct": -7.02,
+      "pnl_krw": -129161444482771.0,
+      "reason": "STOP_LOSS (-7.0%)",
+      "hold_min": 2.0,
+      "queue_price": 1.9508,
+      "queue_to_entry_pct": 24.1,
+      "entry_time_ms": 1768331340000,
+      "sell_time_ms": 1768331460000,
+      "daily_high": 3.3,
+      "max_possible_pct": 36.4
+    },
+    {
+      "ticker": "BCARW",
+      "type": "partial",
+      "entry_price": 1.15,
+      "sell_price": 1.26,
+      "pnl_pct": 9.565217391304358,
+      "pnl_krw": 96225243067138.12,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 3.0,
+      "entry_time_ms": 1768333560000,
+      "sell_time_ms": 1768333740000
+    },
+    {
+      "ticker": "BCARW",
+      "type": "full",
+      "entry_price": 1.15,
+      "sell_price": 1.2001,
+      "pnl_pct": 4.36,
+      "pnl_krw": 43826224342396.0,
+      "reason": "TRAILING (4.4%, peak=9.6%)",
+      "hold_min": 4.0,
+      "queue_price": 0.94,
+      "queue_to_entry_pct": 22.3,
+      "entry_time_ms": 1768333560000,
+      "sell_time_ms": 1768333800000,
+      "daily_high": 1.45,
+      "max_possible_pct": 26.1
+    },
+    {
+      "ticker": "EDBL",
+      "type": "full",
+      "entry_price": 11.8,
+      "sell_price": 10.9,
+      "pnl_pct": -7.63,
+      "pnl_krw": -169870098606493.0,
+      "reason": "STOP_LOSS (-7.6%)",
+      "hold_min": 2.0,
+      "queue_price": 9.079,
+      "queue_to_entry_pct": 30.0,
+      "entry_time_ms": 1768336740000,
+      "sell_time_ms": 1768336860000,
+      "daily_high": 12.4,
+      "max_possible_pct": 5.1
+    }
+  ],
+  "fake_signals": [
+    {
+      "ticker": "AGIG",
+      "time_ms": 1768319580000,
+      "price": 3.4073,
+      "max_later_gain_pct": 2.4
+    },
+    {
+      "ticker": "AGIG",
+      "time_ms": 1768324320000,
+      "price": 3.33,
+      "max_later_gain_pct": 4.8
+    },
+    {
+      "ticker": "AGIG",
+      "time_ms": 1768329900000,
+      "price": 3.34,
+      "max_later_gain_pct": 4.5
+    },
+    {
+      "ticker": "AGIG",
+      "time_ms": 1768346580000,
+      "price": 3.34,
+      "max_later_gain_pct": 4.5
+    },
+    {
+      "ticker": "AGIG",
+      "time_ms": 1768346760000,
+      "price": 3.39,
+      "max_later_gain_pct": 2.9
+    },
+    {
+      "ticker": "AGIG",
+      "time_ms": 1768347180000,
+      "price": 3.4,
+      "max_later_gain_pct": 2.6
+    },
+    {
+      "ticker": "AGIG",
+      "time_ms": 1768349880000,
+      "price": 3.31,
+      "max_later_gain_pct": 3.3
+    },
+    {
+      "ticker": "AGIG",
+      "time_ms": 1768350900000,
+      "price": 3.399,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "ATON",
+      "time_ms": 1768348500000,
+      "price": 1.09,
+      "max_later_gain_pct": 1.8
+    },
+    {
+      "ticker": "ATON",
+      "time_ms": 1768351320000,
+      "price": 1.095,
+      "max_later_gain_pct": 1.4
+    },
+    {
+      "ticker": "BCARW",
+      "time_ms": 1768343460000,
+      "price": 1.4,
+      "max_later_gain_pct": 3.6
+    },
+    {
+      "ticker": "BCARW",
+      "time_ms": 1768345320000,
+      "price": 1.45,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "BCARW",
+      "time_ms": 1768347900000,
+      "price": 1.43,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "EDBL",
+      "time_ms": 1768339860000,
+      "price": 8.267,
+      "max_later_gain_pct": 1.7
+    },
+    {
+      "ticker": "EDBL",
+      "time_ms": 1768342020000,
+      "price": 7.829,
+      "max_later_gain_pct": 4.1
+    },
+    {
+      "ticker": "EDBL",
+      "time_ms": 1768351020000,
+      "price": 8.1,
+      "max_later_gain_pct": 0.6
+    },
+    {
+      "ticker": "EDBL",
+      "time_ms": 1768351740000,
+      "price": 8.122,
+      "max_later_gain_pct": 0.3
+    },
+    {
+      "ticker": "HUBC",
+      "time_ms": 1768342320000,
+      "price": 6.15,
+      "max_later_gain_pct": 4.9
+    },
+    {
+      "ticker": "HUBC",
+      "time_ms": 1768346760000,
+      "price": 6.1785,
+      "max_later_gain_pct": 1.0
+    },
+    {
+      "ticker": "HUBC",
+      "time_ms": 1768348440000,
+      "price": 6,
+      "max_later_gain_pct": 2.5
+    },
+    {
+      "ticker": "HUBC",
+      "time_ms": 1768351560000,
+      "price": 6.0945,
+      "max_later_gain_pct": 0.1
+    },
+    {
+      "ticker": "ICU",
+      "time_ms": 1768341780000,
+      "price": 3.15,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "ICU",
+      "time_ms": 1768348800000,
+      "price": 2.98,
+      "max_later_gain_pct": 2.0
+    },
+    {
+      "ticker": "ICU",
+      "time_ms": 1768352280000,
+      "price": 2.9101,
+      "max_later_gain_pct": 3.4
+    },
+    {
+      "ticker": "IOTR",
+      "time_ms": 1768346280000,
+      "price": 3.87,
+      "max_later_gain_pct": 0.5
+    },
+    {
+      "ticker": "IOTR",
+      "time_ms": 1768351200000,
+      "price": 3.68,
+      "max_later_gain_pct": 1.1
+    },
+    {
+      "ticker": "TRAW",
+      "time_ms": 1768334940000,
+      "price": 1.59,
+      "max_later_gain_pct": 2.5
+    },
+    {
+      "ticker": "TRAW",
+      "time_ms": 1768336440000,
+      "price": 1.58,
+      "max_later_gain_pct": 3.2
+    },
+    {
+      "ticker": "TRAW",
+      "time_ms": 1768337040000,
+      "price": 1.56,
+      "max_later_gain_pct": 4.5
+    },
+    {
+      "ticker": "TRAW",
+      "time_ms": 1768337760000,
+      "price": 1.62,
+      "max_later_gain_pct": 0.6
+    },
+    {
+      "ticker": "TRAW",
+      "time_ms": 1768338660000,
+      "price": 1.56,
+      "max_later_gain_pct": 3.8
+    },
+    {
+      "ticker": "TRAW",
+      "time_ms": 1768347060000,
+      "price": 1.54,
+      "max_later_gain_pct": 2.6
+    },
+    {
+      "ticker": "XTLB",
+      "time_ms": 1768329480000,
+      "price": 1.1,
+      "max_later_gain_pct": 4.5
+    },
+    {
+      "ticker": "XTLB",
+      "time_ms": 1768335360000,
+      "price": 1.1,
+      "max_later_gain_pct": 4.5
+    },
+    {
+      "ticker": "XTLB",
+      "time_ms": 1768340760000,
+      "price": 1.1,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "XTLB",
+      "time_ms": 1768341360000,
+      "price": 1.07,
+      "max_later_gain_pct": 2.8
+    },
+    {
+      "ticker": "XTLB",
+      "time_ms": 1768346640000,
+      "price": 1.05,
+      "max_later_gain_pct": 4.8
+    },
+    {
+      "ticker": "XTLB",
+      "time_ms": 1768347240000,
+      "price": 1.05,
+      "max_later_gain_pct": 4.8
+    },
+    {
+      "ticker": "XTLB",
+      "time_ms": 1768348200000,
+      "price": 1.06,
+      "max_later_gain_pct": 3.8
+    }
+  ],
+  "missed_entries": [
+    {
+      "ticker": "ICU",
+      "daily_change_pct": 30.99,
+      "daily_volume": 659506,
+      "had_vol_spike": true,
+      "meets_daily_vol": true,
+      "reason": "price_not_triggered"
+    },
+    {
+      "ticker": "XTLB",
+      "daily_change_pct": 64.07,
+      "daily_volume": 37039344.0,
+      "had_vol_spike": true,
+      "meets_daily_vol": true,
+      "reason": "price_not_triggered"
+    }
+  ],
+  "fake_rate": 20.9
+}

@@ -1,0 +1,384 @@
+{
+  "date": "2026-01-20",
+  "starting_portfolio": 2.7215973139926947e+17,
+  "ending_portfolio": 5.5502491757534874e+17,
+  "day_pnl_krw": 2.8286518617607926e+17,
+  "day_pnl_pct": 103.93,
+  "vol_spikes_detected": 149,
+  "signals_generated": 149,
+  "buys_executed": 8,
+  "trades": [
+    {
+      "ticker": "AKAN",
+      "type": "full",
+      "entry_price": 1.89,
+      "sell_price": 1.7,
+      "pnl_pct": -10.05,
+      "pnl_krw": -2735997299781016.0,
+      "reason": "STOP_LOSS (-10.1%)",
+      "hold_min": 2.0,
+      "queue_price": 1.47,
+      "queue_to_entry_pct": 28.6,
+      "entry_time_ms": 1768906380000,
+      "sell_time_ms": 1768906500000,
+      "daily_high": 2.25,
+      "max_possible_pct": 19.0
+    },
+    {
+      "ticker": "AKAN",
+      "type": "full",
+      "entry_price": 1.76,
+      "sell_price": 1.3797,
+      "pnl_pct": -21.61,
+      "pnl_krw": -6409777310406236.0,
+      "reason": "STOP_LOSS (-21.6%)",
+      "hold_min": 1.0,
+      "queue_price": 1.41,
+      "queue_to_entry_pct": 24.8,
+      "entry_time_ms": 1768914360000,
+      "sell_time_ms": 1768914420000,
+      "daily_high": 2.25,
+      "max_possible_pct": 27.8
+    },
+    {
+      "ticker": "POLA",
+      "type": "full",
+      "entry_price": 2.6,
+      "sell_price": 2.22,
+      "pnl_pct": -14.62,
+      "pnl_krw": -4675372394158508.0,
+      "reason": "STOP_LOSS (-14.6%)",
+      "hold_min": 1.0,
+      "queue_price": 2.0201,
+      "queue_to_entry_pct": 28.7,
+      "entry_time_ms": 1768914480000,
+      "sell_time_ms": 1768914540000,
+      "daily_high": 3.74,
+      "max_possible_pct": 43.8
+    },
+    {
+      "ticker": "ADTX",
+      "type": "partial",
+      "entry_price": 1.1327,
+      "sell_price": 1.19,
+      "pnl_pct": 5.058709278714568,
+      "pnl_krw": 878211959034616.0,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 3.0,
+      "entry_time_ms": 1768928700000,
+      "sell_time_ms": 1768928880000
+    },
+    {
+      "ticker": "ADTX",
+      "type": "full",
+      "entry_price": 1.1327,
+      "sell_price": 1.01,
+      "pnl_pct": -10.83,
+      "pnl_krw": -1880569064110776.0,
+      "reason": "STOP_LOSS (-10.8%)",
+      "hold_min": 9.0,
+      "queue_price": 0.9396,
+      "queue_to_entry_pct": 20.6,
+      "entry_time_ms": 1768928700000,
+      "sell_time_ms": 1768929240000,
+      "daily_high": 1.73,
+      "max_possible_pct": 52.7
+    },
+    {
+      "ticker": "ADTX",
+      "type": "partial",
+      "entry_price": 1.3906,
+      "sell_price": 1.51,
+      "pnl_pct": 8.586221774773485,
+      "pnl_krw": 1635359073577576.0,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 6.0,
+      "entry_time_ms": 1768932300000,
+      "sell_time_ms": 1768932660000
+    },
+    {
+      "ticker": "ADTX",
+      "type": "full",
+      "entry_price": 1.3906,
+      "sell_price": 1.5198,
+      "pnl_pct": 9.29,
+      "pnl_krw": 1769584525177744.0,
+      "reason": "TRAILING (9.3%, peak=15.7%)",
+      "hold_min": 9.0,
+      "queue_price": 1.13,
+      "queue_to_entry_pct": 23.1,
+      "entry_time_ms": 1768932300000,
+      "sell_time_ms": 1768932840000,
+      "daily_high": 1.73,
+      "max_possible_pct": 24.4
+    },
+    {
+      "ticker": "YOUL",
+      "type": "partial",
+      "entry_price": 1.6894,
+      "sell_price": 1.78,
+      "pnl_pct": 5.362850716230616,
+      "pnl_krw": 1132698243019764.0,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 2.0,
+      "entry_time_ms": 1768941840000,
+      "sell_time_ms": 1768941960000
+    },
+    {
+      "ticker": "YOUL",
+      "type": "full",
+      "entry_price": 1.6894,
+      "sell_price": 1.54,
+      "pnl_pct": -8.84,
+      "pnl_krw": -1867826904052456.0,
+      "reason": "STOP_LOSS (-8.8%)",
+      "hold_min": 12.0,
+      "queue_price": 1.39,
+      "queue_to_entry_pct": 21.5,
+      "entry_time_ms": 1768941840000,
+      "sell_time_ms": 1768942560000,
+      "daily_high": 1.9,
+      "max_possible_pct": 12.5
+    },
+    {
+      "ticker": "SEGG",
+      "type": "full",
+      "entry_price": 2.22,
+      "sell_price": 1.9999,
+      "pnl_pct": -9.91,
+      "pnl_krw": -4599606141775160.0,
+      "reason": "STOP_LOSS (-9.9%)",
+      "hold_min": 3.0,
+      "queue_price": 1.8492,
+      "queue_to_entry_pct": 20.1,
+      "entry_time_ms": 1768942920000,
+      "sell_time_ms": 1768943100000,
+      "daily_high": 4.65,
+      "max_possible_pct": 109.5
+    },
+    {
+      "ticker": "ADTX",
+      "type": "partial",
+      "entry_price": 1.59,
+      "sell_price": 1.68,
+      "pnl_pct": 5.660377358490565,
+      "pnl_krw": 1431296349048176.0,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 1.0,
+      "entry_time_ms": 1768951920000,
+      "sell_time_ms": 1768951980000
+    },
+    {
+      "ticker": "ADTX",
+      "type": "full",
+      "entry_price": 1.59,
+      "sell_price": 1.42,
+      "pnl_pct": -10.69,
+      "pnl_krw": -2703559770424336.0,
+      "reason": "STOP_LOSS (-10.7%)",
+      "hold_min": 24.0,
+      "queue_price": 1.22,
+      "queue_to_entry_pct": 30.3,
+      "entry_time_ms": 1768951920000,
+      "sell_time_ms": 1768953360000,
+      "daily_high": 1.73,
+      "max_possible_pct": 8.8
+    }
+  ],
+  "fake_signals": [
+    {
+      "ticker": "ADTX",
+      "time_ms": 1768951980000,
+      "price": 1.68,
+      "max_later_gain_pct": 1.8
+    },
+    {
+      "ticker": "AIRS",
+      "time_ms": 1768926660000,
+      "price": 2.89,
+      "max_later_gain_pct": 4.2
+    },
+    {
+      "ticker": "AIRS",
+      "time_ms": 1768927320000,
+      "price": 2.92,
+      "max_later_gain_pct": 3.1
+    },
+    {
+      "ticker": "AIRS",
+      "time_ms": 1768927680000,
+      "price": 2.9565,
+      "max_later_gain_pct": 1.8
+    },
+    {
+      "ticker": "AIRS",
+      "time_ms": 1768928220000,
+      "price": 2.91,
+      "max_later_gain_pct": 3.4
+    },
+    {
+      "ticker": "AIRS",
+      "time_ms": 1768928940000,
+      "price": 2.905,
+      "max_later_gain_pct": 3.6
+    },
+    {
+      "ticker": "AIRS",
+      "time_ms": 1768933860000,
+      "price": 2.9,
+      "max_later_gain_pct": 3.8
+    },
+    {
+      "ticker": "AIRS",
+      "time_ms": 1768935180000,
+      "price": 2.895,
+      "max_later_gain_pct": 0.9
+    },
+    {
+      "ticker": "AIRS",
+      "time_ms": 1768935720000,
+      "price": 2.88,
+      "max_later_gain_pct": 1.4
+    },
+    {
+      "ticker": "AIRS",
+      "time_ms": 1768937280000,
+      "price": 2.87,
+      "max_later_gain_pct": 1.7
+    },
+    {
+      "ticker": "AIRS",
+      "time_ms": 1768938600000,
+      "price": 2.89,
+      "max_later_gain_pct": 1.0
+    },
+    {
+      "ticker": "AIRS",
+      "time_ms": 1768938900000,
+      "price": 2.88,
+      "max_later_gain_pct": 0.9
+    },
+    {
+      "ticker": "AIRS",
+      "time_ms": 1768941180000,
+      "price": 2.83,
+      "max_later_gain_pct": 1.2
+    },
+    {
+      "ticker": "AIRS",
+      "time_ms": 1768941240000,
+      "price": 2.8101,
+      "max_later_gain_pct": 2.0
+    },
+    {
+      "ticker": "AKAN",
+      "time_ms": 1768954020000,
+      "price": 1.92,
+      "max_later_gain_pct": 4.2
+    },
+    {
+      "ticker": "AKAN",
+      "time_ms": 1768954920000,
+      "price": 1.91,
+      "max_later_gain_pct": 4.7
+    },
+    {
+      "ticker": "AKAN",
+      "time_ms": 1768956060000,
+      "price": 1.98,
+      "max_later_gain_pct": 1.0
+    },
+    {
+      "ticker": "AKAN",
+      "time_ms": 1768956900000,
+      "price": 1.98,
+      "max_later_gain_pct": 1.0
+    },
+    {
+      "ticker": "NUAI",
+      "time_ms": 1768929420000,
+      "price": 6.185,
+      "max_later_gain_pct": 2.2
+    },
+    {
+      "ticker": "NUAI",
+      "time_ms": 1768937160000,
+      "price": 5.8,
+      "max_later_gain_pct": 1.6
+    },
+    {
+      "ticker": "NUAI",
+      "time_ms": 1768938540000,
+      "price": 5.7,
+      "max_later_gain_pct": 1.8
+    },
+    {
+      "ticker": "NUAI",
+      "time_ms": 1768939980000,
+      "price": 5.54,
+      "max_later_gain_pct": 4.7
+    },
+    {
+      "ticker": "NUAI",
+      "time_ms": 1768944360000,
+      "price": 5.6428,
+      "max_later_gain_pct": 2.8
+    },
+    {
+      "ticker": "NUAI",
+      "time_ms": 1768945920000,
+      "price": 5.6599,
+      "max_later_gain_pct": 2.5
+    },
+    {
+      "ticker": "NUAI",
+      "time_ms": 1768949160000,
+      "price": 5.7562,
+      "max_later_gain_pct": 0.8
+    },
+    {
+      "ticker": "NUAI",
+      "time_ms": 1768949580000,
+      "price": 5.75,
+      "max_later_gain_pct": 0.3
+    },
+    {
+      "ticker": "NUAI",
+      "time_ms": 1768951380000,
+      "price": 5.6808,
+      "max_later_gain_pct": 0.9
+    },
+    {
+      "ticker": "POLA",
+      "time_ms": 1768925280000,
+      "price": 2.6855,
+      "max_later_gain_pct": 3.9
+    },
+    {
+      "ticker": "SEGG",
+      "time_ms": 1768948380000,
+      "price": 1.73,
+      "max_later_gain_pct": 4.0
+    },
+    {
+      "ticker": "SEGG",
+      "time_ms": 1768954320000,
+      "price": 1.6382,
+      "max_later_gain_pct": 2.6
+    },
+    {
+      "ticker": "SEGG",
+      "time_ms": 1768955100000,
+      "price": 1.62,
+      "max_later_gain_pct": 3.8
+    },
+    {
+      "ticker": "YOUL",
+      "time_ms": 1768953960000,
+      "price": 1.24,
+      "max_later_gain_pct": 1.6
+    }
+  ],
+  "missed_entries": [],
+  "fake_rate": 21.5
+}

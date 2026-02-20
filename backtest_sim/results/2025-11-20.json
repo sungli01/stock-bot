@@ -1,0 +1,5427 @@
+{
+  "date": "2025-11-20",
+  "starting_portfolio": 1624728.0,
+  "ending_portfolio": 5426931.0,
+  "day_pnl_krw": 3802203.0,
+  "day_pnl_pct": 234.02,
+  "vol_spikes_detected": 1321,
+  "signals_generated": 1321,
+  "buys_executed": 13,
+  "trades": [
+    {
+      "ticker": "MNDR",
+      "type": "full",
+      "entry_price": 3.51,
+      "sell_price": 2.89,
+      "pnl_pct": -17.66,
+      "pnl_krw": -28699.0,
+      "reason": "STOP_LOSS (-17.7%)",
+      "hold_min": 1.0,
+      "queue_price": 2.83,
+      "queue_to_entry_pct": 24.0,
+      "entry_time_ms": 1763644020000,
+      "sell_time_ms": 1763644080000,
+      "daily_high": 6.3,
+      "max_possible_pct": 79.5
+    },
+    {
+      "ticker": "BNKK",
+      "type": "full",
+      "entry_price": 7.9065,
+      "sell_price": 7.343,
+      "pnl_pct": -7.13,
+      "pnl_krw": -12533.0,
+      "reason": "STOP_LOSS (-7.1%)",
+      "hold_min": 2.0,
+      "queue_price": 5.8555,
+      "queue_to_entry_pct": 35.0,
+      "entry_time_ms": 1763646000000,
+      "sell_time_ms": 1763646120000,
+      "daily_high": 9.275,
+      "max_possible_pct": 17.3
+    },
+    {
+      "ticker": "LFS",
+      "type": "partial",
+      "entry_price": 6.34,
+      "sell_price": 7.17,
+      "pnl_pct": 13.091482649842279,
+      "pnl_krw": 12579.731124743834,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 10.0,
+      "entry_time_ms": 1763650140000,
+      "sell_time_ms": 1763650740000
+    },
+    {
+      "ticker": "LFS",
+      "type": "full",
+      "entry_price": 6.34,
+      "sell_price": 7.17,
+      "pnl_pct": 13.09,
+      "pnl_krw": 12580.0,
+      "reason": "PROFIT_TARGET +10% (13.1%)",
+      "hold_min": 10.0,
+      "queue_price": 5.1296,
+      "queue_to_entry_pct": 23.6,
+      "entry_time_ms": 1763650140000,
+      "sell_time_ms": 1763650740000,
+      "daily_high": 8.7,
+      "max_possible_pct": 37.2
+    },
+    {
+      "ticker": "SGBX",
+      "type": "partial",
+      "entry_price": 8.0581,
+      "sell_price": 8.6696,
+      "pnl_pct": 7.588637520010932,
+      "pnl_krw": 7291.994509577606,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 19.0,
+      "entry_time_ms": 1763650200000,
+      "sell_time_ms": 1763651340000
+    },
+    {
+      "ticker": "SGBX",
+      "type": "full",
+      "entry_price": 8.0581,
+      "sell_price": 8.87,
+      "pnl_pct": 10.08,
+      "pnl_krw": 9682.0,
+      "reason": "TRAILING (10.1%, peak=14.2%)",
+      "hold_min": 29.0,
+      "queue_price": 6.69,
+      "queue_to_entry_pct": 20.4,
+      "entry_time_ms": 1763650200000,
+      "sell_time_ms": 1763651940000,
+      "daily_high": 9.3399,
+      "max_possible_pct": 15.9
+    },
+    {
+      "ticker": "EPSM",
+      "type": "partial",
+      "entry_price": 2.82,
+      "sell_price": 3.11,
+      "pnl_pct": 10.283687943262422,
+      "pnl_krw": 12074.675352108505,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 20.0,
+      "entry_time_ms": 1763652060000,
+      "sell_time_ms": 1763653260000
+    },
+    {
+      "ticker": "EPSM",
+      "type": "full",
+      "entry_price": 2.82,
+      "sell_price": 3.11,
+      "pnl_pct": 10.28,
+      "pnl_krw": 12075.0,
+      "reason": "PROFIT_TARGET +10% (10.3%)",
+      "hold_min": 20.0,
+      "queue_price": 2.24,
+      "queue_to_entry_pct": 25.9,
+      "entry_time_ms": 1763652060000,
+      "sell_time_ms": 1763653260000,
+      "daily_high": 4.75,
+      "max_possible_pct": 68.4
+    },
+    {
+      "ticker": "LAZR",
+      "type": "full",
+      "entry_price": 1.1295,
+      "sell_price": 1.05,
+      "pnl_pct": -7.04,
+      "pnl_krw": -16529.0,
+      "reason": "STOP_LOSS (-7.0%)",
+      "hold_min": 27.0,
+      "queue_price": 0.9399,
+      "queue_to_entry_pct": 20.2,
+      "entry_time_ms": 1763652540000,
+      "sell_time_ms": 1763654160000,
+      "daily_high": 1.14,
+      "max_possible_pct": 0.9
+    },
+    {
+      "ticker": "EPSM",
+      "type": "full",
+      "entry_price": 4.39,
+      "sell_price": 3.97,
+      "pnl_pct": -9.57,
+      "pnl_krw": -27033.0,
+      "reason": "STOP_LOSS (-9.6%)",
+      "hold_min": 5.0,
+      "queue_price": 3.53,
+      "queue_to_entry_pct": 24.4,
+      "entry_time_ms": 1763656020000,
+      "sell_time_ms": 1763656320000,
+      "daily_high": 4.75,
+      "max_possible_pct": 8.2
+    },
+    {
+      "ticker": "EPSM",
+      "type": "full",
+      "entry_price": 4.39,
+      "sell_price": 4.07,
+      "pnl_pct": -7.29,
+      "pnl_krw": -22459.0,
+      "reason": "STOP_LOSS (-7.3%)",
+      "hold_min": 35.0,
+      "queue_price": 3.53,
+      "queue_to_entry_pct": 24.4,
+      "entry_time_ms": 1763662620000,
+      "sell_time_ms": 1763664720000,
+      "daily_high": 4.75,
+      "max_possible_pct": 8.2
+    },
+    {
+      "ticker": "PLAG",
+      "type": "partial",
+      "entry_price": 2.5,
+      "sell_price": 2.68,
+      "pnl_pct": 7.200000000000006,
+      "pnl_krw": 12120.409806136217,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 17.0,
+      "entry_time_ms": 1763664960000,
+      "sell_time_ms": 1763665980000
+    },
+    {
+      "ticker": "PLAG",
+      "type": "full",
+      "entry_price": 2.5,
+      "sell_price": 2.66,
+      "pnl_pct": 6.4,
+      "pnl_krw": 10774.0,
+      "reason": "TRAILING (6.4%, peak=12.0%)",
+      "hold_min": 28.0,
+      "queue_price": 2.08,
+      "queue_to_entry_pct": 20.2,
+      "entry_time_ms": 1763664960000,
+      "sell_time_ms": 1763666640000,
+      "daily_high": 4,
+      "max_possible_pct": 60.0
+    },
+    {
+      "ticker": "BNZI",
+      "type": "full",
+      "entry_price": 1.47,
+      "sell_price": 1.35,
+      "pnl_pct": -8.16,
+      "pnl_krw": -30419.0,
+      "reason": "STOP_LOSS (-8.2%)",
+      "hold_min": 11.0,
+      "queue_price": 1.21,
+      "queue_to_entry_pct": 21.5,
+      "entry_time_ms": 1763669940000,
+      "sell_time_ms": 1763670600000,
+      "daily_high": 1.61,
+      "max_possible_pct": 9.5
+    },
+    {
+      "ticker": "MNDR",
+      "type": "partial",
+      "entry_price": 3.62,
+      "sell_price": 4.26,
+      "pnl_pct": 17.67955801104972,
+      "pnl_krw": 35965.248352117254,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 9.0,
+      "entry_time_ms": 1763674080000,
+      "sell_time_ms": 1763674620000
+    },
+    {
+      "ticker": "MNDR",
+      "type": "full",
+      "entry_price": 3.62,
+      "sell_price": 4.26,
+      "pnl_pct": 17.68,
+      "pnl_krw": 35965.0,
+      "reason": "PROFIT_TARGET +10% (17.7%)",
+      "hold_min": 9.0,
+      "queue_price": 2.93,
+      "queue_to_entry_pct": 23.5,
+      "entry_time_ms": 1763674080000,
+      "sell_time_ms": 1763674620000,
+      "daily_high": 6.3,
+      "max_possible_pct": 74.0
+    },
+    {
+      "ticker": "PLAG",
+      "type": "full",
+      "entry_price": 3.6001,
+      "sell_price": 3.34,
+      "pnl_pct": -7.22,
+      "pnl_krw": -32854.0,
+      "reason": "STOP_LOSS (-7.2%)",
+      "hold_min": 5.0,
+      "queue_price": 2.95,
+      "queue_to_entry_pct": 22.0,
+      "entry_time_ms": 1763675820000,
+      "sell_time_ms": 1763676120000,
+      "daily_high": 4,
+      "max_possible_pct": 11.1
+    },
+    {
+      "ticker": "NFE",
+      "type": "full",
+      "entry_price": 1.9,
+      "sell_price": 1.75,
+      "pnl_pct": -7.89,
+      "pnl_krw": -39231.0,
+      "reason": "STOP_LOSS (-7.9%)",
+      "hold_min": 11.0,
+      "queue_price": 1.58,
+      "queue_to_entry_pct": 20.3,
+      "entry_time_ms": 1763682300000,
+      "sell_time_ms": 1763682960000,
+      "daily_high": 1.97,
+      "max_possible_pct": 3.7
+    }
+  ],
+  "fake_signals": [
+    {
+      "ticker": "AIBD",
+      "time_ms": 1763670900000,
+      "price": 8.21,
+      "max_later_gain_pct": 4.6
+    },
+    {
+      "ticker": "AIBD",
+      "time_ms": 1763672040000,
+      "price": 8.2834,
+      "max_later_gain_pct": 3.7
+    },
+    {
+      "ticker": "AIRS",
+      "time_ms": 1763649300000,
+      "price": 4.182,
+      "max_later_gain_pct": 4.5
+    },
+    {
+      "ticker": "AIRS",
+      "time_ms": 1763650980000,
+      "price": 4.31,
+      "max_later_gain_pct": 1.4
+    },
+    {
+      "ticker": "AIRS",
+      "time_ms": 1763654760000,
+      "price": 4.255,
+      "max_later_gain_pct": 0.6
+    },
+    {
+      "ticker": "AIRS",
+      "time_ms": 1763658000000,
+      "price": 4.07,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "AIRS",
+      "time_ms": 1763659200000,
+      "price": 4.03,
+      "max_later_gain_pct": 0.5
+    },
+    {
+      "ticker": "AIRS",
+      "time_ms": 1763660820000,
+      "price": 3.98,
+      "max_later_gain_pct": 1.8
+    },
+    {
+      "ticker": "AIRS",
+      "time_ms": 1763663520000,
+      "price": 3.99,
+      "max_later_gain_pct": 0.5
+    },
+    {
+      "ticker": "AIRS",
+      "time_ms": 1763664180000,
+      "price": 3.93,
+      "max_later_gain_pct": 1.8
+    },
+    {
+      "ticker": "AIRS",
+      "time_ms": 1763665020000,
+      "price": 3.915,
+      "max_later_gain_pct": 2.2
+    },
+    {
+      "ticker": "AIRS",
+      "time_ms": 1763665440000,
+      "price": 3.9,
+      "max_later_gain_pct": 2.6
+    },
+    {
+      "ticker": "AIRS",
+      "time_ms": 1763666280000,
+      "price": 3.935,
+      "max_later_gain_pct": 1.7
+    },
+    {
+      "ticker": "AIRS",
+      "time_ms": 1763667540000,
+      "price": 3.99,
+      "max_later_gain_pct": 0.3
+    },
+    {
+      "ticker": "AIRS",
+      "time_ms": 1763670300000,
+      "price": 3.93,
+      "max_later_gain_pct": 0.5
+    },
+    {
+      "ticker": "AIRS",
+      "time_ms": 1763670600000,
+      "price": 3.92,
+      "max_later_gain_pct": 0.8
+    },
+    {
+      "ticker": "AIRS",
+      "time_ms": 1763670900000,
+      "price": 3.88,
+      "max_later_gain_pct": 0.9
+    },
+    {
+      "ticker": "AIRS",
+      "time_ms": 1763671140000,
+      "price": 3.867,
+      "max_later_gain_pct": 0.3
+    },
+    {
+      "ticker": "AIRS",
+      "time_ms": 1763671560000,
+      "price": 3.835,
+      "max_later_gain_pct": 0.8
+    },
+    {
+      "ticker": "AIRS",
+      "time_ms": 1763671740000,
+      "price": 3.79,
+      "max_later_gain_pct": 1.5
+    },
+    {
+      "ticker": "AMDD",
+      "time_ms": 1763673180000,
+      "price": 10.04,
+      "max_later_gain_pct": 1.5
+    },
+    {
+      "ticker": "AMDD",
+      "time_ms": 1763675340000,
+      "price": 10.13,
+      "max_later_gain_pct": 0.6
+    },
+    {
+      "ticker": "AMIX",
+      "time_ms": 1763653800000,
+      "price": 1.0599,
+      "max_later_gain_pct": 2.8
+    },
+    {
+      "ticker": "AMIX",
+      "time_ms": 1763666820000,
+      "price": 1.065,
+      "max_later_gain_pct": 2.3
+    },
+    {
+      "ticker": "AMIX",
+      "time_ms": 1763667720000,
+      "price": 1.07,
+      "max_later_gain_pct": 1.9
+    },
+    {
+      "ticker": "AMIX",
+      "time_ms": 1763667840000,
+      "price": 1.085,
+      "max_later_gain_pct": 0.5
+    },
+    {
+      "ticker": "AMIX",
+      "time_ms": 1763668320000,
+      "price": 1.08,
+      "max_later_gain_pct": 0.9
+    },
+    {
+      "ticker": "AMIX",
+      "time_ms": 1763669880000,
+      "price": 1.085,
+      "max_later_gain_pct": 0.5
+    },
+    {
+      "ticker": "AMIX",
+      "time_ms": 1763669940000,
+      "price": 1.09,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "AMIX",
+      "time_ms": 1763670780000,
+      "price": 1.025,
+      "max_later_gain_pct": 4.0
+    },
+    {
+      "ticker": "AMIX",
+      "time_ms": 1763671500000,
+      "price": 0.9827,
+      "max_later_gain_pct": 2.8
+    },
+    {
+      "ticker": "AMIX",
+      "time_ms": 1763672220000,
+      "price": 1.005,
+      "max_later_gain_pct": 0.5
+    },
+    {
+      "ticker": "AMIX",
+      "time_ms": 1763672580000,
+      "price": 0.9944,
+      "max_later_gain_pct": 0.6
+    },
+    {
+      "ticker": "AMIX",
+      "time_ms": 1763673000000,
+      "price": 0.976,
+      "max_later_gain_pct": 2.4
+    },
+    {
+      "ticker": "AMIX",
+      "time_ms": 1763674020000,
+      "price": 0.99,
+      "max_later_gain_pct": 0.1
+    },
+    {
+      "ticker": "ANNX",
+      "time_ms": 1763657220000,
+      "price": 4.52,
+      "max_later_gain_pct": 2.0
+    },
+    {
+      "ticker": "ANNX",
+      "time_ms": 1763659860000,
+      "price": 4.49,
+      "max_later_gain_pct": 2.7
+    },
+    {
+      "ticker": "ANNX",
+      "time_ms": 1763680140000,
+      "price": 4.49,
+      "max_later_gain_pct": 0.2
+    },
+    {
+      "ticker": "ANVS",
+      "time_ms": 1763655900000,
+      "price": 3.85,
+      "max_later_gain_pct": 3.6
+    },
+    {
+      "ticker": "ANVS",
+      "time_ms": 1763656320000,
+      "price": 3.9374,
+      "max_later_gain_pct": 1.3
+    },
+    {
+      "ticker": "ANVS",
+      "time_ms": 1763665620000,
+      "price": 3.8136,
+      "max_later_gain_pct": 4.6
+    },
+    {
+      "ticker": "ANVS",
+      "time_ms": 1763668620000,
+      "price": 3.82,
+      "max_later_gain_pct": 4.5
+    },
+    {
+      "ticker": "ANVS",
+      "time_ms": 1763670660000,
+      "price": 3.86,
+      "max_later_gain_pct": 3.4
+    },
+    {
+      "ticker": "ANVS",
+      "time_ms": 1763673000000,
+      "price": 3.8775,
+      "max_later_gain_pct": 2.9
+    },
+    {
+      "ticker": "ANVS",
+      "time_ms": 1763675340000,
+      "price": 3.98,
+      "max_later_gain_pct": 0.3
+    },
+    {
+      "ticker": "API",
+      "time_ms": 1763652480000,
+      "price": 3.925,
+      "max_later_gain_pct": 0.8
+    },
+    {
+      "ticker": "API",
+      "time_ms": 1763654760000,
+      "price": 3.835,
+      "max_later_gain_pct": 0.1
+    },
+    {
+      "ticker": "API",
+      "time_ms": 1763657880000,
+      "price": 3.71,
+      "max_later_gain_pct": 2.0
+    },
+    {
+      "ticker": "API",
+      "time_ms": 1763661780000,
+      "price": 3.675,
+      "max_later_gain_pct": 1.1
+    },
+    {
+      "ticker": "API",
+      "time_ms": 1763664900000,
+      "price": 3.665,
+      "max_later_gain_pct": 0.7
+    },
+    {
+      "ticker": "API",
+      "time_ms": 1763667600000,
+      "price": 3.66,
+      "max_later_gain_pct": 0.3
+    },
+    {
+      "ticker": "API",
+      "time_ms": 1763669340000,
+      "price": 3.64,
+      "max_later_gain_pct": 0.4
+    },
+    {
+      "ticker": "API",
+      "time_ms": 1763670960000,
+      "price": 3.58,
+      "max_later_gain_pct": 1.7
+    },
+    {
+      "ticker": "API",
+      "time_ms": 1763671800000,
+      "price": 3.58,
+      "max_later_gain_pct": 1.7
+    },
+    {
+      "ticker": "API",
+      "time_ms": 1763672220000,
+      "price": 3.62,
+      "max_later_gain_pct": 0.6
+    },
+    {
+      "ticker": "ATAI",
+      "time_ms": 1763649000000,
+      "price": 3.97,
+      "max_later_gain_pct": 2.8
+    },
+    {
+      "ticker": "ATAI",
+      "time_ms": 1763651100000,
+      "price": 3.9882,
+      "max_later_gain_pct": 2.3
+    },
+    {
+      "ticker": "ATAI",
+      "time_ms": 1763651760000,
+      "price": 3.9799,
+      "max_later_gain_pct": 2.5
+    },
+    {
+      "ticker": "ATAI",
+      "time_ms": 1763652960000,
+      "price": 4.0335,
+      "max_later_gain_pct": 1.2
+    },
+    {
+      "ticker": "ATAI",
+      "time_ms": 1763653920000,
+      "price": 4.015,
+      "max_later_gain_pct": 0.6
+    },
+    {
+      "ticker": "ATAI",
+      "time_ms": 1763654160000,
+      "price": 4.015,
+      "max_later_gain_pct": 0.5
+    },
+    {
+      "ticker": "ATAI",
+      "time_ms": 1763655060000,
+      "price": 3.975,
+      "max_later_gain_pct": 0.5
+    },
+    {
+      "ticker": "ATAI",
+      "time_ms": 1763663880000,
+      "price": 3.705,
+      "max_later_gain_pct": 0.4
+    },
+    {
+      "ticker": "ATAI",
+      "time_ms": 1763667780000,
+      "price": 3.685,
+      "max_later_gain_pct": 0.9
+    },
+    {
+      "ticker": "ATAI",
+      "time_ms": 1763670060000,
+      "price": 3.6714,
+      "max_later_gain_pct": 1.3
+    },
+    {
+      "ticker": "ATAI",
+      "time_ms": 1763672760000,
+      "price": 3.66,
+      "max_later_gain_pct": 1.6
+    },
+    {
+      "ticker": "ATAI",
+      "time_ms": 1763679180000,
+      "price": 3.68,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "AUID",
+      "time_ms": 1763665500000,
+      "price": 1.87,
+      "max_later_gain_pct": 4.0
+    },
+    {
+      "ticker": "AUID",
+      "time_ms": 1763666640000,
+      "price": 1.8855,
+      "max_later_gain_pct": 2.4
+    },
+    {
+      "ticker": "AUID",
+      "time_ms": 1763668020000,
+      "price": 1.91,
+      "max_later_gain_pct": 1.0
+    },
+    {
+      "ticker": "AUID",
+      "time_ms": 1763668500000,
+      "price": 1.8623,
+      "max_later_gain_pct": 3.6
+    },
+    {
+      "ticker": "AUID",
+      "time_ms": 1763669160000,
+      "price": 1.9279,
+      "max_later_gain_pct": 0.1
+    },
+    {
+      "ticker": "AUID",
+      "time_ms": 1763676660000,
+      "price": 1.82,
+      "max_later_gain_pct": 2.7
+    },
+    {
+      "ticker": "AUID",
+      "time_ms": 1763679120000,
+      "price": 1.83,
+      "max_later_gain_pct": 2.2
+    },
+    {
+      "ticker": "AUID",
+      "time_ms": 1763680680000,
+      "price": 1.82,
+      "max_later_gain_pct": 1.1
+    },
+    {
+      "ticker": "AUID",
+      "time_ms": 1763682000000,
+      "price": 1.76,
+      "max_later_gain_pct": 4.5
+    },
+    {
+      "ticker": "AUID",
+      "time_ms": 1763682060000,
+      "price": 1.76,
+      "max_later_gain_pct": 4.5
+    },
+    {
+      "ticker": "AUID",
+      "time_ms": 1763684280000,
+      "price": 1.77,
+      "max_later_gain_pct": 4.0
+    },
+    {
+      "ticker": "AUID",
+      "time_ms": 1763685600000,
+      "price": 1.8,
+      "max_later_gain_pct": 2.2
+    },
+    {
+      "ticker": "AUID",
+      "time_ms": 1763686260000,
+      "price": 1.8,
+      "max_later_gain_pct": 2.2
+    },
+    {
+      "ticker": "BCAB",
+      "time_ms": 1763654580000,
+      "price": 1.29,
+      "max_later_gain_pct": 1.6
+    },
+    {
+      "ticker": "BCAB",
+      "time_ms": 1763655240000,
+      "price": 1.2688,
+      "max_later_gain_pct": 3.2
+    },
+    {
+      "ticker": "BCAB",
+      "time_ms": 1763656200000,
+      "price": 1.29,
+      "max_later_gain_pct": 1.6
+    },
+    {
+      "ticker": "BCAB",
+      "time_ms": 1763656260000,
+      "price": 1.3,
+      "max_later_gain_pct": 0.8
+    },
+    {
+      "ticker": "BCAB",
+      "time_ms": 1763658120000,
+      "price": 1.2299,
+      "max_later_gain_pct": 1.6
+    },
+    {
+      "ticker": "BCAB",
+      "time_ms": 1763659920000,
+      "price": 1.22,
+      "max_later_gain_pct": 2.5
+    },
+    {
+      "ticker": "BCAB",
+      "time_ms": 1763662320000,
+      "price": 1.2,
+      "max_later_gain_pct": 4.2
+    },
+    {
+      "ticker": "BCAB",
+      "time_ms": 1763664060000,
+      "price": 1.22,
+      "max_later_gain_pct": 2.3
+    },
+    {
+      "ticker": "BCAB",
+      "time_ms": 1763666880000,
+      "price": 1.21,
+      "max_later_gain_pct": 3.2
+    },
+    {
+      "ticker": "BCAB",
+      "time_ms": 1763667900000,
+      "price": 1.2,
+      "max_later_gain_pct": 4.0
+    },
+    {
+      "ticker": "BCAB",
+      "time_ms": 1763668260000,
+      "price": 1.19,
+      "max_later_gain_pct": 4.9
+    },
+    {
+      "ticker": "BCAB",
+      "time_ms": 1763676720000,
+      "price": 1.19,
+      "max_later_gain_pct": 3.4
+    },
+    {
+      "ticker": "BERZ",
+      "time_ms": 1763677740000,
+      "price": 3.93,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "BERZ",
+      "time_ms": 1763680740000,
+      "price": 3.84,
+      "max_later_gain_pct": 1.0
+    },
+    {
+      "ticker": "BNKK",
+      "time_ms": 1763664540000,
+      "price": 6.027,
+      "max_later_gain_pct": 3.9
+    },
+    {
+      "ticker": "BNKK",
+      "time_ms": 1763673900000,
+      "price": 5.9325,
+      "max_later_gain_pct": 3.0
+    },
+    {
+      "ticker": "BNKK",
+      "time_ms": 1763674680000,
+      "price": 5.9115,
+      "max_later_gain_pct": 3.3
+    },
+    {
+      "ticker": "BNKK",
+      "time_ms": 1763682000000,
+      "price": 5.824,
+      "max_later_gain_pct": 4.9
+    },
+    {
+      "ticker": "BNKK",
+      "time_ms": 1763683680000,
+      "price": 5.8975,
+      "max_later_gain_pct": 2.7
+    },
+    {
+      "ticker": "BNZI",
+      "time_ms": 1763674560000,
+      "price": 1.37,
+      "max_later_gain_pct": 0.7
+    },
+    {
+      "ticker": "BNZI",
+      "time_ms": 1763676960000,
+      "price": 1.38,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "BNZI",
+      "time_ms": 1763678820000,
+      "price": 1.29,
+      "max_later_gain_pct": 4.7
+    },
+    {
+      "ticker": "BTCZ",
+      "time_ms": 1763657700000,
+      "price": 4.45,
+      "max_later_gain_pct": 4.0
+    },
+    {
+      "ticker": "BTCZ",
+      "time_ms": 1763660340000,
+      "price": 4.55,
+      "max_later_gain_pct": 1.7
+    },
+    {
+      "ticker": "BTCZ",
+      "time_ms": 1763662020000,
+      "price": 4.509,
+      "max_later_gain_pct": 2.6
+    },
+    {
+      "ticker": "BTCZ",
+      "time_ms": 1763663520000,
+      "price": 4.55,
+      "max_later_gain_pct": 1.7
+    },
+    {
+      "ticker": "BTCZ",
+      "time_ms": 1763665740000,
+      "price": 4.61,
+      "max_later_gain_pct": 0.4
+    },
+    {
+      "ticker": "BTCZ",
+      "time_ms": 1763666940000,
+      "price": 4.5399,
+      "max_later_gain_pct": 1.3
+    },
+    {
+      "ticker": "BTCZ",
+      "time_ms": 1763667180000,
+      "price": 4.5735,
+      "max_later_gain_pct": 0.6
+    },
+    {
+      "ticker": "BTCZ",
+      "time_ms": 1763668260000,
+      "price": 4.57,
+      "max_later_gain_pct": 0.7
+    },
+    {
+      "ticker": "BTCZ",
+      "time_ms": 1763671320000,
+      "price": 4.58,
+      "max_later_gain_pct": 0.4
+    },
+    {
+      "ticker": "BTCZ",
+      "time_ms": 1763671920000,
+      "price": 4.57,
+      "max_later_gain_pct": 0.7
+    },
+    {
+      "ticker": "BTCZ",
+      "time_ms": 1763673240000,
+      "price": 4.54,
+      "max_later_gain_pct": 0.7
+    },
+    {
+      "ticker": "BTCZ",
+      "time_ms": 1763675820000,
+      "price": 4.49,
+      "max_later_gain_pct": 1.8
+    },
+    {
+      "ticker": "BTCZ",
+      "time_ms": 1763677440000,
+      "price": 4.41,
+      "max_later_gain_pct": 3.6
+    },
+    {
+      "ticker": "BTCZ",
+      "time_ms": 1763682840000,
+      "price": 4.55,
+      "max_later_gain_pct": 0.4
+    },
+    {
+      "ticker": "CCHH",
+      "time_ms": 1763679300000,
+      "price": 8.3779,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "CURI",
+      "time_ms": 1763649780000,
+      "price": 4.905,
+      "max_later_gain_pct": 1.9
+    },
+    {
+      "ticker": "CURI",
+      "time_ms": 1763651580000,
+      "price": 4.84,
+      "max_later_gain_pct": 1.7
+    },
+    {
+      "ticker": "CURI",
+      "time_ms": 1763652300000,
+      "price": 4.88,
+      "max_later_gain_pct": 0.8
+    },
+    {
+      "ticker": "CURI",
+      "time_ms": 1763653020000,
+      "price": 4.8245,
+      "max_later_gain_pct": 0.5
+    },
+    {
+      "ticker": "CURI",
+      "time_ms": 1763653860000,
+      "price": 4.805,
+      "max_later_gain_pct": 0.5
+    },
+    {
+      "ticker": "CURI",
+      "time_ms": 1763655900000,
+      "price": 4.747,
+      "max_later_gain_pct": 0.7
+    },
+    {
+      "ticker": "CURI",
+      "time_ms": 1763657160000,
+      "price": 4.755,
+      "max_later_gain_pct": 0.5
+    },
+    {
+      "ticker": "CURI",
+      "time_ms": 1763658900000,
+      "price": 4.64,
+      "max_later_gain_pct": 1.5
+    },
+    {
+      "ticker": "CURI",
+      "time_ms": 1763659440000,
+      "price": 4.645,
+      "max_later_gain_pct": 0.3
+    },
+    {
+      "ticker": "CURI",
+      "time_ms": 1763661240000,
+      "price": 4.47,
+      "max_later_gain_pct": 2.0
+    },
+    {
+      "ticker": "CURI",
+      "time_ms": 1763661720000,
+      "price": 4.47,
+      "max_later_gain_pct": 2.0
+    },
+    {
+      "ticker": "CURI",
+      "time_ms": 1763662680000,
+      "price": 4.4501,
+      "max_later_gain_pct": 1.6
+    },
+    {
+      "ticker": "CURI",
+      "time_ms": 1763663640000,
+      "price": 4.44,
+      "max_later_gain_pct": 1.4
+    },
+    {
+      "ticker": "CURI",
+      "time_ms": 1763666820000,
+      "price": 4.45,
+      "max_later_gain_pct": 1.1
+    },
+    {
+      "ticker": "CURI",
+      "time_ms": 1763667600000,
+      "price": 4.4243,
+      "max_later_gain_pct": 1.7
+    },
+    {
+      "ticker": "CURI",
+      "time_ms": 1763669580000,
+      "price": 4.44,
+      "max_later_gain_pct": 0.2
+    },
+    {
+      "ticker": "CURI",
+      "time_ms": 1763669880000,
+      "price": 4.4401,
+      "max_later_gain_pct": 0.2
+    },
+    {
+      "ticker": "CYCU",
+      "time_ms": 1763649720000,
+      "price": 4.8115,
+      "max_later_gain_pct": 4.9
+    },
+    {
+      "ticker": "CYCU",
+      "time_ms": 1763651880000,
+      "price": 5.0098,
+      "max_later_gain_pct": 0.7
+    },
+    {
+      "ticker": "CYCU",
+      "time_ms": 1763652840000,
+      "price": 4.8214,
+      "max_later_gain_pct": 2.9
+    },
+    {
+      "ticker": "CYCU",
+      "time_ms": 1763653560000,
+      "price": 4.9469,
+      "max_later_gain_pct": 0.3
+    },
+    {
+      "ticker": "CYCU",
+      "time_ms": 1763657940000,
+      "price": 4.6627,
+      "max_later_gain_pct": 1.5
+    },
+    {
+      "ticker": "CYCU",
+      "time_ms": 1763660160000,
+      "price": 4.5833,
+      "max_later_gain_pct": 3.2
+    },
+    {
+      "ticker": "CYCU",
+      "time_ms": 1763661360000,
+      "price": 4.5635,
+      "max_later_gain_pct": 3.7
+    },
+    {
+      "ticker": "CYCU",
+      "time_ms": 1763661960000,
+      "price": 4.6726,
+      "max_later_gain_pct": 1.3
+    },
+    {
+      "ticker": "CYCU",
+      "time_ms": 1763662740000,
+      "price": 4.7122,
+      "max_later_gain_pct": 0.4
+    },
+    {
+      "ticker": "CYCU",
+      "time_ms": 1763663640000,
+      "price": 4.7173,
+      "max_later_gain_pct": 0.3
+    },
+    {
+      "ticker": "CYCU",
+      "time_ms": 1763665560000,
+      "price": 4.494,
+      "max_later_gain_pct": 3.3
+    },
+    {
+      "ticker": "CYCU",
+      "time_ms": 1763667300000,
+      "price": 4.4643,
+      "max_later_gain_pct": 4.0
+    },
+    {
+      "ticker": "CYCU",
+      "time_ms": 1763668500000,
+      "price": 4.5635,
+      "max_later_gain_pct": 1.7
+    },
+    {
+      "ticker": "CYCU",
+      "time_ms": 1763671560000,
+      "price": 4.4444,
+      "max_later_gain_pct": 2.2
+    },
+    {
+      "ticker": "CYCU",
+      "time_ms": 1763672160000,
+      "price": 4.4097,
+      "max_later_gain_pct": 3.0
+    },
+    {
+      "ticker": "CYCU",
+      "time_ms": 1763684940000,
+      "price": 4.4444,
+      "max_later_gain_pct": 1.8
+    },
+    {
+      "ticker": "CYPH",
+      "time_ms": 1763669640000,
+      "price": 3.317,
+      "max_later_gain_pct": 3.1
+    },
+    {
+      "ticker": "CYPH",
+      "time_ms": 1763671620000,
+      "price": 3.065,
+      "max_later_gain_pct": 2.4
+    },
+    {
+      "ticker": "CYPH",
+      "time_ms": 1763674620000,
+      "price": 3.1,
+      "max_later_gain_pct": 1.0
+    },
+    {
+      "ticker": "CYPH",
+      "time_ms": 1763677380000,
+      "price": 3.09,
+      "max_later_gain_pct": 0.3
+    },
+    {
+      "ticker": "CYPH",
+      "time_ms": 1763678520000,
+      "price": 3.0501,
+      "max_later_gain_pct": 1.6
+    },
+    {
+      "ticker": "CYPH",
+      "time_ms": 1763679960000,
+      "price": 3.04,
+      "max_later_gain_pct": 1.3
+    },
+    {
+      "ticker": "CYPH",
+      "time_ms": 1763682180000,
+      "price": 3.03,
+      "max_later_gain_pct": 0.3
+    },
+    {
+      "ticker": "CYPH",
+      "time_ms": 1763682480000,
+      "price": 3.03,
+      "max_later_gain_pct": 0.1
+    },
+    {
+      "ticker": "CYPH",
+      "time_ms": 1763683380000,
+      "price": 3.01,
+      "max_later_gain_pct": 0.4
+    },
+    {
+      "ticker": "CYPH",
+      "time_ms": 1763684220000,
+      "price": 2.9799,
+      "max_later_gain_pct": 0.7
+    },
+    {
+      "ticker": "CYPH",
+      "time_ms": 1763686080000,
+      "price": 2.96,
+      "max_later_gain_pct": 1.4
+    },
+    {
+      "ticker": "CYPH",
+      "time_ms": 1763686560000,
+      "price": 2.9701,
+      "max_later_gain_pct": 1.0
+    },
+    {
+      "ticker": "DJTU",
+      "time_ms": 1763650500000,
+      "price": 3.1701,
+      "max_later_gain_pct": 1.8
+    },
+    {
+      "ticker": "DJTU",
+      "time_ms": 1763653500000,
+      "price": 3.1192,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "DJTU",
+      "time_ms": 1763653860000,
+      "price": 3.07,
+      "max_later_gain_pct": 0.3
+    },
+    {
+      "ticker": "DJTU",
+      "time_ms": 1763654280000,
+      "price": 3.0487,
+      "max_later_gain_pct": 0.7
+    },
+    {
+      "ticker": "DJTU",
+      "time_ms": 1763657760000,
+      "price": 2.87,
+      "max_later_gain_pct": 2.1
+    },
+    {
+      "ticker": "DJTU",
+      "time_ms": 1763660100000,
+      "price": 2.81,
+      "max_later_gain_pct": 4.3
+    },
+    {
+      "ticker": "DJTU",
+      "time_ms": 1763662200000,
+      "price": 2.88,
+      "max_later_gain_pct": 1.7
+    },
+    {
+      "ticker": "DJTU",
+      "time_ms": 1763670240000,
+      "price": 2.89,
+      "max_later_gain_pct": 1.0
+    },
+    {
+      "ticker": "DJTU",
+      "time_ms": 1763670780000,
+      "price": 2.9,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "DJTU",
+      "time_ms": 1763671260000,
+      "price": 2.855,
+      "max_later_gain_pct": 0.9
+    },
+    {
+      "ticker": "DVLT",
+      "time_ms": 1763672580000,
+      "price": 1.7115,
+      "max_later_gain_pct": 0.6
+    },
+    {
+      "ticker": "DVLT",
+      "time_ms": 1763676420000,
+      "price": 1.6724,
+      "max_later_gain_pct": 2.3
+    },
+    {
+      "ticker": "DVLT",
+      "time_ms": 1763676960000,
+      "price": 1.6721,
+      "max_later_gain_pct": 2.4
+    },
+    {
+      "ticker": "DVLT",
+      "time_ms": 1763677440000,
+      "price": 1.6721,
+      "max_later_gain_pct": 2.4
+    },
+    {
+      "ticker": "DVLT",
+      "time_ms": 1763678640000,
+      "price": 1.6528,
+      "max_later_gain_pct": 3.6
+    },
+    {
+      "ticker": "DVLT",
+      "time_ms": 1763680620000,
+      "price": 1.7015,
+      "max_later_gain_pct": 0.6
+    },
+    {
+      "ticker": "DVLT",
+      "time_ms": 1763681640000,
+      "price": 1.7016,
+      "max_later_gain_pct": 0.6
+    },
+    {
+      "ticker": "DVLT",
+      "time_ms": 1763682360000,
+      "price": 1.7115,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "DVLT",
+      "time_ms": 1763683380000,
+      "price": 1.6918,
+      "max_later_gain_pct": 1.2
+    },
+    {
+      "ticker": "DVLT",
+      "time_ms": 1763683440000,
+      "price": 1.682,
+      "max_later_gain_pct": 1.8
+    },
+    {
+      "ticker": "DVLT",
+      "time_ms": 1763684700000,
+      "price": 1.6918,
+      "max_later_gain_pct": 1.2
+    },
+    {
+      "ticker": "EPSM",
+      "time_ms": 1763682540000,
+      "price": 4.1,
+      "max_later_gain_pct": 4.9
+    },
+    {
+      "ticker": "EPWK",
+      "time_ms": 1763654460000,
+      "price": 1.7676,
+      "max_later_gain_pct": 3.0
+    },
+    {
+      "ticker": "EPWK",
+      "time_ms": 1763655120000,
+      "price": 1.7393,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "EPWK",
+      "time_ms": 1763661240000,
+      "price": 1.6002,
+      "max_later_gain_pct": 5.0
+    },
+    {
+      "ticker": "EPWK",
+      "time_ms": 1763665980000,
+      "price": 1.6,
+      "max_later_gain_pct": 5.0
+    },
+    {
+      "ticker": "EPWK",
+      "time_ms": 1763668560000,
+      "price": 1.61,
+      "max_later_gain_pct": 4.3
+    },
+    {
+      "ticker": "EPWK",
+      "time_ms": 1763671980000,
+      "price": 1.62,
+      "max_later_gain_pct": 3.7
+    },
+    {
+      "ticker": "EPWK",
+      "time_ms": 1763673900000,
+      "price": 1.6,
+      "max_later_gain_pct": 5.0
+    },
+    {
+      "ticker": "EPWK",
+      "time_ms": 1763685600000,
+      "price": 1.61,
+      "max_later_gain_pct": 0.6
+    },
+    {
+      "ticker": "EQ",
+      "time_ms": 1763658660000,
+      "price": 1.04,
+      "max_later_gain_pct": 1.4
+    },
+    {
+      "ticker": "EQ",
+      "time_ms": 1763658960000,
+      "price": 1.025,
+      "max_later_gain_pct": 1.8
+    },
+    {
+      "ticker": "EQ",
+      "time_ms": 1763662380000,
+      "price": 1.01,
+      "max_later_gain_pct": 3.3
+    },
+    {
+      "ticker": "EQ",
+      "time_ms": 1763663220000,
+      "price": 1.005,
+      "max_later_gain_pct": 3.9
+    },
+    {
+      "ticker": "EQ",
+      "time_ms": 1763664060000,
+      "price": 1.005,
+      "max_later_gain_pct": 3.9
+    },
+    {
+      "ticker": "EQ",
+      "time_ms": 1763666640000,
+      "price": 0.99805,
+      "max_later_gain_pct": 4.6
+    },
+    {
+      "ticker": "EQ",
+      "time_ms": 1763667360000,
+      "price": 1.01,
+      "max_later_gain_pct": 3.3
+    },
+    {
+      "ticker": "EQ",
+      "time_ms": 1763668260000,
+      "price": 0.998,
+      "max_later_gain_pct": 4.6
+    },
+    {
+      "ticker": "EQ",
+      "time_ms": 1763668620000,
+      "price": 1.01,
+      "max_later_gain_pct": 3.3
+    },
+    {
+      "ticker": "EQ",
+      "time_ms": 1763669040000,
+      "price": 0.9982,
+      "max_later_gain_pct": 4.6
+    },
+    {
+      "ticker": "EQ",
+      "time_ms": 1763671800000,
+      "price": 1.01,
+      "max_later_gain_pct": 3.3
+    },
+    {
+      "ticker": "EQ",
+      "time_ms": 1763672040000,
+      "price": 1.005,
+      "max_later_gain_pct": 3.9
+    },
+    {
+      "ticker": "FFAI",
+      "time_ms": 1763641380000,
+      "price": 1.07,
+      "max_later_gain_pct": 3.7
+    },
+    {
+      "ticker": "FFAI",
+      "time_ms": 1763642520000,
+      "price": 1.06,
+      "max_later_gain_pct": 4.7
+    },
+    {
+      "ticker": "FFAI",
+      "time_ms": 1763645580000,
+      "price": 1.06,
+      "max_later_gain_pct": 4.7
+    },
+    {
+      "ticker": "FFAI",
+      "time_ms": 1763645940000,
+      "price": 1.07,
+      "max_later_gain_pct": 3.7
+    },
+    {
+      "ticker": "FFAI",
+      "time_ms": 1763646420000,
+      "price": 1.06,
+      "max_later_gain_pct": 4.7
+    },
+    {
+      "ticker": "FFAI",
+      "time_ms": 1763649000000,
+      "price": 1.07,
+      "max_later_gain_pct": 3.7
+    },
+    {
+      "ticker": "FFAI",
+      "time_ms": 1763649360000,
+      "price": 1.09,
+      "max_later_gain_pct": 1.8
+    },
+    {
+      "ticker": "FFAI",
+      "time_ms": 1763653380000,
+      "price": 1.095,
+      "max_later_gain_pct": 0.5
+    },
+    {
+      "ticker": "FFAI",
+      "time_ms": 1763654460000,
+      "price": 1.065,
+      "max_later_gain_pct": 0.9
+    },
+    {
+      "ticker": "FFAI",
+      "time_ms": 1763654880000,
+      "price": 1.0593,
+      "max_later_gain_pct": 1.0
+    },
+    {
+      "ticker": "FFAI",
+      "time_ms": 1763655120000,
+      "price": 1.0599,
+      "max_later_gain_pct": 1.0
+    },
+    {
+      "ticker": "FFAI",
+      "time_ms": 1763656680000,
+      "price": 1.04,
+      "max_later_gain_pct": 2.9
+    },
+    {
+      "ticker": "FFAI",
+      "time_ms": 1763658720000,
+      "price": 1.035,
+      "max_later_gain_pct": 3.4
+    },
+    {
+      "ticker": "FFAI",
+      "time_ms": 1763660220000,
+      "price": 1.045,
+      "max_later_gain_pct": 2.4
+    },
+    {
+      "ticker": "FFAI",
+      "time_ms": 1763661540000,
+      "price": 1.05,
+      "max_later_gain_pct": 1.9
+    },
+    {
+      "ticker": "FFAI",
+      "time_ms": 1763662140000,
+      "price": 1.0599,
+      "max_later_gain_pct": 1.0
+    },
+    {
+      "ticker": "FFAI",
+      "time_ms": 1763663040000,
+      "price": 1.055,
+      "max_later_gain_pct": 1.4
+    },
+    {
+      "ticker": "FFAI",
+      "time_ms": 1763663880000,
+      "price": 1.045,
+      "max_later_gain_pct": 2.4
+    },
+    {
+      "ticker": "FFAI",
+      "time_ms": 1763664360000,
+      "price": 1.045,
+      "max_later_gain_pct": 2.4
+    },
+    {
+      "ticker": "FFAI",
+      "time_ms": 1763664780000,
+      "price": 1.035,
+      "max_later_gain_pct": 3.4
+    },
+    {
+      "ticker": "FFAI",
+      "time_ms": 1763666280000,
+      "price": 1.045,
+      "max_later_gain_pct": 2.4
+    },
+    {
+      "ticker": "FFAI",
+      "time_ms": 1763667240000,
+      "price": 1.0338,
+      "max_later_gain_pct": 3.5
+    },
+    {
+      "ticker": "FFAI",
+      "time_ms": 1763668500000,
+      "price": 1.045,
+      "max_later_gain_pct": 2.4
+    },
+    {
+      "ticker": "FFAI",
+      "time_ms": 1763669880000,
+      "price": 1.0319,
+      "max_later_gain_pct": 3.7
+    },
+    {
+      "ticker": "FFAI",
+      "time_ms": 1763670540000,
+      "price": 1.04,
+      "max_later_gain_pct": 2.9
+    },
+    {
+      "ticker": "FFAI",
+      "time_ms": 1763671140000,
+      "price": 1.05,
+      "max_later_gain_pct": 1.9
+    },
+    {
+      "ticker": "FFAI",
+      "time_ms": 1763672760000,
+      "price": 1.0698,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "FFAI",
+      "time_ms": 1763673300000,
+      "price": 1.0405,
+      "max_later_gain_pct": 2.8
+    },
+    {
+      "ticker": "FFAI",
+      "time_ms": 1763674860000,
+      "price": 1.04,
+      "max_later_gain_pct": 2.9
+    },
+    {
+      "ticker": "FFAI",
+      "time_ms": 1763675160000,
+      "price": 1.0403,
+      "max_later_gain_pct": 2.9
+    },
+    {
+      "ticker": "FFAI",
+      "time_ms": 1763676540000,
+      "price": 1.04,
+      "max_later_gain_pct": 2.9
+    },
+    {
+      "ticker": "FFAI",
+      "time_ms": 1763677440000,
+      "price": 1.03,
+      "max_later_gain_pct": 3.9
+    },
+    {
+      "ticker": "FFAI",
+      "time_ms": 1763677680000,
+      "price": 1.0302,
+      "max_later_gain_pct": 3.9
+    },
+    {
+      "ticker": "FFAI",
+      "time_ms": 1763678100000,
+      "price": 1.03,
+      "max_later_gain_pct": 3.9
+    },
+    {
+      "ticker": "FFAI",
+      "time_ms": 1763678340000,
+      "price": 1.03,
+      "max_later_gain_pct": 3.9
+    },
+    {
+      "ticker": "FFAI",
+      "time_ms": 1763680920000,
+      "price": 1.07,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "FOSL",
+      "time_ms": 1763655780000,
+      "price": 2.455,
+      "max_later_gain_pct": 1.8
+    },
+    {
+      "ticker": "FOSL",
+      "time_ms": 1763656260000,
+      "price": 2.48,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "FOSL",
+      "time_ms": 1763656560000,
+      "price": 2.4101,
+      "max_later_gain_pct": 2.1
+    },
+    {
+      "ticker": "FOSL",
+      "time_ms": 1763657040000,
+      "price": 2.3812,
+      "max_later_gain_pct": 1.2
+    },
+    {
+      "ticker": "FOSL",
+      "time_ms": 1763657700000,
+      "price": 2.315,
+      "max_later_gain_pct": 2.6
+    },
+    {
+      "ticker": "FOSL",
+      "time_ms": 1763658060000,
+      "price": 2.295,
+      "max_later_gain_pct": 3.1
+    },
+    {
+      "ticker": "FOSL",
+      "time_ms": 1763660280000,
+      "price": 2.295,
+      "max_later_gain_pct": 2.6
+    },
+    {
+      "ticker": "FOSL",
+      "time_ms": 1763660640000,
+      "price": 2.28,
+      "max_later_gain_pct": 3.3
+    },
+    {
+      "ticker": "FOSL",
+      "time_ms": 1763661780000,
+      "price": 2.305,
+      "max_later_gain_pct": 2.2
+    },
+    {
+      "ticker": "FOSL",
+      "time_ms": 1763662200000,
+      "price": 2.315,
+      "max_later_gain_pct": 1.7
+    },
+    {
+      "ticker": "FOSL",
+      "time_ms": 1763665920000,
+      "price": 2.3,
+      "max_later_gain_pct": 1.5
+    },
+    {
+      "ticker": "FOSL",
+      "time_ms": 1763667420000,
+      "price": 2.265,
+      "max_later_gain_pct": 2.4
+    },
+    {
+      "ticker": "FOSL",
+      "time_ms": 1763670780000,
+      "price": 2.2,
+      "max_later_gain_pct": 1.4
+    },
+    {
+      "ticker": "FOSL",
+      "time_ms": 1763671440000,
+      "price": 2.195,
+      "max_later_gain_pct": 1.6
+    },
+    {
+      "ticker": "GANX",
+      "time_ms": 1763652300000,
+      "price": 2.9163,
+      "max_later_gain_pct": 4.6
+    },
+    {
+      "ticker": "GANX",
+      "time_ms": 1763652420000,
+      "price": 2.93,
+      "max_later_gain_pct": 4.1
+    },
+    {
+      "ticker": "GANX",
+      "time_ms": 1763653680000,
+      "price": 2.9688,
+      "max_later_gain_pct": 2.7
+    },
+    {
+      "ticker": "GANX",
+      "time_ms": 1763654100000,
+      "price": 2.98,
+      "max_later_gain_pct": 2.3
+    },
+    {
+      "ticker": "GANX",
+      "time_ms": 1763659260000,
+      "price": 2.98,
+      "max_later_gain_pct": 2.0
+    },
+    {
+      "ticker": "GANX",
+      "time_ms": 1763661540000,
+      "price": 2.9216,
+      "max_later_gain_pct": 3.0
+    },
+    {
+      "ticker": "GANX",
+      "time_ms": 1763663640000,
+      "price": 2.97,
+      "max_later_gain_pct": 1.3
+    },
+    {
+      "ticker": "GANX",
+      "time_ms": 1763665080000,
+      "price": 2.91,
+      "max_later_gain_pct": 1.7
+    },
+    {
+      "ticker": "GANX",
+      "time_ms": 1763665500000,
+      "price": 2.915,
+      "max_later_gain_pct": 1.5
+    },
+    {
+      "ticker": "GANX",
+      "time_ms": 1763666220000,
+      "price": 2.9,
+      "max_later_gain_pct": 2.1
+    },
+    {
+      "ticker": "GANX",
+      "time_ms": 1763666460000,
+      "price": 2.9031,
+      "max_later_gain_pct": 2.0
+    },
+    {
+      "ticker": "GANX",
+      "time_ms": 1763667360000,
+      "price": 2.92,
+      "max_later_gain_pct": 1.4
+    },
+    {
+      "ticker": "GANX",
+      "time_ms": 1763669520000,
+      "price": 2.935,
+      "max_later_gain_pct": 0.9
+    },
+    {
+      "ticker": "GANX",
+      "time_ms": 1763669940000,
+      "price": 2.9344,
+      "max_later_gain_pct": 0.9
+    },
+    {
+      "ticker": "GANX",
+      "time_ms": 1763671260000,
+      "price": 2.9,
+      "max_later_gain_pct": 2.1
+    },
+    {
+      "ticker": "GANX",
+      "time_ms": 1763677260000,
+      "price": 2.85,
+      "max_later_gain_pct": 3.9
+    },
+    {
+      "ticker": "GANX",
+      "time_ms": 1763684580000,
+      "price": 2.93,
+      "max_later_gain_pct": 1.0
+    },
+    {
+      "ticker": "GANX",
+      "time_ms": 1763685660000,
+      "price": 2.905,
+      "max_later_gain_pct": 1.9
+    },
+    {
+      "ticker": "GLOO",
+      "time_ms": 1763671920000,
+      "price": 8.93,
+      "max_later_gain_pct": 4.7
+    },
+    {
+      "ticker": "GLOO",
+      "time_ms": 1763680560000,
+      "price": 9.11,
+      "max_later_gain_pct": 2.1
+    },
+    {
+      "ticker": "GREE",
+      "time_ms": 1763652060000,
+      "price": 1.42,
+      "max_later_gain_pct": 4.9
+    },
+    {
+      "ticker": "GREE",
+      "time_ms": 1763655300000,
+      "price": 1.3701,
+      "max_later_gain_pct": 3.1
+    },
+    {
+      "ticker": "GREE",
+      "time_ms": 1763657940000,
+      "price": 1.3418,
+      "max_later_gain_pct": 2.1
+    },
+    {
+      "ticker": "GREE",
+      "time_ms": 1763658720000,
+      "price": 1.32,
+      "max_later_gain_pct": 3.8
+    },
+    {
+      "ticker": "GREE",
+      "time_ms": 1763659140000,
+      "price": 1.3264,
+      "max_later_gain_pct": 3.3
+    },
+    {
+      "ticker": "GREE",
+      "time_ms": 1763661360000,
+      "price": 1.32,
+      "max_later_gain_pct": 3.8
+    },
+    {
+      "ticker": "GREE",
+      "time_ms": 1763663580000,
+      "price": 1.35,
+      "max_later_gain_pct": 1.5
+    },
+    {
+      "ticker": "GREE",
+      "time_ms": 1763665320000,
+      "price": 1.3212,
+      "max_later_gain_pct": 2.9
+    },
+    {
+      "ticker": "GREE",
+      "time_ms": 1763669700000,
+      "price": 1.3217,
+      "max_later_gain_pct": 0.9
+    },
+    {
+      "ticker": "GREE",
+      "time_ms": 1763670840000,
+      "price": 1.3052,
+      "max_later_gain_pct": 1.1
+    },
+    {
+      "ticker": "GREE",
+      "time_ms": 1763671140000,
+      "price": 1.3,
+      "max_later_gain_pct": 1.5
+    },
+    {
+      "ticker": "GREE",
+      "time_ms": 1763676240000,
+      "price": 1.3055,
+      "max_later_gain_pct": 1.1
+    },
+    {
+      "ticker": "GREE",
+      "time_ms": 1763681520000,
+      "price": 1.305,
+      "max_later_gain_pct": 1.1
+    },
+    {
+      "ticker": "HERE",
+      "time_ms": 1763650140000,
+      "price": 5.32,
+      "max_later_gain_pct": 1.3
+    },
+    {
+      "ticker": "HERE",
+      "time_ms": 1763654340000,
+      "price": 5.08,
+      "max_later_gain_pct": 0.6
+    },
+    {
+      "ticker": "HERE",
+      "time_ms": 1763654760000,
+      "price": 5.08,
+      "max_later_gain_pct": 0.2
+    },
+    {
+      "ticker": "HERE",
+      "time_ms": 1763655720000,
+      "price": 4.963,
+      "max_later_gain_pct": 0.9
+    },
+    {
+      "ticker": "HERE",
+      "time_ms": 1763656560000,
+      "price": 4.94,
+      "max_later_gain_pct": 1.0
+    },
+    {
+      "ticker": "HERE",
+      "time_ms": 1763657700000,
+      "price": 4.895,
+      "max_later_gain_pct": 1.9
+    },
+    {
+      "ticker": "HERE",
+      "time_ms": 1763658780000,
+      "price": 4.84,
+      "max_later_gain_pct": 3.1
+    },
+    {
+      "ticker": "HERE",
+      "time_ms": 1763660940000,
+      "price": 4.83,
+      "max_later_gain_pct": 3.3
+    },
+    {
+      "ticker": "HERE",
+      "time_ms": 1763661540000,
+      "price": 4.84,
+      "max_later_gain_pct": 3.1
+    },
+    {
+      "ticker": "HERE",
+      "time_ms": 1763662260000,
+      "price": 4.815,
+      "max_later_gain_pct": 3.6
+    },
+    {
+      "ticker": "HERE",
+      "time_ms": 1763666760000,
+      "price": 4.98,
+      "max_later_gain_pct": 0.2
+    },
+    {
+      "ticker": "HERE",
+      "time_ms": 1763668080000,
+      "price": 4.92,
+      "max_later_gain_pct": 1.0
+    },
+    {
+      "ticker": "HERE",
+      "time_ms": 1763669340000,
+      "price": 4.905,
+      "max_later_gain_pct": 0.7
+    },
+    {
+      "ticker": "HERE",
+      "time_ms": 1763672340000,
+      "price": 4.895,
+      "max_later_gain_pct": 0.3
+    },
+    {
+      "ticker": "HIBS",
+      "time_ms": 1763664300000,
+      "price": 7.005,
+      "max_later_gain_pct": 4.1
+    },
+    {
+      "ticker": "HIBS",
+      "time_ms": 1763665920000,
+      "price": 7.08,
+      "max_later_gain_pct": 3.0
+    },
+    {
+      "ticker": "HIBS",
+      "time_ms": 1763668560000,
+      "price": 7.02,
+      "max_later_gain_pct": 3.8
+    },
+    {
+      "ticker": "HIBS",
+      "time_ms": 1763668800000,
+      "price": 6.99,
+      "max_later_gain_pct": 4.3
+    },
+    {
+      "ticker": "HIBS",
+      "time_ms": 1763670420000,
+      "price": 7.11,
+      "max_later_gain_pct": 2.5
+    },
+    {
+      "ticker": "HIBS",
+      "time_ms": 1763671080000,
+      "price": 7.195,
+      "max_later_gain_pct": 1.3
+    },
+    {
+      "ticker": "HIBS",
+      "time_ms": 1763671140000,
+      "price": 7.195,
+      "max_later_gain_pct": 1.3
+    },
+    {
+      "ticker": "HIBS",
+      "time_ms": 1763671500000,
+      "price": 7.2272,
+      "max_later_gain_pct": 0.9
+    },
+    {
+      "ticker": "HIBS",
+      "time_ms": 1763672280000,
+      "price": 7.24,
+      "max_later_gain_pct": 0.7
+    },
+    {
+      "ticker": "HIBS",
+      "time_ms": 1763684940000,
+      "price": 7.22,
+      "max_later_gain_pct": 0.1
+    },
+    {
+      "ticker": "HKPD",
+      "time_ms": 1763658960000,
+      "price": 1.399,
+      "max_later_gain_pct": 3.6
+    },
+    {
+      "ticker": "HKPD",
+      "time_ms": 1763659920000,
+      "price": 1.39,
+      "max_later_gain_pct": 4.3
+    },
+    {
+      "ticker": "HKPD",
+      "time_ms": 1763662260000,
+      "price": 1.41,
+      "max_later_gain_pct": 0.7
+    },
+    {
+      "ticker": "HKPD",
+      "time_ms": 1763663280000,
+      "price": 1.36,
+      "max_later_gain_pct": 3.3
+    },
+    {
+      "ticker": "HKPD",
+      "time_ms": 1763669700000,
+      "price": 1.125,
+      "max_later_gain_pct": 2.2
+    },
+    {
+      "ticker": "ICG",
+      "time_ms": 1763650440000,
+      "price": 1.8,
+      "max_later_gain_pct": 3.9
+    },
+    {
+      "ticker": "ICG",
+      "time_ms": 1763651940000,
+      "price": 1.8,
+      "max_later_gain_pct": 2.8
+    },
+    {
+      "ticker": "ICG",
+      "time_ms": 1763655120000,
+      "price": 1.75,
+      "max_later_gain_pct": 1.1
+    },
+    {
+      "ticker": "ICG",
+      "time_ms": 1763656320000,
+      "price": 1.73,
+      "max_later_gain_pct": 2.3
+    },
+    {
+      "ticker": "ICG",
+      "time_ms": 1763656740000,
+      "price": 1.73,
+      "max_later_gain_pct": 1.2
+    },
+    {
+      "ticker": "ICG",
+      "time_ms": 1763662740000,
+      "price": 1.7,
+      "max_later_gain_pct": 1.8
+    },
+    {
+      "ticker": "ICG",
+      "time_ms": 1763663280000,
+      "price": 1.7,
+      "max_later_gain_pct": 1.8
+    },
+    {
+      "ticker": "ICG",
+      "time_ms": 1763672340000,
+      "price": 1.66,
+      "max_later_gain_pct": 2.4
+    },
+    {
+      "ticker": "JDST",
+      "time_ms": 1763664720000,
+      "price": 4.31,
+      "max_later_gain_pct": 0.9
+    },
+    {
+      "ticker": "JDST",
+      "time_ms": 1763667720000,
+      "price": 4.2314,
+      "max_later_gain_pct": 2.8
+    },
+    {
+      "ticker": "JDST",
+      "time_ms": 1763670540000,
+      "price": 4.27,
+      "max_later_gain_pct": 1.9
+    },
+    {
+      "ticker": "JDST",
+      "time_ms": 1763671200000,
+      "price": 4.305,
+      "max_later_gain_pct": 1.0
+    },
+    {
+      "ticker": "JDST",
+      "time_ms": 1763672700000,
+      "price": 4.3201,
+      "max_later_gain_pct": 0.7
+    },
+    {
+      "ticker": "KDK",
+      "time_ms": 1763650740000,
+      "price": 6.97,
+      "max_later_gain_pct": 1.6
+    },
+    {
+      "ticker": "KDK",
+      "time_ms": 1763653200000,
+      "price": 6.787,
+      "max_later_gain_pct": 1.1
+    },
+    {
+      "ticker": "KDK",
+      "time_ms": 1763655000000,
+      "price": 6.705,
+      "max_later_gain_pct": 0.1
+    },
+    {
+      "ticker": "KDK",
+      "time_ms": 1763657340000,
+      "price": 6.66,
+      "max_later_gain_pct": 0.3
+    },
+    {
+      "ticker": "KDK",
+      "time_ms": 1763659980000,
+      "price": 6.39,
+      "max_later_gain_pct": 4.5
+    },
+    {
+      "ticker": "KDK",
+      "time_ms": 1763660340000,
+      "price": 6.4029,
+      "max_later_gain_pct": 4.3
+    },
+    {
+      "ticker": "KDK",
+      "time_ms": 1763661900000,
+      "price": 6.39,
+      "max_later_gain_pct": 4.5
+    },
+    {
+      "ticker": "KDK",
+      "time_ms": 1763666940000,
+      "price": 6.53,
+      "max_later_gain_pct": 2.3
+    },
+    {
+      "ticker": "KDK",
+      "time_ms": 1763669340000,
+      "price": 6.55,
+      "max_later_gain_pct": 2.0
+    },
+    {
+      "ticker": "KDK",
+      "time_ms": 1763671680000,
+      "price": 6.62,
+      "max_later_gain_pct": 0.8
+    },
+    {
+      "ticker": "KSCP",
+      "time_ms": 1763652000000,
+      "price": 5.575,
+      "max_later_gain_pct": 2.6
+    },
+    {
+      "ticker": "KSCP",
+      "time_ms": 1763652540000,
+      "price": 5.65,
+      "max_later_gain_pct": 1.2
+    },
+    {
+      "ticker": "KSCP",
+      "time_ms": 1763656500000,
+      "price": 5.215,
+      "max_later_gain_pct": 0.7
+    },
+    {
+      "ticker": "KSCP",
+      "time_ms": 1763658360000,
+      "price": 5.0801,
+      "max_later_gain_pct": 0.9
+    },
+    {
+      "ticker": "KSCP",
+      "time_ms": 1763659980000,
+      "price": 4.98,
+      "max_later_gain_pct": 2.9
+    },
+    {
+      "ticker": "KSCP",
+      "time_ms": 1763661360000,
+      "price": 4.965,
+      "max_later_gain_pct": 3.2
+    },
+    {
+      "ticker": "KSCP",
+      "time_ms": 1763661900000,
+      "price": 4.9893,
+      "max_later_gain_pct": 2.7
+    },
+    {
+      "ticker": "KSCP",
+      "time_ms": 1763663520000,
+      "price": 5,
+      "max_later_gain_pct": 2.5
+    },
+    {
+      "ticker": "KSCP",
+      "time_ms": 1763664600000,
+      "price": 4.93,
+      "max_later_gain_pct": 4.0
+    },
+    {
+      "ticker": "KSCP",
+      "time_ms": 1763664900000,
+      "price": 4.915,
+      "max_later_gain_pct": 4.3
+    },
+    {
+      "ticker": "KSCP",
+      "time_ms": 1763665380000,
+      "price": 4.9,
+      "max_later_gain_pct": 4.6
+    },
+    {
+      "ticker": "KSCP",
+      "time_ms": 1763668140000,
+      "price": 4.915,
+      "max_later_gain_pct": 4.3
+    },
+    {
+      "ticker": "KSCP",
+      "time_ms": 1763670240000,
+      "price": 4.8932,
+      "max_later_gain_pct": 4.8
+    },
+    {
+      "ticker": "LAZR",
+      "time_ms": 1763654280000,
+      "price": 1.03,
+      "max_later_gain_pct": 2.6
+    },
+    {
+      "ticker": "LAZR",
+      "time_ms": 1763655780000,
+      "price": 0.9951,
+      "max_later_gain_pct": 0.5
+    },
+    {
+      "ticker": "LAZR",
+      "time_ms": 1763656140000,
+      "price": 0.99,
+      "max_later_gain_pct": 0.5
+    },
+    {
+      "ticker": "LAZR",
+      "time_ms": 1763656500000,
+      "price": 0.9901,
+      "max_later_gain_pct": 0.4
+    },
+    {
+      "ticker": "LAZR",
+      "time_ms": 1763657520000,
+      "price": 0.981,
+      "max_later_gain_pct": 0.7
+    },
+    {
+      "ticker": "LAZR",
+      "time_ms": 1763659800000,
+      "price": 0.94,
+      "max_later_gain_pct": 2.1
+    },
+    {
+      "ticker": "LAZR",
+      "time_ms": 1763661420000,
+      "price": 0.9236,
+      "max_later_gain_pct": 3.9
+    },
+    {
+      "ticker": "LAZR",
+      "time_ms": 1763661960000,
+      "price": 0.9525,
+      "max_later_gain_pct": 0.8
+    },
+    {
+      "ticker": "LAZR",
+      "time_ms": 1763662440000,
+      "price": 0.9553,
+      "max_later_gain_pct": 0.5
+    },
+    {
+      "ticker": "LAZR",
+      "time_ms": 1763663880000,
+      "price": 0.9447,
+      "max_later_gain_pct": 0.2
+    },
+    {
+      "ticker": "LAZR",
+      "time_ms": 1763664000000,
+      "price": 0.9363,
+      "max_later_gain_pct": 1.0
+    },
+    {
+      "ticker": "LAZR",
+      "time_ms": 1763664480000,
+      "price": 0.936,
+      "max_later_gain_pct": 0.5
+    },
+    {
+      "ticker": "LAZR",
+      "time_ms": 1763666460000,
+      "price": 0.9325,
+      "max_later_gain_pct": 0.9
+    },
+    {
+      "ticker": "LAZR",
+      "time_ms": 1763667600000,
+      "price": 0.9263,
+      "max_later_gain_pct": 1.5
+    },
+    {
+      "ticker": "LAZR",
+      "time_ms": 1763669700000,
+      "price": 0.9312,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "LAZR",
+      "time_ms": 1763670360000,
+      "price": 0.9245,
+      "max_later_gain_pct": 0.5
+    },
+    {
+      "ticker": "LAZR",
+      "time_ms": 1763671860000,
+      "price": 0.918299,
+      "max_later_gain_pct": 0.2
+    },
+    {
+      "ticker": "LAZR",
+      "time_ms": 1763679420000,
+      "price": 0.9099,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "LFS",
+      "time_ms": 1763661660000,
+      "price": 6.4903,
+      "max_later_gain_pct": 0.9
+    },
+    {
+      "ticker": "LFS",
+      "time_ms": 1763666460000,
+      "price": 6.26,
+      "max_later_gain_pct": 4.6
+    },
+    {
+      "ticker": "LFS",
+      "time_ms": 1763667780000,
+      "price": 6.2918,
+      "max_later_gain_pct": 4.1
+    },
+    {
+      "ticker": "LFS",
+      "time_ms": 1763668860000,
+      "price": 6.3899,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "LFS",
+      "time_ms": 1763677020000,
+      "price": 6.15,
+      "max_later_gain_pct": 1.4
+    },
+    {
+      "ticker": "LFS",
+      "time_ms": 1763680500000,
+      "price": 6.0707,
+      "max_later_gain_pct": 1.8
+    },
+    {
+      "ticker": "LFS",
+      "time_ms": 1763686680000,
+      "price": 6.11,
+      "max_later_gain_pct": 1.1
+    },
+    {
+      "ticker": "LITM",
+      "time_ms": 1763649000000,
+      "price": 2.67,
+      "max_later_gain_pct": 4.1
+    },
+    {
+      "ticker": "LITM",
+      "time_ms": 1763650320000,
+      "price": 2.6853,
+      "max_later_gain_pct": 3.5
+    },
+    {
+      "ticker": "LITM",
+      "time_ms": 1763651100000,
+      "price": 2.715,
+      "max_later_gain_pct": 2.4
+    },
+    {
+      "ticker": "LITM",
+      "time_ms": 1763653800000,
+      "price": 2.7316,
+      "max_later_gain_pct": 1.4
+    },
+    {
+      "ticker": "LITM",
+      "time_ms": 1763654460000,
+      "price": 2.7001,
+      "max_later_gain_pct": 1.1
+    },
+    {
+      "ticker": "LITM",
+      "time_ms": 1763657640000,
+      "price": 2.62,
+      "max_later_gain_pct": 1.9
+    },
+    {
+      "ticker": "LITM",
+      "time_ms": 1763658660000,
+      "price": 2.605,
+      "max_later_gain_pct": 2.5
+    },
+    {
+      "ticker": "LITM",
+      "time_ms": 1763659740000,
+      "price": 2.62,
+      "max_later_gain_pct": 1.9
+    },
+    {
+      "ticker": "LITM",
+      "time_ms": 1763660580000,
+      "price": 2.62,
+      "max_later_gain_pct": 1.9
+    },
+    {
+      "ticker": "LITM",
+      "time_ms": 1763660940000,
+      "price": 2.6128,
+      "max_later_gain_pct": 2.2
+    },
+    {
+      "ticker": "LITM",
+      "time_ms": 1763662080000,
+      "price": 2.65,
+      "max_later_gain_pct": 0.8
+    },
+    {
+      "ticker": "LITM",
+      "time_ms": 1763663280000,
+      "price": 2.63,
+      "max_later_gain_pct": 0.4
+    },
+    {
+      "ticker": "LITM",
+      "time_ms": 1763664600000,
+      "price": 2.58,
+      "max_later_gain_pct": 0.4
+    },
+    {
+      "ticker": "LITM",
+      "time_ms": 1763666160000,
+      "price": 2.54,
+      "max_later_gain_pct": 1.2
+    },
+    {
+      "ticker": "LITM",
+      "time_ms": 1763666640000,
+      "price": 2.53,
+      "max_later_gain_pct": 1.6
+    },
+    {
+      "ticker": "LITM",
+      "time_ms": 1763670240000,
+      "price": 2.5584,
+      "max_later_gain_pct": 0.4
+    },
+    {
+      "ticker": "LITM",
+      "time_ms": 1763671260000,
+      "price": 2.5255,
+      "max_later_gain_pct": 0.5
+    },
+    {
+      "ticker": "LITM",
+      "time_ms": 1763671560000,
+      "price": 2.48,
+      "max_later_gain_pct": 1.6
+    },
+    {
+      "ticker": "LITM",
+      "time_ms": 1763671920000,
+      "price": 2.4947,
+      "max_later_gain_pct": 1.0
+    },
+    {
+      "ticker": "LITM",
+      "time_ms": 1763672340000,
+      "price": 2.48,
+      "max_later_gain_pct": 1.6
+    },
+    {
+      "ticker": "LNAI",
+      "time_ms": 1763652000000,
+      "price": 1.55,
+      "max_later_gain_pct": 3.9
+    },
+    {
+      "ticker": "LNAI",
+      "time_ms": 1763654640000,
+      "price": 1.48,
+      "max_later_gain_pct": 4.7
+    },
+    {
+      "ticker": "LNAI",
+      "time_ms": 1763654760000,
+      "price": 1.5,
+      "max_later_gain_pct": 3.3
+    },
+    {
+      "ticker": "LNAI",
+      "time_ms": 1763656020000,
+      "price": 1.525,
+      "max_later_gain_pct": 1.6
+    },
+    {
+      "ticker": "LNAI",
+      "time_ms": 1763658000000,
+      "price": 1.495,
+      "max_later_gain_pct": 2.3
+    },
+    {
+      "ticker": "LNAI",
+      "time_ms": 1763658960000,
+      "price": 1.515,
+      "max_later_gain_pct": 0.3
+    },
+    {
+      "ticker": "LNAI",
+      "time_ms": 1763659560000,
+      "price": 1.51,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "LNAI",
+      "time_ms": 1763661120000,
+      "price": 1.46,
+      "max_later_gain_pct": 2.2
+    },
+    {
+      "ticker": "LNAI",
+      "time_ms": 1763663280000,
+      "price": 1.44,
+      "max_later_gain_pct": 3.5
+    },
+    {
+      "ticker": "LNAI",
+      "time_ms": 1763664240000,
+      "price": 1.48,
+      "max_later_gain_pct": 0.7
+    },
+    {
+      "ticker": "LNAI",
+      "time_ms": 1763666640000,
+      "price": 1.48,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "LNAI",
+      "time_ms": 1763668500000,
+      "price": 1.46,
+      "max_later_gain_pct": 1.4
+    },
+    {
+      "ticker": "LNAI",
+      "time_ms": 1763669400000,
+      "price": 1.45,
+      "max_later_gain_pct": 1.4
+    },
+    {
+      "ticker": "LNAI",
+      "time_ms": 1763669940000,
+      "price": 1.47,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "LNAI",
+      "time_ms": 1763670480000,
+      "price": 1.4597,
+      "max_later_gain_pct": 0.7
+    },
+    {
+      "ticker": "LNAI",
+      "time_ms": 1763670900000,
+      "price": 1.45,
+      "max_later_gain_pct": 1.4
+    },
+    {
+      "ticker": "LNAI",
+      "time_ms": 1763672340000,
+      "price": 1.44,
+      "max_later_gain_pct": 2.1
+    },
+    {
+      "ticker": "LNAI",
+      "time_ms": 1763679180000,
+      "price": 1.41,
+      "max_later_gain_pct": 3.4
+    },
+    {
+      "ticker": "LNAI",
+      "time_ms": 1763683920000,
+      "price": 1.4,
+      "max_later_gain_pct": 0.7
+    },
+    {
+      "ticker": "MAGH",
+      "time_ms": 1763671800000,
+      "price": 4.765,
+      "max_later_gain_pct": 2.6
+    },
+    {
+      "ticker": "MAGH",
+      "time_ms": 1763673300000,
+      "price": 4.7514,
+      "max_later_gain_pct": 2.1
+    },
+    {
+      "ticker": "MAGH",
+      "time_ms": 1763676360000,
+      "price": 4.71,
+      "max_later_gain_pct": 3.0
+    },
+    {
+      "ticker": "MAGH",
+      "time_ms": 1763678220000,
+      "price": 4.62,
+      "max_later_gain_pct": 5.0
+    },
+    {
+      "ticker": "MAGH",
+      "time_ms": 1763685000000,
+      "price": 4.83,
+      "max_later_gain_pct": 0.4
+    },
+    {
+      "ticker": "MAGH",
+      "time_ms": 1763685720000,
+      "price": 4.85,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "MNDR",
+      "time_ms": 1763686320000,
+      "price": 3.6,
+      "max_later_gain_pct": 2.8
+    },
+    {
+      "ticker": "MUD",
+      "time_ms": 1763659380000,
+      "price": 8.43,
+      "max_later_gain_pct": 4.3
+    },
+    {
+      "ticker": "MUD",
+      "time_ms": 1763661720000,
+      "price": 8.42,
+      "max_later_gain_pct": 4.4
+    },
+    {
+      "ticker": "MUD",
+      "time_ms": 1763663940000,
+      "price": 8.45,
+      "max_later_gain_pct": 4.0
+    },
+    {
+      "ticker": "MUD",
+      "time_ms": 1763664300000,
+      "price": 8.47,
+      "max_later_gain_pct": 3.8
+    },
+    {
+      "ticker": "MUD",
+      "time_ms": 1763667240000,
+      "price": 8.53,
+      "max_later_gain_pct": 3.1
+    },
+    {
+      "ticker": "MUD",
+      "time_ms": 1763667720000,
+      "price": 8.5115,
+      "max_later_gain_pct": 3.3
+    },
+    {
+      "ticker": "MUD",
+      "time_ms": 1763667960000,
+      "price": 8.525,
+      "max_later_gain_pct": 3.1
+    },
+    {
+      "ticker": "MUD",
+      "time_ms": 1763669220000,
+      "price": 8.5201,
+      "max_later_gain_pct": 3.2
+    },
+    {
+      "ticker": "MUD",
+      "time_ms": 1763669700000,
+      "price": 8.5403,
+      "max_later_gain_pct": 2.9
+    },
+    {
+      "ticker": "MUD",
+      "time_ms": 1763671740000,
+      "price": 8.675,
+      "max_later_gain_pct": 1.3
+    },
+    {
+      "ticker": "MUD",
+      "time_ms": 1763672580000,
+      "price": 8.63,
+      "max_later_gain_pct": 1.9
+    },
+    {
+      "ticker": "MUD",
+      "time_ms": 1763675160000,
+      "price": 8.72,
+      "max_later_gain_pct": 0.8
+    },
+    {
+      "ticker": "MUD",
+      "time_ms": 1763681400000,
+      "price": 8.6826,
+      "max_later_gain_pct": 0.2
+    },
+    {
+      "ticker": "MUD",
+      "time_ms": 1763684460000,
+      "price": 8.63,
+      "max_later_gain_pct": 0.5
+    },
+    {
+      "ticker": "MYO",
+      "time_ms": 1763650980000,
+      "price": 0.81,
+      "max_later_gain_pct": 4.3
+    },
+    {
+      "ticker": "MYO",
+      "time_ms": 1763652000000,
+      "price": 0.8318,
+      "max_later_gain_pct": 1.6
+    },
+    {
+      "ticker": "MYO",
+      "time_ms": 1763655120000,
+      "price": 0.83385,
+      "max_later_gain_pct": 0.2
+    },
+    {
+      "ticker": "MYO",
+      "time_ms": 1763655600000,
+      "price": 0.8211,
+      "max_later_gain_pct": 1.6
+    },
+    {
+      "ticker": "MYO",
+      "time_ms": 1763656200000,
+      "price": 0.7929,
+      "max_later_gain_pct": 2.9
+    },
+    {
+      "ticker": "MYO",
+      "time_ms": 1763659260000,
+      "price": 0.7552,
+      "max_later_gain_pct": 0.6
+    },
+    {
+      "ticker": "MYO",
+      "time_ms": 1763660520000,
+      "price": 0.75,
+      "max_later_gain_pct": 1.3
+    },
+    {
+      "ticker": "MYO",
+      "time_ms": 1763661780000,
+      "price": 0.7497,
+      "max_later_gain_pct": 1.4
+    },
+    {
+      "ticker": "MYO",
+      "time_ms": 1763662380000,
+      "price": 0.75805,
+      "max_later_gain_pct": 0.3
+    },
+    {
+      "ticker": "MYO",
+      "time_ms": 1763663580000,
+      "price": 0.74,
+      "max_later_gain_pct": 1.1
+    },
+    {
+      "ticker": "MYO",
+      "time_ms": 1763663820000,
+      "price": 0.7482,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "MYO",
+      "time_ms": 1763665800000,
+      "price": 0.7365,
+      "max_later_gain_pct": 0.6
+    },
+    {
+      "ticker": "MYO",
+      "time_ms": 1763667420000,
+      "price": 0.7332,
+      "max_later_gain_pct": 1.1
+    },
+    {
+      "ticker": "MYO",
+      "time_ms": 1763670000000,
+      "price": 0.735,
+      "max_later_gain_pct": 0.7
+    },
+    {
+      "ticker": "MYO",
+      "time_ms": 1763670840000,
+      "price": 0.7368,
+      "max_later_gain_pct": 0.4
+    },
+    {
+      "ticker": "MYO",
+      "time_ms": 1763671620000,
+      "price": 0.7268,
+      "max_later_gain_pct": 1.8
+    },
+    {
+      "ticker": "MYO",
+      "time_ms": 1763671980000,
+      "price": 0.7221,
+      "max_later_gain_pct": 2.5
+    },
+    {
+      "ticker": "MYO",
+      "time_ms": 1763675820000,
+      "price": 0.72,
+      "max_later_gain_pct": 2.8
+    },
+    {
+      "ticker": "NKLR",
+      "time_ms": 1763652600000,
+      "price": 5.295,
+      "max_later_gain_pct": 2.5
+    },
+    {
+      "ticker": "NKLR",
+      "time_ms": 1763652840000,
+      "price": 5.2,
+      "max_later_gain_pct": 4.4
+    },
+    {
+      "ticker": "NKLR",
+      "time_ms": 1763653740000,
+      "price": 5.22,
+      "max_later_gain_pct": 4.0
+    },
+    {
+      "ticker": "NKLR",
+      "time_ms": 1763656380000,
+      "price": 4.9173,
+      "max_later_gain_pct": 0.3
+    },
+    {
+      "ticker": "NKLR",
+      "time_ms": 1763659200000,
+      "price": 4.67,
+      "max_later_gain_pct": 4.5
+    },
+    {
+      "ticker": "NKLR",
+      "time_ms": 1763662500000,
+      "price": 4.81,
+      "max_later_gain_pct": 1.5
+    },
+    {
+      "ticker": "NKLR",
+      "time_ms": 1763663640000,
+      "price": 4.63,
+      "max_later_gain_pct": 1.7
+    },
+    {
+      "ticker": "NKLR",
+      "time_ms": 1763664780000,
+      "price": 4.475,
+      "max_later_gain_pct": 1.5
+    },
+    {
+      "ticker": "NKLR",
+      "time_ms": 1763669100000,
+      "price": 4.43,
+      "max_later_gain_pct": 2.0
+    },
+    {
+      "ticker": "NKLR",
+      "time_ms": 1763670720000,
+      "price": 4.402,
+      "max_later_gain_pct": 1.7
+    },
+    {
+      "ticker": "NNOX",
+      "time_ms": 1763656620000,
+      "price": 3.6632,
+      "max_later_gain_pct": 2.4
+    },
+    {
+      "ticker": "NNOX",
+      "time_ms": 1763659200000,
+      "price": 3.48,
+      "max_later_gain_pct": 3.7
+    },
+    {
+      "ticker": "NNOX",
+      "time_ms": 1763662920000,
+      "price": 3.4935,
+      "max_later_gain_pct": 1.6
+    },
+    {
+      "ticker": "NNOX",
+      "time_ms": 1763663940000,
+      "price": 3.42,
+      "max_later_gain_pct": 3.8
+    },
+    {
+      "ticker": "NNOX",
+      "time_ms": 1763666220000,
+      "price": 3.4599,
+      "max_later_gain_pct": 2.6
+    },
+    {
+      "ticker": "NNOX",
+      "time_ms": 1763667360000,
+      "price": 3.445,
+      "max_later_gain_pct": 3.0
+    },
+    {
+      "ticker": "NNOX",
+      "time_ms": 1763667600000,
+      "price": 3.495,
+      "max_later_gain_pct": 1.6
+    },
+    {
+      "ticker": "NNOX",
+      "time_ms": 1763670480000,
+      "price": 3.525,
+      "max_later_gain_pct": 0.7
+    },
+    {
+      "ticker": "NNOX",
+      "time_ms": 1763686020000,
+      "price": 3.55,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "NOTV",
+      "time_ms": 1763653440000,
+      "price": 0.9225,
+      "max_later_gain_pct": 2.9
+    },
+    {
+      "ticker": "NOTV",
+      "time_ms": 1763655600000,
+      "price": 0.91,
+      "max_later_gain_pct": 2.9
+    },
+    {
+      "ticker": "NOTV",
+      "time_ms": 1763656620000,
+      "price": 0.9218,
+      "max_later_gain_pct": 0.9
+    },
+    {
+      "ticker": "NOTV",
+      "time_ms": 1763657460000,
+      "price": 0.91,
+      "max_later_gain_pct": 0.5
+    },
+    {
+      "ticker": "NOTV",
+      "time_ms": 1763659260000,
+      "price": 0.8565,
+      "max_later_gain_pct": 2.8
+    },
+    {
+      "ticker": "NOTV",
+      "time_ms": 1763661960000,
+      "price": 0.8692,
+      "max_later_gain_pct": 1.2
+    },
+    {
+      "ticker": "NOTV",
+      "time_ms": 1763667060000,
+      "price": 0.840849,
+      "max_later_gain_pct": 3.5
+    },
+    {
+      "ticker": "NOTV",
+      "time_ms": 1763670780000,
+      "price": 0.85905,
+      "max_later_gain_pct": 1.3
+    },
+    {
+      "ticker": "NOTV",
+      "time_ms": 1763671800000,
+      "price": 0.8659,
+      "max_later_gain_pct": 0.5
+    },
+    {
+      "ticker": "NOTV",
+      "time_ms": 1763672280000,
+      "price": 0.8584,
+      "max_later_gain_pct": 1.4
+    },
+    {
+      "ticker": "NOTV",
+      "time_ms": 1763676600000,
+      "price": 0.85555,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "NRDY",
+      "time_ms": 1763653500000,
+      "price": 0.9999,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "NRDY",
+      "time_ms": 1763654760000,
+      "price": 0.9926,
+      "max_later_gain_pct": 0.2
+    },
+    {
+      "ticker": "NRDY",
+      "time_ms": 1763655360000,
+      "price": 0.9859,
+      "max_later_gain_pct": 0.9
+    },
+    {
+      "ticker": "NRDY",
+      "time_ms": 1763658360000,
+      "price": 0.98,
+      "max_later_gain_pct": 1.5
+    },
+    {
+      "ticker": "NRDY",
+      "time_ms": 1763659020000,
+      "price": 0.982575,
+      "max_later_gain_pct": 1.2
+    },
+    {
+      "ticker": "NRDY",
+      "time_ms": 1763661600000,
+      "price": 0.9834,
+      "max_later_gain_pct": 1.1
+    },
+    {
+      "ticker": "NRDY",
+      "time_ms": 1763665740000,
+      "price": 0.9811,
+      "max_later_gain_pct": 1.0
+    },
+    {
+      "ticker": "NRDY",
+      "time_ms": 1763665920000,
+      "price": 0.97485,
+      "max_later_gain_pct": 1.6
+    },
+    {
+      "ticker": "NRDY",
+      "time_ms": 1763666640000,
+      "price": 0.9879,
+      "max_later_gain_pct": 0.3
+    },
+    {
+      "ticker": "NRDY",
+      "time_ms": 1763667660000,
+      "price": 0.9803,
+      "max_later_gain_pct": 0.3
+    },
+    {
+      "ticker": "NRDY",
+      "time_ms": 1763668140000,
+      "price": 0.9769,
+      "max_later_gain_pct": 0.7
+    },
+    {
+      "ticker": "NRDY",
+      "time_ms": 1763668500000,
+      "price": 0.9773,
+      "max_later_gain_pct": 0.6
+    },
+    {
+      "ticker": "NRDY",
+      "time_ms": 1763668860000,
+      "price": 0.978551,
+      "max_later_gain_pct": 0.5
+    },
+    {
+      "ticker": "NRDY",
+      "time_ms": 1763669640000,
+      "price": 0.9821,
+      "max_later_gain_pct": 0.1
+    },
+    {
+      "ticker": "NRDY",
+      "time_ms": 1763670660000,
+      "price": 0.97885,
+      "max_later_gain_pct": 0.5
+    },
+    {
+      "ticker": "NRDY",
+      "time_ms": 1763671140000,
+      "price": 0.9789,
+      "max_later_gain_pct": 0.5
+    },
+    {
+      "ticker": "NRDY",
+      "time_ms": 1763671620000,
+      "price": 0.981,
+      "max_later_gain_pct": 0.3
+    },
+    {
+      "ticker": "NVD",
+      "time_ms": 1763670120000,
+      "price": 8.55,
+      "max_later_gain_pct": 4.6
+    },
+    {
+      "ticker": "NVD",
+      "time_ms": 1763674080000,
+      "price": 8.7098,
+      "max_later_gain_pct": 2.6
+    },
+    {
+      "ticker": "NVD",
+      "time_ms": 1763675880000,
+      "price": 8.8,
+      "max_later_gain_pct": 1.6
+    },
+    {
+      "ticker": "NVD",
+      "time_ms": 1763676120000,
+      "price": 8.78,
+      "max_later_gain_pct": 1.8
+    },
+    {
+      "ticker": "NVD",
+      "time_ms": 1763676840000,
+      "price": 8.88,
+      "max_later_gain_pct": 0.7
+    },
+    {
+      "ticker": "NVD",
+      "time_ms": 1763679240000,
+      "price": 8.92,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "NVD",
+      "time_ms": 1763684340000,
+      "price": 8.69,
+      "max_later_gain_pct": 0.1
+    },
+    {
+      "ticker": "OM",
+      "time_ms": 1763653140000,
+      "price": 5.21,
+      "max_later_gain_pct": 0.4
+    },
+    {
+      "ticker": "OM",
+      "time_ms": 1763654220000,
+      "price": 5.12,
+      "max_later_gain_pct": 0.4
+    },
+    {
+      "ticker": "OM",
+      "time_ms": 1763654640000,
+      "price": 5.09,
+      "max_later_gain_pct": 1.0
+    },
+    {
+      "ticker": "OM",
+      "time_ms": 1763656680000,
+      "price": 4.92,
+      "max_later_gain_pct": 1.1
+    },
+    {
+      "ticker": "OM",
+      "time_ms": 1763660820000,
+      "price": 4.7,
+      "max_later_gain_pct": 2.1
+    },
+    {
+      "ticker": "OM",
+      "time_ms": 1763664240000,
+      "price": 4.68,
+      "max_later_gain_pct": 0.2
+    },
+    {
+      "ticker": "OM",
+      "time_ms": 1763667120000,
+      "price": 4.555,
+      "max_later_gain_pct": 0.8
+    },
+    {
+      "ticker": "OM",
+      "time_ms": 1763667900000,
+      "price": 4.52,
+      "max_later_gain_pct": 1.5
+    },
+    {
+      "ticker": "OM",
+      "time_ms": 1763669760000,
+      "price": 4.52,
+      "max_later_gain_pct": 1.5
+    },
+    {
+      "ticker": "OM",
+      "time_ms": 1763670240000,
+      "price": 4.505,
+      "max_later_gain_pct": 1.9
+    },
+    {
+      "ticker": "PACB",
+      "time_ms": 1763653500000,
+      "price": 2.0545,
+      "max_later_gain_pct": 0.8
+    },
+    {
+      "ticker": "PACB",
+      "time_ms": 1763653620000,
+      "price": 2.05,
+      "max_later_gain_pct": 0.5
+    },
+    {
+      "ticker": "PACB",
+      "time_ms": 1763656020000,
+      "price": 1.915,
+      "max_later_gain_pct": 0.6
+    },
+    {
+      "ticker": "PACB",
+      "time_ms": 1763656440000,
+      "price": 1.8875,
+      "max_later_gain_pct": 2.0
+    },
+    {
+      "ticker": "PACB",
+      "time_ms": 1763662140000,
+      "price": 1.865,
+      "max_later_gain_pct": 3.3
+    },
+    {
+      "ticker": "PACB",
+      "time_ms": 1763663100000,
+      "price": 1.87,
+      "max_later_gain_pct": 3.0
+    },
+    {
+      "ticker": "PACB",
+      "time_ms": 1763663400000,
+      "price": 1.88,
+      "max_later_gain_pct": 2.4
+    },
+    {
+      "ticker": "PACB",
+      "time_ms": 1763665140000,
+      "price": 1.855,
+      "max_later_gain_pct": 3.8
+    },
+    {
+      "ticker": "PACB",
+      "time_ms": 1763665260000,
+      "price": 1.865,
+      "max_later_gain_pct": 3.3
+    },
+    {
+      "ticker": "PACB",
+      "time_ms": 1763666700000,
+      "price": 1.91,
+      "max_later_gain_pct": 0.8
+    },
+    {
+      "ticker": "PACB",
+      "time_ms": 1763668140000,
+      "price": 1.875,
+      "max_later_gain_pct": 1.3
+    },
+    {
+      "ticker": "PACB",
+      "time_ms": 1763668860000,
+      "price": 1.88,
+      "max_later_gain_pct": 1.1
+    },
+    {
+      "ticker": "PACB",
+      "time_ms": 1763669220000,
+      "price": 1.86,
+      "max_later_gain_pct": 2.2
+    },
+    {
+      "ticker": "PACB",
+      "time_ms": 1763669520000,
+      "price": 1.85,
+      "max_later_gain_pct": 2.7
+    },
+    {
+      "ticker": "PACB",
+      "time_ms": 1763670240000,
+      "price": 1.8445,
+      "max_later_gain_pct": 3.0
+    },
+    {
+      "ticker": "PACB",
+      "time_ms": 1763671800000,
+      "price": 1.88,
+      "max_later_gain_pct": 1.1
+    },
+    {
+      "ticker": "PACB",
+      "time_ms": 1763674080000,
+      "price": 1.85,
+      "max_later_gain_pct": 2.7
+    },
+    {
+      "ticker": "PACB",
+      "time_ms": 1763683920000,
+      "price": 1.88,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "PALI",
+      "time_ms": 1763650200000,
+      "price": 2.42,
+      "max_later_gain_pct": 1.2
+    },
+    {
+      "ticker": "PALI",
+      "time_ms": 1763652240000,
+      "price": 2.3776,
+      "max_later_gain_pct": 0.9
+    },
+    {
+      "ticker": "PALI",
+      "time_ms": 1763653980000,
+      "price": 2.3666,
+      "max_later_gain_pct": 1.4
+    },
+    {
+      "ticker": "PALI",
+      "time_ms": 1763655300000,
+      "price": 2.355,
+      "max_later_gain_pct": 1.1
+    },
+    {
+      "ticker": "PALI",
+      "time_ms": 1763656200000,
+      "price": 2.32,
+      "max_later_gain_pct": 2.6
+    },
+    {
+      "ticker": "PALI",
+      "time_ms": 1763657220000,
+      "price": 2.325,
+      "max_later_gain_pct": 2.4
+    },
+    {
+      "ticker": "PALI",
+      "time_ms": 1763657580000,
+      "price": 2.375,
+      "max_later_gain_pct": 0.2
+    },
+    {
+      "ticker": "PALI",
+      "time_ms": 1763658060000,
+      "price": 2.325,
+      "max_later_gain_pct": 0.6
+    },
+    {
+      "ticker": "PALI",
+      "time_ms": 1763659320000,
+      "price": 2.3003,
+      "max_later_gain_pct": 1.7
+    },
+    {
+      "ticker": "PALI",
+      "time_ms": 1763660160000,
+      "price": 2.2499,
+      "max_later_gain_pct": 4.0
+    },
+    {
+      "ticker": "PALI",
+      "time_ms": 1763661960000,
+      "price": 2.305,
+      "max_later_gain_pct": 1.5
+    },
+    {
+      "ticker": "PALI",
+      "time_ms": 1763662200000,
+      "price": 2.305,
+      "max_later_gain_pct": 1.5
+    },
+    {
+      "ticker": "PALI",
+      "time_ms": 1763662440000,
+      "price": 2.3314,
+      "max_later_gain_pct": 0.4
+    },
+    {
+      "ticker": "PALI",
+      "time_ms": 1763664240000,
+      "price": 2.28,
+      "max_later_gain_pct": 2.6
+    },
+    {
+      "ticker": "PALI",
+      "time_ms": 1763666820000,
+      "price": 2.3,
+      "max_later_gain_pct": 1.7
+    },
+    {
+      "ticker": "PALI",
+      "time_ms": 1763667540000,
+      "price": 2.29,
+      "max_later_gain_pct": 2.2
+    },
+    {
+      "ticker": "PALI",
+      "time_ms": 1763667840000,
+      "price": 2.295,
+      "max_later_gain_pct": 2.0
+    },
+    {
+      "ticker": "PALI",
+      "time_ms": 1763668500000,
+      "price": 2.295,
+      "max_later_gain_pct": 2.0
+    },
+    {
+      "ticker": "PALI",
+      "time_ms": 1763668980000,
+      "price": 2.3,
+      "max_later_gain_pct": 1.7
+    },
+    {
+      "ticker": "PALI",
+      "time_ms": 1763669640000,
+      "price": 2.285,
+      "max_later_gain_pct": 2.4
+    },
+    {
+      "ticker": "PALI",
+      "time_ms": 1763670900000,
+      "price": 2.275,
+      "max_later_gain_pct": 2.9
+    },
+    {
+      "ticker": "PALI",
+      "time_ms": 1763671560000,
+      "price": 2.265,
+      "max_later_gain_pct": 3.3
+    },
+    {
+      "ticker": "PALI",
+      "time_ms": 1763672100000,
+      "price": 2.32,
+      "max_later_gain_pct": 0.9
+    },
+    {
+      "ticker": "PALI",
+      "time_ms": 1763672340000,
+      "price": 2.325,
+      "max_later_gain_pct": 0.6
+    },
+    {
+      "ticker": "PALI",
+      "time_ms": 1763679420000,
+      "price": 2.3,
+      "max_later_gain_pct": 0.9
+    },
+    {
+      "ticker": "PALI",
+      "time_ms": 1763682300000,
+      "price": 2.2475,
+      "max_later_gain_pct": 0.1
+    },
+    {
+      "ticker": "PLAG",
+      "time_ms": 1763681580000,
+      "price": 2.9,
+      "max_later_gain_pct": 1.7
+    },
+    {
+      "ticker": "PLAG",
+      "time_ms": 1763683500000,
+      "price": 2.86,
+      "max_later_gain_pct": 1.4
+    },
+    {
+      "ticker": "PLTD",
+      "time_ms": 1763672340000,
+      "price": 7.62,
+      "max_later_gain_pct": 2.5
+    },
+    {
+      "ticker": "PLTD",
+      "time_ms": 1763676300000,
+      "price": 7.71,
+      "max_later_gain_pct": 1.3
+    },
+    {
+      "ticker": "PLTD",
+      "time_ms": 1763677320000,
+      "price": 7.8,
+      "max_later_gain_pct": 0.1
+    },
+    {
+      "ticker": "PLTD",
+      "time_ms": 1763679660000,
+      "price": 7.69,
+      "max_later_gain_pct": 0.8
+    },
+    {
+      "ticker": "PLTD",
+      "time_ms": 1763681340000,
+      "price": 7.65,
+      "max_later_gain_pct": 0.1
+    },
+    {
+      "ticker": "PLTD",
+      "time_ms": 1763681400000,
+      "price": 7.66,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "PSNL",
+      "time_ms": 1763650860000,
+      "price": 8.845,
+      "max_later_gain_pct": 3.3
+    },
+    {
+      "ticker": "PSNL",
+      "time_ms": 1763651940000,
+      "price": 8.895,
+      "max_later_gain_pct": 2.8
+    },
+    {
+      "ticker": "PSNL",
+      "time_ms": 1763653560000,
+      "price": 9.07,
+      "max_later_gain_pct": 0.4
+    },
+    {
+      "ticker": "PSNL",
+      "time_ms": 1763654460000,
+      "price": 8.94,
+      "max_later_gain_pct": 1.1
+    },
+    {
+      "ticker": "PSNL",
+      "time_ms": 1763656140000,
+      "price": 8.84,
+      "max_later_gain_pct": 0.5
+    },
+    {
+      "ticker": "PSNL",
+      "time_ms": 1763656680000,
+      "price": 8.79,
+      "max_later_gain_pct": 0.5
+    },
+    {
+      "ticker": "PSNL",
+      "time_ms": 1763665140000,
+      "price": 8.445,
+      "max_later_gain_pct": 1.7
+    },
+    {
+      "ticker": "PSNL",
+      "time_ms": 1763665920000,
+      "price": 8.49,
+      "max_later_gain_pct": 1.2
+    },
+    {
+      "ticker": "PSNL",
+      "time_ms": 1763666640000,
+      "price": 8.4398,
+      "max_later_gain_pct": 1.8
+    },
+    {
+      "ticker": "RZLV",
+      "time_ms": 1763652720000,
+      "price": 3.57,
+      "max_later_gain_pct": 1.1
+    },
+    {
+      "ticker": "RZLV",
+      "time_ms": 1763664300000,
+      "price": 3.155,
+      "max_later_gain_pct": 0.8
+    },
+    {
+      "ticker": "RZLV",
+      "time_ms": 1763665080000,
+      "price": 3.145,
+      "max_later_gain_pct": 0.5
+    },
+    {
+      "ticker": "RZLV",
+      "time_ms": 1763666220000,
+      "price": 3.085,
+      "max_later_gain_pct": 1.8
+    },
+    {
+      "ticker": "RZLV",
+      "time_ms": 1763667060000,
+      "price": 3.09,
+      "max_later_gain_pct": 1.6
+    },
+    {
+      "ticker": "RZLV",
+      "time_ms": 1763672640000,
+      "price": 3.08,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "RZLV",
+      "time_ms": 1763674380000,
+      "price": 3.06,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "RZLV",
+      "time_ms": 1763675520000,
+      "price": 3.03,
+      "max_later_gain_pct": 0.7
+    },
+    {
+      "ticker": "RZLV",
+      "time_ms": 1763676360000,
+      "price": 3.0488,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "RZLV",
+      "time_ms": 1763677200000,
+      "price": 3.01,
+      "max_later_gain_pct": 1.0
+    },
+    {
+      "ticker": "RZLV",
+      "time_ms": 1763677620000,
+      "price": 3,
+      "max_later_gain_pct": 1.0
+    },
+    {
+      "ticker": "RZLV",
+      "time_ms": 1763677920000,
+      "price": 3,
+      "max_later_gain_pct": 1.0
+    },
+    {
+      "ticker": "RZLV",
+      "time_ms": 1763678520000,
+      "price": 3.01,
+      "max_later_gain_pct": 0.6
+    },
+    {
+      "ticker": "RZLV",
+      "time_ms": 1763678700000,
+      "price": 2.99,
+      "max_later_gain_pct": 1.3
+    },
+    {
+      "ticker": "RZLV",
+      "time_ms": 1763679060000,
+      "price": 2.96,
+      "max_later_gain_pct": 2.0
+    },
+    {
+      "ticker": "RZLV",
+      "time_ms": 1763680140000,
+      "price": 2.9798,
+      "max_later_gain_pct": 1.3
+    },
+    {
+      "ticker": "RZLV",
+      "time_ms": 1763682060000,
+      "price": 2.95,
+      "max_later_gain_pct": 2.4
+    },
+    {
+      "ticker": "RZLV",
+      "time_ms": 1763682600000,
+      "price": 2.98,
+      "max_later_gain_pct": 1.3
+    },
+    {
+      "ticker": "RZLV",
+      "time_ms": 1763684520000,
+      "price": 3,
+      "max_later_gain_pct": 0.7
+    },
+    {
+      "ticker": "SAFX",
+      "time_ms": 1763651160000,
+      "price": 0.8613,
+      "max_later_gain_pct": 4.4
+    },
+    {
+      "ticker": "SAFX",
+      "time_ms": 1763652300000,
+      "price": 0.885,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "SAFX",
+      "time_ms": 1763652660000,
+      "price": 0.8594,
+      "max_later_gain_pct": 2.5
+    },
+    {
+      "ticker": "SAFX",
+      "time_ms": 1763653080000,
+      "price": 0.847901,
+      "max_later_gain_pct": 3.1
+    },
+    {
+      "ticker": "SAFX",
+      "time_ms": 1763653800000,
+      "price": 0.8495,
+      "max_later_gain_pct": 0.1
+    },
+    {
+      "ticker": "SAFX",
+      "time_ms": 1763655360000,
+      "price": 0.8395,
+      "max_later_gain_pct": 0.4
+    },
+    {
+      "ticker": "SAFX",
+      "time_ms": 1763657700000,
+      "price": 0.8027,
+      "max_later_gain_pct": 1.9
+    },
+    {
+      "ticker": "SAFX",
+      "time_ms": 1763658780000,
+      "price": 0.81,
+      "max_later_gain_pct": 0.7
+    },
+    {
+      "ticker": "SAFX",
+      "time_ms": 1763659800000,
+      "price": 0.7991,
+      "max_later_gain_pct": 1.1
+    },
+    {
+      "ticker": "SAFX",
+      "time_ms": 1763662560000,
+      "price": 0.806,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "SAFX",
+      "time_ms": 1763664360000,
+      "price": 0.795,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "SAFX",
+      "time_ms": 1763665260000,
+      "price": 0.7921,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "SAFX",
+      "time_ms": 1763665800000,
+      "price": 0.7809,
+      "max_later_gain_pct": 1.2
+    },
+    {
+      "ticker": "SAFX",
+      "time_ms": 1763666220000,
+      "price": 0.7631,
+      "max_later_gain_pct": 2.7
+    },
+    {
+      "ticker": "SAFX",
+      "time_ms": 1763667480000,
+      "price": 0.747,
+      "max_later_gain_pct": 2.2
+    },
+    {
+      "ticker": "SAFX",
+      "time_ms": 1763669040000,
+      "price": 0.743328,
+      "max_later_gain_pct": 2.7
+    },
+    {
+      "ticker": "SAFX",
+      "time_ms": 1763669940000,
+      "price": 0.7465,
+      "max_later_gain_pct": 2.3
+    },
+    {
+      "ticker": "SAFX",
+      "time_ms": 1763670060000,
+      "price": 0.76,
+      "max_later_gain_pct": 0.5
+    },
+    {
+      "ticker": "SAFX",
+      "time_ms": 1763671440000,
+      "price": 0.7477,
+      "max_later_gain_pct": 2.1
+    },
+    {
+      "ticker": "SAFX",
+      "time_ms": 1763671800000,
+      "price": 0.7459,
+      "max_later_gain_pct": 2.4
+    },
+    {
+      "ticker": "SAFX",
+      "time_ms": 1763671980000,
+      "price": 0.746,
+      "max_later_gain_pct": 2.4
+    },
+    {
+      "ticker": "SAFX",
+      "time_ms": 1763678280000,
+      "price": 0.75,
+      "max_later_gain_pct": 1.8
+    },
+    {
+      "ticker": "SAFX",
+      "time_ms": 1763684700000,
+      "price": 0.7636,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "SGBX",
+      "time_ms": 1763661360000,
+      "price": 6.1399,
+      "max_later_gain_pct": 2.8
+    },
+    {
+      "ticker": "SGBX",
+      "time_ms": 1763662800000,
+      "price": 6.0901,
+      "max_later_gain_pct": 3.0
+    },
+    {
+      "ticker": "SGBX",
+      "time_ms": 1763680260000,
+      "price": 3.78,
+      "max_later_gain_pct": 4.5
+    },
+    {
+      "ticker": "SGBX",
+      "time_ms": 1763680620000,
+      "price": 3.8,
+      "max_later_gain_pct": 3.9
+    },
+    {
+      "ticker": "SGBX",
+      "time_ms": 1763680920000,
+      "price": 3.82,
+      "max_later_gain_pct": 3.4
+    },
+    {
+      "ticker": "SGBX",
+      "time_ms": 1763682120000,
+      "price": 3.9,
+      "max_later_gain_pct": 1.3
+    },
+    {
+      "ticker": "SGBX",
+      "time_ms": 1763686320000,
+      "price": 3.75,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "SKBL",
+      "time_ms": 1763655780000,
+      "price": 2.2691,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "SKBL",
+      "time_ms": 1763662140000,
+      "price": 2.1,
+      "max_later_gain_pct": 3.8
+    },
+    {
+      "ticker": "SKBL",
+      "time_ms": 1763663160000,
+      "price": 2.08,
+      "max_later_gain_pct": 4.8
+    },
+    {
+      "ticker": "SKBL",
+      "time_ms": 1763670600000,
+      "price": 2.04,
+      "max_later_gain_pct": 4.3
+    },
+    {
+      "ticker": "SKYX",
+      "time_ms": 1763650140000,
+      "price": 1.7535,
+      "max_later_gain_pct": 4.8
+    },
+    {
+      "ticker": "SKYX",
+      "time_ms": 1763650260000,
+      "price": 1.7687,
+      "max_later_gain_pct": 3.9
+    },
+    {
+      "ticker": "SKYX",
+      "time_ms": 1763650500000,
+      "price": 1.8,
+      "max_later_gain_pct": 2.1
+    },
+    {
+      "ticker": "SKYX",
+      "time_ms": 1763652060000,
+      "price": 1.81,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "SKYX",
+      "time_ms": 1763652420000,
+      "price": 1.78,
+      "max_later_gain_pct": 1.7
+    },
+    {
+      "ticker": "SKYX",
+      "time_ms": 1763652600000,
+      "price": 1.78,
+      "max_later_gain_pct": 1.7
+    },
+    {
+      "ticker": "SKYX",
+      "time_ms": 1763652960000,
+      "price": 1.795,
+      "max_later_gain_pct": 0.8
+    },
+    {
+      "ticker": "SKYX",
+      "time_ms": 1763654040000,
+      "price": 1.78,
+      "max_later_gain_pct": 0.6
+    },
+    {
+      "ticker": "SKYX",
+      "time_ms": 1763654100000,
+      "price": 1.7701,
+      "max_later_gain_pct": 0.6
+    },
+    {
+      "ticker": "SKYX",
+      "time_ms": 1763654760000,
+      "price": 1.7553,
+      "max_later_gain_pct": 1.4
+    },
+    {
+      "ticker": "SKYX",
+      "time_ms": 1763655420000,
+      "price": 1.74,
+      "max_later_gain_pct": 2.3
+    },
+    {
+      "ticker": "SKYX",
+      "time_ms": 1763658180000,
+      "price": 1.71,
+      "max_later_gain_pct": 4.1
+    },
+    {
+      "ticker": "SKYX",
+      "time_ms": 1763662200000,
+      "price": 1.7,
+      "max_later_gain_pct": 4.7
+    },
+    {
+      "ticker": "SKYX",
+      "time_ms": 1763662620000,
+      "price": 1.7097,
+      "max_later_gain_pct": 4.1
+    },
+    {
+      "ticker": "SKYX",
+      "time_ms": 1763665920000,
+      "price": 1.715,
+      "max_later_gain_pct": 3.8
+    },
+    {
+      "ticker": "SKYX",
+      "time_ms": 1763666820000,
+      "price": 1.74,
+      "max_later_gain_pct": 2.3
+    },
+    {
+      "ticker": "SKYX",
+      "time_ms": 1763667060000,
+      "price": 1.77,
+      "max_later_gain_pct": 0.6
+    },
+    {
+      "ticker": "SKYX",
+      "time_ms": 1763670360000,
+      "price": 1.7,
+      "max_later_gain_pct": 0.6
+    },
+    {
+      "ticker": "SKYX",
+      "time_ms": 1763670720000,
+      "price": 1.705,
+      "max_later_gain_pct": 0.3
+    },
+    {
+      "ticker": "SKYX",
+      "time_ms": 1763670900000,
+      "price": 1.7,
+      "max_later_gain_pct": 0.6
+    },
+    {
+      "ticker": "SKYX",
+      "time_ms": 1763671740000,
+      "price": 1.7,
+      "max_later_gain_pct": 0.6
+    },
+    {
+      "ticker": "SKYX",
+      "time_ms": 1763671920000,
+      "price": 1.7,
+      "max_later_gain_pct": 0.6
+    },
+    {
+      "ticker": "SPCE",
+      "time_ms": 1763649000000,
+      "price": 3.64,
+      "max_later_gain_pct": 4.0
+    },
+    {
+      "ticker": "SPCE",
+      "time_ms": 1763657640000,
+      "price": 3.5869,
+      "max_later_gain_pct": 1.1
+    },
+    {
+      "ticker": "SPCE",
+      "time_ms": 1763659020000,
+      "price": 3.535,
+      "max_later_gain_pct": 1.0
+    },
+    {
+      "ticker": "SPCE",
+      "time_ms": 1763659920000,
+      "price": 3.51,
+      "max_later_gain_pct": 1.7
+    },
+    {
+      "ticker": "SPCE",
+      "time_ms": 1763660220000,
+      "price": 3.495,
+      "max_later_gain_pct": 2.1
+    },
+    {
+      "ticker": "SPCE",
+      "time_ms": 1763661780000,
+      "price": 3.5399,
+      "max_later_gain_pct": 0.9
+    },
+    {
+      "ticker": "SPCE",
+      "time_ms": 1763662260000,
+      "price": 3.55,
+      "max_later_gain_pct": 0.6
+    },
+    {
+      "ticker": "SPCE",
+      "time_ms": 1763663220000,
+      "price": 3.545,
+      "max_later_gain_pct": 0.3
+    },
+    {
+      "ticker": "SPCE",
+      "time_ms": 1763664600000,
+      "price": 3.47,
+      "max_later_gain_pct": 2.0
+    },
+    {
+      "ticker": "SPCE",
+      "time_ms": 1763664840000,
+      "price": 3.465,
+      "max_later_gain_pct": 2.2
+    },
+    {
+      "ticker": "SPCE",
+      "time_ms": 1763668740000,
+      "price": 3.54,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "SPCE",
+      "time_ms": 1763670000000,
+      "price": 3.51,
+      "max_later_gain_pct": 0.1
+    },
+    {
+      "ticker": "SPCE",
+      "time_ms": 1763670720000,
+      "price": 3.49,
+      "max_later_gain_pct": 0.3
+    },
+    {
+      "ticker": "SPCE",
+      "time_ms": 1763672040000,
+      "price": 3.445,
+      "max_later_gain_pct": 1.6
+    },
+    {
+      "ticker": "SPCE",
+      "time_ms": 1763675340000,
+      "price": 3.42,
+      "max_later_gain_pct": 2.3
+    },
+    {
+      "ticker": "SPCE",
+      "time_ms": 1763677440000,
+      "price": 3.49,
+      "max_later_gain_pct": 0.3
+    },
+    {
+      "ticker": "SVC",
+      "time_ms": 1763652240000,
+      "price": 1.66,
+      "max_later_gain_pct": 3.9
+    },
+    {
+      "ticker": "SVC",
+      "time_ms": 1763653320000,
+      "price": 1.655,
+      "max_later_gain_pct": 4.2
+    },
+    {
+      "ticker": "SVC",
+      "time_ms": 1763653620000,
+      "price": 1.66,
+      "max_later_gain_pct": 3.9
+    },
+    {
+      "ticker": "SVC",
+      "time_ms": 1763654640000,
+      "price": 1.655,
+      "max_later_gain_pct": 4.2
+    },
+    {
+      "ticker": "SVC",
+      "time_ms": 1763655360000,
+      "price": 1.645,
+      "max_later_gain_pct": 4.8
+    },
+    {
+      "ticker": "SVC",
+      "time_ms": 1763656140000,
+      "price": 1.65,
+      "max_later_gain_pct": 4.5
+    },
+    {
+      "ticker": "SVC",
+      "time_ms": 1763656260000,
+      "price": 1.65,
+      "max_later_gain_pct": 4.5
+    },
+    {
+      "ticker": "SVC",
+      "time_ms": 1763657040000,
+      "price": 1.66,
+      "max_later_gain_pct": 3.9
+    },
+    {
+      "ticker": "SVC",
+      "time_ms": 1763657400000,
+      "price": 1.665,
+      "max_later_gain_pct": 3.6
+    },
+    {
+      "ticker": "SVC",
+      "time_ms": 1763657940000,
+      "price": 1.645,
+      "max_later_gain_pct": 4.8
+    },
+    {
+      "ticker": "SVC",
+      "time_ms": 1763658240000,
+      "price": 1.6455,
+      "max_later_gain_pct": 4.8
+    },
+    {
+      "ticker": "SVC",
+      "time_ms": 1763658300000,
+      "price": 1.645,
+      "max_later_gain_pct": 4.8
+    },
+    {
+      "ticker": "SVC",
+      "time_ms": 1763658660000,
+      "price": 1.645,
+      "max_later_gain_pct": 4.8
+    },
+    {
+      "ticker": "SVC",
+      "time_ms": 1763661960000,
+      "price": 1.645,
+      "max_later_gain_pct": 4.8
+    },
+    {
+      "ticker": "SVC",
+      "time_ms": 1763662500000,
+      "price": 1.65,
+      "max_later_gain_pct": 4.5
+    },
+    {
+      "ticker": "SVC",
+      "time_ms": 1763663640000,
+      "price": 1.645,
+      "max_later_gain_pct": 4.8
+    },
+    {
+      "ticker": "TARA",
+      "time_ms": 1763649000000,
+      "price": 6.8,
+      "max_later_gain_pct": 3.8
+    },
+    {
+      "ticker": "TARA",
+      "time_ms": 1763652660000,
+      "price": 7,
+      "max_later_gain_pct": 0.1
+    },
+    {
+      "ticker": "TARA",
+      "time_ms": 1763656020000,
+      "price": 6.99,
+      "max_later_gain_pct": 0.3
+    },
+    {
+      "ticker": "TARA",
+      "time_ms": 1763656740000,
+      "price": 6.965,
+      "max_later_gain_pct": 0.6
+    },
+    {
+      "ticker": "TARA",
+      "time_ms": 1763657340000,
+      "price": 6.9201,
+      "max_later_gain_pct": 1.3
+    },
+    {
+      "ticker": "TARA",
+      "time_ms": 1763659260000,
+      "price": 6.78,
+      "max_later_gain_pct": 3.4
+    },
+    {
+      "ticker": "TARA",
+      "time_ms": 1763661300000,
+      "price": 6.99,
+      "max_later_gain_pct": 0.3
+    },
+    {
+      "ticker": "TARA",
+      "time_ms": 1763662080000,
+      "price": 6.99,
+      "max_later_gain_pct": 0.3
+    },
+    {
+      "ticker": "TARA",
+      "time_ms": 1763662560000,
+      "price": 6.99,
+      "max_later_gain_pct": 0.3
+    },
+    {
+      "ticker": "TARA",
+      "time_ms": 1763663160000,
+      "price": 6.97,
+      "max_later_gain_pct": 0.6
+    },
+    {
+      "ticker": "TARA",
+      "time_ms": 1763664720000,
+      "price": 6.9,
+      "max_later_gain_pct": 0.4
+    },
+    {
+      "ticker": "TARA",
+      "time_ms": 1763667360000,
+      "price": 6.72,
+      "max_later_gain_pct": 0.9
+    },
+    {
+      "ticker": "TARA",
+      "time_ms": 1763668680000,
+      "price": 6.6701,
+      "max_later_gain_pct": 1.6
+    },
+    {
+      "ticker": "TARA",
+      "time_ms": 1763669100000,
+      "price": 6.57,
+      "max_later_gain_pct": 3.2
+    },
+    {
+      "ticker": "TNGX",
+      "time_ms": 1763650380000,
+      "price": 8.7889,
+      "max_later_gain_pct": 3.2
+    },
+    {
+      "ticker": "TNGX",
+      "time_ms": 1763650680000,
+      "price": 8.9,
+      "max_later_gain_pct": 1.9
+    },
+    {
+      "ticker": "TNGX",
+      "time_ms": 1763661960000,
+      "price": 8.7,
+      "max_later_gain_pct": 4.3
+    },
+    {
+      "ticker": "TNGX",
+      "time_ms": 1763665740000,
+      "price": 8.85,
+      "max_later_gain_pct": 2.5
+    },
+    {
+      "ticker": "TNGX",
+      "time_ms": 1763667960000,
+      "price": 9.01,
+      "max_later_gain_pct": 0.7
+    },
+    {
+      "ticker": "TNGX",
+      "time_ms": 1763670900000,
+      "price": 8.805,
+      "max_later_gain_pct": 2.2
+    },
+    {
+      "ticker": "TNGX",
+      "time_ms": 1763672220000,
+      "price": 8.865,
+      "max_later_gain_pct": 1.5
+    },
+    {
+      "ticker": "TNYA",
+      "time_ms": 1763643600000,
+      "price": 1.21,
+      "max_later_gain_pct": 5.0
+    },
+    {
+      "ticker": "TNYA",
+      "time_ms": 1763649000000,
+      "price": 1.2112,
+      "max_later_gain_pct": 4.9
+    },
+    {
+      "ticker": "TNYA",
+      "time_ms": 1763649420000,
+      "price": 1.26,
+      "max_later_gain_pct": 0.8
+    },
+    {
+      "ticker": "TNYA",
+      "time_ms": 1763650140000,
+      "price": 1.245,
+      "max_later_gain_pct": 2.0
+    },
+    {
+      "ticker": "TNYA",
+      "time_ms": 1763651220000,
+      "price": 1.24,
+      "max_later_gain_pct": 1.2
+    },
+    {
+      "ticker": "TNYA",
+      "time_ms": 1763651520000,
+      "price": 1.225,
+      "max_later_gain_pct": 2.4
+    },
+    {
+      "ticker": "TNYA",
+      "time_ms": 1763652000000,
+      "price": 1.23,
+      "max_later_gain_pct": 2.0
+    },
+    {
+      "ticker": "TNYA",
+      "time_ms": 1763653020000,
+      "price": 1.2501,
+      "max_later_gain_pct": 0.4
+    },
+    {
+      "ticker": "TNYA",
+      "time_ms": 1763654460000,
+      "price": 1.2201,
+      "max_later_gain_pct": 1.2
+    },
+    {
+      "ticker": "TNYA",
+      "time_ms": 1763654700000,
+      "price": 1.22,
+      "max_later_gain_pct": 1.2
+    },
+    {
+      "ticker": "TNYA",
+      "time_ms": 1763656140000,
+      "price": 1.22,
+      "max_later_gain_pct": 0.4
+    },
+    {
+      "ticker": "TNYA",
+      "time_ms": 1763656500000,
+      "price": 1.22,
+      "max_later_gain_pct": 0.4
+    },
+    {
+      "ticker": "TNYA",
+      "time_ms": 1763656920000,
+      "price": 1.2099,
+      "max_later_gain_pct": 0.4
+    },
+    {
+      "ticker": "TNYA",
+      "time_ms": 1763657880000,
+      "price": 1.1947,
+      "max_later_gain_pct": 1.3
+    },
+    {
+      "ticker": "TNYA",
+      "time_ms": 1763658240000,
+      "price": 1.2,
+      "max_later_gain_pct": 0.4
+    },
+    {
+      "ticker": "TNYA",
+      "time_ms": 1763658720000,
+      "price": 1.185,
+      "max_later_gain_pct": 1.3
+    },
+    {
+      "ticker": "TNYA",
+      "time_ms": 1763659260000,
+      "price": 1.185,
+      "max_later_gain_pct": 1.3
+    },
+    {
+      "ticker": "TNYA",
+      "time_ms": 1763659500000,
+      "price": 1.1801,
+      "max_later_gain_pct": 1.7
+    },
+    {
+      "ticker": "TNYA",
+      "time_ms": 1763659920000,
+      "price": 1.185,
+      "max_later_gain_pct": 1.3
+    },
+    {
+      "ticker": "TNYA",
+      "time_ms": 1763660820000,
+      "price": 1.165,
+      "max_later_gain_pct": 3.0
+    },
+    {
+      "ticker": "TNYA",
+      "time_ms": 1763661240000,
+      "price": 1.165,
+      "max_later_gain_pct": 3.0
+    },
+    {
+      "ticker": "TNYA",
+      "time_ms": 1763661780000,
+      "price": 1.1833,
+      "max_later_gain_pct": 1.4
+    },
+    {
+      "ticker": "TNYA",
+      "time_ms": 1763663340000,
+      "price": 1.1842,
+      "max_later_gain_pct": 1.3
+    },
+    {
+      "ticker": "TNYA",
+      "time_ms": 1763664900000,
+      "price": 1.1545,
+      "max_later_gain_pct": 3.9
+    },
+    {
+      "ticker": "TNYA",
+      "time_ms": 1763665800000,
+      "price": 1.165,
+      "max_later_gain_pct": 3.0
+    },
+    {
+      "ticker": "TNYA",
+      "time_ms": 1763667360000,
+      "price": 1.175,
+      "max_later_gain_pct": 2.1
+    },
+    {
+      "ticker": "TNYA",
+      "time_ms": 1763668500000,
+      "price": 1.175,
+      "max_later_gain_pct": 2.1
+    },
+    {
+      "ticker": "TNYA",
+      "time_ms": 1763668920000,
+      "price": 1.16,
+      "max_later_gain_pct": 3.4
+    },
+    {
+      "ticker": "TNYA",
+      "time_ms": 1763669640000,
+      "price": 1.17,
+      "max_later_gain_pct": 2.6
+    },
+    {
+      "ticker": "TNYA",
+      "time_ms": 1763670060000,
+      "price": 1.175,
+      "max_later_gain_pct": 2.1
+    },
+    {
+      "ticker": "TNYA",
+      "time_ms": 1763671260000,
+      "price": 1.1597,
+      "max_later_gain_pct": 3.5
+    },
+    {
+      "ticker": "TNYA",
+      "time_ms": 1763672040000,
+      "price": 1.155,
+      "max_later_gain_pct": 3.9
+    },
+    {
+      "ticker": "TNYA",
+      "time_ms": 1763675040000,
+      "price": 1.19,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "TNYA",
+      "time_ms": 1763680860000,
+      "price": 1.15,
+      "max_later_gain_pct": 1.7
+    },
+    {
+      "ticker": "TSLS",
+      "time_ms": 1763634240000,
+      "price": 5.69,
+      "max_later_gain_pct": 4.7
+    },
+    {
+      "ticker": "TSLS",
+      "time_ms": 1763669520000,
+      "price": 5.8008,
+      "max_later_gain_pct": 2.7
+    },
+    {
+      "ticker": "TSLS",
+      "time_ms": 1763674440000,
+      "price": 5.895,
+      "max_later_gain_pct": 1.1
+    },
+    {
+      "ticker": "TSLS",
+      "time_ms": 1763674860000,
+      "price": 5.9202,
+      "max_later_gain_pct": 0.7
+    },
+    {
+      "ticker": "TSLS",
+      "time_ms": 1763675700000,
+      "price": 5.919,
+      "max_later_gain_pct": 0.7
+    },
+    {
+      "ticker": "TSLS",
+      "time_ms": 1763676660000,
+      "price": 5.9299,
+      "max_later_gain_pct": 0.5
+    },
+    {
+      "ticker": "TSLS",
+      "time_ms": 1763677860000,
+      "price": 5.9596,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "TSLS",
+      "time_ms": 1763678400000,
+      "price": 5.9495,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "TSLS",
+      "time_ms": 1763679000000,
+      "price": 5.9201,
+      "max_later_gain_pct": 0.2
+    },
+    {
+      "ticker": "TSLS",
+      "time_ms": 1763680800000,
+      "price": 5.88,
+      "max_later_gain_pct": 0.3
+    },
+    {
+      "ticker": "TSLS",
+      "time_ms": 1763682540000,
+      "price": 5.8303,
+      "max_later_gain_pct": 0.5
+    },
+    {
+      "ticker": "TSLS",
+      "time_ms": 1763683560000,
+      "price": 5.85,
+      "max_later_gain_pct": 0.2
+    },
+    {
+      "ticker": "TYGO",
+      "time_ms": 1763650680000,
+      "price": 1.92,
+      "max_later_gain_pct": 1.6
+    },
+    {
+      "ticker": "TYGO",
+      "time_ms": 1763652060000,
+      "price": 1.905,
+      "max_later_gain_pct": 1.6
+    },
+    {
+      "ticker": "TYGO",
+      "time_ms": 1763653500000,
+      "price": 1.895,
+      "max_later_gain_pct": 0.5
+    },
+    {
+      "ticker": "TYGO",
+      "time_ms": 1763655360000,
+      "price": 1.82,
+      "max_later_gain_pct": 0.5
+    },
+    {
+      "ticker": "TYGO",
+      "time_ms": 1763657460000,
+      "price": 1.76,
+      "max_later_gain_pct": 0.6
+    },
+    {
+      "ticker": "TYGO",
+      "time_ms": 1763658720000,
+      "price": 1.735,
+      "max_later_gain_pct": 0.9
+    },
+    {
+      "ticker": "TYGO",
+      "time_ms": 1763659980000,
+      "price": 1.705,
+      "max_later_gain_pct": 0.9
+    },
+    {
+      "ticker": "TYGO",
+      "time_ms": 1763666220000,
+      "price": 1.66,
+      "max_later_gain_pct": 0.6
+    },
+    {
+      "ticker": "TYGO",
+      "time_ms": 1763670000000,
+      "price": 1.64,
+      "max_later_gain_pct": 1.5
+    },
+    {
+      "ticker": "TYGO",
+      "time_ms": 1763671800000,
+      "price": 1.645,
+      "max_later_gain_pct": 0.3
+    },
+    {
+      "ticker": "TYGO",
+      "time_ms": 1763672220000,
+      "price": 1.64,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "TZA",
+      "time_ms": 1763660400000,
+      "price": 9.18,
+      "max_later_gain_pct": 4.7
+    },
+    {
+      "ticker": "TZA",
+      "time_ms": 1763676120000,
+      "price": 9.53,
+      "max_later_gain_pct": 0.8
+    },
+    {
+      "ticker": "TZA",
+      "time_ms": 1763681400000,
+      "price": 9.53,
+      "max_later_gain_pct": 0.1
+    },
+    {
+      "ticker": "TZA",
+      "time_ms": 1763682120000,
+      "price": 9.5103,
+      "max_later_gain_pct": 0.2
+    },
+    {
+      "ticker": "TZA",
+      "time_ms": 1763682300000,
+      "price": 9.49,
+      "max_later_gain_pct": 0.2
+    },
+    {
+      "ticker": "TZA",
+      "time_ms": 1763683980000,
+      "price": 9.46,
+      "max_later_gain_pct": 0.1
+    },
+    {
+      "ticker": "TZA",
+      "time_ms": 1763684520000,
+      "price": 9.45,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "TZA",
+      "time_ms": 1763685300000,
+      "price": 9.4305,
+      "max_later_gain_pct": 0.1
+    },
+    {
+      "ticker": "TZA",
+      "time_ms": 1763686680000,
+      "price": 9.4201,
+      "max_later_gain_pct": 0.1
+    },
+    {
+      "ticker": "USARW",
+      "time_ms": 1763649000000,
+      "price": 3.16,
+      "max_later_gain_pct": 2.2
+    },
+    {
+      "ticker": "USARW",
+      "time_ms": 1763650740000,
+      "price": 3.0749,
+      "max_later_gain_pct": 1.1
+    },
+    {
+      "ticker": "USARW",
+      "time_ms": 1763652060000,
+      "price": 2.71,
+      "max_later_gain_pct": 2.2
+    },
+    {
+      "ticker": "USARW",
+      "time_ms": 1763655660000,
+      "price": 2,
+      "max_later_gain_pct": 1.6
+    },
+    {
+      "ticker": "USARW",
+      "time_ms": 1763656140000,
+      "price": 1.9785,
+      "max_later_gain_pct": 2.7
+    },
+    {
+      "ticker": "USARW",
+      "time_ms": 1763656500000,
+      "price": 1.97,
+      "max_later_gain_pct": 0.7
+    },
+    {
+      "ticker": "USARW",
+      "time_ms": 1763657640000,
+      "price": 1.8,
+      "max_later_gain_pct": 3.3
+    },
+    {
+      "ticker": "USARW",
+      "time_ms": 1763660640000,
+      "price": 1.765,
+      "max_later_gain_pct": 3.1
+    },
+    {
+      "ticker": "USARW",
+      "time_ms": 1763661840000,
+      "price": 1.7,
+      "max_later_gain_pct": 3.5
+    },
+    {
+      "ticker": "USARW",
+      "time_ms": 1763662500000,
+      "price": 1.72,
+      "max_later_gain_pct": 0.6
+    },
+    {
+      "ticker": "USARW",
+      "time_ms": 1763662920000,
+      "price": 1.6,
+      "max_later_gain_pct": 1.9
+    },
+    {
+      "ticker": "UVIX",
+      "time_ms": 1763673780000,
+      "price": 13.1,
+      "max_later_gain_pct": 0.2
+    },
+    {
+      "ticker": "UVIX",
+      "time_ms": 1763676300000,
+      "price": 12.95,
+      "max_later_gain_pct": 0.9
+    },
+    {
+      "ticker": "UVIX",
+      "time_ms": 1763679360000,
+      "price": 12.96,
+      "max_later_gain_pct": 0.8
+    },
+    {
+      "ticker": "UVIX",
+      "time_ms": 1763682240000,
+      "price": 12.52,
+      "max_later_gain_pct": 1.4
+    },
+    {
+      "ticker": "UVIX",
+      "time_ms": 1763682900000,
+      "price": 12.57,
+      "max_later_gain_pct": 1.0
+    },
+    {
+      "ticker": "UVIX",
+      "time_ms": 1763683680000,
+      "price": 12.64,
+      "max_later_gain_pct": 0.4
+    },
+    {
+      "ticker": "UVIX",
+      "time_ms": 1763684160000,
+      "price": 12.45,
+      "max_later_gain_pct": 0.9
+    },
+    {
+      "ticker": "UVIX",
+      "time_ms": 1763684580000,
+      "price": 12.48,
+      "max_later_gain_pct": 0.6
+    },
+    {
+      "ticker": "UVIX",
+      "time_ms": 1763685240000,
+      "price": 12.4401,
+      "max_later_gain_pct": 0.3
+    },
+    {
+      "ticker": "UVIX",
+      "time_ms": 1763686440000,
+      "price": 12.34,
+      "max_later_gain_pct": 0.5
+    },
+    {
+      "ticker": "VCIG",
+      "time_ms": 1763654580000,
+      "price": 1.23,
+      "max_later_gain_pct": 3.7
+    },
+    {
+      "ticker": "VCIG",
+      "time_ms": 1763655480000,
+      "price": 1.22,
+      "max_later_gain_pct": 4.5
+    },
+    {
+      "ticker": "VCIG",
+      "time_ms": 1763665800000,
+      "price": 1.225,
+      "max_later_gain_pct": 4.1
+    },
+    {
+      "ticker": "VCIG",
+      "time_ms": 1763669880000,
+      "price": 1.24,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "VCIG",
+      "time_ms": 1763670000000,
+      "price": 1.2199,
+      "max_later_gain_pct": 1.6
+    },
+    {
+      "ticker": "VCIG",
+      "time_ms": 1763670540000,
+      "price": 1.195,
+      "max_later_gain_pct": 2.5
+    },
+    {
+      "ticker": "VCIG",
+      "time_ms": 1763671320000,
+      "price": 1.155,
+      "max_later_gain_pct": 3.9
+    },
+    {
+      "ticker": "VCIG",
+      "time_ms": 1763671680000,
+      "price": 1.165,
+      "max_later_gain_pct": 0.4
+    },
+    {
+      "ticker": "VCIG",
+      "time_ms": 1763671920000,
+      "price": 1.14,
+      "max_later_gain_pct": 2.6
+    },
+    {
+      "ticker": "VCIG",
+      "time_ms": 1763674140000,
+      "price": 1.12,
+      "max_later_gain_pct": 2.7
+    },
+    {
+      "ticker": "VCIG",
+      "time_ms": 1763674740000,
+      "price": 1.12,
+      "max_later_gain_pct": 2.7
+    },
+    {
+      "ticker": "VCIG",
+      "time_ms": 1763681700000,
+      "price": 1.13,
+      "max_later_gain_pct": 0.1
+    },
+    {
+      "ticker": "VEEE",
+      "time_ms": 1763658420000,
+      "price": 1.9153,
+      "max_later_gain_pct": 4.4
+    },
+    {
+      "ticker": "VEEE",
+      "time_ms": 1763665020000,
+      "price": 1.91,
+      "max_later_gain_pct": 4.7
+    },
+    {
+      "ticker": "VEEE",
+      "time_ms": 1763666280000,
+      "price": 1.94,
+      "max_later_gain_pct": 3.1
+    },
+    {
+      "ticker": "VEEE",
+      "time_ms": 1763668500000,
+      "price": 1.8899,
+      "max_later_gain_pct": 0.5
+    },
+    {
+      "ticker": "VEEE",
+      "time_ms": 1763669220000,
+      "price": 1.87,
+      "max_later_gain_pct": 1.6
+    },
+    {
+      "ticker": "VEEE",
+      "time_ms": 1763675220000,
+      "price": 1.78,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "VEEE",
+      "time_ms": 1763676660000,
+      "price": 1.75,
+      "max_later_gain_pct": 1.7
+    },
+    {
+      "ticker": "VEEE",
+      "time_ms": 1763680200000,
+      "price": 1.75,
+      "max_later_gain_pct": 1.1
+    },
+    {
+      "ticker": "VEEE",
+      "time_ms": 1763682420000,
+      "price": 1.66,
+      "max_later_gain_pct": 3.6
+    },
+    {
+      "ticker": "VEEE",
+      "time_ms": 1763683920000,
+      "price": 1.59,
+      "max_later_gain_pct": 4.4
+    },
+    {
+      "ticker": "VELO",
+      "time_ms": 1763652540000,
+      "price": 5.23,
+      "max_later_gain_pct": 2.1
+    },
+    {
+      "ticker": "VELO",
+      "time_ms": 1763654880000,
+      "price": 4.82,
+      "max_later_gain_pct": 2.7
+    },
+    {
+      "ticker": "VELO",
+      "time_ms": 1763655780000,
+      "price": 4.71,
+      "max_later_gain_pct": 1.5
+    },
+    {
+      "ticker": "VELO",
+      "time_ms": 1763657460000,
+      "price": 4.67,
+      "max_later_gain_pct": 2.1
+    },
+    {
+      "ticker": "VELO",
+      "time_ms": 1763657520000,
+      "price": 4.715,
+      "max_later_gain_pct": 1.2
+    },
+    {
+      "ticker": "VELO",
+      "time_ms": 1763658060000,
+      "price": 4.69,
+      "max_later_gain_pct": 1.3
+    },
+    {
+      "ticker": "VELO",
+      "time_ms": 1763658360000,
+      "price": 4.73,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "VELO",
+      "time_ms": 1763659020000,
+      "price": 4.57,
+      "max_later_gain_pct": 2.0
+    },
+    {
+      "ticker": "VELO",
+      "time_ms": 1763659260000,
+      "price": 4.63,
+      "max_later_gain_pct": 0.6
+    },
+    {
+      "ticker": "VELO",
+      "time_ms": 1763664300000,
+      "price": 4.4734,
+      "max_later_gain_pct": 2.9
+    },
+    {
+      "ticker": "VELO",
+      "time_ms": 1763665560000,
+      "price": 4.4653,
+      "max_later_gain_pct": 3.1
+    },
+    {
+      "ticker": "VELO",
+      "time_ms": 1763666280000,
+      "price": 4.58,
+      "max_later_gain_pct": 0.5
+    },
+    {
+      "ticker": "VELO",
+      "time_ms": 1763671620000,
+      "price": 4.435,
+      "max_later_gain_pct": 1.5
+    },
+    {
+      "ticker": "WALD",
+      "time_ms": 1763666640000,
+      "price": 2.75,
+      "max_later_gain_pct": 0.7
+    },
+    {
+      "ticker": "WALD",
+      "time_ms": 1763671740000,
+      "price": 2.64,
+      "max_later_gain_pct": 1.9
+    },
+    {
+      "ticker": "WALD",
+      "time_ms": 1763672280000,
+      "price": 2.53,
+      "max_later_gain_pct": 3.2
+    },
+    {
+      "ticker": "WKHS",
+      "time_ms": 1763665260000,
+      "price": 11.5188,
+      "max_later_gain_pct": 4.2
+    },
+    {
+      "ticker": "WKHS",
+      "time_ms": 1763668680000,
+      "price": 11.8008,
+      "max_later_gain_pct": 1.7
+    },
+    {
+      "ticker": "WRD",
+      "time_ms": 1763656920000,
+      "price": 7.4036,
+      "max_later_gain_pct": 0.9
+    },
+    {
+      "ticker": "WRD",
+      "time_ms": 1763662020000,
+      "price": 7.38,
+      "max_later_gain_pct": 1.2
+    },
+    {
+      "ticker": "WRD",
+      "time_ms": 1763664600000,
+      "price": 7.255,
+      "max_later_gain_pct": 1.2
+    },
+    {
+      "ticker": "WRD",
+      "time_ms": 1763674380000,
+      "price": 7.0799,
+      "max_later_gain_pct": 1.8
+    },
+    {
+      "ticker": "WRD",
+      "time_ms": 1763678040000,
+      "price": 7.02,
+      "max_later_gain_pct": 2.7
+    },
+    {
+      "ticker": "WRD",
+      "time_ms": 1763681340000,
+      "price": 7.08,
+      "max_later_gain_pct": 1.8
+    },
+    {
+      "ticker": "YDKG",
+      "time_ms": 1763653680000,
+      "price": 1.8393,
+      "max_later_gain_pct": 1.7
+    },
+    {
+      "ticker": "YDKG",
+      "time_ms": 1763655600000,
+      "price": 1.67,
+      "max_later_gain_pct": 4.2
+    },
+    {
+      "ticker": "YDKG",
+      "time_ms": 1763658720000,
+      "price": 1.62,
+      "max_later_gain_pct": 0.6
+    },
+    {
+      "ticker": "YDKG",
+      "time_ms": 1763658960000,
+      "price": 1.5712,
+      "max_later_gain_pct": 3.7
+    },
+    {
+      "ticker": "YDKG",
+      "time_ms": 1763659440000,
+      "price": 1.59,
+      "max_later_gain_pct": 0.6
+    },
+    {
+      "ticker": "YDKG",
+      "time_ms": 1763662560000,
+      "price": 1.53,
+      "max_later_gain_pct": 2.6
+    },
+    {
+      "ticker": "YDKG",
+      "time_ms": 1763665080000,
+      "price": 1.51,
+      "max_later_gain_pct": 2.0
+    },
+    {
+      "ticker": "YDKG",
+      "time_ms": 1763665560000,
+      "price": 1.52,
+      "max_later_gain_pct": 1.3
+    },
+    {
+      "ticker": "YDKG",
+      "time_ms": 1763668080000,
+      "price": 1.5199,
+      "max_later_gain_pct": 0.6
+    },
+    {
+      "ticker": "YDKG",
+      "time_ms": 1763670240000,
+      "price": 1.5,
+      "max_later_gain_pct": 2.0
+    },
+    {
+      "ticker": "YDKG",
+      "time_ms": 1763671260000,
+      "price": 1.49,
+      "max_later_gain_pct": 2.7
+    },
+    {
+      "ticker": "YDKG",
+      "time_ms": 1763675340000,
+      "price": 1.41,
+      "max_later_gain_pct": 2.8
+    }
+  ],
+  "missed_entries": [
+    {
+      "ticker": "AIBD",
+      "daily_change_pct": 30.35,
+      "daily_volume": 543555,
+      "had_vol_spike": true,
+      "meets_daily_vol": true,
+      "reason": "price_not_triggered"
+    },
+    {
+      "ticker": "CCHH",
+      "daily_change_pct": 34.58,
+      "daily_volume": 791448,
+      "had_vol_spike": true,
+      "meets_daily_vol": true,
+      "reason": "price_not_triggered"
+    },
+    {
+      "ticker": "WKHS",
+      "daily_change_pct": 39.8,
+      "daily_volume": 2372930.583339,
+      "had_vol_spike": true,
+      "meets_daily_vol": true,
+      "reason": "price_not_triggered"
+    }
+  ],
+  "fake_rate": 64.6
+}

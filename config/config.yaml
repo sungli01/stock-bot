@@ -1,30 +1,34 @@
-# 매수 조건 (v8 — 3분봉 모멘텀 엔진)
+# 매수 조건 (v9 — 1차/2차 상승 구분 엔진)
 scanner:
   min_price: 0.7           # $0.7 이상
-  max_price: 30.0          # $30 이하 (상향)
+  max_price: 30.0          # $30 이하
   min_market_cap: 50000000 # $5천만 이상
   min_volume: 10000        # 1만주 이상
-  price_change_pct: 20.0        # 매수 트리거: 20%+ (큐 종목)
-  candidate_change_pct: 5.0     # BarScanner 후보 기준: 5%+ 급등 종목만 3분봉 체크
-  volume_spike_pct: 200.0       # 미사용 (하위 호환)
-  min_daily_volume: 300000      # 일 거래량 기준: $10 미만 종목 30만주 이상
-  min_daily_volume_highprice: 50000   # 일 거래량 기준: $10 이상 종목 5만주 이상
-  highprice_threshold: 10.0     # 고가 종목 기준 단가 ($10)
-  vol_3min_ratio_pct: 200.0     # 완성 3분봉 직전봉 대비 200%+ (=100% 이상 상승, BarScanner 기준)
+  price_change_pct: 20.0        # 1차 매수 트리거: 큐 대비 +20%
+  trigger_pct_2nd: 15.0         # [v9] 2차 매수 트리거: 큐 대비 +15%
+  candidate_change_pct: 5.0     # BarScanner 후보 하단: 전일比 +5%+
+  candidate_max_change_pct: 20.0 # [v9] BarScanner 후보 상단: 전일比 +20% 미만
+  volume_spike_pct: 1000.0      # 미사용 (하위 호환)
+  min_daily_volume: 300000      # 일 거래량: $10 미만 30만주 이상
+  min_daily_volume_highprice: 50000   # 일 거래량: $10 이상 5만주 이상
+  highprice_threshold: 10.0     # 고가 종목 기준 단가
+  vol_3min_ratio_pct: 1000.0    # [v9] 1차 Vol Spike: 3분봉 1000%+
+  vol_3min_ratio_pct_2nd: 200.0 # [v9] 2차 Vol Spike: 3분봉 200%+
+  max_pct_from_queue: 40.0      # [v9/Bug#3] 큐 대비 최대 40% 이내만 진입
   bar_scan_interval_sec: 30     # BarScanner 실행 주기 (초)
 
-# 매매 조건 (v8)
+# 매매 조건 (v9)
 trading:
   total_buy_amount: 100000     # 테스트: 10만원
   compound_mode: true          # 복리 ON
   compound_cap: 25000000       # 절대 상한 2500만원
-  split_count: 10              # v8: 10분할 상단호가 뿌리기
-  split_interval_sec: 0        # v8: 동시 주문 (간격 없음)
+  split_count: 10              # 10분할 상단호가 뿌리기
+  split_interval_sec: 0        # 동시 주문 (간격 없음)
   max_positions: 2             # 동시 보유 최대 2종목
   allocation_ratio: [0.7, 0.3] # 1종목 70%, 2종목 30%
-  stop_loss_pct: -7.0          # -7% 손절 (급등 실패 빠른 컷)
+  stop_loss_pct: -7.0          # -7% 손절
   force_close_before_min: 15   # 장 마감 N분 전 강제청산
-  max_hold_minutes: 45         # 최대 보유 45분 (미익절 시 자동 청산)
+  max_hold_minutes: 120        # [v9] 최대 보유 120분 (45→120)
 
 # 급등 스캘핑 매도 전략 (v7 — 동적 트레일링)
 sell_strategy:

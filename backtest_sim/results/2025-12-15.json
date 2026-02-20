@@ -1,0 +1,411 @@
+{
+  "date": "2025-12-15",
+  "starting_portfolio": 142696487070.0,
+  "ending_portfolio": 307050752038.0,
+  "day_pnl_krw": 164354264968.0,
+  "day_pnl_pct": 115.18,
+  "vol_spikes_detected": 127,
+  "signals_generated": 127,
+  "buys_executed": 8,
+  "trades": [
+    {
+      "ticker": "ARBB",
+      "type": "full",
+      "entry_price": 10.3012,
+      "sell_price": 9.32,
+      "pnl_pct": -9.53,
+      "pnl_krw": -1359198861.0,
+      "reason": "STOP_LOSS (-9.5%)",
+      "hold_min": 2.0,
+      "queue_price": 8.58,
+      "queue_to_entry_pct": 20.1,
+      "entry_time_ms": 1765809480000,
+      "sell_time_ms": 1765809600000,
+      "daily_high": 10.9,
+      "max_possible_pct": 5.8
+    },
+    {
+      "ticker": "AMCI",
+      "type": "partial",
+      "entry_price": 4.8,
+      "sell_price": 6.3,
+      "pnl_pct": 31.25,
+      "pnl_krw": 2431358389.3058643,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 11.0,
+      "entry_time_ms": 1765810260000,
+      "sell_time_ms": 1765810920000
+    },
+    {
+      "ticker": "AMCI",
+      "type": "full",
+      "entry_price": 4.8,
+      "sell_price": 6.3,
+      "pnl_pct": 31.25,
+      "pnl_krw": 2431358389.0,
+      "reason": "PROFIT_TARGET +10% (31.2%)",
+      "hold_min": 11.0,
+      "queue_price": 3.48,
+      "queue_to_entry_pct": 37.9,
+      "entry_time_ms": 1765810260000,
+      "sell_time_ms": 1765810920000,
+      "daily_high": 15.12,
+      "max_possible_pct": 215.0
+    },
+    {
+      "ticker": "FEBO",
+      "type": "full",
+      "entry_price": 1.3275,
+      "sell_price": 1.21,
+      "pnl_pct": -8.85,
+      "pnl_krw": -1558084054.0,
+      "reason": "STOP_LOSS (-8.9%)",
+      "hold_min": 1.0,
+      "queue_price": 1.1,
+      "queue_to_entry_pct": 20.7,
+      "entry_time_ms": 1765811100000,
+      "sell_time_ms": 1765811160000,
+      "daily_high": 1.39,
+      "max_possible_pct": 4.7
+    },
+    {
+      "ticker": "BENF",
+      "type": "full",
+      "entry_price": 7.2088,
+      "sell_price": 6.21,
+      "pnl_pct": -13.86,
+      "pnl_krw": -2661258569.0,
+      "reason": "STOP_LOSS (-13.9%)",
+      "hold_min": 1.0,
+      "queue_price": 6,
+      "queue_to_entry_pct": 20.1,
+      "entry_time_ms": 1765812240000,
+      "sell_time_ms": 1765812300000,
+      "daily_high": 7.21,
+      "max_possible_pct": 0.0
+    },
+    {
+      "ticker": "KXIN",
+      "type": "partial",
+      "entry_price": 4.7979,
+      "sell_price": 5.2,
+      "pnl_pct": 8.38074991141957,
+      "pnl_krw": 874202599.2508011,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 1.0,
+      "entry_time_ms": 1765821780000,
+      "sell_time_ms": 1765821840000
+    },
+    {
+      "ticker": "KXIN",
+      "type": "full",
+      "entry_price": 4.7979,
+      "sell_price": 5.31,
+      "pnl_pct": 10.67,
+      "pnl_krw": 1113352776.0,
+      "reason": "TRAILING (10.7%, peak=18.6%)",
+      "hold_min": 8.0,
+      "queue_price": 3.994,
+      "queue_to_entry_pct": 20.1,
+      "entry_time_ms": 1765821780000,
+      "sell_time_ms": 1765822260000,
+      "daily_high": 5.7999,
+      "max_possible_pct": 20.9
+    },
+    {
+      "ticker": "ARTV",
+      "type": "full",
+      "entry_price": 6.23,
+      "sell_price": 5.9499,
+      "pnl_pct": -4.5,
+      "pnl_krw": -1040691910.0,
+      "reason": "TIME_LIMIT (-4.5%)",
+      "hold_min": 45.0,
+      "queue_price": 5.1799,
+      "queue_to_entry_pct": 20.3,
+      "entry_time_ms": 1765824000000,
+      "sell_time_ms": 1765826700000,
+      "daily_high": 7.25,
+      "max_possible_pct": 16.4
+    },
+    {
+      "ticker": "MAAS",
+      "type": "full",
+      "entry_price": 6.02,
+      "sell_price": 5.28,
+      "pnl_pct": -12.29,
+      "pnl_krw": -3117068293.0,
+      "reason": "STOP_LOSS (-12.3%)",
+      "hold_min": 1.0,
+      "queue_price": 4.9539,
+      "queue_to_entry_pct": 21.5,
+      "entry_time_ms": 1765829640000,
+      "sell_time_ms": 1765829700000,
+      "daily_high": 6.23,
+      "max_possible_pct": 3.5
+    },
+    {
+      "ticker": "AMCI",
+      "type": "partial",
+      "entry_price": 12.3195,
+      "sell_price": 13.95,
+      "pnl_pct": 13.235115061487889,
+      "pnl_krw": 1825244271.386135,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 1.0,
+      "entry_time_ms": 1765832760000,
+      "sell_time_ms": 1765832820000
+    },
+    {
+      "ticker": "AMCI",
+      "type": "full",
+      "entry_price": 12.3195,
+      "sell_price": 13.95,
+      "pnl_pct": 13.24,
+      "pnl_krw": 1825244271.0,
+      "reason": "PROFIT_TARGET +10% (13.2%)",
+      "hold_min": 1.0,
+      "queue_price": 9.6203,
+      "queue_to_entry_pct": 28.1,
+      "entry_time_ms": 1765832760000,
+      "sell_time_ms": 1765832820000,
+      "daily_high": 15.12,
+      "max_possible_pct": 22.7
+    }
+  ],
+  "fake_signals": [
+    {
+      "ticker": "ARTV",
+      "time_ms": 1765837680000,
+      "price": 6.16,
+      "max_later_gain_pct": 4.9
+    },
+    {
+      "ticker": "ARTV",
+      "time_ms": 1765841580000,
+      "price": 6.2,
+      "max_later_gain_pct": 4.2
+    },
+    {
+      "ticker": "ARTV",
+      "time_ms": 1765843140000,
+      "price": 6.3,
+      "max_later_gain_pct": 2.5
+    },
+    {
+      "ticker": "ARTV",
+      "time_ms": 1765843440000,
+      "price": 6.3,
+      "max_later_gain_pct": 2.5
+    },
+    {
+      "ticker": "ARTV",
+      "time_ms": 1765845960000,
+      "price": 6.38,
+      "max_later_gain_pct": 0.2
+    },
+    {
+      "ticker": "ASTI",
+      "time_ms": 1765833420000,
+      "price": 4.1798,
+      "max_later_gain_pct": 0.5
+    },
+    {
+      "ticker": "ASTI",
+      "time_ms": 1765835160000,
+      "price": 4.14,
+      "max_later_gain_pct": 0.5
+    },
+    {
+      "ticker": "ASTI",
+      "time_ms": 1765838280000,
+      "price": 4,
+      "max_later_gain_pct": 1.2
+    },
+    {
+      "ticker": "ASTI",
+      "time_ms": 1765841640000,
+      "price": 3.99,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "BEAT",
+      "time_ms": 1765833300000,
+      "price": 2.56,
+      "max_later_gain_pct": 2.7
+    },
+    {
+      "ticker": "BEAT",
+      "time_ms": 1765834560000,
+      "price": 2.58,
+      "max_later_gain_pct": 1.9
+    },
+    {
+      "ticker": "BEAT",
+      "time_ms": 1765835100000,
+      "price": 2.58,
+      "max_later_gain_pct": 1.9
+    },
+    {
+      "ticker": "BEAT",
+      "time_ms": 1765837980000,
+      "price": 2.53,
+      "max_later_gain_pct": 3.6
+    },
+    {
+      "ticker": "BEAT",
+      "time_ms": 1765839720000,
+      "price": 2.55,
+      "max_later_gain_pct": 2.7
+    },
+    {
+      "ticker": "BEAT",
+      "time_ms": 1765840080000,
+      "price": 2.54,
+      "max_later_gain_pct": 3.1
+    },
+    {
+      "ticker": "BEAT",
+      "time_ms": 1765843440000,
+      "price": 2.5995,
+      "max_later_gain_pct": 0.8
+    },
+    {
+      "ticker": "BENF",
+      "time_ms": 1765821540000,
+      "price": 5.5743,
+      "max_later_gain_pct": 3.2
+    },
+    {
+      "ticker": "BENF",
+      "time_ms": 1765824000000,
+      "price": 4.51,
+      "max_later_gain_pct": 2.0
+    },
+    {
+      "ticker": "BENF",
+      "time_ms": 1765824780000,
+      "price": 4.31,
+      "max_later_gain_pct": 4.6
+    },
+    {
+      "ticker": "BENF",
+      "time_ms": 1765825620000,
+      "price": 4.26,
+      "max_later_gain_pct": 2.8
+    },
+    {
+      "ticker": "BENF",
+      "time_ms": 1765826280000,
+      "price": 4.1962,
+      "max_later_gain_pct": 4.4
+    },
+    {
+      "ticker": "BENF",
+      "time_ms": 1765833780000,
+      "price": 4.37,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "BENF",
+      "time_ms": 1765841880000,
+      "price": 4.21,
+      "max_later_gain_pct": 1.9
+    },
+    {
+      "ticker": "CLYM",
+      "time_ms": 1765828620000,
+      "price": 3.89,
+      "max_later_gain_pct": 0.8
+    },
+    {
+      "ticker": "CLYM",
+      "time_ms": 1765833060000,
+      "price": 3.75,
+      "max_later_gain_pct": 4.3
+    },
+    {
+      "ticker": "CLYM",
+      "time_ms": 1765837560000,
+      "price": 3.78,
+      "max_later_gain_pct": 3.4
+    },
+    {
+      "ticker": "CLYM",
+      "time_ms": 1765840380000,
+      "price": 3.73,
+      "max_later_gain_pct": 4.8
+    },
+    {
+      "ticker": "CLYM",
+      "time_ms": 1765846500000,
+      "price": 3.91,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "FEBO",
+      "time_ms": 1765811100000,
+      "price": 1.3275,
+      "max_later_gain_pct": 4.7
+    },
+    {
+      "ticker": "FEBO",
+      "time_ms": 1765844400000,
+      "price": 1.11,
+      "max_later_gain_pct": 3.6
+    },
+    {
+      "ticker": "IRBT",
+      "time_ms": 1765835100000,
+      "price": 1.16,
+      "max_later_gain_pct": 3.4
+    },
+    {
+      "ticker": "IRBT",
+      "time_ms": 1765837620000,
+      "price": 1.06,
+      "max_later_gain_pct": 1.9
+    },
+    {
+      "ticker": "IRBT",
+      "time_ms": 1765838940000,
+      "price": 1.04,
+      "max_later_gain_pct": 3.8
+    },
+    {
+      "ticker": "IRBT",
+      "time_ms": 1765840320000,
+      "price": 1.05,
+      "max_later_gain_pct": 2.9
+    },
+    {
+      "ticker": "IRBT",
+      "time_ms": 1765842360000,
+      "price": 1.06,
+      "max_later_gain_pct": 1.9
+    },
+    {
+      "ticker": "KXIN",
+      "time_ms": 1765834740000,
+      "price": 4.11,
+      "max_later_gain_pct": 3.9
+    },
+    {
+      "ticker": "MAAS",
+      "time_ms": 1765829640000,
+      "price": 6.02,
+      "max_later_gain_pct": 3.5
+    }
+  ],
+  "missed_entries": [
+    {
+      "ticker": "CLYM",
+      "daily_change_pct": 30.0,
+      "daily_volume": 22500210,
+      "had_vol_spike": true,
+      "meets_daily_vol": true,
+      "reason": "price_not_triggered"
+    }
+  ],
+  "fake_rate": 29.1
+}

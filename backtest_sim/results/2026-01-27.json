@@ -1,0 +1,631 @@
+{
+  "date": "2026-01-27",
+  "starting_portfolio": 3.188048279541322e+19,
+  "ending_portfolio": 1.0078429936207092e+20,
+  "day_pnl_krw": 6.8903816566657696e+19,
+  "day_pnl_pct": 216.13,
+  "vol_spikes_detected": 197,
+  "signals_generated": 197,
+  "buys_executed": 12,
+  "trades": [
+    {
+      "ticker": "FLGC",
+      "type": "full",
+      "entry_price": 7.3,
+      "sell_price": 6.6,
+      "pnl_pct": -9.59,
+      "pnl_krw": -3.057032596820449e+17,
+      "reason": "STOP_LOSS (-9.6%)",
+      "hold_min": 12.0,
+      "queue_price": 6.055,
+      "queue_to_entry_pct": 20.6,
+      "entry_time_ms": 1769519640000,
+      "sell_time_ms": 1769520360000,
+      "daily_high": 13.1,
+      "max_possible_pct": 79.5
+    },
+    {
+      "ticker": "GITS",
+      "type": "partial",
+      "entry_price": 2.95,
+      "sell_price": 3.9,
+      "pnl_pct": 32.203389830508456,
+      "pnl_krw": 5.597404478730314e+17,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 11.0,
+      "entry_time_ms": 1769524800000,
+      "sell_time_ms": 1769525460000
+    },
+    {
+      "ticker": "GITS",
+      "type": "full",
+      "entry_price": 2.95,
+      "sell_price": 3.9,
+      "pnl_pct": 32.2,
+      "pnl_krw": 5.597404478730314e+17,
+      "reason": "PROFIT_TARGET +10% (32.2%)",
+      "hold_min": 11.0,
+      "queue_price": 2.42,
+      "queue_to_entry_pct": 21.9,
+      "entry_time_ms": 1769524800000,
+      "sell_time_ms": 1769525460000,
+      "daily_high": 7.09,
+      "max_possible_pct": 140.3
+    },
+    {
+      "ticker": "XHLD",
+      "type": "partial",
+      "entry_price": 1.88,
+      "sell_price": 2.12,
+      "pnl_pct": 12.765957446808528,
+      "pnl_krw": 2.2189039031025024e+17,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 6.0,
+      "entry_time_ms": 1769525220000,
+      "sell_time_ms": 1769525580000
+    },
+    {
+      "ticker": "XHLD",
+      "type": "full",
+      "entry_price": 1.88,
+      "sell_price": 2.12,
+      "pnl_pct": 12.77,
+      "pnl_krw": 2.2189039031025024e+17,
+      "reason": "PROFIT_TARGET +10% (12.8%)",
+      "hold_min": 6.0,
+      "queue_price": 1.38,
+      "queue_to_entry_pct": 36.2,
+      "entry_time_ms": 1769525220000,
+      "sell_time_ms": 1769525580000,
+      "daily_high": 3.91,
+      "max_possible_pct": 108.0
+    },
+    {
+      "ticker": "MOVE",
+      "type": "partial",
+      "entry_price": 26.48,
+      "sell_price": 28.03,
+      "pnl_pct": 5.853474320241703,
+      "pnl_krw": 1.2666524798862387e+17,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 7.0,
+      "entry_time_ms": 1769525820000,
+      "sell_time_ms": 1769526240000
+    },
+    {
+      "ticker": "MOVE",
+      "type": "full",
+      "entry_price": 26.48,
+      "sell_price": 31,
+      "pnl_pct": 17.07,
+      "pnl_krw": 3.6937220703779226e+17,
+      "reason": "PROFIT_TARGET +10% (17.1%)",
+      "hold_min": 12.0,
+      "queue_price": 19.51,
+      "queue_to_entry_pct": 35.7,
+      "entry_time_ms": 1769525820000,
+      "sell_time_ms": 1769526540000,
+      "daily_high": 34.87,
+      "max_possible_pct": 31.7
+    },
+    {
+      "ticker": "ONEG",
+      "type": "partial",
+      "entry_price": 3.98,
+      "sell_price": 4.195,
+      "pnl_pct": 5.402010050251271,
+      "pnl_krw": 1.2992525092042394e+17,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 6.0,
+      "entry_time_ms": 1769527380000,
+      "sell_time_ms": 1769527740000
+    },
+    {
+      "ticker": "ONEG",
+      "type": "full",
+      "entry_price": 3.98,
+      "sell_price": 4.61,
+      "pnl_pct": 15.83,
+      "pnl_krw": 3.807112003714734e+17,
+      "reason": "PROFIT_TARGET +10% (15.8%)",
+      "hold_min": 8.0,
+      "queue_price": 3.31,
+      "queue_to_entry_pct": 20.2,
+      "entry_time_ms": 1769527380000,
+      "sell_time_ms": 1769527860000,
+      "daily_high": 5.7,
+      "max_possible_pct": 43.2
+    },
+    {
+      "ticker": "MTEN",
+      "type": "full",
+      "entry_price": 3.88,
+      "sell_price": 3.5099,
+      "pnl_pct": -9.54,
+      "pnl_krw": -5.0958811711821824e+17,
+      "reason": "STOP_LOSS (-9.5%)",
+      "hold_min": 2.0,
+      "queue_price": 3.1099,
+      "queue_to_entry_pct": 24.8,
+      "entry_time_ms": 1769533500000,
+      "sell_time_ms": 1769533620000,
+      "daily_high": 4.07,
+      "max_possible_pct": 4.9
+    },
+    {
+      "ticker": "MRNO",
+      "type": "partial",
+      "entry_price": 1.3798,
+      "sell_price": 1.48,
+      "pnl_pct": 7.26192201768372,
+      "pnl_krw": 2.1152601678517658e+17,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 7.0,
+      "entry_time_ms": 1769540700000,
+      "sell_time_ms": 1769541120000
+    },
+    {
+      "ticker": "MRNO",
+      "type": "full",
+      "entry_price": 1.3798,
+      "sell_price": 1.49,
+      "pnl_pct": 7.99,
+      "pnl_krw": 2.3263639770186138e+17,
+      "reason": "TRAILING (8.0%, peak=11.6%)",
+      "hold_min": 18.0,
+      "queue_price": 1.1362,
+      "queue_to_entry_pct": 21.4,
+      "entry_time_ms": 1769540700000,
+      "sell_time_ms": 1769541780000,
+      "daily_high": 3.15,
+      "max_possible_pct": 128.3
+    },
+    {
+      "ticker": "FLGC",
+      "type": "full",
+      "entry_price": 12.4,
+      "sell_price": 11.2899,
+      "pnl_pct": -8.95,
+      "pnl_krw": -5.776637245408174e+17,
+      "reason": "STOP_LOSS (-9.0%)",
+      "hold_min": 8.0,
+      "queue_price": 10.25,
+      "queue_to_entry_pct": 21.0,
+      "entry_time_ms": 1769545740000,
+      "sell_time_ms": 1769546220000,
+      "daily_high": 13.1,
+      "max_possible_pct": 5.6
+    },
+    {
+      "ticker": "VTIX",
+      "type": "full",
+      "entry_price": 27.12,
+      "sell_price": 24.41,
+      "pnl_pct": -9.99,
+      "pnl_krw": -7.034900752965243e+17,
+      "reason": "STOP_LOSS (-10.0%)",
+      "hold_min": 4.0,
+      "queue_price": 21.43,
+      "queue_to_entry_pct": 26.6,
+      "entry_time_ms": 1769547600000,
+      "sell_time_ms": 1769547840000,
+      "daily_high": 92.74,
+      "max_possible_pct": 242.0
+    },
+    {
+      "ticker": "ABOS",
+      "type": "full",
+      "entry_price": 3.24,
+      "sell_price": 2.92,
+      "pnl_pct": -9.88,
+      "pnl_krw": -7.579015121257544e+17,
+      "reason": "STOP_LOSS (-9.9%)",
+      "hold_min": 15.0,
+      "queue_price": 2.64,
+      "queue_to_entry_pct": 22.7,
+      "entry_time_ms": 1769548080000,
+      "sell_time_ms": 1769548980000,
+      "daily_high": 3.45,
+      "max_possible_pct": 6.5
+    },
+    {
+      "ticker": "MRNO",
+      "type": "partial",
+      "entry_price": 2.08,
+      "sell_price": 2.27,
+      "pnl_pct": 9.134615384615374,
+      "pnl_krw": 3.5048390239228774e+17,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 10.0,
+      "entry_time_ms": 1769548380000,
+      "sell_time_ms": 1769548980000
+    },
+    {
+      "ticker": "MRNO",
+      "type": "full",
+      "entry_price": 2.08,
+      "sell_price": 2.5,
+      "pnl_pct": 20.19,
+      "pnl_krw": 7.747538894987423e+17,
+      "reason": "TRAILING (20.2%, peak=31.2%)",
+      "hold_min": 25.0,
+      "queue_price": 1.6,
+      "queue_to_entry_pct": 30.0,
+      "entry_time_ms": 1769548380000,
+      "sell_time_ms": 1769549880000,
+      "daily_high": 3.15,
+      "max_possible_pct": 51.4
+    },
+    {
+      "ticker": "IOTR",
+      "type": "full",
+      "entry_price": 5.77,
+      "sell_price": 5.2,
+      "pnl_pct": -9.88,
+      "pnl_krw": -9.13307641277908e+17,
+      "reason": "STOP_LOSS (-9.9%)",
+      "hold_min": 12.0,
+      "queue_price": 4.78,
+      "queue_to_entry_pct": 20.7,
+      "entry_time_ms": 1769550660000,
+      "sell_time_ms": 1769551380000,
+      "daily_high": 6.15,
+      "max_possible_pct": 6.6
+    }
+  ],
+  "fake_signals": [
+    {
+      "ticker": "ABOS",
+      "time_ms": 1769552040000,
+      "price": 3.05,
+      "max_later_gain_pct": 1.3
+    },
+    {
+      "ticker": "ABOS",
+      "time_ms": 1769552460000,
+      "price": 2.9996,
+      "max_later_gain_pct": 1.7
+    },
+    {
+      "ticker": "ABOS",
+      "time_ms": 1769553660000,
+      "price": 2.99,
+      "max_later_gain_pct": 2.0
+    },
+    {
+      "ticker": "ABOS",
+      "time_ms": 1769553960000,
+      "price": 2.93,
+      "max_later_gain_pct": 4.1
+    },
+    {
+      "ticker": "ABOS",
+      "time_ms": 1769558340000,
+      "price": 2.9286,
+      "max_later_gain_pct": 4.1
+    },
+    {
+      "ticker": "ABOS",
+      "time_ms": 1769560200000,
+      "price": 3,
+      "max_later_gain_pct": 1.7
+    },
+    {
+      "ticker": "ABOS",
+      "time_ms": 1769560740000,
+      "price": 3.03,
+      "max_later_gain_pct": 0.7
+    },
+    {
+      "ticker": "ABOS",
+      "time_ms": 1769561160000,
+      "price": 3,
+      "max_later_gain_pct": 1.0
+    },
+    {
+      "ticker": "ATOM",
+      "time_ms": 1769540520000,
+      "price": 3.495,
+      "max_later_gain_pct": 3.6
+    },
+    {
+      "ticker": "ATOM",
+      "time_ms": 1769541660000,
+      "price": 3.46,
+      "max_later_gain_pct": 4.6
+    },
+    {
+      "ticker": "ATOM",
+      "time_ms": 1769551500000,
+      "price": 3.49,
+      "max_later_gain_pct": 3.7
+    },
+    {
+      "ticker": "ATOM",
+      "time_ms": 1769552940000,
+      "price": 3.314,
+      "max_later_gain_pct": 0.6
+    },
+    {
+      "ticker": "FAMI",
+      "time_ms": 1769544660000,
+      "price": 1.67,
+      "max_later_gain_pct": 4.8
+    },
+    {
+      "ticker": "FLGC",
+      "time_ms": 1769551380000,
+      "price": 7.85,
+      "max_later_gain_pct": 1.6
+    },
+    {
+      "ticker": "FLGC",
+      "time_ms": 1769559480000,
+      "price": 7,
+      "max_later_gain_pct": 1.4
+    },
+    {
+      "ticker": "FOSL",
+      "time_ms": 1769525700000,
+      "price": 4.08,
+      "max_later_gain_pct": 4.3
+    },
+    {
+      "ticker": "FOSL",
+      "time_ms": 1769535300000,
+      "price": 4.055,
+      "max_later_gain_pct": 4.9
+    },
+    {
+      "ticker": "FOSL",
+      "time_ms": 1769536920000,
+      "price": 4.14,
+      "max_later_gain_pct": 2.8
+    },
+    {
+      "ticker": "FOSL",
+      "time_ms": 1769537580000,
+      "price": 4.105,
+      "max_later_gain_pct": 3.7
+    },
+    {
+      "ticker": "FOSL",
+      "time_ms": 1769538720000,
+      "price": 4.145,
+      "max_later_gain_pct": 2.7
+    },
+    {
+      "ticker": "FOSL",
+      "time_ms": 1769539080000,
+      "price": 4.13,
+      "max_later_gain_pct": 3.0
+    },
+    {
+      "ticker": "FOSL",
+      "time_ms": 1769539500000,
+      "price": 4.18,
+      "max_later_gain_pct": 1.8
+    },
+    {
+      "ticker": "FOSL",
+      "time_ms": 1769541360000,
+      "price": 4.19,
+      "max_later_gain_pct": 1.6
+    },
+    {
+      "ticker": "FOSL",
+      "time_ms": 1769541660000,
+      "price": 4.2203,
+      "max_later_gain_pct": 0.8
+    },
+    {
+      "ticker": "FOSL",
+      "time_ms": 1769543160000,
+      "price": 4.17,
+      "max_later_gain_pct": 1.7
+    },
+    {
+      "ticker": "FOSL",
+      "time_ms": 1769543700000,
+      "price": 4.22,
+      "max_later_gain_pct": 0.5
+    },
+    {
+      "ticker": "FOSL",
+      "time_ms": 1769544780000,
+      "price": 4.08,
+      "max_later_gain_pct": 0.9
+    },
+    {
+      "ticker": "GITS",
+      "time_ms": 1769536560000,
+      "price": 4.65,
+      "max_later_gain_pct": 4.5
+    },
+    {
+      "ticker": "GITS",
+      "time_ms": 1769550540000,
+      "price": 3.81,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "GITS",
+      "time_ms": 1769556840000,
+      "price": 3.7,
+      "max_later_gain_pct": 1.4
+    },
+    {
+      "ticker": "GITS",
+      "time_ms": 1769559300000,
+      "price": 3.7,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "HUYA",
+      "time_ms": 1769532960000,
+      "price": 4.4699,
+      "max_later_gain_pct": 3.7
+    },
+    {
+      "ticker": "HUYA",
+      "time_ms": 1769534760000,
+      "price": 4.615,
+      "max_later_gain_pct": 0.4
+    },
+    {
+      "ticker": "HUYA",
+      "time_ms": 1769536800000,
+      "price": 4.505,
+      "max_later_gain_pct": 1.2
+    },
+    {
+      "ticker": "HUYA",
+      "time_ms": 1769537760000,
+      "price": 4.485,
+      "max_later_gain_pct": 0.8
+    },
+    {
+      "ticker": "HUYA",
+      "time_ms": 1769538960000,
+      "price": 4.43,
+      "max_later_gain_pct": 0.3
+    },
+    {
+      "ticker": "HUYA",
+      "time_ms": 1769539680000,
+      "price": 4.3701,
+      "max_later_gain_pct": 1.1
+    },
+    {
+      "ticker": "HUYA",
+      "time_ms": 1769539980000,
+      "price": 4.385,
+      "max_later_gain_pct": 0.8
+    },
+    {
+      "ticker": "HUYA",
+      "time_ms": 1769541000000,
+      "price": 4.38,
+      "max_later_gain_pct": 0.9
+    },
+    {
+      "ticker": "HUYA",
+      "time_ms": 1769541960000,
+      "price": 4.415,
+      "max_later_gain_pct": 0.1
+    },
+    {
+      "ticker": "HUYA",
+      "time_ms": 1769543940000,
+      "price": 4.35,
+      "max_later_gain_pct": 0.6
+    },
+    {
+      "ticker": "HUYA",
+      "time_ms": 1769544600000,
+      "price": 4.33,
+      "max_later_gain_pct": 1.0
+    },
+    {
+      "ticker": "HUYA",
+      "time_ms": 1769547300000,
+      "price": 4.285,
+      "max_later_gain_pct": 1.0
+    },
+    {
+      "ticker": "IOTR",
+      "time_ms": 1769559600000,
+      "price": 4.75,
+      "max_later_gain_pct": 2.9
+    },
+    {
+      "ticker": "IOTR",
+      "time_ms": 1769560560000,
+      "price": 4.7,
+      "max_later_gain_pct": 4.0
+    },
+    {
+      "ticker": "MOVE",
+      "time_ms": 1769546580000,
+      "price": 23.445,
+      "max_later_gain_pct": 0.9
+    },
+    {
+      "ticker": "MOVE",
+      "time_ms": 1769555820000,
+      "price": 19.85,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "MOVE",
+      "time_ms": 1769560980000,
+      "price": 18.85,
+      "max_later_gain_pct": 2.0
+    },
+    {
+      "ticker": "MRNO",
+      "time_ms": 1769559660000,
+      "price": 2.8,
+      "max_later_gain_pct": 3.6
+    },
+    {
+      "ticker": "MTEN",
+      "time_ms": 1769545020000,
+      "price": 2.8959,
+      "max_later_gain_pct": 3.6
+    },
+    {
+      "ticker": "MTEN",
+      "time_ms": 1769549040000,
+      "price": 2.8601,
+      "max_later_gain_pct": 3.1
+    },
+    {
+      "ticker": "MTEN",
+      "time_ms": 1769553840000,
+      "price": 2.85,
+      "max_later_gain_pct": 3.5
+    },
+    {
+      "ticker": "MTEN",
+      "time_ms": 1769561880000,
+      "price": 2.85,
+      "max_later_gain_pct": 1.4
+    },
+    {
+      "ticker": "ONEG",
+      "time_ms": 1769533560000,
+      "price": 4.7999,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "ROMA",
+      "time_ms": 1769546880000,
+      "price": 4.0312,
+      "max_later_gain_pct": 0.8
+    },
+    {
+      "ticker": "XHLD",
+      "time_ms": 1769558460000,
+      "price": 2.7201,
+      "max_later_gain_pct": 1.8
+    },
+    {
+      "ticker": "XHLD",
+      "time_ms": 1769559300000,
+      "price": 2.62,
+      "max_later_gain_pct": 3.1
+    }
+  ],
+  "missed_entries": [
+    {
+      "ticker": "ROMA",
+      "daily_change_pct": 42.75,
+      "daily_volume": 821110,
+      "had_vol_spike": true,
+      "meets_daily_vol": true,
+      "reason": "price_not_triggered"
+    }
+  ],
+  "fake_rate": 28.9
+}

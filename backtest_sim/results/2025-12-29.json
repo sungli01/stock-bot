@@ -1,0 +1,544 @@
+{
+  "date": "2025-12-29",
+  "starting_portfolio": 17232768490985.0,
+  "ending_portfolio": 40648447885371.0,
+  "day_pnl_krw": 23415679394386.0,
+  "day_pnl_pct": 135.88,
+  "vol_spikes_detected": 155,
+  "signals_generated": 155,
+  "buys_executed": 9,
+  "trades": [
+    {
+      "ticker": "SOPA",
+      "type": "full",
+      "entry_price": 2.66,
+      "sell_price": 2.39,
+      "pnl_pct": -10.15,
+      "pnl_krw": -174919078668.0,
+      "reason": "STOP_LOSS (-10.2%)",
+      "hold_min": 14.0,
+      "queue_price": 2,
+      "queue_to_entry_pct": 33.0,
+      "entry_time_ms": 1767010140000,
+      "sell_time_ms": 1767010980000,
+      "daily_high": 3.4599,
+      "max_possible_pct": 30.1
+    },
+    {
+      "ticker": "GVH",
+      "type": "partial",
+      "entry_price": 3.45,
+      "sell_price": 3.98,
+      "pnl_pct": 15.362318840579704,
+      "pnl_krw": 144260824906.52563,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 9.0,
+      "entry_time_ms": 1767018960000,
+      "sell_time_ms": 1767019500000
+    },
+    {
+      "ticker": "GVH",
+      "type": "full",
+      "entry_price": 3.45,
+      "sell_price": 3.98,
+      "pnl_pct": 15.36,
+      "pnl_krw": 144260824907.0,
+      "reason": "PROFIT_TARGET +10% (15.4%)",
+      "hold_min": 9.0,
+      "queue_price": 2.87,
+      "queue_to_entry_pct": 20.2,
+      "entry_time_ms": 1767018960000,
+      "sell_time_ms": 1767019500000,
+      "daily_high": 4.9,
+      "max_possible_pct": 42.0
+    },
+    {
+      "ticker": "BNAI",
+      "type": "full",
+      "entry_price": 2.3301,
+      "sell_price": 2.0801,
+      "pnl_pct": -10.73,
+      "pnl_krw": -201505581964.0,
+      "reason": "STOP_LOSS (-10.7%)",
+      "hold_min": 22.0,
+      "queue_price": 1.93,
+      "queue_to_entry_pct": 20.7,
+      "entry_time_ms": 1767018900000,
+      "sell_time_ms": 1767020220000,
+      "daily_high": 2.91,
+      "max_possible_pct": 24.9
+    },
+    {
+      "ticker": "ORBS",
+      "type": "partial",
+      "entry_price": 2.29,
+      "sell_price": 2.445,
+      "pnl_pct": 6.768558951965065,
+      "pnl_krw": 70893076054.41882,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 4.0,
+      "entry_time_ms": 1767019980000,
+      "sell_time_ms": 1767020220000
+    },
+    {
+      "ticker": "CCTG",
+      "type": "partial",
+      "entry_price": 2.227,
+      "sell_price": 2.423,
+      "pnl_pct": 8.801077682981596,
+      "pnl_krw": 99559408306.76416,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 1.0,
+      "entry_time_ms": 1767020220000,
+      "sell_time_ms": 1767020280000
+    },
+    {
+      "ticker": "CCTG",
+      "type": "full",
+      "entry_price": 2.227,
+      "sell_price": 2.451,
+      "pnl_pct": 10.06,
+      "pnl_krw": 113782180922.0,
+      "reason": "TRAILING (10.1%, peak=16.0%)",
+      "hold_min": 8.0,
+      "queue_price": 1.597,
+      "queue_to_entry_pct": 39.4,
+      "entry_time_ms": 1767020220000,
+      "sell_time_ms": 1767020700000,
+      "daily_high": 2.905,
+      "max_possible_pct": 30.4
+    },
+    {
+      "ticker": "SOPA",
+      "type": "partial",
+      "entry_price": 2.92,
+      "sell_price": 3.255,
+      "pnl_pct": 11.472602739726035,
+      "pnl_krw": 150396798898.47632,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 2.0,
+      "entry_time_ms": 1767020700000,
+      "sell_time_ms": 1767020820000
+    },
+    {
+      "ticker": "SOPA",
+      "type": "full",
+      "entry_price": 2.92,
+      "sell_price": 3.255,
+      "pnl_pct": 11.47,
+      "pnl_krw": 150396798898.0,
+      "reason": "PROFIT_TARGET +10% (11.5%)",
+      "hold_min": 2.0,
+      "queue_price": 2.3399,
+      "queue_to_entry_pct": 24.8,
+      "entry_time_ms": 1767020700000,
+      "sell_time_ms": 1767020820000,
+      "daily_high": 3.4599,
+      "max_possible_pct": 18.5
+    },
+    {
+      "ticker": "ORBS",
+      "type": "full",
+      "entry_price": 2.29,
+      "sell_price": 2.115,
+      "pnl_pct": -7.64,
+      "pnl_krw": -80040569739.0,
+      "reason": "STOP_LOSS (-7.6%)",
+      "hold_min": 26.0,
+      "queue_price": 1.9,
+      "queue_to_entry_pct": 20.5,
+      "entry_time_ms": 1767019980000,
+      "sell_time_ms": 1767021540000,
+      "daily_high": 2.5,
+      "max_possible_pct": 9.2
+    },
+    {
+      "ticker": "BOXL",
+      "type": "partial",
+      "entry_price": 2.58,
+      "sell_price": 2.71,
+      "pnl_pct": 5.038759689922467,
+      "pnl_krw": 75854523308.05298,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 4.0,
+      "entry_time_ms": 1767033480000,
+      "sell_time_ms": 1767033720000
+    },
+    {
+      "ticker": "BOXL",
+      "type": "full",
+      "entry_price": 2.58,
+      "sell_price": 2.84,
+      "pnl_pct": 10.08,
+      "pnl_krw": 151709046616.0,
+      "reason": "PROFIT_TARGET +10% (10.1%)",
+      "hold_min": 7.0,
+      "queue_price": 2.15,
+      "queue_to_entry_pct": 20.0,
+      "entry_time_ms": 1767033480000,
+      "sell_time_ms": 1767033900000,
+      "daily_high": 2.85,
+      "max_possible_pct": 10.5
+    },
+    {
+      "ticker": "SLGB",
+      "type": "partial",
+      "entry_price": 1.3,
+      "sell_price": 1.37,
+      "pnl_pct": 5.384615384615388,
+      "pnl_krw": 89779887720.0791,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 1.0,
+      "entry_time_ms": 1767038940000,
+      "sell_time_ms": 1767039000000
+    },
+    {
+      "ticker": "SOPA",
+      "type": "partial",
+      "entry_price": 2.9397,
+      "sell_price": 3.09,
+      "pnl_pct": 5.112766608837616,
+      "pnl_krw": 89739116161.72021,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 2.0,
+      "entry_time_ms": 1767039060000,
+      "sell_time_ms": 1767039180000
+    },
+    {
+      "ticker": "SOPA",
+      "type": "full",
+      "entry_price": 2.9397,
+      "sell_price": 3.06,
+      "pnl_pct": 4.09,
+      "pnl_krw": 71827116928.0,
+      "reason": "TRAILING (4.1%, peak=8.2%)",
+      "hold_min": 18.0,
+      "queue_price": 2.43,
+      "queue_to_entry_pct": 21.0,
+      "entry_time_ms": 1767039060000,
+      "sell_time_ms": 1767040140000,
+      "daily_high": 3.4599,
+      "max_possible_pct": 17.7
+    },
+    {
+      "ticker": "SLGB",
+      "type": "full",
+      "entry_price": 1.3,
+      "sell_price": 1.46,
+      "pnl_pct": 12.31,
+      "pnl_krw": 205211171932.0,
+      "reason": "TIME_LIMIT (12.3%)",
+      "hold_min": 46.0,
+      "queue_price": 1.07,
+      "queue_to_entry_pct": 21.5,
+      "entry_time_ms": 1767038940000,
+      "sell_time_ms": 1767041700000,
+      "daily_high": 1.48,
+      "max_possible_pct": 13.8
+    }
+  ],
+  "fake_signals": [
+    {
+      "ticker": "BNAI",
+      "time_ms": 1767052980000,
+      "price": 2.33,
+      "max_later_gain_pct": 3.9
+    },
+    {
+      "ticker": "BNAI",
+      "time_ms": 1767053700000,
+      "price": 2.3991,
+      "max_later_gain_pct": 0.9
+    },
+    {
+      "ticker": "BOXL",
+      "time_ms": 1767035820000,
+      "price": 2.2599,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "BOXL",
+      "time_ms": 1767036360000,
+      "price": 2.1899,
+      "max_later_gain_pct": 0.2
+    },
+    {
+      "ticker": "BOXL",
+      "time_ms": 1767039060000,
+      "price": 2.0427,
+      "max_later_gain_pct": 0.4
+    },
+    {
+      "ticker": "BOXL",
+      "time_ms": 1767045780000,
+      "price": 2,
+      "max_later_gain_pct": 2.5
+    },
+    {
+      "ticker": "CCTG",
+      "time_ms": 1767053340000,
+      "price": 1.627,
+      "max_later_gain_pct": 4.5
+    },
+    {
+      "ticker": "GVH",
+      "time_ms": 1767035460000,
+      "price": 4,
+      "max_later_gain_pct": 1.2
+    },
+    {
+      "ticker": "GVH",
+      "time_ms": 1767046980000,
+      "price": 3.98,
+      "max_later_gain_pct": 0.5
+    },
+    {
+      "ticker": "GVH",
+      "time_ms": 1767048600000,
+      "price": 3.92,
+      "max_later_gain_pct": 2.0
+    },
+    {
+      "ticker": "GVH",
+      "time_ms": 1767052980000,
+      "price": 3.93,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "GVH",
+      "time_ms": 1767055260000,
+      "price": 3.9,
+      "max_later_gain_pct": 0.3
+    },
+    {
+      "ticker": "ORBS",
+      "time_ms": 1767032280000,
+      "price": 2.07,
+      "max_later_gain_pct": 1.0
+    },
+    {
+      "ticker": "ORBS",
+      "time_ms": 1767033360000,
+      "price": 2.0101,
+      "max_later_gain_pct": 1.0
+    },
+    {
+      "ticker": "ORBS",
+      "time_ms": 1767035460000,
+      "price": 1.975,
+      "max_later_gain_pct": 2.8
+    },
+    {
+      "ticker": "ORBS",
+      "time_ms": 1767037080000,
+      "price": 1.935,
+      "max_later_gain_pct": 2.3
+    },
+    {
+      "ticker": "ORBS",
+      "time_ms": 1767040800000,
+      "price": 1.915,
+      "max_later_gain_pct": 0.3
+    },
+    {
+      "ticker": "ORBS",
+      "time_ms": 1767041880000,
+      "price": 1.842,
+      "max_later_gain_pct": 3.7
+    },
+    {
+      "ticker": "ORBS",
+      "time_ms": 1767045420000,
+      "price": 1.87,
+      "max_later_gain_pct": 2.1
+    },
+    {
+      "ticker": "ORBS",
+      "time_ms": 1767046440000,
+      "price": 1.8994,
+      "max_later_gain_pct": 0.6
+    },
+    {
+      "ticker": "ORBS",
+      "time_ms": 1767048060000,
+      "price": 1.87,
+      "max_later_gain_pct": 2.1
+    },
+    {
+      "ticker": "ORBS",
+      "time_ms": 1767048180000,
+      "price": 1.86,
+      "max_later_gain_pct": 2.7
+    },
+    {
+      "ticker": "ORBS",
+      "time_ms": 1767052500000,
+      "price": 1.9,
+      "max_later_gain_pct": 0.5
+    },
+    {
+      "ticker": "ORBS",
+      "time_ms": 1767054300000,
+      "price": 1.91,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "ORBS",
+      "time_ms": 1767055080000,
+      "price": 1.89,
+      "max_later_gain_pct": 1.1
+    },
+    {
+      "ticker": "SIDU",
+      "time_ms": 1767049620000,
+      "price": 2.79,
+      "max_later_gain_pct": 2.9
+    },
+    {
+      "ticker": "SIDU",
+      "time_ms": 1767051480000,
+      "price": 2.81,
+      "max_later_gain_pct": 2.1
+    },
+    {
+      "ticker": "SIDU",
+      "time_ms": 1767053100000,
+      "price": 2.87,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "SIDU",
+      "time_ms": 1767056160000,
+      "price": 2.83,
+      "max_later_gain_pct": 1.1
+    },
+    {
+      "ticker": "SLGB",
+      "time_ms": 1767041700000,
+      "price": 1.46,
+      "max_later_gain_pct": 1.4
+    },
+    {
+      "ticker": "SLS",
+      "time_ms": 1767035940000,
+      "price": 3.36,
+      "max_later_gain_pct": 2.2
+    },
+    {
+      "ticker": "SLS",
+      "time_ms": 1767039240000,
+      "price": 3.405,
+      "max_later_gain_pct": 0.9
+    },
+    {
+      "ticker": "SLS",
+      "time_ms": 1767042300000,
+      "price": 3.34,
+      "max_later_gain_pct": 1.2
+    },
+    {
+      "ticker": "SLS",
+      "time_ms": 1767042600000,
+      "price": 3.35,
+      "max_later_gain_pct": 0.9
+    },
+    {
+      "ticker": "SLS",
+      "time_ms": 1767049920000,
+      "price": 3.34,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "SLS",
+      "time_ms": 1767050820000,
+      "price": 3.3301,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "SLS",
+      "time_ms": 1767055020000,
+      "price": 3.3299,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "SLS",
+      "time_ms": 1767055740000,
+      "price": 3.33,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "SLS",
+      "time_ms": 1767056100000,
+      "price": 3.32,
+      "max_later_gain_pct": 0.3
+    },
+    {
+      "ticker": "SOPA",
+      "time_ms": 1767045060000,
+      "price": 2.55,
+      "max_later_gain_pct": 3.9
+    },
+    {
+      "ticker": "SOPA",
+      "time_ms": 1767047520000,
+      "price": 2.57,
+      "max_later_gain_pct": 1.9
+    },
+    {
+      "ticker": "SOPA",
+      "time_ms": 1767048600000,
+      "price": 2.59,
+      "max_later_gain_pct": 1.2
+    },
+    {
+      "ticker": "SOPA",
+      "time_ms": 1767051660000,
+      "price": 2.52,
+      "max_later_gain_pct": 4.0
+    },
+    {
+      "ticker": "SOPA",
+      "time_ms": 1767052260000,
+      "price": 2.56,
+      "max_later_gain_pct": 2.3
+    },
+    {
+      "ticker": "SOPA",
+      "time_ms": 1767053100000,
+      "price": 2.6,
+      "max_later_gain_pct": 0.8
+    },
+    {
+      "ticker": "SOPA",
+      "time_ms": 1767053520000,
+      "price": 2.57,
+      "max_later_gain_pct": 1.9
+    },
+    {
+      "ticker": "SOPA",
+      "time_ms": 1767053880000,
+      "price": 2.59,
+      "max_later_gain_pct": 1.2
+    },
+    {
+      "ticker": "TROO",
+      "time_ms": 1767038820000,
+      "price": 2.5,
+      "max_later_gain_pct": 1.6
+    },
+    {
+      "ticker": "TROO",
+      "time_ms": 1767041880000,
+      "price": 2.47,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "TROO",
+      "time_ms": 1767041940000,
+      "price": 2.4013,
+      "max_later_gain_pct": 2.9
+    }
+  ],
+  "missed_entries": [],
+  "fake_rate": 32.3
+}

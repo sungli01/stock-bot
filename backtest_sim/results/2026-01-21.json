@@ -1,0 +1,583 @@
+{
+  "date": "2026-01-21",
+  "starting_portfolio": 5.5502491757534874e+17,
+  "ending_portfolio": 1.8578883922959373e+18,
+  "day_pnl_krw": 1.3028634747205885e+18,
+  "day_pnl_pct": 234.74,
+  "vol_spikes_detected": 168,
+  "signals_generated": 168,
+  "buys_executed": 13,
+  "trades": [
+    {
+      "ticker": "PAVM",
+      "type": "partial",
+      "entry_price": 11.61,
+      "sell_price": 12.5803,
+      "pnl_pct": 8.357450473729532,
+      "pnl_krw": 2319296630160896.0,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 1.0,
+      "entry_time_ms": 1769001480000,
+      "sell_time_ms": 1769001540000
+    },
+    {
+      "ticker": "PAVM",
+      "type": "full",
+      "entry_price": 11.61,
+      "sell_price": 13.4737,
+      "pnl_pct": 16.05,
+      "pnl_krw": 4454780098558044.0,
+      "reason": "TRAILING (16.1%, peak=22.6%)",
+      "hold_min": 5.0,
+      "queue_price": 9.06,
+      "queue_to_entry_pct": 28.1,
+      "entry_time_ms": 1769001480000,
+      "sell_time_ms": 1769001780000,
+      "daily_high": 28.44,
+      "max_possible_pct": 145.0
+    },
+    {
+      "ticker": "SEGG",
+      "type": "partial",
+      "entry_price": 2.06,
+      "sell_price": 2.25,
+      "pnl_pct": 9.223300970873783,
+      "pnl_krw": 2846778697856904.0,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 2.0,
+      "entry_time_ms": 1769004900000,
+      "sell_time_ms": 1769005020000
+    },
+    {
+      "ticker": "SEGG",
+      "type": "full",
+      "entry_price": 2.06,
+      "sell_price": 2.18,
+      "pnl_pct": 5.83,
+      "pnl_krw": 1797965493383308.0,
+      "reason": "TRAILING (5.8%, peak=9.2%)",
+      "hold_min": 3.0,
+      "queue_price": 1.6618,
+      "queue_to_entry_pct": 24.0,
+      "entry_time_ms": 1769004900000,
+      "sell_time_ms": 1769005080000,
+      "daily_high": 2.74,
+      "max_possible_pct": 33.0
+    },
+    {
+      "ticker": "GITS",
+      "type": "partial",
+      "entry_price": 1.1727,
+      "sell_price": 1.32,
+      "pnl_pct": 12.560757226912255,
+      "pnl_krw": 4293746508311216.0,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 2.0,
+      "entry_time_ms": 1769006100000,
+      "sell_time_ms": 1769006220000
+    },
+    {
+      "ticker": "GITS",
+      "type": "full",
+      "entry_price": 1.1727,
+      "sell_price": 1.32,
+      "pnl_pct": 12.56,
+      "pnl_krw": 4293746508311216.0,
+      "reason": "PROFIT_TARGET +10% (12.6%)",
+      "hold_min": 2.0,
+      "queue_price": 0.91,
+      "queue_to_entry_pct": 28.9,
+      "entry_time_ms": 1769006100000,
+      "sell_time_ms": 1769006220000,
+      "daily_high": 2.99,
+      "max_possible_pct": 155.0
+    },
+    {
+      "ticker": "PAVM",
+      "type": "full",
+      "entry_price": 23.83,
+      "sell_price": 21.6677,
+      "pnl_pct": -9.07,
+      "pnl_krw": -6901861156346400.0,
+      "reason": "STOP_LOSS (-9.1%)",
+      "hold_min": 8.0,
+      "queue_price": 18.8445,
+      "queue_to_entry_pct": 26.5,
+      "entry_time_ms": 1769006520000,
+      "sell_time_ms": 1769007000000,
+      "daily_high": 28.44,
+      "max_possible_pct": 19.3
+    },
+    {
+      "ticker": "LCDL",
+      "type": "full",
+      "entry_price": 3.4787,
+      "sell_price": 3.2,
+      "pnl_pct": -8.01,
+      "pnl_krw": -6647979223368416.0,
+      "reason": "STOP_LOSS (-8.0%)",
+      "hold_min": 7.0,
+      "queue_price": 2.86,
+      "queue_to_entry_pct": 21.6,
+      "entry_time_ms": 1769007060000,
+      "sell_time_ms": 1769007480000,
+      "daily_high": 3.74,
+      "max_possible_pct": 7.5
+    },
+    {
+      "ticker": "SPHL",
+      "type": "partial",
+      "entry_price": 6.37,
+      "sell_price": 6.8331,
+      "pnl_pct": 7.270015698587118,
+      "pnl_krw": 2764901508403160.0,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 12.0,
+      "entry_time_ms": 1769006820000,
+      "sell_time_ms": 1769007540000
+    },
+    {
+      "ticker": "BNAI",
+      "type": "full",
+      "entry_price": 11.0901,
+      "sell_price": 9.7,
+      "pnl_pct": -12.53,
+      "pnl_krw": -1.13579058065248e+16,
+      "reason": "STOP_LOSS (-12.5%)",
+      "hold_min": 2.0,
+      "queue_price": 8.8571,
+      "queue_to_entry_pct": 25.2,
+      "entry_time_ms": 1769007540000,
+      "sell_time_ms": 1769007660000,
+      "daily_high": 11.38,
+      "max_possible_pct": 2.6
+    },
+    {
+      "ticker": "SPHL",
+      "type": "full",
+      "entry_price": 6.37,
+      "sell_price": 6.32,
+      "pnl_pct": -0.78,
+      "pnl_krw": -298521000691336.0,
+      "reason": "TRAILING (-0.8%, peak=8.6%)",
+      "hold_min": 15.0,
+      "queue_price": 5.2949,
+      "queue_to_entry_pct": 20.3,
+      "entry_time_ms": 1769006820000,
+      "sell_time_ms": 1769007720000,
+      "daily_high": 7.35,
+      "max_possible_pct": 15.4
+    },
+    {
+      "ticker": "GITS",
+      "type": "full",
+      "entry_price": 2.41,
+      "sell_price": 2.24,
+      "pnl_pct": -7.05,
+      "pnl_krw": -7504746187728544.0,
+      "reason": "STOP_LOSS (-7.1%)",
+      "hold_min": 3.0,
+      "queue_price": 1.7998,
+      "queue_to_entry_pct": 33.9,
+      "entry_time_ms": 1769007900000,
+      "sell_time_ms": 1769008080000,
+      "daily_high": 2.99,
+      "max_possible_pct": 24.1
+    },
+    {
+      "ticker": "NAMM",
+      "type": "partial",
+      "entry_price": 2.0801,
+      "sell_price": 2.19,
+      "pnl_pct": 5.283399836546332,
+      "pnl_krw": 3071753352195488.0,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 3.0,
+      "entry_time_ms": 1769015520000,
+      "sell_time_ms": 1769015700000
+    },
+    {
+      "ticker": "NAMM",
+      "type": "full",
+      "entry_price": 2.0801,
+      "sell_price": 2.1797,
+      "pnl_pct": 4.79,
+      "pnl_krw": 2783863820552048.0,
+      "reason": "TRAILING (4.8%, peak=9.6%)",
+      "hold_min": 5.0,
+      "queue_price": 1.72,
+      "queue_to_entry_pct": 20.9,
+      "entry_time_ms": 1769015520000,
+      "sell_time_ms": 1769015820000,
+      "daily_high": 2.83,
+      "max_possible_pct": 36.1
+    },
+    {
+      "ticker": "UOKA",
+      "type": "full",
+      "entry_price": 2.2,
+      "sell_price": 2.22,
+      "pnl_pct": 0.91,
+      "pnl_krw": 1057085639490736.0,
+      "reason": "TIME_LIMIT (0.9%)",
+      "hold_min": 67.0,
+      "queue_price": 1.8308,
+      "queue_to_entry_pct": 20.2,
+      "entry_time_ms": 1769012940000,
+      "sell_time_ms": 1769016960000,
+      "daily_high": 2.9,
+      "max_possible_pct": 31.8
+    },
+    {
+      "ticker": "GITS",
+      "type": "full",
+      "entry_price": 1.845,
+      "sell_price": 1.695,
+      "pnl_pct": -8.13,
+      "pnl_krw": -1.140053452796768e+16,
+      "reason": "STOP_LOSS (-8.1%)",
+      "hold_min": 4.0,
+      "queue_price": 1.52,
+      "queue_to_entry_pct": 21.4,
+      "entry_time_ms": 1769017320000,
+      "sell_time_ms": 1769017560000,
+      "daily_high": 2.99,
+      "max_possible_pct": 62.1
+    },
+    {
+      "ticker": "ROMA",
+      "type": "partial",
+      "entry_price": 2.79,
+      "sell_price": 3.1,
+      "pnl_pct": 11.111111111111116,
+      "pnl_krw": 8506065483922560.0,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 2.0,
+      "entry_time_ms": 1769019420000,
+      "sell_time_ms": 1769019540000
+    },
+    {
+      "ticker": "ROMA",
+      "type": "full",
+      "entry_price": 2.79,
+      "sell_price": 3.1,
+      "pnl_pct": 11.11,
+      "pnl_krw": 8506065483922560.0,
+      "reason": "PROFIT_TARGET +10% (11.1%)",
+      "hold_min": 2.0,
+      "queue_price": 2.2399,
+      "queue_to_entry_pct": 24.6,
+      "entry_time_ms": 1769019420000,
+      "sell_time_ms": 1769019540000,
+      "daily_high": 3.27,
+      "max_possible_pct": 17.2
+    },
+    {
+      "ticker": "PAVM",
+      "type": "full",
+      "entry_price": 14.55,
+      "sell_price": 13.4,
+      "pnl_pct": -7.9,
+      "pnl_krw": -1.3446014167025344e+16,
+      "reason": "STOP_LOSS (-7.9%)",
+      "hold_min": 24.0,
+      "queue_price": 12,
+      "queue_to_entry_pct": 21.3,
+      "entry_time_ms": 1769034720000,
+      "sell_time_ms": 1769036160000,
+      "daily_high": 28.44,
+      "max_possible_pct": 95.5
+    }
+  ],
+  "fake_signals": [
+    {
+      "ticker": "BNAI",
+      "time_ms": 1769030640000,
+      "price": 8.6,
+      "max_later_gain_pct": 2.8
+    },
+    {
+      "ticker": "BNAI",
+      "time_ms": 1769038080000,
+      "price": 8.45,
+      "max_later_gain_pct": 2.7
+    },
+    {
+      "ticker": "BNAI",
+      "time_ms": 1769038680000,
+      "price": 8.4899,
+      "max_later_gain_pct": 2.2
+    },
+    {
+      "ticker": "BNAI",
+      "time_ms": 1769040840000,
+      "price": 8.56,
+      "max_later_gain_pct": 1.4
+    },
+    {
+      "ticker": "BNAI",
+      "time_ms": 1769042100000,
+      "price": 8.4501,
+      "max_later_gain_pct": 2.7
+    },
+    {
+      "ticker": "GITS",
+      "time_ms": 1769040120000,
+      "price": 1.49,
+      "max_later_gain_pct": 3.7
+    },
+    {
+      "ticker": "GITS",
+      "time_ms": 1769041860000,
+      "price": 1.51,
+      "max_later_gain_pct": 2.3
+    },
+    {
+      "ticker": "GITS",
+      "time_ms": 1769042700000,
+      "price": 1.48,
+      "max_later_gain_pct": 4.4
+    },
+    {
+      "ticker": "LCDL",
+      "time_ms": 1769021640000,
+      "price": 3.61,
+      "max_later_gain_pct": 3.6
+    },
+    {
+      "ticker": "LCDL",
+      "time_ms": 1769021940000,
+      "price": 3.61,
+      "max_later_gain_pct": 3.6
+    },
+    {
+      "ticker": "LCDL",
+      "time_ms": 1769026980000,
+      "price": 3.7064,
+      "max_later_gain_pct": 0.1
+    },
+    {
+      "ticker": "LCDL",
+      "time_ms": 1769028960000,
+      "price": 3.64,
+      "max_later_gain_pct": 1.9
+    },
+    {
+      "ticker": "MNDR",
+      "time_ms": 1769023020000,
+      "price": 1.77,
+      "max_later_gain_pct": 1.7
+    },
+    {
+      "ticker": "MNDR",
+      "time_ms": 1769032680000,
+      "price": 1.72,
+      "max_later_gain_pct": 4.1
+    },
+    {
+      "ticker": "MNDR",
+      "time_ms": 1769035380000,
+      "price": 1.7599,
+      "max_later_gain_pct": 1.7
+    },
+    {
+      "ticker": "MNDR",
+      "time_ms": 1769036460000,
+      "price": 1.78,
+      "max_later_gain_pct": 0.6
+    },
+    {
+      "ticker": "MNDR",
+      "time_ms": 1769037300000,
+      "price": 1.7897,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "MNDR",
+      "time_ms": 1769039160000,
+      "price": 1.7425,
+      "max_later_gain_pct": 2.2
+    },
+    {
+      "ticker": "MNDR",
+      "time_ms": 1769039820000,
+      "price": 1.7446,
+      "max_later_gain_pct": 2.0
+    },
+    {
+      "ticker": "MNDR",
+      "time_ms": 1769041260000,
+      "price": 1.75,
+      "max_later_gain_pct": 1.7
+    },
+    {
+      "ticker": "NAMM",
+      "time_ms": 1769034360000,
+      "price": 2.26,
+      "max_later_gain_pct": 4.0
+    },
+    {
+      "ticker": "NAMM",
+      "time_ms": 1769037900000,
+      "price": 2.02,
+      "max_later_gain_pct": 5.0
+    },
+    {
+      "ticker": "NAMM",
+      "time_ms": 1769038680000,
+      "price": 2.05,
+      "max_later_gain_pct": 3.4
+    },
+    {
+      "ticker": "PAVM",
+      "time_ms": 1769034720000,
+      "price": 14.55,
+      "max_later_gain_pct": 3.1
+    },
+    {
+      "ticker": "PAVM",
+      "time_ms": 1769037780000,
+      "price": 13.8358,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "ROMA",
+      "time_ms": 1769029140000,
+      "price": 2.43,
+      "max_later_gain_pct": 4.1
+    },
+    {
+      "ticker": "ROMA",
+      "time_ms": 1769031720000,
+      "price": 2.44,
+      "max_later_gain_pct": 3.7
+    },
+    {
+      "ticker": "ROMA",
+      "time_ms": 1769034600000,
+      "price": 2.35,
+      "max_later_gain_pct": 4.3
+    },
+    {
+      "ticker": "SEGG",
+      "time_ms": 1769020500000,
+      "price": 2.345,
+      "max_later_gain_pct": 1.5
+    },
+    {
+      "ticker": "SEGG",
+      "time_ms": 1769020920000,
+      "price": 2.34,
+      "max_later_gain_pct": 1.7
+    },
+    {
+      "ticker": "SEGG",
+      "time_ms": 1769023620000,
+      "price": 2.23,
+      "max_later_gain_pct": 3.6
+    },
+    {
+      "ticker": "SEGG",
+      "time_ms": 1769032800000,
+      "price": 2.14,
+      "max_later_gain_pct": 4.2
+    },
+    {
+      "ticker": "SEGG",
+      "time_ms": 1769034240000,
+      "price": 2.18,
+      "max_later_gain_pct": 2.3
+    },
+    {
+      "ticker": "SEGG",
+      "time_ms": 1769037360000,
+      "price": 2.13,
+      "max_later_gain_pct": 4.7
+    },
+    {
+      "ticker": "SEGG",
+      "time_ms": 1769038440000,
+      "price": 2.1602,
+      "max_later_gain_pct": 3.2
+    },
+    {
+      "ticker": "SEGG",
+      "time_ms": 1769040120000,
+      "price": 2.16,
+      "max_later_gain_pct": 3.2
+    },
+    {
+      "ticker": "SEGG",
+      "time_ms": 1769041500000,
+      "price": 2.17,
+      "max_later_gain_pct": 2.8
+    },
+    {
+      "ticker": "SEGG",
+      "time_ms": 1769042280000,
+      "price": 2.19,
+      "max_later_gain_pct": 1.8
+    },
+    {
+      "ticker": "SEGG",
+      "time_ms": 1769043060000,
+      "price": 2.2098,
+      "max_later_gain_pct": 0.9
+    },
+    {
+      "ticker": "SPHL",
+      "time_ms": 1769041080000,
+      "price": 5.92,
+      "max_later_gain_pct": 1.4
+    },
+    {
+      "ticker": "UOKA",
+      "time_ms": 1769005920000,
+      "price": 2.785,
+      "max_later_gain_pct": 4.1
+    },
+    {
+      "ticker": "UOKA",
+      "time_ms": 1769012580000,
+      "price": 2.19,
+      "max_later_gain_pct": 1.4
+    },
+    {
+      "ticker": "UOKA",
+      "time_ms": 1769016960000,
+      "price": 2.22,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "YOUL",
+      "time_ms": 1769029020000,
+      "price": 1.81,
+      "max_later_gain_pct": 4.0
+    },
+    {
+      "ticker": "YOUL",
+      "time_ms": 1769029980000,
+      "price": 1.8833,
+      "max_later_gain_pct": 0.0
+    }
+  ],
+  "missed_entries": [
+    {
+      "ticker": "MNDR",
+      "daily_change_pct": 44.26,
+      "daily_volume": 7035304,
+      "had_vol_spike": true,
+      "meets_daily_vol": true,
+      "reason": "price_not_triggered"
+    },
+    {
+      "ticker": "YOUL",
+      "daily_change_pct": 33.82,
+      "daily_volume": 1149955,
+      "had_vol_spike": true,
+      "meets_daily_vol": true,
+      "reason": "price_not_triggered"
+    }
+  ],
+  "fake_rate": 26.8
+}

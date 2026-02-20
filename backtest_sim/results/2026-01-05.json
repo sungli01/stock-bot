@@ -1,0 +1,644 @@
+{
+  "date": "2026-01-05",
+  "starting_portfolio": 232164468796952.0,
+  "ending_portfolio": 601825344723771.0,
+  "day_pnl_krw": 369660875926819.0,
+  "day_pnl_pct": 159.22,
+  "vol_spikes_detected": 204,
+  "signals_generated": 204,
+  "buys_executed": 10,
+  "trades": [
+    {
+      "ticker": "JCSE",
+      "type": "full",
+      "entry_price": 1.66,
+      "sell_price": 1.45,
+      "pnl_pct": -12.65,
+      "pnl_krw": -2937020388395.0,
+      "reason": "STOP_LOSS (-12.7%)",
+      "hold_min": 6.0,
+      "queue_price": 1.38,
+      "queue_to_entry_pct": 20.3,
+      "entry_time_ms": 1767619500000,
+      "sell_time_ms": 1767619860000,
+      "daily_high": 2.13,
+      "max_possible_pct": 28.3
+    },
+    {
+      "ticker": "INBS",
+      "type": "partial",
+      "entry_price": 9.7571,
+      "sell_price": 10.8994,
+      "pnl_pct": 11.707372067520062,
+      "pnl_krw": 1477727304156.8203,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 2.0,
+      "entry_time_ms": 1767623820000,
+      "sell_time_ms": 1767623940000
+    },
+    {
+      "ticker": "INBS",
+      "type": "full",
+      "entry_price": 9.7571,
+      "sell_price": 10.8994,
+      "pnl_pct": 11.71,
+      "pnl_krw": 1477727304157.0,
+      "reason": "PROFIT_TARGET +10% (11.7%)",
+      "hold_min": 2.0,
+      "queue_price": 8.07,
+      "queue_to_entry_pct": 20.9,
+      "entry_time_ms": 1767623820000,
+      "sell_time_ms": 1767623940000,
+      "daily_high": 15.25,
+      "max_possible_pct": 56.3
+    },
+    {
+      "ticker": "TMDE",
+      "type": "partial",
+      "entry_price": 0.98,
+      "sell_price": 1.0399,
+      "pnl_pct": 6.112244897959185,
+      "pnl_krw": 857681632223.5156,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 8.0,
+      "entry_time_ms": 1767624120000,
+      "sell_time_ms": 1767624600000
+    },
+    {
+      "ticker": "ASTI",
+      "type": "partial",
+      "entry_price": 5.67,
+      "sell_price": 6.285,
+      "pnl_pct": 10.846560846560859,
+      "pnl_krw": 1522009697941.9375,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 10.0,
+      "entry_time_ms": 1767624180000,
+      "sell_time_ms": 1767624780000
+    },
+    {
+      "ticker": "ASTI",
+      "type": "full",
+      "entry_price": 5.67,
+      "sell_price": 6.285,
+      "pnl_pct": 10.85,
+      "pnl_krw": 1522009697942.0,
+      "reason": "PROFIT_TARGET +10% (10.8%)",
+      "hold_min": 10.0,
+      "queue_price": 4.5246,
+      "queue_to_entry_pct": 25.3,
+      "entry_time_ms": 1767624180000,
+      "sell_time_ms": 1767624780000,
+      "daily_high": 6.65,
+      "max_possible_pct": 17.3
+    },
+    {
+      "ticker": "TMDE",
+      "type": "full",
+      "entry_price": 0.98,
+      "sell_price": 1.0794,
+      "pnl_pct": 10.14,
+      "pnl_krw": 1423264678514.0,
+      "reason": "PROFIT_TARGET +10% (10.1%)",
+      "hold_min": 14.0,
+      "queue_price": 0.78,
+      "queue_to_entry_pct": 25.6,
+      "entry_time_ms": 1767624120000,
+      "sell_time_ms": 1767624960000,
+      "daily_high": 1.39,
+      "max_possible_pct": 41.8
+    },
+    {
+      "ticker": "RITR",
+      "type": "full",
+      "entry_price": 1.44,
+      "sell_price": 1.33,
+      "pnl_pct": -7.64,
+      "pnl_krw": -2613244432769.0,
+      "reason": "STOP_LOSS (-7.6%)",
+      "hold_min": 3.0,
+      "queue_price": 1.18,
+      "queue_to_entry_pct": 22.0,
+      "entry_time_ms": 1767628800000,
+      "sell_time_ms": 1767628980000,
+      "daily_high": 1.6191,
+      "max_possible_pct": 12.4
+    },
+    {
+      "ticker": "UFG",
+      "type": "full",
+      "entry_price": 1.125,
+      "sell_price": 1.0401,
+      "pnl_pct": -7.55,
+      "pnl_krw": -2820143705327.0,
+      "reason": "STOP_LOSS (-7.5%)",
+      "hold_min": 9.0,
+      "queue_price": 0.93,
+      "queue_to_entry_pct": 21.0,
+      "entry_time_ms": 1767629640000,
+      "sell_time_ms": 1767630180000,
+      "daily_high": 1.55,
+      "max_possible_pct": 37.8
+    },
+    {
+      "ticker": "JCSE",
+      "type": "partial",
+      "entry_price": 1.6,
+      "sell_price": 1.7,
+      "pnl_pct": 6.25,
+      "pnl_krw": 1275760017404.086,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 2.0,
+      "entry_time_ms": 1767631260000,
+      "sell_time_ms": 1767631380000
+    },
+    {
+      "ticker": "JCSE",
+      "type": "full",
+      "entry_price": 1.6,
+      "sell_price": 1.72,
+      "pnl_pct": 7.5,
+      "pnl_krw": 1530912020885.0,
+      "reason": "TRAILING (7.5%, peak=12.5%)",
+      "hold_min": 12.0,
+      "queue_price": 1.3295,
+      "queue_to_entry_pct": 20.3,
+      "entry_time_ms": 1767631260000,
+      "sell_time_ms": 1767631980000,
+      "daily_high": 2.13,
+      "max_possible_pct": 33.1
+    },
+    {
+      "ticker": "INBS",
+      "type": "partial",
+      "entry_price": 12.6856,
+      "sell_price": 13.3537,
+      "pnl_pct": 5.266601500914425,
+      "pnl_krw": 1189920665138.8984,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 12.0,
+      "entry_time_ms": 1767633720000,
+      "sell_time_ms": 1767634440000
+    },
+    {
+      "ticker": "INBS",
+      "type": "full",
+      "entry_price": 12.6856,
+      "sell_price": 13.9,
+      "pnl_pct": 9.57,
+      "pnl_krw": 2162909228775.0,
+      "reason": "TRAILING (9.6%, peak=13.9%)",
+      "hold_min": 25.0,
+      "queue_price": 10.3499,
+      "queue_to_entry_pct": 22.6,
+      "entry_time_ms": 1767633720000,
+      "sell_time_ms": 1767635220000,
+      "daily_high": 15.25,
+      "max_possible_pct": 20.2
+    },
+    {
+      "ticker": "SLAI",
+      "type": "full",
+      "entry_price": 0.981,
+      "sell_price": 0.8821,
+      "pnl_pct": -10.08,
+      "pnl_krw": -5044952996415.0,
+      "reason": "STOP_LOSS (-10.1%)",
+      "hold_min": 7.0,
+      "queue_price": 0.7961,
+      "queue_to_entry_pct": 23.2,
+      "entry_time_ms": 1767635940000,
+      "sell_time_ms": 1767636360000,
+      "daily_high": 1.01,
+      "max_possible_pct": 3.0
+    },
+    {
+      "ticker": "JCSE",
+      "type": "partial",
+      "entry_price": 1.7498,
+      "sell_price": 1.84,
+      "pnl_pct": 5.1548748428391855,
+      "pnl_krw": 1405762565946.6914,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 36.0,
+      "entry_time_ms": 1767640080000,
+      "sell_time_ms": 1767642240000
+    },
+    {
+      "ticker": "JCSE",
+      "type": "full",
+      "entry_price": 1.7498,
+      "sell_price": 1.7798,
+      "pnl_pct": 1.71,
+      "pnl_krw": 467548525259.0,
+      "reason": "TIME_LIMIT (1.7%)",
+      "hold_min": 45.0,
+      "queue_price": 1.41,
+      "queue_to_entry_pct": 24.1,
+      "entry_time_ms": 1767640080000,
+      "sell_time_ms": 1767642780000,
+      "daily_high": 2.13,
+      "max_possible_pct": 21.7
+    }
+  ],
+  "fake_signals": [
+    {
+      "ticker": "ABAT",
+      "time_ms": 1767638880000,
+      "price": 4.52,
+      "max_later_gain_pct": 4.0
+    },
+    {
+      "ticker": "ABAT",
+      "time_ms": 1767642000000,
+      "price": 4.535,
+      "max_later_gain_pct": 3.6
+    },
+    {
+      "ticker": "ABAT",
+      "time_ms": 1767642240000,
+      "price": 4.59,
+      "max_later_gain_pct": 2.4
+    },
+    {
+      "ticker": "ABAT",
+      "time_ms": 1767644640000,
+      "price": 4.66,
+      "max_later_gain_pct": 0.9
+    },
+    {
+      "ticker": "ABAT",
+      "time_ms": 1767645120000,
+      "price": 4.67,
+      "max_later_gain_pct": 0.6
+    },
+    {
+      "ticker": "ABAT",
+      "time_ms": 1767645360000,
+      "price": 4.655,
+      "max_later_gain_pct": 1.0
+    },
+    {
+      "ticker": "ABAT",
+      "time_ms": 1767648960000,
+      "price": 4.65,
+      "max_later_gain_pct": 1.1
+    },
+    {
+      "ticker": "ABAT",
+      "time_ms": 1767653940000,
+      "price": 4.65,
+      "max_later_gain_pct": 1.1
+    },
+    {
+      "ticker": "ABAT",
+      "time_ms": 1767655260000,
+      "price": 4.62,
+      "max_later_gain_pct": 1.7
+    },
+    {
+      "ticker": "ABAT",
+      "time_ms": 1767655740000,
+      "price": 4.66,
+      "max_later_gain_pct": 0.9
+    },
+    {
+      "ticker": "ABAT",
+      "time_ms": 1767656940000,
+      "price": 4.69,
+      "max_later_gain_pct": 0.2
+    },
+    {
+      "ticker": "ABAT",
+      "time_ms": 1767657420000,
+      "price": 4.68,
+      "max_later_gain_pct": 0.4
+    },
+    {
+      "ticker": "ABAT",
+      "time_ms": 1767659340000,
+      "price": 4.67,
+      "max_later_gain_pct": 0.6
+    },
+    {
+      "ticker": "ABAT",
+      "time_ms": 1767660060000,
+      "price": 4.67,
+      "max_later_gain_pct": 0.2
+    },
+    {
+      "ticker": "ASTI",
+      "time_ms": 1767631980000,
+      "price": 5.4,
+      "max_later_gain_pct": 2.4
+    },
+    {
+      "ticker": "ASTI",
+      "time_ms": 1767638460000,
+      "price": 5.3194,
+      "max_later_gain_pct": 1.3
+    },
+    {
+      "ticker": "ASTI",
+      "time_ms": 1767638880000,
+      "price": 5.35,
+      "max_later_gain_pct": 0.4
+    },
+    {
+      "ticker": "ASTI",
+      "time_ms": 1767642060000,
+      "price": 5.25,
+      "max_later_gain_pct": 1.1
+    },
+    {
+      "ticker": "ASTI",
+      "time_ms": 1767642600000,
+      "price": 5.195,
+      "max_later_gain_pct": 1.8
+    },
+    {
+      "ticker": "ASTI",
+      "time_ms": 1767643200000,
+      "price": 5.18,
+      "max_later_gain_pct": 2.1
+    },
+    {
+      "ticker": "ASTI",
+      "time_ms": 1767646380000,
+      "price": 5.05,
+      "max_later_gain_pct": 1.0
+    },
+    {
+      "ticker": "INBS",
+      "time_ms": 1767654540000,
+      "price": 11.07,
+      "max_later_gain_pct": 2.2
+    },
+    {
+      "ticker": "INBS",
+      "time_ms": 1767655140000,
+      "price": 11.18,
+      "max_later_gain_pct": 1.2
+    },
+    {
+      "ticker": "INBS",
+      "time_ms": 1767656040000,
+      "price": 11.03,
+      "max_later_gain_pct": 2.5
+    },
+    {
+      "ticker": "INBS",
+      "time_ms": 1767657360000,
+      "price": 10.94,
+      "max_later_gain_pct": 3.4
+    },
+    {
+      "ticker": "JCSE",
+      "time_ms": 1767660840000,
+      "price": 2.03,
+      "max_later_gain_pct": 4.4
+    },
+    {
+      "ticker": "NBY",
+      "time_ms": 1767642240000,
+      "price": 6.61,
+      "max_later_gain_pct": 4.1
+    },
+    {
+      "ticker": "NBY",
+      "time_ms": 1767644940000,
+      "price": 6.7,
+      "max_later_gain_pct": 2.7
+    },
+    {
+      "ticker": "RITR",
+      "time_ms": 1767632760000,
+      "price": 1.25,
+      "max_later_gain_pct": 3.2
+    },
+    {
+      "ticker": "RITR",
+      "time_ms": 1767640200000,
+      "price": 1.27,
+      "max_later_gain_pct": 1.6
+    },
+    {
+      "ticker": "RITR",
+      "time_ms": 1767641280000,
+      "price": 1.23,
+      "max_later_gain_pct": 4.9
+    },
+    {
+      "ticker": "RITR",
+      "time_ms": 1767643680000,
+      "price": 1.25,
+      "max_later_gain_pct": 1.6
+    },
+    {
+      "ticker": "RITR",
+      "time_ms": 1767645900000,
+      "price": 1.24,
+      "max_later_gain_pct": 2.4
+    },
+    {
+      "ticker": "RITR",
+      "time_ms": 1767646440000,
+      "price": 1.25,
+      "max_later_gain_pct": 1.6
+    },
+    {
+      "ticker": "SLAI",
+      "time_ms": 1767635940000,
+      "price": 0.981,
+      "max_later_gain_pct": 3.0
+    },
+    {
+      "ticker": "SLAI",
+      "time_ms": 1767640080000,
+      "price": 0.84,
+      "max_later_gain_pct": 4.8
+    },
+    {
+      "ticker": "SLAI",
+      "time_ms": 1767642780000,
+      "price": 0.8525,
+      "max_later_gain_pct": 3.2
+    },
+    {
+      "ticker": "SLAI",
+      "time_ms": 1767643740000,
+      "price": 0.8301,
+      "max_later_gain_pct": 4.8
+    },
+    {
+      "ticker": "SLAI",
+      "time_ms": 1767645480000,
+      "price": 0.8595,
+      "max_later_gain_pct": 1.2
+    },
+    {
+      "ticker": "SLAI",
+      "time_ms": 1767646200000,
+      "price": 0.8499,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "SLAI",
+      "time_ms": 1767646560000,
+      "price": 0.825,
+      "max_later_gain_pct": 3.0
+    },
+    {
+      "ticker": "SLAI",
+      "time_ms": 1767647340000,
+      "price": 0.8023,
+      "max_later_gain_pct": 4.5
+    },
+    {
+      "ticker": "SLAI",
+      "time_ms": 1767648720000,
+      "price": 0.8055,
+      "max_later_gain_pct": 2.0
+    },
+    {
+      "ticker": "SLAI",
+      "time_ms": 1767660540000,
+      "price": 0.791652,
+      "max_later_gain_pct": 1.0
+    },
+    {
+      "ticker": "SLNH",
+      "time_ms": 1767641160000,
+      "price": 1.795,
+      "max_later_gain_pct": 1.4
+    },
+    {
+      "ticker": "SLNH",
+      "time_ms": 1767643380000,
+      "price": 1.7401,
+      "max_later_gain_pct": 3.4
+    },
+    {
+      "ticker": "SLNH",
+      "time_ms": 1767644220000,
+      "price": 1.715,
+      "max_later_gain_pct": 5.0
+    },
+    {
+      "ticker": "SLNH",
+      "time_ms": 1767650880000,
+      "price": 1.77,
+      "max_later_gain_pct": 1.6
+    },
+    {
+      "ticker": "SLNH",
+      "time_ms": 1767652380000,
+      "price": 1.74,
+      "max_later_gain_pct": 0.6
+    },
+    {
+      "ticker": "SLNH",
+      "time_ms": 1767656220000,
+      "price": 1.7199,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "SLNH",
+      "time_ms": 1767660720000,
+      "price": 1.71,
+      "max_later_gain_pct": 0.6
+    },
+    {
+      "ticker": "TMDE",
+      "time_ms": 1767644880000,
+      "price": 1.1413,
+      "max_later_gain_pct": 4.3
+    },
+    {
+      "ticker": "TMDE",
+      "time_ms": 1767650520000,
+      "price": 1.03,
+      "max_later_gain_pct": 1.0
+    },
+    {
+      "ticker": "TMDE",
+      "time_ms": 1767653400000,
+      "price": 0.9638,
+      "max_later_gain_pct": 1.7
+    },
+    {
+      "ticker": "TMDE",
+      "time_ms": 1767656460000,
+      "price": 0.9358,
+      "max_later_gain_pct": 4.4
+    },
+    {
+      "ticker": "TMDE",
+      "time_ms": 1767658080000,
+      "price": 0.95,
+      "max_later_gain_pct": 2.2
+    },
+    {
+      "ticker": "TMDE",
+      "time_ms": 1767659820000,
+      "price": 0.9514,
+      "max_later_gain_pct": 2.0
+    },
+    {
+      "ticker": "TMDE",
+      "time_ms": 1767660720000,
+      "price": 0.97,
+      "max_later_gain_pct": 0.1
+    },
+    {
+      "ticker": "TMDE",
+      "time_ms": 1767660900000,
+      "price": 0.9412,
+      "max_later_gain_pct": 3.2
+    },
+    {
+      "ticker": "UAVS",
+      "time_ms": 1767658620000,
+      "price": 1.505,
+      "max_later_gain_pct": 3.0
+    },
+    {
+      "ticker": "UAVS",
+      "time_ms": 1767658980000,
+      "price": 1.52,
+      "max_later_gain_pct": 2.0
+    },
+    {
+      "ticker": "UAVS",
+      "time_ms": 1767660180000,
+      "price": 1.5201,
+      "max_later_gain_pct": 2.0
+    },
+    {
+      "ticker": "UAVS",
+      "time_ms": 1767660480000,
+      "price": 1.5296,
+      "max_later_gain_pct": 1.3
+    },
+    {
+      "ticker": "UAVS",
+      "time_ms": 1767660960000,
+      "price": 1.55,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "UFG",
+      "time_ms": 1767658920000,
+      "price": 1.49,
+      "max_later_gain_pct": 4.0
+    },
+    {
+      "ticker": "UFG",
+      "time_ms": 1767660900000,
+      "price": 1.48,
+      "max_later_gain_pct": 1.4
+    }
+  ],
+  "missed_entries": [],
+  "fake_rate": 32.4
+}

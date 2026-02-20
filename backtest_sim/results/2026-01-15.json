@@ -1,0 +1,265 @@
+{
+  "date": "2026-01-15",
+  "starting_portfolio": 5.1607218371219464e+16,
+  "ending_portfolio": 9.881847996026229e+16,
+  "day_pnl_krw": 4.7211261589042824e+16,
+  "day_pnl_pct": 91.48,
+  "vol_spikes_detected": 84,
+  "signals_generated": 84,
+  "buys_executed": 7,
+  "trades": [
+    {
+      "ticker": "TII",
+      "type": "partial",
+      "entry_price": 4.1531,
+      "sell_price": 4.432,
+      "pnl_pct": 6.715465555849853,
+      "pnl_krw": 173283248702573.0,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 7.0,
+      "entry_time_ms": 1768492200000,
+      "sell_time_ms": 1768492620000
+    },
+    {
+      "ticker": "MLEC",
+      "type": "partial",
+      "entry_price": 4.53,
+      "sell_price": 4.895,
+      "pnl_pct": 8.057395143487845,
+      "pnl_krw": 207909875336590.0,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 30.0,
+      "entry_time_ms": 1768492260000,
+      "sell_time_ms": 1768494060000
+    },
+    {
+      "ticker": "MLEC",
+      "type": "full",
+      "entry_price": 4.53,
+      "sell_price": 4.73,
+      "pnl_pct": 4.42,
+      "pnl_krw": 113923219362516.0,
+      "reason": "TRAILING (4.4%, peak=12.6%)",
+      "hold_min": 36.0,
+      "queue_price": 3.65,
+      "queue_to_entry_pct": 24.1,
+      "entry_time_ms": 1768492260000,
+      "sell_time_ms": 1768494420000,
+      "daily_high": 12.96,
+      "max_possible_pct": 186.1
+    },
+    {
+      "ticker": "MLEC",
+      "type": "partial",
+      "entry_price": 5.59,
+      "sell_price": 6.22,
+      "pnl_pct": 11.270125223613592,
+      "pnl_krw": 337221404349656.0,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 6.0,
+      "entry_time_ms": 1768494480000,
+      "sell_time_ms": 1768494840000
+    },
+    {
+      "ticker": "MLEC",
+      "type": "full",
+      "entry_price": 5.59,
+      "sell_price": 6.22,
+      "pnl_pct": 11.27,
+      "pnl_krw": 337221404349656.0,
+      "reason": "PROFIT_TARGET +10% (11.3%)",
+      "hold_min": 6.0,
+      "queue_price": 4.42,
+      "queue_to_entry_pct": 26.5,
+      "entry_time_ms": 1768494480000,
+      "sell_time_ms": 1768494840000,
+      "daily_high": 12.96,
+      "max_possible_pct": 131.8
+    },
+    {
+      "ticker": "TII",
+      "type": "full",
+      "entry_price": 4.1531,
+      "sell_price": 4.02,
+      "pnl_pct": -3.2,
+      "pnl_krw": -82696308362540.0,
+      "reason": "TIME_LIMIT (-3.2%)",
+      "hold_min": 45.0,
+      "queue_price": 3.3955,
+      "queue_to_entry_pct": 22.3,
+      "entry_time_ms": 1768492200000,
+      "sell_time_ms": 1768494900000,
+      "daily_high": 4.47,
+      "max_possible_pct": 7.6
+    },
+    {
+      "ticker": "VRME",
+      "type": "full",
+      "entry_price": 1.38,
+      "sell_price": 1.28,
+      "pnl_pct": -7.25,
+      "pnl_krw": -499999033595885.0,
+      "reason": "STOP_LOSS (-7.2%)",
+      "hold_min": 9.0,
+      "queue_price": 1.14,
+      "queue_to_entry_pct": 21.1,
+      "entry_time_ms": 1768499160000,
+      "sell_time_ms": 1768499700000,
+      "daily_high": 1.5099,
+      "max_possible_pct": 9.4
+    },
+    {
+      "ticker": "CGTL",
+      "type": "full",
+      "entry_price": 4.3518,
+      "sell_price": 4.004,
+      "pnl_pct": -7.99,
+      "pnl_krw": -602602815244384.0,
+      "reason": "STOP_LOSS (-8.0%)",
+      "hold_min": 12.0,
+      "queue_price": 3.6,
+      "queue_to_entry_pct": 20.9,
+      "entry_time_ms": 1768503180000,
+      "sell_time_ms": 1768503900000,
+      "daily_high": 5.3199,
+      "max_possible_pct": 22.2
+    },
+    {
+      "ticker": "SPHL",
+      "type": "full",
+      "entry_price": 19.74,
+      "sell_price": 18.347,
+      "pnl_pct": -7.06,
+      "pnl_krw": -581032274420233.0,
+      "reason": "STOP_LOSS (-7.1%)",
+      "hold_min": 2.0,
+      "queue_price": 16.3498,
+      "queue_to_entry_pct": 20.7,
+      "entry_time_ms": 1768507860000,
+      "sell_time_ms": 1768507980000,
+      "daily_high": 25.11,
+      "max_possible_pct": 27.2
+    },
+    {
+      "ticker": "CGTL",
+      "type": "partial",
+      "entry_price": 4.57,
+      "sell_price": 4.8,
+      "pnl_pct": 5.032822757111588,
+      "pnl_krw": 207194359757740.0,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 25.0,
+      "entry_time_ms": 1768507560000,
+      "sell_time_ms": 1768509060000
+    },
+    {
+      "ticker": "CGTL",
+      "type": "full",
+      "entry_price": 4.57,
+      "sell_price": 5.0003,
+      "pnl_pct": 9.42,
+      "pnl_krw": 387633621755459.0,
+      "reason": "TRAILING (9.4%, peak=13.7%)",
+      "hold_min": 37.0,
+      "queue_price": 3.8006,
+      "queue_to_entry_pct": 20.2,
+      "entry_time_ms": 1768507560000,
+      "sell_time_ms": 1768509780000,
+      "daily_high": 5.3199,
+      "max_possible_pct": 16.4
+    }
+  ],
+  "fake_signals": [
+    {
+      "ticker": "AUID",
+      "time_ms": 1768521960000,
+      "price": 1.73,
+      "max_later_gain_pct": 1.7
+    },
+    {
+      "ticker": "AUID",
+      "time_ms": 1768523460000,
+      "price": 1.65,
+      "max_later_gain_pct": 2.4
+    },
+    {
+      "ticker": "AUID",
+      "time_ms": 1768524840000,
+      "price": 1.65,
+      "max_later_gain_pct": 0.6
+    },
+    {
+      "ticker": "CGTL",
+      "time_ms": 1768524900000,
+      "price": 4.7,
+      "max_later_gain_pct": 3.8
+    },
+    {
+      "ticker": "MLEC",
+      "time_ms": 1768513500000,
+      "price": 7.2,
+      "max_later_gain_pct": 2.8
+    },
+    {
+      "ticker": "MLEC",
+      "time_ms": 1768521720000,
+      "price": 7.15,
+      "max_later_gain_pct": 0.8
+    },
+    {
+      "ticker": "TII",
+      "time_ms": 1768508520000,
+      "price": 4.0999,
+      "max_later_gain_pct": 0.4
+    },
+    {
+      "ticker": "TII",
+      "time_ms": 1768509240000,
+      "price": 4.0434,
+      "max_later_gain_pct": 1.4
+    },
+    {
+      "ticker": "TII",
+      "time_ms": 1768509840000,
+      "price": 3.99,
+      "max_later_gain_pct": 2.8
+    },
+    {
+      "ticker": "VRME",
+      "time_ms": 1768508640000,
+      "price": 1.4,
+      "max_later_gain_pct": 3.6
+    },
+    {
+      "ticker": "VRME",
+      "time_ms": 1768517400000,
+      "price": 1.41,
+      "max_later_gain_pct": 0.6
+    },
+    {
+      "ticker": "VRME",
+      "time_ms": 1768519140000,
+      "price": 1.37,
+      "max_later_gain_pct": 1.5
+    }
+  ],
+  "missed_entries": [
+    {
+      "ticker": "AUID",
+      "daily_change_pct": 61.76,
+      "daily_volume": 294982185.0,
+      "had_vol_spike": true,
+      "meets_daily_vol": true,
+      "reason": "price_not_triggered"
+    },
+    {
+      "ticker": "IBRX",
+      "daily_change_pct": 55.88,
+      "daily_volume": 74120444,
+      "had_vol_spike": true,
+      "meets_daily_vol": true,
+      "reason": "price_not_triggered"
+    }
+  ],
+  "fake_rate": 14.3
+}

@@ -1,0 +1,377 @@
+{
+  "date": "2025-11-25",
+  "starting_portfolio": 82574669.0,
+  "ending_portfolio": 119949385.0,
+  "day_pnl_krw": 37374716.0,
+  "day_pnl_pct": 45.26,
+  "vol_spikes_detected": 124,
+  "signals_generated": 124,
+  "buys_executed": 4,
+  "trades": [
+    {
+      "ticker": "OPENZ",
+      "type": "full",
+      "entry_price": 1.13,
+      "sell_price": 1,
+      "pnl_pct": -11.5,
+      "pnl_krw": -949974.0,
+      "reason": "STOP_LOSS (-11.5%)",
+      "hold_min": 2.0,
+      "queue_price": 0.9288,
+      "queue_to_entry_pct": 21.7,
+      "entry_time_ms": 1764080520000,
+      "sell_time_ms": 1764080640000,
+      "daily_high": 2,
+      "max_possible_pct": 77.0
+    },
+    {
+      "ticker": "OPENZ",
+      "type": "partial",
+      "entry_price": 1.3701,
+      "sell_price": 1.53,
+      "pnl_pct": 11.670680972191816,
+      "pnl_krw": 524493.0179152675,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 2.0,
+      "entry_time_ms": 1764081300000,
+      "sell_time_ms": 1764081420000
+    },
+    {
+      "ticker": "OPENZ",
+      "type": "full",
+      "entry_price": 1.3701,
+      "sell_price": 1.53,
+      "pnl_pct": 11.67,
+      "pnl_krw": 524493.0,
+      "reason": "PROFIT_TARGET +10% (11.7%)",
+      "hold_min": 2.0,
+      "queue_price": 0.9988,
+      "queue_to_entry_pct": 37.2,
+      "entry_time_ms": 1764081300000,
+      "sell_time_ms": 1764081420000,
+      "daily_high": 2,
+      "max_possible_pct": 46.0
+    },
+    {
+      "ticker": "NUKK",
+      "type": "partial",
+      "entry_price": 6.39,
+      "sell_price": 6.715,
+      "pnl_pct": 5.086071987480434,
+      "pnl_krw": 254098.5392530067,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 5.0,
+      "entry_time_ms": 1764084540000,
+      "sell_time_ms": 1764084840000
+    },
+    {
+      "ticker": "NUKK",
+      "type": "full",
+      "entry_price": 6.39,
+      "sell_price": 6.03,
+      "pnl_pct": -5.63,
+      "pnl_krw": -281463.0,
+      "reason": "TIME_LIMIT (-5.6%)",
+      "hold_min": 45.0,
+      "queue_price": 5.231,
+      "queue_to_entry_pct": 22.2,
+      "entry_time_ms": 1764084540000,
+      "sell_time_ms": 1764087240000,
+      "daily_high": 6.99,
+      "max_possible_pct": 9.4
+    },
+    {
+      "ticker": "KZIA",
+      "type": "full",
+      "entry_price": 12.4999,
+      "sell_price": 11.45,
+      "pnl_pct": -8.4,
+      "pnl_krw": -922945.0,
+      "reason": "STOP_LOSS (-8.4%)",
+      "hold_min": 7.0,
+      "queue_price": 10.402,
+      "queue_to_entry_pct": 20.2,
+      "entry_time_ms": 1764101700000,
+      "sell_time_ms": 1764102120000,
+      "daily_high": 14.42,
+      "max_possible_pct": 15.4
+    }
+  ],
+  "fake_signals": [
+    {
+      "ticker": "AEHL",
+      "time_ms": 1764105300000,
+      "price": 3.26,
+      "max_later_gain_pct": 4.0
+    },
+    {
+      "ticker": "AEHL",
+      "time_ms": 1764107580000,
+      "price": 3.3,
+      "max_later_gain_pct": 2.7
+    },
+    {
+      "ticker": "AEHL",
+      "time_ms": 1764109080000,
+      "price": 3.19,
+      "max_later_gain_pct": 3.8
+    },
+    {
+      "ticker": "AEHL",
+      "time_ms": 1764112380000,
+      "price": 3.2,
+      "max_later_gain_pct": 3.4
+    },
+    {
+      "ticker": "AEHL",
+      "time_ms": 1764114240000,
+      "price": 3.2,
+      "max_later_gain_pct": 3.4
+    },
+    {
+      "ticker": "AEHL",
+      "time_ms": 1764114600000,
+      "price": 3.18,
+      "max_later_gain_pct": 4.1
+    },
+    {
+      "ticker": "AEHL",
+      "time_ms": 1764114960000,
+      "price": 3.2,
+      "max_later_gain_pct": 3.4
+    },
+    {
+      "ticker": "AEHL",
+      "time_ms": 1764116340000,
+      "price": 3.25,
+      "max_later_gain_pct": 1.8
+    },
+    {
+      "ticker": "CETY",
+      "time_ms": 1764117480000,
+      "price": 2.37,
+      "max_later_gain_pct": 3.4
+    },
+    {
+      "ticker": "KZIA",
+      "time_ms": 1764110520000,
+      "price": 12.03,
+      "max_later_gain_pct": 4.7
+    },
+    {
+      "ticker": "KZIA",
+      "time_ms": 1764111540000,
+      "price": 12.59,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "NUKK",
+      "time_ms": 1764094920000,
+      "price": 6.3,
+      "max_later_gain_pct": 3.8
+    },
+    {
+      "ticker": "NUKK",
+      "time_ms": 1764105240000,
+      "price": 6.25,
+      "max_later_gain_pct": 1.9
+    },
+    {
+      "ticker": "NUKK",
+      "time_ms": 1764106620000,
+      "price": 6.28,
+      "max_later_gain_pct": 1.4
+    },
+    {
+      "ticker": "NUKK",
+      "time_ms": 1764108420000,
+      "price": 6.31,
+      "max_later_gain_pct": 0.8
+    },
+    {
+      "ticker": "NUKK",
+      "time_ms": 1764112800000,
+      "price": 6.36,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "NUKK",
+      "time_ms": 1764113160000,
+      "price": 6.35,
+      "max_later_gain_pct": 0.2
+    },
+    {
+      "ticker": "NUKK",
+      "time_ms": 1764115500000,
+      "price": 6.1601,
+      "max_later_gain_pct": 3.2
+    },
+    {
+      "ticker": "NVVE",
+      "time_ms": 1764089940000,
+      "price": 11.196,
+      "max_later_gain_pct": 4.0
+    },
+    {
+      "ticker": "NVVE",
+      "time_ms": 1764092640000,
+      "price": 11.444,
+      "max_later_gain_pct": 1.7
+    },
+    {
+      "ticker": "NVVE",
+      "time_ms": 1764093000000,
+      "price": 11.504,
+      "max_later_gain_pct": 1.2
+    },
+    {
+      "ticker": "NVVE",
+      "time_ms": 1764095280000,
+      "price": 11.28,
+      "max_later_gain_pct": 1.4
+    },
+    {
+      "ticker": "NVVE",
+      "time_ms": 1764095700000,
+      "price": 11.136,
+      "max_later_gain_pct": 1.4
+    },
+    {
+      "ticker": "NVVE",
+      "time_ms": 1764099360000,
+      "price": 10.672,
+      "max_later_gain_pct": 4.8
+    },
+    {
+      "ticker": "NVVE",
+      "time_ms": 1764100440000,
+      "price": 11,
+      "max_later_gain_pct": 1.6
+    },
+    {
+      "ticker": "NVVE",
+      "time_ms": 1764101160000,
+      "price": 10.92,
+      "max_later_gain_pct": 2.4
+    },
+    {
+      "ticker": "NVVE",
+      "time_ms": 1764101520000,
+      "price": 10.752,
+      "max_later_gain_pct": 4.0
+    },
+    {
+      "ticker": "NVVE",
+      "time_ms": 1764102060000,
+      "price": 10.648,
+      "max_later_gain_pct": 3.1
+    },
+    {
+      "ticker": "NVVE",
+      "time_ms": 1764102600000,
+      "price": 10.748,
+      "max_later_gain_pct": 2.2
+    },
+    {
+      "ticker": "NVVE",
+      "time_ms": 1764103560000,
+      "price": 10.794,
+      "max_later_gain_pct": 1.1
+    },
+    {
+      "ticker": "NVVE",
+      "time_ms": 1764105600000,
+      "price": 10.5,
+      "max_later_gain_pct": 1.0
+    },
+    {
+      "ticker": "NVVE",
+      "time_ms": 1764106320000,
+      "price": 10.504,
+      "max_later_gain_pct": 0.9
+    },
+    {
+      "ticker": "NVVE",
+      "time_ms": 1764108120000,
+      "price": 10.452,
+      "max_later_gain_pct": 0.2
+    },
+    {
+      "ticker": "NVVE",
+      "time_ms": 1764109020000,
+      "price": 10.42,
+      "max_later_gain_pct": 0.5
+    },
+    {
+      "ticker": "NVVE",
+      "time_ms": 1764111180000,
+      "price": 10.436,
+      "max_later_gain_pct": 0.2
+    },
+    {
+      "ticker": "NVVE",
+      "time_ms": 1764113940000,
+      "price": 10.452,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "NVVE",
+      "time_ms": 1764116700000,
+      "price": 10.368,
+      "max_later_gain_pct": 0.8
+    },
+    {
+      "ticker": "NVVE",
+      "time_ms": 1764117300000,
+      "price": 10.4,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "NVVE",
+      "time_ms": 1764118320000,
+      "price": 10.368,
+      "max_later_gain_pct": 0.2
+    },
+    {
+      "ticker": "OPENZ",
+      "time_ms": 1764107640000,
+      "price": 1.03,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "OPENZ",
+      "time_ms": 1764108420000,
+      "price": 0.99,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "OPENZ",
+      "time_ms": 1764110220000,
+      "price": 0.9702,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "OPENZ",
+      "time_ms": 1764112080000,
+      "price": 0.95,
+      "max_later_gain_pct": 2.1
+    },
+    {
+      "ticker": "OPENZ",
+      "time_ms": 1764117120000,
+      "price": 0.9308,
+      "max_later_gain_pct": 4.2
+    }
+  ],
+  "missed_entries": [
+    {
+      "ticker": "CETY",
+      "daily_change_pct": 89.91,
+      "daily_volume": 326132953.0,
+      "had_vol_spike": true,
+      "meets_daily_vol": true,
+      "reason": "price_not_triggered"
+    }
+  ],
+  "fake_rate": 35.5
+}

@@ -1,0 +1,426 @@
+{
+  "date": "2025-12-12",
+  "starting_portfolio": 89152711328.0,
+  "ending_portfolio": 142696487070.0,
+  "day_pnl_krw": 53543775742.0,
+  "day_pnl_pct": 60.06,
+  "vol_spikes_detected": 190,
+  "signals_generated": 190,
+  "buys_executed": 5,
+  "trades": [
+    {
+      "ticker": "QH",
+      "type": "partial",
+      "entry_price": 1.93,
+      "sell_price": 2.0701,
+      "pnl_pct": 7.2590673575129605,
+      "pnl_krw": 323582768.3174305,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 2.0,
+      "entry_time_ms": 1765552740000,
+      "sell_time_ms": 1765552860000
+    },
+    {
+      "ticker": "QH",
+      "type": "full",
+      "entry_price": 1.93,
+      "sell_price": 1.788391,
+      "pnl_pct": -7.34,
+      "pnl_krw": -327068039.0,
+      "reason": "STOP_LOSS (-7.3%)",
+      "hold_min": 7.0,
+      "queue_price": 1.58,
+      "queue_to_entry_pct": 22.2,
+      "entry_time_ms": 1765552740000,
+      "sell_time_ms": 1765553160000,
+      "daily_high": 2.2,
+      "max_possible_pct": 14.0
+    },
+    {
+      "ticker": "ARBKL",
+      "type": "partial",
+      "entry_price": 3.84,
+      "sell_price": 4.99,
+      "pnl_pct": 29.947916666666675,
+      "pnl_krw": 1334968984.729167,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 14.0,
+      "entry_time_ms": 1765552620000,
+      "sell_time_ms": 1765553460000
+    },
+    {
+      "ticker": "ARBKL",
+      "type": "full",
+      "entry_price": 3.84,
+      "sell_price": 4.99,
+      "pnl_pct": 29.95,
+      "pnl_krw": 1334968985.0,
+      "reason": "PROFIT_TARGET +10% (29.9%)",
+      "hold_min": 14.0,
+      "queue_price": 2.85,
+      "queue_to_entry_pct": 34.7,
+      "entry_time_ms": 1765552620000,
+      "sell_time_ms": 1765553460000,
+      "daily_high": 6.57,
+      "max_possible_pct": 71.1
+    },
+    {
+      "ticker": "CLYM",
+      "type": "full",
+      "entry_price": 3.12,
+      "sell_price": 3.07,
+      "pnl_pct": -1.6,
+      "pnl_krw": -175720683.0,
+      "reason": "TIME_LIMIT (-1.6%)",
+      "hold_min": 45.0,
+      "queue_price": 2.5189,
+      "queue_to_entry_pct": 23.9,
+      "entry_time_ms": 1765554180000,
+      "sell_time_ms": 1765556880000,
+      "daily_high": 3.25,
+      "max_possible_pct": 4.2
+    },
+    {
+      "ticker": "ADGM",
+      "type": "full",
+      "entry_price": 1.24,
+      "sell_price": 1.08,
+      "pnl_pct": -12.9,
+      "pnl_krw": -1554051048.0,
+      "reason": "STOP_LOSS (-12.9%)",
+      "hold_min": 2.0,
+      "queue_price": 1.013,
+      "queue_to_entry_pct": 22.4,
+      "entry_time_ms": 1765557060000,
+      "sell_time_ms": 1765557180000,
+      "daily_high": 1.3,
+      "max_possible_pct": 4.8
+    },
+    {
+      "ticker": "RYM",
+      "type": "full",
+      "entry_price": 33.0001,
+      "sell_price": 29.66,
+      "pnl_pct": -10.12,
+      "pnl_krw": -1325193825.0,
+      "reason": "STOP_LOSS (-10.1%)",
+      "hold_min": 13.0,
+      "queue_price": 27.1,
+      "queue_to_entry_pct": 21.8,
+      "entry_time_ms": 1765568760000,
+      "sell_time_ms": 1765569540000,
+      "daily_high": 50.38,
+      "max_possible_pct": 52.7
+    }
+  ],
+  "fake_signals": [
+    {
+      "ticker": "ADGM",
+      "time_ms": 1765557060000,
+      "price": 1.24,
+      "max_later_gain_pct": 4.8
+    },
+    {
+      "ticker": "ADGM",
+      "time_ms": 1765567680000,
+      "price": 1.01,
+      "max_later_gain_pct": 3.0
+    },
+    {
+      "ticker": "ADGM",
+      "time_ms": 1765571880000,
+      "price": 0.9864,
+      "max_later_gain_pct": 4.4
+    },
+    {
+      "ticker": "ADGM",
+      "time_ms": 1765572720000,
+      "price": 0.998,
+      "max_later_gain_pct": 3.2
+    },
+    {
+      "ticker": "ARBKL",
+      "time_ms": 1765576500000,
+      "price": 5.5,
+      "max_later_gain_pct": 4.5
+    },
+    {
+      "ticker": "ARBKL",
+      "time_ms": 1765587300000,
+      "price": 5.65,
+      "max_later_gain_pct": 1.8
+    },
+    {
+      "ticker": "CLYM",
+      "time_ms": 1765561440000,
+      "price": 3.1,
+      "max_later_gain_pct": 2.6
+    },
+    {
+      "ticker": "CLYM",
+      "time_ms": 1765562040000,
+      "price": 3.1,
+      "max_later_gain_pct": 2.6
+    },
+    {
+      "ticker": "CLYM",
+      "time_ms": 1765564080000,
+      "price": 3.065,
+      "max_later_gain_pct": 3.8
+    },
+    {
+      "ticker": "CLYM",
+      "time_ms": 1765565100000,
+      "price": 3.135,
+      "max_later_gain_pct": 1.4
+    },
+    {
+      "ticker": "CLYM",
+      "time_ms": 1765567320000,
+      "price": 3.05,
+      "max_later_gain_pct": 1.5
+    },
+    {
+      "ticker": "CLYM",
+      "time_ms": 1765568220000,
+      "price": 3.03,
+      "max_later_gain_pct": 0.5
+    },
+    {
+      "ticker": "CLYM",
+      "time_ms": 1765568760000,
+      "price": 3.02,
+      "max_later_gain_pct": 0.8
+    },
+    {
+      "ticker": "CLYM",
+      "time_ms": 1765569780000,
+      "price": 2.992,
+      "max_later_gain_pct": 1.8
+    },
+    {
+      "ticker": "MSOX",
+      "time_ms": 1765582800000,
+      "price": 8.41,
+      "max_later_gain_pct": 2.4
+    },
+    {
+      "ticker": "NCPL",
+      "time_ms": 1765566360000,
+      "price": 1.36,
+      "max_later_gain_pct": 4.4
+    },
+    {
+      "ticker": "NCPL",
+      "time_ms": 1765566840000,
+      "price": 1.39,
+      "max_later_gain_pct": 2.2
+    },
+    {
+      "ticker": "NCPL",
+      "time_ms": 1765567680000,
+      "price": 1.35,
+      "max_later_gain_pct": 3.0
+    },
+    {
+      "ticker": "NCPL",
+      "time_ms": 1765569540000,
+      "price": 1.2,
+      "max_later_gain_pct": 4.2
+    },
+    {
+      "ticker": "NCPL",
+      "time_ms": 1765570500000,
+      "price": 1.1493,
+      "max_later_gain_pct": 0.9
+    },
+    {
+      "ticker": "NCPL",
+      "time_ms": 1765571340000,
+      "price": 1.14,
+      "max_later_gain_pct": 1.8
+    },
+    {
+      "ticker": "NCPL",
+      "time_ms": 1765571760000,
+      "price": 1.12,
+      "max_later_gain_pct": 3.6
+    },
+    {
+      "ticker": "NCPL",
+      "time_ms": 1765572000000,
+      "price": 1.125,
+      "max_later_gain_pct": 3.1
+    },
+    {
+      "ticker": "NCPL",
+      "time_ms": 1765572120000,
+      "price": 1.15,
+      "max_later_gain_pct": 0.9
+    },
+    {
+      "ticker": "NCPL",
+      "time_ms": 1765583160000,
+      "price": 1.14,
+      "max_later_gain_pct": 1.8
+    },
+    {
+      "ticker": "QH",
+      "time_ms": 1765557600000,
+      "price": 1.7466,
+      "max_later_gain_pct": 2.5
+    },
+    {
+      "ticker": "QH",
+      "time_ms": 1765566360000,
+      "price": 1.6701,
+      "max_later_gain_pct": 1.1
+    },
+    {
+      "ticker": "QH",
+      "time_ms": 1765566420000,
+      "price": 1.6702,
+      "max_later_gain_pct": 1.1
+    },
+    {
+      "ticker": "RYM",
+      "time_ms": 1765560900000,
+      "price": 35.075,
+      "max_later_gain_pct": 1.3
+    },
+    {
+      "ticker": "RYM",
+      "time_ms": 1765585200000,
+      "price": 22.16,
+      "max_later_gain_pct": 3.8
+    },
+    {
+      "ticker": "RZLT",
+      "time_ms": 1765576500000,
+      "price": 1.65,
+      "max_later_gain_pct": 4.2
+    },
+    {
+      "ticker": "RZLT",
+      "time_ms": 1765577100000,
+      "price": 1.66,
+      "max_later_gain_pct": 3.6
+    },
+    {
+      "ticker": "RZLT",
+      "time_ms": 1765578480000,
+      "price": 1.6599,
+      "max_later_gain_pct": 3.6
+    },
+    {
+      "ticker": "RZLT",
+      "time_ms": 1765579080000,
+      "price": 1.6799,
+      "max_later_gain_pct": 2.4
+    },
+    {
+      "ticker": "RZLT",
+      "time_ms": 1765579980000,
+      "price": 1.67,
+      "max_later_gain_pct": 3.0
+    },
+    {
+      "ticker": "RZLT",
+      "time_ms": 1765585920000,
+      "price": 1.7,
+      "max_later_gain_pct": 1.2
+    },
+    {
+      "ticker": "RZLT",
+      "time_ms": 1765586340000,
+      "price": 1.7013,
+      "max_later_gain_pct": 1.1
+    },
+    {
+      "ticker": "RZLT",
+      "time_ms": 1765586460000,
+      "price": 1.7,
+      "max_later_gain_pct": 1.2
+    },
+    {
+      "ticker": "UGRO",
+      "time_ms": 1765583220000,
+      "price": 7.995,
+      "max_later_gain_pct": 4.2
+    },
+    {
+      "ticker": "UGRO",
+      "time_ms": 1765584060000,
+      "price": 8.33,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "UGRO",
+      "time_ms": 1765584240000,
+      "price": 8.3275,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "UGRO",
+      "time_ms": 1765585620000,
+      "price": 8.1775,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "UGRO",
+      "time_ms": 1765585680000,
+      "price": 8.1775,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "UGRO",
+      "time_ms": 1765586700000,
+      "price": 8.1,
+      "max_later_gain_pct": 0.1
+    },
+    {
+      "ticker": "UGRO",
+      "time_ms": 1765587420000,
+      "price": 7.8775,
+      "max_later_gain_pct": 1.6
+    },
+    {
+      "ticker": "ZDGE",
+      "time_ms": 1765565520000,
+      "price": 2.8412,
+      "max_later_gain_pct": 3.8
+    },
+    {
+      "ticker": "ZDGE",
+      "time_ms": 1765570260000,
+      "price": 2.865,
+      "max_later_gain_pct": 3.0
+    },
+    {
+      "ticker": "ZDGE",
+      "time_ms": 1765577280000,
+      "price": 2.73,
+      "max_later_gain_pct": 2.6
+    },
+    {
+      "ticker": "ZDGE",
+      "time_ms": 1765578240000,
+      "price": 2.7,
+      "max_later_gain_pct": 3.7
+    },
+    {
+      "ticker": "ZDGE",
+      "time_ms": 1765586100000,
+      "price": 2.74,
+      "max_later_gain_pct": 2.2
+    },
+    {
+      "ticker": "ZDGE",
+      "time_ms": 1765587480000,
+      "price": 2.8,
+      "max_later_gain_pct": 0.0
+    }
+  ],
+  "missed_entries": [],
+  "fake_rate": 26.8
+}

@@ -1,0 +1,390 @@
+{
+  "date": "2026-02-12",
+  "starting_portfolio": 7.59720065837998e+23,
+  "ending_portfolio": 1.5618154170326735e+24,
+  "day_pnl_krw": 8.020953511946755e+23,
+  "day_pnl_pct": 105.58,
+  "vol_spikes_detected": 155,
+  "signals_generated": 155,
+  "buys_executed": 8,
+  "trades": [
+    {
+      "ticker": "NCI",
+      "type": "full",
+      "entry_price": 1.83,
+      "sell_price": 1.63,
+      "pnl_pct": -10.93,
+      "pnl_krw": -8.302951539213106e+21,
+      "reason": "STOP_LOSS (-10.9%)",
+      "hold_min": 6.0,
+      "queue_price": 1.3984,
+      "queue_to_entry_pct": 30.9,
+      "entry_time_ms": 1770907140000,
+      "sell_time_ms": 1770907500000,
+      "daily_high": 2.5,
+      "max_possible_pct": 36.6
+    },
+    {
+      "ticker": "CCHH",
+      "type": "full",
+      "entry_price": 1.1397,
+      "sell_price": 1.03,
+      "pnl_pct": -9.63,
+      "pnl_krw": -7.312563939846306e+21,
+      "reason": "STOP_LOSS (-9.6%)",
+      "hold_min": 24.0,
+      "queue_price": 0.947,
+      "queue_to_entry_pct": 20.3,
+      "entry_time_ms": 1770907080000,
+      "sell_time_ms": 1770908520000,
+      "daily_high": 1.18,
+      "max_possible_pct": 3.5
+    },
+    {
+      "ticker": "RIME",
+      "type": "full",
+      "entry_price": 1.27,
+      "sell_price": 1.14,
+      "pnl_pct": -10.24,
+      "pnl_krw": -9.172150650271653e+21,
+      "reason": "STOP_LOSS (-10.2%)",
+      "hold_min": 3.0,
+      "queue_price": 1.05,
+      "queue_to_entry_pct": 21.0,
+      "entry_time_ms": 1770911700000,
+      "sell_time_ms": 1770911880000,
+      "daily_high": 1.51,
+      "max_possible_pct": 18.9
+    },
+    {
+      "ticker": "JDZG",
+      "type": "full",
+      "entry_price": 2.375,
+      "sell_price": 2.205,
+      "pnl_pct": -7.16,
+      "pnl_krw": -6.989550137638593e+21,
+      "reason": "STOP_LOSS (-7.2%)",
+      "hold_min": 5.0,
+      "queue_price": 1.7399,
+      "queue_to_entry_pct": 36.5,
+      "entry_time_ms": 1770915600000,
+      "sell_time_ms": 1770915900000,
+      "daily_high": 3.13,
+      "max_possible_pct": 31.8
+    },
+    {
+      "ticker": "NCI",
+      "type": "full",
+      "entry_price": 2.1267,
+      "sell_price": 2.015,
+      "pnl_pct": -5.25,
+      "pnl_krw": -5.128742078002084e+21,
+      "reason": "TIME_LIMIT (-5.3%)",
+      "hold_min": 45.0,
+      "queue_price": 1.772,
+      "queue_to_entry_pct": 20.0,
+      "entry_time_ms": 1770915000000,
+      "sell_time_ms": 1770917700000,
+      "daily_high": 2.5,
+      "max_possible_pct": 17.6
+    },
+    {
+      "ticker": "MGRT",
+      "type": "partial",
+      "entry_price": 8.7,
+      "sell_price": 9.23,
+      "pnl_pct": 6.091954022988522,
+      "pnl_krw": 3.5322953583638264e+21,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 1.0,
+      "entry_time_ms": 1770922560000,
+      "sell_time_ms": 1770922620000
+    },
+    {
+      "ticker": "MGRT",
+      "type": "full",
+      "entry_price": 8.7,
+      "sell_price": 10.1,
+      "pnl_pct": 16.09,
+      "pnl_krw": 9.330591512659136e+21,
+      "reason": "PROFIT_TARGET +10% (16.1%)",
+      "hold_min": 6.0,
+      "queue_price": 7.24,
+      "queue_to_entry_pct": 20.2,
+      "entry_time_ms": 1770922560000,
+      "sell_time_ms": 1770922920000,
+      "daily_high": 17.51,
+      "max_possible_pct": 101.3
+    },
+    {
+      "ticker": "JDZG",
+      "type": "full",
+      "entry_price": 2.21,
+      "sell_price": 1.99,
+      "pnl_pct": -9.95,
+      "pnl_krw": -1.2826577781878654e+22,
+      "reason": "STOP_LOSS (-10.0%)",
+      "hold_min": 17.0,
+      "queue_price": 1.8,
+      "queue_to_entry_pct": 22.8,
+      "entry_time_ms": 1770935220000,
+      "sell_time_ms": 1770936240000,
+      "daily_high": 3.13,
+      "max_possible_pct": 41.6
+    },
+    {
+      "ticker": "JDZG",
+      "type": "partial",
+      "entry_price": 2.75,
+      "sell_price": 3.08,
+      "pnl_pct": 12.00000000000001,
+      "pnl_krw": 8.427061602694296e+21,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 31.0,
+      "entry_time_ms": 1770942360000,
+      "sell_time_ms": 1770944220000
+    },
+    {
+      "ticker": "JDZG",
+      "type": "full",
+      "entry_price": 2.75,
+      "sell_price": 3.08,
+      "pnl_pct": 12.0,
+      "pnl_krw": 8.427061602694296e+21,
+      "reason": "PROFIT_TARGET +10% (12.0%)",
+      "hold_min": 31.0,
+      "queue_price": 2.25,
+      "queue_to_entry_pct": 22.2,
+      "entry_time_ms": 1770942360000,
+      "sell_time_ms": 1770944220000,
+      "daily_high": 3.13,
+      "max_possible_pct": 13.8
+    }
+  ],
+  "fake_signals": [
+    {
+      "ticker": "CCHH",
+      "time_ms": 1770919560000,
+      "price": 1.07,
+      "max_later_gain_pct": 0.9
+    },
+    {
+      "ticker": "CCHH",
+      "time_ms": 1770920040000,
+      "price": 1.0696,
+      "max_later_gain_pct": 1.0
+    },
+    {
+      "ticker": "CCHH",
+      "time_ms": 1770922800000,
+      "price": 1.04,
+      "max_later_gain_pct": 3.8
+    },
+    {
+      "ticker": "CCHH",
+      "time_ms": 1770923220000,
+      "price": 1.04,
+      "max_later_gain_pct": 3.8
+    },
+    {
+      "ticker": "CCHH",
+      "time_ms": 1770928680000,
+      "price": 1.071,
+      "max_later_gain_pct": 0.8
+    },
+    {
+      "ticker": "CCHH",
+      "time_ms": 1770935520000,
+      "price": 1,
+      "max_later_gain_pct": 1.0
+    },
+    {
+      "ticker": "CCHH",
+      "time_ms": 1770936180000,
+      "price": 1.01,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "CCHH",
+      "time_ms": 1770937380000,
+      "price": 1,
+      "max_later_gain_pct": 1.0
+    },
+    {
+      "ticker": "CCHH",
+      "time_ms": 1770937920000,
+      "price": 1.01,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "CCHH",
+      "time_ms": 1770939540000,
+      "price": 1,
+      "max_later_gain_pct": 1.0
+    },
+    {
+      "ticker": "CCHH",
+      "time_ms": 1770941700000,
+      "price": 1,
+      "max_later_gain_pct": 1.0
+    },
+    {
+      "ticker": "CGTL",
+      "time_ms": 1770925860000,
+      "price": 4.22,
+      "max_later_gain_pct": 5.0
+    },
+    {
+      "ticker": "CGTL",
+      "time_ms": 1770928020000,
+      "price": 4.37,
+      "max_later_gain_pct": 1.0
+    },
+    {
+      "ticker": "CGTL",
+      "time_ms": 1770928620000,
+      "price": 4.2,
+      "max_later_gain_pct": 3.6
+    },
+    {
+      "ticker": "CGTL",
+      "time_ms": 1770929280000,
+      "price": 4.15,
+      "max_later_gain_pct": 4.8
+    },
+    {
+      "ticker": "CGTL",
+      "time_ms": 1770929340000,
+      "price": 4.15,
+      "max_later_gain_pct": 4.8
+    },
+    {
+      "ticker": "CHOW",
+      "time_ms": 1770941640000,
+      "price": 0.7901,
+      "max_later_gain_pct": 3.9
+    },
+    {
+      "ticker": "JDZG",
+      "time_ms": 1770944220000,
+      "price": 3.08,
+      "max_later_gain_pct": 1.6
+    },
+    {
+      "ticker": "MGRT",
+      "time_ms": 1770937560000,
+      "price": 7.85,
+      "max_later_gain_pct": 4.6
+    },
+    {
+      "ticker": "RIME",
+      "time_ms": 1770939540000,
+      "price": 1.21,
+      "max_later_gain_pct": 3.3
+    },
+    {
+      "ticker": "RIME",
+      "time_ms": 1770941040000,
+      "price": 1.2015,
+      "max_later_gain_pct": 4.0
+    },
+    {
+      "ticker": "RIME",
+      "time_ms": 1770943080000,
+      "price": 1.2401,
+      "max_later_gain_pct": 0.8
+    },
+    {
+      "ticker": "ZSL",
+      "time_ms": 1770929160000,
+      "price": 2.6668,
+      "max_later_gain_pct": 2.7
+    },
+    {
+      "ticker": "ZSL",
+      "time_ms": 1770930540000,
+      "price": 2.66,
+      "max_later_gain_pct": 3.0
+    },
+    {
+      "ticker": "ZSL",
+      "time_ms": 1770933540000,
+      "price": 2.63,
+      "max_later_gain_pct": 4.2
+    },
+    {
+      "ticker": "ZSL",
+      "time_ms": 1770934740000,
+      "price": 2.6399,
+      "max_later_gain_pct": 3.8
+    },
+    {
+      "ticker": "ZSL",
+      "time_ms": 1770935160000,
+      "price": 2.6303,
+      "max_later_gain_pct": 4.2
+    },
+    {
+      "ticker": "ZSL",
+      "time_ms": 1770936000000,
+      "price": 2.6304,
+      "max_later_gain_pct": 4.2
+    },
+    {
+      "ticker": "ZSL",
+      "time_ms": 1770936600000,
+      "price": 2.63,
+      "max_later_gain_pct": 4.2
+    },
+    {
+      "ticker": "ZSL",
+      "time_ms": 1770937200000,
+      "price": 2.6897,
+      "max_later_gain_pct": 1.9
+    },
+    {
+      "ticker": "ZSL",
+      "time_ms": 1770938820000,
+      "price": 2.6201,
+      "max_later_gain_pct": 3.0
+    },
+    {
+      "ticker": "ZSL",
+      "time_ms": 1770939540000,
+      "price": 2.6998,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "ZSL",
+      "time_ms": 1770940680000,
+      "price": 2.66,
+      "max_later_gain_pct": 1.1
+    },
+    {
+      "ticker": "ZSL",
+      "time_ms": 1770942180000,
+      "price": 2.6,
+      "max_later_gain_pct": 3.5
+    },
+    {
+      "ticker": "ZSL",
+      "time_ms": 1770942840000,
+      "price": 2.6398,
+      "max_later_gain_pct": 1.9
+    },
+    {
+      "ticker": "ZSL",
+      "time_ms": 1770943500000,
+      "price": 2.64,
+      "max_later_gain_pct": 1.9
+    },
+    {
+      "ticker": "ZSL",
+      "time_ms": 1770944160000,
+      "price": 2.66,
+      "max_later_gain_pct": 0.4
+    }
+  ],
+  "missed_entries": [],
+  "fake_rate": 23.9
+}

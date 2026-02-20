@@ -1,0 +1,495 @@
+{
+  "date": "2026-01-26",
+  "starting_portfolio": 1.485131106112785e+19,
+  "ending_portfolio": 3.188048279541322e+19,
+  "day_pnl_krw": 1.7029171734285371e+19,
+  "day_pnl_pct": 114.66,
+  "vol_spikes_detected": 172,
+  "signals_generated": 172,
+  "buys_executed": 8,
+  "trades": [
+    {
+      "ticker": "NIVF",
+      "type": "full",
+      "entry_price": 1.58,
+      "sell_price": 1.45,
+      "pnl_pct": -8.23,
+      "pnl_krw": -1.2219433151560909e+17,
+      "reason": "STOP_LOSS (-8.2%)",
+      "hold_min": 3.0,
+      "queue_price": 1.31,
+      "queue_to_entry_pct": 20.6,
+      "entry_time_ms": 1769437860000,
+      "sell_time_ms": 1769438040000,
+      "daily_high": 2.46,
+      "max_possible_pct": 55.7
+    },
+    {
+      "ticker": "NAMM",
+      "type": "full",
+      "entry_price": 4.95,
+      "sell_price": 4.5,
+      "pnl_pct": -9.09,
+      "pnl_krw": -1.3501191873752602e+17,
+      "reason": "STOP_LOSS (-9.1%)",
+      "hold_min": 6.0,
+      "queue_price": 4.0499,
+      "queue_to_entry_pct": 22.2,
+      "entry_time_ms": 1769437920000,
+      "sell_time_ms": 1769438280000,
+      "daily_high": 5.59,
+      "max_possible_pct": 12.9
+    },
+    {
+      "ticker": "ABOS",
+      "type": "partial",
+      "entry_price": 2.8194,
+      "sell_price": 2.99,
+      "pnl_pct": 6.0509328225863745,
+      "pnl_krw": 5.314040246401562e+16,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 7.0,
+      "entry_time_ms": 1769438640000,
+      "sell_time_ms": 1769439060000
+    },
+    {
+      "ticker": "SLGB",
+      "type": "partial",
+      "entry_price": 1.63,
+      "sell_price": 1.89,
+      "pnl_pct": 15.95092024539877,
+      "pnl_krw": 1.47511923372608e+17,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 1.0,
+      "entry_time_ms": 1769439060000,
+      "sell_time_ms": 1769439120000
+    },
+    {
+      "ticker": "SLGB",
+      "type": "full",
+      "entry_price": 1.63,
+      "sell_price": 1.89,
+      "pnl_pct": 15.95,
+      "pnl_krw": 1.47511923372608e+17,
+      "reason": "PROFIT_TARGET +10% (16.0%)",
+      "hold_min": 1.0,
+      "queue_price": 1.33,
+      "queue_to_entry_pct": 22.6,
+      "entry_time_ms": 1769439060000,
+      "sell_time_ms": 1769439120000,
+      "daily_high": 3.2,
+      "max_possible_pct": 96.3
+    },
+    {
+      "ticker": "ABOS",
+      "type": "full",
+      "entry_price": 2.8194,
+      "sell_price": 2.5705,
+      "pnl_pct": -8.83,
+      "pnl_krw": -7.753016514240013e+16,
+      "reason": "STOP_LOSS (-8.8%)",
+      "hold_min": 14.0,
+      "queue_price": 2.3401,
+      "queue_to_entry_pct": 20.5,
+      "entry_time_ms": 1769438640000,
+      "sell_time_ms": 1769439480000,
+      "daily_high": 3.01,
+      "max_possible_pct": 6.8
+    },
+    {
+      "ticker": "MBAI",
+      "type": "partial",
+      "entry_price": 2.1986,
+      "sell_price": 2.51,
+      "pnl_pct": 14.163558628217942,
+      "pnl_krw": 1.5184050383330803e+17,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 5.0,
+      "entry_time_ms": 1769441040000,
+      "sell_time_ms": 1769441340000
+    },
+    {
+      "ticker": "MBAI",
+      "type": "full",
+      "entry_price": 2.1986,
+      "sell_price": 2.51,
+      "pnl_pct": 14.16,
+      "pnl_krw": 1.5184050383330803e+17,
+      "reason": "PROFIT_TARGET +10% (14.2%)",
+      "hold_min": 5.0,
+      "queue_price": 1.67,
+      "queue_to_entry_pct": 31.7,
+      "entry_time_ms": 1769441040000,
+      "sell_time_ms": 1769441340000,
+      "daily_high": 3.96,
+      "max_possible_pct": 80.1
+    },
+    {
+      "ticker": "ONEG",
+      "type": "partial",
+      "entry_price": 3.03,
+      "sell_price": 3.19,
+      "pnl_pct": 5.280528052805278,
+      "pnl_krw": 6.30727192964503e+16,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 4.0,
+      "entry_time_ms": 1769442420000,
+      "sell_time_ms": 1769442660000
+    },
+    {
+      "ticker": "ONEG",
+      "type": "full",
+      "entry_price": 3.03,
+      "sell_price": 3.6179,
+      "pnl_pct": 19.4,
+      "pnl_krw": 2.3175282296489523e+17,
+      "reason": "PROFIT_TARGET +10% (19.4%)",
+      "hold_min": 5.0,
+      "queue_price": 2.4919,
+      "queue_to_entry_pct": 21.6,
+      "entry_time_ms": 1769442420000,
+      "sell_time_ms": 1769442720000,
+      "daily_high": 3.99,
+      "max_possible_pct": 31.7
+    },
+    {
+      "ticker": "DRMA",
+      "type": "partial",
+      "entry_price": 3.2091,
+      "sell_price": 3.42,
+      "pnl_pct": 6.571936056838368,
+      "pnl_krw": 8.731637629736806e+16,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 1.0,
+      "entry_time_ms": 1769447880000,
+      "sell_time_ms": 1769447940000
+    },
+    {
+      "ticker": "DRMA",
+      "type": "full",
+      "entry_price": 3.2091,
+      "sell_price": 3.59,
+      "pnl_pct": 11.87,
+      "pnl_krw": 1.5769942025446912e+17,
+      "reason": "PROFIT_TARGET +10% (11.9%)",
+      "hold_min": 4.0,
+      "queue_price": 2.63,
+      "queue_to_entry_pct": 22.0,
+      "entry_time_ms": 1769447880000,
+      "sell_time_ms": 1769448120000,
+      "daily_high": 4.66,
+      "max_possible_pct": 45.2
+    },
+    {
+      "ticker": "NIVF",
+      "type": "full",
+      "entry_price": 2.34,
+      "sell_price": 1.9099,
+      "pnl_pct": -18.38,
+      "pnl_krw": -5.417562159592581e+17,
+      "reason": "STOP_LOSS (-18.4%)",
+      "hold_min": 4.0,
+      "queue_price": 1.83,
+      "queue_to_entry_pct": 27.9,
+      "entry_time_ms": 1769451300000,
+      "sell_time_ms": 1769451540000,
+      "daily_high": 2.46,
+      "max_possible_pct": 5.1
+    }
+  ],
+  "fake_signals": [
+    {
+      "ticker": "ABOS",
+      "time_ms": 1769444220000,
+      "price": 2.36,
+      "max_later_gain_pct": 2.5
+    },
+    {
+      "ticker": "ABOS",
+      "time_ms": 1769444820000,
+      "price": 2.384,
+      "max_later_gain_pct": 1.5
+    },
+    {
+      "ticker": "ABOS",
+      "time_ms": 1769446080000,
+      "price": 2.355,
+      "max_later_gain_pct": 2.3
+    },
+    {
+      "ticker": "ABOS",
+      "time_ms": 1769448120000,
+      "price": 2.3133,
+      "max_later_gain_pct": 1.2
+    },
+    {
+      "ticker": "ABOS",
+      "time_ms": 1769450640000,
+      "price": 2.25,
+      "max_later_gain_pct": 3.6
+    },
+    {
+      "ticker": "ABOS",
+      "time_ms": 1769452140000,
+      "price": 2.278,
+      "max_later_gain_pct": 2.3
+    },
+    {
+      "ticker": "ABOS",
+      "time_ms": 1769453040000,
+      "price": 2.27,
+      "max_later_gain_pct": 2.6
+    },
+    {
+      "ticker": "ABOS",
+      "time_ms": 1769454600000,
+      "price": 2.29,
+      "max_later_gain_pct": 1.7
+    },
+    {
+      "ticker": "ABOS",
+      "time_ms": 1769454960000,
+      "price": 2.265,
+      "max_later_gain_pct": 0.7
+    },
+    {
+      "ticker": "ABOS",
+      "time_ms": 1769455500000,
+      "price": 2.26,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "ABOS",
+      "time_ms": 1769455860000,
+      "price": 2.2,
+      "max_later_gain_pct": 2.7
+    },
+    {
+      "ticker": "ABOS",
+      "time_ms": 1769460180000,
+      "price": 2.1,
+      "max_later_gain_pct": 3.3
+    },
+    {
+      "ticker": "ABOS",
+      "time_ms": 1769460420000,
+      "price": 2.09,
+      "max_later_gain_pct": 3.8
+    },
+    {
+      "ticker": "ABOS",
+      "time_ms": 1769462820000,
+      "price": 2.07,
+      "max_later_gain_pct": 4.8
+    },
+    {
+      "ticker": "ABOS",
+      "time_ms": 1769467320000,
+      "price": 2.1,
+      "max_later_gain_pct": 3.3
+    },
+    {
+      "ticker": "ABOS",
+      "time_ms": 1769470620000,
+      "price": 2.15,
+      "max_later_gain_pct": 0.9
+    },
+    {
+      "ticker": "ABOS",
+      "time_ms": 1769473740000,
+      "price": 2.15,
+      "max_later_gain_pct": 0.9
+    },
+    {
+      "ticker": "DRMA",
+      "time_ms": 1769458080000,
+      "price": 3.22,
+      "max_later_gain_pct": 1.9
+    },
+    {
+      "ticker": "DRMA",
+      "time_ms": 1769460420000,
+      "price": 3.1,
+      "max_later_gain_pct": 1.6
+    },
+    {
+      "ticker": "DRMA",
+      "time_ms": 1769472420000,
+      "price": 3.09,
+      "max_later_gain_pct": 1.9
+    },
+    {
+      "ticker": "DRMA",
+      "time_ms": 1769474760000,
+      "price": 3.1397,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "DTCX",
+      "time_ms": 1769460300000,
+      "price": 2.845,
+      "max_later_gain_pct": 1.9
+    },
+    {
+      "ticker": "GAUZ",
+      "time_ms": 1769465940000,
+      "price": 1.59,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "MBAI",
+      "time_ms": 1769470440000,
+      "price": 3.1103,
+      "max_later_gain_pct": 4.5
+    },
+    {
+      "ticker": "MBAI",
+      "time_ms": 1769474640000,
+      "price": 3.09,
+      "max_later_gain_pct": 1.9
+    },
+    {
+      "ticker": "MBAI",
+      "time_ms": 1769475300000,
+      "price": 3.09,
+      "max_later_gain_pct": 0.3
+    },
+    {
+      "ticker": "NAMM",
+      "time_ms": 1769468400000,
+      "price": 4.39,
+      "max_later_gain_pct": 2.5
+    },
+    {
+      "ticker": "NAMM",
+      "time_ms": 1769471700000,
+      "price": 4.34,
+      "max_later_gain_pct": 3.7
+    },
+    {
+      "ticker": "NAMM",
+      "time_ms": 1769471940000,
+      "price": 4.49,
+      "max_later_gain_pct": 0.2
+    },
+    {
+      "ticker": "NAMM",
+      "time_ms": 1769473140000,
+      "price": 4.34,
+      "max_later_gain_pct": 2.1
+    },
+    {
+      "ticker": "NAMM",
+      "time_ms": 1769473980000,
+      "price": 4.37,
+      "max_later_gain_pct": 0.2
+    },
+    {
+      "ticker": "NAMM",
+      "time_ms": 1769475000000,
+      "price": 4.29,
+      "max_later_gain_pct": 1.4
+    },
+    {
+      "ticker": "NIVF",
+      "time_ms": 1769468820000,
+      "price": 1.97,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "NIVF",
+      "time_ms": 1769470500000,
+      "price": 1.91,
+      "max_later_gain_pct": 0.5
+    },
+    {
+      "ticker": "NIVF",
+      "time_ms": 1769474880000,
+      "price": 1.88,
+      "max_later_gain_pct": 1.1
+    },
+    {
+      "ticker": "ONEG",
+      "time_ms": 1769460660000,
+      "price": 3.34,
+      "max_later_gain_pct": 2.4
+    },
+    {
+      "ticker": "SLGB",
+      "time_ms": 1769463000000,
+      "price": 2.15,
+      "max_later_gain_pct": 1.4
+    },
+    {
+      "ticker": "SLGB",
+      "time_ms": 1769469540000,
+      "price": 2.08,
+      "max_later_gain_pct": 2.9
+    },
+    {
+      "ticker": "SLGB",
+      "time_ms": 1769473140000,
+      "price": 2.07,
+      "max_later_gain_pct": 1.0
+    },
+    {
+      "ticker": "SXTP",
+      "time_ms": 1769451660000,
+      "price": 5.1483,
+      "max_later_gain_pct": 0.7
+    },
+    {
+      "ticker": "SXTP",
+      "time_ms": 1769455080000,
+      "price": 5.02,
+      "max_later_gain_pct": 3.3
+    },
+    {
+      "ticker": "SXTP",
+      "time_ms": 1769455440000,
+      "price": 5.0999,
+      "max_later_gain_pct": 1.7
+    },
+    {
+      "ticker": "SXTP",
+      "time_ms": 1769456160000,
+      "price": 5.06,
+      "max_later_gain_pct": 2.2
+    },
+    {
+      "ticker": "SXTP",
+      "time_ms": 1769456460000,
+      "price": 5.1,
+      "max_later_gain_pct": 1.4
+    },
+    {
+      "ticker": "SXTP",
+      "time_ms": 1769459820000,
+      "price": 4.966,
+      "max_later_gain_pct": 3.1
+    },
+    {
+      "ticker": "SXTP",
+      "time_ms": 1769462040000,
+      "price": 4.81,
+      "max_later_gain_pct": 0.2
+    },
+    {
+      "ticker": "SXTP",
+      "time_ms": 1769473320000,
+      "price": 4.59,
+      "max_later_gain_pct": 0.4
+    }
+  ],
+  "missed_entries": [
+    {
+      "ticker": "SXTP",
+      "daily_change_pct": 31.52,
+      "daily_volume": 1782966,
+      "had_vol_spike": true,
+      "meets_daily_vol": true,
+      "reason": "price_not_triggered"
+    }
+  ],
+  "fake_rate": 27.3
+}

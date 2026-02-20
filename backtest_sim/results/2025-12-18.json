@@ -1,0 +1,290 @@
+{
+  "date": "2025-12-18",
+  "starting_portfolio": 735497681555.0,
+  "ending_portfolio": 1073751963472.0,
+  "day_pnl_krw": 338254281917.0,
+  "day_pnl_pct": 45.99,
+  "vol_spikes_detected": 78,
+  "signals_generated": 78,
+  "buys_executed": 4,
+  "trades": [
+    {
+      "ticker": "MENS",
+      "type": "full",
+      "entry_price": 3.24,
+      "sell_price": 2.92,
+      "pnl_pct": -9.88,
+      "pnl_krw": -7264174633.0,
+      "reason": "STOP_LOSS (-9.9%)",
+      "hold_min": 4.0,
+      "queue_price": 2.59,
+      "queue_to_entry_pct": 25.1,
+      "entry_time_ms": 1766069160000,
+      "sell_time_ms": 1766069400000,
+      "daily_high": 3.9399,
+      "max_possible_pct": 21.6
+    },
+    {
+      "ticker": "ARBK",
+      "type": "partial",
+      "entry_price": 6,
+      "sell_price": 6.5705,
+      "pnl_pct": 9.50833333333334,
+      "pnl_krw": 3811811320.2659836,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 7.0,
+      "entry_time_ms": 1766070000000,
+      "sell_time_ms": 1766070420000
+    },
+    {
+      "ticker": "ARBK",
+      "type": "full",
+      "entry_price": 6,
+      "sell_price": 6.0499,
+      "pnl_pct": 0.83,
+      "pnl_krw": 333408212.0,
+      "reason": "TRAILING (0.8%, peak=10.5%)",
+      "hold_min": 13.0,
+      "queue_price": 4.95,
+      "queue_to_entry_pct": 21.2,
+      "entry_time_ms": 1766070000000,
+      "sell_time_ms": 1766070780000,
+      "daily_high": 6.79,
+      "max_possible_pct": 13.2
+    },
+    {
+      "ticker": "BENF",
+      "type": "partial",
+      "entry_price": 5.3228,
+      "sell_price": 5.66,
+      "pnl_pct": 6.335011648004807,
+      "pnl_krw": 2806748519.7463837,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 1.0,
+      "entry_time_ms": 1766070780000,
+      "sell_time_ms": 1766070840000
+    },
+    {
+      "ticker": "MGRT",
+      "type": "partial",
+      "entry_price": 6.33,
+      "sell_price": 6.7,
+      "pnl_pct": 5.845181674565558,
+      "pnl_krw": 2471589040.7286453,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 9.0,
+      "entry_time_ms": 1766070540000,
+      "sell_time_ms": 1766071080000
+    },
+    {
+      "ticker": "MGRT",
+      "type": "full",
+      "entry_price": 6.33,
+      "sell_price": 7.36,
+      "pnl_pct": 16.27,
+      "pnl_krw": 6880369492.0,
+      "reason": "TRAILING (16.3%, peak=22.4%)",
+      "hold_min": 27.0,
+      "queue_price": 5.16,
+      "queue_to_entry_pct": 22.7,
+      "entry_time_ms": 1766070540000,
+      "sell_time_ms": 1766072160000,
+      "daily_high": 9.99,
+      "max_possible_pct": 57.8
+    },
+    {
+      "ticker": "BENF",
+      "type": "full",
+      "entry_price": 5.3228,
+      "sell_price": 5.6,
+      "pnl_pct": 5.21,
+      "pnl_krw": 2307327075.0,
+      "reason": "TRAILING (5.2%, peak=8.6%)",
+      "hold_min": 27.0,
+      "queue_price": 4.42,
+      "queue_to_entry_pct": 20.4,
+      "entry_time_ms": 1766070780000,
+      "sell_time_ms": 1766072400000,
+      "daily_high": 6.15,
+      "max_possible_pct": 15.5
+    }
+  ],
+  "fake_signals": [
+    {
+      "ticker": "ARBK",
+      "time_ms": 1766082420000,
+      "price": 5.23,
+      "max_later_gain_pct": 2.5
+    },
+    {
+      "ticker": "ARBK",
+      "time_ms": 1766083740000,
+      "price": 4.9501,
+      "max_later_gain_pct": 4.2
+    },
+    {
+      "ticker": "ARBK",
+      "time_ms": 1766087220000,
+      "price": 4.89,
+      "max_later_gain_pct": 2.2
+    },
+    {
+      "ticker": "ARBK",
+      "time_ms": 1766091540000,
+      "price": 4.845,
+      "max_later_gain_pct": 3.2
+    },
+    {
+      "ticker": "BENF",
+      "time_ms": 1766083260000,
+      "price": 5.9059,
+      "max_later_gain_pct": 4.1
+    },
+    {
+      "ticker": "BENF",
+      "time_ms": 1766084820000,
+      "price": 5.925,
+      "max_later_gain_pct": 3.0
+    },
+    {
+      "ticker": "BENF",
+      "time_ms": 1766085360000,
+      "price": 5.94,
+      "max_later_gain_pct": 1.0
+    },
+    {
+      "ticker": "BENF",
+      "time_ms": 1766089020000,
+      "price": 5.35,
+      "max_later_gain_pct": 1.9
+    },
+    {
+      "ticker": "BENF",
+      "time_ms": 1766089320000,
+      "price": 5.25,
+      "max_later_gain_pct": 3.8
+    },
+    {
+      "ticker": "BENF",
+      "time_ms": 1766090940000,
+      "price": 5.325,
+      "max_later_gain_pct": 2.3
+    },
+    {
+      "ticker": "FJET",
+      "time_ms": 1766104800000,
+      "price": 8.3209,
+      "max_later_gain_pct": 1.7
+    },
+    {
+      "ticker": "FJET",
+      "time_ms": 1766105280000,
+      "price": 8.3201,
+      "max_later_gain_pct": 0.7
+    },
+    {
+      "ticker": "MENS",
+      "time_ms": 1766077080000,
+      "price": 3.4999,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "MENS",
+      "time_ms": 1766079120000,
+      "price": 3.48,
+      "max_later_gain_pct": 0.6
+    },
+    {
+      "ticker": "MENS",
+      "time_ms": 1766085120000,
+      "price": 3.2899,
+      "max_later_gain_pct": 3.3
+    },
+    {
+      "ticker": "MENS",
+      "time_ms": 1766088660000,
+      "price": 3.2974,
+      "max_later_gain_pct": 3.1
+    },
+    {
+      "ticker": "MENS",
+      "time_ms": 1766096820000,
+      "price": 3.11,
+      "max_later_gain_pct": 1.6
+    },
+    {
+      "ticker": "MENS",
+      "time_ms": 1766098320000,
+      "price": 3.11,
+      "max_later_gain_pct": 1.6
+    },
+    {
+      "ticker": "MENS",
+      "time_ms": 1766104260000,
+      "price": 3.1001,
+      "max_later_gain_pct": 1.9
+    },
+    {
+      "ticker": "PAVS",
+      "time_ms": 1766091120000,
+      "price": 2.4601,
+      "max_later_gain_pct": 3.6
+    },
+    {
+      "ticker": "PAVS",
+      "time_ms": 1766100360000,
+      "price": 2.51,
+      "max_later_gain_pct": 0.8
+    },
+    {
+      "ticker": "PAVS",
+      "time_ms": 1766100960000,
+      "price": 2.42,
+      "max_later_gain_pct": 1.7
+    },
+    {
+      "ticker": "PAVS",
+      "time_ms": 1766104020000,
+      "price": 2.39,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "TGL",
+      "time_ms": 1766074620000,
+      "price": 7.762,
+      "max_later_gain_pct": 2.4
+    },
+    {
+      "ticker": "TGL",
+      "time_ms": 1766074680000,
+      "price": 7.88,
+      "max_later_gain_pct": 0.9
+    },
+    {
+      "ticker": "TGL",
+      "time_ms": 1766076600000,
+      "price": 7.38,
+      "max_later_gain_pct": 2.3
+    },
+    {
+      "ticker": "TGL",
+      "time_ms": 1766086500000,
+      "price": 7.025,
+      "max_later_gain_pct": 4.2
+    },
+    {
+      "ticker": "TGL",
+      "time_ms": 1766092140000,
+      "price": 6.99,
+      "max_later_gain_pct": 4.4
+    },
+    {
+      "ticker": "TGL",
+      "time_ms": 1766099760000,
+      "price": 7.2,
+      "max_later_gain_pct": 1.4
+    }
+  ],
+  "missed_entries": [],
+  "fake_rate": 37.2
+}

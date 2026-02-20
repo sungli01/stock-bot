@@ -1,0 +1,572 @@
+{
+  "date": "2025-12-09",
+  "starting_portfolio": 11973370788.0,
+  "ending_portfolio": 22602692978.0,
+  "day_pnl_krw": 10629322190.0,
+  "day_pnl_pct": 88.77,
+  "vol_spikes_detected": 177,
+  "signals_generated": 177,
+  "buys_executed": 7,
+  "trades": [
+    {
+      "ticker": "NCPL",
+      "type": "full",
+      "entry_price": 1.06,
+      "sell_price": 0.9817,
+      "pnl_pct": -7.39,
+      "pnl_krw": -88444805.0,
+      "reason": "STOP_LOSS (-7.4%)",
+      "hold_min": 8.0,
+      "queue_price": 0.8524,
+      "queue_to_entry_pct": 24.4,
+      "entry_time_ms": 1765287660000,
+      "sell_time_ms": 1765288140000,
+      "daily_high": 1.94,
+      "max_possible_pct": 83.0
+    },
+    {
+      "ticker": "ATMV",
+      "type": "full",
+      "entry_price": 13.49,
+      "sell_price": 12.31,
+      "pnl_pct": -8.75,
+      "pnl_krw": -114433435.0,
+      "reason": "STOP_LOSS (-8.7%)",
+      "hold_min": 4.0,
+      "queue_price": 10.1,
+      "queue_to_entry_pct": 33.6,
+      "entry_time_ms": 1765291080000,
+      "sell_time_ms": 1765291320000,
+      "daily_high": 16.5,
+      "max_possible_pct": 22.3
+    },
+    {
+      "ticker": "NCPL",
+      "type": "partial",
+      "entry_price": 1.34,
+      "sell_price": 1.4499,
+      "pnl_pct": 8.201492537313415,
+      "pnl_krw": 53647041.436377764,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 6.0,
+      "entry_time_ms": 1765291020000,
+      "sell_time_ms": 1765291380000
+    },
+    {
+      "ticker": "NCPL",
+      "type": "full",
+      "entry_price": 1.34,
+      "sell_price": 1.3982,
+      "pnl_pct": 4.34,
+      "pnl_krw": 28409989.0,
+      "reason": "TRAILING (4.3%, peak=8.2%)",
+      "hold_min": 8.0,
+      "queue_price": 1.1015,
+      "queue_to_entry_pct": 21.7,
+      "entry_time_ms": 1765291020000,
+      "sell_time_ms": 1765291500000,
+      "daily_high": 1.94,
+      "max_possible_pct": 44.8
+    },
+    {
+      "ticker": "TGL",
+      "type": "partial",
+      "entry_price": 20.84,
+      "sell_price": 22.3101,
+      "pnl_pct": 7.054222648752395,
+      "pnl_krw": 55256922.64926791,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 10.0,
+      "entry_time_ms": 1765294140000,
+      "sell_time_ms": 1765294740000
+    },
+    {
+      "ticker": "TGL",
+      "type": "full",
+      "entry_price": 20.84,
+      "sell_price": 23.96,
+      "pnl_pct": 14.97,
+      "pnl_krw": 117272021.0,
+      "reason": "PROFIT_TARGET +10% (15.0%)",
+      "hold_min": 24.0,
+      "queue_price": 16.68,
+      "queue_to_entry_pct": 24.9,
+      "entry_time_ms": 1765294140000,
+      "sell_time_ms": 1765295580000,
+      "daily_high": 26.5,
+      "max_possible_pct": 27.2
+    },
+    {
+      "ticker": "LGHL",
+      "type": "full",
+      "entry_price": 7.43,
+      "sell_price": 6.87,
+      "pnl_pct": -7.54,
+      "pnl_krw": -131185480.0,
+      "reason": "STOP_LOSS (-7.5%)",
+      "hold_min": 6.0,
+      "queue_price": 5.765,
+      "queue_to_entry_pct": 28.9,
+      "entry_time_ms": 1765306980000,
+      "sell_time_ms": 1765307340000,
+      "daily_high": 8.92,
+      "max_possible_pct": 20.1
+    },
+    {
+      "ticker": "JXG",
+      "type": "full",
+      "entry_price": 6.51,
+      "sell_price": 5.965,
+      "pnl_pct": -8.37,
+      "pnl_krw": -159187442.0,
+      "reason": "STOP_LOSS (-8.4%)",
+      "hold_min": 10.0,
+      "queue_price": 5.29,
+      "queue_to_entry_pct": 23.1,
+      "entry_time_ms": 1765311540000,
+      "sell_time_ms": 1765312140000,
+      "daily_high": 9,
+      "max_possible_pct": 38.2
+    },
+    {
+      "ticker": "JXG",
+      "type": "full",
+      "entry_price": 8.4917,
+      "sell_price": 7.55,
+      "pnl_pct": -11.09,
+      "pnl_krw": -230189754.0,
+      "reason": "STOP_LOSS (-11.1%)",
+      "hold_min": 9.0,
+      "queue_price": 6.83,
+      "queue_to_entry_pct": 24.3,
+      "entry_time_ms": 1765313460000,
+      "sell_time_ms": 1765314000000,
+      "daily_high": 9,
+      "max_possible_pct": 6.0
+    }
+  ],
+  "fake_signals": [
+    {
+      "ticker": "ATMV",
+      "time_ms": 1765302600000,
+      "price": 12.06,
+      "max_later_gain_pct": 0.5
+    },
+    {
+      "ticker": "ATMV",
+      "time_ms": 1765303860000,
+      "price": 11.52,
+      "max_later_gain_pct": 2.4
+    },
+    {
+      "ticker": "ATMV",
+      "time_ms": 1765310340000,
+      "price": 10.7,
+      "max_later_gain_pct": 1.3
+    },
+    {
+      "ticker": "ATMV",
+      "time_ms": 1765311720000,
+      "price": 10.34,
+      "max_later_gain_pct": 4.8
+    },
+    {
+      "ticker": "ATMV",
+      "time_ms": 1765327380000,
+      "price": 8.66,
+      "max_later_gain_pct": 0.1
+    },
+    {
+      "ticker": "BMNG",
+      "time_ms": 1765302300000,
+      "price": 6.9501,
+      "max_later_gain_pct": 4.9
+    },
+    {
+      "ticker": "BMNG",
+      "time_ms": 1765306200000,
+      "price": 7.095,
+      "max_later_gain_pct": 2.7
+    },
+    {
+      "ticker": "BMNG",
+      "time_ms": 1765306860000,
+      "price": 7.15,
+      "max_later_gain_pct": 1.9
+    },
+    {
+      "ticker": "BMNG",
+      "time_ms": 1765307640000,
+      "price": 7.17,
+      "max_later_gain_pct": 1.6
+    },
+    {
+      "ticker": "BMNG",
+      "time_ms": 1765308060000,
+      "price": 7.22,
+      "max_later_gain_pct": 0.9
+    },
+    {
+      "ticker": "BMNG",
+      "time_ms": 1765308600000,
+      "price": 7.22,
+      "max_later_gain_pct": 0.9
+    },
+    {
+      "ticker": "BMNG",
+      "time_ms": 1765308720000,
+      "price": 7.27,
+      "max_later_gain_pct": 0.2
+    },
+    {
+      "ticker": "BMNG",
+      "time_ms": 1765309200000,
+      "price": 7.235,
+      "max_later_gain_pct": 0.7
+    },
+    {
+      "ticker": "BMNG",
+      "time_ms": 1765309620000,
+      "price": 7.187,
+      "max_later_gain_pct": 1.4
+    },
+    {
+      "ticker": "BMNG",
+      "time_ms": 1765310040000,
+      "price": 7.2801,
+      "max_later_gain_pct": 0.1
+    },
+    {
+      "ticker": "BMNG",
+      "time_ms": 1765310580000,
+      "price": 7.23,
+      "max_later_gain_pct": 0.5
+    },
+    {
+      "ticker": "BMNG",
+      "time_ms": 1765314240000,
+      "price": 7.07,
+      "max_later_gain_pct": 1.1
+    },
+    {
+      "ticker": "BMNG",
+      "time_ms": 1765315200000,
+      "price": 7.08,
+      "max_later_gain_pct": 0.3
+    },
+    {
+      "ticker": "BMNG",
+      "time_ms": 1765317720000,
+      "price": 6.94,
+      "max_later_gain_pct": 2.2
+    },
+    {
+      "ticker": "BMNG",
+      "time_ms": 1765318260000,
+      "price": 6.99,
+      "max_later_gain_pct": 1.4
+    },
+    {
+      "ticker": "BMNG",
+      "time_ms": 1765319220000,
+      "price": 6.9796,
+      "max_later_gain_pct": 1.6
+    },
+    {
+      "ticker": "BMNG",
+      "time_ms": 1765320420000,
+      "price": 7.03,
+      "max_later_gain_pct": 0.9
+    },
+    {
+      "ticker": "BMNG",
+      "time_ms": 1765326000000,
+      "price": 7.03,
+      "max_later_gain_pct": 0.1
+    },
+    {
+      "ticker": "BMNU",
+      "time_ms": 1765304040000,
+      "price": 10.795,
+      "max_later_gain_pct": 1.8
+    },
+    {
+      "ticker": "BMNU",
+      "time_ms": 1765304400000,
+      "price": 10.7597,
+      "max_later_gain_pct": 2.1
+    },
+    {
+      "ticker": "BMNU",
+      "time_ms": 1765308720000,
+      "price": 10.955,
+      "max_later_gain_pct": 0.3
+    },
+    {
+      "ticker": "BMNU",
+      "time_ms": 1765319460000,
+      "price": 10.49,
+      "max_later_gain_pct": 1.8
+    },
+    {
+      "ticker": "BMNU",
+      "time_ms": 1765322040000,
+      "price": 10.6201,
+      "max_later_gain_pct": 0.3
+    },
+    {
+      "ticker": "BMNU",
+      "time_ms": 1765323480000,
+      "price": 10.64,
+      "max_later_gain_pct": 0.1
+    },
+    {
+      "ticker": "BMNU",
+      "time_ms": 1765324140000,
+      "price": 10.63,
+      "max_later_gain_pct": 0.2
+    },
+    {
+      "ticker": "BMNU",
+      "time_ms": 1765324620000,
+      "price": 10.62,
+      "max_later_gain_pct": 0.2
+    },
+    {
+      "ticker": "BMNU",
+      "time_ms": 1765325340000,
+      "price": 10.62,
+      "max_later_gain_pct": 0.1
+    },
+    {
+      "ticker": "BMNU",
+      "time_ms": 1765325760000,
+      "price": 10.61,
+      "max_later_gain_pct": 0.1
+    },
+    {
+      "ticker": "BMNU",
+      "time_ms": 1765326900000,
+      "price": 10.61,
+      "max_later_gain_pct": 0.1
+    },
+    {
+      "ticker": "IBIO",
+      "time_ms": 1765318980000,
+      "price": 2.3202,
+      "max_later_gain_pct": 2.1
+    },
+    {
+      "ticker": "IBIO",
+      "time_ms": 1765320960000,
+      "price": 2.2997,
+      "max_later_gain_pct": 2.6
+    },
+    {
+      "ticker": "IBIO",
+      "time_ms": 1765322220000,
+      "price": 2.3598,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "IBIO",
+      "time_ms": 1765322700000,
+      "price": 2.34,
+      "max_later_gain_pct": 0.9
+    },
+    {
+      "ticker": "IBIO",
+      "time_ms": 1765324800000,
+      "price": 2.34,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "IBIO",
+      "time_ms": 1765325460000,
+      "price": 2.33,
+      "max_later_gain_pct": 0.4
+    },
+    {
+      "ticker": "IBIO",
+      "time_ms": 1765326840000,
+      "price": 2.2998,
+      "max_later_gain_pct": 0.4
+    },
+    {
+      "ticker": "IBIO",
+      "time_ms": 1765327860000,
+      "price": 2.29,
+      "max_later_gain_pct": 0.4
+    },
+    {
+      "ticker": "IRBT",
+      "time_ms": 1765303920000,
+      "price": 3.8443,
+      "max_later_gain_pct": 2.0
+    },
+    {
+      "ticker": "IRBT",
+      "time_ms": 1765310880000,
+      "price": 3.755,
+      "max_later_gain_pct": 0.4
+    },
+    {
+      "ticker": "IRBT",
+      "time_ms": 1765311840000,
+      "price": 3.6419,
+      "max_later_gain_pct": 3.5
+    },
+    {
+      "ticker": "IRBT",
+      "time_ms": 1765314900000,
+      "price": 3.6613,
+      "max_later_gain_pct": 3.0
+    },
+    {
+      "ticker": "IRBT",
+      "time_ms": 1765315920000,
+      "price": 3.69,
+      "max_later_gain_pct": 2.2
+    },
+    {
+      "ticker": "IRBT",
+      "time_ms": 1765316160000,
+      "price": 3.73,
+      "max_later_gain_pct": 1.1
+    },
+    {
+      "ticker": "IRBT",
+      "time_ms": 1765317120000,
+      "price": 3.69,
+      "max_later_gain_pct": 2.2
+    },
+    {
+      "ticker": "IRBT",
+      "time_ms": 1765317480000,
+      "price": 3.7497,
+      "max_later_gain_pct": 0.5
+    },
+    {
+      "ticker": "IRBT",
+      "time_ms": 1765317900000,
+      "price": 3.75,
+      "max_later_gain_pct": 0.5
+    },
+    {
+      "ticker": "IRBT",
+      "time_ms": 1765318560000,
+      "price": 3.7,
+      "max_later_gain_pct": 1.9
+    },
+    {
+      "ticker": "IRBT",
+      "time_ms": 1765319820000,
+      "price": 3.68,
+      "max_later_gain_pct": 2.4
+    },
+    {
+      "ticker": "IRBT",
+      "time_ms": 1765320480000,
+      "price": 3.7,
+      "max_later_gain_pct": 1.9
+    },
+    {
+      "ticker": "IRBT",
+      "time_ms": 1765320840000,
+      "price": 3.68,
+      "max_later_gain_pct": 2.4
+    },
+    {
+      "ticker": "IRBT",
+      "time_ms": 1765325160000,
+      "price": 3.75,
+      "max_later_gain_pct": 0.5
+    },
+    {
+      "ticker": "IRBT",
+      "time_ms": 1765325880000,
+      "price": 3.73,
+      "max_later_gain_pct": 1.1
+    },
+    {
+      "ticker": "IRBT",
+      "time_ms": 1765326960000,
+      "price": 3.7291,
+      "max_later_gain_pct": 1.1
+    },
+    {
+      "ticker": "JXG",
+      "time_ms": 1765325040000,
+      "price": 5.56,
+      "max_later_gain_pct": 2.7
+    },
+    {
+      "ticker": "LGHL",
+      "time_ms": 1765319700000,
+      "price": 5.9,
+      "max_later_gain_pct": 2.0
+    },
+    {
+      "ticker": "LGHL",
+      "time_ms": 1765321680000,
+      "price": 5.56,
+      "max_later_gain_pct": 3.8
+    },
+    {
+      "ticker": "LGHL",
+      "time_ms": 1765325880000,
+      "price": 4.93,
+      "max_later_gain_pct": 4.7
+    },
+    {
+      "ticker": "NCPL",
+      "time_ms": 1765318740000,
+      "price": 1.34,
+      "max_later_gain_pct": 2.2
+    },
+    {
+      "ticker": "NCPL",
+      "time_ms": 1765319520000,
+      "price": 1.3,
+      "max_later_gain_pct": 3.8
+    },
+    {
+      "ticker": "NCPL",
+      "time_ms": 1765326300000,
+      "price": 1.31,
+      "max_later_gain_pct": 2.3
+    },
+    {
+      "ticker": "NCPL",
+      "time_ms": 1765326960000,
+      "price": 1.31,
+      "max_later_gain_pct": 2.3
+    },
+    {
+      "ticker": "NCPL",
+      "time_ms": 1765327260000,
+      "price": 1.33,
+      "max_later_gain_pct": 0.8
+    },
+    {
+      "ticker": "TGL",
+      "time_ms": 1765304640000,
+      "price": 18.7,
+      "max_later_gain_pct": 0.5
+    },
+    {
+      "ticker": "TGL",
+      "time_ms": 1765305780000,
+      "price": 18.5638,
+      "max_later_gain_pct": 1.2
+    },
+    {
+      "ticker": "TGL",
+      "time_ms": 1765311780000,
+      "price": 17.48,
+      "max_later_gain_pct": 0.5
+    }
+  ],
+  "missed_entries": [],
+  "fake_rate": 39.5
+}

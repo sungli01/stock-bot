@@ -1,0 +1,443 @@
+{
+  "date": "2026-02-11",
+  "starting_portfolio": 3.1214315759507165e+23,
+  "ending_portfolio": 7.59720065837998e+23,
+  "day_pnl_krw": 4.475769082429263e+23,
+  "day_pnl_pct": 143.39,
+  "vol_spikes_detected": 140,
+  "signals_generated": 140,
+  "buys_executed": 10,
+  "trades": [
+    {
+      "ticker": "QVCGP",
+      "type": "partial",
+      "entry_price": 2.85,
+      "sell_price": 3,
+      "pnl_pct": 5.263157894736836,
+      "pnl_krw": 8.214293620922935e+20,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 3.0,
+      "entry_time_ms": 1770815040000,
+      "sell_time_ms": 1770815220000
+    },
+    {
+      "ticker": "QVCGP",
+      "type": "full",
+      "entry_price": 2.85,
+      "sell_price": 2.51,
+      "pnl_pct": -11.93,
+      "pnl_krw": -1.861906554075868e+21,
+      "reason": "STOP_LOSS (-11.9%)",
+      "hold_min": 10.0,
+      "queue_price": 2.2116,
+      "queue_to_entry_pct": 28.9,
+      "entry_time_ms": 1770815040000,
+      "sell_time_ms": 1770815640000,
+      "daily_high": 8.1399,
+      "max_possible_pct": 185.6
+    },
+    {
+      "ticker": "SUNE",
+      "type": "full",
+      "entry_price": 2.2501,
+      "sell_price": 2.0608,
+      "pnl_pct": -8.41,
+      "pnl_krw": -2.8798989988702443e+21,
+      "reason": "STOP_LOSS (-8.4%)",
+      "hold_min": 7.0,
+      "queue_price": 1.79,
+      "queue_to_entry_pct": 25.7,
+      "entry_time_ms": 1770820320000,
+      "sell_time_ms": 1770820740000,
+      "daily_high": 2.42,
+      "max_possible_pct": 7.6
+    },
+    {
+      "ticker": "KXIN",
+      "type": "full",
+      "entry_price": 1.1499,
+      "sell_price": 1.0408,
+      "pnl_pct": -9.49,
+      "pnl_krw": -3.545287914487896e+21,
+      "reason": "STOP_LOSS (-9.5%)",
+      "hold_min": 3.0,
+      "queue_price": 0.95,
+      "queue_to_entry_pct": 21.0,
+      "entry_time_ms": 1770820860000,
+      "sell_time_ms": 1770821040000,
+      "daily_high": 1.28,
+      "max_possible_pct": 11.3
+    },
+    {
+      "ticker": "QVCGP",
+      "type": "partial",
+      "entry_price": 3.1,
+      "sell_price": 3.34,
+      "pnl_pct": 7.741935483870965,
+      "pnl_krw": 1.5773821492006255e+21,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 2.0,
+      "entry_time_ms": 1770821520000,
+      "sell_time_ms": 1770821640000
+    },
+    {
+      "ticker": "QVCGP",
+      "type": "full",
+      "entry_price": 3.1,
+      "sell_price": 3.578,
+      "pnl_pct": 15.42,
+      "pnl_krw": 3.141619447157909e+21,
+      "reason": "PROFIT_TARGET +10% (15.4%)",
+      "hold_min": 4.0,
+      "queue_price": 2.57,
+      "queue_to_entry_pct": 20.6,
+      "entry_time_ms": 1770821520000,
+      "sell_time_ms": 1770821760000,
+      "daily_high": 8.1399,
+      "max_possible_pct": 162.6
+    },
+    {
+      "ticker": "CCHH",
+      "type": "partial",
+      "entry_price": 1.67,
+      "sell_price": 1.7801,
+      "pnl_pct": 6.592814371257494,
+      "pnl_krw": 1.3432542448694266e+21,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 9.0,
+      "entry_time_ms": 1770821580000,
+      "sell_time_ms": 1770822120000
+    },
+    {
+      "ticker": "HTLM",
+      "type": "full",
+      "entry_price": 4.18,
+      "sell_price": 3.645,
+      "pnl_pct": -12.8,
+      "pnl_krw": -6.075401158527327e+21,
+      "reason": "STOP_LOSS (-12.8%)",
+      "hold_min": 6.0,
+      "queue_price": 3.46,
+      "queue_to_entry_pct": 20.8,
+      "entry_time_ms": 1770822540000,
+      "sell_time_ms": 1770822900000,
+      "daily_high": 4.19,
+      "max_possible_pct": 0.2
+    },
+    {
+      "ticker": "CCHH",
+      "type": "full",
+      "entry_price": 1.67,
+      "sell_price": 1.5499,
+      "pnl_pct": -7.19,
+      "pnl_krw": -1.4652573552117883e+21,
+      "reason": "STOP_LOSS (-7.2%)",
+      "hold_min": 23.0,
+      "queue_price": 1.365,
+      "queue_to_entry_pct": 22.3,
+      "entry_time_ms": 1770821580000,
+      "sell_time_ms": 1770822960000,
+      "daily_high": 1.85,
+      "max_possible_pct": 10.8
+    },
+    {
+      "ticker": "QNCX",
+      "type": "full",
+      "entry_price": 0.8188,
+      "sell_price": 0.7192,
+      "pnl_pct": -12.16,
+      "pnl_krw": -6.277529898476403e+21,
+      "reason": "STOP_LOSS (-12.2%)",
+      "hold_min": 27.0,
+      "queue_price": 0.656001,
+      "queue_to_entry_pct": 24.8,
+      "entry_time_ms": 1770822900000,
+      "sell_time_ms": 1770824520000,
+      "daily_high": 0.9999,
+      "max_possible_pct": 22.1
+    },
+    {
+      "ticker": "NCI",
+      "type": "full",
+      "entry_price": 1.38,
+      "sell_price": 1.1701,
+      "pnl_pct": -15.21,
+      "pnl_krw": -8.137088104299997e+21,
+      "reason": "STOP_LOSS (-15.2%)",
+      "hold_min": 6.0,
+      "queue_price": 1,
+      "queue_to_entry_pct": 38.0,
+      "entry_time_ms": 1770824520000,
+      "sell_time_ms": 1770824880000,
+      "daily_high": 3.41,
+      "max_possible_pct": 147.1
+    },
+    {
+      "ticker": "NCI",
+      "type": "partial",
+      "entry_price": 2.22,
+      "sell_price": 2.6801,
+      "pnl_pct": 20.72522522522522,
+      "pnl_krw": 6.483551754824658e+21,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 6.0,
+      "entry_time_ms": 1770840060000,
+      "sell_time_ms": 1770840420000
+    },
+    {
+      "ticker": "NCI",
+      "type": "full",
+      "entry_price": 2.22,
+      "sell_price": 2.6801,
+      "pnl_pct": 20.73,
+      "pnl_krw": 6.483551754824658e+21,
+      "reason": "PROFIT_TARGET +10% (20.7%)",
+      "hold_min": 6.0,
+      "queue_price": 1.71,
+      "queue_to_entry_pct": 29.8,
+      "entry_time_ms": 1770840060000,
+      "sell_time_ms": 1770840420000,
+      "daily_high": 3.41,
+      "max_possible_pct": 53.6
+    },
+    {
+      "ticker": "KXIN",
+      "type": "full",
+      "entry_price": 1.0305,
+      "sell_price": 0.86,
+      "pnl_pct": -16.55,
+      "pnl_krw": -1.1601636473388145e+22,
+      "reason": "STOP_LOSS (-16.5%)",
+      "hold_min": 4.0,
+      "queue_price": 0.819,
+      "queue_to_entry_pct": 25.8,
+      "entry_time_ms": 1770848580000,
+      "sell_time_ms": 1770848820000,
+      "daily_high": 1.28,
+      "max_possible_pct": 24.2
+    }
+  ],
+  "fake_signals": [
+    {
+      "ticker": "ASTI",
+      "time_ms": 1770840120000,
+      "price": 9.0895,
+      "max_later_gain_pct": 2.6
+    },
+    {
+      "ticker": "ASTI",
+      "time_ms": 1770842940000,
+      "price": 8.73,
+      "max_later_gain_pct": 4.0
+    },
+    {
+      "ticker": "ASTI",
+      "time_ms": 1770843180000,
+      "price": 8.86,
+      "max_later_gain_pct": 2.5
+    },
+    {
+      "ticker": "ASTI",
+      "time_ms": 1770846360000,
+      "price": 8.6,
+      "max_later_gain_pct": 4.1
+    },
+    {
+      "ticker": "ASTI",
+      "time_ms": 1770847020000,
+      "price": 8.6653,
+      "max_later_gain_pct": 3.3
+    },
+    {
+      "ticker": "ASTI",
+      "time_ms": 1770850320000,
+      "price": 8.58,
+      "max_later_gain_pct": 4.3
+    },
+    {
+      "ticker": "ASTI",
+      "time_ms": 1770852600000,
+      "price": 8.77,
+      "max_later_gain_pct": 2.1
+    },
+    {
+      "ticker": "ASTI",
+      "time_ms": 1770854280000,
+      "price": 8.827,
+      "max_later_gain_pct": 1.1
+    },
+    {
+      "ticker": "ASTI",
+      "time_ms": 1770856200000,
+      "price": 8.7,
+      "max_later_gain_pct": 2.3
+    },
+    {
+      "ticker": "CCHH",
+      "time_ms": 1770830820000,
+      "price": 1.464868,
+      "max_later_gain_pct": 2.4
+    },
+    {
+      "ticker": "CCHH",
+      "time_ms": 1770835920000,
+      "price": 1.32,
+      "max_later_gain_pct": 3.8
+    },
+    {
+      "ticker": "CCHH",
+      "time_ms": 1770842520000,
+      "price": 1.09,
+      "max_later_gain_pct": 4.6
+    },
+    {
+      "ticker": "CCHH",
+      "time_ms": 1770849360000,
+      "price": 1.04,
+      "max_later_gain_pct": 1.9
+    },
+    {
+      "ticker": "HTLM",
+      "time_ms": 1770822540000,
+      "price": 4.18,
+      "max_later_gain_pct": 0.2
+    },
+    {
+      "ticker": "HTLM",
+      "time_ms": 1770840000000,
+      "price": 3.32,
+      "max_later_gain_pct": 1.6
+    },
+    {
+      "ticker": "HTLM",
+      "time_ms": 1770855120000,
+      "price": 3.26,
+      "max_later_gain_pct": 3.4
+    },
+    {
+      "ticker": "KXIN",
+      "time_ms": 1770827640000,
+      "price": 1.151,
+      "max_later_gain_pct": 4.3
+    },
+    {
+      "ticker": "KXIN",
+      "time_ms": 1770829560000,
+      "price": 1.08,
+      "max_later_gain_pct": 4.8
+    },
+    {
+      "ticker": "KXIN",
+      "time_ms": 1770830940000,
+      "price": 1.107,
+      "max_later_gain_pct": 0.3
+    },
+    {
+      "ticker": "KXIN",
+      "time_ms": 1770831480000,
+      "price": 1.06,
+      "max_later_gain_pct": 4.7
+    },
+    {
+      "ticker": "KXIN",
+      "time_ms": 1770831900000,
+      "price": 1.09,
+      "max_later_gain_pct": 1.8
+    },
+    {
+      "ticker": "KXIN",
+      "time_ms": 1770854940000,
+      "price": 0.7065,
+      "max_later_gain_pct": 3.3
+    },
+    {
+      "ticker": "NCI",
+      "time_ms": 1770856560000,
+      "price": 1.82,
+      "max_later_gain_pct": 4.9
+    },
+    {
+      "ticker": "QVCGP",
+      "time_ms": 1770843420000,
+      "price": 5.95,
+      "max_later_gain_pct": 0.7
+    },
+    {
+      "ticker": "QVCGP",
+      "time_ms": 1770848940000,
+      "price": 5.5635,
+      "max_later_gain_pct": 2.3
+    },
+    {
+      "ticker": "QVCGP",
+      "time_ms": 1770853980000,
+      "price": 5.36,
+      "max_later_gain_pct": 3.5
+    },
+    {
+      "ticker": "SIF",
+      "time_ms": 1770824340000,
+      "price": 9.22,
+      "max_later_gain_pct": 3.0
+    },
+    {
+      "ticker": "SIF",
+      "time_ms": 1770830820000,
+      "price": 8.72,
+      "max_later_gain_pct": 4.9
+    },
+    {
+      "ticker": "SIF",
+      "time_ms": 1770837600000,
+      "price": 8.73,
+      "max_later_gain_pct": 4.8
+    },
+    {
+      "ticker": "SIF",
+      "time_ms": 1770838320000,
+      "price": 9,
+      "max_later_gain_pct": 1.7
+    },
+    {
+      "ticker": "SIF",
+      "time_ms": 1770843120000,
+      "price": 8.7799,
+      "max_later_gain_pct": 4.2
+    },
+    {
+      "ticker": "SIF",
+      "time_ms": 1770843480000,
+      "price": 8.96,
+      "max_later_gain_pct": 2.1
+    },
+    {
+      "ticker": "SIF",
+      "time_ms": 1770856560000,
+      "price": 9.15,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "SUNE",
+      "time_ms": 1770853080000,
+      "price": 2,
+      "max_later_gain_pct": 0.5
+    },
+    {
+      "ticker": "SUNE",
+      "time_ms": 1770853320000,
+      "price": 1.99,
+      "max_later_gain_pct": 1.0
+    }
+  ],
+  "missed_entries": [
+    {
+      "ticker": "SIF",
+      "daily_change_pct": 32.16,
+      "daily_volume": 612360,
+      "had_vol_spike": true,
+      "meets_daily_vol": true,
+      "reason": "price_not_triggered"
+    }
+  ],
+  "fake_rate": 25.0
+}

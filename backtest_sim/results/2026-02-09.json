@@ -1,0 +1,842 @@
+{
+  "date": "2026-02-09",
+  "starting_portfolio": 7.792404100161548e+22,
+  "ending_portfolio": 1.4489077685960376e+23,
+  "day_pnl_krw": 6.696673585798828e+22,
+  "day_pnl_pct": 85.94,
+  "vol_spikes_detected": 266,
+  "signals_generated": 266,
+  "buys_executed": 7,
+  "trades": [
+    {
+      "ticker": "UOKA",
+      "type": "full",
+      "entry_price": 2.55,
+      "sell_price": 2.29,
+      "pnl_pct": -10.2,
+      "pnl_krw": -7.945196337419612e+20,
+      "reason": "STOP_LOSS (-10.2%)",
+      "hold_min": 15.0,
+      "queue_price": 2.085,
+      "queue_to_entry_pct": 22.3,
+      "entry_time_ms": 1770629280000,
+      "sell_time_ms": 1770630180000,
+      "daily_high": 4.21,
+      "max_possible_pct": 65.1
+    },
+    {
+      "ticker": "CCHH",
+      "type": "full",
+      "entry_price": 0.8353,
+      "sell_price": 0.7135,
+      "pnl_pct": -14.58,
+      "pnl_krw": -1.238296482941059e+21,
+      "reason": "STOP_LOSS (-14.6%)",
+      "hold_min": 1.0,
+      "queue_price": 0.6951,
+      "queue_to_entry_pct": 20.2,
+      "entry_time_ms": 1770642060000,
+      "sell_time_ms": 1770642120000,
+      "daily_high": 1.5,
+      "max_possible_pct": 79.6
+    },
+    {
+      "ticker": "LIMN",
+      "type": "full",
+      "entry_price": 2.11,
+      "sell_price": 2.04,
+      "pnl_pct": -3.32,
+      "pnl_krw": -2.817315062920585e+20,
+      "reason": "TIME_LIMIT (-3.3%)",
+      "hold_min": 45.0,
+      "queue_price": 1.721,
+      "queue_to_entry_pct": 22.6,
+      "entry_time_ms": 1770640380000,
+      "sell_time_ms": 1770643080000,
+      "daily_high": 2.83,
+      "max_possible_pct": 34.1
+    },
+    {
+      "ticker": "BRLS",
+      "type": "full",
+      "entry_price": 0.83,
+      "sell_price": 0.720101,
+      "pnl_pct": -13.24,
+      "pnl_krw": -1.329199044388574e+21,
+      "reason": "STOP_LOSS (-13.2%)",
+      "hold_min": 2.0,
+      "queue_price": 0.68,
+      "queue_to_entry_pct": 22.1,
+      "entry_time_ms": 1770647820000,
+      "sell_time_ms": 1770647940000,
+      "daily_high": 1.88,
+      "max_possible_pct": 126.5
+    },
+    {
+      "ticker": "BRLS",
+      "type": "partial",
+      "entry_price": 1.16,
+      "sell_price": 1.31,
+      "pnl_pct": 12.93103448275863,
+      "pnl_krw": 7.053602055081553e+20,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 5.0,
+      "entry_time_ms": 1770649260000,
+      "sell_time_ms": 1770649560000
+    },
+    {
+      "ticker": "BRLS",
+      "type": "full",
+      "entry_price": 1.16,
+      "sell_price": 1.31,
+      "pnl_pct": 12.93,
+      "pnl_krw": 7.053602055081553e+20,
+      "reason": "PROFIT_TARGET +10% (12.9%)",
+      "hold_min": 5.0,
+      "queue_price": 0.85,
+      "queue_to_entry_pct": 36.5,
+      "entry_time_ms": 1770649260000,
+      "sell_time_ms": 1770649560000,
+      "daily_high": 1.88,
+      "max_possible_pct": 62.1
+    },
+    {
+      "ticker": "UUU",
+      "type": "full",
+      "entry_price": 5.74,
+      "sell_price": 5.28,
+      "pnl_pct": -8.01,
+      "pnl_krw": -9.730202361046982e+20,
+      "reason": "STOP_LOSS (-8.0%)",
+      "hold_min": 8.0,
+      "queue_price": 4.73,
+      "queue_to_entry_pct": 21.4,
+      "entry_time_ms": 1770650640000,
+      "sell_time_ms": 1770651120000,
+      "daily_high": 6.1,
+      "max_possible_pct": 6.3
+    },
+    {
+      "ticker": "BRLS",
+      "type": "full",
+      "entry_price": 1.81,
+      "sell_price": 1.68,
+      "pnl_pct": -7.18,
+      "pnl_krw": -9.522649641935543e+20,
+      "reason": "STOP_LOSS (-7.2%)",
+      "hold_min": 21.0,
+      "queue_price": 1.49,
+      "queue_to_entry_pct": 21.5,
+      "entry_time_ms": 1770683640000,
+      "sell_time_ms": 1770684900000,
+      "daily_high": 1.88,
+      "max_possible_pct": 3.9
+    }
+  ],
+  "fake_signals": [
+    {
+      "ticker": "BMNG",
+      "time_ms": 1770659580000,
+      "price": 1.63,
+      "max_later_gain_pct": 4.3
+    },
+    {
+      "ticker": "BMNG",
+      "time_ms": 1770660420000,
+      "price": 1.64,
+      "max_later_gain_pct": 3.7
+    },
+    {
+      "ticker": "BMNG",
+      "time_ms": 1770660960000,
+      "price": 1.62,
+      "max_later_gain_pct": 4.9
+    },
+    {
+      "ticker": "BMNG",
+      "time_ms": 1770664020000,
+      "price": 1.64,
+      "max_later_gain_pct": 3.7
+    },
+    {
+      "ticker": "BMNG",
+      "time_ms": 1770665400000,
+      "price": 1.6613,
+      "max_later_gain_pct": 2.3
+    },
+    {
+      "ticker": "BMNG",
+      "time_ms": 1770665580000,
+      "price": 1.6768,
+      "max_later_gain_pct": 1.4
+    },
+    {
+      "ticker": "BMNG",
+      "time_ms": 1770667740000,
+      "price": 1.69,
+      "max_later_gain_pct": 0.6
+    },
+    {
+      "ticker": "BMNG",
+      "time_ms": 1770668880000,
+      "price": 1.6766,
+      "max_later_gain_pct": 1.4
+    },
+    {
+      "ticker": "BMNG",
+      "time_ms": 1770670140000,
+      "price": 1.69,
+      "max_later_gain_pct": 0.6
+    },
+    {
+      "ticker": "BMNG",
+      "time_ms": 1770670440000,
+      "price": 1.665,
+      "max_later_gain_pct": 0.3
+    },
+    {
+      "ticker": "BMNG",
+      "time_ms": 1770671940000,
+      "price": 1.63,
+      "max_later_gain_pct": 1.2
+    },
+    {
+      "ticker": "BMNG",
+      "time_ms": 1770672540000,
+      "price": 1.63,
+      "max_later_gain_pct": 1.2
+    },
+    {
+      "ticker": "BMNG",
+      "time_ms": 1770673500000,
+      "price": 1.61,
+      "max_later_gain_pct": 2.5
+    },
+    {
+      "ticker": "BMNG",
+      "time_ms": 1770673860000,
+      "price": 1.63,
+      "max_later_gain_pct": 1.2
+    },
+    {
+      "ticker": "BMNG",
+      "time_ms": 1770675960000,
+      "price": 1.6497,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "BMNG",
+      "time_ms": 1770679500000,
+      "price": 1.61,
+      "max_later_gain_pct": 1.9
+    },
+    {
+      "ticker": "BMNU",
+      "time_ms": 1770662460000,
+      "price": 2.395,
+      "max_later_gain_pct": 4.8
+    },
+    {
+      "ticker": "BMNU",
+      "time_ms": 1770663240000,
+      "price": 2.41,
+      "max_later_gain_pct": 4.1
+    },
+    {
+      "ticker": "BMNU",
+      "time_ms": 1770666420000,
+      "price": 2.4698,
+      "max_later_gain_pct": 1.6
+    },
+    {
+      "ticker": "BMNU",
+      "time_ms": 1770672720000,
+      "price": 2.4,
+      "max_later_gain_pct": 1.3
+    },
+    {
+      "ticker": "BMNU",
+      "time_ms": 1770673800000,
+      "price": 2.38,
+      "max_later_gain_pct": 2.1
+    },
+    {
+      "ticker": "BMNU",
+      "time_ms": 1770674820000,
+      "price": 2.42,
+      "max_later_gain_pct": 0.4
+    },
+    {
+      "ticker": "BMNU",
+      "time_ms": 1770675600000,
+      "price": 2.4,
+      "max_later_gain_pct": 1.3
+    },
+    {
+      "ticker": "BMNU",
+      "time_ms": 1770675960000,
+      "price": 2.42,
+      "max_later_gain_pct": 0.4
+    },
+    {
+      "ticker": "BMNU",
+      "time_ms": 1770676200000,
+      "price": 2.43,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "BMNU",
+      "time_ms": 1770682860000,
+      "price": 2.3614,
+      "max_later_gain_pct": 0.7
+    },
+    {
+      "ticker": "HIMZ",
+      "time_ms": 1770631800000,
+      "price": 1.915,
+      "max_later_gain_pct": 3.9
+    },
+    {
+      "ticker": "HIMZ",
+      "time_ms": 1770632160000,
+      "price": 1.91,
+      "max_later_gain_pct": 4.2
+    },
+    {
+      "ticker": "HIMZ",
+      "time_ms": 1770637980000,
+      "price": 1.92,
+      "max_later_gain_pct": 3.6
+    },
+    {
+      "ticker": "HIMZ",
+      "time_ms": 1770638400000,
+      "price": 1.9,
+      "max_later_gain_pct": 4.7
+    },
+    {
+      "ticker": "HIMZ",
+      "time_ms": 1770668100000,
+      "price": 1.76,
+      "max_later_gain_pct": 4.5
+    },
+    {
+      "ticker": "HIMZ",
+      "time_ms": 1770671280000,
+      "price": 1.76,
+      "max_later_gain_pct": 2.8
+    },
+    {
+      "ticker": "HIMZ",
+      "time_ms": 1770671700000,
+      "price": 1.77,
+      "max_later_gain_pct": 2.3
+    },
+    {
+      "ticker": "HIMZ",
+      "time_ms": 1770673320000,
+      "price": 1.7802,
+      "max_later_gain_pct": 1.7
+    },
+    {
+      "ticker": "HIMZ",
+      "time_ms": 1770674760000,
+      "price": 1.7702,
+      "max_later_gain_pct": 2.2
+    },
+    {
+      "ticker": "HIMZ",
+      "time_ms": 1770675540000,
+      "price": 1.76,
+      "max_later_gain_pct": 2.8
+    },
+    {
+      "ticker": "HIMZ",
+      "time_ms": 1770679740000,
+      "price": 1.75,
+      "max_later_gain_pct": 3.4
+    },
+    {
+      "ticker": "HIMZ",
+      "time_ms": 1770680220000,
+      "price": 1.7502,
+      "max_later_gain_pct": 3.4
+    },
+    {
+      "ticker": "HIMZ",
+      "time_ms": 1770680760000,
+      "price": 1.7598,
+      "max_later_gain_pct": 2.9
+    },
+    {
+      "ticker": "HLP",
+      "time_ms": 1770653280000,
+      "price": 1.5,
+      "max_later_gain_pct": 1.3
+    },
+    {
+      "ticker": "HLP",
+      "time_ms": 1770670380000,
+      "price": 1.12,
+      "max_later_gain_pct": 4.5
+    },
+    {
+      "ticker": "HLP",
+      "time_ms": 1770670740000,
+      "price": 1.13,
+      "max_later_gain_pct": 3.5
+    },
+    {
+      "ticker": "HUMA",
+      "time_ms": 1770659760000,
+      "price": 1.2,
+      "max_later_gain_pct": 3.3
+    },
+    {
+      "ticker": "HUMA",
+      "time_ms": 1770660840000,
+      "price": 1.203,
+      "max_later_gain_pct": 3.1
+    },
+    {
+      "ticker": "HUMA",
+      "time_ms": 1770666600000,
+      "price": 1.21,
+      "max_later_gain_pct": 2.5
+    },
+    {
+      "ticker": "HUMA",
+      "time_ms": 1770667080000,
+      "price": 1.2099,
+      "max_later_gain_pct": 2.5
+    },
+    {
+      "ticker": "HUMA",
+      "time_ms": 1770667980000,
+      "price": 1.205,
+      "max_later_gain_pct": 2.9
+    },
+    {
+      "ticker": "HUMA",
+      "time_ms": 1770669060000,
+      "price": 1.205,
+      "max_later_gain_pct": 2.9
+    },
+    {
+      "ticker": "HUMA",
+      "time_ms": 1770670380000,
+      "price": 1.195,
+      "max_later_gain_pct": 3.8
+    },
+    {
+      "ticker": "HUMA",
+      "time_ms": 1770671880000,
+      "price": 1.22,
+      "max_later_gain_pct": 1.6
+    },
+    {
+      "ticker": "HUMA",
+      "time_ms": 1770672960000,
+      "price": 1.23,
+      "max_later_gain_pct": 0.8
+    },
+    {
+      "ticker": "HUMA",
+      "time_ms": 1770673860000,
+      "price": 1.24,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "HUMA",
+      "time_ms": 1770676920000,
+      "price": 1.23,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "HUMA",
+      "time_ms": 1770680520000,
+      "price": 1.22,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "HUMA",
+      "time_ms": 1770681780000,
+      "price": 1.2,
+      "max_later_gain_pct": 1.7
+    },
+    {
+      "ticker": "HUMA",
+      "time_ms": 1770683580000,
+      "price": 1.2,
+      "max_later_gain_pct": 1.7
+    },
+    {
+      "ticker": "IFBD",
+      "time_ms": 1770674700000,
+      "price": 0.999,
+      "max_later_gain_pct": 4.1
+    },
+    {
+      "ticker": "IFBD",
+      "time_ms": 1770675120000,
+      "price": 1.01,
+      "max_later_gain_pct": 3.0
+    },
+    {
+      "ticker": "IFBD",
+      "time_ms": 1770675900000,
+      "price": 0.9999,
+      "max_later_gain_pct": 2.0
+    },
+    {
+      "ticker": "IFBD",
+      "time_ms": 1770677760000,
+      "price": 0.9855,
+      "max_later_gain_pct": 3.5
+    },
+    {
+      "ticker": "IFBD",
+      "time_ms": 1770679020000,
+      "price": 0.993,
+      "max_later_gain_pct": 2.7
+    },
+    {
+      "ticker": "IFBD",
+      "time_ms": 1770682500000,
+      "price": 0.96,
+      "max_later_gain_pct": 2.2
+    },
+    {
+      "ticker": "IFBD",
+      "time_ms": 1770684000000,
+      "price": 0.9499,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "LIMN",
+      "time_ms": 1770670020000,
+      "price": 1.4301,
+      "max_later_gain_pct": 4.2
+    },
+    {
+      "ticker": "LIMN",
+      "time_ms": 1770673440000,
+      "price": 1.45,
+      "max_later_gain_pct": 2.8
+    },
+    {
+      "ticker": "LIMN",
+      "time_ms": 1770678120000,
+      "price": 1.44,
+      "max_later_gain_pct": 1.4
+    },
+    {
+      "ticker": "LIMN",
+      "time_ms": 1770680040000,
+      "price": 1.43,
+      "max_later_gain_pct": 1.4
+    },
+    {
+      "ticker": "LIMN",
+      "time_ms": 1770681000000,
+      "price": 1.44,
+      "max_later_gain_pct": 0.7
+    },
+    {
+      "ticker": "LIMN",
+      "time_ms": 1770681660000,
+      "price": 1.4315,
+      "max_later_gain_pct": 0.6
+    },
+    {
+      "ticker": "LIMN",
+      "time_ms": 1770682380000,
+      "price": 1.42,
+      "max_later_gain_pct": 1.4
+    },
+    {
+      "ticker": "LIMN",
+      "time_ms": 1770682920000,
+      "price": 1.43,
+      "max_later_gain_pct": 0.7
+    },
+    {
+      "ticker": "LIMN",
+      "time_ms": 1770683460000,
+      "price": 1.4303,
+      "max_later_gain_pct": 0.7
+    },
+    {
+      "ticker": "LIMN",
+      "time_ms": 1770684600000,
+      "price": 1.4269,
+      "max_later_gain_pct": 0.2
+    },
+    {
+      "ticker": "MSTU",
+      "time_ms": 1770671760000,
+      "price": 5.75,
+      "max_later_gain_pct": 0.3
+    },
+    {
+      "ticker": "MSTU",
+      "time_ms": 1770677640000,
+      "price": 5.75,
+      "max_later_gain_pct": 0.2
+    },
+    {
+      "ticker": "MSTU",
+      "time_ms": 1770678420000,
+      "price": 5.7199,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "MSTU",
+      "time_ms": 1770678660000,
+      "price": 5.69,
+      "max_later_gain_pct": 0.5
+    },
+    {
+      "ticker": "MSTU",
+      "time_ms": 1770681420000,
+      "price": 5.67,
+      "max_later_gain_pct": 0.2
+    },
+    {
+      "ticker": "MSTU",
+      "time_ms": 1770681780000,
+      "price": 5.67,
+      "max_later_gain_pct": 0.2
+    },
+    {
+      "ticker": "MSTU",
+      "time_ms": 1770683640000,
+      "price": 5.6215,
+      "max_later_gain_pct": 0.2
+    },
+    {
+      "ticker": "MSTU",
+      "time_ms": 1770684060000,
+      "price": 5.61,
+      "max_later_gain_pct": 0.4
+    },
+    {
+      "ticker": "MSTU",
+      "time_ms": 1770684120000,
+      "price": 5.6109,
+      "max_later_gain_pct": 0.3
+    },
+    {
+      "ticker": "MSTX",
+      "time_ms": 1770657300000,
+      "price": 2.6199,
+      "max_later_gain_pct": 3.8
+    },
+    {
+      "ticker": "MSTX",
+      "time_ms": 1770657660000,
+      "price": 2.6301,
+      "max_later_gain_pct": 3.4
+    },
+    {
+      "ticker": "MSTX",
+      "time_ms": 1770660840000,
+      "price": 2.6601,
+      "max_later_gain_pct": 1.1
+    },
+    {
+      "ticker": "MSTX",
+      "time_ms": 1770665760000,
+      "price": 2.625,
+      "max_later_gain_pct": 2.5
+    },
+    {
+      "ticker": "MSTX",
+      "time_ms": 1770668040000,
+      "price": 2.62,
+      "max_later_gain_pct": 2.7
+    },
+    {
+      "ticker": "MSTX",
+      "time_ms": 1770668460000,
+      "price": 2.59,
+      "max_later_gain_pct": 3.9
+    },
+    {
+      "ticker": "MSTX",
+      "time_ms": 1770672720000,
+      "price": 2.63,
+      "max_later_gain_pct": 1.1
+    },
+    {
+      "ticker": "MSTX",
+      "time_ms": 1770674940000,
+      "price": 2.63,
+      "max_later_gain_pct": 1.1
+    },
+    {
+      "ticker": "MSTX",
+      "time_ms": 1770675180000,
+      "price": 2.65,
+      "max_later_gain_pct": 0.4
+    },
+    {
+      "ticker": "MSTX",
+      "time_ms": 1770675960000,
+      "price": 2.64,
+      "max_later_gain_pct": 0.8
+    },
+    {
+      "ticker": "MSTX",
+      "time_ms": 1770677400000,
+      "price": 2.66,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "MSTX",
+      "time_ms": 1770677700000,
+      "price": 2.63,
+      "max_later_gain_pct": 0.8
+    },
+    {
+      "ticker": "MSTX",
+      "time_ms": 1770678180000,
+      "price": 2.63,
+      "max_later_gain_pct": 0.4
+    },
+    {
+      "ticker": "MSTX",
+      "time_ms": 1770678780000,
+      "price": 2.63,
+      "max_later_gain_pct": 0.4
+    },
+    {
+      "ticker": "MSTX",
+      "time_ms": 1770680100000,
+      "price": 2.6299,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "MSTX",
+      "time_ms": 1770680460000,
+      "price": 2.6285,
+      "max_later_gain_pct": 0.1
+    },
+    {
+      "ticker": "MSTX",
+      "time_ms": 1770680820000,
+      "price": 2.62,
+      "max_later_gain_pct": 0.2
+    },
+    {
+      "ticker": "MSTX",
+      "time_ms": 1770681900000,
+      "price": 2.6104,
+      "max_later_gain_pct": 0.4
+    },
+    {
+      "ticker": "MSTX",
+      "time_ms": 1770682800000,
+      "price": 2.595,
+      "max_later_gain_pct": 0.2
+    },
+    {
+      "ticker": "MSTX",
+      "time_ms": 1770683160000,
+      "price": 2.58,
+      "max_later_gain_pct": 0.8
+    },
+    {
+      "ticker": "MSTX",
+      "time_ms": 1770684780000,
+      "price": 2.59,
+      "max_later_gain_pct": 0.4
+    },
+    {
+      "ticker": "UUU",
+      "time_ms": 1770659580000,
+      "price": 5.325,
+      "max_later_gain_pct": 3.3
+    },
+    {
+      "ticker": "UUU",
+      "time_ms": 1770662400000,
+      "price": 5.34,
+      "max_later_gain_pct": 3.0
+    },
+    {
+      "ticker": "UUU",
+      "time_ms": 1770663060000,
+      "price": 5.445,
+      "max_later_gain_pct": 1.0
+    },
+    {
+      "ticker": "UUU",
+      "time_ms": 1770663600000,
+      "price": 5.5,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "UUU",
+      "time_ms": 1770667020000,
+      "price": 5.01,
+      "max_later_gain_pct": 2.8
+    },
+    {
+      "ticker": "UUU",
+      "time_ms": 1770668100000,
+      "price": 5.11,
+      "max_later_gain_pct": 0.8
+    },
+    {
+      "ticker": "UUU",
+      "time_ms": 1770670560000,
+      "price": 5,
+      "max_later_gain_pct": 2.6
+    },
+    {
+      "ticker": "VSME",
+      "time_ms": 1770658200000,
+      "price": 1.5,
+      "max_later_gain_pct": 3.3
+    },
+    {
+      "ticker": "VSME",
+      "time_ms": 1770665340000,
+      "price": 1.5,
+      "max_later_gain_pct": 3.3
+    },
+    {
+      "ticker": "VSME",
+      "time_ms": 1770667860000,
+      "price": 1.48,
+      "max_later_gain_pct": 4.7
+    },
+    {
+      "ticker": "VSME",
+      "time_ms": 1770669060000,
+      "price": 1.51,
+      "max_later_gain_pct": 2.6
+    },
+    {
+      "ticker": "VSME",
+      "time_ms": 1770669360000,
+      "price": 1.505,
+      "max_later_gain_pct": 3.0
+    },
+    {
+      "ticker": "VSME",
+      "time_ms": 1770670260000,
+      "price": 1.48,
+      "max_later_gain_pct": 4.7
+    },
+    {
+      "ticker": "VSME",
+      "time_ms": 1770670500000,
+      "price": 1.495,
+      "max_later_gain_pct": 3.7
+    }
+  ],
+  "missed_entries": [],
+  "fake_rate": 44.0
+}

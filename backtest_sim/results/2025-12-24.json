@@ -1,0 +1,279 @@
+{
+  "date": "2025-12-24",
+  "starting_portfolio": 5487096308649.0,
+  "ending_portfolio": 8948901758290.0,
+  "day_pnl_krw": 3461805449641.0,
+  "day_pnl_pct": 63.09,
+  "vol_spikes_detected": 70,
+  "signals_generated": 70,
+  "buys_executed": 5,
+  "trades": [
+    {
+      "ticker": "TNMG",
+      "type": "full",
+      "entry_price": 3.36,
+      "sell_price": 3.12,
+      "pnl_pct": -7.14,
+      "pnl_krw": -39193545062.0,
+      "reason": "STOP_LOSS (-7.1%)",
+      "hold_min": 3.0,
+      "queue_price": 2.78,
+      "queue_to_entry_pct": 20.9,
+      "entry_time_ms": 1766579220000,
+      "sell_time_ms": 1766579400000,
+      "daily_high": 3.7897,
+      "max_possible_pct": 12.8
+    },
+    {
+      "ticker": "HXHX",
+      "type": "partial",
+      "entry_price": 1.0352,
+      "sell_price": 1.1199,
+      "pnl_pct": 8.181993817619793,
+      "pnl_krw": 24532122769.03473,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 1.0,
+      "entry_time_ms": 1766587140000,
+      "sell_time_ms": 1766587200000
+    },
+    {
+      "ticker": "HXHX",
+      "type": "full",
+      "entry_price": 1.0352,
+      "sell_price": 1.06,
+      "pnl_pct": 2.4,
+      "pnl_krw": 7182959205.0,
+      "reason": "TRAILING (2.4%, peak=8.2%)",
+      "hold_min": 2.0,
+      "queue_price": 0.8488,
+      "queue_to_entry_pct": 22.0,
+      "entry_time_ms": 1766587140000,
+      "sell_time_ms": 1766587260000,
+      "daily_high": 1.1799,
+      "max_possible_pct": 14.0
+    },
+    {
+      "ticker": "EUDA",
+      "type": "partial",
+      "entry_price": 2.53,
+      "sell_price": 2.7,
+      "pnl_pct": 6.719367588932812,
+      "pnl_krw": 20146721483.33716,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 20.0,
+      "entry_time_ms": 1766586600000,
+      "sell_time_ms": 1766587800000
+    },
+    {
+      "ticker": "EUDA",
+      "type": "full",
+      "entry_price": 2.53,
+      "sell_price": 2.8399,
+      "pnl_pct": 12.25,
+      "pnl_krw": 36726288163.0,
+      "reason": "PROFIT_TARGET +10% (12.2%)",
+      "hold_min": 21.0,
+      "queue_price": 2.03,
+      "queue_to_entry_pct": 24.6,
+      "entry_time_ms": 1766586600000,
+      "sell_time_ms": 1766587860000,
+      "daily_high": 2.96,
+      "max_possible_pct": 17.0
+    },
+    {
+      "ticker": "AMCI",
+      "type": "partial",
+      "entry_price": 7.29,
+      "sell_price": 7.839,
+      "pnl_pct": 7.530864197530862,
+      "pnl_krw": 27429376596.46515,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 5.0,
+      "entry_time_ms": 1766587920000,
+      "sell_time_ms": 1766588220000
+    },
+    {
+      "ticker": "AMCI",
+      "type": "full",
+      "entry_price": 7.29,
+      "sell_price": 7.99,
+      "pnl_pct": 9.6,
+      "pnl_krw": 34973704221.0,
+      "reason": "TRAILING (9.6%, peak=20.6%)",
+      "hold_min": 10.0,
+      "queue_price": 6.07,
+      "queue_to_entry_pct": 20.1,
+      "entry_time_ms": 1766587920000,
+      "sell_time_ms": 1766588520000,
+      "daily_high": 12.47,
+      "max_possible_pct": 71.1
+    },
+    {
+      "ticker": "AMCI",
+      "type": "partial",
+      "entry_price": 10.28,
+      "sell_price": 10.795,
+      "pnl_pct": 5.009727626459148,
+      "pnl_krw": 20227722987.70746,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 22.0,
+      "entry_time_ms": 1766590440000,
+      "sell_time_ms": 1766591760000
+    },
+    {
+      "ticker": "AMCI",
+      "type": "full",
+      "entry_price": 10.28,
+      "sell_price": 11.445,
+      "pnl_pct": 11.33,
+      "pnl_krw": 45757858797.0,
+      "reason": "PROFIT_TARGET +10% (11.3%)",
+      "hold_min": 28.0,
+      "queue_price": 8.5099,
+      "queue_to_entry_pct": 20.8,
+      "entry_time_ms": 1766590440000,
+      "sell_time_ms": 1766592120000,
+      "daily_high": 12.47,
+      "max_possible_pct": 21.3
+    }
+  ],
+  "fake_signals": [
+    {
+      "ticker": "CREV",
+      "time_ms": 1766589660000,
+      "price": 2.0198,
+      "max_later_gain_pct": 4.5
+    },
+    {
+      "ticker": "CREV",
+      "time_ms": 1766591280000,
+      "price": 1.96,
+      "max_later_gain_pct": 3.0
+    },
+    {
+      "ticker": "EUDA",
+      "time_ms": 1766587860000,
+      "price": 2.8399,
+      "max_later_gain_pct": 4.2
+    },
+    {
+      "ticker": "EUDA",
+      "time_ms": 1766596500000,
+      "price": 2.875,
+      "max_later_gain_pct": 0.9
+    },
+    {
+      "ticker": "HXHX",
+      "time_ms": 1766594160000,
+      "price": 0.8845,
+      "max_later_gain_pct": 3.8
+    },
+    {
+      "ticker": "HXHX",
+      "time_ms": 1766595300000,
+      "price": 0.8733,
+      "max_later_gain_pct": 1.5
+    },
+    {
+      "ticker": "HXHX",
+      "time_ms": 1766597040000,
+      "price": 0.8736,
+      "max_later_gain_pct": 1.5
+    },
+    {
+      "ticker": "HXHX",
+      "time_ms": 1766597520000,
+      "price": 0.8743,
+      "max_later_gain_pct": 1.4
+    },
+    {
+      "ticker": "HXHX",
+      "time_ms": 1766597820000,
+      "price": 0.8734,
+      "max_later_gain_pct": 1.5
+    },
+    {
+      "ticker": "TEAD",
+      "time_ms": 1766595660000,
+      "price": 0.8794,
+      "max_later_gain_pct": 4.0
+    },
+    {
+      "ticker": "TEAD",
+      "time_ms": 1766596680000,
+      "price": 0.90805,
+      "max_later_gain_pct": 0.7
+    },
+    {
+      "ticker": "TEAD",
+      "time_ms": 1766597220000,
+      "price": 0.8956,
+      "max_later_gain_pct": 1.9
+    },
+    {
+      "ticker": "TNMG",
+      "time_ms": 1766591460000,
+      "price": 2.59,
+      "max_later_gain_pct": 2.7
+    },
+    {
+      "ticker": "TNMG",
+      "time_ms": 1766594580000,
+      "price": 2.57,
+      "max_later_gain_pct": 1.2
+    },
+    {
+      "ticker": "TNMG",
+      "time_ms": 1766595180000,
+      "price": 2.54,
+      "max_later_gain_pct": 2.4
+    },
+    {
+      "ticker": "TNMG",
+      "time_ms": 1766596860000,
+      "price": 2.51,
+      "max_later_gain_pct": 3.6
+    },
+    {
+      "ticker": "TNMG",
+      "time_ms": 1766597400000,
+      "price": 2.5001,
+      "max_later_gain_pct": 4.0
+    },
+    {
+      "ticker": "TNMG",
+      "time_ms": 1766598240000,
+      "price": 2.55,
+      "max_later_gain_pct": 2.0
+    },
+    {
+      "ticker": "TNMG",
+      "time_ms": 1766598720000,
+      "price": 2.53,
+      "max_later_gain_pct": 2.8
+    },
+    {
+      "ticker": "TNMG",
+      "time_ms": 1766599080000,
+      "price": 2.525,
+      "max_later_gain_pct": 3.0
+    },
+    {
+      "ticker": "TNMG",
+      "time_ms": 1766599140000,
+      "price": 2.56,
+      "max_later_gain_pct": 1.6
+    }
+  ],
+  "missed_entries": [
+    {
+      "ticker": "SOBR",
+      "daily_change_pct": 42.96,
+      "daily_volume": 138559226.0,
+      "had_vol_spike": true,
+      "meets_daily_vol": true,
+      "reason": "price_not_triggered"
+    }
+  ],
+  "fake_rate": 30.0
+}

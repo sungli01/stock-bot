@@ -1,0 +1,444 @@
+{
+  "date": "2026-02-02",
+  "starting_portfolio": 1.0789666584241026e+21,
+  "ending_portfolio": 3.1321188386838555e+21,
+  "day_pnl_krw": 2.0531521802597528e+21,
+  "day_pnl_pct": 190.29,
+  "vol_spikes_detected": 98,
+  "signals_generated": 98,
+  "buys_executed": 11,
+  "trades": [
+    {
+      "ticker": "FUSE",
+      "type": "partial",
+      "entry_price": 2.19,
+      "sell_price": 2.31,
+      "pnl_pct": 5.47945205479452,
+      "pnl_krw": 2.956073036778365e+18,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 4.0,
+      "entry_time_ms": 1770037620000,
+      "sell_time_ms": 1770037860000
+    },
+    {
+      "ticker": "FUSE",
+      "type": "full",
+      "entry_price": 2.19,
+      "sell_price": 2.61,
+      "pnl_pct": 19.18,
+      "pnl_krw": 1.0346255628724265e+19,
+      "reason": "PROFIT_TARGET +10% (19.2%)",
+      "hold_min": 6.0,
+      "queue_price": 1.72,
+      "queue_to_entry_pct": 27.3,
+      "entry_time_ms": 1770037620000,
+      "sell_time_ms": 1770037980000,
+      "daily_high": 3.67,
+      "max_possible_pct": 67.6
+    },
+    {
+      "ticker": "FUSE",
+      "type": "partial",
+      "entry_price": 2.9309,
+      "sell_price": 3.1331,
+      "pnl_pct": 6.898904773277836,
+      "pnl_krw": 4.1399142758683935e+18,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 4.0,
+      "entry_time_ms": 1770043200000,
+      "sell_time_ms": 1770043440000
+    },
+    {
+      "ticker": "FUSE",
+      "type": "full",
+      "entry_price": 2.9309,
+      "sell_price": 3.405,
+      "pnl_pct": 16.18,
+      "pnl_krw": 9.706890990055416e+18,
+      "reason": "PROFIT_TARGET +10% (16.2%)",
+      "hold_min": 5.0,
+      "queue_price": 2.3768,
+      "queue_to_entry_pct": 23.3,
+      "entry_time_ms": 1770043200000,
+      "sell_time_ms": 1770043500000,
+      "daily_high": 3.67,
+      "max_possible_pct": 25.2
+    },
+    {
+      "ticker": "SORA",
+      "type": "full",
+      "entry_price": 3.03,
+      "sell_price": 2.6501,
+      "pnl_pct": -12.54,
+      "pnl_krw": -1.67259942582272e+19,
+      "reason": "STOP_LOSS (-12.5%)",
+      "hold_min": 5.0,
+      "queue_price": 2.28,
+      "queue_to_entry_pct": 32.9,
+      "entry_time_ms": 1770046320000,
+      "sell_time_ms": 1770046620000,
+      "daily_high": 4.49,
+      "max_possible_pct": 48.2
+    },
+    {
+      "ticker": "JLHL",
+      "type": "partial",
+      "entry_price": 5.95,
+      "sell_price": 7.7,
+      "pnl_pct": 29.41176470588236,
+      "pnl_krw": 1.9618073874869715e+19,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 17.0,
+      "entry_time_ms": 1770046140000,
+      "sell_time_ms": 1770047160000
+    },
+    {
+      "ticker": "JLHL",
+      "type": "full",
+      "entry_price": 5.95,
+      "sell_price": 7.7,
+      "pnl_pct": 29.41,
+      "pnl_krw": 1.9618073874869715e+19,
+      "reason": "PROFIT_TARGET +10% (29.4%)",
+      "hold_min": 17.0,
+      "queue_price": 4.5,
+      "queue_to_entry_pct": 32.2,
+      "entry_time_ms": 1770046140000,
+      "sell_time_ms": 1770047160000,
+      "daily_high": 11.11,
+      "max_possible_pct": 86.7
+    },
+    {
+      "ticker": "MRNO",
+      "type": "full",
+      "entry_price": 1.6622,
+      "sell_price": 1.49,
+      "pnl_pct": -10.36,
+      "pnl_krw": -1.6817471173471764e+19,
+      "reason": "STOP_LOSS (-10.4%)",
+      "hold_min": 4.0,
+      "queue_price": 1.34,
+      "queue_to_entry_pct": 24.0,
+      "entry_time_ms": 1770050040000,
+      "sell_time_ms": 1770050280000,
+      "daily_high": 1.98,
+      "max_possible_pct": 19.1
+    },
+    {
+      "ticker": "SORA",
+      "type": "partial",
+      "entry_price": 3.32,
+      "sell_price": 3.7769,
+      "pnl_pct": 13.762048192771093,
+      "pnl_krw": 1.217158210487704e+19,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 10.0,
+      "entry_time_ms": 1770061980000,
+      "sell_time_ms": 1770062580000
+    },
+    {
+      "ticker": "SORA",
+      "type": "full",
+      "entry_price": 3.32,
+      "sell_price": 3.7769,
+      "pnl_pct": 13.76,
+      "pnl_krw": 1.217158210487704e+19,
+      "reason": "PROFIT_TARGET +10% (13.8%)",
+      "hold_min": 10.0,
+      "queue_price": 2.6,
+      "queue_to_entry_pct": 27.7,
+      "entry_time_ms": 1770061980000,
+      "sell_time_ms": 1770062580000,
+      "daily_high": 4.49,
+      "max_possible_pct": 35.2
+    },
+    {
+      "ticker": "DSS",
+      "type": "partial",
+      "entry_price": 1.52,
+      "sell_price": 1.6,
+      "pnl_pct": 5.263157894736836,
+      "pnl_krw": 5.184450983560004e+18,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 2.0,
+      "entry_time_ms": 1770064680000,
+      "sell_time_ms": 1770064800000
+    },
+    {
+      "ticker": "DSS",
+      "type": "full",
+      "entry_price": 1.52,
+      "sell_price": 1.74,
+      "pnl_pct": 14.47,
+      "pnl_krw": 1.425724020478999e+19,
+      "reason": "PROFIT_TARGET +10% (14.5%)",
+      "hold_min": 3.0,
+      "queue_price": 1.26,
+      "queue_to_entry_pct": 20.6,
+      "entry_time_ms": 1770064680000,
+      "sell_time_ms": 1770064860000,
+      "daily_high": 1.86,
+      "max_possible_pct": 22.4
+    },
+    {
+      "ticker": "ROMA",
+      "type": "full",
+      "entry_price": 3.8303,
+      "sell_price": 3.56,
+      "pnl_pct": -7.06,
+      "pnl_krw": -1.5430184509989585e+19,
+      "reason": "STOP_LOSS (-7.1%)",
+      "hold_min": 3.0,
+      "queue_price": 2.91,
+      "queue_to_entry_pct": 31.6,
+      "entry_time_ms": 1770066780000,
+      "sell_time_ms": 1770066960000,
+      "daily_high": 8.88,
+      "max_possible_pct": 131.8
+    },
+    {
+      "ticker": "FIEE",
+      "type": "full",
+      "entry_price": 8.1413,
+      "sell_price": 7.3729,
+      "pnl_pct": -9.44,
+      "pnl_krw": -2.2555321352959164e+19,
+      "reason": "STOP_LOSS (-9.4%)",
+      "hold_min": 1.0,
+      "queue_price": 6.2999,
+      "queue_to_entry_pct": 29.2,
+      "entry_time_ms": 1770067020000,
+      "sell_time_ms": 1770067080000,
+      "daily_high": 9.04,
+      "max_possible_pct": 11.0
+    },
+    {
+      "ticker": "DSS",
+      "type": "full",
+      "entry_price": 1.39,
+      "sell_price": 1.2601,
+      "pnl_pct": -9.35,
+      "pnl_krw": -2.4355666295648354e+19,
+      "reason": "STOP_LOSS (-9.3%)",
+      "hold_min": 8.0,
+      "queue_price": 1.15,
+      "queue_to_entry_pct": 20.9,
+      "entry_time_ms": 1770075540000,
+      "sell_time_ms": 1770076020000,
+      "daily_high": 1.86,
+      "max_possible_pct": 33.8
+    },
+    {
+      "ticker": "FIEE",
+      "type": "partial",
+      "entry_price": 7.33,
+      "sell_price": 7.7397,
+      "pnl_pct": 5.589358799454303,
+      "pnl_krw": 7.943738215489929e+18,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 6.0,
+      "entry_time_ms": 1770077460000,
+      "sell_time_ms": 1770077820000
+    },
+    {
+      "ticker": "FIEE",
+      "type": "full",
+      "entry_price": 7.33,
+      "sell_price": 7.2,
+      "pnl_pct": -1.77,
+      "pnl_krw": -2.52059059803195e+18,
+      "reason": "TIME_LIMIT (-1.8%)",
+      "hold_min": 45.0,
+      "queue_price": 6.07,
+      "queue_to_entry_pct": 20.8,
+      "entry_time_ms": 1770077460000,
+      "sell_time_ms": 1770080160000,
+      "daily_high": 9.04,
+      "max_possible_pct": 23.3
+    }
+  ],
+  "fake_signals": [
+    {
+      "ticker": "DOGZ",
+      "time_ms": 1770062820000,
+      "price": 1.41,
+      "max_later_gain_pct": 2.8
+    },
+    {
+      "ticker": "DOGZ",
+      "time_ms": 1770065220000,
+      "price": 1.35,
+      "max_later_gain_pct": 3.0
+    },
+    {
+      "ticker": "DOGZ",
+      "time_ms": 1770068040000,
+      "price": 1.29,
+      "max_later_gain_pct": 4.7
+    },
+    {
+      "ticker": "FUSE",
+      "time_ms": 1770071700000,
+      "price": 2.6499,
+      "max_later_gain_pct": 1.9
+    },
+    {
+      "ticker": "FUSE",
+      "time_ms": 1770072180000,
+      "price": 2.6,
+      "max_later_gain_pct": 3.8
+    },
+    {
+      "ticker": "FUSE",
+      "time_ms": 1770077640000,
+      "price": 2.62,
+      "max_later_gain_pct": 3.1
+    },
+    {
+      "ticker": "FUSE",
+      "time_ms": 1770079500000,
+      "price": 2.6,
+      "max_later_gain_pct": 1.5
+    },
+    {
+      "ticker": "JLHL",
+      "time_ms": 1770076200000,
+      "price": 3.73,
+      "max_later_gain_pct": 4.6
+    },
+    {
+      "ticker": "JLHL",
+      "time_ms": 1770077400000,
+      "price": 3.73,
+      "max_later_gain_pct": 1.3
+    },
+    {
+      "ticker": "MRNO",
+      "time_ms": 1770068220000,
+      "price": 1.64,
+      "max_later_gain_pct": 1.2
+    },
+    {
+      "ticker": "MRNO",
+      "time_ms": 1770074160000,
+      "price": 1.5,
+      "max_later_gain_pct": 2.7
+    },
+    {
+      "ticker": "MRNO",
+      "time_ms": 1770076560000,
+      "price": 1.5398,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "PBM",
+      "time_ms": 1770046320000,
+      "price": 12.64,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "PBM",
+      "time_ms": 1770080280000,
+      "price": 3.58,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "RIME",
+      "time_ms": 1770053820000,
+      "price": 1.1,
+      "max_later_gain_pct": 2.7
+    },
+    {
+      "ticker": "RIME",
+      "time_ms": 1770056700000,
+      "price": 1.11,
+      "max_later_gain_pct": 0.9
+    },
+    {
+      "ticker": "RIME",
+      "time_ms": 1770059040000,
+      "price": 1.075,
+      "max_later_gain_pct": 3.3
+    },
+    {
+      "ticker": "RIME",
+      "time_ms": 1770059340000,
+      "price": 1.08,
+      "max_later_gain_pct": 2.8
+    },
+    {
+      "ticker": "RIME",
+      "time_ms": 1770061620000,
+      "price": 1.11,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "RIME",
+      "time_ms": 1770062040000,
+      "price": 1.09,
+      "max_later_gain_pct": 0.9
+    },
+    {
+      "ticker": "RIME",
+      "time_ms": 1770062400000,
+      "price": 1.058,
+      "max_later_gain_pct": 2.8
+    },
+    {
+      "ticker": "RIME",
+      "time_ms": 1770062880000,
+      "price": 1.06,
+      "max_later_gain_pct": 1.9
+    },
+    {
+      "ticker": "RIME",
+      "time_ms": 1770063120000,
+      "price": 1.06,
+      "max_later_gain_pct": 1.9
+    },
+    {
+      "ticker": "RIME",
+      "time_ms": 1770063600000,
+      "price": 1.05,
+      "max_later_gain_pct": 2.9
+    },
+    {
+      "ticker": "RIME",
+      "time_ms": 1770064860000,
+      "price": 1.03,
+      "max_later_gain_pct": 4.9
+    },
+    {
+      "ticker": "RIME",
+      "time_ms": 1770079800000,
+      "price": 1.08,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "ROMA",
+      "time_ms": 1770077520000,
+      "price": 2.45,
+      "max_later_gain_pct": 1.6
+    },
+    {
+      "ticker": "ROMA",
+      "time_ms": 1770078900000,
+      "price": 2.37,
+      "max_later_gain_pct": 2.6
+    },
+    {
+      "ticker": "SORA",
+      "time_ms": 1770070320000,
+      "price": 2.4,
+      "max_later_gain_pct": 3.8
+    },
+    {
+      "ticker": "SORA",
+      "time_ms": 1770077520000,
+      "price": 2.25,
+      "max_later_gain_pct": 1.8
+    }
+  ],
+  "missed_entries": [],
+  "fake_rate": 30.6
+}

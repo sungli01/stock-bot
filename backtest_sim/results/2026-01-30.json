@@ -1,0 +1,459 @@
+{
+  "date": "2026-01-30",
+  "starting_portfolio": 3.875269455904582e+20,
+  "ending_portfolio": 1.0789666584241026e+21,
+  "day_pnl_krw": 6.914397128336444e+20,
+  "day_pnl_pct": 178.42,
+  "vol_spikes_detected": 141,
+  "signals_generated": 141,
+  "buys_executed": 11,
+  "trades": [
+    {
+      "ticker": "CISS",
+      "type": "full",
+      "entry_price": 2.13,
+      "sell_price": 1.79,
+      "pnl_pct": -15.96,
+      "pnl_krw": -6.185876126796046e+18,
+      "reason": "STOP_LOSS (-16.0%)",
+      "hold_min": 1.0,
+      "queue_price": 1.64,
+      "queue_to_entry_pct": 29.9,
+      "entry_time_ms": 1769773740000,
+      "sell_time_ms": 1769773800000,
+      "daily_high": 2.8,
+      "max_possible_pct": 31.5
+    },
+    {
+      "ticker": "ORKT",
+      "type": "full",
+      "entry_price": 1.2,
+      "sell_price": 1.08,
+      "pnl_pct": -10.0,
+      "pnl_krw": -4.200937640227078e+18,
+      "reason": "STOP_LOSS (-10.0%)",
+      "hold_min": 1.0,
+      "queue_price": 0.94,
+      "queue_to_entry_pct": 27.7,
+      "entry_time_ms": 1769776140000,
+      "sell_time_ms": 1769776200000,
+      "daily_high": 1.77,
+      "max_possible_pct": 47.5
+    },
+    {
+      "ticker": "ORKT",
+      "type": "full",
+      "entry_price": 0.9689,
+      "sell_price": 0.901,
+      "pnl_pct": -7.01,
+      "pnl_krw": -3.2089544399922217e+18,
+      "reason": "STOP_LOSS (-7.0%)",
+      "hold_min": 1.0,
+      "queue_price": 0.8073,
+      "queue_to_entry_pct": 20.0,
+      "entry_time_ms": 1769778000000,
+      "sell_time_ms": 1769778060000,
+      "daily_high": 1.77,
+      "max_possible_pct": 82.7
+    },
+    {
+      "ticker": "GITS",
+      "type": "partial",
+      "entry_price": 5.04,
+      "sell_price": 5.6669,
+      "pnl_pct": 12.438492063492056,
+      "pnl_krw": 3.1126298261895414e+18,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 5.0,
+      "entry_time_ms": 1769783880000,
+      "sell_time_ms": 1769784180000
+    },
+    {
+      "ticker": "GITS",
+      "type": "full",
+      "entry_price": 5.04,
+      "sell_price": 5.6669,
+      "pnl_pct": 12.44,
+      "pnl_krw": 3.1126298261895414e+18,
+      "reason": "PROFIT_TARGET +10% (12.4%)",
+      "hold_min": 5.0,
+      "queue_price": 4.19,
+      "queue_to_entry_pct": 20.3,
+      "entry_time_ms": 1769783880000,
+      "sell_time_ms": 1769784180000,
+      "daily_high": 6.7499,
+      "max_possible_pct": 33.9
+    },
+    {
+      "ticker": "ORKT",
+      "type": "full",
+      "entry_price": 1.11,
+      "sell_price": 1.025,
+      "pnl_pct": -7.66,
+      "pnl_krw": -4.2634550798851113e+18,
+      "reason": "STOP_LOSS (-7.7%)",
+      "hold_min": 5.0,
+      "queue_price": 0.9013,
+      "queue_to_entry_pct": 23.2,
+      "entry_time_ms": 1769784180000,
+      "sell_time_ms": 1769784480000,
+      "daily_high": 1.77,
+      "max_possible_pct": 59.5
+    },
+    {
+      "ticker": "ORKT",
+      "type": "full",
+      "entry_price": 1.31,
+      "sell_price": 1.18,
+      "pnl_pct": -9.92,
+      "pnl_krw": -6.035268136209162e+18,
+      "reason": "STOP_LOSS (-9.9%)",
+      "hold_min": 2.0,
+      "queue_price": 1.04,
+      "queue_to_entry_pct": 26.0,
+      "entry_time_ms": 1769787120000,
+      "sell_time_ms": 1769787240000,
+      "daily_high": 1.77,
+      "max_possible_pct": 35.1
+    },
+    {
+      "ticker": "CISS",
+      "type": "full",
+      "entry_price": 2.26,
+      "sell_price": 2.01,
+      "pnl_pct": -11.06,
+      "pnl_krw": -7.333528674699354e+18,
+      "reason": "STOP_LOSS (-11.1%)",
+      "hold_min": 2.0,
+      "queue_price": 1.86,
+      "queue_to_entry_pct": 21.5,
+      "entry_time_ms": 1769788020000,
+      "sell_time_ms": 1769788140000,
+      "daily_high": 2.8,
+      "max_possible_pct": 23.9
+    },
+    {
+      "ticker": "ILAG",
+      "type": "partial",
+      "entry_price": 5.5,
+      "sell_price": 6.6,
+      "pnl_pct": 19.999999999999996,
+      "pnl_krw": 7.219125627374039e+18,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 11.0,
+      "entry_time_ms": 1769793060000,
+      "sell_time_ms": 1769793720000
+    },
+    {
+      "ticker": "ILAG",
+      "type": "full",
+      "entry_price": 5.5,
+      "sell_price": 6.6,
+      "pnl_pct": 20.0,
+      "pnl_krw": 7.219125627374039e+18,
+      "reason": "PROFIT_TARGET +10% (20.0%)",
+      "hold_min": 11.0,
+      "queue_price": 4.2397,
+      "queue_to_entry_pct": 29.7,
+      "entry_time_ms": 1769793060000,
+      "sell_time_ms": 1769793720000,
+      "daily_high": 7.19,
+      "max_possible_pct": 30.7
+    },
+    {
+      "ticker": "ASBP",
+      "type": "full",
+      "entry_price": 2.35,
+      "sell_price": 2.1501,
+      "pnl_pct": -8.51,
+      "pnl_krw": -6.877768504091574e+18,
+      "reason": "STOP_LOSS (-8.5%)",
+      "hold_min": 2.0,
+      "queue_price": 1.825,
+      "queue_to_entry_pct": 28.8,
+      "entry_time_ms": 1769797380000,
+      "sell_time_ms": 1769797500000,
+      "daily_high": 2.45,
+      "max_possible_pct": 4.3
+    },
+    {
+      "ticker": "CNEY",
+      "type": "partial",
+      "entry_price": 0.9501,
+      "sell_price": 1,
+      "pnl_pct": 5.2520787285548876,
+      "pnl_krw": 2.3175283437817446e+18,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 12.0,
+      "entry_time_ms": 1769800560000,
+      "sell_time_ms": 1769801280000
+    },
+    {
+      "ticker": "CNEY",
+      "type": "full",
+      "entry_price": 0.9501,
+      "sell_price": 0.9999,
+      "pnl_pct": 5.24,
+      "pnl_krw": 2.3128839984034284e+18,
+      "reason": "TRAILING (5.2%, peak=8.9%)",
+      "hold_min": 33.0,
+      "queue_price": 0.79,
+      "queue_to_entry_pct": 20.3,
+      "entry_time_ms": 1769800560000,
+      "sell_time_ms": 1769802540000,
+      "daily_high": 1.04,
+      "max_possible_pct": 9.5
+    },
+    {
+      "ticker": "CISS",
+      "type": "partial",
+      "entry_price": 2.25,
+      "sell_price": 2.398,
+      "pnl_pct": 6.5777777777777935,
+      "pnl_krw": 3.2079847612754166e+18,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 1.0,
+      "entry_time_ms": 1769816040000,
+      "sell_time_ms": 1769816100000
+    },
+    {
+      "ticker": "CISS",
+      "type": "full",
+      "entry_price": 2.25,
+      "sell_price": 2.38,
+      "pnl_pct": 5.78,
+      "pnl_krw": 2.817824452471636e+18,
+      "reason": "TRAILING (5.8%, peak=11.1%)",
+      "hold_min": 11.0,
+      "queue_price": 1.8696,
+      "queue_to_entry_pct": 20.3,
+      "entry_time_ms": 1769816040000,
+      "sell_time_ms": 1769816700000,
+      "daily_high": 2.8,
+      "max_possible_pct": 24.4
+    }
+  ],
+  "fake_signals": [
+    {
+      "ticker": "ASBP",
+      "time_ms": 1769806380000,
+      "price": 2.08,
+      "max_later_gain_pct": 4.8
+    },
+    {
+      "ticker": "ASBP",
+      "time_ms": 1769814480000,
+      "price": 1.9,
+      "max_later_gain_pct": 3.2
+    },
+    {
+      "ticker": "ASBP",
+      "time_ms": 1769820660000,
+      "price": 1.95,
+      "max_later_gain_pct": 0.5
+    },
+    {
+      "ticker": "BUUU",
+      "time_ms": 1769797500000,
+      "price": 11.66,
+      "max_later_gain_pct": 2.9
+    },
+    {
+      "ticker": "BUUU",
+      "time_ms": 1769806560000,
+      "price": 11.77,
+      "max_later_gain_pct": 2.0
+    },
+    {
+      "ticker": "CNEY",
+      "time_ms": 1769802180000,
+      "price": 1,
+      "max_later_gain_pct": 4.0
+    },
+    {
+      "ticker": "CNEY",
+      "time_ms": 1769806560000,
+      "price": 1.015,
+      "max_later_gain_pct": 2.5
+    },
+    {
+      "ticker": "CNEY",
+      "time_ms": 1769820060000,
+      "price": 0.82,
+      "max_later_gain_pct": 2.7
+    },
+    {
+      "ticker": "GITS",
+      "time_ms": 1769801160000,
+      "price": 4,
+      "max_later_gain_pct": 1.0
+    },
+    {
+      "ticker": "GITS",
+      "time_ms": 1769807100000,
+      "price": 3.79,
+      "max_later_gain_pct": 1.6
+    },
+    {
+      "ticker": "GITS",
+      "time_ms": 1769812140000,
+      "price": 3.71,
+      "max_later_gain_pct": 3.8
+    },
+    {
+      "ticker": "GITS",
+      "time_ms": 1769815800000,
+      "price": 3.58,
+      "max_later_gain_pct": 4.2
+    },
+    {
+      "ticker": "GITS",
+      "time_ms": 1769818380000,
+      "price": 3.7093,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "ILAG",
+      "time_ms": 1769805000000,
+      "price": 3.7,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "ILAG",
+      "time_ms": 1769808660000,
+      "price": 2.69,
+      "max_later_gain_pct": 4.1
+    },
+    {
+      "ticker": "ORKT",
+      "time_ms": 1769808420000,
+      "price": 1.22,
+      "max_later_gain_pct": 2.5
+    },
+    {
+      "ticker": "ORKT",
+      "time_ms": 1769808900000,
+      "price": 1.22,
+      "max_later_gain_pct": 2.5
+    },
+    {
+      "ticker": "ORKT",
+      "time_ms": 1769809380000,
+      "price": 1.21,
+      "max_later_gain_pct": 3.3
+    },
+    {
+      "ticker": "ORKT",
+      "time_ms": 1769811300000,
+      "price": 1.21,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "ORKT",
+      "time_ms": 1769811720000,
+      "price": 1.21,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "ORKT",
+      "time_ms": 1769813520000,
+      "price": 1.15,
+      "max_later_gain_pct": 3.5
+    },
+    {
+      "ticker": "ORKT",
+      "time_ms": 1769815800000,
+      "price": 1.15,
+      "max_later_gain_pct": 0.9
+    },
+    {
+      "ticker": "ORKT",
+      "time_ms": 1769817000000,
+      "price": 1.14,
+      "max_later_gain_pct": 1.8
+    },
+    {
+      "ticker": "ORKT",
+      "time_ms": 1769818680000,
+      "price": 1.14,
+      "max_later_gain_pct": 1.8
+    },
+    {
+      "ticker": "ORKT",
+      "time_ms": 1769819100000,
+      "price": 1.15,
+      "max_later_gain_pct": 0.9
+    },
+    {
+      "ticker": "ORKT",
+      "time_ms": 1769819820000,
+      "price": 1.16,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "ORKT",
+      "time_ms": 1769820300000,
+      "price": 1.1498,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "YCBD",
+      "time_ms": 1769801460000,
+      "price": 1.1699,
+      "max_later_gain_pct": 1.7
+    },
+    {
+      "ticker": "YCBD",
+      "time_ms": 1769802900000,
+      "price": 1.13,
+      "max_later_gain_pct": 0.9
+    },
+    {
+      "ticker": "YCBD",
+      "time_ms": 1769804880000,
+      "price": 1.09,
+      "max_later_gain_pct": 0.9
+    },
+    {
+      "ticker": "YCBD",
+      "time_ms": 1769811000000,
+      "price": 1.04,
+      "max_later_gain_pct": 3.8
+    },
+    {
+      "ticker": "YCBD",
+      "time_ms": 1769811960000,
+      "price": 1.03,
+      "max_later_gain_pct": 4.9
+    },
+    {
+      "ticker": "YCBD",
+      "time_ms": 1769817360000,
+      "price": 1.0799,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "YCBD",
+      "time_ms": 1769819340000,
+      "price": 1.07,
+      "max_later_gain_pct": 0.9
+    },
+    {
+      "ticker": "YI",
+      "time_ms": 1769808480000,
+      "price": 6.71,
+      "max_later_gain_pct": 4.3
+    }
+  ],
+  "missed_entries": [
+    {
+      "ticker": "YCBD",
+      "daily_change_pct": 35.15,
+      "daily_volume": 25448322,
+      "had_vol_spike": true,
+      "meets_daily_vol": true,
+      "reason": "price_not_triggered"
+    }
+  ],
+  "fake_rate": 24.8
+}

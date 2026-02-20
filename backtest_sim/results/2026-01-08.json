@@ -1,0 +1,395 @@
+{
+  "date": "2026-01-08",
+  "starting_portfolio": 1691975191818133.0,
+  "ending_portfolio": 2546349421401462.0,
+  "day_pnl_krw": 854374229583328.0,
+  "day_pnl_pct": 50.5,
+  "vol_spikes_detected": 123,
+  "signals_generated": 123,
+  "buys_executed": 4,
+  "trades": [
+    {
+      "ticker": "FLYX",
+      "type": "partial",
+      "entry_price": 4.61,
+      "sell_price": 5.05,
+      "pnl_pct": 9.54446854663773,
+      "pnl_krw": 8074501999999.75,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 1.0,
+      "entry_time_ms": 1767878100000,
+      "sell_time_ms": 1767878160000
+    },
+    {
+      "ticker": "FLYX",
+      "type": "full",
+      "entry_price": 4.61,
+      "sell_price": 5.875,
+      "pnl_pct": 27.44,
+      "pnl_krw": 23214193249999.0,
+      "reason": "TRAILING (27.4%, peak=34.6%)",
+      "hold_min": 9.0,
+      "queue_price": 3.74,
+      "queue_to_entry_pct": 23.3,
+      "entry_time_ms": 1767878100000,
+      "sell_time_ms": 1767878640000,
+      "daily_high": 8.88,
+      "max_possible_pct": 92.6
+    },
+    {
+      "ticker": "JTAI",
+      "type": "partial",
+      "entry_price": 0.86155,
+      "sell_price": 0.9278,
+      "pnl_pct": 7.689629156752353,
+      "pnl_krw": 7276163203764.0625,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 6.0,
+      "entry_time_ms": 1767880320000,
+      "sell_time_ms": 1767880680000
+    },
+    {
+      "ticker": "JTAI",
+      "type": "full",
+      "entry_price": 0.86155,
+      "sell_price": 0.9489,
+      "pnl_pct": 10.14,
+      "pnl_krw": 9593552541114.0,
+      "reason": "PROFIT_TARGET +10% (10.1%)",
+      "hold_min": 7.0,
+      "queue_price": 0.62,
+      "queue_to_entry_pct": 39.0,
+      "entry_time_ms": 1767880320000,
+      "sell_time_ms": 1767880740000,
+      "daily_high": 1.1499,
+      "max_possible_pct": 33.5
+    },
+    {
+      "ticker": "BW",
+      "type": "full",
+      "entry_price": 7.33,
+      "sell_price": 7.13,
+      "pnl_pct": -2.73,
+      "pnl_krw": -5725995259536.0,
+      "reason": "TIME_LIMIT (-2.7%)",
+      "hold_min": 45.0,
+      "queue_price": 5.94,
+      "queue_to_entry_pct": 23.4,
+      "entry_time_ms": 1767883260000,
+      "sell_time_ms": 1767885960000,
+      "daily_high": 7.73,
+      "max_possible_pct": 5.5
+    },
+    {
+      "ticker": "PAPL",
+      "type": "partial",
+      "entry_price": 2.5,
+      "sell_price": 2.7007,
+      "pnl_pct": 8.027999999999992,
+      "pnl_krw": 9243073900399.75,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 3.0,
+      "entry_time_ms": 1767895740000,
+      "sell_time_ms": 1767895920000
+    },
+    {
+      "ticker": "PAPL",
+      "type": "full",
+      "entry_price": 2.5,
+      "sell_price": 2.5896,
+      "pnl_pct": 3.58,
+      "pnl_krw": 4126454516571.0,
+      "reason": "TRAILING (3.6%, peak=8.0%)",
+      "hold_min": 4.0,
+      "queue_price": 1.8201,
+      "queue_to_entry_pct": 37.4,
+      "entry_time_ms": 1767895740000,
+      "sell_time_ms": 1767895980000,
+      "daily_high": 2.89,
+      "max_possible_pct": 15.6
+    }
+  ],
+  "fake_signals": [
+    {
+      "ticker": "BW",
+      "time_ms": 1767895680000,
+      "price": 7.42,
+      "max_later_gain_pct": 4.2
+    },
+    {
+      "ticker": "BW",
+      "time_ms": 1767906540000,
+      "price": 7.6997,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "BW",
+      "time_ms": 1767910800000,
+      "price": 7.45,
+      "max_later_gain_pct": 3.2
+    },
+    {
+      "ticker": "BW",
+      "time_ms": 1767913800000,
+      "price": 7.6099,
+      "max_later_gain_pct": 1.1
+    },
+    {
+      "ticker": "FLYX",
+      "time_ms": 1767907560000,
+      "price": 7.21,
+      "max_later_gain_pct": 1.1
+    },
+    {
+      "ticker": "FLYX",
+      "time_ms": 1767912000000,
+      "price": 6.4,
+      "max_later_gain_pct": 4.5
+    },
+    {
+      "ticker": "FLYX",
+      "time_ms": 1767913860000,
+      "price": 6.4003,
+      "max_later_gain_pct": 0.9
+    },
+    {
+      "ticker": "FLYX",
+      "time_ms": 1767914880000,
+      "price": 6.32,
+      "max_later_gain_pct": 2.2
+    },
+    {
+      "ticker": "FLYX",
+      "time_ms": 1767916380000,
+      "price": 6.33,
+      "max_later_gain_pct": 2.1
+    },
+    {
+      "ticker": "JTAI",
+      "time_ms": 1767893100000,
+      "price": 1.0668,
+      "max_later_gain_pct": 2.2
+    },
+    {
+      "ticker": "JTAI",
+      "time_ms": 1767894900000,
+      "price": 1.0282,
+      "max_later_gain_pct": 2.1
+    },
+    {
+      "ticker": "JTAI",
+      "time_ms": 1767913980000,
+      "price": 0.6998,
+      "max_later_gain_pct": 2.7
+    },
+    {
+      "ticker": "JTAI",
+      "time_ms": 1767916500000,
+      "price": 0.7099,
+      "max_later_gain_pct": 1.3
+    },
+    {
+      "ticker": "JTAI",
+      "time_ms": 1767918180000,
+      "price": 0.7036,
+      "max_later_gain_pct": 0.1
+    },
+    {
+      "ticker": "JTAI",
+      "time_ms": 1767918480000,
+      "price": 0.6977,
+      "max_later_gain_pct": 0.3
+    },
+    {
+      "ticker": "JTAI",
+      "time_ms": 1767918540000,
+      "price": 0.69,
+      "max_later_gain_pct": 1.4
+    },
+    {
+      "ticker": "KAPA",
+      "time_ms": 1767886260000,
+      "price": 1.01,
+      "max_later_gain_pct": 3.0
+    },
+    {
+      "ticker": "KAPA",
+      "time_ms": 1767889560000,
+      "price": 0.971,
+      "max_later_gain_pct": 1.6
+    },
+    {
+      "ticker": "KAPA",
+      "time_ms": 1767895140000,
+      "price": 0.9542,
+      "max_later_gain_pct": 1.9
+    },
+    {
+      "ticker": "KAPA",
+      "time_ms": 1767895620000,
+      "price": 0.97,
+      "max_later_gain_pct": 0.1
+    },
+    {
+      "ticker": "KAPA",
+      "time_ms": 1767896820000,
+      "price": 0.97,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "KAPA",
+      "time_ms": 1767898680000,
+      "price": 0.9699,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "KAPA",
+      "time_ms": 1767901800000,
+      "price": 0.96,
+      "max_later_gain_pct": 1.0
+    },
+    {
+      "ticker": "KAPA",
+      "time_ms": 1767903240000,
+      "price": 0.95,
+      "max_later_gain_pct": 2.1
+    },
+    {
+      "ticker": "KAPA",
+      "time_ms": 1767904200000,
+      "price": 0.96,
+      "max_later_gain_pct": 1.0
+    },
+    {
+      "ticker": "LVRO",
+      "time_ms": 1767883560000,
+      "price": 1.25,
+      "max_later_gain_pct": 2.4
+    },
+    {
+      "ticker": "LVRO",
+      "time_ms": 1767888840000,
+      "price": 1.245,
+      "max_later_gain_pct": 2.8
+    },
+    {
+      "ticker": "LVRO",
+      "time_ms": 1767891960000,
+      "price": 1.23,
+      "max_later_gain_pct": 4.1
+    },
+    {
+      "ticker": "LVRO",
+      "time_ms": 1767892740000,
+      "price": 1.26,
+      "max_later_gain_pct": 1.6
+    },
+    {
+      "ticker": "LVRO",
+      "time_ms": 1767894300000,
+      "price": 1.225,
+      "max_later_gain_pct": 4.5
+    },
+    {
+      "ticker": "PAPL",
+      "time_ms": 1767913200000,
+      "price": 2.45,
+      "max_later_gain_pct": 1.6
+    },
+    {
+      "ticker": "PAPL",
+      "time_ms": 1767913560000,
+      "price": 2.44,
+      "max_later_gain_pct": 2.0
+    },
+    {
+      "ticker": "PAPL",
+      "time_ms": 1767914280000,
+      "price": 2.49,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "PAPL",
+      "time_ms": 1767915060000,
+      "price": 2.48,
+      "max_later_gain_pct": 0.4
+    },
+    {
+      "ticker": "PAPL",
+      "time_ms": 1767915960000,
+      "price": 2.41,
+      "max_later_gain_pct": 1.2
+    },
+    {
+      "ticker": "PAPL",
+      "time_ms": 1767917640000,
+      "price": 2.39,
+      "max_later_gain_pct": 0.8
+    },
+    {
+      "ticker": "YYAI",
+      "time_ms": 1767897300000,
+      "price": 1.37,
+      "max_later_gain_pct": 3.6
+    },
+    {
+      "ticker": "YYAI",
+      "time_ms": 1767898740000,
+      "price": 1.365,
+      "max_later_gain_pct": 4.0
+    },
+    {
+      "ticker": "YYAI",
+      "time_ms": 1767902820000,
+      "price": 1.41,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "YYAI",
+      "time_ms": 1767918300000,
+      "price": 1.29,
+      "max_later_gain_pct": 2.3
+    },
+    {
+      "ticker": "YYAI",
+      "time_ms": 1767920100000,
+      "price": 1.3199,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "ZNTL",
+      "time_ms": 1767912360000,
+      "price": 3.14,
+      "max_later_gain_pct": 1.6
+    },
+    {
+      "ticker": "ZNTL",
+      "time_ms": 1767914580000,
+      "price": 3.11,
+      "max_later_gain_pct": 2.6
+    },
+    {
+      "ticker": "ZNTL",
+      "time_ms": 1767915240000,
+      "price": 3.19,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "ZNTL",
+      "time_ms": 1767917580000,
+      "price": 3.16,
+      "max_later_gain_pct": 0.0
+    }
+  ],
+  "missed_entries": [
+    {
+      "ticker": "CGTL",
+      "daily_change_pct": 165.25,
+      "daily_volume": 26286278,
+      "had_vol_spike": true,
+      "meets_daily_vol": true,
+      "reason": "price_not_triggered"
+    }
+  ],
+  "fake_rate": 36.6
+}

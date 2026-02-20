@@ -1,0 +1,402 @@
+{
+  "date": "2026-02-17",
+  "starting_portfolio": 2.872529373224887e+24,
+  "ending_portfolio": 8.465161908261904e+24,
+  "day_pnl_krw": 5.592632535037018e+24,
+  "day_pnl_pct": 194.69,
+  "vol_spikes_detected": 136,
+  "signals_generated": 136,
+  "buys_executed": 11,
+  "trades": [
+    {
+      "ticker": "LFS",
+      "type": "full",
+      "entry_price": 4.16,
+      "sell_price": 3.85,
+      "pnl_pct": -7.45,
+      "pnl_krw": -2.1405867925473906e+22,
+      "reason": "STOP_LOSS (-7.5%)",
+      "hold_min": 29.0,
+      "queue_price": 3.45,
+      "queue_to_entry_pct": 20.6,
+      "entry_time_ms": 1771321020000,
+      "sell_time_ms": 1771322760000,
+      "daily_high": 4.53,
+      "max_possible_pct": 8.9
+    },
+    {
+      "ticker": "OLB",
+      "type": "partial",
+      "entry_price": 0.6838,
+      "sell_price": 0.77,
+      "pnl_pct": 12.606025153553668,
+      "pnl_krw": 1.9781226188505994e+22,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 2.0,
+      "entry_time_ms": 1771335000000,
+      "sell_time_ms": 1771335120000
+    },
+    {
+      "ticker": "OLB",
+      "type": "full",
+      "entry_price": 0.6838,
+      "sell_price": 0.77,
+      "pnl_pct": 12.61,
+      "pnl_krw": 1.9781226188505994e+22,
+      "reason": "PROFIT_TARGET +10% (12.6%)",
+      "hold_min": 2.0,
+      "queue_price": 0.497,
+      "queue_to_entry_pct": 37.6,
+      "entry_time_ms": 1771335000000,
+      "sell_time_ms": 1771335120000,
+      "daily_high": 1.8,
+      "max_possible_pct": 163.2
+    },
+    {
+      "ticker": "GVH",
+      "type": "partial",
+      "entry_price": 1.43,
+      "sell_price": 1.6,
+      "pnl_pct": 11.888111888111897,
+      "pnl_krw": 2.0755315093510084e+22,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 4.0,
+      "entry_time_ms": 1771336920000,
+      "sell_time_ms": 1771337160000
+    },
+    {
+      "ticker": "GVH",
+      "type": "full",
+      "entry_price": 1.43,
+      "sell_price": 1.6,
+      "pnl_pct": 11.89,
+      "pnl_krw": 2.0755315093510084e+22,
+      "reason": "PROFIT_TARGET +10% (11.9%)",
+      "hold_min": 4.0,
+      "queue_price": 1.14,
+      "queue_to_entry_pct": 25.4,
+      "entry_time_ms": 1771336920000,
+      "sell_time_ms": 1771337160000,
+      "daily_high": 1.79,
+      "max_possible_pct": 25.2
+    },
+    {
+      "ticker": "CGTL",
+      "type": "partial",
+      "entry_price": 3.22,
+      "sell_price": 3.5,
+      "pnl_pct": 8.695652173913038,
+      "pnl_krw": 1.6880281840757538e+22,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 1.0,
+      "entry_time_ms": 1771338840000,
+      "sell_time_ms": 1771338900000
+    },
+    {
+      "ticker": "CGTL",
+      "type": "full",
+      "entry_price": 3.22,
+      "sell_price": 3.6001,
+      "pnl_pct": 11.8,
+      "pnl_krw": 2.291498259882833e+22,
+      "reason": "TRAILING (11.8%, peak=20.8%)",
+      "hold_min": 18.0,
+      "queue_price": 2.67005,
+      "queue_to_entry_pct": 20.6,
+      "entry_time_ms": 1771338840000,
+      "sell_time_ms": 1771339920000,
+      "daily_high": 4.6737,
+      "max_possible_pct": 45.1
+    },
+    {
+      "ticker": "BDMD",
+      "type": "partial",
+      "entry_price": 1.12,
+      "sell_price": 1.1874,
+      "pnl_pct": 6.0178571428571415,
+      "pnl_krw": 1.2970006376258646e+22,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 6.0,
+      "entry_time_ms": 1771340760000,
+      "sell_time_ms": 1771341120000
+    },
+    {
+      "ticker": "ATOM",
+      "type": "full",
+      "entry_price": 4.895,
+      "sell_price": 4.66,
+      "pnl_pct": -4.8,
+      "pnl_krw": -1.863900374857904e+22,
+      "reason": "TIME_LIMIT (-4.8%)",
+      "hold_min": 45.0,
+      "queue_price": 3.96,
+      "queue_to_entry_pct": 23.6,
+      "entry_time_ms": 1771338900000,
+      "sell_time_ms": 1771341600000,
+      "daily_high": 6.19,
+      "max_possible_pct": 26.5
+    },
+    {
+      "ticker": "BDMD",
+      "type": "full",
+      "entry_price": 1.12,
+      "sell_price": 1.1899,
+      "pnl_pct": 6.24,
+      "pnl_krw": 1.3451089698820165e+22,
+      "reason": "TRAILING (6.2%, peak=10.0%)",
+      "hold_min": 15.0,
+      "queue_price": 0.9314,
+      "queue_to_entry_pct": 20.2,
+      "entry_time_ms": 1771340760000,
+      "sell_time_ms": 1771341660000,
+      "daily_high": 1.42,
+      "max_possible_pct": 26.8
+    },
+    {
+      "ticker": "GVH",
+      "type": "partial",
+      "entry_price": 1.5,
+      "sell_price": 1.5895,
+      "pnl_pct": 5.9666666666666535,
+      "pnl_krw": 1.532713097546034e+22,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 4.0,
+      "entry_time_ms": 1771344840000,
+      "sell_time_ms": 1771345080000
+    },
+    {
+      "ticker": "GVH",
+      "type": "full",
+      "entry_price": 1.5,
+      "sell_price": 1.71,
+      "pnl_pct": 14.0,
+      "pnl_krw": 3.5963100612811997e+22,
+      "reason": "PROFIT_TARGET +10% (14.0%)",
+      "hold_min": 15.0,
+      "queue_price": 1.2399,
+      "queue_to_entry_pct": 21.0,
+      "entry_time_ms": 1771344840000,
+      "sell_time_ms": 1771345740000,
+      "daily_high": 1.79,
+      "max_possible_pct": 19.3
+    },
+    {
+      "ticker": "PHOE",
+      "type": "partial",
+      "entry_price": 16,
+      "sell_price": 17.6,
+      "pnl_pct": 10.000000000000009,
+      "pnl_krw": 2.851317306800797e+22,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 5.0,
+      "entry_time_ms": 1771354380000,
+      "sell_time_ms": 1771354680000
+    },
+    {
+      "ticker": "PHOE",
+      "type": "full",
+      "entry_price": 16,
+      "sell_price": 17.6,
+      "pnl_pct": 10.0,
+      "pnl_krw": 2.851317306800797e+22,
+      "reason": "PROFIT_TARGET +10% (10.0%)",
+      "hold_min": 5.0,
+      "queue_price": 13.1,
+      "queue_to_entry_pct": 22.1,
+      "entry_time_ms": 1771354380000,
+      "sell_time_ms": 1771354680000,
+      "daily_high": 22.66,
+      "max_possible_pct": 41.6
+    },
+    {
+      "ticker": "LGHL",
+      "type": "partial",
+      "entry_price": 1.42,
+      "sell_price": 1.4999,
+      "pnl_pct": 5.626760563380295,
+      "pnl_krw": 1.6043679775590424e+22,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 15.0,
+      "entry_time_ms": 1771354260000,
+      "sell_time_ms": 1771355160000
+    },
+    {
+      "ticker": "LGHL",
+      "type": "full",
+      "entry_price": 1.42,
+      "sell_price": 1.49,
+      "pnl_pct": 4.93,
+      "pnl_krw": 1.4055789540567352e+22,
+      "reason": "TRAILING (4.9%, peak=8.5%)",
+      "hold_min": 17.0,
+      "queue_price": 1.16,
+      "queue_to_entry_pct": 22.4,
+      "entry_time_ms": 1771354260000,
+      "sell_time_ms": 1771355280000,
+      "daily_high": 1.91,
+      "max_possible_pct": 34.5
+    },
+    {
+      "ticker": "AUUD",
+      "type": "partial",
+      "entry_price": 0.8677,
+      "sell_price": 0.9185,
+      "pnl_pct": 5.854558026967838,
+      "pnl_krw": 2.02868847222613e+22,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 7.0,
+      "entry_time_ms": 1771360500000,
+      "sell_time_ms": 1771360920000
+    },
+    {
+      "ticker": "AUUD",
+      "type": "full",
+      "entry_price": 0.8677,
+      "sell_price": 0.8489,
+      "pnl_pct": -2.17,
+      "pnl_krw": -7.507744739734527e+21,
+      "reason": "TIME_LIMIT (-2.2%)",
+      "hold_min": 45.0,
+      "queue_price": 0.7147,
+      "queue_to_entry_pct": 21.4,
+      "entry_time_ms": 1771360500000,
+      "sell_time_ms": 1771363200000,
+      "daily_high": 1.55,
+      "max_possible_pct": 78.6
+    },
+    {
+      "ticker": "AUUD",
+      "type": "partial",
+      "entry_price": 1.11,
+      "sell_price": 1.21,
+      "pnl_pct": 9.009009009009006,
+      "pnl_krw": 3.4396825346549643e+22,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 3.0,
+      "entry_time_ms": 1771367700000,
+      "sell_time_ms": 1771367880000
+    },
+    {
+      "ticker": "AUUD",
+      "type": "full",
+      "entry_price": 1.11,
+      "sell_price": 1.2003,
+      "pnl_pct": 8.14,
+      "pnl_krw": 3.106033328793422e+22,
+      "reason": "TRAILING (8.1%, peak=12.6%)",
+      "hold_min": 10.0,
+      "queue_price": 0.9199,
+      "queue_to_entry_pct": 20.7,
+      "entry_time_ms": 1771367700000,
+      "sell_time_ms": 1771368300000,
+      "daily_high": 1.55,
+      "max_possible_pct": 39.6
+    }
+  ],
+  "fake_signals": [
+    {
+      "ticker": "ATOM",
+      "time_ms": 1771362960000,
+      "price": 5.6918,
+      "max_later_gain_pct": 2.6
+    },
+    {
+      "ticker": "ATOM",
+      "time_ms": 1771365600000,
+      "price": 5.69,
+      "max_later_gain_pct": 2.6
+    },
+    {
+      "ticker": "ATOM",
+      "time_ms": 1771370040000,
+      "price": 5.7995,
+      "max_later_gain_pct": 0.7
+    },
+    {
+      "ticker": "ATOM",
+      "time_ms": 1771370880000,
+      "price": 5.8269,
+      "max_later_gain_pct": 0.2
+    },
+    {
+      "ticker": "ATOM",
+      "time_ms": 1771371900000,
+      "price": 5.74,
+      "max_later_gain_pct": 1.7
+    },
+    {
+      "ticker": "ATOM",
+      "time_ms": 1771373400000,
+      "price": 5.82,
+      "max_later_gain_pct": 0.3
+    },
+    {
+      "ticker": "GMM",
+      "time_ms": 1771361040000,
+      "price": 1.4499,
+      "max_later_gain_pct": 3.5
+    },
+    {
+      "ticker": "GMM",
+      "time_ms": 1771365360000,
+      "price": 1.26,
+      "max_later_gain_pct": 4.8
+    },
+    {
+      "ticker": "GMM",
+      "time_ms": 1771367100000,
+      "price": 1.25,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "GVH",
+      "time_ms": 1771369980000,
+      "price": 1.45,
+      "max_later_gain_pct": 2.8
+    },
+    {
+      "ticker": "GVH",
+      "time_ms": 1771371120000,
+      "price": 1.45,
+      "max_later_gain_pct": 2.8
+    },
+    {
+      "ticker": "GVH",
+      "time_ms": 1771374660000,
+      "price": 1.44,
+      "max_later_gain_pct": 3.5
+    },
+    {
+      "ticker": "GVH",
+      "time_ms": 1771375680000,
+      "price": 1.45,
+      "max_later_gain_pct": 2.8
+    },
+    {
+      "ticker": "LFS",
+      "time_ms": 1771346280000,
+      "price": 3.58,
+      "max_later_gain_pct": 4.2
+    },
+    {
+      "ticker": "LFS",
+      "time_ms": 1771356600000,
+      "price": 3.65,
+      "max_later_gain_pct": 2.2
+    },
+    {
+      "ticker": "OLB",
+      "time_ms": 1771371360000,
+      "price": 1.12,
+      "max_later_gain_pct": 2.7
+    },
+    {
+      "ticker": "PHOE",
+      "time_ms": 1771362780000,
+      "price": 12.66,
+      "max_later_gain_pct": 3.8
+    }
+  ],
+  "missed_entries": [],
+  "fake_rate": 12.5
+}

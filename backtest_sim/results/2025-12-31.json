@@ -1,0 +1,378 @@
+{
+  "date": "2025-12-31",
+  "starting_portfolio": 72724091123639.0,
+  "ending_portfolio": 117892346394216.0,
+  "day_pnl_krw": 45168255270577.0,
+  "day_pnl_pct": 62.11,
+  "vol_spikes_detected": 119,
+  "signals_generated": 119,
+  "buys_executed": 5,
+  "trades": [
+    {
+      "ticker": "INBS",
+      "type": "partial",
+      "entry_price": 5.86,
+      "sell_price": 6.19,
+      "pnl_pct": 5.631399317406149,
+      "pnl_krw": 204769198556.32178,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 2.0,
+      "entry_time_ms": 1767191280000,
+      "sell_time_ms": 1767191400000
+    },
+    {
+      "ticker": "MNTS",
+      "type": "partial",
+      "entry_price": 6.36,
+      "sell_price": 6.7821,
+      "pnl_pct": 6.636792452830176,
+      "pnl_krw": 254073222367.6333,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 6.0,
+      "entry_time_ms": 1767191520000,
+      "sell_time_ms": 1767191880000
+    },
+    {
+      "ticker": "INBS",
+      "type": "full",
+      "entry_price": 5.86,
+      "sell_price": 7.73,
+      "pnl_pct": 31.91,
+      "pnl_krw": 1160358791819.0,
+      "reason": "TRAILING (31.9%, peak=38.1%)",
+      "hold_min": 34.0,
+      "queue_price": 4.82,
+      "queue_to_entry_pct": 21.6,
+      "entry_time_ms": 1767191280000,
+      "sell_time_ms": 1767193320000,
+      "daily_high": 12.94,
+      "max_possible_pct": 120.8
+    },
+    {
+      "ticker": "MNTS",
+      "type": "full",
+      "entry_price": 6.36,
+      "sell_price": 6.5596,
+      "pnl_pct": 3.14,
+      "pnl_krw": 120144551492.0,
+      "reason": "TIME_LIMIT (3.1%)",
+      "hold_min": 45.0,
+      "queue_price": 5.29,
+      "queue_to_entry_pct": 20.2,
+      "entry_time_ms": 1767191520000,
+      "sell_time_ms": 1767194220000,
+      "daily_high": 7.25,
+      "max_possible_pct": 14.0
+    },
+    {
+      "ticker": "ESHA",
+      "type": "full",
+      "entry_price": 26.0573,
+      "sell_price": 22.95,
+      "pnl_pct": -11.92,
+      "pnl_krw": -1065992473841.0,
+      "reason": "STOP_LOSS (-11.9%)",
+      "hold_min": 22.0,
+      "queue_price": 21.56,
+      "queue_to_entry_pct": 20.9,
+      "entry_time_ms": 1767194280000,
+      "sell_time_ms": 1767195600000,
+      "daily_high": 27,
+      "max_possible_pct": 3.6
+    },
+    {
+      "ticker": "WTO",
+      "type": "partial",
+      "entry_price": 3.55,
+      "sell_price": 4.025,
+      "pnl_pct": 13.380281690140873,
+      "pnl_krw": 650720531689.3652,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 1.0,
+      "entry_time_ms": 1767213900000,
+      "sell_time_ms": 1767213960000
+    },
+    {
+      "ticker": "WTO",
+      "type": "full",
+      "entry_price": 3.55,
+      "sell_price": 4.025,
+      "pnl_pct": 13.38,
+      "pnl_krw": 650720531689.0,
+      "reason": "PROFIT_TARGET +10% (13.4%)",
+      "hold_min": 1.0,
+      "queue_price": 2.95,
+      "queue_to_entry_pct": 20.3,
+      "entry_time_ms": 1767213900000,
+      "sell_time_ms": 1767213960000,
+      "daily_high": 6.7,
+      "max_possible_pct": 88.7
+    },
+    {
+      "ticker": "WTO",
+      "type": "full",
+      "entry_price": 6.6,
+      "sell_price": 5.85,
+      "pnl_pct": -11.36,
+      "pnl_krw": -1230609043781.0,
+      "reason": "STOP_LOSS (-11.4%)",
+      "hold_min": 3.0,
+      "queue_price": 5.4995,
+      "queue_to_entry_pct": 20.0,
+      "entry_time_ms": 1767216840000,
+      "sell_time_ms": 1767217020000,
+      "daily_high": 6.7,
+      "max_possible_pct": 1.5
+    }
+  ],
+  "fake_signals": [
+    {
+      "ticker": "ESHA",
+      "time_ms": 1767201660000,
+      "price": 24.5,
+      "max_later_gain_pct": 3.8
+    },
+    {
+      "ticker": "ESHA",
+      "time_ms": 1767208740000,
+      "price": 23.96,
+      "max_later_gain_pct": 0.6
+    },
+    {
+      "ticker": "ESHA",
+      "time_ms": 1767212880000,
+      "price": 23.075,
+      "max_later_gain_pct": 2.6
+    },
+    {
+      "ticker": "ESHA",
+      "time_ms": 1767213420000,
+      "price": 22,
+      "max_later_gain_pct": 3.2
+    },
+    {
+      "ticker": "ESHA",
+      "time_ms": 1767228060000,
+      "price": 17.96,
+      "max_later_gain_pct": 4.7
+    },
+    {
+      "ticker": "LZMH",
+      "time_ms": 1767202980000,
+      "price": 1.71,
+      "max_later_gain_pct": 3.2
+    },
+    {
+      "ticker": "LZMH",
+      "time_ms": 1767203400000,
+      "price": 1.71,
+      "max_later_gain_pct": 3.2
+    },
+    {
+      "ticker": "LZMH",
+      "time_ms": 1767210960000,
+      "price": 1.73,
+      "max_later_gain_pct": 1.4
+    },
+    {
+      "ticker": "LZMH",
+      "time_ms": 1767211680000,
+      "price": 1.6801,
+      "max_later_gain_pct": 4.5
+    },
+    {
+      "ticker": "LZMH",
+      "time_ms": 1767212460000,
+      "price": 1.7,
+      "max_later_gain_pct": 3.2
+    },
+    {
+      "ticker": "LZMH",
+      "time_ms": 1767212640000,
+      "price": 1.74,
+      "max_later_gain_pct": 0.9
+    },
+    {
+      "ticker": "LZMH",
+      "time_ms": 1767213960000,
+      "price": 1.7,
+      "max_later_gain_pct": 2.4
+    },
+    {
+      "ticker": "LZMH",
+      "time_ms": 1767214200000,
+      "price": 1.72,
+      "max_later_gain_pct": 1.2
+    },
+    {
+      "ticker": "LZMH",
+      "time_ms": 1767215280000,
+      "price": 1.7,
+      "max_later_gain_pct": 1.8
+    },
+    {
+      "ticker": "MENS",
+      "time_ms": 1767200640000,
+      "price": 4.235,
+      "max_later_gain_pct": 3.9
+    },
+    {
+      "ticker": "MENS",
+      "time_ms": 1767202200000,
+      "price": 4.217,
+      "max_later_gain_pct": 4.3
+    },
+    {
+      "ticker": "MENS",
+      "time_ms": 1767203040000,
+      "price": 4.245,
+      "max_later_gain_pct": 3.7
+    },
+    {
+      "ticker": "MENS",
+      "time_ms": 1767204960000,
+      "price": 4.335,
+      "max_later_gain_pct": 1.5
+    },
+    {
+      "ticker": "MENS",
+      "time_ms": 1767205140000,
+      "price": 4.4,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "MENS",
+      "time_ms": 1767207060000,
+      "price": 4.3171,
+      "max_later_gain_pct": 1.0
+    },
+    {
+      "ticker": "MENS",
+      "time_ms": 1767209520000,
+      "price": 4.23,
+      "max_later_gain_pct": 2.8
+    },
+    {
+      "ticker": "MENS",
+      "time_ms": 1767213360000,
+      "price": 4.165,
+      "max_later_gain_pct": 0.4
+    },
+    {
+      "ticker": "MENS",
+      "time_ms": 1767214500000,
+      "price": 3.98,
+      "max_later_gain_pct": 3.3
+    },
+    {
+      "ticker": "MNTS",
+      "time_ms": 1767199800000,
+      "price": 5.936,
+      "max_later_gain_pct": 4.4
+    },
+    {
+      "ticker": "MNTS",
+      "time_ms": 1767200400000,
+      "price": 5.6485,
+      "max_later_gain_pct": 4.4
+    },
+    {
+      "ticker": "MNTS",
+      "time_ms": 1767202500000,
+      "price": 5.8,
+      "max_later_gain_pct": 1.0
+    },
+    {
+      "ticker": "MNTS",
+      "time_ms": 1767205500000,
+      "price": 5.34,
+      "max_later_gain_pct": 3.0
+    },
+    {
+      "ticker": "MNTS",
+      "time_ms": 1767206520000,
+      "price": 5.38,
+      "max_later_gain_pct": 1.4
+    },
+    {
+      "ticker": "MNTS",
+      "time_ms": 1767213600000,
+      "price": 5.12,
+      "max_later_gain_pct": 4.7
+    },
+    {
+      "ticker": "NUAI",
+      "time_ms": 1767209820000,
+      "price": 2.85,
+      "max_later_gain_pct": 2.8
+    },
+    {
+      "ticker": "NUAI",
+      "time_ms": 1767212040000,
+      "price": 2.845,
+      "max_later_gain_pct": 3.0
+    },
+    {
+      "ticker": "NUAI",
+      "time_ms": 1767213240000,
+      "price": 2.875,
+      "max_later_gain_pct": 1.9
+    },
+    {
+      "ticker": "NUAI",
+      "time_ms": 1767216780000,
+      "price": 2.83,
+      "max_later_gain_pct": 2.8
+    },
+    {
+      "ticker": "NUAI",
+      "time_ms": 1767223440000,
+      "price": 2.87,
+      "max_later_gain_pct": 1.0
+    },
+    {
+      "ticker": "NUAI",
+      "time_ms": 1767224160000,
+      "price": 2.87,
+      "max_later_gain_pct": 1.0
+    },
+    {
+      "ticker": "NUAI",
+      "time_ms": 1767225780000,
+      "price": 2.87,
+      "max_later_gain_pct": 1.0
+    },
+    {
+      "ticker": "NUAI",
+      "time_ms": 1767229020000,
+      "price": 2.89,
+      "max_later_gain_pct": 0.3
+    },
+    {
+      "ticker": "SIDU",
+      "time_ms": 1767227700000,
+      "price": 3.2901,
+      "max_later_gain_pct": 2.4
+    },
+    {
+      "ticker": "SOPA",
+      "time_ms": 1767214200000,
+      "price": 3.915,
+      "max_later_gain_pct": 0.9
+    },
+    {
+      "ticker": "SOPA",
+      "time_ms": 1767217260000,
+      "price": 3.79,
+      "max_later_gain_pct": 0.3
+    },
+    {
+      "ticker": "SOPA",
+      "time_ms": 1767226980000,
+      "price": 3.69,
+      "max_later_gain_pct": 3.0
+    }
+  ],
+  "missed_entries": [],
+  "fake_rate": 34.5
+}

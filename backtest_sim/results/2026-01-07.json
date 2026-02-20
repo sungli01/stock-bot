@@ -1,0 +1,211 @@
+{
+  "date": "2026-01-07",
+  "starting_portfolio": 1155712304830388.0,
+  "ending_portfolio": 1691975191818133.0,
+  "day_pnl_krw": 536262886987745.0,
+  "day_pnl_pct": 46.4,
+  "vol_spikes_detected": 82,
+  "signals_generated": 82,
+  "buys_executed": 4,
+  "trades": [
+    {
+      "ticker": "NVVE",
+      "type": "partial",
+      "entry_price": 3.094,
+      "sell_price": 3.66,
+      "pnl_pct": 18.293471234647708,
+      "pnl_krw": 10570994901971.555,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 2.0,
+      "entry_time_ms": 1767796620000,
+      "sell_time_ms": 1767796740000
+    },
+    {
+      "ticker": "NVVE",
+      "type": "full",
+      "entry_price": 3.094,
+      "sell_price": 3.66,
+      "pnl_pct": 18.29,
+      "pnl_krw": 10570994901972.0,
+      "reason": "PROFIT_TARGET +10% (18.3%)",
+      "hold_min": 2.0,
+      "queue_price": 2.5307,
+      "queue_to_entry_pct": 22.3,
+      "entry_time_ms": 1767796620000,
+      "sell_time_ms": 1767796740000,
+      "daily_high": 4.69,
+      "max_possible_pct": 51.6
+    },
+    {
+      "ticker": "NVVE",
+      "type": "full",
+      "entry_price": 4.13,
+      "sell_price": 3.8401,
+      "pnl_pct": -7.02,
+      "pnl_krw": -9072013552821.0,
+      "reason": "STOP_LOSS (-7.0%)",
+      "hold_min": 30.0,
+      "queue_price": 3.4351,
+      "queue_to_entry_pct": 20.2,
+      "entry_time_ms": 1767813960000,
+      "sell_time_ms": 1767815760000,
+      "daily_high": 4.69,
+      "max_possible_pct": 13.6
+    },
+    {
+      "ticker": "ERAS",
+      "type": "partial",
+      "entry_price": 5.42,
+      "sell_price": 6.17,
+      "pnl_pct": 13.837638376383765,
+      "pnl_krw": 9773496753295.328,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 1.0,
+      "entry_time_ms": 1767816000000,
+      "sell_time_ms": 1767816060000
+    },
+    {
+      "ticker": "ERAS",
+      "type": "full",
+      "entry_price": 5.42,
+      "sell_price": 6.17,
+      "pnl_pct": 13.84,
+      "pnl_krw": 9773496753295.0,
+      "reason": "PROFIT_TARGET +10% (13.8%)",
+      "hold_min": 1.0,
+      "queue_price": 4.27,
+      "queue_to_entry_pct": 26.9,
+      "entry_time_ms": 1767816000000,
+      "sell_time_ms": 1767816060000,
+      "daily_high": 6.49,
+      "max_possible_pct": 19.7
+    },
+    {
+      "ticker": "VSTM",
+      "type": "full",
+      "entry_price": 8.6,
+      "sell_price": 7.89,
+      "pnl_pct": -8.26,
+      "pnl_krw": -10670024684109.0,
+      "reason": "STOP_LOSS (-8.3%)",
+      "hold_min": 24.0,
+      "queue_price": 7.13,
+      "queue_to_entry_pct": 20.6,
+      "entry_time_ms": 1767815460000,
+      "sell_time_ms": 1767816900000,
+      "daily_high": 8.88,
+      "max_possible_pct": 3.3
+    }
+  ],
+  "fake_signals": [
+    {
+      "ticker": "ERAS",
+      "time_ms": 1767823260000,
+      "price": 4.55,
+      "max_later_gain_pct": 3.5
+    },
+    {
+      "ticker": "ERAS",
+      "time_ms": 1767824460000,
+      "price": 4.56,
+      "max_later_gain_pct": 3.1
+    },
+    {
+      "ticker": "ERAS",
+      "time_ms": 1767825720000,
+      "price": 4.55,
+      "max_later_gain_pct": 2.2
+    },
+    {
+      "ticker": "ERAS",
+      "time_ms": 1767828900000,
+      "price": 4.55,
+      "max_later_gain_pct": 2.2
+    },
+    {
+      "ticker": "ERAS",
+      "time_ms": 1767829140000,
+      "price": 4.59,
+      "max_later_gain_pct": 1.3
+    },
+    {
+      "ticker": "ERAS",
+      "time_ms": 1767830760000,
+      "price": 4.55,
+      "max_later_gain_pct": 2.2
+    },
+    {
+      "ticker": "ERAS",
+      "time_ms": 1767832680000,
+      "price": 4.6,
+      "max_later_gain_pct": 1.1
+    },
+    {
+      "ticker": "ERAS",
+      "time_ms": 1767833700000,
+      "price": 4.5801,
+      "max_later_gain_pct": 1.3
+    },
+    {
+      "ticker": "NVVE",
+      "time_ms": 1767833760000,
+      "price": 4.54,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "SLRX",
+      "time_ms": 1767831600000,
+      "price": 0.88,
+      "max_later_gain_pct": 1.1
+    },
+    {
+      "ticker": "SLRX",
+      "time_ms": 1767832800000,
+      "price": 0.85,
+      "max_later_gain_pct": 2.7
+    },
+    {
+      "ticker": "SLRX",
+      "time_ms": 1767833460000,
+      "price": 0.867,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "VSTM",
+      "time_ms": 1767820920000,
+      "price": 7.41,
+      "max_later_gain_pct": 3.9
+    },
+    {
+      "ticker": "VSTM",
+      "time_ms": 1767822780000,
+      "price": 7.36,
+      "max_later_gain_pct": 4.6
+    },
+    {
+      "ticker": "VSTM",
+      "time_ms": 1767822960000,
+      "price": 7.64,
+      "max_later_gain_pct": 0.8
+    }
+  ],
+  "missed_entries": [
+    {
+      "ticker": "RVMDW",
+      "daily_change_pct": 102.26,
+      "daily_volume": 289953,
+      "had_vol_spike": true,
+      "meets_daily_vol": false,
+      "reason": "low_daily_vol"
+    },
+    {
+      "ticker": "SLRX",
+      "daily_change_pct": 32.79,
+      "daily_volume": 6028928,
+      "had_vol_spike": true,
+      "meets_daily_vol": true,
+      "reason": "price_not_triggered"
+    }
+  ],
+  "fake_rate": 18.3
+}

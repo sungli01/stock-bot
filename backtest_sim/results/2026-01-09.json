@@ -1,0 +1,627 @@
+{
+  "date": "2026-01-09",
+  "starting_portfolio": 2546349421401462.0,
+  "ending_portfolio": 3350160863222752.0,
+  "day_pnl_krw": 803811441821290.0,
+  "day_pnl_pct": 31.57,
+  "vol_spikes_detected": 183,
+  "signals_generated": 183,
+  "buys_executed": 3,
+  "trades": [
+    {
+      "ticker": "SHPH",
+      "type": "full",
+      "entry_price": 2.64,
+      "sell_price": 2.32,
+      "pnl_pct": -12.12,
+      "pnl_krw": -30864841471533.0,
+      "reason": "STOP_LOSS (-12.1%)",
+      "hold_min": 1.0,
+      "queue_price": 2.08,
+      "queue_to_entry_pct": 26.9,
+      "entry_time_ms": 1767969300000,
+      "sell_time_ms": 1767969360000,
+      "daily_high": 2.73,
+      "max_possible_pct": 3.4
+    },
+    {
+      "ticker": "MRNO",
+      "type": "full",
+      "entry_price": 1.995,
+      "sell_price": 1.8508,
+      "pnl_pct": -7.23,
+      "pnl_krw": -20022618299875.0,
+      "reason": "STOP_LOSS (-7.2%)",
+      "hold_min": 3.0,
+      "queue_price": 1.66,
+      "queue_to_entry_pct": 20.2,
+      "entry_time_ms": 1767978180000,
+      "sell_time_ms": 1767978360000,
+      "daily_high": 2.2,
+      "max_possible_pct": 10.3
+    },
+    {
+      "ticker": "VCIG",
+      "type": "partial",
+      "entry_price": 0.8996,
+      "sell_price": 0.9502,
+      "pnl_pct": 5.624722098710544,
+      "pnl_krw": 8513323038708.6875,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 8.0,
+      "entry_time_ms": 1767991200000,
+      "sell_time_ms": 1767991680000
+    },
+    {
+      "ticker": "VCIG",
+      "type": "full",
+      "entry_price": 0.8996,
+      "sell_price": 0.9699,
+      "pnl_pct": 7.81,
+      "pnl_krw": 11827798609115.0,
+      "reason": "TIME_LIMIT (7.8%)",
+      "hold_min": 45.0,
+      "queue_price": 0.7302,
+      "queue_to_entry_pct": 23.2,
+      "entry_time_ms": 1767991200000,
+      "sell_time_ms": 1767993900000,
+      "daily_high": 1,
+      "max_possible_pct": 11.2
+    }
+  ],
+  "fake_signals": [
+    {
+      "ticker": "GNPX",
+      "time_ms": 1767988320000,
+      "price": 2.415,
+      "max_later_gain_pct": 1.9
+    },
+    {
+      "ticker": "GNPX",
+      "time_ms": 1768001100000,
+      "price": 2.29,
+      "max_later_gain_pct": 2.6
+    },
+    {
+      "ticker": "GNPX",
+      "time_ms": 1768001880000,
+      "price": 2.24,
+      "max_later_gain_pct": 4.9
+    },
+    {
+      "ticker": "GNPX",
+      "time_ms": 1768003320000,
+      "price": 2.2771,
+      "max_later_gain_pct": 3.2
+    },
+    {
+      "ticker": "GNPX",
+      "time_ms": 1768005960000,
+      "price": 2.3,
+      "max_later_gain_pct": 2.2
+    },
+    {
+      "ticker": "HRTX",
+      "time_ms": 1767972600000,
+      "price": 1.51,
+      "max_later_gain_pct": 4.3
+    },
+    {
+      "ticker": "HRTX",
+      "time_ms": 1767973020000,
+      "price": 1.54,
+      "max_later_gain_pct": 2.3
+    },
+    {
+      "ticker": "HRTX",
+      "time_ms": 1767978420000,
+      "price": 1.51,
+      "max_later_gain_pct": 4.3
+    },
+    {
+      "ticker": "HRTX",
+      "time_ms": 1767979080000,
+      "price": 1.54,
+      "max_later_gain_pct": 2.3
+    },
+    {
+      "ticker": "HRTX",
+      "time_ms": 1767979140000,
+      "price": 1.5415,
+      "max_later_gain_pct": 2.2
+    },
+    {
+      "ticker": "HRTX",
+      "time_ms": 1767980220000,
+      "price": 1.525,
+      "max_later_gain_pct": 0.3
+    },
+    {
+      "ticker": "HRTX",
+      "time_ms": 1767981660000,
+      "price": 1.52,
+      "max_later_gain_pct": 0.3
+    },
+    {
+      "ticker": "HRTX",
+      "time_ms": 1767981780000,
+      "price": 1.48,
+      "max_later_gain_pct": 2.7
+    },
+    {
+      "ticker": "HRTX",
+      "time_ms": 1767982380000,
+      "price": 1.47,
+      "max_later_gain_pct": 1.2
+    },
+    {
+      "ticker": "HRTX",
+      "time_ms": 1767982800000,
+      "price": 1.45,
+      "max_later_gain_pct": 1.0
+    },
+    {
+      "ticker": "HRTX",
+      "time_ms": 1767982920000,
+      "price": 1.455,
+      "max_later_gain_pct": 0.7
+    },
+    {
+      "ticker": "HRTX",
+      "time_ms": 1767983280000,
+      "price": 1.44,
+      "max_later_gain_pct": 1.7
+    },
+    {
+      "ticker": "HRTX",
+      "time_ms": 1767983400000,
+      "price": 1.445,
+      "max_later_gain_pct": 1.4
+    },
+    {
+      "ticker": "HRTX",
+      "time_ms": 1767984420000,
+      "price": 1.445,
+      "max_later_gain_pct": 1.4
+    },
+    {
+      "ticker": "HRTX",
+      "time_ms": 1767984660000,
+      "price": 1.445,
+      "max_later_gain_pct": 1.4
+    },
+    {
+      "ticker": "HRTX",
+      "time_ms": 1767984720000,
+      "price": 1.44,
+      "max_later_gain_pct": 1.7
+    },
+    {
+      "ticker": "HRTX",
+      "time_ms": 1767985200000,
+      "price": 1.43,
+      "max_later_gain_pct": 2.5
+    },
+    {
+      "ticker": "HRTX",
+      "time_ms": 1767986040000,
+      "price": 1.41,
+      "max_later_gain_pct": 3.9
+    },
+    {
+      "ticker": "HRTX",
+      "time_ms": 1767986280000,
+      "price": 1.41,
+      "max_later_gain_pct": 3.9
+    },
+    {
+      "ticker": "HRTX",
+      "time_ms": 1767986400000,
+      "price": 1.41,
+      "max_later_gain_pct": 3.9
+    },
+    {
+      "ticker": "HRTX",
+      "time_ms": 1767986940000,
+      "price": 1.41,
+      "max_later_gain_pct": 3.9
+    },
+    {
+      "ticker": "HRTX",
+      "time_ms": 1767987420000,
+      "price": 1.435,
+      "max_later_gain_pct": 2.1
+    },
+    {
+      "ticker": "HRTX",
+      "time_ms": 1767988680000,
+      "price": 1.44,
+      "max_later_gain_pct": 1.7
+    },
+    {
+      "ticker": "HRTX",
+      "time_ms": 1767988740000,
+      "price": 1.445,
+      "max_later_gain_pct": 1.4
+    },
+    {
+      "ticker": "HRTX",
+      "time_ms": 1767989340000,
+      "price": 1.4651,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "HRTX",
+      "time_ms": 1767990000000,
+      "price": 1.4355,
+      "max_later_gain_pct": 0.3
+    },
+    {
+      "ticker": "HRTX",
+      "time_ms": 1767990240000,
+      "price": 1.425,
+      "max_later_gain_pct": 1.1
+    },
+    {
+      "ticker": "HRTX",
+      "time_ms": 1767990780000,
+      "price": 1.425,
+      "max_later_gain_pct": 1.1
+    },
+    {
+      "ticker": "HRTX",
+      "time_ms": 1767990840000,
+      "price": 1.42,
+      "max_later_gain_pct": 1.4
+    },
+    {
+      "ticker": "HRTX",
+      "time_ms": 1767991380000,
+      "price": 1.42,
+      "max_later_gain_pct": 1.4
+    },
+    {
+      "ticker": "HRTX",
+      "time_ms": 1767992280000,
+      "price": 1.395,
+      "max_later_gain_pct": 3.2
+    },
+    {
+      "ticker": "HRTX",
+      "time_ms": 1767999960000,
+      "price": 1.4,
+      "max_later_gain_pct": 2.1
+    },
+    {
+      "ticker": "MRNO",
+      "time_ms": 1767984420000,
+      "price": 1.5551,
+      "max_later_gain_pct": 2.8
+    },
+    {
+      "ticker": "MRNO",
+      "time_ms": 1767985080000,
+      "price": 1.58,
+      "max_later_gain_pct": 0.6
+    },
+    {
+      "ticker": "MRNO",
+      "time_ms": 1767985740000,
+      "price": 1.5401,
+      "max_later_gain_pct": 2.9
+    },
+    {
+      "ticker": "OKLS",
+      "time_ms": 1767952260000,
+      "price": 9.98,
+      "max_later_gain_pct": 2.9
+    },
+    {
+      "ticker": "OKLS",
+      "time_ms": 1767952740000,
+      "price": 9.97,
+      "max_later_gain_pct": 3.0
+    },
+    {
+      "ticker": "OKLS",
+      "time_ms": 1767990120000,
+      "price": 8.74,
+      "max_later_gain_pct": 0.2
+    },
+    {
+      "ticker": "OKLS",
+      "time_ms": 1767990660000,
+      "price": 8.5692,
+      "max_later_gain_pct": 1.4
+    },
+    {
+      "ticker": "OKLS",
+      "time_ms": 1767991620000,
+      "price": 8.461,
+      "max_later_gain_pct": 1.3
+    },
+    {
+      "ticker": "OKLS",
+      "time_ms": 1767992340000,
+      "price": 8.52,
+      "max_later_gain_pct": 0.6
+    },
+    {
+      "ticker": "OKLS",
+      "time_ms": 1767993120000,
+      "price": 8.45,
+      "max_later_gain_pct": 0.5
+    },
+    {
+      "ticker": "OKLS",
+      "time_ms": 1767994500000,
+      "price": 8.45,
+      "max_later_gain_pct": 0.2
+    },
+    {
+      "ticker": "OKLS",
+      "time_ms": 1767995820000,
+      "price": 8.43,
+      "max_later_gain_pct": 0.5
+    },
+    {
+      "ticker": "OKLS",
+      "time_ms": 1767999180000,
+      "price": 8.42,
+      "max_later_gain_pct": 0.2
+    },
+    {
+      "ticker": "OKLS",
+      "time_ms": 1768002720000,
+      "price": 8.3,
+      "max_later_gain_pct": 0.8
+    },
+    {
+      "ticker": "OPENL",
+      "time_ms": 1767976080000,
+      "price": 1.1,
+      "max_later_gain_pct": 3.6
+    },
+    {
+      "ticker": "OPENL",
+      "time_ms": 1767977520000,
+      "price": 1.1094,
+      "max_later_gain_pct": 2.8
+    },
+    {
+      "ticker": "OPENL",
+      "time_ms": 1767979500000,
+      "price": 1.115,
+      "max_later_gain_pct": 2.2
+    },
+    {
+      "ticker": "OPENL",
+      "time_ms": 1767979800000,
+      "price": 1.12,
+      "max_later_gain_pct": 1.8
+    },
+    {
+      "ticker": "OPENL",
+      "time_ms": 1767980160000,
+      "price": 1.12,
+      "max_later_gain_pct": 1.8
+    },
+    {
+      "ticker": "OPENL",
+      "time_ms": 1767980520000,
+      "price": 1.1095,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "OPENL",
+      "time_ms": 1767981000000,
+      "price": 1.08,
+      "max_later_gain_pct": 1.9
+    },
+    {
+      "ticker": "OPENL",
+      "time_ms": 1767981360000,
+      "price": 1.09,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "OPENL",
+      "time_ms": 1767982800000,
+      "price": 1.0701,
+      "max_later_gain_pct": 0.9
+    },
+    {
+      "ticker": "OPENL",
+      "time_ms": 1767983880000,
+      "price": 1.07,
+      "max_later_gain_pct": 0.9
+    },
+    {
+      "ticker": "OPENL",
+      "time_ms": 1767984600000,
+      "price": 1.04,
+      "max_later_gain_pct": 2.9
+    },
+    {
+      "ticker": "OPENL",
+      "time_ms": 1767985140000,
+      "price": 1.0502,
+      "max_later_gain_pct": 0.9
+    },
+    {
+      "ticker": "OPENL",
+      "time_ms": 1767986220000,
+      "price": 1.04,
+      "max_later_gain_pct": 0.9
+    },
+    {
+      "ticker": "OPENL",
+      "time_ms": 1767987540000,
+      "price": 1,
+      "max_later_gain_pct": 2.0
+    },
+    {
+      "ticker": "OPENL",
+      "time_ms": 1767988620000,
+      "price": 0.972,
+      "max_later_gain_pct": 2.9
+    },
+    {
+      "ticker": "SHPH",
+      "time_ms": 1767978960000,
+      "price": 2.125,
+      "max_later_gain_pct": 4.0
+    },
+    {
+      "ticker": "SHPH",
+      "time_ms": 1767980160000,
+      "price": 2.12,
+      "max_later_gain_pct": 4.2
+    },
+    {
+      "ticker": "SHPH",
+      "time_ms": 1767980220000,
+      "price": 2.205,
+      "max_later_gain_pct": 0.2
+    },
+    {
+      "ticker": "SHPH",
+      "time_ms": 1767983400000,
+      "price": 2.11,
+      "max_later_gain_pct": 3.8
+    },
+    {
+      "ticker": "SHPH",
+      "time_ms": 1767984060000,
+      "price": 2.09,
+      "max_later_gain_pct": 4.8
+    },
+    {
+      "ticker": "SHPH",
+      "time_ms": 1767985680000,
+      "price": 2.12,
+      "max_later_gain_pct": 3.3
+    },
+    {
+      "ticker": "SHPH",
+      "time_ms": 1767987120000,
+      "price": 2.14,
+      "max_later_gain_pct": 2.3
+    },
+    {
+      "ticker": "SHPH",
+      "time_ms": 1767989160000,
+      "price": 2.17,
+      "max_later_gain_pct": 0.9
+    },
+    {
+      "ticker": "SHPH",
+      "time_ms": 1767989340000,
+      "price": 2.1626,
+      "max_later_gain_pct": 1.3
+    },
+    {
+      "ticker": "SHPH",
+      "time_ms": 1767991380000,
+      "price": 1.98,
+      "max_later_gain_pct": 3.5
+    },
+    {
+      "ticker": "TCGL",
+      "time_ms": 1767988800000,
+      "price": 7.39,
+      "max_later_gain_pct": 4.7
+    },
+    {
+      "ticker": "TCGL",
+      "time_ms": 1767989640000,
+      "price": 7.5,
+      "max_later_gain_pct": 3.2
+    },
+    {
+      "ticker": "TCGL",
+      "time_ms": 1767991680000,
+      "price": 7.74,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "VCIG",
+      "time_ms": 1768002660000,
+      "price": 0.9061,
+      "max_later_gain_pct": 2.0
+    },
+    {
+      "ticker": "VCIG",
+      "time_ms": 1768004220000,
+      "price": 0.9151,
+      "max_later_gain_pct": 1.0
+    },
+    {
+      "ticker": "VCIG",
+      "time_ms": 1768005480000,
+      "price": 0.89,
+      "max_later_gain_pct": 1.4
+    },
+    {
+      "ticker": "VCIG",
+      "time_ms": 1768005840000,
+      "price": 0.888,
+      "max_later_gain_pct": 1.6
+    },
+    {
+      "ticker": "VLN",
+      "time_ms": 1767997680000,
+      "price": 2.528,
+      "max_later_gain_pct": 4.0
+    },
+    {
+      "ticker": "VLN",
+      "time_ms": 1767999360000,
+      "price": 2.56,
+      "max_later_gain_pct": 1.2
+    },
+    {
+      "ticker": "VLN",
+      "time_ms": 1767999660000,
+      "price": 2.55,
+      "max_later_gain_pct": 1.6
+    },
+    {
+      "ticker": "VLN",
+      "time_ms": 1768002000000,
+      "price": 2.53,
+      "max_later_gain_pct": 1.2
+    },
+    {
+      "ticker": "VLN",
+      "time_ms": 1768004100000,
+      "price": 2.5001,
+      "max_later_gain_pct": 0.8
+    },
+    {
+      "ticker": "VLN",
+      "time_ms": 1768005600000,
+      "price": 2.48,
+      "max_later_gain_pct": 1.2
+    }
+  ],
+  "missed_entries": [
+    {
+      "ticker": "NBY",
+      "daily_change_pct": 108.76,
+      "daily_volume": 10660932,
+      "had_vol_spike": true,
+      "meets_daily_vol": true,
+      "reason": "price_not_triggered"
+    },
+    {
+      "ticker": "VLN",
+      "daily_change_pct": 54.32,
+      "daily_volume": 45951958,
+      "had_vol_spike": true,
+      "meets_daily_vol": true,
+      "reason": "price_not_triggered"
+    }
+  ],
+  "fake_rate": 48.6
+}

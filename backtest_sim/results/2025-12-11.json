@@ -1,0 +1,317 @@
+{
+  "date": "2025-12-11",
+  "starting_portfolio": 46938224555.0,
+  "ending_portfolio": 89152711328.0,
+  "day_pnl_krw": 42214486773.0,
+  "day_pnl_pct": 89.94,
+  "vol_spikes_detected": 105,
+  "signals_generated": 105,
+  "buys_executed": 7,
+  "trades": [
+    {
+      "ticker": "MIGI",
+      "type": "full",
+      "entry_price": 10.38,
+      "sell_price": 9.56,
+      "pnl_pct": -7.9,
+      "pnl_krw": -370802930.0,
+      "reason": "STOP_LOSS (-7.9%)",
+      "hold_min": 7.0,
+      "queue_price": 8.53,
+      "queue_to_entry_pct": 21.7,
+      "entry_time_ms": 1765459440000,
+      "sell_time_ms": 1765459860000,
+      "daily_high": 15.8,
+      "max_possible_pct": 52.2
+    },
+    {
+      "ticker": "RETO",
+      "type": "full",
+      "entry_price": 3.06,
+      "sell_price": 2.7,
+      "pnl_pct": -11.76,
+      "pnl_krw": -603073460.0,
+      "reason": "STOP_LOSS (-11.8%)",
+      "hold_min": 1.0,
+      "queue_price": 2.4405,
+      "queue_to_entry_pct": 25.4,
+      "entry_time_ms": 1765461660000,
+      "sell_time_ms": 1765461720000,
+      "daily_high": 3.54,
+      "max_possible_pct": 15.7
+    },
+    {
+      "ticker": "BEAT",
+      "type": "partial",
+      "entry_price": 1.915,
+      "sell_price": 2.03,
+      "pnl_pct": 6.005221932114879,
+      "pnl_krw": 167498535.9871621,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 5.0,
+      "entry_time_ms": 1765464780000,
+      "sell_time_ms": 1765465080000
+    },
+    {
+      "ticker": "GRAN",
+      "type": "full",
+      "entry_price": 3.99,
+      "sell_price": 3.7,
+      "pnl_pct": -7.27,
+      "pnl_krw": -405449763.0,
+      "reason": "STOP_LOSS (-7.3%)",
+      "hold_min": 16.0,
+      "queue_price": 3.25,
+      "queue_to_entry_pct": 22.8,
+      "entry_time_ms": 1765464660000,
+      "sell_time_ms": 1765465620000,
+      "daily_high": 5.91,
+      "max_possible_pct": 48.1
+    },
+    {
+      "ticker": "CHOW",
+      "type": "full",
+      "entry_price": 1.27,
+      "sell_price": 1.17,
+      "pnl_pct": -7.87,
+      "pnl_krw": -503259748.0,
+      "reason": "STOP_LOSS (-7.9%)",
+      "hold_min": 11.0,
+      "queue_price": 1.05,
+      "queue_to_entry_pct": 21.0,
+      "entry_time_ms": 1765465800000,
+      "sell_time_ms": 1765466460000,
+      "daily_high": 2.18,
+      "max_possible_pct": 71.7
+    },
+    {
+      "ticker": "BEAT",
+      "type": "full",
+      "entry_price": 1.915,
+      "sell_price": 1.97,
+      "pnl_pct": 2.87,
+      "pnl_krw": 80107995.0,
+      "reason": "TIME_LIMIT (2.9%)",
+      "hold_min": 45.0,
+      "queue_price": 1.5424,
+      "queue_to_entry_pct": 24.2,
+      "entry_time_ms": 1765464780000,
+      "sell_time_ms": 1765467480000,
+      "daily_high": 2.8199,
+      "max_possible_pct": 47.3
+    },
+    {
+      "ticker": "GRAN",
+      "type": "partial",
+      "entry_price": 4.54,
+      "sell_price": 4.84,
+      "pnl_pct": 6.607929515418509,
+      "pnl_krw": 240103909.22813034,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 9.0,
+      "entry_time_ms": 1765468440000,
+      "sell_time_ms": 1765468980000
+    },
+    {
+      "ticker": "GRAN",
+      "type": "full",
+      "entry_price": 4.54,
+      "sell_price": 5.17,
+      "pnl_pct": 13.88,
+      "pnl_krw": 504218209.0,
+      "reason": "PROFIT_TARGET +10% (13.9%)",
+      "hold_min": 17.0,
+      "queue_price": 3.73,
+      "queue_to_entry_pct": 21.7,
+      "entry_time_ms": 1765468440000,
+      "sell_time_ms": 1765469460000,
+      "daily_high": 5.91,
+      "max_possible_pct": 30.2
+    },
+    {
+      "ticker": "MIGI",
+      "type": "partial",
+      "entry_price": 10.55,
+      "sell_price": 11.13,
+      "pnl_pct": 5.497630331753545,
+      "pnl_krw": 221782425.77862358,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 1.0,
+      "entry_time_ms": 1765474500000,
+      "sell_time_ms": 1765474560000
+    },
+    {
+      "ticker": "MIGI",
+      "type": "full",
+      "entry_price": 10.55,
+      "sell_price": 11.02,
+      "pnl_pct": 4.45,
+      "pnl_krw": 179720242.0,
+      "reason": "TRAILING (4.5%, peak=8.1%)",
+      "hold_min": 8.0,
+      "queue_price": 8.61,
+      "queue_to_entry_pct": 22.5,
+      "entry_time_ms": 1765474500000,
+      "sell_time_ms": 1765474980000,
+      "daily_high": 15.8,
+      "max_possible_pct": 49.8
+    }
+  ],
+  "fake_signals": [
+    {
+      "ticker": "BEAT",
+      "time_ms": 1765487640000,
+      "price": 2.4303,
+      "max_later_gain_pct": 0.4
+    },
+    {
+      "ticker": "BEAT",
+      "time_ms": 1765492560000,
+      "price": 2.2889,
+      "max_later_gain_pct": 1.4
+    },
+    {
+      "ticker": "BEAT",
+      "time_ms": 1765498380000,
+      "price": 2.1598,
+      "max_later_gain_pct": 1.9
+    },
+    {
+      "ticker": "CHOW",
+      "time_ms": 1765496700000,
+      "price": 1.3,
+      "max_later_gain_pct": 3.1
+    },
+    {
+      "ticker": "CHOW",
+      "time_ms": 1765498080000,
+      "price": 1.2294,
+      "max_later_gain_pct": 1.7
+    },
+    {
+      "ticker": "CHOW",
+      "time_ms": 1765499220000,
+      "price": 1.2,
+      "max_later_gain_pct": 1.7
+    },
+    {
+      "ticker": "GRAN",
+      "time_ms": 1765481460000,
+      "price": 4.2692,
+      "max_later_gain_pct": 1.4
+    },
+    {
+      "ticker": "GRAN",
+      "time_ms": 1765482540000,
+      "price": 4.17,
+      "max_later_gain_pct": 2.6
+    },
+    {
+      "ticker": "MIGI",
+      "time_ms": 1765492620000,
+      "price": 5.55,
+      "max_later_gain_pct": 4.0
+    },
+    {
+      "ticker": "NXDR",
+      "time_ms": 1765478940000,
+      "price": 3.0998,
+      "max_later_gain_pct": 1.0
+    },
+    {
+      "ticker": "NXDR",
+      "time_ms": 1765482720000,
+      "price": 2.93,
+      "max_later_gain_pct": 0.7
+    },
+    {
+      "ticker": "NXDR",
+      "time_ms": 1765488900000,
+      "price": 2.82,
+      "max_later_gain_pct": 4.6
+    },
+    {
+      "ticker": "NXDR",
+      "time_ms": 1765491840000,
+      "price": 2.83,
+      "max_later_gain_pct": 4.2
+    },
+    {
+      "ticker": "NXDR",
+      "time_ms": 1765494360000,
+      "price": 2.89,
+      "max_later_gain_pct": 2.1
+    },
+    {
+      "ticker": "NXDR",
+      "time_ms": 1765494720000,
+      "price": 2.92,
+      "max_later_gain_pct": 1.0
+    },
+    {
+      "ticker": "NXDR",
+      "time_ms": 1765496820000,
+      "price": 2.9,
+      "max_later_gain_pct": 0.3
+    },
+    {
+      "ticker": "NXDR",
+      "time_ms": 1765499700000,
+      "price": 2.85,
+      "max_later_gain_pct": 2.1
+    },
+    {
+      "ticker": "NXDR",
+      "time_ms": 1765500360000,
+      "price": 2.91,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "PETS",
+      "time_ms": 1765488540000,
+      "price": 3.13,
+      "max_later_gain_pct": 0.3
+    },
+    {
+      "ticker": "PETS",
+      "time_ms": 1765490100000,
+      "price": 3.02,
+      "max_later_gain_pct": 2.0
+    },
+    {
+      "ticker": "PETS",
+      "time_ms": 1765491600000,
+      "price": 3.01,
+      "max_later_gain_pct": 2.3
+    },
+    {
+      "ticker": "PETS",
+      "time_ms": 1765497060000,
+      "price": 3.0216,
+      "max_later_gain_pct": 1.9
+    },
+    {
+      "ticker": "PETS",
+      "time_ms": 1765497300000,
+      "price": 3.02,
+      "max_later_gain_pct": 2.0
+    },
+    {
+      "ticker": "RETO",
+      "time_ms": 1765500120000,
+      "price": 2.9,
+      "max_later_gain_pct": 0.7
+    }
+  ],
+  "missed_entries": [
+    {
+      "ticker": "PETS",
+      "daily_change_pct": 68.17,
+      "daily_volume": 131223950.0,
+      "had_vol_spike": true,
+      "meets_daily_vol": true,
+      "reason": "price_not_triggered"
+    }
+  ],
+  "fake_rate": 22.9
+}

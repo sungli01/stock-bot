@@ -1,0 +1,323 @@
+{
+  "date": "2025-12-30",
+  "starting_portfolio": 40648447885371.0,
+  "ending_portfolio": 72724091123639.0,
+  "day_pnl_krw": 32075643238268.0,
+  "day_pnl_pct": 78.91,
+  "vol_spikes_detected": 159,
+  "signals_generated": 159,
+  "buys_executed": 6,
+  "trades": [
+    {
+      "ticker": "OCG",
+      "type": "partial",
+      "entry_price": 22.572,
+      "sell_price": 23.76,
+      "pnl_pct": 5.2631578947368585,
+      "pnl_krw": 106969599698.34497,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 1.0,
+      "entry_time_ms": 1767105360000,
+      "sell_time_ms": 1767105420000
+    },
+    {
+      "ticker": "AEHL",
+      "type": "partial",
+      "entry_price": 2.03,
+      "sell_price": 2.1701,
+      "pnl_pct": 6.901477832512337,
+      "pnl_krw": 140267181003.46045,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 1.0,
+      "entry_time_ms": 1767105420000,
+      "sell_time_ms": 1767105480000
+    },
+    {
+      "ticker": "OCG",
+      "type": "full",
+      "entry_price": 22.572,
+      "sell_price": 24.86,
+      "pnl_pct": 10.14,
+      "pnl_krw": 206015525345.0,
+      "reason": "PROFIT_TARGET +10% (10.1%)",
+      "hold_min": 2.0,
+      "queue_price": 18.59,
+      "queue_to_entry_pct": 21.4,
+      "entry_time_ms": 1767105360000,
+      "sell_time_ms": 1767105480000,
+      "daily_high": 36.058,
+      "max_possible_pct": 59.7
+    },
+    {
+      "ticker": "AEHL",
+      "type": "full",
+      "entry_price": 2.03,
+      "sell_price": 2.3,
+      "pnl_pct": 13.3,
+      "pnl_krw": 270322190371.0,
+      "reason": "PROFIT_TARGET +10% (13.3%)",
+      "hold_min": 2.0,
+      "queue_price": 1.6599,
+      "queue_to_entry_pct": 22.3,
+      "entry_time_ms": 1767105420000,
+      "sell_time_ms": 1767105540000,
+      "daily_high": 2.47,
+      "max_possible_pct": 21.7
+    },
+    {
+      "ticker": "BUUU",
+      "type": "partial",
+      "entry_price": 11,
+      "sell_price": 12.2,
+      "pnl_pct": 10.909090909090914,
+      "pnl_krw": 270009337957.43262,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 2.0,
+      "entry_time_ms": 1767116520000,
+      "sell_time_ms": 1767116640000
+    },
+    {
+      "ticker": "BUUU",
+      "type": "full",
+      "entry_price": 11,
+      "sell_price": 12.2,
+      "pnl_pct": 10.91,
+      "pnl_krw": 270009337957.0,
+      "reason": "PROFIT_TARGET +10% (10.9%)",
+      "hold_min": 2.0,
+      "queue_price": 9.1,
+      "queue_to_entry_pct": 20.9,
+      "entry_time_ms": 1767116520000,
+      "sell_time_ms": 1767116640000,
+      "daily_high": 20.76,
+      "max_possible_pct": 88.7
+    },
+    {
+      "ticker": "ELOG",
+      "type": "partial",
+      "entry_price": 1.238,
+      "sell_price": 1.3211,
+      "pnl_pct": 6.7124394184167935,
+      "pnl_krw": 184564904770.92725,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 8.0,
+      "entry_time_ms": 1767126960000,
+      "sell_time_ms": 1767127440000
+    },
+    {
+      "ticker": "ELOG",
+      "type": "full",
+      "entry_price": 1.238,
+      "sell_price": 1.32,
+      "pnl_pct": 6.62,
+      "pnl_krw": 182121807355.0,
+      "reason": "TRAILING (6.6%, peak=16.3%)",
+      "hold_min": 22.0,
+      "queue_price": 1.0299,
+      "queue_to_entry_pct": 20.2,
+      "entry_time_ms": 1767126960000,
+      "sell_time_ms": 1767128280000,
+      "daily_high": 1.45,
+      "max_possible_pct": 17.1
+    },
+    {
+      "ticker": "ASBP",
+      "type": "full",
+      "entry_price": 5.54,
+      "sell_price": 5.124,
+      "pnl_pct": -7.51,
+      "pnl_krw": -434968262094.0,
+      "reason": "STOP_LOSS (-7.5%)",
+      "hold_min": 36.0,
+      "queue_price": 4.602,
+      "queue_to_entry_pct": 20.4,
+      "entry_time_ms": 1767128040000,
+      "sell_time_ms": 1767130200000,
+      "daily_high": 5.8,
+      "max_possible_pct": 4.7
+    },
+    {
+      "ticker": "ULY",
+      "type": "full",
+      "entry_price": 3.52,
+      "sell_price": 3.46,
+      "pnl_pct": -1.7,
+      "pnl_krw": -112867187466.0,
+      "reason": "TIME_LIMIT (-1.7%)",
+      "hold_min": 45.0,
+      "queue_price": 2.93,
+      "queue_to_entry_pct": 20.1,
+      "entry_time_ms": 1767137400000,
+      "sell_time_ms": 1767140100000,
+      "daily_high": 3.96,
+      "max_possible_pct": 12.5
+    }
+  ],
+  "fake_signals": [
+    {
+      "ticker": "AEHL",
+      "time_ms": 1767136860000,
+      "price": 2.15,
+      "max_later_gain_pct": 4.2
+    },
+    {
+      "ticker": "AEHL",
+      "time_ms": 1767139740000,
+      "price": 2.2,
+      "max_later_gain_pct": 1.8
+    },
+    {
+      "ticker": "AEHL",
+      "time_ms": 1767140100000,
+      "price": 2.2001,
+      "max_later_gain_pct": 1.8
+    },
+    {
+      "ticker": "AEHL",
+      "time_ms": 1767141540000,
+      "price": 2.2,
+      "max_later_gain_pct": 1.8
+    },
+    {
+      "ticker": "BUUU",
+      "time_ms": 1767129120000,
+      "price": 8.44,
+      "max_later_gain_pct": 4.6
+    },
+    {
+      "ticker": "CETX",
+      "time_ms": 1767111600000,
+      "price": 3.34,
+      "max_later_gain_pct": 1.2
+    },
+    {
+      "ticker": "CETX",
+      "time_ms": 1767130620000,
+      "price": 3,
+      "max_later_gain_pct": 4.0
+    },
+    {
+      "ticker": "CETX",
+      "time_ms": 1767134880000,
+      "price": 2.99,
+      "max_later_gain_pct": 4.3
+    },
+    {
+      "ticker": "CETX",
+      "time_ms": 1767136200000,
+      "price": 2.99,
+      "max_later_gain_pct": 4.3
+    },
+    {
+      "ticker": "CETX",
+      "time_ms": 1767137700000,
+      "price": 3,
+      "max_later_gain_pct": 4.0
+    },
+    {
+      "ticker": "CETX",
+      "time_ms": 1767139140000,
+      "price": 3,
+      "max_later_gain_pct": 4.0
+    },
+    {
+      "ticker": "CETX",
+      "time_ms": 1767139500000,
+      "price": 3.02,
+      "max_later_gain_pct": 3.3
+    },
+    {
+      "ticker": "CETX",
+      "time_ms": 1767140460000,
+      "price": 3.0299,
+      "max_later_gain_pct": 3.0
+    },
+    {
+      "ticker": "CETX",
+      "time_ms": 1767141540000,
+      "price": 3.05,
+      "max_later_gain_pct": 2.3
+    },
+    {
+      "ticker": "CETX",
+      "time_ms": 1767142380000,
+      "price": 3.0509,
+      "max_later_gain_pct": 1.6
+    },
+    {
+      "ticker": "DLXY",
+      "time_ms": 1767140520000,
+      "price": 1.44,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "EKSO",
+      "time_ms": 1767139500000,
+      "price": 10.27,
+      "max_later_gain_pct": 3.2
+    },
+    {
+      "ticker": "ELOG",
+      "time_ms": 1767128880000,
+      "price": 1.43,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "MENS",
+      "time_ms": 1767128640000,
+      "price": 4.2875,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "MENS",
+      "time_ms": 1767139500000,
+      "price": 4.14,
+      "max_later_gain_pct": 2.7
+    },
+    {
+      "ticker": "OCG",
+      "time_ms": 1767139440000,
+      "price": 23.54,
+      "max_later_gain_pct": 0.4
+    },
+    {
+      "ticker": "OCG",
+      "time_ms": 1767140340000,
+      "price": 23.32,
+      "max_later_gain_pct": 0.9
+    },
+    {
+      "ticker": "OCG",
+      "time_ms": 1767141120000,
+      "price": 23.342,
+      "max_later_gain_pct": 0.0
+    }
+  ],
+  "missed_entries": [
+    {
+      "ticker": "DLXY",
+      "daily_change_pct": 62.0,
+      "daily_volume": 261115,
+      "had_vol_spike": true,
+      "meets_daily_vol": false,
+      "reason": "low_daily_vol"
+    },
+    {
+      "ticker": "EKSO",
+      "daily_change_pct": 48.1,
+      "daily_volume": 111106214.0,
+      "had_vol_spike": true,
+      "meets_daily_vol": true,
+      "reason": "price_not_triggered"
+    },
+    {
+      "ticker": "MENS",
+      "daily_change_pct": 53.98,
+      "daily_volume": 3706435,
+      "had_vol_spike": true,
+      "meets_daily_vol": true,
+      "reason": "price_not_triggered"
+    }
+  ],
+  "fake_rate": 14.5
+}

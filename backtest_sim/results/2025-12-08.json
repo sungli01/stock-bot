@@ -1,0 +1,568 @@
+{
+  "date": "2025-12-08",
+  "starting_portfolio": 3992694190.0,
+  "ending_portfolio": 11973370788.0,
+  "day_pnl_krw": 7980676598.0,
+  "day_pnl_pct": 199.88,
+  "vol_spikes_detected": 172,
+  "signals_generated": 172,
+  "buys_executed": 12,
+  "trades": [
+    {
+      "ticker": "SUGP",
+      "type": "full",
+      "entry_price": 8.65,
+      "sell_price": 7.51,
+      "pnl_pct": -13.18,
+      "pnl_krw": -52620478.0,
+      "reason": "STOP_LOSS (-13.2%)",
+      "hold_min": 1.0,
+      "queue_price": 7.2,
+      "queue_to_entry_pct": 20.1,
+      "entry_time_ms": 1765195560000,
+      "sell_time_ms": 1765195620000,
+      "daily_high": 9.8,
+      "max_possible_pct": 13.3
+    },
+    {
+      "ticker": "SUGP",
+      "type": "partial",
+      "entry_price": 7.9933,
+      "sell_price": 9.071,
+      "pnl_pct": 13.482541628613976,
+      "pnl_krw": 29252687.199966967,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 1.0,
+      "entry_time_ms": 1765199160000,
+      "sell_time_ms": 1765199220000
+    },
+    {
+      "ticker": "SUGP",
+      "type": "full",
+      "entry_price": 7.9933,
+      "sell_price": 9.071,
+      "pnl_pct": 13.48,
+      "pnl_krw": 29252687.0,
+      "reason": "PROFIT_TARGET +10% (13.5%)",
+      "hold_min": 1.0,
+      "queue_price": 6.4,
+      "queue_to_entry_pct": 24.9,
+      "entry_time_ms": 1765199160000,
+      "sell_time_ms": 1765199220000,
+      "daily_high": 9.8,
+      "max_possible_pct": 22.6
+    },
+    {
+      "ticker": "TWG",
+      "type": "full",
+      "entry_price": 14.14,
+      "sell_price": 10.9,
+      "pnl_pct": -22.91,
+      "pnl_krw": -110714118.0,
+      "reason": "STOP_LOSS (-22.9%)",
+      "hold_min": 1.0,
+      "queue_price": 11.69,
+      "queue_to_entry_pct": 21.0,
+      "entry_time_ms": 1765199220000,
+      "sell_time_ms": 1765199280000,
+      "daily_high": 26.99,
+      "max_possible_pct": 90.9
+    },
+    {
+      "ticker": "HWH",
+      "type": "full",
+      "entry_price": 2.82,
+      "sell_price": 2.15,
+      "pnl_pct": -23.76,
+      "pnl_krw": -114797677.0,
+      "reason": "STOP_LOSS (-23.8%)",
+      "hold_min": 1.0,
+      "queue_price": 2.25,
+      "queue_to_entry_pct": 25.3,
+      "entry_time_ms": 1765199280000,
+      "sell_time_ms": 1765199340000,
+      "daily_high": 2.86,
+      "max_possible_pct": 1.4
+    },
+    {
+      "ticker": "SUGP",
+      "type": "full",
+      "entry_price": 7.91,
+      "sell_price": 7.08,
+      "pnl_pct": -10.49,
+      "pnl_krw": -58473842.0,
+      "reason": "STOP_LOSS (-10.5%)",
+      "hold_min": 4.0,
+      "queue_price": 6.51,
+      "queue_to_entry_pct": 21.5,
+      "entry_time_ms": 1765205220000,
+      "sell_time_ms": 1765205460000,
+      "daily_high": 9.8,
+      "max_possible_pct": 23.9
+    },
+    {
+      "ticker": "IMMP",
+      "type": "partial",
+      "entry_price": 2.5,
+      "sell_price": 2.66,
+      "pnl_pct": 6.400000000000006,
+      "pnl_krw": 19428532.810444415,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 4.0,
+      "entry_time_ms": 1765206120000,
+      "sell_time_ms": 1765206360000
+    },
+    {
+      "ticker": "IMMP",
+      "type": "full",
+      "entry_price": 2.5,
+      "sell_price": 2.59,
+      "pnl_pct": 3.6,
+      "pnl_krw": 10928550.0,
+      "reason": "TRAILING (3.6%, peak=8.4%)",
+      "hold_min": 17.0,
+      "queue_price": 2.05,
+      "queue_to_entry_pct": 22.0,
+      "entry_time_ms": 1765206120000,
+      "sell_time_ms": 1765207140000,
+      "daily_high": 3.5299,
+      "max_possible_pct": 41.2
+    },
+    {
+      "ticker": "WBUY",
+      "type": "partial",
+      "entry_price": 2.4701,
+      "sell_price": 2.65,
+      "pnl_pct": 7.283105947127644,
+      "pnl_krw": 24430870.227431536,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 18.0,
+      "entry_time_ms": 1765207500000,
+      "sell_time_ms": 1765208580000
+    },
+    {
+      "ticker": "WBUY",
+      "type": "full",
+      "entry_price": 2.4701,
+      "sell_price": 2.41,
+      "pnl_pct": -2.43,
+      "pnl_krw": -8161730.0,
+      "reason": "TIME_LIMIT (-2.4%)",
+      "hold_min": 45.0,
+      "queue_price": 2.04,
+      "queue_to_entry_pct": 21.1,
+      "entry_time_ms": 1765207500000,
+      "sell_time_ms": 1765210200000,
+      "daily_high": 5.3,
+      "max_possible_pct": 114.6
+    },
+    {
+      "ticker": "ORKT",
+      "type": "full",
+      "entry_price": 1.23,
+      "sell_price": 1.1415,
+      "pnl_pct": -7.2,
+      "pnl_krw": -50860820.0,
+      "reason": "STOP_LOSS (-7.2%)",
+      "hold_min": 13.0,
+      "queue_price": 0.9783,
+      "queue_to_entry_pct": 25.7,
+      "entry_time_ms": 1765209600000,
+      "sell_time_ms": 1765210380000,
+      "daily_high": 2.6,
+      "max_possible_pct": 111.4
+    },
+    {
+      "ticker": "WBUY",
+      "type": "partial",
+      "entry_price": 3.2299,
+      "sell_price": 3.42,
+      "pnl_pct": 5.8856311340908185,
+      "pnl_krw": 23695828.35568571,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 5.0,
+      "entry_time_ms": 1765217880000,
+      "sell_time_ms": 1765218180000
+    },
+    {
+      "ticker": "CMCT",
+      "type": "partial",
+      "entry_price": 5.44,
+      "sell_price": 5.9,
+      "pnl_pct": 8.455882352941169,
+      "pnl_krw": 35846154.52125794,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 3.0,
+      "entry_time_ms": 1765218720000,
+      "sell_time_ms": 1765218900000
+    },
+    {
+      "ticker": "CMCT",
+      "type": "full",
+      "entry_price": 5.44,
+      "sell_price": 5.3,
+      "pnl_pct": -2.57,
+      "pnl_krw": -10909699.0,
+      "reason": "TRAILING (-2.6%, peak=8.5%)",
+      "hold_min": 6.0,
+      "queue_price": 4.5009,
+      "queue_to_entry_pct": 20.9,
+      "entry_time_ms": 1765218720000,
+      "sell_time_ms": 1765219080000,
+      "daily_high": 8.3899,
+      "max_possible_pct": 54.2
+    },
+    {
+      "ticker": "WBUY",
+      "type": "full",
+      "entry_price": 3.2299,
+      "sell_price": 2.985,
+      "pnl_pct": -7.58,
+      "pnl_krw": -30526609.0,
+      "reason": "STOP_LOSS (-7.6%)",
+      "hold_min": 41.0,
+      "queue_price": 2.6286,
+      "queue_to_entry_pct": 22.9,
+      "entry_time_ms": 1765217880000,
+      "sell_time_ms": 1765220340000,
+      "daily_high": 5.3,
+      "max_possible_pct": 64.1
+    },
+    {
+      "ticker": "WBUY",
+      "type": "partial",
+      "entry_price": 4.2,
+      "sell_price": 4.5097,
+      "pnl_pct": 7.373809523809505,
+      "pnl_krw": 35848692.48275173,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 4.0,
+      "entry_time_ms": 1765223340000,
+      "sell_time_ms": 1765223580000
+    },
+    {
+      "ticker": "WBUY",
+      "type": "full",
+      "entry_price": 4.2,
+      "sell_price": 4.64,
+      "pnl_pct": 10.48,
+      "pnl_krw": 50931303.0,
+      "reason": "PROFIT_TARGET +10% (10.5%)",
+      "hold_min": 8.0,
+      "queue_price": 3.215,
+      "queue_to_entry_pct": 30.6,
+      "entry_time_ms": 1765223340000,
+      "sell_time_ms": 1765223820000,
+      "daily_high": 5.3,
+      "max_possible_pct": 26.2
+    },
+    {
+      "ticker": "CMCT",
+      "type": "partial",
+      "entry_price": 6.5001,
+      "sell_price": 7.18,
+      "pnl_pct": 10.45983907939878,
+      "pnl_krw": 56390842.45613289,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 11.0,
+      "entry_time_ms": 1765224240000,
+      "sell_time_ms": 1765224900000
+    },
+    {
+      "ticker": "CMCT",
+      "type": "full",
+      "entry_price": 6.5001,
+      "sell_price": 7.18,
+      "pnl_pct": 10.46,
+      "pnl_krw": 56390842.0,
+      "reason": "PROFIT_TARGET +10% (10.5%)",
+      "hold_min": 11.0,
+      "queue_price": 5.29,
+      "queue_to_entry_pct": 22.9,
+      "entry_time_ms": 1765224240000,
+      "sell_time_ms": 1765224900000,
+      "daily_high": 8.3899,
+      "max_possible_pct": 29.1
+    }
+  ],
+  "fake_signals": [
+    {
+      "ticker": "CMCT",
+      "time_ms": 1765230840000,
+      "price": 6.0383,
+      "max_later_gain_pct": 4.2
+    },
+    {
+      "ticker": "CMCT",
+      "time_ms": 1765233480000,
+      "price": 6.2094,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "CMCT",
+      "time_ms": 1765235100000,
+      "price": 6.0896,
+      "max_later_gain_pct": 1.5
+    },
+    {
+      "ticker": "CMCT",
+      "time_ms": 1765236420000,
+      "price": 5.9612,
+      "max_later_gain_pct": 3.7
+    },
+    {
+      "ticker": "HWH",
+      "time_ms": 1765199280000,
+      "price": 2.82,
+      "max_later_gain_pct": 1.4
+    },
+    {
+      "ticker": "HWH",
+      "time_ms": 1765217820000,
+      "price": 2.2358,
+      "max_later_gain_pct": 4.7
+    },
+    {
+      "ticker": "HWH",
+      "time_ms": 1765227060000,
+      "price": 2.27,
+      "max_later_gain_pct": 3.1
+    },
+    {
+      "ticker": "HWH",
+      "time_ms": 1765230120000,
+      "price": 2.25,
+      "max_later_gain_pct": 0.2
+    },
+    {
+      "ticker": "HWH",
+      "time_ms": 1765231560000,
+      "price": 2.17,
+      "max_later_gain_pct": 3.9
+    },
+    {
+      "ticker": "HWH",
+      "time_ms": 1765233420000,
+      "price": 2.1851,
+      "max_later_gain_pct": 3.2
+    },
+    {
+      "ticker": "HWH",
+      "time_ms": 1765239300000,
+      "price": 2.23,
+      "max_later_gain_pct": 0.9
+    },
+    {
+      "ticker": "IMMP",
+      "time_ms": 1765215600000,
+      "price": 2.515,
+      "max_later_gain_pct": 3.0
+    },
+    {
+      "ticker": "IMMP",
+      "time_ms": 1765219500000,
+      "price": 2.3701,
+      "max_later_gain_pct": 4.6
+    },
+    {
+      "ticker": "IMMP",
+      "time_ms": 1765220940000,
+      "price": 2.3601,
+      "max_later_gain_pct": 2.5
+    },
+    {
+      "ticker": "IMMP",
+      "time_ms": 1765222800000,
+      "price": 2.366551,
+      "max_later_gain_pct": 0.1
+    },
+    {
+      "ticker": "IMMP",
+      "time_ms": 1765223220000,
+      "price": 2.297,
+      "max_later_gain_pct": 2.7
+    },
+    {
+      "ticker": "IMMP",
+      "time_ms": 1765224660000,
+      "price": 2.28,
+      "max_later_gain_pct": 3.1
+    },
+    {
+      "ticker": "IMMP",
+      "time_ms": 1765225740000,
+      "price": 2.25,
+      "max_later_gain_pct": 4.4
+    },
+    {
+      "ticker": "IMMP",
+      "time_ms": 1765232880000,
+      "price": 2.23,
+      "max_later_gain_pct": 4.5
+    },
+    {
+      "ticker": "IMMP",
+      "time_ms": 1765236660000,
+      "price": 2.2,
+      "max_later_gain_pct": 4.5
+    },
+    {
+      "ticker": "IMMP",
+      "time_ms": 1765237260000,
+      "price": 2.21,
+      "max_later_gain_pct": 4.1
+    },
+    {
+      "ticker": "IMMP",
+      "time_ms": 1765240680000,
+      "price": 2.26,
+      "max_later_gain_pct": 0.4
+    },
+    {
+      "ticker": "IMMP",
+      "time_ms": 1765241280000,
+      "price": 2.2,
+      "max_later_gain_pct": 2.3
+    },
+    {
+      "ticker": "NBY",
+      "time_ms": 1765222380000,
+      "price": 1.684,
+      "max_later_gain_pct": 3.9
+    },
+    {
+      "ticker": "NBY",
+      "time_ms": 1765223460000,
+      "price": 1.7,
+      "max_later_gain_pct": 2.9
+    },
+    {
+      "ticker": "NBY",
+      "time_ms": 1765225560000,
+      "price": 1.68,
+      "max_later_gain_pct": 3.0
+    },
+    {
+      "ticker": "NBY",
+      "time_ms": 1765226280000,
+      "price": 1.6921,
+      "max_later_gain_pct": 1.6
+    },
+    {
+      "ticker": "NBY",
+      "time_ms": 1765234260000,
+      "price": 1.47,
+      "max_later_gain_pct": 3.4
+    },
+    {
+      "ticker": "ORKT",
+      "time_ms": 1765235820000,
+      "price": 1.51,
+      "max_later_gain_pct": 4.6
+    },
+    {
+      "ticker": "ORKT",
+      "time_ms": 1765238640000,
+      "price": 1.51,
+      "max_later_gain_pct": 4.6
+    },
+    {
+      "ticker": "ORKT",
+      "time_ms": 1765241580000,
+      "price": 1.52,
+      "max_later_gain_pct": 2.6
+    },
+    {
+      "ticker": "SUGP",
+      "time_ms": 1765212960000,
+      "price": 7.4,
+      "max_later_gain_pct": 3.6
+    },
+    {
+      "ticker": "SUGP",
+      "time_ms": 1765213380000,
+      "price": 7.375,
+      "max_later_gain_pct": 4.0
+    },
+    {
+      "ticker": "SUGP",
+      "time_ms": 1765214280000,
+      "price": 7.67,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "SUGP",
+      "time_ms": 1765234320000,
+      "price": 6.87,
+      "max_later_gain_pct": 2.9
+    },
+    {
+      "ticker": "SUGP",
+      "time_ms": 1765235580000,
+      "price": 6.9,
+      "max_later_gain_pct": 1.9
+    },
+    {
+      "ticker": "SUGP",
+      "time_ms": 1765241640000,
+      "price": 7,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "TWG",
+      "time_ms": 1765237500000,
+      "price": 13.5001,
+      "max_later_gain_pct": 0.9
+    },
+    {
+      "ticker": "TWNP",
+      "time_ms": 1765226340000,
+      "price": 1.1,
+      "max_later_gain_pct": 1.8
+    },
+    {
+      "ticker": "TWNP",
+      "time_ms": 1765227900000,
+      "price": 1.06,
+      "max_later_gain_pct": 3.8
+    },
+    {
+      "ticker": "WBUY",
+      "time_ms": 1765234740000,
+      "price": 4.42,
+      "max_later_gain_pct": 0.9
+    },
+    {
+      "ticker": "YYAI",
+      "time_ms": 1765227540000,
+      "price": 1.26,
+      "max_later_gain_pct": 3.2
+    },
+    {
+      "ticker": "YYAI",
+      "time_ms": 1765228020000,
+      "price": 1.2899,
+      "max_later_gain_pct": 0.8
+    },
+    {
+      "ticker": "YYAI",
+      "time_ms": 1765228680000,
+      "price": 1.23,
+      "max_later_gain_pct": 4.9
+    },
+    {
+      "ticker": "YYAI",
+      "time_ms": 1765232880000,
+      "price": 1.24,
+      "max_later_gain_pct": 4.0
+    },
+    {
+      "ticker": "YYAI",
+      "time_ms": 1765237440000,
+      "price": 1.23,
+      "max_later_gain_pct": 4.9
+    }
+  ],
+  "missed_entries": [],
+  "fake_rate": 26.7
+}

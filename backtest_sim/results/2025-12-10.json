@@ -1,0 +1,333 @@
+{
+  "date": "2025-12-10",
+  "starting_portfolio": 22602692978.0,
+  "ending_portfolio": 46938224555.0,
+  "day_pnl_krw": 24335531577.0,
+  "day_pnl_pct": 107.67,
+  "vol_spikes_detected": 114,
+  "signals_generated": 114,
+  "buys_executed": 8,
+  "trades": [
+    {
+      "ticker": "ASPC",
+      "type": "full",
+      "entry_price": 32,
+      "sell_price": 29.27,
+      "pnl_pct": -8.53,
+      "pnl_krw": -192829224.0,
+      "reason": "STOP_LOSS (-8.5%)",
+      "hold_min": 3.0,
+      "queue_price": 25.96,
+      "queue_to_entry_pct": 23.3,
+      "entry_time_ms": 1765367820000,
+      "sell_time_ms": 1765368000000,
+      "daily_high": 63.98,
+      "max_possible_pct": 99.9
+    },
+    {
+      "ticker": "BEAT",
+      "type": "partial",
+      "entry_price": 1.26,
+      "sell_price": 1.35,
+      "pnl_pct": 7.14285714285714,
+      "pnl_krw": 88107618.04046941,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 1.0,
+      "entry_time_ms": 1765368120000,
+      "sell_time_ms": 1765368180000
+    },
+    {
+      "ticker": "BEAT",
+      "type": "full",
+      "entry_price": 1.26,
+      "sell_price": 1.44,
+      "pnl_pct": 14.29,
+      "pnl_krw": 176215236.0,
+      "reason": "PROFIT_TARGET +10% (14.3%)",
+      "hold_min": 2.0,
+      "queue_price": 1.02,
+      "queue_to_entry_pct": 23.5,
+      "entry_time_ms": 1765368120000,
+      "sell_time_ms": 1765368240000,
+      "daily_high": 1.79,
+      "max_possible_pct": 42.1
+    },
+    {
+      "ticker": "BDRX",
+      "type": "full",
+      "entry_price": 5.46,
+      "sell_price": 5.05,
+      "pnl_pct": -7.51,
+      "pnl_krw": -205761948.0,
+      "reason": "STOP_LOSS (-7.5%)",
+      "hold_min": 16.0,
+      "queue_price": 4.46,
+      "queue_to_entry_pct": 22.4,
+      "entry_time_ms": 1765371660000,
+      "sell_time_ms": 1765372620000,
+      "daily_high": 8.94,
+      "max_possible_pct": 63.7
+    },
+    {
+      "ticker": "BBGI",
+      "type": "full",
+      "entry_price": 6.95,
+      "sell_price": 6.18,
+      "pnl_pct": -11.08,
+      "pnl_krw": -331663420.0,
+      "reason": "STOP_LOSS (-11.1%)",
+      "hold_min": 8.0,
+      "queue_price": 5.75,
+      "queue_to_entry_pct": 20.9,
+      "entry_time_ms": 1765375980000,
+      "sell_time_ms": 1765376460000,
+      "daily_high": 26.37,
+      "max_possible_pct": 279.4
+    },
+    {
+      "ticker": "BDRX",
+      "type": "full",
+      "entry_price": 5.87,
+      "sell_price": 5.455,
+      "pnl_pct": -7.07,
+      "pnl_krw": -230461280.0,
+      "reason": "STOP_LOSS (-7.1%)",
+      "hold_min": 21.0,
+      "queue_price": 4.825,
+      "queue_to_entry_pct": 21.7,
+      "entry_time_ms": 1765391220000,
+      "sell_time_ms": 1765392480000,
+      "daily_high": 8.94,
+      "max_possible_pct": 52.3
+    },
+    {
+      "ticker": "GIPR",
+      "type": "full",
+      "entry_price": 1.2001,
+      "sell_price": 1.2236,
+      "pnl_pct": 1.96,
+      "pnl_krw": 63831992.0,
+      "reason": "TIME_LIMIT (2.0%)",
+      "hold_min": 45.0,
+      "queue_price": 1,
+      "queue_to_entry_pct": 20.0,
+      "entry_time_ms": 1765391100000,
+      "sell_time_ms": 1765393800000,
+      "daily_high": 1.5,
+      "max_possible_pct": 25.0
+    },
+    {
+      "ticker": "BDRX",
+      "type": "partial",
+      "entry_price": 7.44,
+      "sell_price": 8.07,
+      "pnl_pct": 8.467741935483875,
+      "pnl_krw": 164912246.92224455,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 7.0,
+      "entry_time_ms": 1765395360000,
+      "sell_time_ms": 1765395780000
+    },
+    {
+      "ticker": "BDRX",
+      "type": "full",
+      "entry_price": 7.44,
+      "sell_price": 7.8181,
+      "pnl_pct": 5.08,
+      "pnl_krw": 98973525.0,
+      "reason": "TRAILING (5.1%, peak=8.5%)",
+      "hold_min": 9.0,
+      "queue_price": 6.17,
+      "queue_to_entry_pct": 20.6,
+      "entry_time_ms": 1765395360000,
+      "sell_time_ms": 1765395900000,
+      "daily_high": 8.94,
+      "max_possible_pct": 20.2
+    },
+    {
+      "ticker": "JMG",
+      "type": "full",
+      "entry_price": 5.63,
+      "sell_price": 5,
+      "pnl_pct": -11.19,
+      "pnl_krw": -482399371.0,
+      "reason": "STOP_LOSS (-11.2%)",
+      "hold_min": 7.0,
+      "queue_price": 4.6195,
+      "queue_to_entry_pct": 21.9,
+      "entry_time_ms": 1765400100000,
+      "sell_time_ms": 1765400520000,
+      "daily_high": 9.6,
+      "max_possible_pct": 70.5
+    }
+  ],
+  "fake_signals": [
+    {
+      "ticker": "BDRX",
+      "time_ms": 1765409220000,
+      "price": 7.06,
+      "max_later_gain_pct": 4.8
+    },
+    {
+      "ticker": "BDRX",
+      "time_ms": 1765410300000,
+      "price": 7.25,
+      "max_later_gain_pct": 2.1
+    },
+    {
+      "ticker": "BEAT",
+      "time_ms": 1765407360000,
+      "price": 1.4,
+      "max_later_gain_pct": 2.1
+    },
+    {
+      "ticker": "BEAT",
+      "time_ms": 1765413240000,
+      "price": 1.39,
+      "max_later_gain_pct": 0.7
+    },
+    {
+      "ticker": "CGTL",
+      "time_ms": 1765395300000,
+      "price": 1.03,
+      "max_later_gain_pct": 3.9
+    },
+    {
+      "ticker": "CGTL",
+      "time_ms": 1765396440000,
+      "price": 1.041,
+      "max_later_gain_pct": 2.8
+    },
+    {
+      "ticker": "CGTL",
+      "time_ms": 1765399560000,
+      "price": 1.022541,
+      "max_later_gain_pct": 1.7
+    },
+    {
+      "ticker": "CGTL",
+      "time_ms": 1765404300000,
+      "price": 0.995,
+      "max_later_gain_pct": 4.5
+    },
+    {
+      "ticker": "CGTL",
+      "time_ms": 1765407120000,
+      "price": 1,
+      "max_later_gain_pct": 4.0
+    },
+    {
+      "ticker": "CGTL",
+      "time_ms": 1765413240000,
+      "price": 1.03,
+      "max_later_gain_pct": 1.0
+    },
+    {
+      "ticker": "CGTL",
+      "time_ms": 1765414320000,
+      "price": 1.02,
+      "max_later_gain_pct": 2.0
+    },
+    {
+      "ticker": "GIPR",
+      "time_ms": 1765408020000,
+      "price": 1.275,
+      "max_later_gain_pct": 3.5
+    },
+    {
+      "ticker": "GIPR",
+      "time_ms": 1765412580000,
+      "price": 1.25,
+      "max_later_gain_pct": 3.2
+    },
+    {
+      "ticker": "IBIO",
+      "time_ms": 1765391820000,
+      "price": 2.8399,
+      "max_later_gain_pct": 3.9
+    },
+    {
+      "ticker": "IBIO",
+      "time_ms": 1765392840000,
+      "price": 2.8601,
+      "max_later_gain_pct": 2.8
+    },
+    {
+      "ticker": "IBIO",
+      "time_ms": 1765399860000,
+      "price": 2.82,
+      "max_later_gain_pct": 2.5
+    },
+    {
+      "ticker": "IBIO",
+      "time_ms": 1765401360000,
+      "price": 2.86,
+      "max_later_gain_pct": 1.0
+    },
+    {
+      "ticker": "IBIO",
+      "time_ms": 1765405080000,
+      "price": 2.75,
+      "max_later_gain_pct": 3.6
+    },
+    {
+      "ticker": "IBIO",
+      "time_ms": 1765406640000,
+      "price": 2.85,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "IBIO",
+      "time_ms": 1765407360000,
+      "price": 2.79,
+      "max_later_gain_pct": 2.2
+    },
+    {
+      "ticker": "IBIO",
+      "time_ms": 1765408080000,
+      "price": 2.7801,
+      "max_later_gain_pct": 2.5
+    },
+    {
+      "ticker": "IBIO",
+      "time_ms": 1765410480000,
+      "price": 2.78,
+      "max_later_gain_pct": 2.5
+    },
+    {
+      "ticker": "IBIO",
+      "time_ms": 1765411260000,
+      "price": 2.79,
+      "max_later_gain_pct": 2.2
+    },
+    {
+      "ticker": "IBIO",
+      "time_ms": 1765414080000,
+      "price": 2.82,
+      "max_later_gain_pct": 1.1
+    },
+    {
+      "ticker": "IBIO",
+      "time_ms": 1765414140000,
+      "price": 2.81,
+      "max_later_gain_pct": 1.4
+    },
+    {
+      "ticker": "IBIO",
+      "time_ms": 1765414620000,
+      "price": 2.82,
+      "max_later_gain_pct": 1.1
+    }
+  ],
+  "missed_entries": [
+    {
+      "ticker": "CGTL",
+      "daily_change_pct": 56.13,
+      "daily_volume": 24815764.0,
+      "had_vol_spike": true,
+      "meets_daily_vol": true,
+      "reason": "price_not_triggered"
+    }
+  ],
+  "fake_rate": 22.8
+}

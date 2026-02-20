@@ -16,6 +16,9 @@ PORTFOLIO_FILE = DATA_DIR / "paper_portfolio.json"
 SLIPPAGE = 0.005  # 0.5%
 COMMISSION_PCT = 0.001  # 0.1%
 
+# [Bug #4] KRW→USD 환율 (환경변수 or 기본값 1450)
+USD_KRW_RATE = float(os.getenv("USD_KRW_RATE", "1450.0"))
+
 
 class PaperTrader:
     def __init__(self, initial_capital=1_000_000):
@@ -32,7 +35,8 @@ class PaperTrader:
         daily_volume: 일 거래량 (주) — 0이면 제한 없음
         Returns: 주문 결과 dict or None
         """
-        buy_price = price * (1 + SLIPPAGE)
+        buy_price_usd = price * (1 + SLIPPAGE)
+        buy_price = buy_price_usd  # 하위 호환 (로그용)
         commission = amount * COMMISSION_PCT
 
         total_cost = amount + commission
@@ -40,7 +44,8 @@ class PaperTrader:
             logger.warning(f"[가상] 잔고 부족: 필요 ₩{total_cost:,.0f}, 보유 ₩{self.cash:,.0f}")
             return None
 
-        shares = amount / buy_price
+        # [Bug #4] KRW ÷ 환율 ÷ USD 단가 = 주수
+        shares = (amount / USD_KRW_RATE) / buy_price_usd
 
         # 실전 체결 가능량 제한: 일 거래량의 5% 초과 매수 금지
         if daily_volume > 0:
@@ -106,8 +111,8 @@ class PaperTrader:
 
         # 10개 호가: +0.1%, +0.2%, ..., +1.0% 위에 각 1/10씩 주문
         for i in range(1, splits + 1):
-            order_price = price * (1 + i * 0.001)  # 0.1% 간격
-            order_price *= (1 + SLIPPAGE * 0.5)    # 부분 슬리피지 (상단 호가라 실제 슬리피지 작음)
+            order_price_usd = price * (1 + i * 0.001)  # 0.1% 간격 (USD)
+            order_price_usd *= (1 + SLIPPAGE * 0.5)    # 부분 슬리피지
             commission = split_amount * COMMISSION_PCT
             cost = split_amount + commission
 
@@ -115,7 +120,8 @@ class PaperTrader:
                 logger.warning(f"[가상] {ticker} {i}번째 분할매수 잔고 부족 — {filled}개 체결 후 중단")
                 break
 
-            shares = split_amount / order_price
+            # [Bug #4] KRW 금액 ÷ 환율 ÷ USD 단가 = 주수
+            shares = (split_amount / USD_KRW_RATE) / order_price_usd
             self.cash -= cost
             total_shares += shares
             total_cost += split_amount

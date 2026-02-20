@@ -1,0 +1,595 @@
+{
+  "date": "2026-01-02",
+  "starting_portfolio": 117892346394216.0,
+  "ending_portfolio": 232164468796952.0,
+  "day_pnl_krw": 114272122402736.0,
+  "day_pnl_pct": 96.93,
+  "vol_spikes_detected": 182,
+  "signals_generated": 182,
+  "buys_executed": 7,
+  "trades": [
+    {
+      "ticker": "ULY",
+      "type": "full",
+      "entry_price": 3.97,
+      "sell_price": 3.66,
+      "pnl_pct": -7.81,
+      "pnl_krw": -920569959250.0,
+      "reason": "STOP_LOSS (-7.8%)",
+      "hold_min": 1.0,
+      "queue_price": 3.3,
+      "queue_to_entry_pct": 20.3,
+      "entry_time_ms": 1767364500000,
+      "sell_time_ms": 1767364560000,
+      "daily_high": 4.0899,
+      "max_possible_pct": 3.0
+    },
+    {
+      "ticker": "IRWD",
+      "type": "partial",
+      "entry_price": 5.4217,
+      "sell_price": 5.7416,
+      "pnl_pct": 5.900363354667348,
+      "pnl_krw": 379868375626.61816,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 2.0,
+      "entry_time_ms": 1767364800000,
+      "sell_time_ms": 1767364920000
+    },
+    {
+      "ticker": "BNAI",
+      "type": "partial",
+      "entry_price": 3.1344,
+      "sell_price": 3.3697,
+      "pnl_pct": 7.5070188871873444,
+      "pnl_krw": 483305671034.38477,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 4.0,
+      "entry_time_ms": 1767364740000,
+      "sell_time_ms": 1767364980000
+    },
+    {
+      "ticker": "IRWD",
+      "type": "full",
+      "entry_price": 5.4217,
+      "sell_price": 5.0397,
+      "pnl_pct": -7.05,
+      "pnl_krw": -453609626413.0,
+      "reason": "STOP_LOSS (-7.0%)",
+      "hold_min": 19.0,
+      "queue_price": 4.43,
+      "queue_to_entry_pct": 22.4,
+      "entry_time_ms": 1767364800000,
+      "sell_time_ms": 1767365940000,
+      "daily_high": 5.78,
+      "max_possible_pct": 6.6
+    },
+    {
+      "ticker": "BNAI",
+      "type": "full",
+      "entry_price": 3.1344,
+      "sell_price": 3.575,
+      "pnl_pct": 14.06,
+      "pnl_krw": 904991409510.0,
+      "reason": "TRAILING (14.1%, peak=22.0%)",
+      "hold_min": 27.0,
+      "queue_price": 2.5975,
+      "queue_to_entry_pct": 20.7,
+      "entry_time_ms": 1767364740000,
+      "sell_time_ms": 1767366360000,
+      "daily_high": 4.25,
+      "max_possible_pct": 35.6
+    },
+    {
+      "ticker": "PAPL",
+      "type": "partial",
+      "entry_price": 1.9998,
+      "sell_price": 2.12,
+      "pnl_pct": 6.0106010601060245,
+      "pnl_krw": 468309277130.38184,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 1.0,
+      "entry_time_ms": 1767372840000,
+      "sell_time_ms": 1767372900000
+    },
+    {
+      "ticker": "PAPL",
+      "type": "full",
+      "entry_price": 1.9998,
+      "sell_price": 2.1,
+      "pnl_pct": 5.01,
+      "pnl_krw": 390387600403.0,
+      "reason": "TRAILING (5.0%, peak=8.5%)",
+      "hold_min": 17.0,
+      "queue_price": 1.52,
+      "queue_to_entry_pct": 31.6,
+      "entry_time_ms": 1767372840000,
+      "sell_time_ms": 1767373860000,
+      "daily_high": 2.24,
+      "max_possible_pct": 12.0
+    },
+    {
+      "ticker": "CRE",
+      "type": "partial",
+      "entry_price": 4.008,
+      "sell_price": 4.4208,
+      "pnl_pct": 10.299401197604796,
+      "pnl_krw": 887135023360.9336,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 1.0,
+      "entry_time_ms": 1767374820000,
+      "sell_time_ms": 1767374880000
+    },
+    {
+      "ticker": "CRE",
+      "type": "full",
+      "entry_price": 4.008,
+      "sell_price": 4.4208,
+      "pnl_pct": 10.3,
+      "pnl_krw": 887135023361.0,
+      "reason": "PROFIT_TARGET +10% (10.3%)",
+      "hold_min": 1.0,
+      "queue_price": 2.9988,
+      "queue_to_entry_pct": 33.7,
+      "entry_time_ms": 1767374820000,
+      "sell_time_ms": 1767374880000,
+      "daily_high": 5.04,
+      "max_possible_pct": 25.7
+    },
+    {
+      "ticker": "ATLN",
+      "type": "full",
+      "entry_price": 2.3,
+      "sell_price": 2.03,
+      "pnl_pct": -11.74,
+      "pnl_krw": -2245348611149.0,
+      "reason": "STOP_LOSS (-11.7%)",
+      "hold_min": 1.0,
+      "queue_price": 1.69,
+      "queue_to_entry_pct": 36.1,
+      "entry_time_ms": 1767379320000,
+      "sell_time_ms": 1767379380000,
+      "daily_high": 2.36,
+      "max_possible_pct": 2.6
+    },
+    {
+      "ticker": "SDOT",
+      "type": "partial",
+      "entry_price": 1.78,
+      "sell_price": 1.95,
+      "pnl_pct": 9.550561797752799,
+      "pnl_krw": 993984901716.627,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 6.0,
+      "entry_time_ms": 1767384540000,
+      "sell_time_ms": 1767384900000
+    },
+    {
+      "ticker": "SDOT",
+      "type": "full",
+      "entry_price": 1.78,
+      "sell_price": 2.1568,
+      "pnl_pct": 21.17,
+      "pnl_krw": 2203138299805.0,
+      "reason": "TRAILING (21.2%, peak=30.9%)",
+      "hold_min": 28.0,
+      "queue_price": 1.47,
+      "queue_to_entry_pct": 21.1,
+      "entry_time_ms": 1767384540000,
+      "sell_time_ms": 1767386220000,
+      "daily_high": 2.4599,
+      "max_possible_pct": 38.2
+    }
+  ],
+  "fake_signals": [
+    {
+      "ticker": "ATLN",
+      "time_ms": 1767379320000,
+      "price": 2.3,
+      "max_later_gain_pct": 2.6
+    },
+    {
+      "ticker": "ATLN",
+      "time_ms": 1767393300000,
+      "price": 2.23,
+      "max_later_gain_pct": 2.7
+    },
+    {
+      "ticker": "ATLN",
+      "time_ms": 1767394140000,
+      "price": 2.26,
+      "max_later_gain_pct": 1.3
+    },
+    {
+      "ticker": "ATLN",
+      "time_ms": 1767395640000,
+      "price": 2.2099,
+      "max_later_gain_pct": 3.6
+    },
+    {
+      "ticker": "ATLN",
+      "time_ms": 1767396900000,
+      "price": 2.29,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "BMNU",
+      "time_ms": 1767383400000,
+      "price": 6.04,
+      "max_later_gain_pct": 3.5
+    },
+    {
+      "ticker": "BMNU",
+      "time_ms": 1767385680000,
+      "price": 6.065,
+      "max_later_gain_pct": 3.1
+    },
+    {
+      "ticker": "BMNU",
+      "time_ms": 1767385980000,
+      "price": 6.05,
+      "max_later_gain_pct": 3.3
+    },
+    {
+      "ticker": "BMNU",
+      "time_ms": 1767394740000,
+      "price": 6.15,
+      "max_later_gain_pct": 1.3
+    },
+    {
+      "ticker": "BMNU",
+      "time_ms": 1767395340000,
+      "price": 6.15,
+      "max_later_gain_pct": 1.3
+    },
+    {
+      "ticker": "BMNU",
+      "time_ms": 1767396240000,
+      "price": 6.18,
+      "max_later_gain_pct": 0.8
+    },
+    {
+      "ticker": "BMNU",
+      "time_ms": 1767398880000,
+      "price": 6.17,
+      "max_later_gain_pct": 1.0
+    },
+    {
+      "ticker": "BMNU",
+      "time_ms": 1767399060000,
+      "price": 6.17,
+      "max_later_gain_pct": 1.0
+    },
+    {
+      "ticker": "BMNU",
+      "time_ms": 1767401640000,
+      "price": 6.23,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "BNAI",
+      "time_ms": 1767376020000,
+      "price": 4.0012,
+      "max_later_gain_pct": 4.7
+    },
+    {
+      "ticker": "BNAI",
+      "time_ms": 1767397500000,
+      "price": 3.84,
+      "max_later_gain_pct": 0.8
+    },
+    {
+      "ticker": "BNAI",
+      "time_ms": 1767398100000,
+      "price": 3.84,
+      "max_later_gain_pct": 0.5
+    },
+    {
+      "ticker": "BNAI",
+      "time_ms": 1767401160000,
+      "price": 3.82,
+      "max_later_gain_pct": 0.8
+    },
+    {
+      "ticker": "BNAI",
+      "time_ms": 1767401400000,
+      "price": 3.8,
+      "max_later_gain_pct": 1.3
+    },
+    {
+      "ticker": "CRE",
+      "time_ms": 1767389340000,
+      "price": 3.36,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "DVLT",
+      "time_ms": 1767388200000,
+      "price": 1.0134,
+      "max_later_gain_pct": 4.8
+    },
+    {
+      "ticker": "DVLT",
+      "time_ms": 1767397320000,
+      "price": 1.0328,
+      "max_later_gain_pct": 2.9
+    },
+    {
+      "ticker": "DVLT",
+      "time_ms": 1767398580000,
+      "price": 1.0424,
+      "max_later_gain_pct": 1.9
+    },
+    {
+      "ticker": "DVLT",
+      "time_ms": 1767400140000,
+      "price": 1.0524,
+      "max_later_gain_pct": 0.9
+    },
+    {
+      "ticker": "IRWD",
+      "time_ms": 1767382140000,
+      "price": 4.3299,
+      "max_later_gain_pct": 3.2
+    },
+    {
+      "ticker": "IRWD",
+      "time_ms": 1767382380000,
+      "price": 4.3687,
+      "max_later_gain_pct": 2.3
+    },
+    {
+      "ticker": "IRWD",
+      "time_ms": 1767383280000,
+      "price": 4.39,
+      "max_later_gain_pct": 1.8
+    },
+    {
+      "ticker": "IRWD",
+      "time_ms": 1767384600000,
+      "price": 4.35,
+      "max_later_gain_pct": 2.8
+    },
+    {
+      "ticker": "IRWD",
+      "time_ms": 1767386100000,
+      "price": 4.365,
+      "max_later_gain_pct": 2.4
+    },
+    {
+      "ticker": "IRWD",
+      "time_ms": 1767388020000,
+      "price": 4.29,
+      "max_later_gain_pct": 0.2
+    },
+    {
+      "ticker": "IRWD",
+      "time_ms": 1767388260000,
+      "price": 4.2501,
+      "max_later_gain_pct": 1.2
+    },
+    {
+      "ticker": "IRWD",
+      "time_ms": 1767389700000,
+      "price": 4.25,
+      "max_later_gain_pct": 1.2
+    },
+    {
+      "ticker": "IRWD",
+      "time_ms": 1767390780000,
+      "price": 4.26,
+      "max_later_gain_pct": 0.9
+    },
+    {
+      "ticker": "IRWD",
+      "time_ms": 1767391920000,
+      "price": 4.2602,
+      "max_later_gain_pct": 0.9
+    },
+    {
+      "ticker": "IRWD",
+      "time_ms": 1767393120000,
+      "price": 4.2699,
+      "max_later_gain_pct": 0.7
+    },
+    {
+      "ticker": "IRWD",
+      "time_ms": 1767393720000,
+      "price": 4.29,
+      "max_later_gain_pct": 0.2
+    },
+    {
+      "ticker": "IRWD",
+      "time_ms": 1767395460000,
+      "price": 4.29,
+      "max_later_gain_pct": 0.2
+    },
+    {
+      "ticker": "IRWD",
+      "time_ms": 1767398100000,
+      "price": 4.2798,
+      "max_later_gain_pct": 0.5
+    },
+    {
+      "ticker": "IRWD",
+      "time_ms": 1767398820000,
+      "price": 4.28,
+      "max_later_gain_pct": 0.5
+    },
+    {
+      "ticker": "IRWD",
+      "time_ms": 1767399540000,
+      "price": 4.2899,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "IRWD",
+      "time_ms": 1767400620000,
+      "price": 4.27,
+      "max_later_gain_pct": 0.5
+    },
+    {
+      "ticker": "PAPL",
+      "time_ms": 1767382740000,
+      "price": 1.3296,
+      "max_later_gain_pct": 3.0
+    },
+    {
+      "ticker": "PAPL",
+      "time_ms": 1767383040000,
+      "price": 1.335,
+      "max_later_gain_pct": 2.6
+    },
+    {
+      "ticker": "PAPL",
+      "time_ms": 1767384720000,
+      "price": 1.36,
+      "max_later_gain_pct": 0.7
+    },
+    {
+      "ticker": "PAPL",
+      "time_ms": 1767386040000,
+      "price": 1.32,
+      "max_later_gain_pct": 3.0
+    },
+    {
+      "ticker": "PAPL",
+      "time_ms": 1767395520000,
+      "price": 1.27,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "PLRZ",
+      "time_ms": 1767399420000,
+      "price": 12.01,
+      "max_later_gain_pct": 0.8
+    },
+    {
+      "ticker": "SDOT",
+      "time_ms": 1767393420000,
+      "price": 1.6593,
+      "max_later_gain_pct": 4.3
+    },
+    {
+      "ticker": "SDOT",
+      "time_ms": 1767395340000,
+      "price": 1.65,
+      "max_later_gain_pct": 4.8
+    },
+    {
+      "ticker": "SDOT",
+      "time_ms": 1767396900000,
+      "price": 1.67,
+      "max_later_gain_pct": 3.6
+    },
+    {
+      "ticker": "SDOT",
+      "time_ms": 1767399240000,
+      "price": 1.65,
+      "max_later_gain_pct": 4.8
+    },
+    {
+      "ticker": "SDOT",
+      "time_ms": 1767401700000,
+      "price": 1.7098,
+      "max_later_gain_pct": 1.2
+    },
+    {
+      "ticker": "SHPH",
+      "time_ms": 1767381360000,
+      "price": 2.38,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "SHPH",
+      "time_ms": 1767381900000,
+      "price": 2.38,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "SHPH",
+      "time_ms": 1767385500000,
+      "price": 1.9787,
+      "max_later_gain_pct": 0.1
+    },
+    {
+      "ticker": "SIDU",
+      "time_ms": 1767396720000,
+      "price": 4.6,
+      "max_later_gain_pct": 0.9
+    },
+    {
+      "ticker": "ULY",
+      "time_ms": 1767364500000,
+      "price": 3.97,
+      "max_later_gain_pct": 3.0
+    },
+    {
+      "ticker": "ULY",
+      "time_ms": 1767369180000,
+      "price": 3.24,
+      "max_later_gain_pct": 4.9
+    },
+    {
+      "ticker": "ULY",
+      "time_ms": 1767372360000,
+      "price": 3.29,
+      "max_later_gain_pct": 3.3
+    },
+    {
+      "ticker": "ULY",
+      "time_ms": 1767373380000,
+      "price": 3.3,
+      "max_later_gain_pct": 2.6
+    },
+    {
+      "ticker": "ULY",
+      "time_ms": 1767373740000,
+      "price": 3.3499,
+      "max_later_gain_pct": 0.3
+    },
+    {
+      "ticker": "ULY",
+      "time_ms": 1767376380000,
+      "price": 3.36,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "ULY",
+      "time_ms": 1767378480000,
+      "price": 3.3,
+      "max_later_gain_pct": 0.9
+    },
+    {
+      "ticker": "ULY",
+      "time_ms": 1767381420000,
+      "price": 2.95,
+      "max_later_gain_pct": 2.7
+    },
+    {
+      "ticker": "ULY",
+      "time_ms": 1767391560000,
+      "price": 2.9297,
+      "max_later_gain_pct": 1.4
+    }
+  ],
+  "missed_entries": [
+    {
+      "ticker": "DVLT",
+      "daily_change_pct": 41.53,
+      "daily_volume": 329080627.38333,
+      "had_vol_spike": true,
+      "meets_daily_vol": true,
+      "reason": "price_not_triggered"
+    },
+    {
+      "ticker": "PLRZ",
+      "daily_change_pct": 35.61,
+      "daily_volume": 1184202,
+      "had_vol_spike": true,
+      "meets_daily_vol": true,
+      "reason": "price_not_triggered"
+    }
+  ],
+  "fake_rate": 35.7
+}

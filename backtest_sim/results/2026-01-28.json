@@ -1,0 +1,336 @@
+{
+  "date": "2026-01-28",
+  "starting_portfolio": 1.0078429936207092e+20,
+  "ending_portfolio": 1.649361648601164e+20,
+  "day_pnl_krw": 6.415186549804548e+19,
+  "day_pnl_pct": 63.65,
+  "vol_spikes_detected": 133,
+  "signals_generated": 133,
+  "buys_executed": 5,
+  "trades": [
+    {
+      "ticker": "FEED",
+      "type": "partial",
+      "entry_price": 1.77,
+      "sell_price": 1.918,
+      "pnl_pct": 8.361581920903948,
+      "pnl_krw": 4.213580877284321e+17,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 12.0,
+      "entry_time_ms": 1769609940000,
+      "sell_time_ms": 1769610660000
+    },
+    {
+      "ticker": "FEED",
+      "type": "full",
+      "entry_price": 1.77,
+      "sell_price": 1.755,
+      "pnl_pct": -0.85,
+      "pnl_krw": -4.270521159409869e+16,
+      "reason": "TRAILING (-0.8%, peak=9.9%)",
+      "hold_min": 16.0,
+      "queue_price": 1.47,
+      "queue_to_entry_pct": 20.4,
+      "entry_time_ms": 1769609940000,
+      "sell_time_ms": 1769610900000,
+      "daily_high": 3.05,
+      "max_possible_pct": 72.3
+    },
+    {
+      "ticker": "SLGB",
+      "type": "partial",
+      "entry_price": 2.58,
+      "sell_price": 2.7499,
+      "pnl_pct": 6.585271317829444,
+      "pnl_krw": 3.662773416944302e+17,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 1.0,
+      "entry_time_ms": 1769610960000,
+      "sell_time_ms": 1769611020000
+    },
+    {
+      "ticker": "SLGB",
+      "type": "full",
+      "entry_price": 2.58,
+      "sell_price": 2.8454,
+      "pnl_pct": 10.29,
+      "pnl_krw": 5.721601323466875e+17,
+      "reason": "PROFIT_TARGET +10% (10.3%)",
+      "hold_min": 2.0,
+      "queue_price": 2.07,
+      "queue_to_entry_pct": 24.6,
+      "entry_time_ms": 1769610960000,
+      "sell_time_ms": 1769611080000,
+      "daily_high": 4.22,
+      "max_possible_pct": 63.6
+    },
+    {
+      "ticker": "CALC",
+      "type": "full",
+      "entry_price": 1.0166,
+      "sell_price": 0.916382,
+      "pnl_pct": -9.86,
+      "pnl_krw": -1.2155494835140895e+18,
+      "reason": "STOP_LOSS (-9.9%)",
+      "hold_min": 13.0,
+      "queue_price": 0.84,
+      "queue_to_entry_pct": 21.0,
+      "entry_time_ms": 1769612160000,
+      "sell_time_ms": 1769612940000,
+      "daily_high": 2,
+      "max_possible_pct": 96.7
+    },
+    {
+      "ticker": "NAMM",
+      "type": "partial",
+      "entry_price": 5.8802,
+      "sell_price": 6.21,
+      "pnl_pct": 5.608652766912692,
+      "pnl_krw": 3.769541989636946e+17,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 19.0,
+      "entry_time_ms": 1769631240000,
+      "sell_time_ms": 1769632380000
+    },
+    {
+      "ticker": "NAMM",
+      "type": "full",
+      "entry_price": 5.8802,
+      "sell_price": 6.72,
+      "pnl_pct": 14.28,
+      "pnl_krw": 9.598730633405409e+17,
+      "reason": "TRAILING (14.3%, peak=19.3%)",
+      "hold_min": 43.0,
+      "queue_price": 4.8912,
+      "queue_to_entry_pct": 20.2,
+      "entry_time_ms": 1769631240000,
+      "sell_time_ms": 1769633820000,
+      "daily_high": 7.1,
+      "max_possible_pct": 20.7
+    },
+    {
+      "ticker": "AUST",
+      "type": "partial",
+      "entry_price": 3.1,
+      "sell_price": 3.35,
+      "pnl_pct": 8.064516129032251,
+      "pnl_krw": 6.016028703555287e+17,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 18.0,
+      "entry_time_ms": 1769638020000,
+      "sell_time_ms": 1769639100000
+    },
+    {
+      "ticker": "AUST",
+      "type": "full",
+      "entry_price": 3.1,
+      "sell_price": 3.1903,
+      "pnl_pct": 2.91,
+      "pnl_krw": 2.1729895677241856e+17,
+      "reason": "TRAILING (2.9%, peak=8.1%)",
+      "hold_min": 25.0,
+      "queue_price": 2.57,
+      "queue_to_entry_pct": 20.6,
+      "entry_time_ms": 1769638020000,
+      "sell_time_ms": 1769639520000,
+      "daily_high": 3.48,
+      "max_possible_pct": 12.3
+    }
+  ],
+  "fake_signals": [
+    {
+      "ticker": "AMOD",
+      "time_ms": 1769631540000,
+      "price": 1.15,
+      "max_later_gain_pct": 3.5
+    },
+    {
+      "ticker": "AMOD",
+      "time_ms": 1769632920000,
+      "price": 1.1201,
+      "max_later_gain_pct": 3.6
+    },
+    {
+      "ticker": "AMOD",
+      "time_ms": 1769636100000,
+      "price": 1.1,
+      "max_later_gain_pct": 0.9
+    },
+    {
+      "ticker": "AMOD",
+      "time_ms": 1769637960000,
+      "price": 1.07,
+      "max_later_gain_pct": 3.7
+    },
+    {
+      "ticker": "AMOD",
+      "time_ms": 1769643060000,
+      "price": 1.0803,
+      "max_later_gain_pct": 1.8
+    },
+    {
+      "ticker": "AMOD",
+      "time_ms": 1769643900000,
+      "price": 1.0802,
+      "max_later_gain_pct": 1.8
+    },
+    {
+      "ticker": "AUST",
+      "time_ms": 1769643240000,
+      "price": 3.29,
+      "max_later_gain_pct": 2.7
+    },
+    {
+      "ticker": "AUST",
+      "time_ms": 1769647320000,
+      "price": 3.09,
+      "max_later_gain_pct": 1.3
+    },
+    {
+      "ticker": "AUST",
+      "time_ms": 1769647740000,
+      "price": 3.02,
+      "max_later_gain_pct": 3.6
+    },
+    {
+      "ticker": "CALC",
+      "time_ms": 1769637780000,
+      "price": 1.22,
+      "max_later_gain_pct": 0.8
+    },
+    {
+      "ticker": "CALC",
+      "time_ms": 1769645640000,
+      "price": 1.22,
+      "max_later_gain_pct": 0.8
+    },
+    {
+      "ticker": "CALC",
+      "time_ms": 1769646900000,
+      "price": 1.21,
+      "max_later_gain_pct": 0.4
+    },
+    {
+      "ticker": "CALC",
+      "time_ms": 1769647320000,
+      "price": 1.21,
+      "max_later_gain_pct": 0.4
+    },
+    {
+      "ticker": "CALC",
+      "time_ms": 1769647680000,
+      "price": 1.19,
+      "max_later_gain_pct": 1.7
+    },
+    {
+      "ticker": "FEED",
+      "time_ms": 1769643240000,
+      "price": 2.39,
+      "max_later_gain_pct": 3.8
+    },
+    {
+      "ticker": "FEED",
+      "time_ms": 1769644560000,
+      "price": 2.42,
+      "max_later_gain_pct": 2.5
+    },
+    {
+      "ticker": "FEED",
+      "time_ms": 1769647680000,
+      "price": 2.3185,
+      "max_later_gain_pct": 3.5
+    },
+    {
+      "ticker": "KXIN",
+      "time_ms": 1769636160000,
+      "price": 14.4,
+      "max_later_gain_pct": 1.8
+    },
+    {
+      "ticker": "KXIN",
+      "time_ms": 1769638740000,
+      "price": 14.4,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "KXIN",
+      "time_ms": 1769639940000,
+      "price": 14.4,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "KXIN",
+      "time_ms": 1769643060000,
+      "price": 13.8,
+      "max_later_gain_pct": 1.7
+    },
+    {
+      "ticker": "KXIN",
+      "time_ms": 1769647560000,
+      "price": 13.86,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "NAMM",
+      "time_ms": 1769644800000,
+      "price": 6.64,
+      "max_later_gain_pct": 3.2
+    },
+    {
+      "ticker": "NAMM",
+      "time_ms": 1769648160000,
+      "price": 6.7498,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "SLGB",
+      "time_ms": 1769645400000,
+      "price": 2.82,
+      "max_later_gain_pct": 1.8
+    },
+    {
+      "ticker": "TAOP",
+      "time_ms": 1769612400000,
+      "price": 1.895,
+      "max_later_gain_pct": 1.3
+    },
+    {
+      "ticker": "TAOP",
+      "time_ms": 1769617680000,
+      "price": 1.8,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "TAOP",
+      "time_ms": 1769619660000,
+      "price": 1.72,
+      "max_later_gain_pct": 3.5
+    },
+    {
+      "ticker": "TAOP",
+      "time_ms": 1769621160000,
+      "price": 1.7201,
+      "max_later_gain_pct": 1.7
+    },
+    {
+      "ticker": "TAOP",
+      "time_ms": 1769623620000,
+      "price": 1.74,
+      "max_later_gain_pct": 0.6
+    },
+    {
+      "ticker": "TAOP",
+      "time_ms": 1769630040000,
+      "price": 1.537217,
+      "max_later_gain_pct": 3.4
+    },
+    {
+      "ticker": "TAOP",
+      "time_ms": 1769633760000,
+      "price": 1.585,
+      "max_later_gain_pct": 0.3
+    }
+  ],
+  "missed_entries": [],
+  "fake_rate": 24.1
+}

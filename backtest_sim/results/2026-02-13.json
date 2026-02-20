@@ -1,0 +1,341 @@
+{
+  "date": "2026-02-13",
+  "starting_portfolio": 1.5618154170326735e+24,
+  "ending_portfolio": 2.872529373224887e+24,
+  "day_pnl_krw": 1.3107139561922135e+24,
+  "day_pnl_pct": 83.92,
+  "vol_spikes_detected": 158,
+  "signals_generated": 158,
+  "buys_executed": 6,
+  "trades": [
+    {
+      "ticker": "NCI",
+      "type": "full",
+      "entry_price": 3.11,
+      "sell_price": 2.83,
+      "pnl_pct": -9.0,
+      "pnl_krw": -1.4061360667818279e+22,
+      "reason": "STOP_LOSS (-9.0%)",
+      "hold_min": 9.0,
+      "queue_price": 2.53,
+      "queue_to_entry_pct": 22.9,
+      "entry_time_ms": 1770993360000,
+      "sell_time_ms": 1770993900000,
+      "daily_high": 3.6799,
+      "max_possible_pct": 18.3
+    },
+    {
+      "ticker": "VVPR",
+      "type": "partial",
+      "entry_price": 1.78,
+      "sell_price": 1.8764,
+      "pnl_pct": 5.41573033707865,
+      "pnl_krw": 4.6140278554428923e+21,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 31.0,
+      "entry_time_ms": 1770994500000,
+      "sell_time_ms": 1770996360000
+    },
+    {
+      "ticker": "FGL",
+      "type": "partial",
+      "entry_price": 16.2,
+      "sell_price": 23.98,
+      "pnl_pct": 48.0246913580247,
+      "pnl_krw": 4.09154905955864e+22,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 31.0,
+      "entry_time_ms": 1770995160000,
+      "sell_time_ms": 1770997020000
+    },
+    {
+      "ticker": "FGL",
+      "type": "full",
+      "entry_price": 16.2,
+      "sell_price": 23.98,
+      "pnl_pct": 48.02,
+      "pnl_krw": 4.09154905955864e+22,
+      "reason": "PROFIT_TARGET +10% (48.0%)",
+      "hold_min": 31.0,
+      "queue_price": 13.145,
+      "queue_to_entry_pct": 23.2,
+      "entry_time_ms": 1770995160000,
+      "sell_time_ms": 1770997020000,
+      "daily_high": 31.63,
+      "max_possible_pct": 95.2
+    },
+    {
+      "ticker": "VVPR",
+      "type": "full",
+      "entry_price": 1.78,
+      "sell_price": 1.8501,
+      "pnl_pct": 3.94,
+      "pnl_krw": 3.355221500690327e+21,
+      "reason": "TIME_LIMIT (3.9%)",
+      "hold_min": 45.0,
+      "queue_price": 1.47,
+      "queue_to_entry_pct": 21.1,
+      "entry_time_ms": 1770994500000,
+      "sell_time_ms": 1770997200000,
+      "daily_high": 2.74,
+      "max_possible_pct": 53.9
+    },
+    {
+      "ticker": "RIME",
+      "type": "partial",
+      "entry_price": 1.602,
+      "sell_price": 1.725,
+      "pnl_pct": 7.677902621722854,
+      "pnl_krw": 8.194329670167724e+21,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 6.0,
+      "entry_time_ms": 1771009860000,
+      "sell_time_ms": 1771010220000
+    },
+    {
+      "ticker": "RIME",
+      "type": "full",
+      "entry_price": 1.602,
+      "sell_price": 1.75,
+      "pnl_pct": 9.24,
+      "pnl_krw": 9.859843830770913e+21,
+      "reason": "TRAILING (9.2%, peak=17.3%)",
+      "hold_min": 19.0,
+      "queue_price": 1.265,
+      "queue_to_entry_pct": 26.6,
+      "entry_time_ms": 1771009860000,
+      "sell_time_ms": 1771011000000,
+      "daily_high": 6.22,
+      "max_possible_pct": 288.3
+    },
+    {
+      "ticker": "RIME",
+      "type": "partial",
+      "entry_price": 3.12,
+      "sell_price": 3.5,
+      "pnl_pct": 12.17948717948718,
+      "pnl_krw": 1.4408512472597765e+22,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 8.0,
+      "entry_time_ms": 1771015860000,
+      "sell_time_ms": 1771016340000
+    },
+    {
+      "ticker": "RIME",
+      "type": "full",
+      "entry_price": 3.12,
+      "sell_price": 3.5,
+      "pnl_pct": 12.18,
+      "pnl_krw": 1.4408512472597765e+22,
+      "reason": "PROFIT_TARGET +10% (12.2%)",
+      "hold_min": 8.0,
+      "queue_price": 2.245,
+      "queue_to_entry_pct": 39.0,
+      "entry_time_ms": 1771015860000,
+      "sell_time_ms": 1771016340000,
+      "daily_high": 6.22,
+      "max_possible_pct": 99.4
+    },
+    {
+      "ticker": "NCI",
+      "type": "full",
+      "entry_price": 3.22,
+      "sell_price": 2.95,
+      "pnl_pct": -8.39,
+      "pnl_krw": -2.206494824383271e+22,
+      "reason": "STOP_LOSS (-8.4%)",
+      "hold_min": 6.0,
+      "queue_price": 2.63,
+      "queue_to_entry_pct": 22.4,
+      "entry_time_ms": 1771020720000,
+      "sell_time_ms": 1771021080000,
+      "daily_high": 3.6799,
+      "max_possible_pct": 14.3
+    }
+  ],
+  "fake_signals": [
+    {
+      "ticker": "AIM",
+      "time_ms": 1771018500000,
+      "price": 1.16,
+      "max_later_gain_pct": 1.7
+    },
+    {
+      "ticker": "AMWL",
+      "time_ms": 1770999480000,
+      "price": 5.7,
+      "max_later_gain_pct": 3.3
+    },
+    {
+      "ticker": "AMWL",
+      "time_ms": 1771001040000,
+      "price": 5.745,
+      "max_later_gain_pct": 2.5
+    },
+    {
+      "ticker": "AMWL",
+      "time_ms": 1771014180000,
+      "price": 5.71,
+      "max_later_gain_pct": 1.2
+    },
+    {
+      "ticker": "ATOM",
+      "time_ms": 1771021500000,
+      "price": 3.97,
+      "max_later_gain_pct": 3.0
+    },
+    {
+      "ticker": "ATOM",
+      "time_ms": 1771023060000,
+      "price": 3.9162,
+      "max_later_gain_pct": 4.4
+    },
+    {
+      "ticker": "ATOM",
+      "time_ms": 1771023480000,
+      "price": 3.96,
+      "max_later_gain_pct": 3.3
+    },
+    {
+      "ticker": "FGL",
+      "time_ms": 1771019040000,
+      "price": 16.25,
+      "max_later_gain_pct": 4.6
+    },
+    {
+      "ticker": "JDZG",
+      "time_ms": 1771027560000,
+      "price": 2.75,
+      "max_later_gain_pct": 3.6
+    },
+    {
+      "ticker": "JDZG",
+      "time_ms": 1771028100000,
+      "price": 2.84,
+      "max_later_gain_pct": 0.4
+    },
+    {
+      "ticker": "JZXN",
+      "time_ms": 1770994800000,
+      "price": 2.3673,
+      "max_later_gain_pct": 4.8
+    },
+    {
+      "ticker": "JZXN",
+      "time_ms": 1771000740000,
+      "price": 1.985,
+      "max_later_gain_pct": 4.8
+    },
+    {
+      "ticker": "JZXN",
+      "time_ms": 1771027500000,
+      "price": 1.62,
+      "max_later_gain_pct": 2.4
+    },
+    {
+      "ticker": "NCI",
+      "time_ms": 1771028460000,
+      "price": 2.92,
+      "max_later_gain_pct": 1.7
+    },
+    {
+      "ticker": "NCI",
+      "time_ms": 1771030260000,
+      "price": 2.84,
+      "max_later_gain_pct": 4.6
+    },
+    {
+      "ticker": "PHIO",
+      "time_ms": 1771015260000,
+      "price": 1.6901,
+      "max_later_gain_pct": 3.5
+    },
+    {
+      "ticker": "PHIO",
+      "time_ms": 1771017540000,
+      "price": 1.69,
+      "max_later_gain_pct": 3.6
+    },
+    {
+      "ticker": "PHIO",
+      "time_ms": 1771018140000,
+      "price": 1.72,
+      "max_later_gain_pct": 1.7
+    },
+    {
+      "ticker": "PHIO",
+      "time_ms": 1771020000000,
+      "price": 1.73,
+      "max_later_gain_pct": 1.2
+    },
+    {
+      "ticker": "PHIO",
+      "time_ms": 1771021320000,
+      "price": 1.66,
+      "max_later_gain_pct": 1.8
+    },
+    {
+      "ticker": "PHIO",
+      "time_ms": 1771025520000,
+      "price": 1.6815,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "PHIO",
+      "time_ms": 1771026120000,
+      "price": 1.65,
+      "max_later_gain_pct": 1.2
+    },
+    {
+      "ticker": "PHIO",
+      "time_ms": 1771026900000,
+      "price": 1.66,
+      "max_later_gain_pct": 0.6
+    },
+    {
+      "ticker": "PHIO",
+      "time_ms": 1771027680000,
+      "price": 1.64,
+      "max_later_gain_pct": 1.8
+    },
+    {
+      "ticker": "PHIO",
+      "time_ms": 1771028820000,
+      "price": 1.6303,
+      "max_later_gain_pct": 2.4
+    },
+    {
+      "ticker": "PHIO",
+      "time_ms": 1771029240000,
+      "price": 1.6359,
+      "max_later_gain_pct": 2.1
+    }
+  ],
+  "missed_entries": [
+    {
+      "ticker": "AIM",
+      "daily_change_pct": 45.57,
+      "daily_volume": 3877037,
+      "had_vol_spike": true,
+      "meets_daily_vol": true,
+      "reason": "price_not_triggered"
+    },
+    {
+      "ticker": "ATOM",
+      "daily_change_pct": 51.37,
+      "daily_volume": 28211702,
+      "had_vol_spike": true,
+      "meets_daily_vol": true,
+      "reason": "price_not_triggered"
+    },
+    {
+      "ticker": "PHIO",
+      "daily_change_pct": 31.71,
+      "daily_volume": 24178743,
+      "had_vol_spike": true,
+      "meets_daily_vol": true,
+      "reason": "price_not_triggered"
+    }
+  ],
+  "fake_rate": 16.5
+}

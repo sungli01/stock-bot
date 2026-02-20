@@ -1,0 +1,503 @@
+{
+  "date": "2025-11-26",
+  "starting_portfolio": 119949385.0,
+  "ending_portfolio": 186617174.0,
+  "day_pnl_krw": 66667789.0,
+  "day_pnl_pct": 55.58,
+  "vol_spikes_detected": 203,
+  "signals_generated": 203,
+  "buys_executed": 5,
+  "trades": [
+    {
+      "ticker": "PW",
+      "type": "full",
+      "entry_price": 1.055,
+      "sell_price": 0.9714,
+      "pnl_pct": -7.92,
+      "pnl_krw": -950499.0,
+      "reason": "STOP_LOSS (-7.9%)",
+      "hold_min": 1.0,
+      "queue_price": 0.8783,
+      "queue_to_entry_pct": 20.1,
+      "entry_time_ms": 1764152940000,
+      "sell_time_ms": 1764153000000,
+      "daily_high": 1.32,
+      "max_possible_pct": 25.1
+    },
+    {
+      "ticker": "PW",
+      "type": "full",
+      "entry_price": 1.3,
+      "sell_price": 1.175,
+      "pnl_pct": -9.62,
+      "pnl_krw": -1259556.0,
+      "reason": "STOP_LOSS (-9.6%)",
+      "hold_min": 5.0,
+      "queue_price": 1.06,
+      "queue_to_entry_pct": 22.6,
+      "entry_time_ms": 1764157200000,
+      "sell_time_ms": 1764157500000,
+      "daily_high": 1.32,
+      "max_possible_pct": 1.5
+    },
+    {
+      "ticker": "BQ",
+      "type": "full",
+      "entry_price": 2.59,
+      "sell_price": 2.3501,
+      "pnl_pct": -9.26,
+      "pnl_krw": -1323004.0,
+      "reason": "STOP_LOSS (-9.3%)",
+      "hold_min": 13.0,
+      "queue_price": 1.9906,
+      "queue_to_entry_pct": 30.1,
+      "entry_time_ms": 1764167820000,
+      "sell_time_ms": 1764168600000,
+      "daily_high": 3,
+      "max_possible_pct": 15.8
+    },
+    {
+      "ticker": "ZYXI",
+      "type": "full",
+      "entry_price": 0.9479,
+      "sell_price": 0.88,
+      "pnl_pct": -7.16,
+      "pnl_krw": -1115984.0,
+      "reason": "STOP_LOSS (-7.2%)",
+      "hold_min": 12.0,
+      "queue_price": 0.7633,
+      "queue_to_entry_pct": 24.2,
+      "entry_time_ms": 1764169920000,
+      "sell_time_ms": 1764170640000,
+      "daily_high": 2.1,
+      "max_possible_pct": 121.5
+    },
+    {
+      "ticker": "ZYXI",
+      "type": "partial",
+      "entry_price": 1.9301,
+      "sell_price": 2.0388,
+      "pnl_pct": 5.631832547536408,
+      "pnl_krw": 479430.66525698453,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 10.0,
+      "entry_time_ms": 1764186060000,
+      "sell_time_ms": 1764186660000
+    },
+    {
+      "ticker": "ZYXI",
+      "type": "full",
+      "entry_price": 1.9301,
+      "sell_price": 1.6704,
+      "pnl_pct": -13.46,
+      "pnl_krw": -1145429.0,
+      "reason": "STOP_LOSS (-13.5%)",
+      "hold_min": 22.0,
+      "queue_price": 1.5755,
+      "queue_to_entry_pct": 22.5,
+      "entry_time_ms": 1764186060000,
+      "sell_time_ms": 1764187380000,
+      "daily_high": 2.1,
+      "max_possible_pct": 8.8
+    }
+  ],
+  "fake_signals": [
+    {
+      "ticker": "BQ",
+      "time_ms": 1764186360000,
+      "price": 2.375,
+      "max_later_gain_pct": 4.8
+    },
+    {
+      "ticker": "BQ",
+      "time_ms": 1764194040000,
+      "price": 2.36,
+      "max_later_gain_pct": 3.4
+    },
+    {
+      "ticker": "BQ",
+      "time_ms": 1764194880000,
+      "price": 2.38,
+      "max_later_gain_pct": 2.5
+    },
+    {
+      "ticker": "BQ",
+      "time_ms": 1764195660000,
+      "price": 2.39,
+      "max_later_gain_pct": 2.1
+    },
+    {
+      "ticker": "BQ",
+      "time_ms": 1764200460000,
+      "price": 2.34,
+      "max_later_gain_pct": 4.3
+    },
+    {
+      "ticker": "BQ",
+      "time_ms": 1764204000000,
+      "price": 2.4299,
+      "max_later_gain_pct": 0.4
+    },
+    {
+      "ticker": "BYND",
+      "time_ms": 1764189000000,
+      "price": 1.0017,
+      "max_later_gain_pct": 3.8
+    },
+    {
+      "ticker": "BYND",
+      "time_ms": 1764191520000,
+      "price": 1.02,
+      "max_later_gain_pct": 2.0
+    },
+    {
+      "ticker": "BYND",
+      "time_ms": 1764192000000,
+      "price": 1.04,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "BYND",
+      "time_ms": 1764192600000,
+      "price": 1.0297,
+      "max_later_gain_pct": 1.0
+    },
+    {
+      "ticker": "BYND",
+      "time_ms": 1764199500000,
+      "price": 1.0002,
+      "max_later_gain_pct": 3.0
+    },
+    {
+      "ticker": "BYND",
+      "time_ms": 1764201900000,
+      "price": 1.02,
+      "max_later_gain_pct": 1.0
+    },
+    {
+      "ticker": "BYND",
+      "time_ms": 1764202800000,
+      "price": 1.0198,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "BYND",
+      "time_ms": 1764204000000,
+      "price": 1.0102,
+      "max_later_gain_pct": 1.0
+    },
+    {
+      "ticker": "BYND",
+      "time_ms": 1764204540000,
+      "price": 1.01,
+      "max_later_gain_pct": 1.0
+    },
+    {
+      "ticker": "KALA",
+      "time_ms": 1764192960000,
+      "price": 0.9685,
+      "max_later_gain_pct": 1.8
+    },
+    {
+      "ticker": "KALA",
+      "time_ms": 1764195180000,
+      "price": 0.92,
+      "max_later_gain_pct": 4.2
+    },
+    {
+      "ticker": "KALA",
+      "time_ms": 1764195480000,
+      "price": 0.938,
+      "max_later_gain_pct": 2.2
+    },
+    {
+      "ticker": "KALA",
+      "time_ms": 1764200400000,
+      "price": 0.8917,
+      "max_later_gain_pct": 2.1
+    },
+    {
+      "ticker": "KALA",
+      "time_ms": 1764200700000,
+      "price": 0.866,
+      "max_later_gain_pct": 3.9
+    },
+    {
+      "ticker": "KALA",
+      "time_ms": 1764203760000,
+      "price": 0.8801,
+      "max_later_gain_pct": 2.1
+    },
+    {
+      "ticker": "KALA",
+      "time_ms": 1764204720000,
+      "price": 0.8989,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "LNAI",
+      "time_ms": 1764188460000,
+      "price": 1.275,
+      "max_later_gain_pct": 3.5
+    },
+    {
+      "ticker": "LNAI",
+      "time_ms": 1764204360000,
+      "price": 1.2103,
+      "max_later_gain_pct": 1.6
+    },
+    {
+      "ticker": "LYRA",
+      "time_ms": 1764197160000,
+      "price": 3.7,
+      "max_later_gain_pct": 2.7
+    },
+    {
+      "ticker": "MOB",
+      "time_ms": 1764173400000,
+      "price": 7.24,
+      "max_later_gain_pct": 4.4
+    },
+    {
+      "ticker": "MOB",
+      "time_ms": 1764174000000,
+      "price": 7.29,
+      "max_later_gain_pct": 3.7
+    },
+    {
+      "ticker": "MOB",
+      "time_ms": 1764174540000,
+      "price": 7.265,
+      "max_later_gain_pct": 4.1
+    },
+    {
+      "ticker": "MOB",
+      "time_ms": 1764175380000,
+      "price": 7.45,
+      "max_later_gain_pct": 1.5
+    },
+    {
+      "ticker": "MOB",
+      "time_ms": 1764177540000,
+      "price": 7.105,
+      "max_later_gain_pct": 3.5
+    },
+    {
+      "ticker": "MOB",
+      "time_ms": 1764180480000,
+      "price": 6.82,
+      "max_later_gain_pct": 4.2
+    },
+    {
+      "ticker": "MOB",
+      "time_ms": 1764183540000,
+      "price": 6.86,
+      "max_later_gain_pct": 3.0
+    },
+    {
+      "ticker": "MOB",
+      "time_ms": 1764183960000,
+      "price": 6.855,
+      "max_later_gain_pct": 3.1
+    },
+    {
+      "ticker": "MOB",
+      "time_ms": 1764185760000,
+      "price": 6.78,
+      "max_later_gain_pct": 4.2
+    },
+    {
+      "ticker": "MOB",
+      "time_ms": 1764186420000,
+      "price": 6.84,
+      "max_later_gain_pct": 3.3
+    },
+    {
+      "ticker": "MOB",
+      "time_ms": 1764188100000,
+      "price": 6.94,
+      "max_later_gain_pct": 1.8
+    },
+    {
+      "ticker": "MOB",
+      "time_ms": 1764188760000,
+      "price": 6.905,
+      "max_later_gain_pct": 1.0
+    },
+    {
+      "ticker": "MOB",
+      "time_ms": 1764190200000,
+      "price": 6.645,
+      "max_later_gain_pct": 2.0
+    },
+    {
+      "ticker": "PW",
+      "time_ms": 1764170100000,
+      "price": 1.0517,
+      "max_later_gain_pct": 3.6
+    },
+    {
+      "ticker": "PW",
+      "time_ms": 1764172200000,
+      "price": 1.055,
+      "max_later_gain_pct": 2.4
+    },
+    {
+      "ticker": "PW",
+      "time_ms": 1764172860000,
+      "price": 1.045,
+      "max_later_gain_pct": 3.3
+    },
+    {
+      "ticker": "QNCX",
+      "time_ms": 1764180300000,
+      "price": 3.44,
+      "max_later_gain_pct": 3.2
+    },
+    {
+      "ticker": "QNCX",
+      "time_ms": 1764182400000,
+      "price": 3.4901,
+      "max_later_gain_pct": 1.7
+    },
+    {
+      "ticker": "QNCX",
+      "time_ms": 1764183480000,
+      "price": 3.46,
+      "max_later_gain_pct": 2.6
+    },
+    {
+      "ticker": "QNCX",
+      "time_ms": 1764184740000,
+      "price": 3.495,
+      "max_later_gain_pct": 1.6
+    },
+    {
+      "ticker": "QNCX",
+      "time_ms": 1764185100000,
+      "price": 3.495,
+      "max_later_gain_pct": 1.6
+    },
+    {
+      "ticker": "QNCX",
+      "time_ms": 1764185640000,
+      "price": 3.4964,
+      "max_later_gain_pct": 0.4
+    },
+    {
+      "ticker": "QNCX",
+      "time_ms": 1764185940000,
+      "price": 3.5,
+      "max_later_gain_pct": 0.3
+    },
+    {
+      "ticker": "QNCX",
+      "time_ms": 1764187200000,
+      "price": 3.46,
+      "max_later_gain_pct": 1.4
+    },
+    {
+      "ticker": "QNCX",
+      "time_ms": 1764187260000,
+      "price": 3.475,
+      "max_later_gain_pct": 1.0
+    },
+    {
+      "ticker": "QNCX",
+      "time_ms": 1764188220000,
+      "price": 3.47,
+      "max_later_gain_pct": 1.2
+    },
+    {
+      "ticker": "QNCX",
+      "time_ms": 1764189960000,
+      "price": 3.5,
+      "max_later_gain_pct": 0.3
+    },
+    {
+      "ticker": "SBEV",
+      "time_ms": 1764187440000,
+      "price": 1.3275,
+      "max_later_gain_pct": 4.0
+    },
+    {
+      "ticker": "SBEV",
+      "time_ms": 1764190260000,
+      "price": 1.325,
+      "max_later_gain_pct": 4.2
+    },
+    {
+      "ticker": "SBEV",
+      "time_ms": 1764192360000,
+      "price": 1.32,
+      "max_later_gain_pct": 3.8
+    },
+    {
+      "ticker": "SBEV",
+      "time_ms": 1764192840000,
+      "price": 1.31,
+      "max_later_gain_pct": 4.6
+    },
+    {
+      "ticker": "SBEV",
+      "time_ms": 1764199200000,
+      "price": 1.31,
+      "max_later_gain_pct": 4.6
+    },
+    {
+      "ticker": "ZYXI",
+      "time_ms": 1764192120000,
+      "price": 1.67,
+      "max_later_gain_pct": 3.6
+    },
+    {
+      "ticker": "ZYXI",
+      "time_ms": 1764194100000,
+      "price": 1.54,
+      "max_later_gain_pct": 0.6
+    },
+    {
+      "ticker": "ZYXI",
+      "time_ms": 1764196140000,
+      "price": 1.5001,
+      "max_later_gain_pct": 2.0
+    },
+    {
+      "ticker": "ZYXI",
+      "time_ms": 1764198180000,
+      "price": 1.5,
+      "max_later_gain_pct": 2.0
+    },
+    {
+      "ticker": "ZYXI",
+      "time_ms": 1764198900000,
+      "price": 1.5,
+      "max_later_gain_pct": 2.0
+    },
+    {
+      "ticker": "ZYXI",
+      "time_ms": 1764203640000,
+      "price": 1.46,
+      "max_later_gain_pct": 3.4
+    }
+  ],
+  "missed_entries": [
+    {
+      "ticker": "QNTM",
+      "daily_change_pct": 44.05,
+      "daily_volume": 1232681,
+      "had_vol_spike": true,
+      "meets_daily_vol": true,
+      "reason": "price_not_triggered"
+    },
+    {
+      "ticker": "SBEV",
+      "daily_change_pct": 32.34,
+      "daily_volume": 1401977,
+      "had_vol_spike": true,
+      "meets_daily_vol": true,
+      "reason": "price_not_triggered"
+    }
+  ],
+  "fake_rate": 31.0
+}

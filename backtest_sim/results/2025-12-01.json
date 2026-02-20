@@ -1,0 +1,497 @@
+{
+  "date": "2025-12-01",
+  "starting_portfolio": 304586794.0,
+  "ending_portfolio": 814856789.0,
+  "day_pnl_krw": 510269995.0,
+  "day_pnl_pct": 167.53,
+  "vol_spikes_detected": 116,
+  "signals_generated": 116,
+  "buys_executed": 10,
+  "trades": [
+    {
+      "ticker": "KALA",
+      "type": "partial",
+      "entry_price": 1.29,
+      "sell_price": 1.38,
+      "pnl_pct": 6.976744186046502,
+      "pnl_krw": 1062512.0720930211,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 5.0,
+      "entry_time_ms": 1764590520000,
+      "sell_time_ms": 1764590820000
+    },
+    {
+      "ticker": "KALA",
+      "type": "full",
+      "entry_price": 1.29,
+      "sell_price": 1.46,
+      "pnl_pct": 13.18,
+      "pnl_krw": 2006967.0,
+      "reason": "PROFIT_TARGET +10% (13.2%)",
+      "hold_min": 6.0,
+      "queue_price": 1.01,
+      "queue_to_entry_pct": 27.7,
+      "entry_time_ms": 1764590520000,
+      "sell_time_ms": 1764590880000,
+      "daily_high": 1.91,
+      "max_possible_pct": 48.1
+    },
+    {
+      "ticker": "QTTB",
+      "type": "partial",
+      "entry_price": 3.37,
+      "sell_price": 3.73,
+      "pnl_pct": 10.682492581602364,
+      "pnl_krw": 1805955.237076804,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 1.0,
+      "entry_time_ms": 1764591240000,
+      "sell_time_ms": 1764591300000
+    },
+    {
+      "ticker": "QTTB",
+      "type": "full",
+      "entry_price": 3.37,
+      "sell_price": 3.73,
+      "pnl_pct": 10.68,
+      "pnl_krw": 1805955.0,
+      "reason": "PROFIT_TARGET +10% (10.7%)",
+      "hold_min": 1.0,
+      "queue_price": 2.68,
+      "queue_to_entry_pct": 25.7,
+      "entry_time_ms": 1764591240000,
+      "sell_time_ms": 1764591300000,
+      "daily_high": 6.3699,
+      "max_possible_pct": 89.0
+    },
+    {
+      "ticker": "KALA",
+      "type": "full",
+      "entry_price": 1.3,
+      "sell_price": 1.2,
+      "pnl_pct": -7.69,
+      "pnl_krw": -2888757.0,
+      "reason": "STOP_LOSS (-7.7%)",
+      "hold_min": 4.0,
+      "queue_price": 1.07,
+      "queue_to_entry_pct": 21.5,
+      "entry_time_ms": 1764594780000,
+      "sell_time_ms": 1764595020000,
+      "daily_high": 1.91,
+      "max_possible_pct": 46.9
+    },
+    {
+      "ticker": "QTTB",
+      "type": "partial",
+      "entry_price": 5.23,
+      "sell_price": 5.63,
+      "pnl_pct": 7.648183556405352,
+      "pnl_krw": 1568655.5935313106,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 1.0,
+      "entry_time_ms": 1764600120000,
+      "sell_time_ms": 1764600180000
+    },
+    {
+      "ticker": "QTTB",
+      "type": "full",
+      "entry_price": 5.23,
+      "sell_price": 5.6699,
+      "pnl_pct": 8.41,
+      "pnl_krw": 1725129.0,
+      "reason": "TRAILING (8.4%, peak=12.4%)",
+      "hold_min": 5.0,
+      "queue_price": 4.2465,
+      "queue_to_entry_pct": 23.2,
+      "entry_time_ms": 1764600120000,
+      "sell_time_ms": 1764600420000,
+      "daily_high": 6.3699,
+      "max_possible_pct": 21.8
+    },
+    {
+      "ticker": "KXIN",
+      "type": "full",
+      "entry_price": 4.52,
+      "sell_price": 4.07,
+      "pnl_pct": -9.96,
+      "pnl_krw": -4525064.0,
+      "reason": "STOP_LOSS (-10.0%)",
+      "hold_min": 5.0,
+      "queue_price": 3.6796,
+      "queue_to_entry_pct": 22.8,
+      "entry_time_ms": 1764601740000,
+      "sell_time_ms": 1764602040000,
+      "daily_high": 5.86,
+      "max_possible_pct": 29.6
+    },
+    {
+      "ticker": "WHLR",
+      "type": "partial",
+      "entry_price": 10.545,
+      "sell_price": 11.775,
+      "pnl_pct": 11.664295874822184,
+      "pnl_krw": 2889504.2097535804,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 12.0,
+      "entry_time_ms": 1764602520000,
+      "sell_time_ms": 1764603240000
+    },
+    {
+      "ticker": "WHLR",
+      "type": "full",
+      "entry_price": 10.545,
+      "sell_price": 11.775,
+      "pnl_pct": 11.66,
+      "pnl_krw": 2889504.0,
+      "reason": "PROFIT_TARGET +10% (11.7%)",
+      "hold_min": 12.0,
+      "queue_price": 8.55,
+      "queue_to_entry_pct": 23.3,
+      "entry_time_ms": 1764602520000,
+      "sell_time_ms": 1764603240000,
+      "daily_high": 13.74,
+      "max_possible_pct": 30.3
+    },
+    {
+      "ticker": "FLYE",
+      "type": "partial",
+      "entry_price": 8.6101,
+      "sell_price": 10.74,
+      "pnl_pct": 24.737227209904656,
+      "pnl_krw": 6127958.59499234,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 11.0,
+      "entry_time_ms": 1764602640000,
+      "sell_time_ms": 1764603300000
+    },
+    {
+      "ticker": "FLYE",
+      "type": "full",
+      "entry_price": 8.6101,
+      "sell_price": 10.74,
+      "pnl_pct": 24.74,
+      "pnl_krw": 6127959.0,
+      "reason": "PROFIT_TARGET +10% (24.7%)",
+      "hold_min": 11.0,
+      "queue_price": 6.79,
+      "queue_to_entry_pct": 26.8,
+      "entry_time_ms": 1764602640000,
+      "sell_time_ms": 1764603300000,
+      "daily_high": 24,
+      "max_possible_pct": 178.7
+    },
+    {
+      "ticker": "HKIT",
+      "type": "full",
+      "entry_price": 2.15,
+      "sell_price": 1.94,
+      "pnl_pct": -9.77,
+      "pnl_krw": -5983223.0,
+      "reason": "STOP_LOSS (-9.8%)",
+      "hold_min": 15.0,
+      "queue_price": 1.78,
+      "queue_to_entry_pct": 20.8,
+      "entry_time_ms": 1764603960000,
+      "sell_time_ms": 1764604860000,
+      "daily_high": 2.16,
+      "max_possible_pct": 0.5
+    },
+    {
+      "ticker": "CNCK",
+      "type": "partial",
+      "entry_price": 4.57,
+      "sell_price": 4.98,
+      "pnl_pct": 8.97155361050328,
+      "pnl_krw": 2995788.4332794547,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 39.0,
+      "entry_time_ms": 1764608460000,
+      "sell_time_ms": 1764610800000
+    },
+    {
+      "ticker": "CNCK",
+      "type": "full",
+      "entry_price": 4.57,
+      "sell_price": 5.79,
+      "pnl_pct": 26.7,
+      "pnl_krw": 8914297.0,
+      "reason": "TIME_LIMIT (26.7%)",
+      "hold_min": 45.0,
+      "queue_price": 3.74,
+      "queue_to_entry_pct": 22.2,
+      "entry_time_ms": 1764608460000,
+      "sell_time_ms": 1764611160000,
+      "daily_high": 9.31,
+      "max_possible_pct": 103.7
+    },
+    {
+      "ticker": "FLYE",
+      "type": "full",
+      "entry_price": 22.87,
+      "sell_price": 20.93,
+      "pnl_pct": -8.48,
+      "pnl_krw": -6332661.0,
+      "reason": "STOP_LOSS (-8.5%)",
+      "hold_min": 3.0,
+      "queue_price": 17.95,
+      "queue_to_entry_pct": 27.4,
+      "entry_time_ms": 1764624300000,
+      "sell_time_ms": 1764624480000,
+      "daily_high": 24,
+      "max_possible_pct": 4.9
+    }
+  ],
+  "fake_signals": [
+    {
+      "ticker": "BYND",
+      "time_ms": 1764625920000,
+      "price": 1.37,
+      "max_later_gain_pct": 0.7
+    },
+    {
+      "ticker": "BYND",
+      "time_ms": 1764630600000,
+      "price": 1.31,
+      "max_later_gain_pct": 4.6
+    },
+    {
+      "ticker": "BYND",
+      "time_ms": 1764633900000,
+      "price": 1.31,
+      "max_later_gain_pct": 4.6
+    },
+    {
+      "ticker": "BYND",
+      "time_ms": 1764634980000,
+      "price": 1.33,
+      "max_later_gain_pct": 3.0
+    },
+    {
+      "ticker": "CNCK",
+      "time_ms": 1764630780000,
+      "price": 6.9,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "CNCK",
+      "time_ms": 1764635280000,
+      "price": 6.89,
+      "max_later_gain_pct": 0.1
+    },
+    {
+      "ticker": "HKIT",
+      "time_ms": 1764604500000,
+      "price": 2.04,
+      "max_later_gain_pct": 4.4
+    },
+    {
+      "ticker": "HKIT",
+      "time_ms": 1764609480000,
+      "price": 1.9999,
+      "max_later_gain_pct": 2.5
+    },
+    {
+      "ticker": "HKIT",
+      "time_ms": 1764610200000,
+      "price": 1.9,
+      "max_later_gain_pct": 3.7
+    },
+    {
+      "ticker": "HKIT",
+      "time_ms": 1764610440000,
+      "price": 1.89,
+      "max_later_gain_pct": 4.2
+    },
+    {
+      "ticker": "HKIT",
+      "time_ms": 1764612900000,
+      "price": 1.86,
+      "max_later_gain_pct": 2.2
+    },
+    {
+      "ticker": "HKIT",
+      "time_ms": 1764613680000,
+      "price": 1.8,
+      "max_later_gain_pct": 3.3
+    },
+    {
+      "ticker": "HKIT",
+      "time_ms": 1764614700000,
+      "price": 1.7503,
+      "max_later_gain_pct": 2.3
+    },
+    {
+      "ticker": "HKIT",
+      "time_ms": 1764615420000,
+      "price": 1.72,
+      "max_later_gain_pct": 4.1
+    },
+    {
+      "ticker": "HKIT",
+      "time_ms": 1764615960000,
+      "price": 1.73,
+      "max_later_gain_pct": 2.6
+    },
+    {
+      "ticker": "HKIT",
+      "time_ms": 1764616020000,
+      "price": 1.71,
+      "max_later_gain_pct": 3.8
+    },
+    {
+      "ticker": "HKIT",
+      "time_ms": 1764622500000,
+      "price": 1.69,
+      "max_later_gain_pct": 3.0
+    },
+    {
+      "ticker": "HKIT",
+      "time_ms": 1764622800000,
+      "price": 1.71,
+      "max_later_gain_pct": 1.2
+    },
+    {
+      "ticker": "HKIT",
+      "time_ms": 1764633840000,
+      "price": 1.71,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "KALA",
+      "time_ms": 1764633480000,
+      "price": 1.28,
+      "max_later_gain_pct": 4.7
+    },
+    {
+      "ticker": "KALA",
+      "time_ms": 1764633720000,
+      "price": 1.2818,
+      "max_later_gain_pct": 4.5
+    },
+    {
+      "ticker": "KALA",
+      "time_ms": 1764634260000,
+      "price": 1.28,
+      "max_later_gain_pct": 4.7
+    },
+    {
+      "ticker": "KALA",
+      "time_ms": 1764634800000,
+      "price": 1.29,
+      "max_later_gain_pct": 3.9
+    },
+    {
+      "ticker": "KALA",
+      "time_ms": 1764636060000,
+      "price": 1.29,
+      "max_later_gain_pct": 3.9
+    },
+    {
+      "ticker": "KXIN",
+      "time_ms": 1764623520000,
+      "price": 4,
+      "max_later_gain_pct": 3.8
+    },
+    {
+      "ticker": "QTTB",
+      "time_ms": 1764615540000,
+      "price": 4.2339,
+      "max_later_gain_pct": 1.1
+    },
+    {
+      "ticker": "QTTB",
+      "time_ms": 1764634260000,
+      "price": 3.76,
+      "max_later_gain_pct": 1.3
+    },
+    {
+      "ticker": "QTTB",
+      "time_ms": 1764636060000,
+      "price": 3.78,
+      "max_later_gain_pct": 0.3
+    },
+    {
+      "ticker": "QTTB",
+      "time_ms": 1764636360000,
+      "price": 3.77,
+      "max_later_gain_pct": 0.5
+    },
+    {
+      "ticker": "ZYXI",
+      "time_ms": 1764609840000,
+      "price": 1.445,
+      "max_later_gain_pct": 3.8
+    },
+    {
+      "ticker": "ZYXI",
+      "time_ms": 1764612660000,
+      "price": 1.4012,
+      "max_later_gain_pct": 1.0
+    },
+    {
+      "ticker": "ZYXI",
+      "time_ms": 1764613860000,
+      "price": 1.3108,
+      "max_later_gain_pct": 3.8
+    },
+    {
+      "ticker": "ZYXI",
+      "time_ms": 1764614580000,
+      "price": 1.3205,
+      "max_later_gain_pct": 3.0
+    },
+    {
+      "ticker": "ZYXI",
+      "time_ms": 1764615600000,
+      "price": 1.33,
+      "max_later_gain_pct": 2.3
+    },
+    {
+      "ticker": "ZYXI",
+      "time_ms": 1764623460000,
+      "price": 1.24,
+      "max_later_gain_pct": 4.8
+    },
+    {
+      "ticker": "ZYXI",
+      "time_ms": 1764625260000,
+      "price": 1.27,
+      "max_later_gain_pct": 2.4
+    },
+    {
+      "ticker": "ZYXI",
+      "time_ms": 1764628980000,
+      "price": 1.3,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "ZYXI",
+      "time_ms": 1764629820000,
+      "price": 1.2976,
+      "max_later_gain_pct": 0.2
+    },
+    {
+      "ticker": "ZYXI",
+      "time_ms": 1764630180000,
+      "price": 1.29,
+      "max_later_gain_pct": 0.8
+    },
+    {
+      "ticker": "ZYXI",
+      "time_ms": 1764631920000,
+      "price": 1.265,
+      "max_later_gain_pct": 2.8
+    }
+  ],
+  "missed_entries": [
+    {
+      "ticker": "BYND",
+      "daily_change_pct": 42.11,
+      "daily_volume": 268105884.0,
+      "had_vol_spike": true,
+      "meets_daily_vol": true,
+      "reason": "price_not_triggered"
+    }
+  ],
+  "fake_rate": 34.5
+}

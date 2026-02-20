@@ -1,0 +1,552 @@
+{
+  "date": "2025-11-19",
+  "starting_portfolio": 1000000,
+  "ending_portfolio": 1624728.0,
+  "day_pnl_krw": 624728.0,
+  "day_pnl_pct": 62.47,
+  "vol_spikes_detected": 165,
+  "signals_generated": 165,
+  "buys_executed": 5,
+  "trades": [
+    {
+      "ticker": "FRGT",
+      "type": "partial",
+      "entry_price": 4.5065,
+      "sell_price": 4.8455,
+      "pnl_pct": 7.522467546876732,
+      "pnl_krw": 3761.233773438369,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 2.0,
+      "entry_time_ms": 1763560980000,
+      "sell_time_ms": 1763561100000
+    },
+    {
+      "ticker": "FRGT",
+      "type": "full",
+      "entry_price": 4.5065,
+      "sell_price": 4.7805,
+      "pnl_pct": 6.08,
+      "pnl_krw": 3040.0,
+      "reason": "TRAILING (6.1%, peak=10.0%)",
+      "hold_min": 4.0,
+      "queue_price": 3.6685,
+      "queue_to_entry_pct": 22.8,
+      "entry_time_ms": 1763560980000,
+      "sell_time_ms": 1763561220000,
+      "daily_high": 6.85,
+      "max_possible_pct": 52.0
+    },
+    {
+      "ticker": "NUVB",
+      "type": "partial",
+      "entry_price": 6.12,
+      "sell_price": 6.4498,
+      "pnl_pct": 5.3888888888888875,
+      "pnl_krw": 2982.21457894153,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 4.0,
+      "entry_time_ms": 1763565300000,
+      "sell_time_ms": 1763565540000
+    },
+    {
+      "ticker": "NUVB",
+      "type": "full",
+      "entry_price": 6.12,
+      "sell_price": 6.6282,
+      "pnl_pct": 8.3,
+      "pnl_krw": 4595.0,
+      "reason": "TRAILING (8.3%, peak=11.1%)",
+      "hold_min": 37.0,
+      "queue_price": 5.1,
+      "queue_to_entry_pct": 20.0,
+      "entry_time_ms": 1763565300000,
+      "sell_time_ms": 1763567520000,
+      "daily_high": 7.35,
+      "max_possible_pct": 20.1
+    },
+    {
+      "ticker": "MAGH",
+      "type": "full",
+      "entry_price": 3.6124,
+      "sell_price": 3.5991,
+      "pnl_pct": -0.37,
+      "pnl_krw": -407.0,
+      "reason": "TIME_LIMIT (-0.4%)",
+      "hold_min": 45.0,
+      "queue_price": 2.9932,
+      "queue_to_entry_pct": 20.7,
+      "entry_time_ms": 1763565180000,
+      "sell_time_ms": 1763567880000,
+      "daily_high": 4.4,
+      "max_possible_pct": 21.8
+    },
+    {
+      "ticker": "SGBX",
+      "type": "partial",
+      "entry_price": 5.42,
+      "sell_price": 5.7,
+      "pnl_pct": 5.166051660516602,
+      "pnl_krw": 3449.1961608873244,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 4.0,
+      "entry_time_ms": 1763570520000,
+      "sell_time_ms": 1763570760000
+    },
+    {
+      "ticker": "SGBX",
+      "type": "full",
+      "entry_price": 5.42,
+      "sell_price": 4.8699,
+      "pnl_pct": -10.15,
+      "pnl_krw": -6776.0,
+      "reason": "STOP_LOSS (-10.1%)",
+      "hold_min": 25.0,
+      "queue_price": 4.515,
+      "queue_to_entry_pct": 20.0,
+      "entry_time_ms": 1763570520000,
+      "sell_time_ms": 1763572020000,
+      "daily_high": 7.89,
+      "max_possible_pct": 45.6
+    },
+    {
+      "ticker": "CABR",
+      "type": "partial",
+      "entry_price": 1.1,
+      "sell_price": 1.1698,
+      "pnl_pct": 6.345454545454543,
+      "pnl_krw": 4649.751048605889,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 11.0,
+      "entry_time_ms": 1763573580000,
+      "sell_time_ms": 1763574240000
+    },
+    {
+      "ticker": "CABR",
+      "type": "full",
+      "entry_price": 1.1,
+      "sell_price": 1.2199,
+      "pnl_pct": 10.9,
+      "pnl_krw": 7987.0,
+      "reason": "PROFIT_TARGET +10% (10.9%)",
+      "hold_min": 13.0,
+      "queue_price": 0.9156,
+      "queue_to_entry_pct": 20.1,
+      "entry_time_ms": 1763573580000,
+      "sell_time_ms": 1763574360000,
+      "daily_high": 1.3458,
+      "max_possible_pct": 22.3
+    }
+  ],
+  "fake_signals": [
+    {
+      "ticker": "BFLY",
+      "time_ms": 1763566680000,
+      "price": 2.425,
+      "max_later_gain_pct": 3.1
+    },
+    {
+      "ticker": "BFLY",
+      "time_ms": 1763570820000,
+      "price": 2.3824,
+      "max_later_gain_pct": 4.9
+    },
+    {
+      "ticker": "BFLY",
+      "time_ms": 1763571660000,
+      "price": 2.41,
+      "max_later_gain_pct": 3.7
+    },
+    {
+      "ticker": "BFLY",
+      "time_ms": 1763573940000,
+      "price": 2.415,
+      "max_later_gain_pct": 3.5
+    },
+    {
+      "ticker": "BFLY",
+      "time_ms": 1763574960000,
+      "price": 2.453,
+      "max_later_gain_pct": 1.9
+    },
+    {
+      "ticker": "BFLY",
+      "time_ms": 1763576760000,
+      "price": 2.435,
+      "max_later_gain_pct": 1.8
+    },
+    {
+      "ticker": "BFLY",
+      "time_ms": 1763579100000,
+      "price": 2.425,
+      "max_later_gain_pct": 2.3
+    },
+    {
+      "ticker": "BFLY",
+      "time_ms": 1763579700000,
+      "price": 2.449,
+      "max_later_gain_pct": 1.3
+    },
+    {
+      "ticker": "BFLY",
+      "time_ms": 1763580300000,
+      "price": 2.435,
+      "max_later_gain_pct": 1.8
+    },
+    {
+      "ticker": "BFLY",
+      "time_ms": 1763582040000,
+      "price": 2.4525,
+      "max_later_gain_pct": 1.1
+    },
+    {
+      "ticker": "BFLY",
+      "time_ms": 1763583480000,
+      "price": 2.465,
+      "max_later_gain_pct": 0.6
+    },
+    {
+      "ticker": "BFLY",
+      "time_ms": 1763595180000,
+      "price": 2.41,
+      "max_later_gain_pct": 1.2
+    },
+    {
+      "ticker": "BFLY",
+      "time_ms": 1763598300000,
+      "price": 2.41,
+      "max_later_gain_pct": 1.2
+    },
+    {
+      "ticker": "CABR",
+      "time_ms": 1763585580000,
+      "price": 1.13,
+      "max_later_gain_pct": 0.9
+    },
+    {
+      "ticker": "CABR",
+      "time_ms": 1763586960000,
+      "price": 1.04,
+      "max_later_gain_pct": 3.8
+    },
+    {
+      "ticker": "CABR",
+      "time_ms": 1763599740000,
+      "price": 1.0606,
+      "max_later_gain_pct": 1.8
+    },
+    {
+      "ticker": "CCHH",
+      "time_ms": 1763569140000,
+      "price": 6.4,
+      "max_later_gain_pct": 1.6
+    },
+    {
+      "ticker": "CCHH",
+      "time_ms": 1763570160000,
+      "price": 6.39,
+      "max_later_gain_pct": 1.7
+    },
+    {
+      "ticker": "CCHH",
+      "time_ms": 1763570940000,
+      "price": 6.4,
+      "max_later_gain_pct": 1.6
+    },
+    {
+      "ticker": "CCHH",
+      "time_ms": 1763576100000,
+      "price": 6.1932,
+      "max_later_gain_pct": 4.0
+    },
+    {
+      "ticker": "CCHH",
+      "time_ms": 1763576700000,
+      "price": 6.17,
+      "max_later_gain_pct": 4.4
+    },
+    {
+      "ticker": "CCHH",
+      "time_ms": 1763583960000,
+      "price": 6.3,
+      "max_later_gain_pct": 1.4
+    },
+    {
+      "ticker": "CCHH",
+      "time_ms": 1763584860000,
+      "price": 6.3694,
+      "max_later_gain_pct": 0.3
+    },
+    {
+      "ticker": "CCHH",
+      "time_ms": 1763585340000,
+      "price": 6.29,
+      "max_later_gain_pct": 1.6
+    },
+    {
+      "ticker": "FRGT",
+      "time_ms": 1763575620000,
+      "price": 5.8275,
+      "max_later_gain_pct": 0.4
+    },
+    {
+      "ticker": "FRGT",
+      "time_ms": 1763578260000,
+      "price": 4.9285,
+      "max_later_gain_pct": 2.5
+    },
+    {
+      "ticker": "FRGT",
+      "time_ms": 1763587800000,
+      "price": 4.6805,
+      "max_later_gain_pct": 4.6
+    },
+    {
+      "ticker": "FRGT",
+      "time_ms": 1763592540000,
+      "price": 4.521,
+      "max_later_gain_pct": 4.9
+    },
+    {
+      "ticker": "FRGT",
+      "time_ms": 1763593980000,
+      "price": 4.6,
+      "max_later_gain_pct": 3.1
+    },
+    {
+      "ticker": "FRGT",
+      "time_ms": 1763599500000,
+      "price": 4.6675,
+      "max_later_gain_pct": 1.6
+    },
+    {
+      "ticker": "LNAI",
+      "time_ms": 1763583540000,
+      "price": 1.4733,
+      "max_later_gain_pct": 3.8
+    },
+    {
+      "ticker": "LNAI",
+      "time_ms": 1763584320000,
+      "price": 1.5277,
+      "max_later_gain_pct": 0.2
+    },
+    {
+      "ticker": "LNAI",
+      "time_ms": 1763588460000,
+      "price": 1.4,
+      "max_later_gain_pct": 1.4
+    },
+    {
+      "ticker": "LNAI",
+      "time_ms": 1763593980000,
+      "price": 1.3775,
+      "max_later_gain_pct": 1.6
+    },
+    {
+      "ticker": "LNAI",
+      "time_ms": 1763599560000,
+      "price": 1.3802,
+      "max_later_gain_pct": 0.7
+    },
+    {
+      "ticker": "MAGH",
+      "time_ms": 1763575020000,
+      "price": 3.9,
+      "max_later_gain_pct": 3.8
+    },
+    {
+      "ticker": "MAGH",
+      "time_ms": 1763575380000,
+      "price": 3.9695,
+      "max_later_gain_pct": 2.0
+    },
+    {
+      "ticker": "MAGH",
+      "time_ms": 1763576400000,
+      "price": 3.964482,
+      "max_later_gain_pct": 2.2
+    },
+    {
+      "ticker": "MAGH",
+      "time_ms": 1763576580000,
+      "price": 3.96,
+      "max_later_gain_pct": 2.3
+    },
+    {
+      "ticker": "MAGH",
+      "time_ms": 1763578740000,
+      "price": 3.9,
+      "max_later_gain_pct": 3.8
+    },
+    {
+      "ticker": "MAGH",
+      "time_ms": 1763578860000,
+      "price": 3.8625,
+      "max_later_gain_pct": 4.9
+    },
+    {
+      "ticker": "MAGH",
+      "time_ms": 1763580300000,
+      "price": 4.04,
+      "max_later_gain_pct": 0.2
+    },
+    {
+      "ticker": "MAGH",
+      "time_ms": 1763582700000,
+      "price": 3.9,
+      "max_later_gain_pct": 1.0
+    },
+    {
+      "ticker": "MAGH",
+      "time_ms": 1763583000000,
+      "price": 3.9,
+      "max_later_gain_pct": 1.0
+    },
+    {
+      "ticker": "MAGH",
+      "time_ms": 1763583600000,
+      "price": 3.88,
+      "max_later_gain_pct": 1.3
+    },
+    {
+      "ticker": "MAGH",
+      "time_ms": 1763596440000,
+      "price": 3.89,
+      "max_later_gain_pct": 0.3
+    },
+    {
+      "ticker": "NUVB",
+      "time_ms": 1763596560000,
+      "price": 7.24,
+      "max_later_gain_pct": 0.2
+    },
+    {
+      "ticker": "NUVB",
+      "time_ms": 1763597640000,
+      "price": 7.201,
+      "max_later_gain_pct": 0.7
+    },
+    {
+      "ticker": "OMH",
+      "time_ms": 1763566260000,
+      "price": 1.01,
+      "max_later_gain_pct": 0.5
+    },
+    {
+      "ticker": "OMH",
+      "time_ms": 1763566320000,
+      "price": 1.01,
+      "max_later_gain_pct": 0.5
+    },
+    {
+      "ticker": "OMH",
+      "time_ms": 1763571120000,
+      "price": 0.91,
+      "max_later_gain_pct": 4.9
+    },
+    {
+      "ticker": "OMH",
+      "time_ms": 1763580900000,
+      "price": 0.9,
+      "max_later_gain_pct": 3.3
+    },
+    {
+      "ticker": "RDGT",
+      "time_ms": 1763585160000,
+      "price": 4.94,
+      "max_later_gain_pct": 3.8
+    },
+    {
+      "ticker": "RDGT",
+      "time_ms": 1763585460000,
+      "price": 4.9,
+      "max_later_gain_pct": 4.7
+    },
+    {
+      "ticker": "RDGT",
+      "time_ms": 1763589000000,
+      "price": 4.86,
+      "max_later_gain_pct": 0.4
+    },
+    {
+      "ticker": "RDGT",
+      "time_ms": 1763591820000,
+      "price": 4.769,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "SGBX",
+      "time_ms": 1763598000000,
+      "price": 6.83,
+      "max_later_gain_pct": 1.8
+    },
+    {
+      "ticker": "SGML",
+      "time_ms": 1763587380000,
+      "price": 10.42,
+      "max_later_gain_pct": 3.7
+    },
+    {
+      "ticker": "SGML",
+      "time_ms": 1763587740000,
+      "price": 10.5,
+      "max_later_gain_pct": 2.9
+    },
+    {
+      "ticker": "SGML",
+      "time_ms": 1763588940000,
+      "price": 10.36,
+      "max_later_gain_pct": 4.3
+    },
+    {
+      "ticker": "SGML",
+      "time_ms": 1763589780000,
+      "price": 10.6,
+      "max_later_gain_pct": 1.9
+    },
+    {
+      "ticker": "SGML",
+      "time_ms": 1763592360000,
+      "price": 10.4314,
+      "max_later_gain_pct": 3.6
+    },
+    {
+      "ticker": "SGML",
+      "time_ms": 1763594040000,
+      "price": 10.58,
+      "max_later_gain_pct": 2.1
+    },
+    {
+      "ticker": "SGML",
+      "time_ms": 1763595540000,
+      "price": 10.63,
+      "max_later_gain_pct": 1.6
+    },
+    {
+      "ticker": "SGML",
+      "time_ms": 1763595780000,
+      "price": 10.62,
+      "max_later_gain_pct": 1.7
+    },
+    {
+      "ticker": "SGML",
+      "time_ms": 1763596620000,
+      "price": 10.63,
+      "max_later_gain_pct": 1.6
+    },
+    {
+      "ticker": "SGML",
+      "time_ms": 1763596980000,
+      "price": 10.63,
+      "max_later_gain_pct": 1.6
+    },
+    {
+      "ticker": "SGML",
+      "time_ms": 1763598360000,
+      "price": 10.7296,
+      "max_later_gain_pct": 0.7
+    }
+  ],
+  "missed_entries": [],
+  "fake_rate": 41.2
+}

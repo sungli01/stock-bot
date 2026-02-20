@@ -1,0 +1,615 @@
+{
+  "date": "2026-01-22",
+  "starting_portfolio": 1.8578883922959373e+18,
+  "ending_portfolio": 5.827346882639912e+18,
+  "day_pnl_krw": 3.969458490343975e+18,
+  "day_pnl_pct": 213.65,
+  "vol_spikes_detected": 191,
+  "signals_generated": 191,
+  "buys_executed": 12,
+  "trades": [
+    {
+      "ticker": "SXTP",
+      "type": "full",
+      "entry_price": 2.65,
+      "sell_price": 2.43,
+      "pnl_pct": -8.3,
+      "pnl_krw": -1.5423979105853056e+16,
+      "reason": "STOP_LOSS (-8.3%)",
+      "hold_min": 1.0,
+      "queue_price": 2.13,
+      "queue_to_entry_pct": 24.4,
+      "entry_time_ms": 1769074860000,
+      "sell_time_ms": 1769074920000,
+      "daily_high": 8.62,
+      "max_possible_pct": 225.3
+    },
+    {
+      "ticker": "SXTP",
+      "type": "partial",
+      "entry_price": 4.3698,
+      "sell_price": 4.93,
+      "pnl_pct": 12.819808686896428,
+      "pnl_krw": 1.3000909332297856e+16,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 2.0,
+      "entry_time_ms": 1769087040000,
+      "sell_time_ms": 1769087160000
+    },
+    {
+      "ticker": "SXTP",
+      "type": "full",
+      "entry_price": 4.3698,
+      "sell_price": 4.93,
+      "pnl_pct": 12.82,
+      "pnl_krw": 1.3000909332297856e+16,
+      "reason": "PROFIT_TARGET +10% (12.8%)",
+      "hold_min": 2.0,
+      "queue_price": 3.6199,
+      "queue_to_entry_pct": 20.7,
+      "entry_time_ms": 1769087040000,
+      "sell_time_ms": 1769087160000,
+      "daily_high": 8.62,
+      "max_possible_pct": 97.3
+    },
+    {
+      "ticker": "SXTP",
+      "type": "full",
+      "entry_price": 8.23,
+      "sell_price": 7.4699,
+      "pnl_pct": -9.24,
+      "pnl_krw": -2.0845769249666816e+16,
+      "reason": "STOP_LOSS (-9.2%)",
+      "hold_min": 2.0,
+      "queue_price": 6.5001,
+      "queue_to_entry_pct": 26.6,
+      "entry_time_ms": 1769093160000,
+      "sell_time_ms": 1769093280000,
+      "daily_high": 8.62,
+      "max_possible_pct": 4.7
+    },
+    {
+      "ticker": "NAMM",
+      "type": "partial",
+      "entry_price": 2.275,
+      "sell_price": 2.45,
+      "pnl_pct": 7.692307692307709,
+      "pnl_krw": 8681078447408640.0,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 12.0,
+      "entry_time_ms": 1769093160000,
+      "sell_time_ms": 1769093880000
+    },
+    {
+      "ticker": "SPHL",
+      "type": "partial",
+      "entry_price": 7.8,
+      "sell_price": 8.25,
+      "pnl_pct": 5.769230769230771,
+      "pnl_krw": 7101757692430384.0,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 6.0,
+      "entry_time_ms": 1769093520000,
+      "sell_time_ms": 1769093880000
+    },
+    {
+      "ticker": "NAMM",
+      "type": "full",
+      "entry_price": 2.275,
+      "sell_price": 2.56,
+      "pnl_pct": 12.53,
+      "pnl_krw": 1.4137756328636896e+16,
+      "reason": "PROFIT_TARGET +10% (12.5%)",
+      "hold_min": 13.0,
+      "queue_price": 1.8903,
+      "queue_to_entry_pct": 20.4,
+      "entry_time_ms": 1769093160000,
+      "sell_time_ms": 1769093940000,
+      "daily_high": 5.22,
+      "max_possible_pct": 129.5
+    },
+    {
+      "ticker": "SPHL",
+      "type": "full",
+      "entry_price": 7.8,
+      "sell_price": 9.46,
+      "pnl_pct": 21.28,
+      "pnl_krw": 2.619759504318765e+16,
+      "reason": "PROFIT_TARGET +10% (21.3%)",
+      "hold_min": 12.0,
+      "queue_price": 6.3,
+      "queue_to_entry_pct": 23.8,
+      "entry_time_ms": 1769093520000,
+      "sell_time_ms": 1769094240000,
+      "daily_high": 10.5,
+      "max_possible_pct": 34.6
+    },
+    {
+      "ticker": "ASTI",
+      "type": "partial",
+      "entry_price": 5.8,
+      "sell_price": 6.15,
+      "pnl_pct": 6.034482758620707,
+      "pnl_krw": 9021440570547808.0,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 9.0,
+      "entry_time_ms": 1769097360000,
+      "sell_time_ms": 1769097900000
+    },
+    {
+      "ticker": "PANL",
+      "type": "full",
+      "entry_price": 8.8027,
+      "sell_price": 8.83,
+      "pnl_pct": 0.31,
+      "pnl_krw": 927283609373440.0,
+      "reason": "TIME_LIMIT (0.3%)",
+      "hold_min": 45.0,
+      "queue_price": 7.32,
+      "queue_to_entry_pct": 20.3,
+      "entry_time_ms": 1769096400000,
+      "sell_time_ms": 1769099100000,
+      "daily_high": 9.17,
+      "max_possible_pct": 4.2
+    },
+    {
+      "ticker": "ASTI",
+      "type": "full",
+      "entry_price": 5.8,
+      "sell_price": 5.77,
+      "pnl_pct": -0.52,
+      "pnl_krw": -773266334618400.0,
+      "reason": "TIME_LIMIT (-0.5%)",
+      "hold_min": 45.0,
+      "queue_price": 4.8,
+      "queue_to_entry_pct": 20.8,
+      "entry_time_ms": 1769097360000,
+      "sell_time_ms": 1769100060000,
+      "daily_high": 8.73,
+      "max_possible_pct": 50.5
+    },
+    {
+      "ticker": "NAMM",
+      "type": "full",
+      "entry_price": 4.36,
+      "sell_price": 4.025,
+      "pnl_pct": -7.68,
+      "pnl_krw": -2.7638508461215296e+16,
+      "reason": "STOP_LOSS (-7.7%)",
+      "hold_min": 6.0,
+      "queue_price": 3.27,
+      "queue_to_entry_pct": 33.3,
+      "entry_time_ms": 1769102160000,
+      "sell_time_ms": 1769102520000,
+      "daily_high": 5.22,
+      "max_possible_pct": 19.7
+    },
+    {
+      "ticker": "BGL",
+      "type": "partial",
+      "entry_price": 3.26,
+      "sell_price": 3.52,
+      "pnl_pct": 7.975460122699385,
+      "pnl_krw": 1.566861235331008e+16,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 15.0,
+      "entry_time_ms": 1769108940000,
+      "sell_time_ms": 1769109840000
+    },
+    {
+      "ticker": "BGL",
+      "type": "full",
+      "entry_price": 3.26,
+      "sell_price": 3.52,
+      "pnl_pct": 7.98,
+      "pnl_krw": 1.566861235331008e+16,
+      "reason": "TRAILING (8.0%, peak=12.0%)",
+      "hold_min": 27.0,
+      "queue_price": 2.69,
+      "queue_to_entry_pct": 21.2,
+      "entry_time_ms": 1769108940000,
+      "sell_time_ms": 1769110560000,
+      "daily_high": 5.06,
+      "max_possible_pct": 55.2
+    },
+    {
+      "ticker": "REVB",
+      "type": "partial",
+      "entry_price": 4.52,
+      "sell_price": 4.8004,
+      "pnl_pct": 6.203539823008852,
+      "pnl_krw": 1.3503442648716608e+16,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 8.0,
+      "entry_time_ms": 1769121720000,
+      "sell_time_ms": 1769122200000
+    },
+    {
+      "ticker": "REVB",
+      "type": "full",
+      "entry_price": 4.52,
+      "sell_price": 5,
+      "pnl_pct": 10.62,
+      "pnl_krw": 2.3115736345877216e+16,
+      "reason": "PROFIT_TARGET +10% (10.6%)",
+      "hold_min": 9.0,
+      "queue_price": 3.5772,
+      "queue_to_entry_pct": 26.4,
+      "entry_time_ms": 1769121720000,
+      "sell_time_ms": 1769122260000,
+      "daily_high": 5.12,
+      "max_possible_pct": 13.3
+    },
+    {
+      "ticker": "ASTI",
+      "type": "full",
+      "entry_price": 8.7,
+      "sell_price": 8.09,
+      "pnl_pct": -7.01,
+      "pnl_krw": -3.383346928094765e+16,
+      "reason": "STOP_LOSS (-7.0%)",
+      "hold_min": 11.0,
+      "queue_price": 7.169,
+      "queue_to_entry_pct": 21.4,
+      "entry_time_ms": 1769122920000,
+      "sell_time_ms": 1769123580000,
+      "daily_high": 8.73,
+      "max_possible_pct": 0.3
+    },
+    {
+      "ticker": "SVACW",
+      "type": "partial",
+      "entry_price": 2.39,
+      "sell_price": 2.74,
+      "pnl_pct": 14.644351464435147,
+      "pnl_krw": 3.5332640771138496e+16,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 34.0,
+      "entry_time_ms": 1769122560000,
+      "sell_time_ms": 1769124600000
+    },
+    {
+      "ticker": "SVACW",
+      "type": "full",
+      "entry_price": 2.39,
+      "sell_price": 2.74,
+      "pnl_pct": 14.64,
+      "pnl_krw": 3.5332640771138496e+16,
+      "reason": "PROFIT_TARGET +10% (14.6%)",
+      "hold_min": 34.0,
+      "queue_price": 1.85,
+      "queue_to_entry_pct": 29.2,
+      "entry_time_ms": 1769122560000,
+      "sell_time_ms": 1769124600000,
+      "daily_high": 2.84,
+      "max_possible_pct": 18.8
+    }
+  ],
+  "fake_signals": [
+    {
+      "ticker": "ARBE",
+      "time_ms": 1769116620000,
+      "price": 1.85,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "ARBE",
+      "time_ms": 1769117220000,
+      "price": 1.82,
+      "max_later_gain_pct": 1.1
+    },
+    {
+      "ticker": "ARBE",
+      "time_ms": 1769118000000,
+      "price": 1.76,
+      "max_later_gain_pct": 4.0
+    },
+    {
+      "ticker": "ARBE",
+      "time_ms": 1769118120000,
+      "price": 1.75,
+      "max_later_gain_pct": 4.6
+    },
+    {
+      "ticker": "ARBE",
+      "time_ms": 1769119260000,
+      "price": 1.75,
+      "max_later_gain_pct": 4.6
+    },
+    {
+      "ticker": "ARBE",
+      "time_ms": 1769122920000,
+      "price": 1.78,
+      "max_later_gain_pct": 2.2
+    },
+    {
+      "ticker": "ARBE",
+      "time_ms": 1769124360000,
+      "price": 1.77,
+      "max_later_gain_pct": 2.8
+    },
+    {
+      "ticker": "ARBE",
+      "time_ms": 1769125080000,
+      "price": 1.77,
+      "max_later_gain_pct": 2.8
+    },
+    {
+      "ticker": "ARBE",
+      "time_ms": 1769126520000,
+      "price": 1.79,
+      "max_later_gain_pct": 1.7
+    },
+    {
+      "ticker": "BGL",
+      "time_ms": 1769121660000,
+      "price": 4.64,
+      "max_later_gain_pct": 3.0
+    },
+    {
+      "ticker": "NAMM",
+      "time_ms": 1769117280000,
+      "price": 4.3,
+      "max_later_gain_pct": 3.5
+    },
+    {
+      "ticker": "NAMM",
+      "time_ms": 1769119500000,
+      "price": 4.2099,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "NAMM",
+      "time_ms": 1769119860000,
+      "price": 4.0855,
+      "max_later_gain_pct": 2.8
+    },
+    {
+      "ticker": "NAMM",
+      "time_ms": 1769121780000,
+      "price": 4.04,
+      "max_later_gain_pct": 4.0
+    },
+    {
+      "ticker": "NAMM",
+      "time_ms": 1769126220000,
+      "price": 4.04,
+      "max_later_gain_pct": 1.5
+    },
+    {
+      "ticker": "NAMM",
+      "time_ms": 1769127120000,
+      "price": 4.1,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "NAMM",
+      "time_ms": 1769128080000,
+      "price": 4.05,
+      "max_later_gain_pct": 0.7
+    },
+    {
+      "ticker": "PANL",
+      "time_ms": 1769104560000,
+      "price": 8.58,
+      "max_later_gain_pct": 0.8
+    },
+    {
+      "ticker": "PANL",
+      "time_ms": 1769106120000,
+      "price": 8.5,
+      "max_later_gain_pct": 0.9
+    },
+    {
+      "ticker": "PANL",
+      "time_ms": 1769107500000,
+      "price": 8.51,
+      "max_later_gain_pct": 0.5
+    },
+    {
+      "ticker": "PANL",
+      "time_ms": 1769107560000,
+      "price": 8.53,
+      "max_later_gain_pct": 0.2
+    },
+    {
+      "ticker": "PANL",
+      "time_ms": 1769109480000,
+      "price": 8.385,
+      "max_later_gain_pct": 0.8
+    },
+    {
+      "ticker": "PANL",
+      "time_ms": 1769110260000,
+      "price": 8.39,
+      "max_later_gain_pct": 0.7
+    },
+    {
+      "ticker": "PANL",
+      "time_ms": 1769112420000,
+      "price": 8.315,
+      "max_later_gain_pct": 1.6
+    },
+    {
+      "ticker": "PANL",
+      "time_ms": 1769113740000,
+      "price": 8.3338,
+      "max_later_gain_pct": 1.4
+    },
+    {
+      "ticker": "PANL",
+      "time_ms": 1769118300000,
+      "price": 8.4099,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "PANL",
+      "time_ms": 1769120640000,
+      "price": 8.41,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "PANL",
+      "time_ms": 1769122620000,
+      "price": 8.41,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "SATL",
+      "time_ms": 1769109240000,
+      "price": 4.592,
+      "max_later_gain_pct": 2.4
+    },
+    {
+      "ticker": "SATL",
+      "time_ms": 1769109600000,
+      "price": 4.6025,
+      "max_later_gain_pct": 2.1
+    },
+    {
+      "ticker": "SATL",
+      "time_ms": 1769110680000,
+      "price": 4.605,
+      "max_later_gain_pct": 2.1
+    },
+    {
+      "ticker": "SATL",
+      "time_ms": 1769112060000,
+      "price": 4.565,
+      "max_later_gain_pct": 3.0
+    },
+    {
+      "ticker": "SATL",
+      "time_ms": 1769116080000,
+      "price": 4.5,
+      "max_later_gain_pct": 4.4
+    },
+    {
+      "ticker": "SATL",
+      "time_ms": 1769118720000,
+      "price": 4.49,
+      "max_later_gain_pct": 4.7
+    },
+    {
+      "ticker": "SATL",
+      "time_ms": 1769119140000,
+      "price": 4.57,
+      "max_later_gain_pct": 2.8
+    },
+    {
+      "ticker": "SATL",
+      "time_ms": 1769122200000,
+      "price": 4.5299,
+      "max_later_gain_pct": 3.8
+    },
+    {
+      "ticker": "SATL",
+      "time_ms": 1769122680000,
+      "price": 4.53,
+      "max_later_gain_pct": 3.8
+    },
+    {
+      "ticker": "SATL",
+      "time_ms": 1769123220000,
+      "price": 4.55,
+      "max_later_gain_pct": 3.3
+    },
+    {
+      "ticker": "SATL",
+      "time_ms": 1769123280000,
+      "price": 4.5465,
+      "max_later_gain_pct": 3.4
+    },
+    {
+      "ticker": "SATL",
+      "time_ms": 1769123640000,
+      "price": 4.55,
+      "max_later_gain_pct": 3.3
+    },
+    {
+      "ticker": "SATL",
+      "time_ms": 1769124540000,
+      "price": 4.56,
+      "max_later_gain_pct": 3.1
+    },
+    {
+      "ticker": "SATL",
+      "time_ms": 1769125680000,
+      "price": 4.6099,
+      "max_later_gain_pct": 2.0
+    },
+    {
+      "ticker": "SATL",
+      "time_ms": 1769126520000,
+      "price": 4.57,
+      "max_later_gain_pct": 2.8
+    },
+    {
+      "ticker": "SATL",
+      "time_ms": 1769127300000,
+      "price": 4.68,
+      "max_later_gain_pct": 0.4
+    },
+    {
+      "ticker": "SPHL",
+      "time_ms": 1769108760000,
+      "price": 7,
+      "max_later_gain_pct": 4.6
+    },
+    {
+      "ticker": "SPHL",
+      "time_ms": 1769110680000,
+      "price": 7.1325,
+      "max_later_gain_pct": 2.6
+    },
+    {
+      "ticker": "SPHL",
+      "time_ms": 1769112060000,
+      "price": 7.17,
+      "max_later_gain_pct": 2.1
+    },
+    {
+      "ticker": "SPHL",
+      "time_ms": 1769114220000,
+      "price": 6.99,
+      "max_later_gain_pct": 4.4
+    },
+    {
+      "ticker": "SPHL",
+      "time_ms": 1769118060000,
+      "price": 7.13,
+      "max_later_gain_pct": 0.3
+    },
+    {
+      "ticker": "SPHL",
+      "time_ms": 1769121240000,
+      "price": 6.8211,
+      "max_later_gain_pct": 2.6
+    },
+    {
+      "ticker": "SVACW",
+      "time_ms": 1769099040000,
+      "price": 2.7,
+      "max_later_gain_pct": 1.5
+    }
+  ],
+  "missed_entries": [
+    {
+      "ticker": "ARBE",
+      "daily_change_pct": 38.46,
+      "daily_volume": 22008929.0,
+      "had_vol_spike": true,
+      "meets_daily_vol": true,
+      "reason": "price_not_triggered"
+    },
+    {
+      "ticker": "DRCT",
+      "daily_change_pct": 83.89,
+      "daily_volume": 18314794,
+      "had_vol_spike": true,
+      "meets_daily_vol": true,
+      "reason": "price_not_triggered"
+    }
+  ],
+  "fake_rate": 26.7
+}

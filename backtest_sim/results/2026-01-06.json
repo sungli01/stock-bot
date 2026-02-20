@@ -1,0 +1,423 @@
+{
+  "date": "2026-01-06",
+  "starting_portfolio": 601825344723771.0,
+  "ending_portfolio": 1155712304830388.0,
+  "day_pnl_krw": 553886960106618.0,
+  "day_pnl_pct": 92.03,
+  "vol_spikes_detected": 174,
+  "signals_generated": 174,
+  "buys_executed": 7,
+  "trades": [
+    {
+      "ticker": "AZI",
+      "type": "full",
+      "entry_price": 3.43,
+      "sell_price": 3.18,
+      "pnl_pct": -7.29,
+      "pnl_krw": -4386482104401.0,
+      "reason": "STOP_LOSS (-7.3%)",
+      "hold_min": 6.0,
+      "queue_price": 2.78,
+      "queue_to_entry_pct": 23.4,
+      "entry_time_ms": 1767708240000,
+      "sell_time_ms": 1767708600000,
+      "daily_high": 4.53,
+      "max_possible_pct": 32.1
+    },
+    {
+      "ticker": "NXTT",
+      "type": "partial",
+      "entry_price": 9.4306,
+      "sell_price": 10.65,
+      "pnl_pct": 12.930248340508555,
+      "pnl_krw": 4251603989214.2383,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 7.0,
+      "entry_time_ms": 1767712080000,
+      "sell_time_ms": 1767712500000
+    },
+    {
+      "ticker": "NXTT",
+      "type": "full",
+      "entry_price": 9.4306,
+      "sell_price": 10.65,
+      "pnl_pct": 12.93,
+      "pnl_krw": 4251603989214.0,
+      "reason": "PROFIT_TARGET +10% (12.9%)",
+      "hold_min": 7.0,
+      "queue_price": 7.855,
+      "queue_to_entry_pct": 20.1,
+      "entry_time_ms": 1767712080000,
+      "sell_time_ms": 1767712500000,
+      "daily_high": 14.65,
+      "max_possible_pct": 55.3
+    },
+    {
+      "ticker": "MRNO",
+      "type": "partial",
+      "entry_price": 0.86,
+      "sell_price": 0.908999,
+      "pnl_pct": 5.697558139534875,
+      "pnl_krw": 1873418071866.1914,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 32.0,
+      "entry_time_ms": 1767712380000,
+      "sell_time_ms": 1767714300000
+    },
+    {
+      "ticker": "MRNO",
+      "type": "full",
+      "entry_price": 0.86,
+      "sell_price": 0.91,
+      "pnl_pct": 5.81,
+      "pnl_krw": 1911690107825.0,
+      "reason": "TRAILING (5.8%, peak=10.0%)",
+      "hold_min": 38.0,
+      "queue_price": 0.71,
+      "queue_to_entry_pct": 21.1,
+      "entry_time_ms": 1767712380000,
+      "sell_time_ms": 1767714660000,
+      "daily_high": 1.365,
+      "max_possible_pct": 58.7
+    },
+    {
+      "ticker": "MRNO",
+      "type": "full",
+      "entry_price": 1.0429,
+      "sell_price": 0.9655,
+      "pnl_pct": -7.42,
+      "pnl_krw": -5947932786702.0,
+      "reason": "STOP_LOSS (-7.4%)",
+      "hold_min": 5.0,
+      "queue_price": 0.850151,
+      "queue_to_entry_pct": 22.7,
+      "entry_time_ms": 1767714900000,
+      "sell_time_ms": 1767715200000,
+      "daily_high": 1.365,
+      "max_possible_pct": 30.9
+    },
+    {
+      "ticker": "ANGH",
+      "type": "full",
+      "entry_price": 5.218,
+      "sell_price": 4.8,
+      "pnl_pct": -8.01,
+      "pnl_krw": -7014432999693.0,
+      "reason": "STOP_LOSS (-8.0%)",
+      "hold_min": 1.0,
+      "queue_price": 4.01,
+      "queue_to_entry_pct": 30.1,
+      "entry_time_ms": 1767715440000,
+      "sell_time_ms": 1767715500000,
+      "daily_high": 5.27,
+      "max_possible_pct": 1.0
+    },
+    {
+      "ticker": "MRNO",
+      "type": "full",
+      "entry_price": 1.1399,
+      "sell_price": 1.06,
+      "pnl_pct": -7.01,
+      "pnl_krw": -6702221244659.0,
+      "reason": "STOP_LOSS (-7.0%)",
+      "hold_min": 5.0,
+      "queue_price": 0.8802,
+      "queue_to_entry_pct": 29.5,
+      "entry_time_ms": 1767717420000,
+      "sell_time_ms": 1767717720000,
+      "daily_high": 1.365,
+      "max_possible_pct": 19.7
+    },
+    {
+      "ticker": "EMAT",
+      "type": "partial",
+      "entry_price": 10.7,
+      "sell_price": 11.6,
+      "pnl_pct": 8.41121495327104,
+      "pnl_krw": 4395253239358.172,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 3.0,
+      "entry_time_ms": 1767729660000,
+      "sell_time_ms": 1767729840000
+    },
+    {
+      "ticker": "EMAT",
+      "type": "full",
+      "entry_price": 10.7,
+      "sell_price": 11.051,
+      "pnl_pct": 3.28,
+      "pnl_krw": 1714148763350.0,
+      "reason": "TRAILING (3.3%, peak=8.4%)",
+      "hold_min": 8.0,
+      "queue_price": 8.85,
+      "queue_to_entry_pct": 20.9,
+      "entry_time_ms": 1767729660000,
+      "sell_time_ms": 1767730140000,
+      "daily_high": 29.99,
+      "max_possible_pct": 180.3
+    }
+  ],
+  "fake_signals": [
+    {
+      "ticker": "ANGH",
+      "time_ms": 1767715440000,
+      "price": 5.218,
+      "max_later_gain_pct": 1.0
+    },
+    {
+      "ticker": "ANGH",
+      "time_ms": 1767721620000,
+      "price": 4.71,
+      "max_later_gain_pct": 2.3
+    },
+    {
+      "ticker": "ANGH",
+      "time_ms": 1767725400000,
+      "price": 4.7,
+      "max_later_gain_pct": 0.7
+    },
+    {
+      "ticker": "ANGH",
+      "time_ms": 1767727380000,
+      "price": 4.63,
+      "max_later_gain_pct": 2.3
+    },
+    {
+      "ticker": "ANGH",
+      "time_ms": 1767728580000,
+      "price": 4.541,
+      "max_later_gain_pct": 4.3
+    },
+    {
+      "ticker": "ANGH",
+      "time_ms": 1767729420000,
+      "price": 4.674,
+      "max_later_gain_pct": 1.3
+    },
+    {
+      "ticker": "ANGH",
+      "time_ms": 1767730380000,
+      "price": 4.6,
+      "max_later_gain_pct": 2.0
+    },
+    {
+      "ticker": "ANGH",
+      "time_ms": 1767731940000,
+      "price": 4.61,
+      "max_later_gain_pct": 1.7
+    },
+    {
+      "ticker": "ANGH",
+      "time_ms": 1767732600000,
+      "price": 4.63,
+      "max_later_gain_pct": 1.3
+    },
+    {
+      "ticker": "ANGH",
+      "time_ms": 1767733860000,
+      "price": 4.5809,
+      "max_later_gain_pct": 1.1
+    },
+    {
+      "ticker": "AZI",
+      "time_ms": 1767742020000,
+      "price": 3.98,
+      "max_later_gain_pct": 4.5
+    },
+    {
+      "ticker": "AZI",
+      "time_ms": 1767744300000,
+      "price": 4.08,
+      "max_later_gain_pct": 1.5
+    },
+    {
+      "ticker": "AZI",
+      "time_ms": 1767744780000,
+      "price": 4.07,
+      "max_later_gain_pct": 1.7
+    },
+    {
+      "ticker": "AZI",
+      "time_ms": 1767745140000,
+      "price": 3.9,
+      "max_later_gain_pct": 4.6
+    },
+    {
+      "ticker": "AZI",
+      "time_ms": 1767746460000,
+      "price": 3.88,
+      "max_later_gain_pct": 3.1
+    },
+    {
+      "ticker": "MNTS",
+      "time_ms": 1767717780000,
+      "price": 10.04,
+      "max_later_gain_pct": 5.0
+    },
+    {
+      "ticker": "MNTS",
+      "time_ms": 1767728400000,
+      "price": 10.0654,
+      "max_later_gain_pct": 4.7
+    },
+    {
+      "ticker": "MNTS",
+      "time_ms": 1767740100000,
+      "price": 10.02,
+      "max_later_gain_pct": 4.3
+    },
+    {
+      "ticker": "MNTS",
+      "time_ms": 1767740520000,
+      "price": 10.11,
+      "max_later_gain_pct": 3.4
+    },
+    {
+      "ticker": "MNTS",
+      "time_ms": 1767741660000,
+      "price": 10.1936,
+      "max_later_gain_pct": 2.5
+    },
+    {
+      "ticker": "MNTS",
+      "time_ms": 1767742140000,
+      "price": 10.16,
+      "max_later_gain_pct": 2.9
+    },
+    {
+      "ticker": "MRNO",
+      "time_ms": 1767744300000,
+      "price": 1.1,
+      "max_later_gain_pct": 3.6
+    },
+    {
+      "ticker": "MRNO",
+      "time_ms": 1767746760000,
+      "price": 1.14,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "NXTT",
+      "time_ms": 1767719460000,
+      "price": 9.075,
+      "max_later_gain_pct": 4.0
+    },
+    {
+      "ticker": "NXTT",
+      "time_ms": 1767729600000,
+      "price": 9.03,
+      "max_later_gain_pct": 4.5
+    },
+    {
+      "ticker": "NXTT",
+      "time_ms": 1767732000000,
+      "price": 9.19,
+      "max_later_gain_pct": 2.7
+    },
+    {
+      "ticker": "NXTT",
+      "time_ms": 1767742620000,
+      "price": 8.86,
+      "max_later_gain_pct": 0.2
+    },
+    {
+      "ticker": "SIDU",
+      "time_ms": 1767744720000,
+      "price": 5.26,
+      "max_later_gain_pct": 1.7
+    },
+    {
+      "ticker": "SIDU",
+      "time_ms": 1767746820000,
+      "price": 5.2499,
+      "max_later_gain_pct": 0.6
+    },
+    {
+      "ticker": "SOPA",
+      "time_ms": 1767731160000,
+      "price": 3.2387,
+      "max_later_gain_pct": 5.0
+    },
+    {
+      "ticker": "SOPA",
+      "time_ms": 1767745860000,
+      "price": 3.2399,
+      "max_later_gain_pct": 4.9
+    },
+    {
+      "ticker": "SOPA",
+      "time_ms": 1767746880000,
+      "price": 3.3498,
+      "max_later_gain_pct": 1.5
+    },
+    {
+      "ticker": "VTYX",
+      "time_ms": 1767738720000,
+      "price": 16.05,
+      "max_later_gain_pct": 2.5
+    },
+    {
+      "ticker": "VTYX",
+      "time_ms": 1767739680000,
+      "price": 16.2,
+      "max_later_gain_pct": 1.5
+    },
+    {
+      "ticker": "VTYX",
+      "time_ms": 1767745560000,
+      "price": 16.28,
+      "max_later_gain_pct": 0.4
+    },
+    {
+      "ticker": "VTYX",
+      "time_ms": 1767746880000,
+      "price": 16.2672,
+      "max_later_gain_pct": 0.4
+    },
+    {
+      "ticker": "ZNTL",
+      "time_ms": 1767737400000,
+      "price": 1.78,
+      "max_later_gain_pct": 3.4
+    },
+    {
+      "ticker": "ZNTL",
+      "time_ms": 1767738420000,
+      "price": 1.76,
+      "max_later_gain_pct": 4.5
+    },
+    {
+      "ticker": "ZNTL",
+      "time_ms": 1767746880000,
+      "price": 1.83,
+      "max_later_gain_pct": 0.5
+    }
+  ],
+  "missed_entries": [
+    {
+      "ticker": "SOPA",
+      "daily_change_pct": 34.0,
+      "daily_volume": 7716931,
+      "had_vol_spike": true,
+      "meets_daily_vol": true,
+      "reason": "price_not_triggered"
+    },
+    {
+      "ticker": "VTYX",
+      "daily_change_pct": 105.28,
+      "daily_volume": 7525312,
+      "had_vol_spike": true,
+      "meets_daily_vol": true,
+      "reason": "price_not_triggered"
+    },
+    {
+      "ticker": "ZNTL",
+      "daily_change_pct": 36.3,
+      "daily_volume": 9127018,
+      "had_vol_spike": true,
+      "meets_daily_vol": true,
+      "reason": "price_not_triggered"
+    }
+  ],
+  "fake_rate": 22.4
+}

@@ -1,0 +1,408 @@
+{
+  "date": "2026-01-16",
+  "starting_portfolio": 9.881847996026229e+16,
+  "ending_portfolio": 2.7215973139926947e+17,
+  "day_pnl_krw": 1.7334125143900717e+17,
+  "day_pnl_pct": 175.41,
+  "vol_spikes_detected": 141,
+  "signals_generated": 141,
+  "buys_executed": 11,
+  "trades": [
+    {
+      "ticker": "TNMG",
+      "type": "full",
+      "entry_price": 3.14,
+      "sell_price": 2.85,
+      "pnl_pct": -9.24,
+      "pnl_krw": -912654751225352.0,
+      "reason": "STOP_LOSS (-9.2%)",
+      "hold_min": 1.0,
+      "queue_price": 2.6,
+      "queue_to_entry_pct": 20.8,
+      "entry_time_ms": 1768564500000,
+      "sell_time_ms": 1768564560000,
+      "daily_high": 4.68,
+      "max_possible_pct": 49.0
+    },
+    {
+      "ticker": "TNMG",
+      "type": "partial",
+      "entry_price": 3.43,
+      "sell_price": 4.04,
+      "pnl_pct": 17.784256559766764,
+      "pnl_krw": 958461817129571.0,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 1.0,
+      "entry_time_ms": 1768564620000,
+      "sell_time_ms": 1768564680000
+    },
+    {
+      "ticker": "TNMG",
+      "type": "full",
+      "entry_price": 3.43,
+      "sell_price": 4.04,
+      "pnl_pct": 17.78,
+      "pnl_krw": 958461817129571.0,
+      "reason": "PROFIT_TARGET +10% (17.8%)",
+      "hold_min": 1.0,
+      "queue_price": 2.85,
+      "queue_to_entry_pct": 20.4,
+      "entry_time_ms": 1768564620000,
+      "sell_time_ms": 1768564680000,
+      "daily_high": 4.68,
+      "max_possible_pct": 36.4
+    },
+    {
+      "ticker": "PRFX",
+      "type": "full",
+      "entry_price": 5.6,
+      "sell_price": 4.498,
+      "pnl_pct": -19.68,
+      "pnl_krw": -2370940487573770.0,
+      "reason": "STOP_LOSS (-19.7%)",
+      "hold_min": 1.0,
+      "queue_price": 4.454,
+      "queue_to_entry_pct": 25.7,
+      "entry_time_ms": 1768568580000,
+      "sell_time_ms": 1768568640000,
+      "daily_high": 7.95,
+      "max_possible_pct": 42.0
+    },
+    {
+      "ticker": "TNMG",
+      "type": "full",
+      "entry_price": 3.39,
+      "sell_price": 2.7,
+      "pnl_pct": -20.35,
+      "pnl_krw": -2649289807105724.0,
+      "reason": "STOP_LOSS (-20.4%)",
+      "hold_min": 1.0,
+      "queue_price": 2.48,
+      "queue_to_entry_pct": 36.7,
+      "entry_time_ms": 1768568700000,
+      "sell_time_ms": 1768568760000,
+      "daily_high": 4.68,
+      "max_possible_pct": 38.1
+    },
+    {
+      "ticker": "VERO",
+      "type": "full",
+      "entry_price": 7.261,
+      "sell_price": 6.6505,
+      "pnl_pct": -8.41,
+      "pnl_krw": -1181546164578130.0,
+      "reason": "STOP_LOSS (-8.4%)",
+      "hold_min": 15.0,
+      "queue_price": 5.84,
+      "queue_to_entry_pct": 24.3,
+      "entry_time_ms": 1768574280000,
+      "sell_time_ms": 1768575180000,
+      "daily_high": 12.93,
+      "max_possible_pct": 78.1
+    },
+    {
+      "ticker": "CJMB",
+      "type": "full",
+      "entry_price": 3.86,
+      "sell_price": 3.575,
+      "pnl_pct": -7.38,
+      "pnl_krw": -1132607386139802.0,
+      "reason": "STOP_LOSS (-7.4%)",
+      "hold_min": 7.0,
+      "queue_price": 3.0837,
+      "queue_to_entry_pct": 25.2,
+      "entry_time_ms": 1768575300000,
+      "sell_time_ms": 1768575720000,
+      "daily_high": 4.09,
+      "max_possible_pct": 6.0
+    },
+    {
+      "ticker": "JAGX",
+      "type": "partial",
+      "entry_price": 1.4301,
+      "sell_price": 1.602,
+      "pnl_pct": 12.020138451856521,
+      "pnl_krw": 1007323799972974.0,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 10.0,
+      "entry_time_ms": 1768581060000,
+      "sell_time_ms": 1768581660000
+    },
+    {
+      "ticker": "JAGX",
+      "type": "full",
+      "entry_price": 1.4301,
+      "sell_price": 1.602,
+      "pnl_pct": 12.02,
+      "pnl_krw": 1007323799972974.0,
+      "reason": "PROFIT_TARGET +10% (12.0%)",
+      "hold_min": 10.0,
+      "queue_price": 1.115,
+      "queue_to_entry_pct": 28.3,
+      "entry_time_ms": 1768581060000,
+      "sell_time_ms": 1768581660000,
+      "daily_high": 1.87,
+      "max_possible_pct": 30.8
+    },
+    {
+      "ticker": "TRNR",
+      "type": "partial",
+      "entry_price": 1,
+      "sell_price": 1.07,
+      "pnl_pct": 7.000000000000006,
+      "pnl_krw": 652334454547944.0,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 5.0,
+      "entry_time_ms": 1768582740000,
+      "sell_time_ms": 1768583040000
+    },
+    {
+      "ticker": "TRNR",
+      "type": "full",
+      "entry_price": 1,
+      "sell_price": 1.055,
+      "pnl_pct": 5.5,
+      "pnl_krw": 512548500001954.0,
+      "reason": "TRAILING (5.5%, peak=9.0%)",
+      "hold_min": 7.0,
+      "queue_price": 0.825,
+      "queue_to_entry_pct": 21.2,
+      "entry_time_ms": 1768582740000,
+      "sell_time_ms": 1768583160000,
+      "daily_high": 1.6199,
+      "max_possible_pct": 62.0
+    },
+    {
+      "ticker": "SBEV",
+      "type": "full",
+      "entry_price": 1.22,
+      "sell_price": 1.1142,
+      "pnl_pct": -8.67,
+      "pnl_krw": -1788057142350336.0,
+      "reason": "STOP_LOSS (-8.7%)",
+      "hold_min": 6.0,
+      "queue_price": 0.985,
+      "queue_to_entry_pct": 23.9,
+      "entry_time_ms": 1768590060000,
+      "sell_time_ms": 1768590420000,
+      "daily_high": 1.28,
+      "max_possible_pct": 4.9
+    },
+    {
+      "ticker": "PN",
+      "type": "partial",
+      "entry_price": 1.03,
+      "sell_price": 1.105,
+      "pnl_pct": 7.281553398058249,
+      "pnl_krw": 819228109618380.0,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 2.0,
+      "entry_time_ms": 1768590720000,
+      "sell_time_ms": 1768590840000
+    },
+    {
+      "ticker": "PN",
+      "type": "full",
+      "entry_price": 1.03,
+      "sell_price": 1.14,
+      "pnl_pct": 10.68,
+      "pnl_krw": 1201534560773622.0,
+      "reason": "PROFIT_TARGET +10% (10.7%)",
+      "hold_min": 4.0,
+      "queue_price": 0.85,
+      "queue_to_entry_pct": 21.2,
+      "entry_time_ms": 1768590720000,
+      "sell_time_ms": 1768590960000,
+      "daily_high": 2,
+      "max_possible_pct": 94.2
+    },
+    {
+      "ticker": "JAGX",
+      "type": "full",
+      "entry_price": 1.82,
+      "sell_price": 1.65,
+      "pnl_pct": -9.34,
+      "pnl_krw": -2330839009464780.0,
+      "reason": "STOP_LOSS (-9.3%)",
+      "hold_min": 2.0,
+      "queue_price": 1.475,
+      "queue_to_entry_pct": 23.4,
+      "entry_time_ms": 1768597380000,
+      "sell_time_ms": 1768597500000,
+      "daily_high": 1.87,
+      "max_possible_pct": 2.7
+    }
+  ],
+  "fake_signals": [
+    {
+      "ticker": "CJMB",
+      "time_ms": 1768593780000,
+      "price": 3.735,
+      "max_later_gain_pct": 4.4
+    },
+    {
+      "ticker": "CJMB",
+      "time_ms": 1768598100000,
+      "price": 3.78,
+      "max_later_gain_pct": 3.2
+    },
+    {
+      "ticker": "CJMB",
+      "time_ms": 1768599360000,
+      "price": 3.85,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "CJMB",
+      "time_ms": 1768599600000,
+      "price": 3.82,
+      "max_later_gain_pct": 0.5
+    },
+    {
+      "ticker": "CJMB",
+      "time_ms": 1768600140000,
+      "price": 3.8298,
+      "max_later_gain_pct": 0.3
+    },
+    {
+      "ticker": "CJMB",
+      "time_ms": 1768602540000,
+      "price": 3.71,
+      "max_later_gain_pct": 3.5
+    },
+    {
+      "ticker": "CJMB",
+      "time_ms": 1768603860000,
+      "price": 3.72,
+      "max_later_gain_pct": 3.2
+    },
+    {
+      "ticker": "CJMB",
+      "time_ms": 1768604580000,
+      "price": 3.7017,
+      "max_later_gain_pct": 3.2
+    },
+    {
+      "ticker": "CJMB",
+      "time_ms": 1768606980000,
+      "price": 3.7,
+      "max_later_gain_pct": 2.2
+    },
+    {
+      "ticker": "JAGX",
+      "time_ms": 1768603500000,
+      "price": 1.1607,
+      "max_later_gain_pct": 2.5
+    },
+    {
+      "ticker": "JAGX",
+      "time_ms": 1768605300000,
+      "price": 1.15,
+      "max_later_gain_pct": 2.6
+    },
+    {
+      "ticker": "JAGX",
+      "time_ms": 1768608000000,
+      "price": 1.1,
+      "max_later_gain_pct": 2.7
+    },
+    {
+      "ticker": "JAGX",
+      "time_ms": 1768608900000,
+      "price": 1.105,
+      "max_later_gain_pct": 1.4
+    },
+    {
+      "ticker": "JAGX",
+      "time_ms": 1768608960000,
+      "price": 1.105,
+      "max_later_gain_pct": 1.4
+    },
+    {
+      "ticker": "JAGX",
+      "time_ms": 1768611480000,
+      "price": 1.04,
+      "max_later_gain_pct": 4.3
+    },
+    {
+      "ticker": "PRFX",
+      "time_ms": 1768607160000,
+      "price": 5.35,
+      "max_later_gain_pct": 4.7
+    },
+    {
+      "ticker": "PRFX",
+      "time_ms": 1768608960000,
+      "price": 5.35,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "SBEV",
+      "time_ms": 1768607880000,
+      "price": 0.8049,
+      "max_later_gain_pct": 4.4
+    },
+    {
+      "ticker": "SBEV",
+      "time_ms": 1768611120000,
+      "price": 0.82,
+      "max_later_gain_pct": 2.5
+    },
+    {
+      "ticker": "TLSA",
+      "time_ms": 1768595220000,
+      "price": 1.72,
+      "max_later_gain_pct": 1.7
+    },
+    {
+      "ticker": "TLSA",
+      "time_ms": 1768606740000,
+      "price": 1.73,
+      "max_later_gain_pct": 1.2
+    },
+    {
+      "ticker": "TNMG",
+      "time_ms": 1768594560000,
+      "price": 4.43,
+      "max_later_gain_pct": 3.4
+    },
+    {
+      "ticker": "TNMG",
+      "time_ms": 1768597860000,
+      "price": 3.74,
+      "max_later_gain_pct": 4.3
+    },
+    {
+      "ticker": "TNMG",
+      "time_ms": 1768607820000,
+      "price": 3.32,
+      "max_later_gain_pct": 3.0
+    },
+    {
+      "ticker": "TNMG",
+      "time_ms": 1768609020000,
+      "price": 3.31,
+      "max_later_gain_pct": 3.3
+    },
+    {
+      "ticker": "TNMG",
+      "time_ms": 1768610820000,
+      "price": 3.33,
+      "max_later_gain_pct": 1.8
+    },
+    {
+      "ticker": "TRNR",
+      "time_ms": 1768596060000,
+      "price": 0.9351,
+      "max_later_gain_pct": 3.7
+    },
+    {
+      "ticker": "TRNR",
+      "time_ms": 1768610040000,
+      "price": 0.7273,
+      "max_later_gain_pct": 4.5
+    }
+  ],
+  "missed_entries": [],
+  "fake_rate": 19.9
+}

@@ -1,0 +1,203 @@
+{
+  "summary": {
+    "total": 154,
+    "caught": 16,
+    "profitable": 12,
+    "avg_profit_pct": 12.01,
+    "avg_cooling_min": 71.6
+  },
+  "results": [
+    {
+      "ticker": "ASPC",
+      "date": "2025-12-10",
+      "day_gain": 208.2,
+      "peak_price": 39.91,
+      "trigger_price": 38.01,
+      "trigger_vol": 61191,
+      "trigger_vol_ratio": 213.0,
+      "cooling_min": 105,
+      "profit_pct": -61.3,
+      "peak_2nd_pct": 5.7
+    },
+    {
+      "ticker": "ASPC",
+      "date": "2025-12-26",
+      "day_gain": 269.1,
+      "peak_price": 23.98,
+      "trigger_price": 22.23,
+      "trigger_vol": 70681,
+      "trigger_vol_ratio": 615.0,
+      "cooling_min": 90,
+      "profit_pct": 25.4,
+      "peak_2nd_pct": 53.4
+    },
+    {
+      "ticker": "BEAT",
+      "date": "2025-12-10",
+      "day_gain": 122.6,
+      "peak_price": 1.5,
+      "trigger_price": 1.45,
+      "trigger_vol": 4904947.0,
+      "trigger_vol_ratio": 1336.0,
+      "cooling_min": 75,
+      "profit_pct": -7.6,
+      "peak_2nd_pct": 0.7
+    },
+    {
+      "ticker": "BNAI",
+      "date": "2025-12-29",
+      "day_gain": 112.4,
+      "peak_price": 1.91,
+      "trigger_price": 1.73,
+      "trigger_vol": 1136151,
+      "trigger_vol_ratio": 293.0,
+      "cooling_min": 102,
+      "profit_pct": 34.7,
+      "peak_2nd_pct": 37.6
+    },
+    {
+      "ticker": "CGTL",
+      "date": "2026-01-08",
+      "day_gain": 172.9,
+      "peak_price": 1.65,
+      "trigger_price": 1.541,
+      "trigger_vol": 1215364,
+      "trigger_vol_ratio": 3076.0,
+      "cooling_min": 105,
+      "profit_pct": 4.5,
+      "peak_2nd_pct": 14.9
+    },
+    {
+      "ticker": "CGTL",
+      "date": "2026-01-15",
+      "day_gain": 120.3,
+      "peak_price": 3.75,
+      "trigger_price": 3.22,
+      "trigger_vol": 143375,
+      "trigger_vol_ratio": 558.0,
+      "cooling_min": 24,
+      "profit_pct": 10.9,
+      "peak_2nd_pct": 32.0
+    },
+    {
+      "ticker": "GITS",
+      "date": "2026-01-30",
+      "day_gain": 100.9,
+      "peak_price": 4.37,
+      "trigger_price": 4.08,
+      "trigger_vol": 88964,
+      "trigger_vol_ratio": 208.0,
+      "cooling_min": 99,
+      "profit_pct": 9.3,
+      "peak_2nd_pct": 12.5
+    },
+    {
+      "ticker": "HIHO",
+      "date": "2025-12-23",
+      "day_gain": 161.5,
+      "peak_price": 1.68,
+      "trigger_price": 1.48,
+      "trigger_vol": 1906133,
+      "trigger_vol_ratio": 223.0,
+      "cooling_min": 75,
+      "profit_pct": 28.4,
+      "peak_2nd_pct": 49.3
+    },
+    {
+      "ticker": "MENS",
+      "date": "2025-12-22",
+      "day_gain": 146.7,
+      "peak_price": 5.18,
+      "trigger_price": 4.42,
+      "trigger_vol": 181228,
+      "trigger_vol_ratio": 250.0,
+      "cooling_min": 18,
+      "profit_pct": 27.5,
+      "peak_2nd_pct": 45.5
+    },
+    {
+      "ticker": "MIGI",
+      "date": "2025-12-11",
+      "day_gain": 139.4,
+      "peak_price": 9.63,
+      "trigger_price": 8.59,
+      "trigger_vol": 210871,
+      "trigger_vol_ratio": 237.0,
+      "cooling_min": 57,
+      "profit_pct": 6.1,
+      "peak_2nd_pct": 20.6
+    },
+    {
+      "ticker": "PETS",
+      "date": "2025-12-11",
+      "day_gain": 126.3,
+      "peak_price": 3.3,
+      "trigger_price": 2.82,
+      "trigger_vol": 3850616.0,
+      "trigger_vol_ratio": 426.0,
+      "cooling_min": 102,
+      "profit_pct": 14.1,
+      "peak_2nd_pct": 22.7
+    },
+    {
+      "ticker": "QVCGP",
+      "date": "2026-02-11",
+      "day_gain": 134.6,
+      "peak_price": 3.49,
+      "trigger_price": 4.07,
+      "trigger_vol": 209575,
+      "trigger_vol_ratio": 435.0,
+      "cooling_min": 30,
+      "profit_pct": -11.5,
+      "peak_2nd_pct": 10.3
+    },
+    {
+      "ticker": "SLGB",
+      "date": "2026-01-26",
+      "day_gain": 107.8,
+      "peak_price": 1.68,
+      "trigger_price": 2.16,
+      "trigger_vol": 353876,
+      "trigger_vol_ratio": 1468.0,
+      "cooling_min": 42,
+      "profit_pct": 8.8,
+      "peak_2nd_pct": 46.3
+    },
+    {
+      "ticker": "WBUY",
+      "date": "2025-12-08",
+      "day_gain": 171.8,
+      "peak_price": 2.44,
+      "trigger_price": 2.5,
+      "trigger_vol": 58676,
+      "trigger_vol_ratio": 1615.0,
+      "cooling_min": 45,
+      "profit_pct": 64.0,
+      "peak_2nd_pct": 6.6
+    },
+    {
+      "ticker": "XAIR",
+      "date": "2026-01-13",
+      "day_gain": 198.8,
+      "peak_price": 1.53,
+      "trigger_price": 1.37,
+      "trigger_vol": 2264568,
+      "trigger_vol_ratio": 534.0,
+      "cooling_min": 84,
+      "profit_pct": -1.5,
+      "peak_2nd_pct": 9.5
+    },
+    {
+      "ticker": "XHLD",
+      "date": "2026-01-27",
+      "day_gain": 191.8,
+      "peak_price": 1.68,
+      "trigger_price": 1.46,
+      "trigger_vol": 67087,
+      "trigger_vol_ratio": 1394.0,
+      "cooling_min": 93,
+      "profit_pct": 40.4,
+      "peak_2nd_pct": 53.4
+    }
+  ]
+}

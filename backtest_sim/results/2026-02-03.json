@@ -1,0 +1,381 @@
+{
+  "date": "2026-02-03",
+  "starting_portfolio": 3.1321188386838555e+21,
+  "ending_portfolio": 7.429509363424612e+21,
+  "day_pnl_krw": 4.297390524740756e+21,
+  "day_pnl_pct": 137.2,
+  "vol_spikes_detected": 86,
+  "signals_generated": 86,
+  "buys_executed": 9,
+  "trades": [
+    {
+      "ticker": "NPT",
+      "type": "full",
+      "entry_price": 8.19,
+      "sell_price": 7.05,
+      "pnl_pct": -13.92,
+      "pnl_krw": -4.35972585604346e+19,
+      "reason": "STOP_LOSS (-13.9%)",
+      "hold_min": 1.0,
+      "queue_price": 6.5,
+      "queue_to_entry_pct": 26.0,
+      "entry_time_ms": 1770123060000,
+      "sell_time_ms": 1770123120000,
+      "daily_high": 30.15,
+      "max_possible_pct": 268.1
+    },
+    {
+      "ticker": "JBDI",
+      "type": "partial",
+      "entry_price": 0.9534,
+      "sell_price": 1.035,
+      "pnl_pct": 8.558842039018245,
+      "pnl_krw": 1.45574496885741e+19,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 1.0,
+      "entry_time_ms": 1770130620000,
+      "sell_time_ms": 1770130680000
+    },
+    {
+      "ticker": "JBDI",
+      "type": "full",
+      "entry_price": 0.9534,
+      "sell_price": 1.0034,
+      "pnl_pct": 5.24,
+      "pnl_krw": 8.920005936626303e+18,
+      "reason": "TRAILING (5.2%, peak=29.0%)",
+      "hold_min": 7.0,
+      "queue_price": 0.7799,
+      "queue_to_entry_pct": 22.2,
+      "entry_time_ms": 1770130620000,
+      "sell_time_ms": 1770131040000,
+      "daily_high": 1.3499,
+      "max_possible_pct": 41.6
+    },
+    {
+      "ticker": "JBDI",
+      "type": "full",
+      "entry_price": 1.25,
+      "sell_price": 1.13,
+      "pnl_pct": -9.6,
+      "pnl_krw": -3.6147688953755468e+19,
+      "reason": "STOP_LOSS (-9.6%)",
+      "hold_min": 6.0,
+      "queue_price": 1.035,
+      "queue_to_entry_pct": 20.8,
+      "entry_time_ms": 1770131280000,
+      "sell_time_ms": 1770131640000,
+      "daily_high": 1.3499,
+      "max_possible_pct": 8.0
+    },
+    {
+      "ticker": "PHOE",
+      "type": "partial",
+      "entry_price": 21.34,
+      "sell_price": 25.89,
+      "pnl_pct": 21.321462043111538,
+      "pnl_krw": 4.377056294908962e+19,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 1.0,
+      "entry_time_ms": 1770137100000,
+      "sell_time_ms": 1770137160000
+    },
+    {
+      "ticker": "PHOE",
+      "type": "full",
+      "entry_price": 21.34,
+      "sell_price": 25.89,
+      "pnl_pct": 21.32,
+      "pnl_krw": 4.377056294908962e+19,
+      "reason": "PROFIT_TARGET +10% (21.3%)",
+      "hold_min": 1.0,
+      "queue_price": 15.539,
+      "queue_to_entry_pct": 37.3,
+      "entry_time_ms": 1770137100000,
+      "sell_time_ms": 1770137160000,
+      "daily_high": 44,
+      "max_possible_pct": 106.2
+    },
+    {
+      "ticker": "PHOE",
+      "type": "partial",
+      "entry_price": 31.35,
+      "sell_price": 42.9,
+      "pnl_pct": 36.842105263157876,
+      "pnl_krw": 8.480856686710643e+19,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 24.0,
+      "entry_time_ms": 1770137820000,
+      "sell_time_ms": 1770139260000
+    },
+    {
+      "ticker": "PHOE",
+      "type": "full",
+      "entry_price": 31.35,
+      "sell_price": 42.9,
+      "pnl_pct": 36.84,
+      "pnl_krw": 8.480856686710643e+19,
+      "reason": "PROFIT_TARGET +10% (36.8%)",
+      "hold_min": 24.0,
+      "queue_price": 25.89,
+      "queue_to_entry_pct": 21.1,
+      "entry_time_ms": 1770137820000,
+      "sell_time_ms": 1770139260000,
+      "daily_high": 44,
+      "max_possible_pct": 40.4
+    },
+    {
+      "ticker": "NPT",
+      "type": "partial",
+      "entry_price": 10.55,
+      "sell_price": 11.12,
+      "pnl_pct": 5.402843601895713,
+      "pnl_krw": 1.4138971906131493e+19,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 8.0,
+      "entry_time_ms": 1770141600000,
+      "sell_time_ms": 1770142080000
+    },
+    {
+      "ticker": "NPT",
+      "type": "full",
+      "entry_price": 10.55,
+      "sell_price": 9.75,
+      "pnl_pct": -7.58,
+      "pnl_krw": -1.9844171096324997e+19,
+      "reason": "STOP_LOSS (-7.6%)",
+      "hold_min": 18.0,
+      "queue_price": 8.7,
+      "queue_to_entry_pct": 21.3,
+      "entry_time_ms": 1770141600000,
+      "sell_time_ms": 1770142680000,
+      "daily_high": 30.15,
+      "max_possible_pct": 185.8
+    },
+    {
+      "ticker": "JBDI",
+      "type": "full",
+      "entry_price": 1.07,
+      "sell_price": 0.9914,
+      "pnl_pct": -7.35,
+      "pnl_krw": -4.224996040133686e+19,
+      "reason": "STOP_LOSS (-7.3%)",
+      "hold_min": 1.0,
+      "queue_price": 0.8594,
+      "queue_to_entry_pct": 24.5,
+      "entry_time_ms": 1770150900000,
+      "sell_time_ms": 1770150960000,
+      "daily_high": 1.3499,
+      "max_possible_pct": 26.2
+    },
+    {
+      "ticker": "WTO",
+      "type": "full",
+      "entry_price": 4,
+      "sell_price": 3.55,
+      "pnl_pct": -11.25,
+      "pnl_krw": -7.070055157960724e+19,
+      "reason": "STOP_LOSS (-11.3%)",
+      "hold_min": 5.0,
+      "queue_price": 2.907,
+      "queue_to_entry_pct": 37.6,
+      "entry_time_ms": 1770152520000,
+      "sell_time_ms": 1770152820000,
+      "daily_high": 5.95,
+      "max_possible_pct": 48.8
+    },
+    {
+      "ticker": "POAS",
+      "type": "full",
+      "entry_price": 4.75,
+      "sell_price": 4.85,
+      "pnl_pct": 2.11,
+      "pnl_krw": 1.2108599873960083e+19,
+      "reason": "TIME_LIMIT (2.1%)",
+      "hold_min": 45.0,
+      "queue_price": 3.945,
+      "queue_to_entry_pct": 20.4,
+      "entry_time_ms": 1770150300000,
+      "sell_time_ms": 1770153000000,
+      "daily_high": 5.38,
+      "max_possible_pct": 13.3
+    }
+  ],
+  "fake_signals": [
+    {
+      "ticker": "GXAI",
+      "time_ms": 1770162960000,
+      "price": 2.0285,
+      "max_later_gain_pct": 3.5
+    },
+    {
+      "ticker": "GXAI",
+      "time_ms": 1770163560000,
+      "price": 2.07,
+      "max_later_gain_pct": 0.5
+    },
+    {
+      "ticker": "GXAI",
+      "time_ms": 1770163800000,
+      "price": 2.08,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "GXAI",
+      "time_ms": 1770164940000,
+      "price": 2.0599,
+      "max_later_gain_pct": 0.5
+    },
+    {
+      "ticker": "GXAI",
+      "time_ms": 1770166560000,
+      "price": 2.01,
+      "max_later_gain_pct": 3.0
+    },
+    {
+      "ticker": "HCHL",
+      "time_ms": 1770130560000,
+      "price": 2.04,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "HCHL",
+      "time_ms": 1770134640000,
+      "price": 0.9998,
+      "max_later_gain_pct": 4.0
+    },
+    {
+      "ticker": "HCHL",
+      "time_ms": 1770152100000,
+      "price": 1.01,
+      "max_later_gain_pct": 3.0
+    },
+    {
+      "ticker": "HCHL",
+      "time_ms": 1770152220000,
+      "price": 1.01,
+      "max_later_gain_pct": 3.0
+    },
+    {
+      "ticker": "HCHL",
+      "time_ms": 1770164040000,
+      "price": 1,
+      "max_later_gain_pct": 4.0
+    },
+    {
+      "ticker": "HCHL",
+      "time_ms": 1770165300000,
+      "price": 1,
+      "max_later_gain_pct": 4.0
+    },
+    {
+      "ticker": "JBDI",
+      "time_ms": 1770152820000,
+      "price": 0.98,
+      "max_later_gain_pct": 2.0
+    },
+    {
+      "ticker": "JBDI",
+      "time_ms": 1770153660000,
+      "price": 0.9603,
+      "max_later_gain_pct": 4.1
+    },
+    {
+      "ticker": "JBDI",
+      "time_ms": 1770157920000,
+      "price": 1,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "JBDI",
+      "time_ms": 1770159240000,
+      "price": 0.9602,
+      "max_later_gain_pct": 4.1
+    },
+    {
+      "ticker": "NPT",
+      "time_ms": 1770155820000,
+      "price": 5.98,
+      "max_later_gain_pct": 3.3
+    },
+    {
+      "ticker": "NPT",
+      "time_ms": 1770164940000,
+      "price": 5.91,
+      "max_later_gain_pct": 4.1
+    },
+    {
+      "ticker": "POAS",
+      "time_ms": 1770155040000,
+      "price": 5.15,
+      "max_later_gain_pct": 4.5
+    },
+    {
+      "ticker": "POAS",
+      "time_ms": 1770155520000,
+      "price": 5.16,
+      "max_later_gain_pct": 3.3
+    },
+    {
+      "ticker": "POAS",
+      "time_ms": 1770157080000,
+      "price": 4.95,
+      "max_later_gain_pct": 1.0
+    },
+    {
+      "ticker": "POAS",
+      "time_ms": 1770165000000,
+      "price": 4.83,
+      "max_later_gain_pct": 3.3
+    },
+    {
+      "ticker": "USGOW",
+      "time_ms": 1770144960000,
+      "price": 1.66,
+      "max_later_gain_pct": 2.4
+    },
+    {
+      "ticker": "VIVS",
+      "time_ms": 1770147960000,
+      "price": 2.77,
+      "max_later_gain_pct": 3.6
+    },
+    {
+      "ticker": "VIVS",
+      "time_ms": 1770152460000,
+      "price": 2.7448,
+      "max_later_gain_pct": 4.6
+    },
+    {
+      "ticker": "VIVS",
+      "time_ms": 1770157680000,
+      "price": 2.68,
+      "max_later_gain_pct": 3.8
+    },
+    {
+      "ticker": "VIVS",
+      "time_ms": 1770161400000,
+      "price": 2.6799,
+      "max_later_gain_pct": 3.4
+    }
+  ],
+  "missed_entries": [
+    {
+      "ticker": "GXAI",
+      "daily_change_pct": 41.61,
+      "daily_volume": 188384371.0,
+      "had_vol_spike": true,
+      "meets_daily_vol": true,
+      "reason": "price_not_triggered"
+    },
+    {
+      "ticker": "USGOW",
+      "daily_change_pct": 36.0,
+      "daily_volume": 184086,
+      "had_vol_spike": true,
+      "meets_daily_vol": false,
+      "reason": "low_daily_vol"
+    }
+  ],
+  "fake_rate": 30.2
+}

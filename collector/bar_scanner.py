@@ -1,8 +1,10 @@
 """
-3분봉 거래량 폭증 감지 스레드 (v8.3)
+3분봉 거래량 폭증 감지 스레드 (v9)
 - 30초마다 스냅샷 후보 종목의 실제 완성된 3분봉 조회
-- 완성봉[N-1].v ÷ 완성봉[N-2].v >= 1000% → 모니터링 큐 등록
-- 스냅샷 내 파생 데이터(min.av 등) 미사용 — aggs API 직접 조회
+- 1차: 완성봉[N-1].v ÷ 완성봉[N-2].v >= 1000% → 모니터링 큐 등록
+- 2차: 1차 완료 종목에 대해 200%+ → 2차 큐 등록 (is_second=True)
+- Bug #1 수정: 큐 만료 cleanup을 early return 앞으로 이동
+- Bug #5 수정: .WS 워런트 종목 필터 추가
 """
 import os
 import time
@@ -19,26 +21,35 @@ AGGS_URL = "https://api.polygon.io/v2/aggs/ticker/{ticker}/range/3/minute/{from_
 
 class BarScanner(threading.Thread):
     """
-    3분봉 기반 거래량 폭증 스캐너
+    3분봉 기반 거래량 폭증 스캐너 (v9)
     - snapshot_scanner로부터 후보 종목 수신
     - 완성 3분봉 2개 비교 → 모니터링 큐 등록
+    - 1차 완료 종목은 200% threshold로 2차 큐 등록 허용
     """
 
     def __init__(self, config: dict, monitoring_queue: dict, queue_lock: threading.Lock):
         super().__init__(daemon=True)
         self.config = config
         self.scanner_cfg = config.get("scanner", {})
-        self.vol_ratio_threshold = self.scanner_cfg.get("vol_3min_ratio_pct", 1000.0)
+
+        # [v9] 1차/2차 threshold 분리
+        self.vol_ratio_threshold_1st = self.scanner_cfg.get("vol_3min_ratio_pct", 1000.0)
+        self.vol_ratio_threshold_2nd = self.scanner_cfg.get("vol_3min_ratio_pct_2nd", 200.0)
+
         self.scan_interval = self.scanner_cfg.get("bar_scan_interval_sec", 30)
-        self.queue_expire_sec = 1800  # 큐 유효기간 30분 (3분봉 10개)
+        self.queue_expire_sec = 1800  # 큐 유효기간 30분
 
         # 공유 객체
-        self.monitoring_queue = monitoring_queue  # {ticker: {"time", "price"}}
+        self.monitoring_queue = monitoring_queue  # {ticker: {"time", "price", "is_second"}}
         self.queue_lock = queue_lock
 
         # 스냅샷에서 전달받은 후보 종목 {ticker: price}
         self._candidates: dict[str, float] = {}
         self._candidates_lock = threading.Lock()
+
+        # [v9] 1차 완료 종목 (외부에서 set_traded_once 호출로 등록)
+        self._traded_once: set[str] = set()
+        self._traded_once_lock = threading.Lock()
 
         # ETF/레버리지 제외 목록
         self._etf_blacklist = {
@@ -51,12 +62,21 @@ class BarScanner(threading.Thread):
         self._running = True
 
     def set_candidates(self, candidates: dict[str, float]):
-        """스냅샷 스레드가 5%+ 후보 종목 전달 {ticker: current_price}"""
+        """스냅샷 스레드가 후보 종목 전달 {ticker: current_price}"""
         with self._candidates_lock:
             self._candidates = candidates.copy()
 
+    def set_traded_once(self, ticker: str):
+        """[v9] 1차 매수 완료 종목 등록 → 이후 2차 vol spike 감지 허용"""
+        with self._traded_once_lock:
+            self._traded_once.add(ticker)
+        logger.info(f"🔁 [BarScanner] 1차 완료 등록: {ticker} → 2차 진입 대기")
+
     def _is_etf(self, ticker: str) -> bool:
         if ticker in self._etf_blacklist:
+            return True
+        # [Bug #5] 워런트 필터 추가
+        if ticker.endswith(".WS") or ticker.endswith("-WS"):
             return True
         if len(ticker) >= 4 and ticker[-1] in ("S", "L") and ticker[-2].isdigit():
             return True
@@ -70,7 +90,6 @@ class BarScanner(threading.Thread):
         """
         try:
             now_utc = datetime.now(timezone.utc)
-            # 오늘 날짜 (ET 기준 장 시작일)
             today = now_utc.strftime("%Y-%m-%d")
             yesterday = (now_utc - timedelta(days=1)).strftime("%Y-%m-%d")
 
@@ -86,12 +105,8 @@ class BarScanner(threading.Thread):
             bars = data.get("results", [])
 
             if len(bars) >= 3:
-                # bars[0]: 현재 진행 중 (미완성) → 제외
-                # bars[1]: 최신 완성봉 (N-1)
-                # bars[2]: 직전 완성봉 (N-2)
                 return float(bars[1]["v"]), float(bars[2]["v"])
             elif len(bars) == 2:
-                # 봉이 2개뿐이면 둘 다 완성봉으로 처리
                 return float(bars[0]["v"]), float(bars[1]["v"])
             return 0.0, 0.0
 
@@ -101,25 +116,42 @@ class BarScanner(threading.Thread):
 
     def _scan(self):
         """1회 스캔 실행"""
+        now = time.time()
+
+        # ★ [Bug #1 수정] 만료 cleanup 먼저 실행 — candidates 없어도 반드시 실행
+        with self.queue_lock:
+            expired = [t for t, info in self.monitoring_queue.items()
+                       if now - info["time"] > self.queue_expire_sec]
+            for t in expired:
+                del self.monitoring_queue[t]
+                logger.info(f"⏰ 큐 만료 제거: {t}")
+
         with self._candidates_lock:
             candidates = dict(self._candidates)
+
+        with self._traded_once_lock:
+            traded_once = set(self._traded_once)
 
         if not candidates:
             return
 
-        now = time.time()
         scanned = 0
 
+        # [v9] 1차 후보: candidates 중 traded_once가 아닌 것 (1000% threshold)
+        # [v9] 2차 후보: candidates 중 traded_once인 것 (200% threshold)
         for ticker, price in candidates.items():
             if self._is_etf(ticker):
                 continue
 
-            # 이미 큐에 있으면 스킵
+            is_second = ticker in traded_once
+
+            # 이미 큐에 있으면 스킵 (1차 큐에 있는 동안은 2차 등록 안 함)
             with self.queue_lock:
                 if ticker in self.monitoring_queue:
                     continue
 
-            # 완성된 3분봉 2개 조회
+            threshold = self.vol_ratio_threshold_2nd if is_second else self.vol_ratio_threshold_1st
+
             cur_v, prev_v = self._get_completed_3min_bars(ticker)
             scanned += 1
 
@@ -128,40 +160,34 @@ class BarScanner(threading.Thread):
 
             vol_ratio = (cur_v / prev_v) * 100
 
-            if vol_ratio >= self.vol_ratio_threshold:
+            if vol_ratio >= threshold:
                 with self.queue_lock:
                     self.monitoring_queue[ticker] = {
                         "time": now,
-                        "price": price,          # 큐 등록 시점 가격
-                        "vol_ratio": vol_ratio,  # 거래량 폭증 비율
+                        "price": price,
+                        "vol_ratio": vol_ratio,
                         "cur_v": cur_v,
                         "prev_v": prev_v,
+                        "is_second": is_second,  # [v9] 2차 플래그
                     }
+                entry_type = "2차" if is_second else "1차"
                 logger.info(
-                    f"📋 [BarScanner] 큐 등록: {ticker} "
-                    f"3분봉 {vol_ratio:.0f}% "
+                    f"📋 [BarScanner] {entry_type} 큐 등록: {ticker} "
+                    f"3분봉 {vol_ratio:.0f}% (기준 {threshold:.0f}%) "
                     f"(완성봉:{cur_v:.0f} / 직전봉:{prev_v:.0f}) "
                     f"@${price:.2f}"
                 )
             else:
                 logger.debug(
                     f"  ❌ {ticker} 3분봉 거래량 미달: {vol_ratio:.0f}% "
-                    f"(기준 {self.vol_ratio_threshold:.0f}%)"
+                    f"(기준 {threshold:.0f}%)"
                 )
-
-        # 만료된 큐 항목 정리
-        with self.queue_lock:
-            expired = [t for t, info in self.monitoring_queue.items()
-                       if now - info["time"] > self.queue_expire_sec]
-            for t in expired:
-                del self.monitoring_queue[t]
-                logger.debug(f"⏰ 큐 만료 제거: {t}")
 
         if scanned > 0:
             logger.debug(f"[BarScanner] {scanned}개 종목 3분봉 체크 완료")
 
     def run(self):
-        logger.info(f"🕯️ BarScanner 시작 — 30초마다 3분봉 완성봉 비교")
+        logger.info(f"🕯️ BarScanner v9 시작 — 30초마다 3분봉 완성봉 비교 (1차:{self.vol_ratio_threshold_1st:.0f}% / 2차:{self.vol_ratio_threshold_2nd:.0f}%)")
         while self._running:
             try:
                 self._scan()
@@ -178,4 +204,6 @@ class BarScanner(threading.Thread):
             self._candidates.clear()
         with self.queue_lock:
             self.monitoring_queue.clear()
+        with self._traded_once_lock:
+            self._traded_once.clear()
         logger.info("🔄 BarScanner 세션 리셋")

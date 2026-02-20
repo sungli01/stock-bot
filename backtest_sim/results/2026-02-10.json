@@ -1,0 +1,659 @@
+{
+  "date": "2026-02-10",
+  "starting_portfolio": 1.4489077685960376e+23,
+  "ending_portfolio": 3.1214315759507165e+23,
+  "day_pnl_krw": 1.672523807354679e+23,
+  "day_pnl_pct": 115.43,
+  "vol_spikes_detected": 241,
+  "signals_generated": 241,
+  "buys_executed": 8,
+  "trades": [
+    {
+      "ticker": "JZXN",
+      "type": "partial",
+      "entry_price": 2.001,
+      "sell_price": 2.36,
+      "pnl_pct": 17.941029485257374,
+      "pnl_krw": 1.2997448498899992e+21,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 1.0,
+      "entry_time_ms": 1770735240000,
+      "sell_time_ms": 1770735300000
+    },
+    {
+      "ticker": "JZXN",
+      "type": "full",
+      "entry_price": 2.001,
+      "sell_price": 2.36,
+      "pnl_pct": 17.94,
+      "pnl_krw": 1.2997448498899992e+21,
+      "reason": "PROFIT_TARGET +10% (17.9%)",
+      "hold_min": 1.0,
+      "queue_price": 1.62,
+      "queue_to_entry_pct": 23.5,
+      "entry_time_ms": 1770735240000,
+      "sell_time_ms": 1770735300000,
+      "daily_high": 2.81,
+      "max_possible_pct": 40.4
+    },
+    {
+      "ticker": "SUNE",
+      "type": "full",
+      "entry_price": 1.3902,
+      "sell_price": 1.2705,
+      "pnl_pct": -8.61,
+      "pnl_krw": -1.3946861966744156e+21,
+      "reason": "STOP_LOSS (-8.6%)",
+      "hold_min": 8.0,
+      "queue_price": 1.1171,
+      "queue_to_entry_pct": 24.4,
+      "entry_time_ms": 1770736920000,
+      "sell_time_ms": 1770737400000,
+      "daily_high": 1.96,
+      "max_possible_pct": 41.0
+    },
+    {
+      "ticker": "ASTI",
+      "type": "full",
+      "entry_price": 8.0498,
+      "sell_price": 8.05,
+      "pnl_pct": 0.0,
+      "pnl_krw": 4.024431519937331e+17,
+      "reason": "TIME_LIMIT (0.0%)",
+      "hold_min": 45.0,
+      "queue_price": 6.6,
+      "queue_to_entry_pct": 22.0,
+      "entry_time_ms": 1770737340000,
+      "sell_time_ms": 1770740040000,
+      "daily_high": 8.5,
+      "max_possible_pct": 5.6
+    },
+    {
+      "ticker": "HURA",
+      "type": "partial",
+      "entry_price": 1.14,
+      "sell_price": 1.22,
+      "pnl_pct": 7.017543859649122,
+      "pnl_krw": 6.771260678627729e+20,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 9.0,
+      "entry_time_ms": 1770745920000,
+      "sell_time_ms": 1770746460000
+    },
+    {
+      "ticker": "HURA",
+      "type": "full",
+      "entry_price": 1.14,
+      "sell_price": 1.1369,
+      "pnl_pct": -0.27,
+      "pnl_krw": -2.6238635129681478e+19,
+      "reason": "TIME_LIMIT (-0.3%)",
+      "hold_min": 45.0,
+      "queue_price": 0.94275,
+      "queue_to_entry_pct": 20.9,
+      "entry_time_ms": 1770745920000,
+      "sell_time_ms": 1770748620000,
+      "daily_high": 1.63,
+      "max_possible_pct": 43.0
+    },
+    {
+      "ticker": "SEGG",
+      "type": "partial",
+      "entry_price": 1.24,
+      "sell_price": 1.31,
+      "pnl_pct": 5.645161290322576,
+      "pnl_krw": 6.010118419169306e+20,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 18.0,
+      "entry_time_ms": 1770752220000,
+      "sell_time_ms": 1770753300000
+    },
+    {
+      "ticker": "SEGG",
+      "type": "full",
+      "entry_price": 1.24,
+      "sell_price": 1.4,
+      "pnl_pct": 12.9,
+      "pnl_krw": 1.373741352952984e+21,
+      "reason": "PROFIT_TARGET +10% (12.9%)",
+      "hold_min": 20.0,
+      "queue_price": 1.019,
+      "queue_to_entry_pct": 21.7,
+      "entry_time_ms": 1770752220000,
+      "sell_time_ms": 1770753420000,
+      "daily_high": 1.419,
+      "max_possible_pct": 14.4
+    },
+    {
+      "ticker": "BRLS",
+      "type": "partial",
+      "entry_price": 1.8001,
+      "sell_price": 1.8986,
+      "pnl_pct": 5.471918226765182,
+      "pnl_krw": 6.462271236743889e+20,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 3.0,
+      "entry_time_ms": 1770756960000,
+      "sell_time_ms": 1770757140000
+    },
+    {
+      "ticker": "BRLS",
+      "type": "full",
+      "entry_price": 1.8001,
+      "sell_price": 1.81,
+      "pnl_pct": 0.55,
+      "pnl_krw": 6.495074644036839e+19,
+      "reason": "TIME_LIMIT (0.5%)",
+      "hold_min": 45.0,
+      "queue_price": 1.495,
+      "queue_to_entry_pct": 20.4,
+      "entry_time_ms": 1770756960000,
+      "sell_time_ms": 1770759660000,
+      "daily_high": 2.09,
+      "max_possible_pct": 16.1
+    },
+    {
+      "ticker": "SUNE",
+      "type": "partial",
+      "entry_price": 1.77,
+      "sell_price": 1.86,
+      "pnl_pct": 5.084745762711873,
+      "pnl_krw": 6.623608401630624e+20,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 1.0,
+      "entry_time_ms": 1770759780000,
+      "sell_time_ms": 1770759840000
+    },
+    {
+      "ticker": "HURA",
+      "type": "full",
+      "entry_price": 1.6,
+      "sell_price": 1.47,
+      "pnl_pct": -8.13,
+      "pnl_krw": -2.228016276098496e+21,
+      "reason": "STOP_LOSS (-8.1%)",
+      "hold_min": 4.0,
+      "queue_price": 1.3094,
+      "queue_to_entry_pct": 22.2,
+      "entry_time_ms": 1770761880000,
+      "sell_time_ms": 1770762120000,
+      "daily_high": 1.63,
+      "max_possible_pct": 1.9
+    },
+    {
+      "ticker": "SUNE",
+      "type": "full",
+      "entry_price": 1.77,
+      "sell_price": 1.73,
+      "pnl_pct": -2.26,
+      "pnl_krw": -2.9438259562802682e+20,
+      "reason": "TIME_LIMIT (-2.3%)",
+      "hold_min": 45.0,
+      "queue_price": 1.4499,
+      "queue_to_entry_pct": 22.1,
+      "entry_time_ms": 1770759780000,
+      "sell_time_ms": 1770762480000,
+      "daily_high": 1.96,
+      "max_possible_pct": 10.7
+    }
+  ],
+  "fake_signals": [
+    {
+      "ticker": "ASTI",
+      "time_ms": 1770741540000,
+      "price": 8.1005,
+      "max_later_gain_pct": 4.9
+    },
+    {
+      "ticker": "ASTI",
+      "time_ms": 1770746100000,
+      "price": 8.4,
+      "max_later_gain_pct": 0.5
+    },
+    {
+      "ticker": "ASTI",
+      "time_ms": 1770747180000,
+      "price": 7.8401,
+      "max_later_gain_pct": 2.9
+    },
+    {
+      "ticker": "ASTI",
+      "time_ms": 1770748140000,
+      "price": 7.65,
+      "max_later_gain_pct": 2.4
+    },
+    {
+      "ticker": "ASTI",
+      "time_ms": 1770751020000,
+      "price": 7.48,
+      "max_later_gain_pct": 2.9
+    },
+    {
+      "ticker": "ASTI",
+      "time_ms": 1770751620000,
+      "price": 7.41,
+      "max_later_gain_pct": 3.9
+    },
+    {
+      "ticker": "ASTI",
+      "time_ms": 1770752100000,
+      "price": 7.5,
+      "max_later_gain_pct": 2.7
+    },
+    {
+      "ticker": "ASTI",
+      "time_ms": 1770753720000,
+      "price": 7.4201,
+      "max_later_gain_pct": 1.9
+    },
+    {
+      "ticker": "ASTI",
+      "time_ms": 1770753780000,
+      "price": 7.41,
+      "max_later_gain_pct": 2.0
+    },
+    {
+      "ticker": "ASTI",
+      "time_ms": 1770755520000,
+      "price": 7.5599,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "ASTI",
+      "time_ms": 1770755580000,
+      "price": 7.48,
+      "max_later_gain_pct": 1.1
+    },
+    {
+      "ticker": "ASTI",
+      "time_ms": 1770756300000,
+      "price": 7.36,
+      "max_later_gain_pct": 2.4
+    },
+    {
+      "ticker": "ASTI",
+      "time_ms": 1770757080000,
+      "price": 7.385,
+      "max_later_gain_pct": 1.3
+    },
+    {
+      "ticker": "ASTI",
+      "time_ms": 1770758340000,
+      "price": 7.32,
+      "max_later_gain_pct": 2.2
+    },
+    {
+      "ticker": "ASTI",
+      "time_ms": 1770760560000,
+      "price": 7.37,
+      "max_later_gain_pct": 1.4
+    },
+    {
+      "ticker": "BRLS",
+      "time_ms": 1770771060000,
+      "price": 1.95,
+      "max_later_gain_pct": 1.5
+    },
+    {
+      "ticker": "FGL",
+      "time_ms": 1770752640000,
+      "price": 16.5,
+      "max_later_gain_pct": 1.2
+    },
+    {
+      "ticker": "FIGG",
+      "time_ms": 1770738780000,
+      "price": 1.8016,
+      "max_later_gain_pct": 4.2
+    },
+    {
+      "ticker": "FIGG",
+      "time_ms": 1770739320000,
+      "price": 1.8001,
+      "max_later_gain_pct": 4.3
+    },
+    {
+      "ticker": "FIGG",
+      "time_ms": 1770741840000,
+      "price": 1.8199,
+      "max_later_gain_pct": 3.2
+    },
+    {
+      "ticker": "FIGG",
+      "time_ms": 1770742680000,
+      "price": 1.825,
+      "max_later_gain_pct": 2.9
+    },
+    {
+      "ticker": "FIGG",
+      "time_ms": 1770743160000,
+      "price": 1.84,
+      "max_later_gain_pct": 2.1
+    },
+    {
+      "ticker": "FIGG",
+      "time_ms": 1770743400000,
+      "price": 1.8599,
+      "max_later_gain_pct": 1.0
+    },
+    {
+      "ticker": "FIGG",
+      "time_ms": 1770744120000,
+      "price": 1.86,
+      "max_later_gain_pct": 1.0
+    },
+    {
+      "ticker": "FIGG",
+      "time_ms": 1770747240000,
+      "price": 1.82,
+      "max_later_gain_pct": 1.1
+    },
+    {
+      "ticker": "FIGG",
+      "time_ms": 1770747420000,
+      "price": 1.81,
+      "max_later_gain_pct": 1.7
+    },
+    {
+      "ticker": "FIGG",
+      "time_ms": 1770748320000,
+      "price": 1.77,
+      "max_later_gain_pct": 4.0
+    },
+    {
+      "ticker": "FIGG",
+      "time_ms": 1770750480000,
+      "price": 1.7534,
+      "max_later_gain_pct": 4.9
+    },
+    {
+      "ticker": "FIGG",
+      "time_ms": 1770750840000,
+      "price": 1.7897,
+      "max_later_gain_pct": 2.8
+    },
+    {
+      "ticker": "FIGG",
+      "time_ms": 1770751560000,
+      "price": 1.8,
+      "max_later_gain_pct": 2.2
+    },
+    {
+      "ticker": "FIGG",
+      "time_ms": 1770753660000,
+      "price": 1.830878,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "FIGG",
+      "time_ms": 1770754620000,
+      "price": 1.79,
+      "max_later_gain_pct": 0.3
+    },
+    {
+      "ticker": "FIGG",
+      "time_ms": 1770755340000,
+      "price": 1.79,
+      "max_later_gain_pct": 0.3
+    },
+    {
+      "ticker": "FIGG",
+      "time_ms": 1770755940000,
+      "price": 1.77,
+      "max_later_gain_pct": 0.4
+    },
+    {
+      "ticker": "FIGG",
+      "time_ms": 1770756540000,
+      "price": 1.7745,
+      "max_later_gain_pct": 0.2
+    },
+    {
+      "ticker": "FIGG",
+      "time_ms": 1770756900000,
+      "price": 1.75,
+      "max_later_gain_pct": 1.1
+    },
+    {
+      "ticker": "FIGG",
+      "time_ms": 1770760980000,
+      "price": 1.76,
+      "max_later_gain_pct": 0.6
+    },
+    {
+      "ticker": "FIGG",
+      "time_ms": 1770764280000,
+      "price": 1.76,
+      "max_later_gain_pct": 0.1
+    },
+    {
+      "ticker": "HURA",
+      "time_ms": 1770766560000,
+      "price": 1.4997,
+      "max_later_gain_pct": 2.7
+    },
+    {
+      "ticker": "HURA",
+      "time_ms": 1770768060000,
+      "price": 1.5,
+      "max_later_gain_pct": 2.7
+    },
+    {
+      "ticker": "HURA",
+      "time_ms": 1770769800000,
+      "price": 1.51,
+      "max_later_gain_pct": 2.0
+    },
+    {
+      "ticker": "JZXN",
+      "time_ms": 1770768720000,
+      "price": 2.6682,
+      "max_later_gain_pct": 2.3
+    },
+    {
+      "ticker": "NMRA",
+      "time_ms": 1770742620000,
+      "price": 2.9613,
+      "max_later_gain_pct": 4.7
+    },
+    {
+      "ticker": "NMRA",
+      "time_ms": 1770743460000,
+      "price": 2.965,
+      "max_later_gain_pct": 4.6
+    },
+    {
+      "ticker": "NMRA",
+      "time_ms": 1770746160000,
+      "price": 2.995,
+      "max_later_gain_pct": 3.5
+    },
+    {
+      "ticker": "NMRA",
+      "time_ms": 1770746940000,
+      "price": 2.9901,
+      "max_later_gain_pct": 3.7
+    },
+    {
+      "ticker": "NMRA",
+      "time_ms": 1770747540000,
+      "price": 3.045,
+      "max_later_gain_pct": 1.8
+    },
+    {
+      "ticker": "NMRA",
+      "time_ms": 1770749760000,
+      "price": 2.9912,
+      "max_later_gain_pct": 0.6
+    },
+    {
+      "ticker": "NMRA",
+      "time_ms": 1770752100000,
+      "price": 2.92,
+      "max_later_gain_pct": 3.1
+    },
+    {
+      "ticker": "NMRA",
+      "time_ms": 1770752400000,
+      "price": 2.871,
+      "max_later_gain_pct": 4.8
+    },
+    {
+      "ticker": "NMRA",
+      "time_ms": 1770752640000,
+      "price": 2.915,
+      "max_later_gain_pct": 3.3
+    },
+    {
+      "ticker": "NMRA",
+      "time_ms": 1770753600000,
+      "price": 2.92,
+      "max_later_gain_pct": 3.1
+    },
+    {
+      "ticker": "NMRA",
+      "time_ms": 1770754620000,
+      "price": 2.895,
+      "max_later_gain_pct": 4.0
+    },
+    {
+      "ticker": "NMRA",
+      "time_ms": 1770755460000,
+      "price": 2.8897,
+      "max_later_gain_pct": 4.2
+    },
+    {
+      "ticker": "NMRA",
+      "time_ms": 1770756060000,
+      "price": 2.885,
+      "max_later_gain_pct": 4.3
+    },
+    {
+      "ticker": "NMRA",
+      "time_ms": 1770756660000,
+      "price": 2.895,
+      "max_later_gain_pct": 4.0
+    },
+    {
+      "ticker": "PHGE",
+      "time_ms": 1770749400000,
+      "price": 6.4,
+      "max_later_gain_pct": 5.0
+    },
+    {
+      "ticker": "PHGE",
+      "time_ms": 1770754920000,
+      "price": 6.54,
+      "max_later_gain_pct": 2.6
+    },
+    {
+      "ticker": "PHGE",
+      "time_ms": 1770755580000,
+      "price": 6.435,
+      "max_later_gain_pct": 4.3
+    },
+    {
+      "ticker": "SEGG",
+      "time_ms": 1770756360000,
+      "price": 1.3183,
+      "max_later_gain_pct": 3.9
+    },
+    {
+      "ticker": "SEGG",
+      "time_ms": 1770759720000,
+      "price": 1.33,
+      "max_later_gain_pct": 1.4
+    },
+    {
+      "ticker": "SEGG",
+      "time_ms": 1770762660000,
+      "price": 1.33,
+      "max_later_gain_pct": 1.4
+    },
+    {
+      "ticker": "SEGG",
+      "time_ms": 1770763320000,
+      "price": 1.28,
+      "max_later_gain_pct": 4.9
+    },
+    {
+      "ticker": "SEGG",
+      "time_ms": 1770764340000,
+      "price": 1.29,
+      "max_later_gain_pct": 3.1
+    },
+    {
+      "ticker": "SEGG",
+      "time_ms": 1770766800000,
+      "price": 1.29,
+      "max_later_gain_pct": 1.6
+    },
+    {
+      "ticker": "SEGG",
+      "time_ms": 1770768240000,
+      "price": 1.27,
+      "max_later_gain_pct": 3.1
+    },
+    {
+      "ticker": "TRIB",
+      "time_ms": 1770748080000,
+      "price": 0.9622,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "TRIB",
+      "time_ms": 1770750060000,
+      "price": 0.8786,
+      "max_later_gain_pct": 3.4
+    },
+    {
+      "ticker": "TRIB",
+      "time_ms": 1770750960000,
+      "price": 0.87245,
+      "max_later_gain_pct": 4.2
+    },
+    {
+      "ticker": "TRIB",
+      "time_ms": 1770752220000,
+      "price": 0.872,
+      "max_later_gain_pct": 4.2
+    },
+    {
+      "ticker": "TRIB",
+      "time_ms": 1770754620000,
+      "price": 0.8929,
+      "max_later_gain_pct": 1.8
+    },
+    {
+      "ticker": "TRIB",
+      "time_ms": 1770755640000,
+      "price": 0.8913,
+      "max_later_gain_pct": 0.4
+    },
+    {
+      "ticker": "TRIB",
+      "time_ms": 1770765480000,
+      "price": 0.82,
+      "max_later_gain_pct": 2.7
+    }
+  ],
+  "missed_entries": [
+    {
+      "ticker": "CCHH",
+      "daily_change_pct": 58.83,
+      "daily_volume": 24252111,
+      "had_vol_spike": true,
+      "meets_daily_vol": true,
+      "reason": "price_not_triggered"
+    },
+    {
+      "ticker": "PHGE",
+      "daily_change_pct": 42.92,
+      "daily_volume": 429579,
+      "had_vol_spike": true,
+      "meets_daily_vol": true,
+      "reason": "price_not_triggered"
+    }
+  ],
+  "fake_rate": 30.3
+}

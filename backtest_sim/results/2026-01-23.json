@@ -1,0 +1,563 @@
+{
+  "date": "2026-01-23",
+  "starting_portfolio": 5.827346882639912e+18,
+  "ending_portfolio": 1.485131106112785e+19,
+  "day_pnl_krw": 9.023964178487938e+18,
+  "day_pnl_pct": 154.86,
+  "vol_spikes_detected": 245,
+  "signals_generated": 245,
+  "buys_executed": 10,
+  "trades": [
+    {
+      "ticker": "KUST",
+      "type": "partial",
+      "entry_price": 2.9007,
+      "sell_price": 3.39,
+      "pnl_pct": 16.86834212431483,
+      "pnl_krw": 4.914884044671475e+16,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 4.0,
+      "entry_time_ms": 1769173320000,
+      "sell_time_ms": 1769173560000
+    },
+    {
+      "ticker": "KUST",
+      "type": "full",
+      "entry_price": 2.9007,
+      "sell_price": 3.39,
+      "pnl_pct": 16.87,
+      "pnl_krw": 4.914884044671475e+16,
+      "reason": "PROFIT_TARGET +10% (16.9%)",
+      "hold_min": 4.0,
+      "queue_price": 2.35,
+      "queue_to_entry_pct": 23.4,
+      "entry_time_ms": 1769173320000,
+      "sell_time_ms": 1769173560000,
+      "daily_high": 4.48,
+      "max_possible_pct": 54.4
+    },
+    {
+      "ticker": "GIBO",
+      "type": "full",
+      "entry_price": 2.51,
+      "sell_price": 1.85,
+      "pnl_pct": -26.29,
+      "pnl_krw": -1.7113666558510906e+17,
+      "reason": "STOP_LOSS (-26.3%)",
+      "hold_min": 1.0,
+      "queue_price": 1.9,
+      "queue_to_entry_pct": 32.1,
+      "entry_time_ms": 1769173680000,
+      "sell_time_ms": 1769173740000,
+      "daily_high": 3.06,
+      "max_possible_pct": 21.9
+    },
+    {
+      "ticker": "AUST",
+      "type": "partial",
+      "entry_price": 2.45,
+      "sell_price": 2.6599,
+      "pnl_pct": 8.5673469387755,
+      "pnl_krw": 2.993465508859533e+16,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 2.0,
+      "entry_time_ms": 1769179800000,
+      "sell_time_ms": 1769179920000
+    },
+    {
+      "ticker": "KUST",
+      "type": "full",
+      "entry_price": 4.27,
+      "sell_price": 3.7179,
+      "pnl_pct": -12.93,
+      "pnl_krw": -9.035408080420365e+16,
+      "reason": "STOP_LOSS (-12.9%)",
+      "hold_min": 5.0,
+      "queue_price": 3.41,
+      "queue_to_entry_pct": 25.2,
+      "entry_time_ms": 1769179620000,
+      "sell_time_ms": 1769179920000,
+      "daily_high": 4.48,
+      "max_possible_pct": 4.9
+    },
+    {
+      "ticker": "AUST",
+      "type": "full",
+      "entry_price": 2.45,
+      "sell_price": 2.5716,
+      "pnl_pct": 4.96,
+      "pnl_krw": 1.7341848779291072e+16,
+      "reason": "TRAILING (5.0%, peak=13.1%)",
+      "hold_min": 4.0,
+      "queue_price": 2,
+      "queue_to_entry_pct": 22.5,
+      "entry_time_ms": 1769179800000,
+      "sell_time_ms": 1769180040000,
+      "daily_high": 3.9199,
+      "max_possible_pct": 60.0
+    },
+    {
+      "ticker": "BNAI",
+      "type": "full",
+      "entry_price": 12.7376,
+      "sell_price": 11.825,
+      "pnl_pct": -7.16,
+      "pnl_krw": -5.97716534741513e+16,
+      "reason": "STOP_LOSS (-7.2%)",
+      "hold_min": 9.0,
+      "queue_price": 10.5869,
+      "queue_to_entry_pct": 20.3,
+      "entry_time_ms": 1769180460000,
+      "sell_time_ms": 1769181000000,
+      "daily_high": 68.1,
+      "max_possible_pct": 434.6
+    },
+    {
+      "ticker": "CRE",
+      "type": "partial",
+      "entry_price": 4.6188,
+      "sell_price": 5.1672,
+      "pnl_pct": 11.873213821771888,
+      "pnl_krw": 4.95268498283639e+16,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 7.0,
+      "entry_time_ms": 1769180580000,
+      "sell_time_ms": 1769181000000
+    },
+    {
+      "ticker": "CRE",
+      "type": "full",
+      "entry_price": 4.6188,
+      "sell_price": 5.1672,
+      "pnl_pct": 11.87,
+      "pnl_krw": 4.95268498283639e+16,
+      "reason": "PROFIT_TARGET +10% (11.9%)",
+      "hold_min": 7.0,
+      "queue_price": 3.7104,
+      "queue_to_entry_pct": 24.5,
+      "entry_time_ms": 1769180580000,
+      "sell_time_ms": 1769181000000,
+      "daily_high": 5.76,
+      "max_possible_pct": 24.7
+    },
+    {
+      "ticker": "QCLS",
+      "type": "full",
+      "entry_price": 5.35,
+      "sell_price": 4.96,
+      "pnl_pct": -7.29,
+      "pnl_krw": -7.326477957388275e+16,
+      "reason": "STOP_LOSS (-7.3%)",
+      "hold_min": 6.0,
+      "queue_price": 4.38,
+      "queue_to_entry_pct": 22.1,
+      "entry_time_ms": 1769185680000,
+      "sell_time_ms": 1769186040000,
+      "daily_high": 6.33,
+      "max_possible_pct": 18.3
+    },
+    {
+      "ticker": "AUST",
+      "type": "partial",
+      "entry_price": 2.82,
+      "sell_price": 2.9981,
+      "pnl_pct": 6.3156028368794415,
+      "pnl_krw": 3.467961494697523e+16,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 10.0,
+      "entry_time_ms": 1769189700000,
+      "sell_time_ms": 1769190300000
+    },
+    {
+      "ticker": "AUST",
+      "type": "full",
+      "entry_price": 2.82,
+      "sell_price": 3.14,
+      "pnl_pct": 11.35,
+      "pnl_krw": 6.231036936009011e+16,
+      "reason": "PROFIT_TARGET +10% (11.3%)",
+      "hold_min": 11.0,
+      "queue_price": 2.3399,
+      "queue_to_entry_pct": 20.5,
+      "entry_time_ms": 1769189700000,
+      "sell_time_ms": 1769190360000,
+      "daily_high": 3.9199,
+      "max_possible_pct": 39.0
+    },
+    {
+      "ticker": "BNAI",
+      "type": "full",
+      "entry_price": 23.11,
+      "sell_price": 21.4,
+      "pnl_pct": -7.4,
+      "pnl_krw": -9.010547798888205e+16,
+      "reason": "STOP_LOSS (-7.4%)",
+      "hold_min": 5.0,
+      "queue_price": 18.5,
+      "queue_to_entry_pct": 24.9,
+      "entry_time_ms": 1769203920000,
+      "sell_time_ms": 1769204220000,
+      "daily_high": 68.1,
+      "max_possible_pct": 194.7
+    },
+    {
+      "ticker": "BNAI",
+      "type": "partial",
+      "entry_price": 25.9,
+      "sell_price": 30.1,
+      "pnl_pct": 16.216216216216228,
+      "pnl_krw": 1.0787877284112243e+17,
+      "reason": "PARTIAL_SELL_50pct",
+      "hold_min": 2.0,
+      "entry_time_ms": 1769209440000,
+      "sell_time_ms": 1769209560000
+    },
+    {
+      "ticker": "BNAI",
+      "type": "full",
+      "entry_price": 25.9,
+      "sell_price": 30.1,
+      "pnl_pct": 16.22,
+      "pnl_krw": 1.0787877284112243e+17,
+      "reason": "PROFIT_TARGET +10% (16.2%)",
+      "hold_min": 2.0,
+      "queue_price": 20.78,
+      "queue_to_entry_pct": 24.6,
+      "entry_time_ms": 1769209440000,
+      "sell_time_ms": 1769209560000,
+      "daily_high": 68.1,
+      "max_possible_pct": 162.9
+    }
+  ],
+  "fake_signals": [
+    {
+      "ticker": "APUS",
+      "time_ms": 1769190720000,
+      "price": 3,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "APUS",
+      "time_ms": 1769198880000,
+      "price": 2.35,
+      "max_later_gain_pct": 1.5
+    },
+    {
+      "ticker": "APUS",
+      "time_ms": 1769200140000,
+      "price": 2.2921,
+      "max_later_gain_pct": 3.0
+    },
+    {
+      "ticker": "APUS",
+      "time_ms": 1769201220000,
+      "price": 2.36,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "AUST",
+      "time_ms": 1769204580000,
+      "price": 2.22,
+      "max_later_gain_pct": 0.9
+    },
+    {
+      "ticker": "AUST",
+      "time_ms": 1769205600000,
+      "price": 2.1789,
+      "max_later_gain_pct": 2.8
+    },
+    {
+      "ticker": "AUST",
+      "time_ms": 1769209080000,
+      "price": 2.22,
+      "max_later_gain_pct": 0.9
+    },
+    {
+      "ticker": "AUST",
+      "time_ms": 1769212200000,
+      "price": 2.13,
+      "max_later_gain_pct": 1.9
+    },
+    {
+      "ticker": "AUST",
+      "time_ms": 1769213520000,
+      "price": 2.1698,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "AUST",
+      "time_ms": 1769215140000,
+      "price": 2.12,
+      "max_later_gain_pct": 1.9
+    },
+    {
+      "ticker": "CRE",
+      "time_ms": 1769204700000,
+      "price": 3.8424,
+      "max_later_gain_pct": 2.4
+    },
+    {
+      "ticker": "GIBO",
+      "time_ms": 1769194500000,
+      "price": 2.4,
+      "max_later_gain_pct": 2.1
+    },
+    {
+      "ticker": "GIBO",
+      "time_ms": 1769196840000,
+      "price": 2.3001,
+      "max_later_gain_pct": 3.5
+    },
+    {
+      "ticker": "GIBO",
+      "time_ms": 1769199960000,
+      "price": 2.15,
+      "max_later_gain_pct": 4.7
+    },
+    {
+      "ticker": "GIBO",
+      "time_ms": 1769211960000,
+      "price": 1.77,
+      "max_later_gain_pct": 3.4
+    },
+    {
+      "ticker": "GIBO",
+      "time_ms": 1769214780000,
+      "price": 1.8096,
+      "max_later_gain_pct": 1.1
+    },
+    {
+      "ticker": "GIBO",
+      "time_ms": 1769216220000,
+      "price": 1.7,
+      "max_later_gain_pct": 2.9
+    },
+    {
+      "ticker": "GTEC",
+      "time_ms": 1769189280000,
+      "price": 1.32,
+      "max_later_gain_pct": 2.3
+    },
+    {
+      "ticker": "GTEC",
+      "time_ms": 1769190660000,
+      "price": 1.3395,
+      "max_later_gain_pct": 0.8
+    },
+    {
+      "ticker": "GTEC",
+      "time_ms": 1769194020000,
+      "price": 1.3024,
+      "max_later_gain_pct": 2.9
+    },
+    {
+      "ticker": "GTEC",
+      "time_ms": 1769205660000,
+      "price": 1.34,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "IOTR",
+      "time_ms": 1769194920000,
+      "price": 5.4499,
+      "max_later_gain_pct": 1.1
+    },
+    {
+      "ticker": "IOTR",
+      "time_ms": 1769195580000,
+      "price": 5.35,
+      "max_later_gain_pct": 3.0
+    },
+    {
+      "ticker": "IOTR",
+      "time_ms": 1769196060000,
+      "price": 5.38,
+      "max_later_gain_pct": 2.4
+    },
+    {
+      "ticker": "IOTR",
+      "time_ms": 1769196600000,
+      "price": 5.36,
+      "max_later_gain_pct": 2.8
+    },
+    {
+      "ticker": "IOTR",
+      "time_ms": 1769199600000,
+      "price": 5.28,
+      "max_later_gain_pct": 4.2
+    },
+    {
+      "ticker": "IOTR",
+      "time_ms": 1769199660000,
+      "price": 5.25,
+      "max_later_gain_pct": 4.8
+    },
+    {
+      "ticker": "IOTR",
+      "time_ms": 1769200500000,
+      "price": 5.355,
+      "max_later_gain_pct": 2.7
+    },
+    {
+      "ticker": "IOTR",
+      "time_ms": 1769201760000,
+      "price": 5.36,
+      "max_later_gain_pct": 1.7
+    },
+    {
+      "ticker": "IOTR",
+      "time_ms": 1769208420000,
+      "price": 5.2,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "KUST",
+      "time_ms": 1769210100000,
+      "price": 2.65,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "KUST",
+      "time_ms": 1769216220000,
+      "price": 2.3403,
+      "max_later_gain_pct": 0.4
+    },
+    {
+      "ticker": "NEOVW",
+      "time_ms": 1769187300000,
+      "price": 3.5,
+      "max_later_gain_pct": 2.6
+    },
+    {
+      "ticker": "NEOVW",
+      "time_ms": 1769188800000,
+      "price": 3.45,
+      "max_later_gain_pct": 4.1
+    },
+    {
+      "ticker": "QCLS",
+      "time_ms": 1769195760000,
+      "price": 5.92,
+      "max_later_gain_pct": 2.9
+    },
+    {
+      "ticker": "QCLS",
+      "time_ms": 1769203920000,
+      "price": 5.72,
+      "max_later_gain_pct": 4.4
+    },
+    {
+      "ticker": "QCLS",
+      "time_ms": 1769205720000,
+      "price": 5.85,
+      "max_later_gain_pct": 2.1
+    },
+    {
+      "ticker": "QCLS",
+      "time_ms": 1769209140000,
+      "price": 5.75,
+      "max_later_gain_pct": 3.8
+    },
+    {
+      "ticker": "QCLS",
+      "time_ms": 1769212800000,
+      "price": 5.7,
+      "max_later_gain_pct": 4.7
+    },
+    {
+      "ticker": "QCLS",
+      "time_ms": 1769214120000,
+      "price": 5.79,
+      "max_later_gain_pct": 3.1
+    },
+    {
+      "ticker": "QCLS",
+      "time_ms": 1769214720000,
+      "price": 5.8,
+      "max_later_gain_pct": 2.9
+    },
+    {
+      "ticker": "TMCWW",
+      "time_ms": 1769195640000,
+      "price": 2.2199,
+      "max_later_gain_pct": 5.0
+    },
+    {
+      "ticker": "TMCWW",
+      "time_ms": 1769197140000,
+      "price": 2.3024,
+      "max_later_gain_pct": 0.8
+    },
+    {
+      "ticker": "TMCWW",
+      "time_ms": 1769198220000,
+      "price": 2.29,
+      "max_later_gain_pct": 0.0
+    },
+    {
+      "ticker": "TMCWW",
+      "time_ms": 1769198700000,
+      "price": 2.2301,
+      "max_later_gain_pct": 1.8
+    },
+    {
+      "ticker": "TMCWW",
+      "time_ms": 1769200800000,
+      "price": 2.18,
+      "max_later_gain_pct": 4.1
+    },
+    {
+      "ticker": "TMCWW",
+      "time_ms": 1769201940000,
+      "price": 2.23,
+      "max_later_gain_pct": 1.8
+    },
+    {
+      "ticker": "UHG",
+      "time_ms": 1769198460000,
+      "price": 2.1501,
+      "max_later_gain_pct": 3.7
+    },
+    {
+      "ticker": "UHG",
+      "time_ms": 1769199060000,
+      "price": 2.18,
+      "max_later_gain_pct": 2.3
+    },
+    {
+      "ticker": "UHG",
+      "time_ms": 1769199360000,
+      "price": 2.155,
+      "max_later_gain_pct": 3.5
+    },
+    {
+      "ticker": "UHG",
+      "time_ms": 1769201760000,
+      "price": 2.11,
+      "max_later_gain_pct": 2.4
+    },
+    {
+      "ticker": "UHG",
+      "time_ms": 1769212680000,
+      "price": 2.05,
+      "max_later_gain_pct": 3.4
+    },
+    {
+      "ticker": "YYAI",
+      "time_ms": 1769213820000,
+      "price": 1.65,
+      "max_later_gain_pct": 1.2
+    }
+  ],
+  "missed_entries": [
+    {
+      "ticker": "USGOW",
+      "daily_change_pct": 62.79,
+      "daily_volume": 113869,
+      "had_vol_spike": true,
+      "meets_daily_vol": false,
+      "reason": "low_daily_vol"
+    }
+  ],
+  "fake_rate": 21.6
+}
