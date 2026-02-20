@@ -29,7 +29,9 @@ class SnapshotScanner:
         self.price_change_pct = self.scanner_cfg.get("price_change_pct", 20.0)
         self.candidate_change_pct = self.scanner_cfg.get("candidate_change_pct", 5.0)  # BarScanner 후보 기준
         self.min_volume = self.scanner_cfg.get("min_volume", 10_000)
-        self.min_daily_volume = self.scanner_cfg.get("min_daily_volume", 500_000)
+        self.min_daily_volume = self.scanner_cfg.get("min_daily_volume", 300_000)
+        self.min_daily_volume_highprice = self.scanner_cfg.get("min_daily_volume_highprice", 50_000)
+        self.highprice_threshold = self.scanner_cfg.get("highprice_threshold", 10.0)
 
         # 공유 모니터링 큐 (BarScanner가 등록, SnapshotScanner가 조회)
         self.monitoring_queue = monitoring_queue
@@ -138,12 +140,21 @@ class SnapshotScanner:
             if not snap:
                 continue
 
-            # ★ 매수 시점 일 거래량 체크: 30만주 이하 매수 금지
+            # ★ 매수 시점 일 거래량 체크 (가격 기반 분기)
+            # - $10 미만: 30만주 초과 필요
+            # - $10 이상: 5만주 초과 필요
             day_volume = snap.get("volume", 0)
-            if day_volume <= self.min_daily_volume:
+            cur_price = snap.get("price", 0)
+            required_vol = (
+                self.min_daily_volume_highprice
+                if cur_price >= self.highprice_threshold
+                else self.min_daily_volume
+            )
+            if day_volume <= required_vol:
                 logger.info(
                     f"⛔ {ticker} 일 거래량 미달 — 매수 금지: "
-                    f"{day_volume:,.0f}주 ≤ {self.min_daily_volume:,}주"
+                    f"{day_volume:,.0f}주 ≤ {required_vol:,}주 "
+                    f"(단가${cur_price:.2f})"
                 )
                 continue
 

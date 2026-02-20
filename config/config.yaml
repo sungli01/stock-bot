@@ -7,8 +7,10 @@ scanner:
   price_change_pct: 20.0        # 매수 트리거: 20%+ (큐 종목)
   candidate_change_pct: 5.0     # BarScanner 후보 기준: 5%+ 급등 종목만 3분봉 체크
   volume_spike_pct: 200.0       # 미사용 (하위 호환)
-  min_daily_volume: 300000      # 매수 시점 일 거래량 30만주 초과 (이하 매수 금지)
-  vol_3min_ratio_pct: 1000.0    # 완성 3분봉 직전봉 대비 1000%+ (BarScanner 기준)
+  min_daily_volume: 300000      # 일 거래량 기준: $10 미만 종목 30만주 이상
+  min_daily_volume_highprice: 50000   # 일 거래량 기준: $10 이상 종목 5만주 이상
+  highprice_threshold: 10.0     # 고가 종목 기준 단가 ($10)
+  vol_3min_ratio_pct: 200.0     # 완성 3분봉 직전봉 대비 200%+ (=100% 이상 상승, BarScanner 기준)
   bar_scan_interval_sec: 30     # BarScanner 실행 주기 (초)
 
 # 매매 조건 (v8)
