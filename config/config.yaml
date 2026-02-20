@@ -1,7 +1,7 @@
 # 매수 조건 (v8 — 3분봉 모멘텀 엔진)
 scanner:
   min_price: 0.7           # $0.7 이상
-  max_price: 10.0          # $10 이하 (페니스탁만)
+  max_price: 30.0          # $30 이하 (상향)
   min_market_cap: 50000000 # $5천만 이상
   min_volume: 10000        # 1만주 이상
   price_change_pct: 20.0   # 20%+ 급등 종목만 (진짜 모멘텀)

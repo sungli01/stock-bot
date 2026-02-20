@@ -320,8 +320,6 @@ def run_live(config: dict):
 
     sleep_logged = False
     last_post_trade_update = None
-    last_status_report = 0  # 30분마다 상태 보고 (이벤트 없을 때)
-    STATUS_INTERVAL = 1800  # 30분
     scan_count = 0
     session_start_notified = False
 
@@ -360,19 +358,10 @@ def run_live(config: dict):
             sleep_logged = False
             trading_date = get_trading_date()
 
-            # 세션 시작 알림 (1회)
+            # 세션 시작 (내부 마킹만, 알림 없음)
             if not session_start_notified:
                 session_start_notified = True
-                mode_label = " [가상매매]" if PAPER_MODE else ""
-                send_notification(
-                    f"🟢 매매 세션 시작{mode_label}\n"
-                    f"━━━━━━━━━━━━━━\n"
-                    f"시간: {now.strftime('%H:%M KST')}\n"
-                    f"거래일: {trading_date}\n"
-                    f"max_positions: {max_positions}\n"
-                    f"━━━━━━━━━━━━━━"
-                )
-                _notifier.force_flush()
+                logger.info(f"🟢 매매 세션 시작 — {now.strftime('%H:%M KST')}")
 
             # ── 강제청산 체크 ─────────────────────────────
             remaining = minutes_until_session_end()
@@ -486,40 +475,7 @@ def run_live(config: dict):
                     )
                     current_count -= 1
 
-            # ── 주기적 상태 보고 (5분마다) ────────────────
             scan_count += 1
-            now_ts = time.time()
-            if now_ts - last_status_report >= STATUS_INTERVAL:
-                last_status_report = now_ts
-                pos_lines = []
-                for pos in positions:
-                    t = pos["ticker"]
-                    avg = pos.get("avg_price", 0)
-                    snap_p = scanner.get_price(t) or pos.get("current_price", 0)
-                    pnl = ((snap_p / avg - 1) * 100) if avg > 0 and snap_p else 0
-                    trailing_info = bb_trailing.get_status(t) if hasattr(bb_trailing, 'get_status') else {}
-                    peak_str = f" 고점${trailing_info.get('peak',0):.2f}" if trailing_info.get('peak') else ""
-                    pos_lines.append(f"  {t}: ${snap_p:.2f} ({pnl:+.1f}%){peak_str}")
-
-                status_text = (
-                    f"📊 상태 보고 ({now.strftime('%H:%M KST')})\n"
-                    f"━━━━━━━━━━━━━━\n"
-                    f"스캔 횟수: {scan_count}회\n"
-                    f"시장: {market_state} (cap ₩{adjusted_cap:,.0f})\n"
-                    f"보유: {current_count}/{max_positions}\n"
-                )
-                if pos_lines:
-                    status_text += "\n".join(pos_lines) + "\n"
-                status_text += f"━━━━━━━━━━━━━━\n장마감까지: {remaining:.0f}분"
-                if PAPER_MODE and paper_trader:
-                    prices_map = {}
-                    for pos in positions:
-                        t = pos["ticker"]
-                        snap_p = scanner.get_price(t) or pos.get("current_price", 0)
-                        if snap_p:
-                            prices_map[t] = snap_p
-                    status_text += "\n\n" + paper_trader.get_status_text(prices_map)
-                send_notification(status_text)
 
             # ── 신규 매수 평가 ────────────────────────────
             # 잔고 부족 시 매수 시도 자체를 스킵 (알림 폭탄 방지)
