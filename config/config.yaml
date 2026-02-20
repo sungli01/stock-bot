@@ -1,25 +1,24 @@
-# 매수 조건
+# 매수 조건 (v8 — 3분봉 모멘텀 엔진)
 scanner:
   min_price: 0.7           # $0.7 이상
   max_price: 10.0          # $10 이하 (페니스탁만)
   min_market_cap: 50000000 # $5천만 이상
   min_volume: 10000        # 1만주 이상
-  price_change_pct: 3.0    # 3% 이상 (조기 진입)
-  volume_spike_pct: 200.0  # 200% 이상
-  rsi_max: 70              # RSI 70 이상 과매수 진입 제외
+  price_change_pct: 20.0   # 20%+ 급등 종목만 (진짜 모멘텀)
+  volume_spike_pct: 200.0  # 스냅샷 1차 필터 (완화, 2차는 3분봉)
   min_daily_volume: 500000 # 일 거래량 50만주 이상만 (유동성 확보)
-  timeframe: "5min"
-  volume_timeframe: "1min"
+  vol_3min_ratio_pct: 1000.0  # 3분봉 직전 대비 현재 거래량 1000%+ (핵심 필터)
+  timeframe: "3min"
 
-# 매매 조건
+# 매매 조건 (v8)
 trading:
   total_buy_amount: 100000     # 테스트: 10만원
   compound_mode: true          # 복리 ON
   compound_cap: 25000000       # 절대 상한 2500만원
-  split_count: 5               # 5분할
-  split_interval_sec: 60       # 1분 간격
+  split_count: 10              # v8: 10분할 상단호가 뿌리기
+  split_interval_sec: 0        # v8: 동시 주문 (간격 없음)
   max_positions: 2             # 동시 보유 최대 2종목
-  allocation_ratio: [0.5, 0.5] # 균등 배분
+  allocation_ratio: [0.7, 0.3] # 1종목 70%, 2종목 30%
   stop_loss_pct: -7.0          # -7% 손절 (급등 실패 빠른 컷)
   force_close_before_min: 15   # 장 마감 N분 전 강제청산
   max_hold_minutes: 45         # 최대 보유 45분 (미익절 시 자동 청산)

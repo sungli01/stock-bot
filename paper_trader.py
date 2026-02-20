@@ -91,6 +91,83 @@ class PaperTrader:
             'amount': amount,
         }
 
+    def buy_split(self, ticker: str, price: float, amount: float,
+                  splits: int = 10, daily_volume: int = 0) -> dict | None:
+        """
+        v8: 10분할 상단 호가 매수 시뮬레이션
+        - 현재가 기준 +0.1% 간격으로 10단계 위 호가에 분산 매수
+        - 평균 매수가 = 현재가 × (1 + 0.05% × splits/2) ≈ 현재가 × 1.0055
+        - paper에서는 가중평균으로 단순화
+        """
+        split_amount = amount / splits
+        total_shares = 0.0
+        total_cost = 0.0
+        filled = 0
+
+        # 10개 호가: +0.1%, +0.2%, ..., +1.0% 위에 각 1/10씩 주문
+        for i in range(1, splits + 1):
+            order_price = price * (1 + i * 0.001)  # 0.1% 간격
+            order_price *= (1 + SLIPPAGE * 0.5)    # 부분 슬리피지 (상단 호가라 실제 슬리피지 작음)
+            commission = split_amount * COMMISSION_PCT
+            cost = split_amount + commission
+
+            if cost > self.cash:
+                logger.warning(f"[가상] {ticker} {i}번째 분할매수 잔고 부족 — {filled}개 체결 후 중단")
+                break
+
+            shares = split_amount / order_price
+            self.cash -= cost
+            total_shares += shares
+            total_cost += split_amount
+            filled += 1
+
+        if total_shares <= 0:
+            logger.warning(f"[가상] {ticker} 10분할 매수 전부 실패 — 잔고 부족")
+            return None
+
+        avg_price = total_cost / total_shares
+        commission_total = total_cost * COMMISSION_PCT
+
+        if ticker in self.positions:
+            pos = self.positions[ticker]
+            all_shares = pos['shares'] + total_shares
+            pos['avg_price'] = (pos['avg_price'] * pos['shares'] + avg_price * total_shares) / all_shares
+            pos['shares'] = all_shares
+            pos['quantity'] = int(all_shares)
+        else:
+            self.positions[ticker] = {
+                'shares': total_shares,
+                'avg_price': avg_price,
+                'buy_time': datetime.now().isoformat(),
+                'quantity': int(total_shares),
+            }
+
+        trade = {
+            'side': 'BUY_SPLIT',
+            'ticker': ticker,
+            'price': round(avg_price, 4),
+            'shares': round(total_shares, 4),
+            'amount': round(total_cost),
+            'commission': round(commission_total, 2),
+            'fills': filled,
+            'time': datetime.now().isoformat(),
+        }
+        self.trades.append(trade)
+        self.save_state()
+
+        logger.info(
+            f"[가상] ✅ 10분할 매수 {ticker}: 평균${avg_price:.2f} x {total_shares:.2f}주 "
+            f"= ₩{total_cost:,.0f} ({filled}/{splits} 체결)"
+        )
+        return {
+            'ticker': ticker,
+            'side': 'BUY_SPLIT',
+            'price': avg_price,
+            'shares': total_shares,
+            'amount': total_cost,
+            'fills': filled,
+        }
+
     def partial_sell(self, ticker: str, price: float, ratio: float = 0.5) -> dict | None:
         """가상 부분 매도 (ratio만큼 물량 매도)"""
         if ticker not in self.positions:

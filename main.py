@@ -554,22 +554,27 @@ def run_live(config: dict):
                         scanner.mark_signaled(ticker)
                         continue
 
-                    # 시그널 평가
-                    sig = analyzer.evaluate(ticker, cand)
-                    if not sig or sig["signal"] != "BUY":
-                        continue
-
-                    if sig["confidence"] < 50:
-                        logger.info(f"⏭️ {ticker} 신뢰도 부족 ({sig['confidence']:.0f}%) — 패스")
-                        try:
-                            bar_recorder.record_candidate_skip(ticker, f"low_confidence_{sig['confidence']:.0f}", {
-                                "confidence": sig.get("confidence", 0),
-                                "change_pct": cand.get("change_pct", 0),
-                                "volume_ratio": cand.get("volume_ratio", 0),
-                            })
-                        except Exception:
-                            pass
-                        continue
+                    # v8 엔진: 20%+ 급등 + 3분봉 1000%+ 이미 검증 완료
+                    # → analyzer bypass, 즉시 매수
+                    engine_v8 = config.get("scanner", {}).get("price_change_pct", 3.0) >= 20.0
+                    if engine_v8:
+                        sig = {"signal": "BUY", "confidence": 100, "reason": "v8_3min_momentum"}
+                        logger.info(f"🔥 {ticker} v8 모멘텀 엔진 — analyzer bypass")
+                    else:
+                        sig = analyzer.evaluate(ticker, cand)
+                        if not sig or sig["signal"] != "BUY":
+                            continue
+                        if sig["confidence"] < 50:
+                            logger.info(f"⏭️ {ticker} 신뢰도 부족 ({sig['confidence']:.0f}%) — 패스")
+                            try:
+                                bar_recorder.record_candidate_skip(ticker, f"low_confidence_{sig['confidence']:.0f}", {
+                                    "confidence": sig.get("confidence", 0),
+                                    "change_pct": cand.get("change_pct", 0),
+                                    "volume_ratio": cand.get("volume_ratio", 0),
+                                })
+                            except Exception:
+                                pass
+                            continue
 
                     # 매수 실행
                     price = cand["price"]
@@ -582,12 +587,18 @@ def run_live(config: dict):
                     )
 
                     if PAPER_MODE and paper_trader:
-                        # 가상매매: paper_trader로 매수
+                        # v8 가상매매: 10분할 상단호가 매수
                         trading_cfg_inner = config.get("trading", {})
                         alloc = trading_cfg_inner.get("allocation_ratio", [0.7, 0.3])
                         alloc_pct = alloc[0] if current_count == 0 else (alloc[1] if len(alloc) > 1 else alloc[0])
                         buy_amount = paper_trader.cash * alloc_pct
-                        result = paper_trader.buy(ticker, price, buy_amount)
+                        vol_3min = cand.get("vol_3min_ratio", 0)
+
+                        # v8 엔진이면 buy_split(10분할), 아니면 기존 buy()
+                        if engine_v8 and hasattr(paper_trader, 'buy_split'):
+                            result = paper_trader.buy_split(ticker, price, buy_amount, splits=10)
+                        else:
+                            result = paper_trader.buy(ticker, price, buy_amount)
                         scanner.mark_signaled(ticker)
                         _mark_traded(ticker)
                         if result:
@@ -599,14 +610,15 @@ def run_live(config: dict):
                                     "confidence": sig.get("confidence", 0),
                                     "change_pct": cand.get("change_pct", 0),
                                     "volume_ratio": cand.get("volume_ratio", 0),
+                                    "vol_3min_ratio": vol_3min,
                                 })
                             except Exception as e:
                                 logger.error(f"bar_recorder entry 실패: {e}")
                             send_notification(
-                                f"[가상] ✅ {ticker} 매수 완료\n"
-                                f"가격: ${price:.2f}\n"
-                                f"변동: {cand['change_pct']:+.1f}%\n"
-                                f"신뢰도: {sig['confidence']:.0f}%",
+                                f"[가상] ✅ {ticker} v8 매수 완료\n"
+                                f"가격: ${price:.2f} ({cand['change_pct']:+.1f}%)\n"
+                                f"3분봉 거래량: {vol_3min:.0f}%\n"
+                                f"10분할 평균가: ${result.get('price', price):.2f}",
                                 immediate=True
                             )
                         else:
