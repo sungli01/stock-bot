@@ -1,5 +1,5 @@
 """
-Snapshot 기반 실시간 전종목 스캐너 (v8.3)
+Snapshot 기반 실시간 전종목 스캐너 (v8.4)
 역할 분리:
   - 후보 추출: 스냅샷에서 5%+ 급등 종목 → BarScanner에 전달
   - 매수 트리거: 모니터링 큐 종목이 20%+ 가격 → 즉시 후보 반환
@@ -19,7 +19,7 @@ SNAPSHOT_URL = "https://api.polygon.io/v2/snapshot/locale/us/markets/stocks/tick
 
 
 class SnapshotScanner:
-    """Polygon snapshot 기반 전종목 실시간 스캐너 (v8.3)"""
+    """Polygon snapshot 기반 전종목 실시간 스캐너 (v8.4)"""
 
     def __init__(self, config: dict, monitoring_queue: dict, queue_lock):
         self.config = config
@@ -136,6 +136,15 @@ class SnapshotScanner:
                 continue
             snap = snapshot_map.get(ticker)
             if not snap:
+                continue
+
+            # ★ 매수 시점 일 거래량 체크: 30만주 이하 매수 금지
+            day_volume = snap.get("volume", 0)
+            if day_volume <= self.min_daily_volume:
+                logger.info(
+                    f"⛔ {ticker} 일 거래량 미달 — 매수 금지: "
+                    f"{day_volume:,.0f}주 ≤ {self.min_daily_volume:,}주"
+                )
                 continue
 
             # ★ 기준 가격 = 거래량 폭증 시점 가격 (전일종가 기준 아님)
