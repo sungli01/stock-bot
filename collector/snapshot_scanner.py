@@ -159,23 +159,25 @@ class SnapshotScanner:
             if _is_etf(ticker):
                 continue
 
-            cur_min_v = snap["min"].get("v", 0) or 0
-            prev_min_v = self._prev_min_v.get(ticker, 0)
+            # ★ 올바른 거래량 비교: min.av(당일 누적) ÷ prevDay.v
+            # min.v 직전값 비교는 봉 진행에 따른 자연 증가를 폭증으로 오인하는 버그
+            cur_accum_v = snap["min"].get("av", 0) or 0   # 당일 누적 거래량
+            prev_day_v_raw = snap.get("prev_day", {}).get("v", 0) or 0
 
-            if cur_min_v > 0 and prev_min_v > 0:
-                min_v_ratio = (cur_min_v / prev_min_v) * 100
-                if min_v_ratio >= self.vol_3min_ratio_pct:
-                    if snap["volume"] >= min_daily_volume:
-                        # ★ 방향성 확인: 직전 스캔 대비 가격이 오르거나 유지 중일 때만 등록
+            if cur_accum_v > 0 and prev_day_v_raw > 0:
+                real_vol_ratio = (cur_accum_v / prev_day_v_raw) * 100
+                if real_vol_ratio >= self.vol_3min_ratio_pct:
+                    if snap["volume"] >= min_daily_volume or cur_accum_v >= min_daily_volume:
+                        # ★ 방향성 확인: 가격이 오르는 중일 때만 등록
                         if snap["scan_delta_pct"] >= 0 or snap["change_pct"] >= 5.0:
                             self._monitoring_queue[ticker] = {
                                 "time": scan_time,
-                                "price": snap["price"],  # 등록 시점 가격 기록
+                                "price": snap["price"],
                             }
                             logger.info(
-                                f"📋 큐 등록: {ticker} 거래량 폭증 {min_v_ratio:.0f}% "
-                                f"(min.v {prev_min_v:.0f}→{cur_min_v:.0f}) "
-                                f"@${snap['price']:.2f} delta:{snap['scan_delta_pct']:+.2f}%"
+                                f"📋 큐 등록: {ticker} 실거래량 {real_vol_ratio:.0f}% "
+                                f"(누적:{cur_accum_v:,.0f} / 전일:{prev_day_v_raw:,.0f}) "
+                                f"@${snap['price']:.2f} {snap['change_pct']:+.1f}%"
                             )
 
         # 큐 만료 정리
@@ -209,10 +211,10 @@ class SnapshotScanner:
                 continue
 
             prev_day_vol = snap.get("prev_day", {}).get("v", 0) or 0
-            volume_ratio = (snap["volume"] / prev_day_vol * 100) if prev_day_vol > 0 else 999.0
-            cur_min_v = snap["min"].get("v", 0) or 0
-            prev_min_v = self._prev_min_v.get(ticker, 0)
-            vol_ratio_3min = (cur_min_v / prev_min_v * 100) if prev_min_v > 0 else 999.0
+            cur_accum = snap["min"].get("av", 0) or 0
+            volume_ratio = (cur_accum / prev_day_vol * 100) if prev_day_vol > 0 and cur_accum > 0 \
+                           else ((snap["volume"] / prev_day_vol * 100) if prev_day_vol > 0 else 999.0)
+            vol_ratio_3min = volume_ratio  # 이제 동일 기준
 
             if ticker not in self._surge_logged_expire:
                 logger.info(
