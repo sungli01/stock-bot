@@ -33,16 +33,18 @@ class SnapshotScanner:
         self.vol_3min_ratio_pct = self.scanner_cfg.get("vol_3min_ratio_pct", 1000.0)  # v8: 1000%
         self.min_volume = self.scanner_cfg.get("min_volume", 10_000)
 
-        # 이전 스냅샷 거래량 기억 (스파이크 감지용)
+        # 이전 스냅샷 거래량 기억
         self._prev_volumes: dict[str, float] = {}
-        # 이전 스냅샷 가격 기억 (가격 속도 추적용)
+        # 이전 스냅샷 min.v (직전 1분봉 거래량) — 거래량 폭증 감지용
+        self._prev_min_v: dict[str, float] = {}
+        # 이전 스냅샷 가격
         self._prev_prices: dict[str, float] = {}
         self._prev_scan_time: float = 0.0
         # 이미 시그널 큐에 넣은 종목 (중복 방지, 세션 단위)
         self._signaled_tickers: set[str] = set()
-        # 급등 최초 감지 시점 {ticker: timestamp} — 5분 경과 시 매수 제외
-        self._surge_first_seen: dict[str, float] = {}
-        # 급등 만료 로그 1회만 출력 (로그 과다 방지)
+        # ★ 모니터링 큐: 거래량 1000%+ 통과 종목 (20%+ 가격 대기)
+        self._monitoring_queue: dict[str, float] = {}  # {ticker: 등록시각}
+        # 급등 만료 로그 1회만 출력
         self._surge_logged_expire: set[str] = set()
         # 마지막 전체 스냅샷 데이터 (보유종목 가격 조회용)
         self._last_snapshot: dict[str, dict] = {}
@@ -123,71 +125,66 @@ class SnapshotScanner:
 
         self._last_snapshot = snapshot_map
 
-        # ── v8: 1차 필터 (스냅샷) ─────────────────────────────────
-        pre_candidates = []
         min_daily_volume = self.scanner_cfg.get("min_daily_volume", 500_000)
+        queue_expire_sec = 900  # 모니터링 큐 유효기간 15분
 
+        # ── STEP 1: 거래량 폭증 감지 → 모니터링 큐 등록 ──────────
+        # min.v (직전 1분봉 거래량) 직전 스캔 대비 1000%+ 이면 큐 등록
+        # API 호출 없음, 스냅샷 내 데이터만 사용
         for ticker, snap in snapshot_map.items():
-            # 가격 필터 ($0.70 ~ $10.00 페니스탁만)
-            if snap["price"] < self.min_price or snap["price"] > self.max_price:
-                continue
-
-            # 이미 시그널 보낸 종목 스킵
             if ticker in self._signaled_tickers:
                 continue
+            if snap["price"] < self.min_price or snap["price"] > self.max_price:
+                continue
+            if ticker in self._monitoring_queue:
+                continue  # 이미 큐에 있음
 
-            # ★ 핵심 1차 조건: 20%+ 급등
+            cur_min_v = snap["min"].get("v", 0) or 0
+            prev_min_v = self._prev_min_v.get(ticker, 0)
+
+            if cur_min_v > 0 and prev_min_v > 0:
+                min_v_ratio = (cur_min_v / prev_min_v) * 100
+                if min_v_ratio >= self.vol_3min_ratio_pct:
+                    if snap["volume"] >= min_daily_volume:
+                        self._monitoring_queue[ticker] = scan_time
+                        logger.info(
+                            f"📋 큐 등록: {ticker} 거래량 폭증 {min_v_ratio:.0f}% "
+                            f"(min.v {prev_min_v:.0f}→{cur_min_v:.0f})"
+                        )
+
+        # 큐 만료 정리
+        expired = [t for t, ts in self._monitoring_queue.items()
+                   if scan_time - ts > queue_expire_sec]
+        for t in expired:
+            del self._monitoring_queue[t]
+            logger.debug(f"⏰ 큐 만료 제거: {t}")
+
+        # ── STEP 2: 큐 종목 중 20%+ 가격 상승 → 즉시 매수 후보 ─
+        # ★ API 호출 없음, 메모리 연산만 → ~0ms
+        candidates = []
+
+        for ticker in list(self._monitoring_queue.keys()):
+            if ticker in self._signaled_tickers:
+                continue
+            snap = snapshot_map.get(ticker)
+            if not snap:
+                continue
+
+            # ★ 20%+ 가격 상승 확인
             if snap["change_pct"] < self.price_change_pct:
                 continue
 
-            # 절대 거래량 필터 (유동성)
-            if snap["volume"] < min_daily_volume:
-                continue
-
-            pre_candidates.append(snap)
-
-        # 1차 통과 종목 로그
-        if pre_candidates:
-            logger.info(f"🔍 1차 통과 ({len(pre_candidates)}개): " +
-                        ", ".join(f"{s['ticker']} {s['change_pct']:+.1f}%" for s in pre_candidates[:5]))
-
-        # ── v8: 2차 필터 (3분봉 거래량 1000%+) ─────────────────
-        candidates = []
-        MAX_3MIN_CHECK = 10  # API 레이트 리밋 대응: 최대 10개만 체크
-        checked = 0
-
-        for snap in pre_candidates[:MAX_3MIN_CHECK]:
-            ticker = snap["ticker"]
-
-            # 급등 최초 감지 시점 추적 & 15분 경과 시 제외 (v8: 더 넉넉)
-            if ticker not in self._surge_first_seen:
-                self._surge_first_seen[ticker] = scan_time
-                logger.info(f"🚀 {ticker} 급등 최초 감지 ({snap['change_pct']:+.1f}%)")
-            surge_elapsed = scan_time - self._surge_first_seen[ticker]
-            if surge_elapsed > 900:  # 15분
-                if ticker not in self._surge_logged_expire:
-                    logger.info(f"⏰ {ticker} 급등 후 {surge_elapsed:.0f}초 경과 — 제외")
-                    self._surge_logged_expire.add(ticker)
-                continue
-
-            # ★ 핵심 2차 조건: 3분봉 직전 대비 현재 거래량 1000%+
-            cur_vol, prev_vol = self._fetch_3min_volume(ticker)
-            checked += 1
-
-            if prev_vol <= 0:
-                # 데이터 없으면 스냅샷 거래량으로 대체 판단
-                vol_ratio_3min = 999.0  # 통과 (데이터 없으면 검증 불가)
-                logger.info(f"  ⚠️ {ticker} 3분봉 데이터 없음 — 스냅샷 기준 통과")
-            else:
-                vol_ratio_3min = (cur_vol / prev_vol) * 100
-                if vol_ratio_3min < self.vol_3min_ratio_pct:
-                    logger.info(f"  ❌ {ticker} 3분봉 거래량 미달: {vol_ratio_3min:.0f}% (기준 {self.vol_3min_ratio_pct:.0f}%)")
-                    continue
-                logger.info(f"  ✅ {ticker} 3분봉 거래량 폭발: {vol_ratio_3min:.0f}% (cur:{cur_vol:.0f} prev:{prev_vol:.0f})")
-
-            # 전일 거래량 대비 스냅샷 스파이크 비율
             prev_day_vol = snap.get("prev_day", {}).get("v", 0) or 0
             volume_ratio = (snap["volume"] / prev_day_vol * 100) if prev_day_vol > 0 else 999.0
+            cur_min_v = snap["min"].get("v", 0) or 0
+            prev_min_v = self._prev_min_v.get(ticker, 0)
+            vol_ratio_3min = (cur_min_v / prev_min_v * 100) if prev_min_v > 0 else 999.0
+
+            if ticker not in self._surge_logged_expire:
+                logger.info(
+                    f"🎯 매수 후보: {ticker} ${snap['price']:.2f} "
+                    f"{snap['change_pct']:+.1f}% vol_ratio:{vol_ratio_3min:.0f}%"
+                )
 
             candidates.append({
                 "ticker": ticker,
@@ -201,16 +198,18 @@ class SnapshotScanner:
                 "market_cap": 0,
             })
 
-        # 정렬: 변동률 높은 순
+        # 변동률 높은 순 정렬
         candidates.sort(key=lambda c: -c["change_pct"])
 
         if candidates:
-            logger.info(f"🎯 최종 통과 {len(candidates)}개 (3분봉 1000%+ 검증 완료)")
+            logger.info(f"🔥 최종 후보 {len(candidates)}개 — 즉시 매수 (큐→20%+ 확인, 지연 없음)")
             for c in candidates:
-                logger.info(f"  🔥 {c['ticker']} ${c['price']:.2f} {c['change_pct']:+.1f}% 3min:{c['vol_3min_ratio']:.0f}%")
+                logger.info(f"  ✅ {c['ticker']} ${c['price']:.2f} {c['change_pct']:+.1f}%")
 
-        # 현재 가격을 다음 스캔 비교용으로 저장
+        # 다음 스캔 비교용으로 저장
         self._prev_prices = {t: s["price"] for t, s in snapshot_map.items() if s["price"] > 0}
+        self._prev_min_v = {t: s["min"].get("v", 0) for t, s in snapshot_map.items()
+                            if s["min"].get("v", 0) > 0}
         self._prev_scan_time = scan_time
 
         return candidates
@@ -267,7 +266,8 @@ class SnapshotScanner:
         self._signaled_tickers.clear()
         self._prev_volumes.clear()
         self._prev_prices.clear()
+        self._prev_min_v.clear()
         self._prev_scan_time = 0.0
-        self._surge_first_seen.clear()
+        self._monitoring_queue.clear()
         self._surge_logged_expire.clear()
         logger.info("🔄 Snapshot 스캐너 세션 리셋")
