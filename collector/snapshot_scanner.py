@@ -252,16 +252,14 @@ class SnapshotScanner:
                 continue
 
             vol_ratio = queue_info.get("vol_ratio", 999.0)
-            entry_type = "2차" if is_second else "1차"
+            entry_type = "3차" if is_third else ("2차" if is_second else "1차")
 
-            # [v9] 1차 매수량: 큐 등록 ~ 매수 시점 구간 거래량의 30% 이내
+            # [v10.3] 매수 거래량 캡: 1차 30% / 2차·3차 10%
             USD_KRW = float(os.getenv("USD_KRW_RATE", "1450.0"))
-            max_buy_krw_by_vol = None
-            if not is_second:
-                vol_at_queue = queue_info.get("vol_at_queue", 0)
-                vol_since_queue = max(day_volume - vol_at_queue, 1)
-                max_shares_30pct = vol_since_queue * 0.30
-                max_buy_krw_by_vol = max_shares_30pct * cur_price * USD_KRW
+            vol_at_queue = queue_info.get("vol_at_queue", 0)
+            vol_since_queue = max(day_volume - vol_at_queue, 1)
+            vol_cap_pct = 0.10 if is_second else 0.30   # 2·3차: 10%, 1차: 30%
+            max_buy_krw_by_vol = round(vol_since_queue * vol_cap_pct * cur_price * USD_KRW)
 
             logger.info(
                 f"🎯 {entry_type} 매수 후보: {ticker} ${snap['price']:.2f} "

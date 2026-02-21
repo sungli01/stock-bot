@@ -203,6 +203,8 @@ class BBTrailingStop:
         self._peak_profit.pop(ticker, None)
         self._entry_time.pop(ticker, None)
         self._trailing_active.pop(ticker, None)
+        self._is_second.pop(ticker, None)
+        self._is_third.pop(ticker, None)
 
     def reset(self):
         self._peak_profit.clear()

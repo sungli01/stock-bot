@@ -375,7 +375,7 @@ def run_engine(date_str: str, portfolio_krw: float, cfg: dict) -> dict:
                 buy_entry = next((t for t in trades if t["type"]=="BUY"
                                   and t["ticker"]==ticker
                                   and t.get("time_kst")==pos.entry_time_ms), None)
-                entry_type_sold = "3차" if pos.is_second and ticker in traded_twice else \
+                entry_type_sold = "3차" if pos.is_third else \
                                   "2차" if pos.is_second else "1차"
 
                 if entry_type_sold == "3차":
@@ -409,7 +409,7 @@ def run_engine(date_str: str, portfolio_krw: float, cfg: dict) -> dict:
         last_price = bar_buffers[ticker][-1]["c"] if bar_buffers[ticker] else pos.entry_price
         pnl_k = pos.pnl_krw(last_price)
         running_krw += pos.buy_krw + pnl_k
-        eot = "3차" if pos.is_second and ticker in traded_twice else \
+        eot = "3차" if pos.is_third else \
               "2차" if pos.is_second else "1차"
         trades.append({
             "type": "SELL",

@@ -29,6 +29,7 @@ trading:
   split_interval_sec: 0        # 동시 주문 (간격 없음)
   max_positions: 2             # 동시 보유 최대 2종목
   allocation_ratio: [0.7, 0.3] # 1종목 70%, 2종목 30%
+  max_single_buy_krw: 50000000 # [v10.3] 2·3차 1회 최대 투자금 5000만원
   stop_loss_pct: -25.0         # [v10] -25% 손절 (최적화)
   force_close_before_min: 15   # 장 마감 N분 전 강제청산
   max_hold_minutes: 120        # [v9] 최대 보유 120분 (45→120)

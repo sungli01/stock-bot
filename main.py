@@ -492,15 +492,23 @@ def run_live(config: dict):
                         executor.execute_sell(ticker)
 
                     # [v9] 매도 후 차수 판별
+                    # ※ 주의: _mark_traded는 BUY 시점에 이미 호출됨
+                    #   - 1차 BUY → _traded_once_tickers, bar_scanner.traded_once, scanner._signaled_once 설정 완료
+                    #   - 2차 BUY → _traded_twice_tickers, bar_scanner.traded_twice, scanner._signaled_twice 설정 완료
+                    #   - 3차 BUY → _traded_tickers (완전차단), scanner._signaled_thrice 설정 완료
+                    # SELL 시점에는 추가 마킹 불필요 (이미 상태 설정됨)
                     if ticker in _traded_twice_tickers and ticker not in _traded_tickers:
                         # 2차 포지션 청산 → 3차 진입 대기
+                        # bar_scanner: traded_twice 있음 → 3차 threshold 자동 사용
+                        # scanner: _signaled_twice 있음 → 3차 진입 허용
+                        # → 추가 _mark_traded 호출 금지 (is_third=True 호출 시 완전 차단 버그!)
                         logger.info(f"💡 {ticker} 2차 포지션 청산 — 3차 진입 대기")
-                        _mark_traded(ticker, is_third=True)
                     elif ticker in _traded_once_tickers and ticker not in _traded_twice_tickers:
                         # 1차 포지션 청산 → 2차 진입 대기
+                        # bar_scanner: traded_once 있음 → 2차 threshold 자동 사용
                         logger.info(f"💡 {ticker} 1차 포지션 청산 — 2차 진입 대기")
                     else:
-                        # 3차 포지션 청산 → 완전 차단 (이미 처리됨)
+                        # 3차 포지션 청산 → 완전 차단 (3차 BUY 시 이미 _traded_tickers에 등록됨)
                         logger.info(f"🔒 {ticker} 3차 포지션 청산 — 완전 차단")
 
                     # Bar recorder — 매도 기록
@@ -624,8 +632,13 @@ def run_live(config: dict):
 
                         COMPOUND_CAP = trading_cfg_inner.get("compound_cap", 25_000_000)
                         if is_third_cand or is_second_cand:
-                            # [v9] 2·3차: 풀 매수 (cap 기준)
-                            buy_amount = min(paper_trader.cash, COMPOUND_CAP)
+                            # [v10.3] 2·3차: 거래량 10% 이내 + 5000만원 상한
+                            MAX_SINGLE_BUY_KRW = trading_cfg_inner.get("max_single_buy_krw", 50_000_000)
+                            buy_amount = min(paper_trader.cash, COMPOUND_CAP, MAX_SINGLE_BUY_KRW)
+                            vol_cap_2nd = cand.get("max_buy_krw_by_vol")
+                            if vol_cap_2nd and vol_cap_2nd < buy_amount:
+                                buy_amount = vol_cap_2nd
+                                logger.info(f"[v10.3] {ticker} {entry_label} 거래량 캡 적용: ₩{buy_amount:,.0f}")
                         else:
                             # [v9] 1차: 배분 비율 vs 거래량 30% 캡 중 작은 값
                             base = min(paper_trader.cash, COMPOUND_CAP)
@@ -669,8 +682,9 @@ def run_live(config: dict):
                             send_notification(f"[가상] ❌ {ticker} 매수 실패 — 잔고 부족")
                     else:
                         orders = executor.execute_buy(ticker, price)
-                        # [v9] 1차/2차 구분 마킹
-                        _mark_traded(ticker, is_second=is_second_cand)
+                        # [v10.3] 1차/2차/3차 구분 마킹 (is_third 누락 버그 수정)
+                        _mark_traded(ticker, is_second=is_second_cand and not is_third_cand,
+                                             is_third=is_third_cand)
 
                         if orders:
                             bb_trailing.register_entry(ticker, is_second=is_second_cand, is_third=is_third_cand)
