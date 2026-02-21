@@ -240,6 +240,7 @@ def run_live(config: dict):
     from knowledge.file_store import FileStore
     from knowledge.post_trade_tracker import PostTradeTracker
     from knowledge.bar_recorder import BarRecorder
+    from knowledge.budget_learner import BudgetLearner
 
     # Paper Trading 모드
     paper_trader = None
@@ -260,6 +261,7 @@ def run_live(config: dict):
     store = FileStore()
     tracker = PostTradeTracker()
     bar_recorder = BarRecorder()
+    budget_learner = BudgetLearner()   # [v10.4] 실전 데이터 기반 매수 한도 학습기
 
     # [v9] 세션 내 거래 이력
     # - _traded_once_tickers:  1차 완료 (2차 허용)
@@ -631,6 +633,16 @@ def run_live(config: dict):
                         vol_3min = cand.get("vol_3min_ratio", 0)
 
                         COMPOUND_CAP = trading_cfg_inner.get("compound_cap", 25_000_000)
+
+                        # [v10.4] BudgetLearner 추천액 조회 (데이터 축적용 참고)
+                        budget_recommended = budget_learner.get_budget(
+                            ticker=ticker,
+                            price=price,
+                            vol_3min=vol_3min,
+                            entry_type=entry_label,
+                            current_cash_krw=int(paper_trader.cash),
+                        )
+
                         if is_third_cand or is_second_cand:
                             # [v10.3] 2·3차: 거래량 10% 이내 + 5000만원 상한
                             MAX_SINGLE_BUY_KRW = trading_cfg_inner.get("max_single_buy_krw", 50_000_000)
@@ -651,6 +663,11 @@ def run_live(config: dict):
                             else:
                                 buy_amount = portfolio_amount
 
+                        logger.info(
+                            f"[BudgetLearner] {ticker} {entry_label} 추천 ₩{budget_recommended:,.0f} / "
+                            f"실제 ₩{buy_amount:,.0f} (비율 {buy_amount/max(budget_recommended,1)*100:.0f}%)"
+                        )
+
                         result = paper_trader.buy_split(ticker, price, buy_amount, splits=10)
                         # [v9] 1·2·3차 구분 마킹
                         _mark_traded(ticker, is_second=is_second_cand and not is_third_cand,
@@ -660,6 +677,23 @@ def run_live(config: dict):
                             bb_trailing.register_entry(ticker, is_second=is_second_cand, is_third=is_third_cand)
                             current_count += 1
                             store.save_signal(sig)
+
+                            # [v10.4] BudgetLearner 거래 기록 (paper: slippage=0, fill_rate=1.0)
+                            try:
+                                from trader.market_hours import get_trading_date as _gtd
+                                budget_learner.record_trade(
+                                    ticker=ticker,
+                                    price=price,
+                                    vol_3min=vol_3min,
+                                    intended_krw=int(buy_amount),
+                                    filled_krw=int(result.get("total_krw", buy_amount)),
+                                    slippage_pct=0.0,   # paper: 슬리피지 미적용
+                                    entry_type=entry_label,
+                                    date_str=_gtd().isoformat() if hasattr(_gtd(), "isoformat") else str(_gtd()),
+                                )
+                            except Exception as e:
+                                logger.warning(f"budget_learner 기록 실패: {e}")
+
                             try:
                                 bar_recorder.record_entry(ticker, price, {
                                     "confidence": sig.get("confidence", 0),
@@ -670,7 +704,6 @@ def run_live(config: dict):
                                 })
                             except Exception as e:
                                 logger.error(f"bar_recorder entry 실패: {e}")
-                            entry_label = "2차" if is_second_cand else "1차"
                             send_notification(
                                 f"[가상] ✅ {ticker} {entry_label} 매수 완료\n"
                                 f"평균가: ${result.get('price', price):.2f}\n"
@@ -690,6 +723,26 @@ def run_live(config: dict):
                             bb_trailing.register_entry(ticker, is_second=is_second_cand, is_third=is_third_cand)
                             current_count += 1
                             store.save_signal(sig)
+
+                            # [v10.4] BudgetLearner 실전 기록 (실제 체결 데이터)
+                            try:
+                                filled_krw  = sum(o.get("filled_krw", 0) for o in orders) if isinstance(orders, list) else 0
+                                avg_fill_p  = sum(o.get("price", price) for o in orders) / len(orders) if isinstance(orders, list) and orders else price
+                                slippage    = ((avg_fill_p - price) / price) * 100 if price > 0 else 0.0
+                                from trader.market_hours import get_trading_date as _gtd2
+                                budget_learner.record_trade(
+                                    ticker=ticker,
+                                    price=price,
+                                    vol_3min=cand.get("vol_3min_ratio", 0),
+                                    intended_krw=int(cand.get("max_buy_krw_by_vol") or 0),
+                                    filled_krw=int(filled_krw),
+                                    slippage_pct=round(slippage, 2),
+                                    entry_type=entry_label,
+                                    date_str=_gtd2().isoformat() if hasattr(_gtd2(), "isoformat") else str(_gtd2()),
+                                )
+                            except Exception as e:
+                                logger.warning(f"budget_learner 실전 기록 실패: {e}")
+
                             try:
                                 bar_recorder.record_entry(ticker, price, {
                                     "confidence": sig.get("confidence", 0),
@@ -699,7 +752,6 @@ def run_live(config: dict):
                                 })
                             except Exception as e:
                                 logger.error(f"bar_recorder entry 실패: {e}")
-                            entry_label = "2차" if is_second_cand else "1차"
                             send_notification(
                                 f"✅ {ticker} {entry_label} 매수 완료\n"
                                 f"가격: ${price:.2f}\n"
