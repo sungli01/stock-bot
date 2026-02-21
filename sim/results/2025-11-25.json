@@ -1,10 +1,10 @@
 {
   "date": "2025-11-25",
   "config_stop_loss": -15.0,
-  "starting_krw": 1161766,
+  "starting_krw": 1000000,
   "ending_krw": 2860012,
-  "day_pnl_krw": 1698246,
-  "day_pnl_pct": 146.18,
+  "day_pnl_krw": 1860012,
+  "day_pnl_pct": 186.0,
   "buy_count": 2,
   "sell_count": 2,
   "win_count": 1,

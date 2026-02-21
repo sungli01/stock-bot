@@ -47,8 +47,9 @@ class BarScanner(threading.Thread):
         self._candidates: dict[str, float] = {}
         self._candidates_lock = threading.Lock()
 
-        # [v9] 1차 완료 종목 (외부에서 set_traded_once 호출로 등록)
-        self._traded_once: set[str] = set()
+        # [v9] 거래 이력 (1차→2차→3차→완전차단)
+        self._traded_once:  set[str] = set()
+        self._traded_twice: set[str] = set()
         self._traded_once_lock = threading.Lock()
 
         # ETF/레버리지 제외 목록
@@ -65,6 +66,11 @@ class BarScanner(threading.Thread):
         """스냅샷 스레드가 후보 종목 전달 {ticker: current_price}"""
         with self._candidates_lock:
             self._candidates = candidates.copy()
+
+    def set_traded_twice(self, ticker: str):
+        """2차 완료 등록 (3차 허용)"""
+        with self._traded_once_lock:
+            self._traded_twice.add(ticker)
 
     def set_traded_once(self, ticker: str):
         """[v9] 1차 매수 완료 종목 등록 → 이후 2차 vol spike 감지 허용"""
@@ -130,7 +136,8 @@ class BarScanner(threading.Thread):
             candidates = dict(self._candidates)
 
         with self._traded_once_lock:
-            traded_once = set(self._traded_once)
+            traded_once  = set(self._traded_once)
+            traded_twice = set(self._traded_twice)
 
         if not candidates:
             return
@@ -143,14 +150,16 @@ class BarScanner(threading.Thread):
             if self._is_etf(ticker):
                 continue
 
-            is_second = ticker in traded_once
+            is_second = ticker in traded_once and ticker not in traded_twice
+            is_third  = ticker in traded_twice   # 3차 허용
+            is_additional = is_second or is_third
 
             # 이미 큐에 있으면 스킵 (1차 큐에 있는 동안은 2차 등록 안 함)
             with self.queue_lock:
                 if ticker in self.monitoring_queue:
                     continue
 
-            threshold = self.vol_ratio_threshold_2nd if is_second else self.vol_ratio_threshold_1st
+            threshold = self.vol_ratio_threshold_2nd if is_additional else self.vol_ratio_threshold_1st
 
             cur_v, prev_v = self._get_completed_3min_bars(ticker)
             scanned += 1
@@ -168,9 +177,10 @@ class BarScanner(threading.Thread):
                         "vol_ratio": vol_ratio,
                         "cur_v": cur_v,
                         "prev_v": prev_v,
-                        "is_second": is_second,  # [v9] 2차 플래그
+                        "is_second": is_additional,  # [v9] 2·3차 플래그
+                        "is_third":  is_third,
                     }
-                entry_type = "2차" if is_second else "1차"
+                entry_type = "3차" if is_third else ("2차" if is_second else "1차")
                 logger.info(
                     f"📋 [BarScanner] {entry_type} 큐 등록: {ticker} "
                     f"3분봉 {vol_ratio:.0f}% (기준 {threshold:.0f}%) "
@@ -206,4 +216,5 @@ class BarScanner(threading.Thread):
             self.monitoring_queue.clear()
         with self._traded_once_lock:
             self._traded_once.clear()
+            self._traded_twice.clear()
         logger.info("🔄 BarScanner 세션 리셋")

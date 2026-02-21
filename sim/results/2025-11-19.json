@@ -1,20 +1,20 @@
 {
   "date": "2025-11-19",
   "config_stop_loss": -15.0,
-  "starting_krw": 793048,
-  "ending_krw": 11387345,
-  "day_pnl_krw": 10594297,
-  "day_pnl_pct": 1335.9,
-  "buy_count": 7,
-  "sell_count": 7,
+  "starting_krw": 1000000,
+  "ending_krw": 21751785,
+  "day_pnl_krw": 20751785,
+  "day_pnl_pct": 2075.18,
+  "buy_count": 8,
+  "sell_count": 8,
   "win_count": 3,
-  "loss_count": 4,
-  "win_rate_pct": 42.9,
-  "profit_factor": 0.46,
-  "vol_spikes_total": 52,
+  "loss_count": 5,
+  "win_rate_pct": 37.5,
+  "profit_factor": 0.22,
+  "vol_spikes_total": 58,
   "sell_reasons": {
     "TRAILING": 3,
-    "TIME_LIMIT": 1,
+    "TIME_LIMIT": 2,
     "STOP_LOSS": 3
   },
   "caught_100plus": [],
@@ -230,6 +230,36 @@
       "time_kst": "2025-11-20 05:37",
       "peak_price": 1.2699,
       "max_possible_pct": 1.6
+    },
+    {
+      "type": "BUY",
+      "entry_type": "3차",
+      "ticker": "SGBX",
+      "price": 7.57,
+      "buy_krw": 11387345,
+      "queue_price": 6.46,
+      "pct_from_queue": 17.2,
+      "vol_ratio": 483.0,
+      "vol_since_queue": null,
+      "max_krw_by_vol": null,
+      "vol_cap_applied": false,
+      "time_kst": "2025-11-20 07:22",
+      "daily_vol": 111688856.0
+    },
+    {
+      "type": "SELL",
+      "entry_type": "3차",
+      "ticker": "SGBX",
+      "entry_price": 7.57,
+      "sell_price": 6.89,
+      "pnl_pct": -8.98,
+      "pnl_krw": -1022906,
+      "buy_krw": 11387345,
+      "reason": "TIME_LIMIT(-9.0%,120분)",
+      "hold_min": 120.0,
+      "time_kst": "2025-11-20 09:22",
+      "peak_price": 7.87,
+      "max_possible_pct": 4.0
     }
   ]
 }

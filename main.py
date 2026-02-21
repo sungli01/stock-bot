@@ -262,25 +262,32 @@ def run_live(config: dict):
     bar_recorder = BarRecorder()
 
     # [v9] 세션 내 거래 이력
-    # - _traded_once_tickers: 1차 완료 (2차 진입 허용)
-    # - _traded_tickers: 2차 완료 or 완전 차단 (파일 저장)
+    # - _traded_once_tickers:  1차 완료 (2차 허용)
+    # - _traded_twice_tickers: 2차 완료 (3차 허용)
+    # - _traded_tickers:       3차 완료 or 완전 차단 (파일 저장)
     from trader.market_hours import get_trading_date as _get_td
     _today_date = _get_td()
-    _traded_tickers: set[str] = _load_traded_tickers(_today_date)   # 완전 차단
-    _traded_once_tickers: set[str] = set()                           # 1차 완료 (메모리)
+    _traded_tickers: set[str]       = _load_traded_tickers(_today_date)  # 완전 차단
+    _traded_once_tickers: set[str]  = set()                               # 1차 완료
+    _traded_twice_tickers: set[str] = set()                               # 2차 완료
 
     # 복원된 종목을 scanner에도 등록 (완전 차단 종목)
     for _t in _traded_tickers:
-        scanner.mark_signaled(_t, is_second=True)
+        scanner.mark_signaled(_t, is_third=True)
 
-    def _mark_traded(ticker: str, is_second: bool = False):
+    def _mark_traded(ticker: str, is_second: bool = False, is_third: bool = False):
         """거래 완료 마킹
-        - is_second=False (1차): _traded_once_tickers에 추가 + bar_scanner 2차 허용
-        - is_second=True  (2차): _traded_tickers에 추가 + 파일 저장 (완전 차단)
+        - 기본 (1차): _traded_once_tickers  + bar_scanner 2차 허용
+        - is_second (2차): _traded_twice_tickers + bar_scanner 3차 허용
+        - is_third  (3차): _traded_tickers 파일저장 → 완전 차단
         """
-        if is_second:
+        if is_third:
             _traded_tickers.add(ticker)
             _save_traded_tickers(_today_date, _traded_tickers)
+            scanner.mark_signaled(ticker, is_third=True)
+        elif is_second:
+            _traded_twice_tickers.add(ticker)
+            bar_scanner.set_traded_twice(ticker)
             scanner.mark_signaled(ticker, is_second=True)
         else:
             _traded_once_tickers.add(ticker)
@@ -372,6 +379,7 @@ def run_live(config: dict):
                     bar_recorder.reset_session()
                     _notifier.reset_dedup()
                     _traded_tickers.clear()
+                    _traded_twice_tickers.clear()
                     _today_date = _get_td()
                     _save_traded_tickers(_today_date, _traded_tickers)
                     _traded_once_tickers.clear()
@@ -483,14 +491,17 @@ def run_live(config: dict):
                     else:
                         executor.execute_sell(ticker)
 
-                    # [v9] 매도 후 1차/2차 판별
-                    if ticker in _traded_once_tickers and ticker not in _traded_tickers:
-                        # 1차 포지션 청산 → 2차 진입 대기 (완전 차단 X)
+                    # [v9] 매도 후 차수 판별
+                    if ticker in _traded_twice_tickers and ticker not in _traded_tickers:
+                        # 2차 포지션 청산 → 3차 진입 대기
+                        logger.info(f"💡 {ticker} 2차 포지션 청산 — 3차 진입 대기")
+                        _mark_traded(ticker, is_third=True)
+                    elif ticker in _traded_once_tickers and ticker not in _traded_twice_tickers:
+                        # 1차 포지션 청산 → 2차 진입 대기
                         logger.info(f"💡 {ticker} 1차 포지션 청산 — 2차 진입 대기")
-                        # bar_scanner는 이미 set_traded_once 완료, 재등록 불필요
                     else:
-                        # 2차 포지션 청산 → 완전 차단
-                        _mark_traded(ticker, is_second=True)
+                        # 3차 포지션 청산 → 완전 차단 (이미 처리됨)
+                        logger.info(f"🔒 {ticker} 3차 포지션 청산 — 완전 차단")
 
                     # Bar recorder — 매도 기록
                     try:
@@ -551,10 +562,15 @@ def run_live(config: dict):
 
                     # [v9] 재매수 차단
                     is_second_cand = cand.get("is_second", False)
+                    is_third_cand  = cand.get("is_third",  False)
                     if ticker in _traded_tickers:
-                        # 2차 완료 → 완전 차단
-                        logger.debug(f"⛔ {ticker} 재매수 차단 (2차 완료)")
-                        scanner.mark_signaled(ticker, is_second=True)
+                        # 3차 완료 → 완전 차단
+                        logger.debug(f"⛔ {ticker} 재매수 차단 (3차 완료)")
+                        scanner.mark_signaled(ticker, is_third=True)
+                        continue
+                    if ticker in _traded_twice_tickers and not is_third_cand:
+                        # 2차 완료 + 2차 큐 → 3차 큐 대기
+                        logger.debug(f"⏸️ {ticker} 2차 완료 — 3차 큐 대기 중")
                         continue
                     if ticker in _traded_once_tickers and not is_second_cand:
                         # 1차 완료 + 1차 큐 → 2차 큐 대기
@@ -562,8 +578,13 @@ def run_live(config: dict):
                         continue
 
                     # [v9] 엔진: 3분봉 vol spike + 가격 트리거 → analyzer bypass
-                    engine_v9 = config.get("scanner", {}).get("price_change_pct", 3.0) >= 20.0
-                    entry_label = "2차" if is_second_cand else "1차"
+                    engine_v9 = config.get("scanner", {}).get("price_change_pct", 3.0) >= 15.0
+                    if is_third_cand:
+                        entry_label = "3차"
+                    elif is_second_cand:
+                        entry_label = "2차"
+                    else:
+                        entry_label = "1차"
                     if engine_v9:
                         sig = {"signal": "BUY", "confidence": 100, "reason": f"v9_{entry_label}_momentum"}
                         logger.info(f"🔥 {ticker} v9 {entry_label} 모멘텀 엔진 — analyzer bypass")
@@ -601,13 +622,12 @@ def run_live(config: dict):
                         alloc = trading_cfg_inner.get("allocation_ratio", [0.7, 0.3])
                         vol_3min = cand.get("vol_3min_ratio", 0)
 
-                        if is_second_cand:
-                            # [v9] 2차: 풀 매수 (cap 기준)
-                            COMPOUND_CAP = trading_cfg_inner.get("compound_cap", 25_000_000)
+                        COMPOUND_CAP = trading_cfg_inner.get("compound_cap", 25_000_000)
+                        if is_third_cand or is_second_cand:
+                            # [v9] 2·3차: 풀 매수 (cap 기준)
                             buy_amount = min(paper_trader.cash, COMPOUND_CAP)
                         else:
                             # [v9] 1차: 배분 비율 vs 거래량 30% 캡 중 작은 값
-                            COMPOUND_CAP = trading_cfg_inner.get("compound_cap", 25_000_000)
                             base = min(paper_trader.cash, COMPOUND_CAP)
                             alloc_pct = alloc[0] if current_count == 0 else (alloc[1] if len(alloc) > 1 else alloc[0])
                             portfolio_amount = base * alloc_pct
@@ -619,8 +639,9 @@ def run_live(config: dict):
                                 buy_amount = portfolio_amount
 
                         result = paper_trader.buy_split(ticker, price, buy_amount, splits=10)
-                        # [v9] 1차/2차 구분 마킹
-                        _mark_traded(ticker, is_second=is_second_cand)
+                        # [v9] 1·2·3차 구분 마킹
+                        _mark_traded(ticker, is_second=is_second_cand and not is_third_cand,
+                                             is_third=is_third_cand)
 
                         if result:
                             bb_trailing.register_entry(ticker)

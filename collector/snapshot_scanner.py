@@ -50,25 +50,32 @@ class SnapshotScanner:
         self.queue_lock = queue_lock
 
         # [v9] 1차 완료 종목 (2차 신호 허용), 2차 완료 종목 (완전 차단)
-        self._signaled_once: set[str] = set()    # 1차 완료
-        self._signaled_twice: set[str] = set()   # 2차 완료 (완전 차단)
+        self._signaled_once:   set[str] = set()   # 1차 완료
+        self._signaled_twice:  set[str] = set()   # 2차 완료
+        self._signaled_thrice: set[str] = set()   # 3차 완료 (완전 차단)
 
         # 가격 추적
         self._prev_prices: dict[str, float] = {}
         self._prev_scan_time: float = 0.0
         self._last_snapshot: dict[str, dict] = {}
 
-    # ── 하위 호환: mark_signaled ───────────────────────────
-    def mark_signaled(self, ticker: str, is_second: bool = False):
+    # ── mark_signaled ───────────────────────────
+    def mark_signaled(self, ticker: str, is_second: bool = False, is_third: bool = False):
         """
         매수 완료 마킹
-        - is_second=False (1차): _signaled_once에 추가 → 2차 진입은 허용
-        - is_second=True  (2차): _signaled_twice에 추가 → 완전 차단
+        - 1차(기본):  _signaled_once  → 2차 허용
+        - 2차: _signaled_twice → 3차 허용
+        - 3차: _signaled_thrice → 완전 차단
         """
-        if is_second:
+        if is_third:
+            self._signaled_thrice.add(ticker)
             self._signaled_twice.add(ticker)
             self._signaled_once.add(ticker)
-            logger.info(f"🔒 {ticker} 2차 완료 → 당일 완전 차단")
+            logger.info(f"🔒 {ticker} 3차 완료 → 당일 완전 차단")
+        elif is_second:
+            self._signaled_twice.add(ticker)
+            self._signaled_once.add(ticker)
+            logger.info(f"2️⃣ {ticker} 2차 완료 → 3차 진입 대기")
         else:
             self._signaled_once.add(ticker)
             logger.info(f"1️⃣ {ticker} 1차 완료 → 2차 진입 대기")
@@ -145,8 +152,8 @@ class SnapshotScanner:
         # ── STEP 1: BarScanner 후보 추출 ──
         bar_candidates = {}
         for ticker, snap in snapshot_map.items():
-            # 2차 완료 → 완전 차단
-            if ticker in self._signaled_twice:
+            # 3차 완료 → 완전 차단
+            if ticker in self._signaled_thrice:
                 continue
 
             is_already_once = ticker in self._signaled_once  # 1차 완료 종목
@@ -173,11 +180,12 @@ class SnapshotScanner:
             queued = dict(self.monitoring_queue)
 
         for ticker, queue_info in queued.items():
-            # 2차 완료 → 완전 차단
-            if ticker in self._signaled_twice:
+            # 3차 완료 → 완전 차단
+            if ticker in self._signaled_thrice:
                 continue
 
             is_second = queue_info.get("is_second", False)
+            is_third  = queue_info.get("is_third", False)
 
             # [v9] 큐 등록 시점 일거래량 기록 (첫 스캔 시 한 번만)
             snap_for_vol = snapshot_map.get(ticker)
@@ -186,14 +194,13 @@ class SnapshotScanner:
                     if ticker in self.monitoring_queue:
                         self.monitoring_queue[ticker]["vol_at_queue"] = snap_for_vol.get("volume", 0)
 
-            # 1차 완료 후 2차: _signaled_once에 있어야 함 (1차 완료된 종목만)
-            if is_second and ticker not in self._signaled_once:
-                logger.debug(f"⚠️ {ticker} is_second=True지만 1차 미완료 — 2차 스킵")
-                continue
-
-            # 1차 진입: _signaled_once에 이미 있으면 스킵 (단, 2차 큐면 허용)
-            if not is_second and ticker in self._signaled_once:
-                continue
+            # 진입 차수별 조건 체크
+            if is_third and ticker not in self._signaled_twice:
+                continue   # 3차: 2차 완료 필수
+            elif is_second and not is_third and ticker not in self._signaled_once:
+                continue   # 2차: 1차 완료 필수
+            elif not is_second and ticker in self._signaled_once:
+                continue   # 1차: 이미 1차 완료면 스킵
 
             snap = snapshot_map.get(ticker)
             if not snap:
@@ -270,7 +277,8 @@ class SnapshotScanner:
                 "price_velocity": snap["price_velocity"],
                 "market_cap": 0,
                 "is_second": is_second,
-                "max_buy_krw_by_vol": round(max_buy_krw_by_vol) if max_buy_krw_by_vol else None,  # [v9] 거래량 30% 캡
+                "is_third":  is_third,
+                "max_buy_krw_by_vol": round(max_buy_krw_by_vol) if max_buy_krw_by_vol else None,
             })
 
         candidates.sort(key=lambda c: -c["change_pct"])
@@ -295,6 +303,7 @@ class SnapshotScanner:
     def reset_session(self):
         self._signaled_once.clear()
         self._signaled_twice.clear()
+        self._signaled_thrice.clear()
         self._prev_prices.clear()
         self._prev_scan_time = 0.0
         logger.info("🔄 Snapshot 스캐너 세션 리셋 (v9)")

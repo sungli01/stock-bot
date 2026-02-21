@@ -160,9 +160,10 @@ def run_engine(date_str: str, portfolio_krw: float, cfg: dict) -> dict:
     trades = []
     bar_buffers = defaultdict(list)   # ticker → 최근 봉 버퍼 (6개)
 
-    # 거래 이력
-    traded_once = set()     # 1차 완료
-    traded_twice = set()    # 2차 완료 (완전 차단)
+    # 거래 이력 (1차 → 2차 → 3차 → 완전 차단)
+    traded_once   = set()   # 1차 완료 (2차 허용)
+    traded_twice  = set()   # 2차 완료 (3차 허용)
+    traded_thrice = set()   # 3차 완료 (완전 차단)
 
     running_krw = portfolio_krw
     total_vol_spikes = 0
@@ -202,32 +203,40 @@ def run_engine(date_str: str, portfolio_krw: float, cfg: dict) -> dict:
         if cur_vol > 0 and prev_vol > 0:
             vol_ratio = (cur_vol / prev_vol) * 100
 
-            is_second = ticker in traded_once and ticker not in traded_twice
+            is_second = ticker in traded_once  and ticker not in traded_twice
+            is_third  = ticker in traded_twice and ticker not in traded_thrice
+            is_additional = is_second or is_third  # 2·3차 통합
 
-            # 후보 범위 체크 (1차만, 2차는 무제한)
-            change_from_open = (cur_price / daily_open - 1) * 100 if not is_second else 999
+            # 완전 차단: 3차 완료
+            if ticker in traded_thrice:
+                continue
 
-            if not is_second:
+            # 후보 범위 체크 (1차만, 2·3차는 무제한)
+            change_from_open = (cur_price / daily_open - 1) * 100
+
+            if not is_additional:
                 is_candidate = (cfg["candidate_change_pct"] <= change_from_open < cfg["candidate_max_change_pct"])
             else:
-                is_candidate = True  # 2차는 범위 무제한
+                is_candidate = True  # 2·3차는 범위 무제한
 
             # vol spike 감지 → 큐 등록
-            threshold = cfg["vol_spike_2nd_pct"] if is_second else cfg["vol_spike_1st_pct"]
-            if vol_ratio >= threshold and is_candidate and ticker not in queue and ticker not in traded_twice:
+            threshold = cfg["vol_spike_2nd_pct"] if is_additional else cfg["vol_spike_1st_pct"]
+            if vol_ratio >= threshold and is_candidate and ticker not in queue and ticker not in traded_thrice:
                 queue[ticker] = {
                     "price": cur_price,
                     "time_ms": ts,
-                    "is_second": is_second,
+                    "is_second": is_additional,  # 2차 또는 3차
+                    "is_third": is_third,
                     "vol_ratio": vol_ratio,
-                    "vol_at_queue": daily_vol,   # ★ 큐 등록 시점 누적 거래량
+                    "vol_at_queue": daily_vol,
                 }
                 total_vol_spikes += 1
 
         # ── 큐 → 매수 트리거 체크 ──
         if ticker in queue and ticker not in positions:
             q = queue[ticker]
-            is_second = q["is_second"]
+            is_additional = q["is_second"]      # 2차 또는 3차 플래그
+            is_third      = q.get("is_third", False)
             q_price = q["price"]
             pct_from_q = (cur_price / q_price - 1) * 100
 
@@ -237,11 +246,11 @@ def run_engine(date_str: str, portfolio_krw: float, cfg: dict) -> dict:
                 continue
 
             # 트리거 체크
-            trigger = cfg["trigger_2nd_pct"] if is_second else cfg["trigger_1st_pct"]
+            trigger = cfg["trigger_2nd_pct"] if is_additional else cfg["trigger_1st_pct"]
 
             if pct_from_q >= trigger:
                 # 일 거래량 체크 (1차만)
-                if not is_second:
+                if not is_additional:
                     req_vol = 50000 if cur_price >= 10 else 300000
                     if daily_vol < req_vol:
                         continue
@@ -251,31 +260,36 @@ def run_engine(date_str: str, portfolio_krw: float, cfg: dict) -> dict:
                     continue
 
                 # ── 매수금액 계산 ──────────────────────────
-                # [v9] 1차: 큐 등록 ~ 매수 시점 구간 거래량의 30% 이내
                 usd_krw = cfg.get("usd_krw_rate", 1450.0)
 
                 vol_at_queue = q.get("vol_at_queue", 0)
-                vol_since_queue = max(daily_vol - vol_at_queue, 1)  # 구간 거래량
-                max_shares_by_vol = vol_since_queue * 0.30          # 30% 캡
-                max_krw_by_vol = max_shares_by_vol * cur_price * usd_krw  # 주수→KRW
+                vol_since_queue = max(daily_vol - vol_at_queue, 1)
+                max_shares_by_vol = vol_since_queue * 0.30
+                max_krw_by_vol = max_shares_by_vol * cur_price * usd_krw
 
-                # 복리 cap 적용 (2500만 이하: 복리, 초과: 고정)
+                # 복리 cap (2500만 이하: 복리, 초과: 고정)
                 cap = cfg.get("compound_cap_krw", 25_000_000)
                 base_krw = min(running_krw, cap)
 
                 pos_idx = len(positions)
-                if is_second:
-                    buy_krw = base_krw  # 2차: 풀 매수 (거래량 캡 없음)
+                if is_additional:
+                    buy_krw = base_krw  # 2·3차: 풀 매수
                 else:
                     alloc = cfg["allocation_ratio"]
                     alloc_pct = alloc[pos_idx] if pos_idx < len(alloc) else alloc[-1]
-                    portfolio_krw = base_krw * alloc_pct
-                    # 1차: 포트 기준 vs 거래량 30% 중 작은 값
-                    buy_krw = min(portfolio_krw, max_krw_by_vol)
+                    alloc_krw = base_krw * alloc_pct  # ← 변수명 충돌 수정
+                    buy_krw = min(alloc_krw, max_krw_by_vol)
 
                 buy_krw = min(buy_krw, running_krw)
                 if buy_krw <= 0:
                     continue
+
+                if is_third:
+                    entry_type = "3차"
+                elif is_additional:
+                    entry_type = "2차"
+                else:
+                    entry_type = "1차"
 
                 pos = Position(
                     ticker=ticker,
@@ -283,12 +297,11 @@ def run_engine(date_str: str, portfolio_krw: float, cfg: dict) -> dict:
                     buy_krw=buy_krw,
                     entry_time_ms=ts,
                     queue_price=q_price,
-                    is_second=is_second,
+                    is_second=is_additional,
                 )
                 positions[ticker] = pos
                 del queue[ticker]
 
-                entry_type = "2차" if is_second else "1차"
                 trades.append({
                     "type": "BUY",
                     "entry_type": entry_type,
@@ -298,9 +311,9 @@ def run_engine(date_str: str, portfolio_krw: float, cfg: dict) -> dict:
                     "queue_price": q_price,
                     "pct_from_queue": round(pct_from_q, 1),
                     "vol_ratio": round(q.get("vol_ratio", 0), 0),
-                    "vol_since_queue": int(vol_since_queue) if not is_second else None,
-                    "max_krw_by_vol": round(max_krw_by_vol) if not is_second else None,
-                    "vol_cap_applied": (not is_second and max_krw_by_vol < (base_krw * cfg["allocation_ratio"][pos_idx] if pos_idx < len(cfg["allocation_ratio"]) else base_krw)),
+                    "vol_since_queue": int(vol_since_queue) if not is_additional else None,
+                    "max_krw_by_vol": round(max_krw_by_vol) if not is_additional else None,
+                    "vol_cap_applied": (not is_additional and max_krw_by_vol < (base_krw * cfg["allocation_ratio"][pos_idx] if pos_idx < len(cfg["allocation_ratio"]) else base_krw)),
                     "time_kst": event["time_kst"],
                     "daily_vol": daily_vol,
                 })
@@ -314,17 +327,25 @@ def run_engine(date_str: str, portfolio_krw: float, cfg: dict) -> dict:
                 pnl_k = pos.pnl_krw(cur_price)
                 running_krw += pos.buy_krw + pnl_k
 
-                # 1차/2차 완료 처리
-                if pos.is_second:
+                # 완료 처리: 1차→traded_once, 2차→traded_twice, 3차→traded_thrice
+                buy_entry = next((t for t in trades if t["type"]=="BUY"
+                                  and t["ticker"]==ticker
+                                  and t.get("time_kst")==pos.entry_time_ms), None)
+                entry_type_sold = "3차" if pos.is_second and ticker in traded_twice else \
+                                  "2차" if pos.is_second else "1차"
+
+                if entry_type_sold == "3차":
+                    traded_thrice.add(ticker)
+                    if ticker in queue: del queue[ticker]
+                elif entry_type_sold == "2차":
                     traded_twice.add(ticker)
-                    if ticker in queue:   # 2차 완료 → 큐 즉시 제거
-                        del queue[ticker]
+                    if ticker in queue: del queue[ticker]
                 else:
                     traded_once.add(ticker)
 
                 trades.append({
                     "type": "SELL",
-                    "entry_type": "2차" if pos.is_second else "1차",
+                    "entry_type": entry_type_sold,
                     "ticker": ticker,
                     "entry_price": pos.entry_price,
                     "sell_price": cur_price,
@@ -344,9 +365,11 @@ def run_engine(date_str: str, portfolio_krw: float, cfg: dict) -> dict:
         last_price = bar_buffers[ticker][-1]["c"] if bar_buffers[ticker] else pos.entry_price
         pnl_k = pos.pnl_krw(last_price)
         running_krw += pos.buy_krw + pnl_k
+        eot = "3차" if pos.is_second and ticker in traded_twice else \
+              "2차" if pos.is_second else "1차"
         trades.append({
             "type": "SELL",
-            "entry_type": "2차" if pos.is_second else "1차",
+            "entry_type": eot,
             "ticker": ticker,
             "entry_price": pos.entry_price,
             "sell_price": last_price,

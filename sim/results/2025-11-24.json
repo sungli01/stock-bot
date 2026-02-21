@@ -1,21 +1,21 @@
 {
   "date": "2025-11-24",
   "config_stop_loss": -15.0,
-  "starting_krw": 17500000,
-  "ending_krw": 147009577,
-  "day_pnl_krw": 129509577,
-  "day_pnl_pct": 740.05,
-  "buy_count": 14,
-  "sell_count": 14,
-  "win_count": 8,
+  "starting_krw": 1000000,
+  "ending_krw": 170733694,
+  "day_pnl_krw": 169733694,
+  "day_pnl_pct": 16973.37,
+  "buy_count": 15,
+  "sell_count": 15,
+  "win_count": 9,
   "loss_count": 6,
-  "win_rate_pct": 57.1,
-  "profit_factor": 1.27,
-  "vol_spikes_total": 220,
+  "win_rate_pct": 60.0,
+  "profit_factor": 0.98,
+  "vol_spikes_total": 236,
   "sell_reasons": {
-    "STOP_LOSS": 2,
-    "TRAILING": 8,
-    "TIME_LIMIT": 4
+    "STOP_LOSS": 3,
+    "TRAILING": 9,
+    "TIME_LIMIT": 3
   },
   "caught_100plus": [
     {
@@ -298,6 +298,36 @@
       "max_possible_pct": 2.5
     },
     {
+      "type": "BUY",
+      "entry_type": "3차",
+      "ticker": "INHD",
+      "price": 79.68,
+      "buy_krw": 25000000,
+      "queue_price": 61.2,
+      "pct_from_queue": 30.2,
+      "vol_ratio": 288.0,
+      "vol_since_queue": null,
+      "max_krw_by_vol": null,
+      "vol_cap_applied": false,
+      "time_kst": "2025-11-25 02:13",
+      "daily_vol": 6591751.916668001
+    },
+    {
+      "type": "SELL",
+      "entry_type": "3차",
+      "ticker": "INHD",
+      "entry_price": 79.68,
+      "sell_price": 66.96,
+      "pnl_pct": -15.96,
+      "pnl_krw": -3990964,
+      "buy_krw": 25000000,
+      "reason": "STOP_LOSS(-16.0%)",
+      "hold_min": 23.0,
+      "time_kst": "2025-11-25 02:36",
+      "peak_price": 79.68,
+      "max_possible_pct": 0.0
+    },
+    {
       "type": "SELL",
       "entry_type": "1차",
       "ticker": "BCG",
@@ -419,18 +449,33 @@
     },
     {
       "type": "BUY",
-      "entry_type": "2차",
+      "entry_type": "3차",
       "ticker": "AEHL",
-      "price": 3.01,
+      "price": 2.77,
       "buy_krw": 25000000,
-      "queue_price": 2.56,
-      "pct_from_queue": 17.6,
-      "vol_ratio": 297.0,
+      "queue_price": 2.38,
+      "pct_from_queue": 16.4,
+      "vol_ratio": 273.0,
       "vol_since_queue": null,
       "max_krw_by_vol": null,
       "vol_cap_applied": false,
-      "time_kst": "2025-11-25 06:38",
-      "daily_vol": 93071265.0
+      "time_kst": "2025-11-25 06:34",
+      "daily_vol": 92219936.0
+    },
+    {
+      "type": "SELL",
+      "entry_type": "3차",
+      "ticker": "AEHL",
+      "entry_price": 2.77,
+      "sell_price": 2.95,
+      "pnl_pct": 6.5,
+      "pnl_krw": 1624549,
+      "buy_krw": 25000000,
+      "reason": "TRAILING(peak+11.2%→+6.5%)",
+      "hold_min": 13.0,
+      "time_kst": "2025-11-25 06:47",
+      "peak_price": 3.08,
+      "max_possible_pct": 11.2
     },
     {
       "type": "SELL",
@@ -446,21 +491,6 @@
       "time_kst": "2025-11-25 08:10",
       "peak_price": 6.5,
       "max_possible_pct": 0.8
-    },
-    {
-      "type": "SELL",
-      "entry_type": "2차",
-      "ticker": "AEHL",
-      "entry_price": 3.01,
-      "sell_price": 2.8787,
-      "pnl_pct": -4.36,
-      "pnl_krw": -1090532,
-      "buy_krw": 25000000,
-      "reason": "TIME_LIMIT(-4.4%,120분)",
-      "hold_min": 120.0,
-      "time_kst": "2025-11-25 08:38",
-      "peak_price": 3.15,
-      "max_possible_pct": 4.7
     }
   ]
 }
