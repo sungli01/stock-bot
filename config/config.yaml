@@ -13,7 +13,7 @@ scanner:
   min_daily_volume_highprice: 50000   # 일 거래량: $10 이상 5만주 이상
   highprice_threshold: 10.0     # 고가 종목 기준 단가
   vol_3min_ratio_pct: 800.0     # [v10] 1차 Vol Spike: 3분봉 800%+
-  vol_3min_ratio_pct_2nd: 200.0 # [v9] 2차 Vol Spike: 3분봉 200%+
+  vol_3min_ratio_pct_2nd: 300.0 # [v10.2] 2차 Vol Spike: 3분봉 300%+ (최적화)
   max_pct_from_queue: 40.0      # [v9/Bug#3] 큐 대비 최대 40% 이내만 진입
   bar_scan_interval_sec: 30     # BarScanner 실행 주기 (초)
   queue_expire_sec: 3600        # [v9] 큐 만료: 60분 (30→60)
