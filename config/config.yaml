@@ -7,7 +7,7 @@ scanner:
   price_change_pct: 15.0        # [v9] 1차 매수 트리거: 큐 대비 +15%
   trigger_pct_2nd: 15.0         # [v9] 2차 매수 트리거: 큐 대비 +15%
   candidate_change_pct: 5.0     # BarScanner 후보 하단: 전일比 +5%+
-  candidate_max_change_pct: 40.0 # [v9] BarScanner 후보 상단: 전일比 +40% 미만
+  candidate_max_change_pct: 60.0 # [v9] BarScanner 후보 상단: 전일比 +60% 미만
   volume_spike_pct: 1000.0      # 미사용 (하위 호환)
   min_daily_volume: 300000      # 일 거래량: $10 미만 30만주 이상
   min_daily_volume_highprice: 50000   # 일 거래량: $10 이상 5만주 이상
