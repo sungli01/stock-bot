@@ -33,8 +33,9 @@ class BarScanner(threading.Thread):
         self.scanner_cfg = config.get("scanner", {})
 
         # [v9] 1차/2차 threshold 분리
-        self.vol_ratio_threshold_1st = self.scanner_cfg.get("vol_3min_ratio_pct", 1000.0)
-        self.vol_ratio_threshold_2nd = self.scanner_cfg.get("vol_3min_ratio_pct_2nd", 200.0)
+        self.vol_ratio_threshold_1st = self.scanner_cfg.get("vol_3min_ratio_pct",     800.0)
+        self.vol_ratio_threshold_2nd = self.scanner_cfg.get("vol_3min_ratio_pct_2nd", 300.0)
+        self.vol_ratio_threshold_3rd = self.scanner_cfg.get("vol_3min_ratio_pct_3rd", 300.0)
 
         self.scan_interval = self.scanner_cfg.get("bar_scan_interval_sec", 30)
         self.queue_expire_sec = self.scanner_cfg.get("queue_expire_sec", 3600)  # 큐 유효기간 (기본 60분)
@@ -159,7 +160,12 @@ class BarScanner(threading.Thread):
                 if ticker in self.monitoring_queue:
                     continue
 
-            threshold = self.vol_ratio_threshold_2nd if is_additional else self.vol_ratio_threshold_1st
+            if is_third:
+                threshold = self.vol_ratio_threshold_3rd
+            elif is_second:
+                threshold = self.vol_ratio_threshold_2nd
+            else:
+                threshold = self.vol_ratio_threshold_1st
 
             cur_v, prev_v = self._get_completed_3min_bars(ticker)
             scanned += 1
@@ -197,7 +203,7 @@ class BarScanner(threading.Thread):
             logger.debug(f"[BarScanner] {scanned}개 종목 3분봉 체크 완료")
 
     def run(self):
-        logger.info(f"🕯️ BarScanner v9 시작 — 30초마다 3분봉 완성봉 비교 (1차:{self.vol_ratio_threshold_1st:.0f}% / 2차:{self.vol_ratio_threshold_2nd:.0f}%)")
+        logger.info(f"🕯️ BarScanner v10 시작 — 30초마다 3분봉 완성봉 비교 (1차:{self.vol_ratio_threshold_1st:.0f}% / 2차:{self.vol_ratio_threshold_2nd:.0f}% / 3차:{self.vol_ratio_threshold_3rd:.0f}%)")
         while self._running:
             try:
                 self._scan()

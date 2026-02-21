@@ -30,9 +30,10 @@ class SnapshotScanner:
         self.max_price = self.scanner_cfg.get("max_price", 30.0)
 
         # 1차 트리거: 큐 대비 +20%
-        self.price_change_pct = self.scanner_cfg.get("price_change_pct", 20.0)
+        self.price_change_pct = self.scanner_cfg.get("price_change_pct", 10.0)
         # [v9] 2차 트리거: 큐 대비 +15%
-        self.trigger_pct_2nd = self.scanner_cfg.get("trigger_pct_2nd", 15.0)
+        self.trigger_pct_2nd = self.scanner_cfg.get("trigger_pct_2nd", 10.0)
+        self.trigger_pct_3rd = self.scanner_cfg.get("trigger_pct_3rd",  5.0)
         # [v9/Bug#3] 상단 진입 제한: 큐 대비 최대 40%
         self.max_pct_from_queue = self.scanner_cfg.get("max_pct_from_queue", 40.0)
 
@@ -235,7 +236,12 @@ class SnapshotScanner:
                 continue
 
             # 트리거 체크 (1차: +20%, 2차: +15%)
-            trigger_pct = self.trigger_pct_2nd if is_second else self.price_change_pct
+            if is_third:
+                trigger_pct = self.trigger_pct_3rd
+            elif is_second:
+                trigger_pct = self.trigger_pct_2nd
+            else:
+                trigger_pct = self.price_change_pct
 
             if pct_from_queue < trigger_pct:
                 logger.debug(

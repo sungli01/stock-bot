@@ -92,13 +92,14 @@ def get_trailing_drop(peak_pct: float, elapsed_min: float, cfg: dict = None) -> 
 
 # ── 포지션 클래스 ────────────────────────────────
 class Position:
-    def __init__(self, ticker, entry_price, buy_krw, entry_time_ms, queue_price, is_second):
+    def __init__(self, ticker, entry_price, buy_krw, entry_time_ms, queue_price, is_second, is_third=False):
         self.ticker = ticker
         self.entry_price = entry_price
         self.buy_krw = buy_krw
         self.entry_time_ms = entry_time_ms
         self.queue_price = queue_price
         self.is_second = is_second
+        self.is_third  = is_third
 
         self.peak_price = entry_price
         self.trailing_active = False
@@ -129,19 +130,22 @@ class Position:
         if elapsed >= cfg["max_hold_min"]:
             return True, f"TIME_LIMIT({pnl:.1f}%,{elapsed:.0f}분)"
 
-        # 3. 트레일링 — 1차/2차 분리 설정
+        # 3. 트레일링 — 1차/2차/3차 분리 설정
         peak_pnl = self.pnl_pct(self.peak_price)
-        if self.is_second:
-            # 2·3차: 별도 트레일링 파라미터
-            activate = cfg.get("trailing_activate_pct_2nd",
-                               cfg.get("trailing_activate_pct", 6.0))
-            cfg_2nd = dict(cfg)
-            cfg_2nd["trailing_activate_pct"] = activate
-            cfg_2nd["trailing_drop_low"]     = cfg.get("trailing_drop_low_2nd",
+        if self.is_third:
+            # 3차 전용 트레일링
+            use_cfg = dict(cfg)
+            use_cfg["trailing_activate_pct"] = cfg.get("trailing_activate_pct_3rd",
+                                                        cfg.get("trailing_activate_pct_2nd", 8.0))
+            use_cfg["trailing_drop_low"]     = cfg.get("trailing_drop_low_3rd",
+                                                        cfg.get("trailing_drop_low_2nd", 1.0))
+        elif self.is_second:
+            # 2차 전용 트레일링
+            use_cfg = dict(cfg)
+            use_cfg["trailing_activate_pct"] = cfg.get("trailing_activate_pct_2nd",
+                                                        cfg.get("trailing_activate_pct", 6.0))
+            use_cfg["trailing_drop_low"]     = cfg.get("trailing_drop_low_2nd",
                                                         cfg.get("trailing_drop_low", 2.0))
-            cfg_2nd["trailing_drop_mid"]     = cfg.get("trailing_drop_mid_2nd",
-                                                        cfg.get("trailing_drop_mid", 5.0))
-            use_cfg = cfg_2nd
         else:
             use_cfg = cfg
 
@@ -235,8 +239,13 @@ def run_engine(date_str: str, portfolio_krw: float, cfg: dict) -> dict:
             else:
                 is_candidate = True  # 2·3차는 범위 무제한
 
-            # vol spike 감지 → 큐 등록
-            threshold = cfg["vol_spike_2nd_pct"] if is_additional else cfg["vol_spike_1st_pct"]
+            # vol spike 감지 → 큐 등록 (1차/2차/3차 별도 임계값)
+            if is_third:
+                threshold = cfg.get("vol_spike_3rd_pct", cfg["vol_spike_2nd_pct"])
+            elif is_additional:
+                threshold = cfg["vol_spike_2nd_pct"]
+            else:
+                threshold = cfg["vol_spike_1st_pct"]
             if vol_ratio >= threshold and is_candidate and ticker not in queue and ticker not in traded_thrice:
                 queue[ticker] = {
                     "price": cur_price,
@@ -261,8 +270,13 @@ def run_engine(date_str: str, portfolio_krw: float, cfg: dict) -> dict:
                 del queue[ticker]
                 continue
 
-            # 트리거 체크
-            trigger = cfg["trigger_2nd_pct"] if is_additional else cfg["trigger_1st_pct"]
+            # 트리거 체크 (1차/2차/3차 별도)
+            if is_third:
+                trigger = cfg.get("trigger_3rd_pct", cfg["trigger_2nd_pct"])
+            elif is_additional:
+                trigger = cfg["trigger_2nd_pct"]
+            else:
+                trigger = cfg["trigger_1st_pct"]
 
             if pct_from_q >= trigger:
                 # 일 거래량 체크 (1차만)
@@ -326,6 +340,7 @@ def run_engine(date_str: str, portfolio_krw: float, cfg: dict) -> dict:
                     entry_time_ms=ts,
                     queue_price=q_price,
                     is_second=is_additional,
+                    is_third=is_third,
                 )
                 positions[ticker] = pos
                 running_krw -= buy_krw  # ← 매수 시 현금 차감 (회계 버그 수정)

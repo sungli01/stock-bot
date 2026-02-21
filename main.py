@@ -644,7 +644,7 @@ def run_live(config: dict):
                                              is_third=is_third_cand)
 
                         if result:
-                            bb_trailing.register_entry(ticker, is_second=is_second_cand)
+                            bb_trailing.register_entry(ticker, is_second=is_second_cand, is_third=is_third_cand)
                             current_count += 1
                             store.save_signal(sig)
                             try:
@@ -673,7 +673,7 @@ def run_live(config: dict):
                         _mark_traded(ticker, is_second=is_second_cand)
 
                         if orders:
-                            bb_trailing.register_entry(ticker, is_second=is_second_cand)
+                            bb_trailing.register_entry(ticker, is_second=is_second_cand, is_third=is_third_cand)
                             current_count += 1
                             store.save_signal(sig)
                             try:

@@ -30,6 +30,14 @@ DYNAMIC_TRAILING_2ND = [
     (80,  30.0),  # +80%~: -30%p
 ]
 
+# 3차 트레일링 (활성화 +10%, 초기 -0.5%p — 3차 최고점 직전 즉시 락인)
+DYNAMIC_TRAILING_3RD = [
+    (10,  0.5),   # [v10.3] +10~15%: -0.5%p (3차 극타이트, 즉시 락인)
+    (15,  5.0),   # +15~50%: -5%p
+    (50,  8.0),   # +50~80%: -8%p
+    (80,  30.0),  # +80%~: -30%p
+]
+
 # 시간 가중치: 경과 시간에 따라 트레일링 폭 조정 (배수)
 TIME_WEIGHT = [
     (0,  1.0),   # 0~10분: 표준
@@ -38,9 +46,14 @@ TIME_WEIGHT = [
 ]
 
 
-def _get_trailing_drop(peak_pct: float, elapsed_min: float, is_second: bool = False) -> float:
-    """수익률과 경과 시간에 따른 동적 트레일링 폭 계산 (1차/2차 분리)"""
-    table = DYNAMIC_TRAILING_2ND if is_second else DYNAMIC_TRAILING_1ST
+def _get_trailing_drop(peak_pct: float, elapsed_min: float, is_second: bool = False, is_third: bool = False) -> float:
+    """수익률과 경과 시간에 따른 동적 트레일링 폭 계산 (1차/2차/3차 분리)"""
+    if is_third:
+        table = DYNAMIC_TRAILING_3RD
+    elif is_second:
+        table = DYNAMIC_TRAILING_2ND
+    else:
+        table = DYNAMIC_TRAILING_1ST
     base_drop = table[0][1]
     for threshold, drop in table:
         if peak_pct >= threshold:
@@ -67,26 +80,32 @@ class BBTrailingStop:
         self.force_close_before_min = trading_cfg.get("force_close_before_min", 15)
         self.max_hold_minutes = trading_cfg.get("max_hold_minutes", 45)
 
-        # 1차 트레일링 활성화 기준
+        # 트레일링 활성화 기준 (1차/2차/3차 분리)
         self.trailing_activate_pct     = sell_cfg.get("trailing_activate_pct",     6.0)
-        # 2차 트레일링 활성화 기준 (별도)
         self.trailing_activate_pct_2nd = sell_cfg.get("trailing_activate_pct_2nd", 8.0)
+        self.trailing_activate_pct_3rd = sell_cfg.get("trailing_activate_pct_3rd", 10.0)
         self.absolute_stop_loss = sell_cfg.get("absolute_stop_loss_pct", -25.0)
 
         # 종목별 상태
         self._peak_profit: dict[str, float] = {}
         self._entry_time: dict[str, datetime] = {}
         self._trailing_active: dict[str, bool] = {}
-        self._is_second: dict[str, bool] = {}      # 1차/2차 구분
+        self._is_second: dict[str, bool] = {}
+        self._is_third:  dict[str, bool] = {}      # 3차 구분
 
-    def register_entry(self, ticker: str, is_second: bool = False):
+    def register_entry(self, ticker: str, is_second: bool = False, is_third: bool = False):
         """매수 시 호출 — 진입 시각 기록"""
         self._entry_time[ticker] = datetime.now(timezone.utc)
         self._trailing_active[ticker] = False
         self._peak_profit[ticker] = 0.0
         self._is_second[ticker] = is_second
-        label = "2차" if is_second else "1차"
-        act = self.trailing_activate_pct_2nd if is_second else self.trailing_activate_pct
+        self._is_third[ticker]  = is_third
+        if is_third:
+            label, act = "3차", self.trailing_activate_pct_3rd
+        elif is_second:
+            label, act = "2차", self.trailing_activate_pct_2nd
+        else:
+            label, act = "1차", self.trailing_activate_pct
         logger.info(f"⏱️ {ticker} {label} 진입 등록 (트레일링 +{act}% / max {self.max_hold_minutes}분)")
 
     def check_exit(self, ticker: str, current_price: float, avg_price: float) -> Optional[dict]:
@@ -125,15 +144,21 @@ class BBTrailingStop:
                 "pnl_pct": current_profit_pct,
             }
 
-        # 3. 트레일링 활성화 체크 (1차/2차 기준 분리)
+        # 3. 트레일링 활성화 체크 (1차/2차/3차 기준 분리)
         is_second = self._is_second.get(ticker, False)
-        activate_pct = self.trailing_activate_pct_2nd if is_second else self.trailing_activate_pct
+        is_third  = self._is_third.get(ticker,  False)
+        if is_third:
+            activate_pct = self.trailing_activate_pct_3rd
+        elif is_second:
+            activate_pct = self.trailing_activate_pct_2nd
+        else:
+            activate_pct = self.trailing_activate_pct
         if peak_profit_pct >= activate_pct:
             self._trailing_active[ticker] = True
 
         # 4. 동적 트레일링 매도
         if self._trailing_active.get(ticker, False):
-            trailing_drop = _get_trailing_drop(peak_profit_pct, elapsed_min, is_second)
+            trailing_drop = _get_trailing_drop(peak_profit_pct, elapsed_min, is_second, is_third)
             drop_from_peak = peak_profit_pct - current_profit_pct
 
             if drop_from_peak >= trailing_drop:
