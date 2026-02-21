@@ -264,20 +264,32 @@ def run_engine(date_str: str, portfolio_krw: float, cfg: dict) -> dict:
 
                 vol_at_queue = q.get("vol_at_queue", 0)
                 vol_since_queue = max(daily_vol - vol_at_queue, 1)
-                max_shares_by_vol = vol_since_queue * 0.30
+
+                # 1차: 3분봉 거래량 30% 캡 / 2·3차: 10% 캡
+                vol_cap_1st = cfg.get("vol_cap_1st_pct", 30.0) / 100.0
+                vol_cap_2nd = cfg.get("vol_cap_2nd_pct", 10.0) / 100.0
+                vol_cap = vol_cap_2nd if is_additional else vol_cap_1st
+                max_shares_by_vol = vol_since_queue * vol_cap
                 max_krw_by_vol = max_shares_by_vol * cur_price * usd_krw
 
                 # 복리 cap (2500만 이하: 복리, 초과: 고정)
+                # total_portfolio = 가용현금 + 보유중 포지션 원금
                 cap = cfg.get("compound_cap_krw", 25_000_000)
-                base_krw = min(running_krw, cap)
+                deployed_krw = sum(p.buy_krw for p in positions.values())
+                total_portfolio_krw = running_krw + deployed_krw
+                base_krw = min(total_portfolio_krw, cap)
+
+                # 1회 최대 투자금 상한 (2·3차: 5000만원)
+                max_single_buy = cfg.get("max_single_buy_krw", 50_000_000)
 
                 pos_idx = len(positions)
                 if is_additional:
-                    buy_krw = base_krw  # 2·3차: 풀 매수
+                    # 2·3차: 3분봉 거래량 10% 이내, 최대 5000만원
+                    buy_krw = min(running_krw, max_krw_by_vol, max_single_buy)
                 else:
                     alloc = cfg["allocation_ratio"]
                     alloc_pct = alloc[pos_idx] if pos_idx < len(alloc) else alloc[-1]
-                    alloc_krw = base_krw * alloc_pct  # ← 변수명 충돌 수정
+                    alloc_krw = base_krw * alloc_pct
                     buy_krw = min(alloc_krw, max_krw_by_vol)
 
                 buy_krw = min(buy_krw, running_krw)
@@ -300,6 +312,7 @@ def run_engine(date_str: str, portfolio_krw: float, cfg: dict) -> dict:
                     is_second=is_additional,
                 )
                 positions[ticker] = pos
+                running_krw -= buy_krw  # ← 매수 시 현금 차감 (회계 버그 수정)
                 del queue[ticker]
 
                 trades.append({
@@ -311,9 +324,9 @@ def run_engine(date_str: str, portfolio_krw: float, cfg: dict) -> dict:
                     "queue_price": q_price,
                     "pct_from_queue": round(pct_from_q, 1),
                     "vol_ratio": round(q.get("vol_ratio", 0), 0),
-                    "vol_since_queue": int(vol_since_queue) if not is_additional else None,
-                    "max_krw_by_vol": round(max_krw_by_vol) if not is_additional else None,
-                    "vol_cap_applied": (not is_additional and max_krw_by_vol < (base_krw * cfg["allocation_ratio"][pos_idx] if pos_idx < len(cfg["allocation_ratio"]) else base_krw)),
+                    "vol_since_queue": int(vol_since_queue),
+                    "max_krw_by_vol": round(max_krw_by_vol),
+                    "vol_cap_applied": (buy_krw >= max_krw_by_vol - 1),
                     "time_kst": event["time_kst"],
                     "daily_vol": daily_vol,
                 })

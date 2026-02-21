@@ -16,5 +16,8 @@
   "compound_mode": true,
   "compound_cap_krw": 25000000,
   "candidate_change_pct": 5.0,
-  "candidate_max_change_pct": 60.0
+  "candidate_max_change_pct": 60.0,
+  "vol_cap_1st_pct": 30.0,
+  "vol_cap_2nd_pct": 10.0,
+  "max_single_buy_krw": 50000000
 }
