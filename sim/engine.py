@@ -82,7 +82,7 @@ def get_trailing_drop(peak_pct: float, elapsed_min: float) -> float:
     elif peak_pct >= 15:
         base = 5.0
     else:
-        base = 3.0
+        base = 3.0   # +8~15%: -3%p (초기 급등, 타이트)
     if elapsed_min >= 30:
         base *= 0.8
     return base
