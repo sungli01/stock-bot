@@ -130,8 +130,8 @@
       "queue_price": 3.83,
       "pct_from_queue": 18.8,
       "vol_ratio": 338.0,
-      "vol_since_queue": null,
-      "max_krw_by_vol": null,
+      "vol_since_queue": 382819,
+      "max_krw_by_vol": 252564835,
       "vol_cap_applied": false,
       "time_kst": "2026-02-14 07:00",
       "daily_vol": 27430707

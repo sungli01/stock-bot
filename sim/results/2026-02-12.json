@@ -116,8 +116,8 @@
       "queue_price": 1.61,
       "pct_from_queue": 17.1,
       "vol_ratio": 200.0,
-      "vol_since_queue": null,
-      "max_krw_by_vol": null,
+      "vol_since_queue": 1769729,
+      "max_krw_by_vol": 483711179,
       "vol_cap_applied": false,
       "time_kst": "2026-02-13 01:52",
       "daily_vol": 37350358.0
@@ -146,8 +146,8 @@
       "queue_price": 0.99345,
       "pct_from_queue": 18.8,
       "vol_ratio": 225.0,
-      "vol_since_queue": null,
-      "max_krw_by_vol": null,
+      "vol_since_queue": 2817104,
+      "max_krw_by_vol": 482006494,
       "vol_cap_applied": false,
       "time_kst": "2026-02-13 02:35",
       "daily_vol": 21280474.0
@@ -206,8 +206,8 @@
       "queue_price": 1.9,
       "pct_from_queue": 16.3,
       "vol_ratio": 979.0,
-      "vol_since_queue": null,
-      "max_krw_by_vol": null,
+      "vol_since_queue": 602278,
+      "max_krw_by_vol": 192999985,
       "vol_cap_applied": false,
       "time_kst": "2026-02-13 07:27",
       "daily_vol": 63902133.0

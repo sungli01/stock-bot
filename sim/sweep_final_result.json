@@ -1,0 +1,280 @@
+{
+  "phase1_best": {
+    "final_krw": 1977959,
+    "total_return_pct": 97.8,
+    "profit_days": 34,
+    "loss_days": 26,
+    "total_trades": 544,
+    "win_rate_pct": 66.4,
+    "avg_win_pct": 8.2,
+    "avg_loss_pct": -12.8,
+    "rr_ratio": 0.64,
+    "be_winrate": 61.0,
+    "stop_loss_pct": -25.0
+  },
+  "phase2_best": {
+    "final_krw": 8394638,
+    "total_return_pct": 739.5,
+    "profit_days": 32,
+    "loss_days": 28,
+    "total_trades": 546,
+    "win_rate_pct": 66.5,
+    "avg_win_pct": 8.2,
+    "avg_loss_pct": -12.8,
+    "rr_ratio": 0.64,
+    "be_winrate": 61.0,
+    "allocation_ratio": [
+      0.7,
+      0.3
+    ]
+  },
+  "phase1": [
+    {
+      "final_krw": 685,
+      "total_return_pct": -99.9,
+      "profit_days": 11,
+      "loss_days": 49,
+      "total_trades": 620,
+      "win_rate_pct": 41.5,
+      "avg_win_pct": 7.7,
+      "avg_loss_pct": -7.0,
+      "rr_ratio": 1.1,
+      "be_winrate": 47.6,
+      "stop_loss_pct": -5.0
+    },
+    {
+      "final_krw": 2122,
+      "total_return_pct": -99.8,
+      "profit_days": 17,
+      "loss_days": 43,
+      "total_trades": 605,
+      "win_rate_pct": 48.6,
+      "avg_win_pct": 7.8,
+      "avg_loss_pct": -8.5,
+      "rr_ratio": 0.91,
+      "be_winrate": 52.3,
+      "stop_loss_pct": -7.0
+    },
+    {
+      "final_krw": 131812,
+      "total_return_pct": -86.8,
+      "profit_days": 26,
+      "loss_days": 34,
+      "total_trades": 586,
+      "win_rate_pct": 59.0,
+      "avg_win_pct": 8.0,
+      "avg_loss_pct": -10.7,
+      "rr_ratio": 0.75,
+      "be_winrate": 57.2,
+      "stop_loss_pct": -10.0
+    },
+    {
+      "final_krw": 97570,
+      "total_return_pct": -90.2,
+      "profit_days": 28,
+      "loss_days": 32,
+      "total_trades": 577,
+      "win_rate_pct": 61.5,
+      "avg_win_pct": 8.0,
+      "avg_loss_pct": -11.6,
+      "rr_ratio": 0.69,
+      "be_winrate": 59.3,
+      "stop_loss_pct": -12.0
+    },
+    {
+      "final_krw": 1551669,
+      "total_return_pct": 55.2,
+      "profit_days": 30,
+      "loss_days": 30,
+      "total_trades": 554,
+      "win_rate_pct": 64.6,
+      "avg_win_pct": 8.1,
+      "avg_loss_pct": -12.1,
+      "rr_ratio": 0.67,
+      "be_winrate": 59.8,
+      "stop_loss_pct": -15.0
+    },
+    {
+      "final_krw": 1026905,
+      "total_return_pct": 2.7,
+      "profit_days": 33,
+      "loss_days": 27,
+      "total_trades": 549,
+      "win_rate_pct": 65.2,
+      "avg_win_pct": 8.1,
+      "avg_loss_pct": -12.8,
+      "rr_ratio": 0.64,
+      "be_winrate": 61.0,
+      "stop_loss_pct": -18.0
+    },
+    {
+      "final_krw": 795429,
+      "total_return_pct": -20.5,
+      "profit_days": 33,
+      "loss_days": 27,
+      "total_trades": 551,
+      "win_rate_pct": 65.3,
+      "avg_win_pct": 8.4,
+      "avg_loss_pct": -13.1,
+      "rr_ratio": 0.64,
+      "be_winrate": 61.0,
+      "stop_loss_pct": -20.0
+    },
+    {
+      "final_krw": 1977959,
+      "total_return_pct": 97.8,
+      "profit_days": 34,
+      "loss_days": 26,
+      "total_trades": 544,
+      "win_rate_pct": 66.4,
+      "avg_win_pct": 8.2,
+      "avg_loss_pct": -12.8,
+      "rr_ratio": 0.64,
+      "be_winrate": 61.0,
+      "stop_loss_pct": -25.0
+    },
+    {
+      "final_krw": 482574,
+      "total_return_pct": -51.7,
+      "profit_days": 33,
+      "loss_days": 27,
+      "total_trades": 530,
+      "win_rate_pct": 66.0,
+      "avg_win_pct": 8.3,
+      "avg_loss_pct": -12.9,
+      "rr_ratio": 0.64,
+      "be_winrate": 61.0,
+      "stop_loss_pct": -30.0
+    }
+  ],
+  "phase2": [
+    {
+      "final_krw": 1246267,
+      "total_return_pct": 24.6,
+      "profit_days": 35,
+      "loss_days": 25,
+      "total_trades": 544,
+      "win_rate_pct": 66.4,
+      "avg_win_pct": 8.2,
+      "avg_loss_pct": -12.8,
+      "rr_ratio": 0.64,
+      "be_winrate": 61.0,
+      "allocation_ratio": [
+        0.1,
+        0.1
+      ]
+    },
+    {
+      "final_krw": 1583493,
+      "total_return_pct": 58.3,
+      "profit_days": 34,
+      "loss_days": 26,
+      "total_trades": 544,
+      "win_rate_pct": 66.4,
+      "avg_win_pct": 8.2,
+      "avg_loss_pct": -12.8,
+      "rr_ratio": 0.64,
+      "be_winrate": 61.0,
+      "allocation_ratio": [
+        0.15,
+        0.15
+      ]
+    },
+    {
+      "final_krw": 1977959,
+      "total_return_pct": 97.8,
+      "profit_days": 34,
+      "loss_days": 26,
+      "total_trades": 544,
+      "win_rate_pct": 66.4,
+      "avg_win_pct": 8.2,
+      "avg_loss_pct": -12.8,
+      "rr_ratio": 0.64,
+      "be_winrate": 61.0,
+      "allocation_ratio": [
+        0.2,
+        0.2
+      ]
+    },
+    {
+      "final_krw": 2432400,
+      "total_return_pct": 143.2,
+      "profit_days": 33,
+      "loss_days": 27,
+      "total_trades": 544,
+      "win_rate_pct": 66.4,
+      "avg_win_pct": 8.2,
+      "avg_loss_pct": -12.8,
+      "rr_ratio": 0.64,
+      "be_winrate": 61.0,
+      "allocation_ratio": [
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "final_krw": 3001564,
+      "total_return_pct": 200.2,
+      "profit_days": 32,
+      "loss_days": 28,
+      "total_trades": 544,
+      "win_rate_pct": 66.4,
+      "avg_win_pct": 8.2,
+      "avg_loss_pct": -12.8,
+      "rr_ratio": 0.64,
+      "be_winrate": 61.0,
+      "allocation_ratio": [
+        0.3,
+        0.3
+      ]
+    },
+    {
+      "final_krw": 4505212,
+      "total_return_pct": 350.5,
+      "profit_days": 33,
+      "loss_days": 27,
+      "total_trades": 546,
+      "win_rate_pct": 66.5,
+      "avg_win_pct": 8.2,
+      "avg_loss_pct": -12.8,
+      "rr_ratio": 0.64,
+      "be_winrate": 61.0,
+      "allocation_ratio": [
+        0.4,
+        0.4
+      ]
+    },
+    {
+      "final_krw": 6345646,
+      "total_return_pct": 534.6,
+      "profit_days": 33,
+      "loss_days": 27,
+      "total_trades": 546,
+      "win_rate_pct": 66.5,
+      "avg_win_pct": 8.2,
+      "avg_loss_pct": -12.8,
+      "rr_ratio": 0.64,
+      "be_winrate": 61.0,
+      "allocation_ratio": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "final_krw": 8394638,
+      "total_return_pct": 739.5,
+      "profit_days": 32,
+      "loss_days": 28,
+      "total_trades": 546,
+      "win_rate_pct": 66.5,
+      "avg_win_pct": 8.2,
+      "avg_loss_pct": -12.8,
+      "rr_ratio": 0.64,
+      "be_winrate": 61.0,
+      "allocation_ratio": [
+        0.7,
+        0.3
+      ]
+    }
+  ]
+}

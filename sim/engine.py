@@ -74,17 +74,19 @@ def compute_3min_vol(bar_buffer: list) -> tuple[float, float]:
 
 
 # ── 트레일링 폭 계산 ─────────────────────────────
-def get_trailing_drop(peak_pct: float, elapsed_min: float) -> float:
+def get_trailing_drop(peak_pct: float, elapsed_min: float, cfg: dict = None) -> float:
+    if cfg is None:
+        cfg = {}
     if peak_pct >= 80:
-        base = 30.0
+        base = cfg.get("trailing_drop_rocket", 30.0)
     elif peak_pct >= 50:
-        base = 8.0
+        base = cfg.get("trailing_drop_high",   8.0)
     elif peak_pct >= 15:
-        base = 5.0
+        base = cfg.get("trailing_drop_mid",    5.0)
     else:
-        base = 3.0   # +8~15%: -3%p (초기 급등, 타이트)
+        base = cfg.get("trailing_drop_low",    3.0)   # +8~15% 구간
     if elapsed_min >= 30:
-        base *= 0.8
+        base *= cfg.get("trailing_time_multiplier", 0.8)
     return base
 
 
@@ -133,7 +135,7 @@ class Position:
             self.trailing_active = True
 
         if self.trailing_active:
-            drop_width = get_trailing_drop(peak_pnl, elapsed)
+            drop_width = get_trailing_drop(peak_pnl, elapsed, cfg)
             drop_from_peak = peak_pnl - pnl
             if drop_from_peak >= drop_width:
                 return True, f"TRAILING(peak+{peak_pnl:.1f}%→+{pnl:.1f}%)"

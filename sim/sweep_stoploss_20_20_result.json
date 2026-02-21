@@ -1,0 +1,192 @@
+{
+  "best": {
+    "stop_loss_pct": -30.0,
+    "alloc_ratio": [
+      0.2,
+      0.2
+    ],
+    "final_krw": 228748,
+    "total_return_pct": -77.1,
+    "profit_days": 28,
+    "loss_days": 32,
+    "total_trades": 370,
+    "win_rate_pct": 58.1,
+    "sell_reasons": {
+      "TRAILING": 210,
+      "TIME_LIMIT": 127,
+      "STOP_LOSS": 27,
+      "FORCE_CLOSE_EOD": 6
+    }
+  },
+  "all": [
+    {
+      "stop_loss_pct": -5.0,
+      "alloc_ratio": [
+        0.2,
+        0.2
+      ],
+      "final_krw": 4728,
+      "total_return_pct": -99.5,
+      "profit_days": 14,
+      "loss_days": 46,
+      "total_trades": 443,
+      "win_rate_pct": 34.1,
+      "sell_reasons": {
+        "STOP_LOSS": 284,
+        "TRAILING": 147,
+        "TIME_LIMIT": 12
+      }
+    },
+    {
+      "stop_loss_pct": -7.0,
+      "alloc_ratio": [
+        0.2,
+        0.2
+      ],
+      "final_krw": 2494,
+      "total_return_pct": -99.8,
+      "profit_days": 16,
+      "loss_days": 44,
+      "total_trades": 427,
+      "win_rate_pct": 40.3,
+      "sell_reasons": {
+        "TRAILING": 168,
+        "TIME_LIMIT": 19,
+        "STOP_LOSS": 240
+      }
+    },
+    {
+      "stop_loss_pct": -10.0,
+      "alloc_ratio": [
+        0.2,
+        0.2
+      ],
+      "final_krw": 40673,
+      "total_return_pct": -95.9,
+      "profit_days": 22,
+      "loss_days": 38,
+      "total_trades": 411,
+      "win_rate_pct": 50.9,
+      "sell_reasons": {
+        "TRAILING": 202,
+        "TIME_LIMIT": 30,
+        "STOP_LOSS": 176,
+        "FORCE_CLOSE_EOD": 3
+      }
+    },
+    {
+      "stop_loss_pct": -12.0,
+      "alloc_ratio": [
+        0.2,
+        0.2
+      ],
+      "final_krw": 92726,
+      "total_return_pct": -90.7,
+      "profit_days": 25,
+      "loss_days": 35,
+      "total_trades": 407,
+      "win_rate_pct": 53.3,
+      "sell_reasons": {
+        "TRAILING": 212,
+        "TIME_LIMIT": 36,
+        "STOP_LOSS": 154,
+        "FORCE_CLOSE_EOD": 5
+      }
+    },
+    {
+      "stop_loss_pct": -15.0,
+      "alloc_ratio": [
+        0.2,
+        0.2
+      ],
+      "final_krw": 136704,
+      "total_return_pct": -86.3,
+      "profit_days": 23,
+      "loss_days": 37,
+      "total_trades": 397,
+      "win_rate_pct": 55.4,
+      "sell_reasons": {
+        "TRAILING": 214,
+        "TIME_LIMIT": 67,
+        "STOP_LOSS": 111,
+        "FORCE_CLOSE_EOD": 5
+      }
+    },
+    {
+      "stop_loss_pct": -18.0,
+      "alloc_ratio": [
+        0.2,
+        0.2
+      ],
+      "final_krw": 98456,
+      "total_return_pct": -90.2,
+      "profit_days": 23,
+      "loss_days": 37,
+      "total_trades": 390,
+      "win_rate_pct": 56.7,
+      "sell_reasons": {
+        "TRAILING": 216,
+        "TIME_LIMIT": 81,
+        "STOP_LOSS": 87,
+        "FORCE_CLOSE_EOD": 6
+      }
+    },
+    {
+      "stop_loss_pct": -20.0,
+      "alloc_ratio": [
+        0.2,
+        0.2
+      ],
+      "final_krw": 122074,
+      "total_return_pct": -87.8,
+      "profit_days": 24,
+      "loss_days": 36,
+      "total_trades": 386,
+      "win_rate_pct": 57.3,
+      "sell_reasons": {
+        "TRAILING": 216,
+        "TIME_LIMIT": 94,
+        "STOP_LOSS": 71,
+        "FORCE_CLOSE_EOD": 5
+      }
+    },
+    {
+      "stop_loss_pct": -25.0,
+      "alloc_ratio": [
+        0.2,
+        0.2
+      ],
+      "final_krw": 209404,
+      "total_return_pct": -79.1,
+      "profit_days": 26,
+      "loss_days": 34,
+      "total_trades": 375,
+      "win_rate_pct": 57.6,
+      "sell_reasons": {
+        "TRAILING": 212,
+        "TIME_LIMIT": 119,
+        "STOP_LOSS": 37,
+        "FORCE_CLOSE_EOD": 7
+      }
+    },
+    {
+      "stop_loss_pct": -30.0,
+      "alloc_ratio": [
+        0.2,
+        0.2
+      ],
+      "final_krw": 228748,
+      "total_return_pct": -77.1,
+      "profit_days": 28,
+      "loss_days": 32,
+      "total_trades": 370,
+      "win_rate_pct": 58.1,
+      "sell_reasons": {
+        "TRAILING": 210,
+        "TIME_LIMIT": 127,
+        "STOP_LOSS": 27,
+        "FORCE_CLOSE_EOD": 6
+      }
+    }
+  ]
+}

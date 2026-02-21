@@ -119,8 +119,8 @@
       "queue_price": 1.105,
       "pct_from_queue": 15.8,
       "vol_ratio": 250.0,
-      "vol_since_queue": null,
-      "max_krw_by_vol": null,
+      "vol_since_queue": 2155113,
+      "max_krw_by_vol": 399988973,
       "vol_cap_applied": false,
       "time_kst": "2026-02-11 04:02",
       "daily_vol": 11653183
@@ -149,8 +149,8 @@
       "queue_price": 1.36,
       "pct_from_queue": 17.6,
       "vol_ratio": 258.0,
-      "vol_since_queue": null,
-      "max_krw_by_vol": null,
+      "vol_since_queue": 388286,
+      "max_krw_by_vol": 90082352,
       "vol_cap_applied": false,
       "time_kst": "2026-02-11 07:18",
       "daily_vol": 19983732
