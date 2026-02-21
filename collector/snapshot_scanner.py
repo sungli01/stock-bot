@@ -142,23 +142,29 @@ class SnapshotScanner:
 
         self._last_snapshot = snapshot_map
 
-        # ── STEP 1: BarScanner 후보 추출 (5%~20% 급등, 가격 범위 내) ──
-        # [v9] 후보 상단 제한: 20% 미만만 (20% 이상은 이미 급등 중 → 1차 기회 지남)
+        # ── STEP 1: BarScanner 후보 추출 ──
         bar_candidates = {}
         for ticker, snap in snapshot_map.items():
             # 2차 완료 → 완전 차단
             if ticker in self._signaled_twice:
                 continue
-            # 가격 범위
-            if snap["price"] < self.min_price or snap["price"] > self.max_price:
-                continue
-            # 후보 범위: 5%+ AND 20% 미만
-            if snap["change_pct"] < self.candidate_change_pct:
-                continue
-            if snap["change_pct"] >= self.candidate_max_change_pct:
-                continue
-            # 1차 완료 종목: BarScanner가 2차 threshold로 처리하므로 여기선 포함 유지
-            bar_candidates[ticker] = snap["price"]
+
+            is_already_once = ticker in self._signaled_once  # 1차 완료 종목
+
+            if is_already_once:
+                # [v9 #2 수정] 2차 대기 종목: 변동률/가격 범위 제한 없이 포함
+                # (1차 완료 후 급등 중이어도 2차 vol spike 감지해야 함)
+                if snap["price"] > 0:
+                    bar_candidates[ticker] = snap["price"]
+            else:
+                # 1차 후보: $0.70~$30, 전일비 5%~20% 범위
+                if snap["price"] < self.min_price or snap["price"] > self.max_price:
+                    continue
+                if snap["change_pct"] < self.candidate_change_pct:
+                    continue
+                if snap["change_pct"] >= self.candidate_max_change_pct:
+                    continue
+                bar_candidates[ticker] = snap["price"]
 
         # ── STEP 2: 모니터링 큐 종목 중 트리거 도달 → 매수 후보 ──
         candidates = []
@@ -196,20 +202,8 @@ class SnapshotScanner:
             day_volume = snap.get("volume", 0)
             cur_price = snap.get("price", 0)
 
-            # 1차 진입: 일 거래량 체크 (2차는 무제한)
-            if not is_second:
-                required_vol = (
-                    self.min_daily_volume_highprice
-                    if cur_price >= self.highprice_threshold
-                    else self.min_daily_volume
-                )
-                if day_volume <= required_vol:
-                    logger.info(
-                        f"⛔ {ticker} 일 거래량 미달 — 매수 금지: "
-                        f"{day_volume:,.0f}주 ≤ {required_vol:,}주 "
-                        f"(단가${cur_price:.2f})"
-                    )
-                    continue
+            # [v9 #1 수정] 일 거래량 체크 제거 — 1차/2차 모두 무제한
+            # (거래량 30% 캡으로 매수량 자체를 제한하므로 최소 거래량 불필요)
 
             queue_price = queue_info.get("price", 0)
             if queue_price <= 0:
