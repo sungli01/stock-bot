@@ -1,0 +1,110 @@
+[
+  {
+    "trailing_activate_pct_3rd": 8.0,
+    "trailing_drop_low_3rd": 0.3,
+    "total_return_pct": 1907.73,
+    "profit_days": 38,
+    "win_rate": 66.8,
+    "profit_factor": 1.46,
+    "avg_win": 8.6,
+    "avg_loss": -11.83,
+    "final_krw": 20077263,
+    "cap_hit": true
+  },
+  {
+    "trailing_activate_pct_3rd": 8.0,
+    "trailing_drop_low_3rd": 0.5,
+    "total_return_pct": 1907.73,
+    "profit_days": 38,
+    "win_rate": 66.8,
+    "profit_factor": 1.46,
+    "avg_win": 8.6,
+    "avg_loss": -11.83,
+    "final_krw": 20077263,
+    "cap_hit": true
+  },
+  {
+    "trailing_activate_pct_3rd": 8.0,
+    "trailing_drop_low_3rd": 1.0,
+    "total_return_pct": 1907.73,
+    "profit_days": 38,
+    "win_rate": 66.8,
+    "profit_factor": 1.47,
+    "avg_win": 8.64,
+    "avg_loss": -11.83,
+    "final_krw": 20077263,
+    "cap_hit": true
+  },
+  {
+    "trailing_activate_pct_3rd": 10.0,
+    "trailing_drop_low_3rd": 0.3,
+    "total_return_pct": 1907.73,
+    "profit_days": 40,
+    "win_rate": 67.2,
+    "profit_factor": 1.53,
+    "avg_win": 8.87,
+    "avg_loss": -11.86,
+    "final_krw": 20077263,
+    "cap_hit": true
+  },
+  {
+    "trailing_activate_pct_3rd": 10.0,
+    "trailing_drop_low_3rd": 0.5,
+    "total_return_pct": 1907.73,
+    "profit_days": 40,
+    "win_rate": 67.2,
+    "profit_factor": 1.53,
+    "avg_win": 8.87,
+    "avg_loss": -11.86,
+    "final_krw": 20077263,
+    "cap_hit": true
+  },
+  {
+    "trailing_activate_pct_3rd": 10.0,
+    "trailing_drop_low_3rd": 1.0,
+    "total_return_pct": 1907.73,
+    "profit_days": 40,
+    "win_rate": 67.0,
+    "profit_factor": 1.52,
+    "avg_win": 8.86,
+    "avg_loss": -11.83,
+    "final_krw": 20077263,
+    "cap_hit": true
+  },
+  {
+    "trailing_activate_pct_3rd": 12.0,
+    "trailing_drop_low_3rd": 0.3,
+    "total_return_pct": 1907.73,
+    "profit_days": 40,
+    "win_rate": 66.7,
+    "profit_factor": 1.54,
+    "avg_win": 9.02,
+    "avg_loss": -11.76,
+    "final_krw": 20077263,
+    "cap_hit": true
+  },
+  {
+    "trailing_activate_pct_3rd": 12.0,
+    "trailing_drop_low_3rd": 0.5,
+    "total_return_pct": 1907.73,
+    "profit_days": 40,
+    "win_rate": 66.7,
+    "profit_factor": 1.54,
+    "avg_win": 9.02,
+    "avg_loss": -11.76,
+    "final_krw": 20077263,
+    "cap_hit": true
+  },
+  {
+    "trailing_activate_pct_3rd": 12.0,
+    "trailing_drop_low_3rd": 1.0,
+    "total_return_pct": 1907.73,
+    "profit_days": 40,
+    "win_rate": 66.6,
+    "profit_factor": 1.53,
+    "avg_win": 9.01,
+    "avg_loss": -11.73,
+    "final_krw": 20077263,
+    "cap_hit": true
+  }
+]

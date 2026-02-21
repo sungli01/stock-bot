@@ -1,0 +1,98 @@
+[
+  {
+    "block_after_stop": false,
+    "stop_loss": -20.0,
+    "total_return_pct": 2400.0,
+    "profit_days": 31,
+    "win_rate": 64.6,
+    "profit_factor": 1.35,
+    "avg_win": 8.8,
+    "avg_loss": -11.89,
+    "final_krw": 25000000,
+    "cap_hit": true
+  },
+  {
+    "block_after_stop": false,
+    "stop_loss": -15.0,
+    "total_return_pct": 2400.0,
+    "profit_days": 39,
+    "win_rate": 64.0,
+    "profit_factor": 1.42,
+    "avg_win": 9.32,
+    "avg_loss": -11.69,
+    "final_krw": 25000000,
+    "cap_hit": true
+  },
+  {
+    "block_after_stop": true,
+    "stop_loss": -15.0,
+    "total_return_pct": 2400.0,
+    "profit_days": 30,
+    "win_rate": 64.1,
+    "profit_factor": 1.35,
+    "avg_win": 8.85,
+    "avg_loss": -11.71,
+    "final_krw": 25000000,
+    "cap_hit": true
+  },
+  {
+    "block_after_stop": false,
+    "stop_loss": -25.0,
+    "total_return_pct": 2241.14,
+    "profit_days": 34,
+    "win_rate": 65.3,
+    "profit_factor": 1.42,
+    "avg_win": 8.94,
+    "avg_loss": -11.86,
+    "final_krw": 23411409,
+    "cap_hit": true
+  },
+  {
+    "block_after_stop": true,
+    "stop_loss": -25.0,
+    "total_return_pct": 1866.02,
+    "profit_days": 33,
+    "win_rate": 66.0,
+    "profit_factor": 1.42,
+    "avg_win": 8.82,
+    "avg_loss": -12.06,
+    "final_krw": 19660215,
+    "cap_hit": true
+  },
+  {
+    "block_after_stop": true,
+    "stop_loss": -20.0,
+    "total_return_pct": 1273.37,
+    "profit_days": 29,
+    "win_rate": 65.9,
+    "profit_factor": 1.31,
+    "avg_win": 8.48,
+    "avg_loss": -12.48,
+    "final_krw": 13733717,
+    "cap_hit": false
+  },
+  {
+    "block_after_stop": false,
+    "stop_loss": -10.0,
+    "total_return_pct": 737.02,
+    "profit_days": 35,
+    "win_rate": 58.2,
+    "profit_factor": 1.21,
+    "avg_win": 8.73,
+    "avg_loss": -10.08,
+    "final_krw": 8370191,
+    "cap_hit": true
+  },
+  {
+    "block_after_stop": true,
+    "stop_loss": -10.0,
+    "total_return_pct": 506.31,
+    "profit_days": 30,
+    "win_rate": 60.0,
+    "profit_factor": 1.24,
+    "avg_win": 8.48,
+    "avg_loss": -10.27,
+    "final_krw": 6063091,
+    "cap_hit": false
+  }
+]

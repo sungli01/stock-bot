@@ -1,6 +1,6 @@
 {
   "initial_krw": 1000000,
-  "stop_loss_pct": -25.0,
+  "stop_loss_pct": -15.0,
   "trailing_activate_pct": 6.0,
   "trailing_activate_pct_2nd": 8.0,
   "trailing_drop_low_2nd": 1.0,
@@ -20,7 +20,7 @@
   "trigger_2nd_pct": 10.0,
   "max_pct_from_queue": 40.0,
   "queue_expire_min": 60,
-  "max_hold_min": 120,
+  "max_hold_min": 90,
   "max_positions": 2,
   "allocation_ratio": [0.7, 0.3],
   "usd_krw_rate": 1450.0,
