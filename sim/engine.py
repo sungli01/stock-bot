@@ -129,13 +129,27 @@ class Position:
         if elapsed >= cfg["max_hold_min"]:
             return True, f"TIME_LIMIT({pnl:.1f}%,{elapsed:.0f}분)"
 
-        # 3. 트레일링 활성화
+        # 3. 트레일링 — 1차/2차 분리 설정
         peak_pnl = self.pnl_pct(self.peak_price)
-        if peak_pnl >= cfg["trailing_activate_pct"]:
+        if self.is_second:
+            # 2·3차: 별도 트레일링 파라미터
+            activate = cfg.get("trailing_activate_pct_2nd",
+                               cfg.get("trailing_activate_pct", 6.0))
+            cfg_2nd = dict(cfg)
+            cfg_2nd["trailing_activate_pct"] = activate
+            cfg_2nd["trailing_drop_low"]     = cfg.get("trailing_drop_low_2nd",
+                                                        cfg.get("trailing_drop_low", 2.0))
+            cfg_2nd["trailing_drop_mid"]     = cfg.get("trailing_drop_mid_2nd",
+                                                        cfg.get("trailing_drop_mid", 5.0))
+            use_cfg = cfg_2nd
+        else:
+            use_cfg = cfg
+
+        if peak_pnl >= use_cfg["trailing_activate_pct"]:
             self.trailing_active = True
 
         if self.trailing_active:
-            drop_width = get_trailing_drop(peak_pnl, elapsed, cfg)
+            drop_width = get_trailing_drop(peak_pnl, elapsed, use_cfg)
             drop_from_peak = peak_pnl - pnl
             if drop_from_peak >= drop_width:
                 return True, f"TRAILING(peak+{peak_pnl:.1f}%→+{pnl:.1f}%)"

@@ -14,11 +14,20 @@ logger = logging.getLogger(__name__)
 
 # 수익 구간별 트레일링 폭 (peak_profit_pct, trailing_drop_pct)
 # peak가 해당 구간 이상이면 그 폭 적용 (마지막 매칭)
-DYNAMIC_TRAILING = [
-    (6,   2.0),   # [v10] +6~15%: -2%p (초기 급등, 타이트)
-    (15,  5.0),   # +15~50%: -5%p (등락 시작, 여유)
-    (50,  8.0),   # +50~80%: -8%p (큰 등락 허용)
-    (80,  30.0),  # +80%~: -30%p (대폭등, 넉넉한 여유)
+# 1차 트레일링 (활성화 +6%, 초기 -2%p)
+DYNAMIC_TRAILING_1ST = [
+    (6,   2.0),   # [v10] +6~15%: -2%p
+    (15,  5.0),   # +15~50%: -5%p
+    (50,  8.0),   # +50~80%: -8%p
+    (80,  30.0),  # +80%~: -30%p
+]
+
+# 2차 트레일링 (활성화 +8%, 초기 -1%p — 2차 파동 확인 후 고점 타이트 락인)
+DYNAMIC_TRAILING_2ND = [
+    (8,   1.0),   # [v10] +8~15%: -1%p (2차 고점권, 초타이트)
+    (15,  5.0),   # +15~50%: -5%p
+    (50,  8.0),   # +50~80%: -8%p
+    (80,  30.0),  # +80%~: -30%p
 ]
 
 # 시간 가중치: 경과 시간에 따라 트레일링 폭 조정 (배수)
@@ -29,11 +38,11 @@ TIME_WEIGHT = [
 ]
 
 
-def _get_trailing_drop(peak_pct: float, elapsed_min: float) -> float:
-    """수익률과 경과 시간에 따른 동적 트레일링 폭 계산"""
-    # 수익 구간별 기본 폭
-    base_drop = 3.0
-    for threshold, drop in DYNAMIC_TRAILING:
+def _get_trailing_drop(peak_pct: float, elapsed_min: float, is_second: bool = False) -> float:
+    """수익률과 경과 시간에 따른 동적 트레일링 폭 계산 (1차/2차 분리)"""
+    table = DYNAMIC_TRAILING_2ND if is_second else DYNAMIC_TRAILING_1ST
+    base_drop = table[0][1]
+    for threshold, drop in table:
         if peak_pct >= threshold:
             base_drop = drop
         else:
@@ -58,21 +67,27 @@ class BBTrailingStop:
         self.force_close_before_min = trading_cfg.get("force_close_before_min", 15)
         self.max_hold_minutes = trading_cfg.get("max_hold_minutes", 45)
 
-        # 트레일링 활성화 기준
-        self.trailing_activate_pct = sell_cfg.get("trailing_activate_pct", 8.0)
-        self.absolute_stop_loss = sell_cfg.get("absolute_stop_loss_pct", -7.0)
+        # 1차 트레일링 활성화 기준
+        self.trailing_activate_pct     = sell_cfg.get("trailing_activate_pct",     6.0)
+        # 2차 트레일링 활성화 기준 (별도)
+        self.trailing_activate_pct_2nd = sell_cfg.get("trailing_activate_pct_2nd", 8.0)
+        self.absolute_stop_loss = sell_cfg.get("absolute_stop_loss_pct", -25.0)
 
         # 종목별 상태
         self._peak_profit: dict[str, float] = {}
         self._entry_time: dict[str, datetime] = {}
         self._trailing_active: dict[str, bool] = {}
+        self._is_second: dict[str, bool] = {}      # 1차/2차 구분
 
-    def register_entry(self, ticker: str):
+    def register_entry(self, ticker: str, is_second: bool = False):
         """매수 시 호출 — 진입 시각 기록"""
         self._entry_time[ticker] = datetime.now(timezone.utc)
         self._trailing_active[ticker] = False
         self._peak_profit[ticker] = 0.0
-        logger.info(f"⏱️ {ticker} 진입 등록 (max {self.max_hold_minutes}분)")
+        self._is_second[ticker] = is_second
+        label = "2차" if is_second else "1차"
+        act = self.trailing_activate_pct_2nd if is_second else self.trailing_activate_pct
+        logger.info(f"⏱️ {ticker} {label} 진입 등록 (트레일링 +{act}% / max {self.max_hold_minutes}분)")
 
     def check_exit(self, ticker: str, current_price: float, avg_price: float) -> Optional[dict]:
         """매도 조건 체크"""
@@ -110,13 +125,15 @@ class BBTrailingStop:
                 "pnl_pct": current_profit_pct,
             }
 
-        # 3. 트레일링 활성화 체크
-        if peak_profit_pct >= self.trailing_activate_pct:
+        # 3. 트레일링 활성화 체크 (1차/2차 기준 분리)
+        is_second = self._is_second.get(ticker, False)
+        activate_pct = self.trailing_activate_pct_2nd if is_second else self.trailing_activate_pct
+        if peak_profit_pct >= activate_pct:
             self._trailing_active[ticker] = True
 
         # 4. 동적 트레일링 매도
         if self._trailing_active.get(ticker, False):
-            trailing_drop = _get_trailing_drop(peak_profit_pct, elapsed_min)
+            trailing_drop = _get_trailing_drop(peak_profit_pct, elapsed_min, is_second)
             drop_from_peak = peak_profit_pct - current_profit_pct
 
             if drop_from_peak >= trailing_drop:
