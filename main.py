@@ -602,12 +602,21 @@ def run_live(config: dict):
                         vol_3min = cand.get("vol_3min_ratio", 0)
 
                         if is_second_cand:
-                            # [v9] 2차: 풀 매수 (가용 현금 전액)
-                            buy_amount = paper_trader.cash
+                            # [v9] 2차: 풀 매수 (cap 기준)
+                            COMPOUND_CAP = trading_cfg_inner.get("compound_cap", 25_000_000)
+                            buy_amount = min(paper_trader.cash, COMPOUND_CAP)
                         else:
-                            # 1차: 배분 비율 적용
+                            # [v9] 1차: 배분 비율 vs 거래량 30% 캡 중 작은 값
+                            COMPOUND_CAP = trading_cfg_inner.get("compound_cap", 25_000_000)
+                            base = min(paper_trader.cash, COMPOUND_CAP)
                             alloc_pct = alloc[0] if current_count == 0 else (alloc[1] if len(alloc) > 1 else alloc[0])
-                            buy_amount = paper_trader.cash * alloc_pct
+                            portfolio_amount = base * alloc_pct
+                            vol_cap = cand.get("max_buy_krw_by_vol")
+                            if vol_cap and vol_cap < portfolio_amount:
+                                buy_amount = vol_cap
+                                logger.info(f"[v9] {ticker} 거래량 캡 적용: ₩{portfolio_amount:,.0f} → ₩{vol_cap:,.0f}")
+                            else:
+                                buy_amount = portfolio_amount
 
                         result = paper_trader.buy_split(ticker, price, buy_amount, splits=10)
                         # [v9] 1차/2차 구분 마킹

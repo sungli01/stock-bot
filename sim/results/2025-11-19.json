@@ -1,0 +1,20 @@
+{
+  "date": "2025-11-19",
+  "config_stop_loss": -15.0,
+  "starting_krw": 1000000,
+  "ending_krw": 1000000,
+  "day_pnl_krw": 0,
+  "day_pnl_pct": 0.0,
+  "buy_count": 0,
+  "sell_count": 0,
+  "win_count": 0,
+  "loss_count": 0,
+  "win_rate_pct": 0.0,
+  "profit_factor": 0.0,
+  "vol_spikes_total": 18,
+  "sell_reasons": {},
+  "caught_100plus": [],
+  "caught_100plus_count": 0,
+  "total_100plus_count": 0,
+  "trades": []
+}

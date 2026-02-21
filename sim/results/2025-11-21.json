@@ -1,0 +1,86 @@
+{
+  "date": "2025-11-21",
+  "config_stop_loss": -15.0,
+  "starting_krw": 1000000,
+  "ending_krw": 3284305,
+  "day_pnl_krw": 2284305,
+  "day_pnl_pct": 228.43,
+  "buy_count": 2,
+  "sell_count": 2,
+  "win_count": 1,
+  "loss_count": 1,
+  "win_rate_pct": 50.0,
+  "profit_factor": 0.07,
+  "vol_spikes_total": 314,
+  "sell_reasons": {
+    "TRAILING": 1,
+    "FORCE_CLOSE_EOD": 1
+  },
+  "caught_100plus": [
+    {
+      "ticker": "TYGO",
+      "max_gain_pct": 104.2,
+      "caught": false
+    },
+    {
+      "ticker": "FOXX",
+      "max_gain_pct": 115.2,
+      "caught": false
+    }
+  ],
+  "caught_100plus_count": 0,
+  "total_100plus_count": 2,
+  "trades": [
+    {
+      "type": "BUY",
+      "entry_type": "1차",
+      "ticker": "CCTG",
+      "price": 2.58,
+      "buy_krw": 700000,
+      "queue_price": 2.023,
+      "pct_from_queue": 27.5,
+      "vol_ratio": 3447.0,
+      "time_kst": "2025-11-22 03:02",
+      "daily_vol": 4037706.499999998
+    },
+    {
+      "type": "SELL",
+      "entry_type": "1차",
+      "ticker": "CCTG",
+      "entry_price": 2.58,
+      "sell_price": 2.612,
+      "pnl_pct": 1.24,
+      "pnl_krw": 8682,
+      "buy_krw": 700000,
+      "reason": "TRAILING(peak+8.5%→+1.2%)",
+      "hold_min": 25.0,
+      "time_kst": "2025-11-22 03:27",
+      "peak_price": 2.799,
+      "max_possible_pct": 31.6
+    },
+    {
+      "type": "BUY",
+      "entry_type": "2차",
+      "ticker": "CCTG",
+      "price": 2.35,
+      "buy_krw": 1708682,
+      "queue_price": 2.022,
+      "pct_from_queue": 16.2,
+      "vol_ratio": 269.0,
+      "time_kst": "2025-11-22 08:27",
+      "daily_vol": 7155621.100000001
+    },
+    {
+      "type": "SELL",
+      "entry_type": "2차",
+      "ticker": "CCTG",
+      "entry_price": 2.35,
+      "sell_price": 2.167,
+      "pnl_pct": -7.79,
+      "pnl_krw": -133059,
+      "reason": "FORCE_CLOSE_EOD",
+      "hold_min": 999,
+      "time_kst": "EOD"
+    }
+  ]
+}

@@ -173,6 +173,13 @@ class SnapshotScanner:
 
             is_second = queue_info.get("is_second", False)
 
+            # [v9] 큐 등록 시점 일거래량 기록 (첫 스캔 시 한 번만)
+            snap_for_vol = snapshot_map.get(ticker)
+            if snap_for_vol and "vol_at_queue" not in queue_info:
+                with self.queue_lock:
+                    if ticker in self.monitoring_queue:
+                        self.monitoring_queue[ticker]["vol_at_queue"] = snap_for_vol.get("volume", 0)
+
             # 1차 완료 후 2차: _signaled_once에 있어야 함 (1차 완료된 종목만)
             if is_second and ticker not in self._signaled_once:
                 logger.debug(f"⚠️ {ticker} is_second=True지만 1차 미완료 — 2차 스킵")
@@ -240,10 +247,20 @@ class SnapshotScanner:
             vol_ratio = queue_info.get("vol_ratio", 999.0)
             entry_type = "2차" if is_second else "1차"
 
+            # [v9] 1차 매수량: 큐 등록 ~ 매수 시점 구간 거래량의 30% 이내
+            USD_KRW = float(os.getenv("USD_KRW_RATE", "1450.0"))
+            max_buy_krw_by_vol = None
+            if not is_second:
+                vol_at_queue = queue_info.get("vol_at_queue", 0)
+                vol_since_queue = max(day_volume - vol_at_queue, 1)
+                max_shares_30pct = vol_since_queue * 0.30
+                max_buy_krw_by_vol = max_shares_30pct * cur_price * USD_KRW
+
             logger.info(
                 f"🎯 {entry_type} 매수 후보: {ticker} ${snap['price']:.2f} "
                 f"기준대비 {pct_from_queue:+.1f}% (기준${queue_price:.2f}) "
                 f"3분봉:{vol_ratio:.0f}%"
+                + (f" | 거래량캡 ₩{max_buy_krw_by_vol:,.0f}" if max_buy_krw_by_vol else "")
             )
 
             candidates.append({
@@ -258,7 +275,8 @@ class SnapshotScanner:
                 "prev_close": snap["prev_close"],
                 "price_velocity": snap["price_velocity"],
                 "market_cap": 0,
-                "is_second": is_second,  # [v9] 1차/2차 구분
+                "is_second": is_second,
+                "max_buy_krw_by_vol": round(max_buy_krw_by_vol) if max_buy_krw_by_vol else None,  # [v9] 거래량 30% 캡
             })
 
         candidates.sort(key=lambda c: -c["change_pct"])
