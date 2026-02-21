@@ -1,0 +1,115 @@
+{
+  "version": "v10.4",
+  "initial_krw": 10000000,
+  "compound_cap": 25000000,
+  "max_single_buy_2nd_3rd": 50000000,
+  "trading_days": 252,
+  "final_krw": 23298126,
+  "profit_krw": 13298126,
+  "total_return_pct": 132.98,
+  "peak_krw": 56577770,
+  "profit_days": 160,
+  "total_buys": 2609,
+  "win_rate": 64.0,
+  "profit_factor": 1.6,
+  "cap_hit": true,
+  "cap_hit_day": 14,
+  "monthly": [
+    {
+      "month": 1,
+      "day": 21,
+      "portfolio": 25000000,
+      "total_ret": 150.0,
+      "monthly_gain": 150.0,
+      "win_rate": 61.92893401015228
+    },
+    {
+      "month": 2,
+      "day": 42,
+      "portfolio": 13874795,
+      "total_ret": 38.747949999999996,
+      "monthly_gain": -44.50082,
+      "win_rate": 62.99019607843137
+    },
+    {
+      "month": 3,
+      "day": 63,
+      "portfolio": 16609604,
+      "total_ret": 66.09604,
+      "monthly_gain": 19.7106263552002,
+      "win_rate": 63.26836581709146
+    },
+    {
+      "month": 4,
+      "day": 84,
+      "portfolio": 25000000,
+      "total_ret": 150.0,
+      "monthly_gain": 50.515328360627976,
+      "win_rate": 63.96713615023474
+    },
+    {
+      "month": 5,
+      "day": 105,
+      "portfolio": 24730564,
+      "total_ret": 147.30563999999998,
+      "monthly_gain": -1.0777440000000027,
+      "win_rate": 63.99253731343284
+    },
+    {
+      "month": 6,
+      "day": 126,
+      "portfolio": 19597039,
+      "total_ret": 95.97039000000001,
+      "monthly_gain": -20.75781611773998,
+      "win_rate": 63.72623574144487
+    },
+    {
+      "month": 7,
+      "day": 147,
+      "portfolio": 25000000,
+      "total_ret": 150.0,
+      "monthly_gain": 27.570292634514825,
+      "win_rate": 64.09574468085107
+    },
+    {
+      "month": 8,
+      "day": 168,
+      "portfolio": 18088828,
+      "total_ret": 80.88828,
+      "monthly_gain": -27.644687999999995,
+      "win_rate": 64.02544823597455
+    },
+    {
+      "month": 9,
+      "day": 189,
+      "portfolio": 22184615,
+      "total_ret": 121.84615000000001,
+      "monthly_gain": 22.64263334252501,
+      "win_rate": 64.00610066090493
+    },
+    {
+      "month": 10,
+      "day": 210,
+      "portfolio": 23119138,
+      "total_ret": 131.19138,
+      "monthly_gain": 4.212482389259398,
+      "win_rate": 64.04077849860982
+    },
+    {
+      "month": 11,
+      "day": 231,
+      "portfolio": 25000000,
+      "total_ret": 150.0,
+      "monthly_gain": 8.135519585548568,
+      "win_rate": 64.07685881370092
+    },
+    {
+      "month": 12,
+      "day": 252,
+      "portfolio": 23298126,
+      "total_ret": 132.98126,
+      "monthly_gain": -6.807496000000002,
+      "win_rate": 64.04752778842469
+    }
+  ]
+}
