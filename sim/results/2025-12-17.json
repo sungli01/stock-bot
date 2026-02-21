@@ -1,0 +1,125 @@
+{
+  "date": "2025-12-17",
+  "config_stop_loss": -15.0,
+  "starting_krw": 25000000,
+  "ending_krw": 65469830,
+  "day_pnl_krw": 40469830,
+  "day_pnl_pct": 161.88,
+  "buy_count": 3,
+  "sell_count": 3,
+  "win_count": 2,
+  "loss_count": 1,
+  "win_rate_pct": 66.7,
+  "profit_factor": 0.34,
+  "vol_spikes_total": 36,
+  "sell_reasons": {
+    "TRAILING": 2,
+    "STOP_LOSS": 1
+  },
+  "caught_100plus": [
+    {
+      "ticker": "PCSA",
+      "max_gain_pct": 148.1,
+      "caught": false
+    },
+    {
+      "ticker": "MGRT",
+      "max_gain_pct": 238.4,
+      "caught": false
+    }
+  ],
+  "caught_100plus_count": 0,
+  "total_100plus_count": 2,
+  "trades": [
+    {
+      "type": "BUY",
+      "entry_type": "1차",
+      "ticker": "YCBD",
+      "price": 2.2377,
+      "buy_krw": 17500000,
+      "queue_price": 1.94,
+      "pct_from_queue": 15.3,
+      "vol_ratio": 1597.0,
+      "vol_since_queue": 9221660,
+      "max_krw_by_vol": 8976359233,
+      "vol_cap_applied": false,
+      "time_kst": "2025-12-17 23:37",
+      "daily_vol": 39390558.0
+    },
+    {
+      "type": "BUY",
+      "entry_type": "1차",
+      "ticker": "IRBT",
+      "price": 0.9062,
+      "buy_krw": 7500000,
+      "queue_price": 0.7852,
+      "pct_from_queue": 15.4,
+      "vol_ratio": 3767.0,
+      "vol_since_queue": 9082035,
+      "max_krw_by_vol": 3580110951,
+      "vol_cap_applied": false,
+      "time_kst": "2025-12-17 23:49",
+      "daily_vol": 10678977.0
+    },
+    {
+      "type": "SELL",
+      "entry_type": "1차",
+      "ticker": "YCBD",
+      "entry_price": 2.2377,
+      "sell_price": 2.3301,
+      "pnl_pct": 4.13,
+      "pnl_krw": 722617,
+      "buy_krw": 17500000,
+      "reason": "TRAILING(peak+8.4%→+4.1%)",
+      "hold_min": 20.0,
+      "time_kst": "2025-12-17 23:57",
+      "peak_price": 2.425,
+      "max_possible_pct": 8.4
+    },
+    {
+      "type": "SELL",
+      "entry_type": "1차",
+      "ticker": "IRBT",
+      "entry_price": 0.9062,
+      "sell_price": 0.947,
+      "pnl_pct": 4.5,
+      "pnl_krw": 337674,
+      "buy_krw": 7500000,
+      "reason": "TRAILING(peak+9.3%→+4.5%)",
+      "hold_min": 14.0,
+      "time_kst": "2025-12-18 00:03",
+      "peak_price": 0.9906,
+      "max_possible_pct": 9.3
+    },
+    {
+      "type": "BUY",
+      "entry_type": "1차",
+      "ticker": "MIGI",
+      "price": 5.32,
+      "buy_krw": 17500000,
+      "queue_price": 4.52,
+      "pct_from_queue": 17.7,
+      "vol_ratio": 2579.0,
+      "vol_since_queue": 692640,
+      "max_krw_by_vol": 1602907488,
+      "vol_cap_applied": false,
+      "time_kst": "2025-12-18 00:14",
+      "daily_vol": 725854
+    },
+    {
+      "type": "SELL",
+      "entry_type": "1차",
+      "ticker": "MIGI",
+      "entry_price": 5.32,
+      "sell_price": 4.3805,
+      "pnl_pct": -17.66,
+      "pnl_krw": -3090461,
+      "buy_krw": 17500000,
+      "reason": "STOP_LOSS(-17.7%)",
+      "hold_min": 97.0,
+      "time_kst": "2025-12-18 01:51",
+      "peak_price": 5.32,
+      "max_possible_pct": 0.0
+    }
+  ]
+}

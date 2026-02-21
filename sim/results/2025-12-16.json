@@ -1,0 +1,89 @@
+{
+  "date": "2025-12-16",
+  "config_stop_loss": -15.0,
+  "starting_krw": 25000000,
+  "ending_krw": 68047064,
+  "day_pnl_krw": 43047064,
+  "day_pnl_pct": 172.19,
+  "buy_count": 2,
+  "sell_count": 2,
+  "win_count": 1,
+  "loss_count": 1,
+  "win_rate_pct": 50.0,
+  "profit_factor": 1.32,
+  "vol_spikes_total": 47,
+  "sell_reasons": {
+    "TIME_LIMIT": 2
+  },
+  "caught_100plus": [
+    {
+      "ticker": "VMAR",
+      "max_gain_pct": 253.7,
+      "caught": false
+    }
+  ],
+  "caught_100plus_count": 0,
+  "total_100plus_count": 1,
+  "trades": [
+    {
+      "type": "BUY",
+      "entry_type": "1차",
+      "ticker": "BEAT",
+      "price": 3.1592,
+      "buy_krw": 17500000,
+      "queue_price": 2.7129,
+      "pct_from_queue": 16.5,
+      "vol_ratio": 1128.0,
+      "vol_since_queue": 2925299,
+      "max_krw_by_vol": 4020098001,
+      "vol_cap_applied": false,
+      "time_kst": "2025-12-16 23:37",
+      "daily_vol": 4368295.0
+    },
+    {
+      "type": "SELL",
+      "entry_type": "1차",
+      "ticker": "BEAT",
+      "entry_price": 3.1592,
+      "sell_price": 2.855,
+      "pnl_pct": -9.63,
+      "pnl_krw": -1685079,
+      "buy_krw": 17500000,
+      "reason": "TIME_LIMIT(-9.6%,120분)",
+      "hold_min": 120.0,
+      "time_kst": "2025-12-17 01:37",
+      "peak_price": 3.19,
+      "max_possible_pct": 1.0
+    },
+    {
+      "type": "BUY",
+      "entry_type": "2차",
+      "ticker": "BEAT",
+      "price": 3.36,
+      "buy_krw": 25000000,
+      "queue_price": 2.9148,
+      "pct_from_queue": 15.3,
+      "vol_ratio": 854.0,
+      "vol_since_queue": null,
+      "max_krw_by_vol": null,
+      "vol_cap_applied": false,
+      "time_kst": "2025-12-17 03:24",
+      "daily_vol": 23440780.0
+    },
+    {
+      "type": "SELL",
+      "entry_type": "2차",
+      "ticker": "BEAT",
+      "entry_price": 3.36,
+      "sell_price": 3.66,
+      "pnl_pct": 8.93,
+      "pnl_krw": 2232143,
+      "buy_krw": 25000000,
+      "reason": "TIME_LIMIT(8.9%,120분)",
+      "hold_min": 120.0,
+      "time_kst": "2025-12-17 05:24",
+      "peak_price": 3.66,
+      "max_possible_pct": 8.9
+    }
+  ]
+}

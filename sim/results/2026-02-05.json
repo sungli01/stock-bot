@@ -1,0 +1,121 @@
+{
+  "date": "2026-02-05",
+  "config_stop_loss": -15.0,
+  "starting_krw": 25000000,
+  "ending_krw": 81531820,
+  "day_pnl_krw": 56531820,
+  "day_pnl_pct": 226.13,
+  "buy_count": 3,
+  "sell_count": 3,
+  "win_count": 1,
+  "loss_count": 2,
+  "win_rate_pct": 33.3,
+  "profit_factor": 0.24,
+  "vol_spikes_total": 30,
+  "sell_reasons": {
+    "TIME_LIMIT": 1,
+    "TRAILING": 1,
+    "STOP_LOSS": 1
+  },
+  "caught_100plus": [
+    {
+      "ticker": "KELYB",
+      "max_gain_pct": 627.0,
+      "caught": false
+    }
+  ],
+  "caught_100plus_count": 0,
+  "total_100plus_count": 1,
+  "trades": [
+    {
+      "type": "BUY",
+      "entry_type": "1차",
+      "ticker": "LIMN",
+      "price": 1.9201,
+      "buy_krw": 17500000,
+      "queue_price": 1.6396,
+      "pct_from_queue": 17.1,
+      "vol_ratio": 1442.0,
+      "vol_since_queue": 11851613,
+      "max_krw_by_vol": 9898982723,
+      "vol_cap_applied": false,
+      "time_kst": "2026-02-05 23:49",
+      "daily_vol": 13643205.0
+    },
+    {
+      "type": "SELL",
+      "entry_type": "1차",
+      "ticker": "LIMN",
+      "entry_price": 1.9201,
+      "sell_price": 1.82,
+      "pnl_pct": -5.21,
+      "pnl_krw": -912322,
+      "buy_krw": 17500000,
+      "reason": "TIME_LIMIT(-5.2%,120분)",
+      "hold_min": 120.0,
+      "time_kst": "2026-02-06 01:49",
+      "peak_price": 1.94,
+      "max_possible_pct": 1.0
+    },
+    {
+      "type": "BUY",
+      "entry_type": "2차",
+      "ticker": "LIMN",
+      "price": 2.07,
+      "buy_krw": 25000000,
+      "queue_price": 1.75,
+      "pct_from_queue": 18.3,
+      "vol_ratio": 273.0,
+      "vol_since_queue": null,
+      "max_krw_by_vol": null,
+      "vol_cap_applied": false,
+      "time_kst": "2026-02-06 03:57",
+      "daily_vol": 51546785.0
+    },
+    {
+      "type": "SELL",
+      "entry_type": "2차",
+      "ticker": "LIMN",
+      "entry_price": 2.07,
+      "sell_price": 2.16,
+      "pnl_pct": 4.35,
+      "pnl_krw": 1086957,
+      "buy_krw": 25000000,
+      "reason": "TRAILING(peak+8.2%→+4.3%)",
+      "hold_min": 15.0,
+      "time_kst": "2026-02-06 04:12",
+      "peak_price": 2.2401,
+      "max_possible_pct": 8.2
+    },
+    {
+      "type": "BUY",
+      "entry_type": "1차",
+      "ticker": "WTO",
+      "price": 4.9505,
+      "buy_krw": 17500000,
+      "queue_price": 3.749,
+      "pct_from_queue": 32.0,
+      "vol_ratio": 1189.0,
+      "vol_since_queue": 181018,
+      "max_krw_by_vol": 389816380,
+      "vol_cap_applied": false,
+      "time_kst": "2026-02-06 06:00",
+      "daily_vol": 322434.20000000007
+    },
+    {
+      "type": "SELL",
+      "entry_type": "1차",
+      "ticker": "WTO",
+      "entry_price": 4.9505,
+      "sell_price": 3.92,
+      "pnl_pct": -20.82,
+      "pnl_krw": -3642814,
+      "buy_krw": 17500000,
+      "reason": "STOP_LOSS(-20.8%)",
+      "hold_min": 46.0,
+      "time_kst": "2026-02-06 06:46",
+      "peak_price": 4.9505,
+      "max_possible_pct": 3.0
+    }
+  ]
+}

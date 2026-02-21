@@ -1,0 +1,121 @@
+{
+  "date": "2026-02-09",
+  "config_stop_loss": -15.0,
+  "starting_krw": 25000000,
+  "ending_krw": 80805798,
+  "day_pnl_krw": 55805798,
+  "day_pnl_pct": 223.22,
+  "buy_count": 3,
+  "sell_count": 3,
+  "win_count": 1,
+  "loss_count": 2,
+  "win_rate_pct": 33.3,
+  "profit_factor": 0.13,
+  "vol_spikes_total": 50,
+  "sell_reasons": {
+    "TIME_LIMIT": 1,
+    "TRAILING": 1,
+    "STOP_LOSS": 1
+  },
+  "caught_100plus": [
+    {
+      "ticker": "UOKA",
+      "max_gain_pct": 138.8,
+      "caught": false
+    }
+  ],
+  "caught_100plus_count": 0,
+  "total_100plus_count": 1,
+  "trades": [
+    {
+      "type": "BUY",
+      "entry_type": "1차",
+      "ticker": "LIMN",
+      "price": 2.11,
+      "buy_krw": 17500000,
+      "queue_price": 1.8,
+      "pct_from_queue": 17.2,
+      "vol_ratio": 4850.0,
+      "vol_since_queue": 1533346,
+      "max_krw_by_vol": 1407381626,
+      "vol_cap_applied": false,
+      "time_kst": "2026-02-09 21:33",
+      "daily_vol": 1786757
+    },
+    {
+      "type": "SELL",
+      "entry_type": "1차",
+      "ticker": "LIMN",
+      "entry_price": 2.11,
+      "sell_price": 1.995,
+      "pnl_pct": -5.45,
+      "pnl_krw": -953791,
+      "buy_krw": 17500000,
+      "reason": "TIME_LIMIT(-5.5%,120분)",
+      "hold_min": 120.0,
+      "time_kst": "2026-02-09 23:33",
+      "peak_price": 2.13,
+      "max_possible_pct": 0.9
+    },
+    {
+      "type": "BUY",
+      "entry_type": "1차",
+      "ticker": "HUMA",
+      "price": 1.165,
+      "buy_krw": 17500000,
+      "queue_price": 1.01,
+      "pct_from_queue": 15.3,
+      "vol_ratio": 5239.0,
+      "vol_since_queue": 3789910,
+      "max_krw_by_vol": 1920631640,
+      "vol_cap_applied": false,
+      "time_kst": "2026-02-10 00:20",
+      "daily_vol": 4833937
+    },
+    {
+      "type": "SELL",
+      "entry_type": "1차",
+      "ticker": "HUMA",
+      "entry_price": 1.165,
+      "sell_price": 1.2079,
+      "pnl_pct": 3.68,
+      "pnl_krw": 644421,
+      "buy_krw": 17500000,
+      "reason": "TRAILING(peak+10.1%→+3.7%)",
+      "hold_min": 26.0,
+      "time_kst": "2026-02-10 00:46",
+      "peak_price": 1.2829,
+      "max_possible_pct": 10.1
+    },
+    {
+      "type": "BUY",
+      "entry_type": "2차",
+      "ticker": "LIMN",
+      "price": 2.67,
+      "buy_krw": 25000000,
+      "queue_price": 2.295,
+      "pct_from_queue": 16.3,
+      "vol_ratio": 209.0,
+      "vol_since_queue": null,
+      "max_krw_by_vol": null,
+      "vol_cap_applied": false,
+      "time_kst": "2026-02-10 00:46",
+      "daily_vol": 20420576.0
+    },
+    {
+      "type": "SELL",
+      "entry_type": "2차",
+      "ticker": "LIMN",
+      "entry_price": 2.67,
+      "sell_price": 2.2551,
+      "pnl_pct": -15.54,
+      "pnl_krw": -3884831,
+      "buy_krw": 25000000,
+      "reason": "STOP_LOSS(-15.5%)",
+      "hold_min": 74.0,
+      "time_kst": "2026-02-10 02:00",
+      "peak_price": 2.81,
+      "max_possible_pct": 5.2
+    }
+  ]
+}

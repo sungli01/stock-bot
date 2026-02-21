@@ -1,0 +1,126 @@
+{
+  "date": "2025-12-30",
+  "config_stop_loss": -15.0,
+  "starting_krw": 25000000,
+  "ending_krw": 81945942,
+  "day_pnl_krw": 56945942,
+  "day_pnl_pct": 227.78,
+  "buy_count": 3,
+  "sell_count": 3,
+  "win_count": 1,
+  "loss_count": 2,
+  "win_rate_pct": 33.3,
+  "profit_factor": 0.46,
+  "vol_spikes_total": 35,
+  "sell_reasons": {
+    "TRAILING": 1,
+    "STOP_LOSS": 1,
+    "TIME_LIMIT": 1
+  },
+  "caught_100plus": [
+    {
+      "ticker": "ULY",
+      "max_gain_pct": 115.5,
+      "caught": false
+    },
+    {
+      "ticker": "BUUU",
+      "max_gain_pct": 124.6,
+      "caught": false
+    }
+  ],
+  "caught_100plus_count": 0,
+  "total_100plus_count": 2,
+  "trades": [
+    {
+      "type": "BUY",
+      "entry_type": "1차",
+      "ticker": "OCG",
+      "price": 24.86,
+      "buy_krw": 17500000,
+      "queue_price": 18.92,
+      "pct_from_queue": 31.4,
+      "vol_ratio": 9082.0,
+      "vol_since_queue": 45602,
+      "max_krw_by_vol": 493150438,
+      "vol_cap_applied": false,
+      "time_kst": "2025-12-30 23:38",
+      "daily_vol": 51018.390906
+    },
+    {
+      "type": "SELL",
+      "entry_type": "1차",
+      "ticker": "OCG",
+      "entry_price": 24.86,
+      "sell_price": 28.6,
+      "pnl_pct": 15.04,
+      "pnl_krw": 2632743,
+      "buy_krw": 17500000,
+      "reason": "TRAILING(peak+22.7%→+15.0%)",
+      "hold_min": 31.0,
+      "time_kst": "2025-12-31 00:09",
+      "peak_price": 30.492,
+      "max_possible_pct": 22.7
+    },
+    {
+      "type": "BUY",
+      "entry_type": "2차",
+      "ticker": "OCG",
+      "price": 35.156,
+      "buy_krw": 25000000,
+      "queue_price": 29.524,
+      "pct_from_queue": 19.1,
+      "vol_ratio": 285.0,
+      "vol_since_queue": null,
+      "max_krw_by_vol": null,
+      "vol_cap_applied": false,
+      "time_kst": "2025-12-31 00:35",
+      "daily_vol": 768966.5545429997
+    },
+    {
+      "type": "SELL",
+      "entry_type": "2차",
+      "ticker": "OCG",
+      "entry_price": 35.156,
+      "sell_price": 29.26,
+      "pnl_pct": -16.77,
+      "pnl_krw": -4192741,
+      "buy_krw": 25000000,
+      "reason": "STOP_LOSS(-16.8%)",
+      "hold_min": 13.0,
+      "time_kst": "2025-12-31 00:48",
+      "peak_price": 35.178,
+      "max_possible_pct": 0.1
+    },
+    {
+      "type": "BUY",
+      "entry_type": "1차",
+      "ticker": "ASBP",
+      "price": 5.388,
+      "buy_krw": 17500000,
+      "queue_price": 4.626,
+      "pct_from_queue": 16.5,
+      "vol_ratio": 3327.0,
+      "vol_since_queue": 226689,
+      "max_krw_by_vol": 531310199,
+      "vol_cap_applied": false,
+      "time_kst": "2025-12-31 05:49",
+      "daily_vol": 478908.6500000001
+    },
+    {
+      "type": "SELL",
+      "entry_type": "1차",
+      "ticker": "ASBP",
+      "entry_price": 5.388,
+      "sell_price": 4.928,
+      "pnl_pct": -8.54,
+      "pnl_krw": -1494061,
+      "buy_krw": 17500000,
+      "reason": "TIME_LIMIT(-8.5%,122분)",
+      "hold_min": 122.0,
+      "time_kst": "2025-12-31 07:51",
+      "peak_price": 5.788,
+      "max_possible_pct": 7.4
+    }
+  ]
+}

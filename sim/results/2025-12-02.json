@@ -1,0 +1,120 @@
+{
+  "date": "2025-12-02",
+  "config_stop_loss": -15.0,
+  "starting_krw": 25000000,
+  "ending_krw": 63213976,
+  "day_pnl_krw": 38213976,
+  "day_pnl_pct": 152.86,
+  "buy_count": 3,
+  "sell_count": 3,
+  "win_count": 0,
+  "loss_count": 3,
+  "win_rate_pct": 0.0,
+  "profit_factor": 0.0,
+  "vol_spikes_total": 48,
+  "sell_reasons": {
+    "STOP_LOSS": 2,
+    "TIME_LIMIT": 1
+  },
+  "caught_100plus": [
+    {
+      "ticker": "PMAX",
+      "max_gain_pct": 100.6,
+      "caught": true
+    }
+  ],
+  "caught_100plus_count": 1,
+  "total_100plus_count": 1,
+  "trades": [
+    {
+      "type": "BUY",
+      "entry_type": "1차",
+      "ticker": "YDKG",
+      "price": 2.33,
+      "buy_krw": 17500000,
+      "queue_price": 1.92,
+      "pct_from_queue": 21.4,
+      "vol_ratio": 2008.0,
+      "vol_since_queue": 665991,
+      "max_krw_by_vol": 675015178,
+      "vol_cap_applied": false,
+      "time_kst": "2025-12-02 23:37",
+      "daily_vol": 785280
+    },
+    {
+      "type": "BUY",
+      "entry_type": "1차",
+      "ticker": "BQ",
+      "price": 3.4014,
+      "buy_krw": 7500000,
+      "queue_price": 2.8,
+      "pct_from_queue": 21.5,
+      "vol_ratio": 2362.0,
+      "vol_since_queue": 12031555,
+      "max_krw_by_vol": 17801997062,
+      "vol_cap_applied": false,
+      "time_kst": "2025-12-03 00:15",
+      "daily_vol": 12491947.0
+    },
+    {
+      "type": "SELL",
+      "entry_type": "1차",
+      "ticker": "BQ",
+      "entry_price": 3.4014,
+      "sell_price": 2.81,
+      "pnl_pct": -17.39,
+      "pnl_krw": -1304022,
+      "buy_krw": 7500000,
+      "reason": "STOP_LOSS(-17.4%)",
+      "hold_min": 11.0,
+      "time_kst": "2025-12-03 00:26",
+      "peak_price": 3.4014,
+      "max_possible_pct": 0.0
+    },
+    {
+      "type": "SELL",
+      "entry_type": "1차",
+      "ticker": "YDKG",
+      "entry_price": 2.33,
+      "sell_price": 1.9553,
+      "pnl_pct": -16.08,
+      "pnl_krw": -2814270,
+      "buy_krw": 17500000,
+      "reason": "STOP_LOSS(-16.1%)",
+      "hold_min": 65.0,
+      "time_kst": "2025-12-03 00:42",
+      "peak_price": 2.4773,
+      "max_possible_pct": 6.3
+    },
+    {
+      "type": "BUY",
+      "entry_type": "1차",
+      "ticker": "PMAX",
+      "price": 3.13,
+      "buy_krw": 17500000,
+      "queue_price": 2.7,
+      "pct_from_queue": 15.9,
+      "vol_ratio": 2086.0,
+      "vol_since_queue": 3300723,
+      "max_krw_by_vol": 4494099401,
+      "vol_cap_applied": false,
+      "time_kst": "2025-12-03 06:29",
+      "daily_vol": 3649850
+    },
+    {
+      "type": "SELL",
+      "entry_type": "1차",
+      "ticker": "PMAX",
+      "entry_price": 3.13,
+      "sell_price": 3.1,
+      "pnl_pct": -0.96,
+      "pnl_krw": -167732,
+      "buy_krw": 17500000,
+      "reason": "TIME_LIMIT(-1.0%,120분)",
+      "hold_min": 120.0,
+      "time_kst": "2025-12-03 08:29",
+      "peak_price": 3.1995,
+      "max_possible_pct": 2.2
+    }
+  ]
+}
