@@ -42,5 +42,27 @@
     "vol_spikes": 220,
     "stop_loss": -15.0,
     "caught_100plus": "3/4"
+  },
+  {
+    "date": "2025-11-25",
+    "starting_krw": 1161766,
+    "ending_krw": 2860012,
+    "day_pnl_pct": 146.18,
+    "win_rate": 50.0,
+    "buy_count": 2,
+    "vol_spikes": 21,
+    "stop_loss": -15.0,
+    "caught_100plus": "0/1"
+  },
+  {
+    "date": "2025-11-26",
+    "starting_krw": 760472,
+    "ending_krw": 24733277,
+    "day_pnl_pct": 3152.36,
+    "win_rate": 66.7,
+    "buy_count": 6,
+    "vol_spikes": 56,
+    "stop_loss": -15.0,
+    "caught_100plus": "2/2"
   }
 ]

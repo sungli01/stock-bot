@@ -214,7 +214,7 @@ def run_engine(date_str: str, portfolio_krw: float, cfg: dict) -> dict:
 
             # vol spike 감지 → 큐 등록
             threshold = cfg["vol_spike_2nd_pct"] if is_second else cfg["vol_spike_1st_pct"]
-            if vol_ratio >= threshold and is_candidate and ticker not in queue:
+            if vol_ratio >= threshold and is_candidate and ticker not in queue and ticker not in traded_twice:
                 queue[ticker] = {
                     "price": cur_price,
                     "time_ms": ts,
@@ -317,6 +317,8 @@ def run_engine(date_str: str, portfolio_krw: float, cfg: dict) -> dict:
                 # 1차/2차 완료 처리
                 if pos.is_second:
                     traded_twice.add(ticker)
+                    if ticker in queue:   # 2차 완료 → 큐 즉시 제거
+                        del queue[ticker]
                 else:
                     traded_once.add(ticker)
 

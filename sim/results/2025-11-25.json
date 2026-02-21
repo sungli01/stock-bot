@@ -1,0 +1,90 @@
+{
+  "date": "2025-11-25",
+  "config_stop_loss": -15.0,
+  "starting_krw": 1161766,
+  "ending_krw": 2860012,
+  "day_pnl_krw": 1698246,
+  "day_pnl_pct": 146.18,
+  "buy_count": 2,
+  "sell_count": 2,
+  "win_count": 1,
+  "loss_count": 1,
+  "win_rate_pct": 50.0,
+  "profit_factor": 0.96,
+  "vol_spikes_total": 21,
+  "sell_reasons": {
+    "TIME_LIMIT": 1,
+    "TRAILING": 1
+  },
+  "caught_100plus": [
+    {
+      "ticker": "CETY",
+      "max_gain_pct": 157.8,
+      "caught": false
+    }
+  ],
+  "caught_100plus_count": 0,
+  "total_100plus_count": 1,
+  "trades": [
+    {
+      "type": "BUY",
+      "entry_type": "1차",
+      "ticker": "NUKK",
+      "price": 6.5897,
+      "buy_krw": 700000,
+      "queue_price": 5.65,
+      "pct_from_queue": 16.6,
+      "vol_ratio": 1544.0,
+      "vol_since_queue": 2069059,
+      "max_krw_by_vol": 5930997970,
+      "vol_cap_applied": false,
+      "time_kst": "2025-11-26 00:33",
+      "daily_vol": 2420689
+    },
+    {
+      "type": "SELL",
+      "entry_type": "1차",
+      "ticker": "NUKK",
+      "entry_price": 6.5897,
+      "sell_price": 6.21,
+      "pnl_pct": -5.76,
+      "pnl_krw": -40334,
+      "buy_krw": 700000,
+      "reason": "TIME_LIMIT(-5.8%,120분)",
+      "hold_min": 120.0,
+      "time_kst": "2025-11-26 02:33",
+      "peak_price": 6.8702,
+      "max_possible_pct": 4.3
+    },
+    {
+      "type": "BUY",
+      "entry_type": "1차",
+      "ticker": "KZIA",
+      "price": 12.4999,
+      "buy_krw": 1161766,
+      "queue_price": 10.402,
+      "pct_from_queue": 20.2,
+      "vol_ratio": 1726.0,
+      "vol_since_queue": 167586,
+      "max_krw_by_vol": 911241585,
+      "vol_cap_applied": false,
+      "time_kst": "2025-11-26 05:15",
+      "daily_vol": 446133
+    },
+    {
+      "type": "SELL",
+      "entry_type": "1차",
+      "ticker": "KZIA",
+      "entry_price": 12.4999,
+      "sell_price": 12.915,
+      "pnl_pct": 3.32,
+      "pnl_krw": 38580,
+      "buy_krw": 1161766,
+      "reason": "TRAILING(peak+9.4%→+3.3%)",
+      "hold_min": 32.0,
+      "time_kst": "2025-11-26 05:47",
+      "peak_price": 13.67,
+      "max_possible_pct": 9.4
+    }
+  ]
+}
