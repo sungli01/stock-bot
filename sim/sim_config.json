@@ -5,10 +5,10 @@
   "partial_sell_pct": 5.0,
   "vol_spike_1st_pct": 1000.0,
   "vol_spike_2nd_pct": 200.0,
-  "trigger_1st_pct": 20.0,
+  "trigger_1st_pct": 15.0,
   "trigger_2nd_pct": 15.0,
   "max_pct_from_queue": 40.0,
-  "queue_expire_min": 30,
+  "queue_expire_min": 60,
   "max_hold_min": 120,
   "max_positions": 2,
   "allocation_ratio": [0.7, 0.3],
@@ -16,5 +16,5 @@
   "compound_mode": true,
   "compound_cap_krw": 25000000,
   "candidate_change_pct": 5.0,
-  "candidate_max_change_pct": 20.0
+  "candidate_max_change_pct": 40.0
 }

@@ -1,12 +1,12 @@
 [
   {
     "date": "2025-11-19",
-    "starting_krw": 1000000,
-    "ending_krw": 1000000,
-    "day_pnl_pct": 0.0,
-    "win_rate": 0.0,
-    "buy_count": 0,
-    "vol_spikes": 18,
+    "starting_krw": 793048,
+    "ending_krw": 11387345,
+    "day_pnl_pct": 1335.9,
+    "win_rate": 42.9,
+    "buy_count": 7,
+    "vol_spikes": 52,
     "stop_loss": -15.0,
     "caught_100plus": "0/0"
   },

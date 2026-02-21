@@ -4,10 +4,10 @@ scanner:
   max_price: 30.0          # $30 이하
   min_market_cap: 50000000 # $5천만 이상
   min_volume: 10000        # 1만주 이상
-  price_change_pct: 20.0        # 1차 매수 트리거: 큐 대비 +20%
+  price_change_pct: 15.0        # [v9] 1차 매수 트리거: 큐 대비 +15%
   trigger_pct_2nd: 15.0         # [v9] 2차 매수 트리거: 큐 대비 +15%
   candidate_change_pct: 5.0     # BarScanner 후보 하단: 전일比 +5%+
-  candidate_max_change_pct: 20.0 # [v9] BarScanner 후보 상단: 전일比 +20% 미만
+  candidate_max_change_pct: 40.0 # [v9] BarScanner 후보 상단: 전일比 +40% 미만
   volume_spike_pct: 1000.0      # 미사용 (하위 호환)
   min_daily_volume: 300000      # 일 거래량: $10 미만 30만주 이상
   min_daily_volume_highprice: 50000   # 일 거래량: $10 이상 5만주 이상
@@ -16,6 +16,7 @@ scanner:
   vol_3min_ratio_pct_2nd: 200.0 # [v9] 2차 Vol Spike: 3분봉 200%+
   max_pct_from_queue: 40.0      # [v9/Bug#3] 큐 대비 최대 40% 이내만 진입
   bar_scan_interval_sec: 30     # BarScanner 실행 주기 (초)
+  queue_expire_sec: 3600        # [v9] 큐 만료: 60분 (30→60)
 
 # 매매 조건 (v9)
 trading:

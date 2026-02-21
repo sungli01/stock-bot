@@ -37,7 +37,7 @@ class BarScanner(threading.Thread):
         self.vol_ratio_threshold_2nd = self.scanner_cfg.get("vol_3min_ratio_pct_2nd", 200.0)
 
         self.scan_interval = self.scanner_cfg.get("bar_scan_interval_sec", 30)
-        self.queue_expire_sec = 1800  # 큐 유효기간 30분
+        self.queue_expire_sec = self.scanner_cfg.get("queue_expire_sec", 3600)  # 큐 유효기간 (기본 60분)
 
         # 공유 객체
         self.monitoring_queue = monitoring_queue  # {ticker: {"time", "price", "is_second"}}
