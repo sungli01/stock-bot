@@ -1,0 +1,64 @@
+{
+  "date": "2025-11-20",
+  "config_stop_loss": -15.0,
+  "starting_krw": 700000,
+  "ending_krw": 1763547,
+  "day_pnl_krw": 1063547,
+  "day_pnl_pct": 151.94,
+  "buy_count": 1,
+  "sell_count": 1,
+  "win_count": 1,
+  "loss_count": 0,
+  "win_rate_pct": 100.0,
+  "profit_factor": 63547.0,
+  "vol_spikes_total": 133,
+  "sell_reasons": {
+    "TRAILING": 1
+  },
+  "caught_100plus": [
+    {
+      "ticker": "MNDR",
+      "max_gain_pct": 140.6,
+      "caught": false
+    },
+    {
+      "ticker": "LUD",
+      "max_gain_pct": 200.9,
+      "caught": false
+    }
+  ],
+  "caught_100plus_count": 0,
+  "total_100plus_count": 2,
+  "trades": [
+    {
+      "type": "BUY",
+      "entry_type": "1차",
+      "ticker": "LFS",
+      "price": 6.53,
+      "buy_krw": 700000,
+      "queue_price": 5.3,
+      "pct_from_queue": 23.2,
+      "vol_ratio": 1154.0,
+      "vol_since_queue": 395330,
+      "max_krw_by_vol": 1122954632,
+      "vol_cap_applied": false,
+      "time_kst": "2025-11-20 23:58",
+      "daily_vol": 428491
+    },
+    {
+      "type": "SELL",
+      "entry_type": "1차",
+      "ticker": "LFS",
+      "entry_price": 6.53,
+      "sell_price": 7.1228,
+      "pnl_pct": 9.08,
+      "pnl_krw": 63547,
+      "buy_krw": 700000,
+      "reason": "TRAILING(peak+14.7%→+9.1%)",
+      "hold_min": 7.0,
+      "time_kst": "2025-11-21 00:05",
+      "peak_price": 7.49,
+      "max_possible_pct": 14.7
+    }
+  ]
+}

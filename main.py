@@ -310,7 +310,7 @@ def run_live(config: dict):
     # KIS 스캐너 (백그라운드 스레드)
     kis_scanner = KISScanner(config)
     # signaled 세트 공유 (중복 매수 방지)
-    kis_scanner.share_signaled(scanner._signaled_tickers)
+    kis_scanner.share_signaled(scanner._signaled_twice)  # [v9] 완전 차단 세트 공유
     kis_thread = KISScanThread(kis_scanner)
     kis_thread.start()
 
