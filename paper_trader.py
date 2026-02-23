@@ -132,7 +132,9 @@ class PaperTrader:
             logger.warning(f"[가상] {ticker} 10분할 매수 전부 실패 — 잔고 부족")
             return None
 
-        avg_price = total_cost / total_shares
+        # [Bug #5] avg_price는 USD 단가여야 함: KRW총액 ÷ 환율 ÷ 주수
+        usd_krw_avg = get_usd_krw()
+        avg_price = (total_cost / usd_krw_avg) / total_shares
         commission_total = total_cost * COMMISSION_PCT
 
         if ticker in self.positions:
