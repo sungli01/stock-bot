@@ -19,6 +19,7 @@ import yaml
 
 from trader.kis_client import KISClient
 from trader.market_hours import is_trading_window, is_us_market_open, minutes_until_session_end, get_all_timestamps, get_trading_date
+from utils.fx_rate import get_usd_krw
 
 logger = logging.getLogger(__name__)
 
@@ -94,7 +95,8 @@ class TradeExecutor:
             return []
 
         # 총 매수 수량 계산
-        total_quantity = max(1, int(self.total_buy_amount / (price * 1350)))  # 원화→달러 환산
+        usd_krw = get_usd_krw()
+        total_quantity = max(1, int(self.total_buy_amount / (price * usd_krw)))  # 원화→달러 환산
 
         # 3분할 매수 사용
         logger.info(f"📈 {ticker} 3분할 매수 시작: 총 {total_quantity}주 @${price:.2f}")
