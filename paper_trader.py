@@ -9,15 +9,14 @@ import logging
 from datetime import datetime
 from pathlib import Path
 
+from utils.fx_rate import get_usd_krw
+
 logger = logging.getLogger("paper_trader")
 
 DATA_DIR = Path(os.path.dirname(__file__)) / "data"
 PORTFOLIO_FILE = DATA_DIR / "paper_portfolio.json"
 SLIPPAGE = 0.005  # 0.5%
 COMMISSION_PCT = 0.001  # 0.1%
-
-# [Bug #4] KRW→USD 환율 (환경변수 or 기본값 1450)
-USD_KRW_RATE = float(os.getenv("USD_KRW_RATE", "1450.0"))
 
 
 class PaperTrader:
@@ -45,7 +44,8 @@ class PaperTrader:
             return None
 
         # [Bug #4] KRW ÷ 환율 ÷ USD 단가 = 주수
-        shares = (amount / USD_KRW_RATE) / buy_price_usd
+        usd_krw = get_usd_krw()
+        shares = (amount / usd_krw) / buy_price_usd
 
         # 실전 체결 가능량 제한: 일 거래량의 5% 초과 매수 금지
         if daily_volume > 0:
@@ -121,7 +121,8 @@ class PaperTrader:
                 break
 
             # [Bug #4] KRW 금액 ÷ 환율 ÷ USD 단가 = 주수
-            shares = (split_amount / USD_KRW_RATE) / order_price_usd
+            usd_krw = get_usd_krw()
+            shares = (split_amount / usd_krw) / order_price_usd
             self.cash -= cost
             total_shares += shares
             total_cost += split_amount
