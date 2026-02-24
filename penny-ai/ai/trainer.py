@@ -159,19 +159,20 @@ def train():
     # 콜백
     callbacks = []
 
-    if valid_df is not None and not valid_df.empty:
-        valid_env = prepare_env(valid_df)
-        valid_env = VecNormalize(valid_env, norm_obs=True, norm_reward=False, training=False)
-        eval_cb = EvalCallback(
-            valid_env,
-            best_model_save_path='/tmp/penny_ai_best/',
-            log_path='/tmp/penny_ai_eval/',
-            eval_freq=50000,
-            n_eval_episodes=3,
-            deterministic=True,
-            verbose=1
-        )
-        callbacks.append(eval_cb)
+    # EvalCallback 비활성화 (멈춤 이슈) → 학습 완료 후 별도 검증
+    # if valid_df is not None and not valid_df.empty:
+    #     valid_env = prepare_env(valid_df)
+    #     valid_env = VecNormalize(valid_env, norm_obs=True, norm_reward=False, training=False)
+    #     eval_cb = EvalCallback(
+    #         valid_env,
+    #         best_model_save_path='/tmp/penny_ai_best/',
+    #         log_path='/tmp/penny_ai_eval/',
+    #         eval_freq=50000,
+    #         n_eval_episodes=3,
+    #         deterministic=True,
+    #         verbose=1
+    #     )
+    #     callbacks.append(eval_cb)
 
     checkpoint_cb = CheckpointCallback(
         save_freq=50000,
