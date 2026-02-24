@@ -8,7 +8,13 @@ import numpy as np
 import pandas as pd
 from gymnasium import spaces
 
-from penny_ai.processor.feature_engine import FEATURE_COLS
+import os
+import sys
+_BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+if _BASE_DIR not in sys.path:
+    sys.path.insert(0, _BASE_DIR)
+
+from processor.feature_engine import FEATURE_COLS
 
 
 # 비용 상수
