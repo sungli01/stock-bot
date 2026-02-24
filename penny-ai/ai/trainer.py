@@ -166,7 +166,8 @@ def train():
             valid_env,
             best_model_save_path='/tmp/penny_ai_best/',
             log_path='/tmp/penny_ai_eval/',
-            eval_freq=10000,
+            eval_freq=50000,
+            n_eval_episodes=3,
             deterministic=True,
             verbose=1
         )
