@@ -5,6 +5,7 @@ Penny Stock AI Trainer
 - S3에서 데이터 로드 → 학습 → S3에 모델 저장
 """
 import os
+import sys
 import io
 import logging
 import boto3
@@ -17,8 +18,13 @@ from stable_baselines3.common.vec_env import DummyVecEnv, VecNormalize
 from stable_baselines3.common.callbacks import EvalCallback, CheckpointCallback
 from stable_baselines3.common.monitor import Monitor
 
-from penny_ai.processor.feature_engine import build_features, FEATURE_COLS
-from penny_ai.ai.environment import PennyStockEnv
+# 경로 설정 (Colab 환경 대응)
+_BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+if _BASE_DIR not in sys.path:
+    sys.path.insert(0, _BASE_DIR)
+
+from processor.feature_engine import build_features, FEATURE_COLS
+from ai.environment import PennyStockEnv
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s %(levelname)s %(message)s')
 logger = logging.getLogger(__name__)
