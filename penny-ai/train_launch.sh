@@ -9,8 +9,8 @@ echo "=== 페니스탁 AI 학습 시작 $(date) ==="
 
 # 1. 환경 설정
 cd /home/ubuntu
-export AWS_ACCESS_KEY_ID=REDACTED_KEY
-export AWS_SECRET_ACCESS_KEY=REDACTED_SECRET
+export AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}  # 환경변수에서 로드
+export AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}  # 환경변수에서 로드
 export AWS_DEFAULT_REGION=ap-northeast-2
 export TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
 export TELEGRAM_CHAT_ID=5810895605

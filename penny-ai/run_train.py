@@ -29,8 +29,8 @@ from stable_baselines3.common.vec_env import DummyVecEnv
 warnings.filterwarnings("ignore")
 
 # ─── 환경 설정 ────────────────────────────────────────────────────────────────
-AWS_KEY = os.environ.get("AWS_ACCESS_KEY_ID", "REDACTED_KEY")
-AWS_SECRET = os.environ.get("AWS_SECRET_ACCESS_KEY", "REDACTED_SECRET")
+AWS_KEY = os.environ.get("AWS_ACCESS_KEY_ID")  # 환경변수에서 로드
+AWS_SECRET = os.environ.get("AWS_SECRET_ACCESS_KEY")  # 환경변수에서 로드
 AWS_REGION = os.environ.get("AWS_DEFAULT_REGION", "ap-northeast-2")
 S3_BUCKET = os.environ.get("S3_BUCKET", "sungli-market-data")
 TELEGRAM_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "")
